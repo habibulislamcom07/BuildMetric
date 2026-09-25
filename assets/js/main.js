@@ -465,3 +465,327 @@ function bagsNeeded(totalVolume, yieldPerBag) {
    ========================================================= */
 
  
+/* =========================================================
+   SECTION 13 — UNIT SYSTEM TOGGLE (Imperial vs Metric)
+   =========================================================
+   Har calculator page pe ek toggle hoga:
+     [ Imperial ] [ Metric ]
+   
+   Features:
+   - Auto-detect browser locale (en-US = Imperial, baaki = Metric)
+   - localStorage mein preference save
+   - Field labels dynamically change (ft ↔ m, in ↔ cm)
+   - Existing values automatically convert
+   - Result units bhi change
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   13.1 GLOBAL STATE
+   Har page pe active unit system track karta hai.
+   --------------------------------------------------------- */
+var BM_UNITS = {
+  current: 'imperial',          // 'imperial' ya 'metric'
+  storageKey: 'bm_preferred_units',
+  config: null,                 // Har tool apni config set karega
+  onChangeCallbacks: []         // Tools apne callbacks register karenge
+};
+
+/* ---------------------------------------------------------
+   13.2 DETECT PREFERRED UNITS
+   Priority:
+     1. localStorage (agar pehle save kiya hai)
+     2. Browser locale (en-US → imperial, baaki → metric)
+     3. Default: imperial
+   --------------------------------------------------------- */
+function detectPreferredUnits() {
+  try {
+    var saved = localStorage.getItem(BM_UNITS.storageKey);
+    if (saved === 'imperial' || saved === 'metric') {
+      return saved;
+    }
+  } catch (e) {
+    // localStorage blocked (private mode, etc.) — ignore
+  }
+
+  var lang = (navigator.language || navigator.userLanguage || 'en-US').toLowerCase();
+
+  // Countries that use Imperial system for construction
+  var imperialLocales = ['en-us', 'en-lr', 'en-mm', 'my-mm'];
+
+  for (var i = 0; i < imperialLocales.length; i++) {
+    if (lang.indexOf(imperialLocales[i]) === 0) {
+      return 'imperial';
+    }
+  }
+
+  // Default to metric for all other locales
+  return 'metric';
+}
+
+/* ---------------------------------------------------------
+   13.3 SAVE PREFERENCE
+   --------------------------------------------------------- */
+function savePreferredUnits(system) {
+  try {
+    localStorage.setItem(BM_UNITS.storageKey, system);
+  } catch (e) {
+    // Silent fail — localStorage may be blocked
+  }
+}
+
+/* ---------------------------------------------------------
+   13.4 REGISTER CALLBACK
+   Tools apna recalculate function register kar sakte hain.
+   Jab toggle change ho, yeh callback fire hoga.
+   --------------------------------------------------------- */
+function onUnitChange(callback) {
+  if (typeof callback === 'function') {
+    BM_UNITS.onChangeCallbacks.push(callback);
+  }
+}
+
+/* ---------------------------------------------------------
+   13.5 SET UNIT SYSTEM
+   Main function jo toggle click pe call hota hai.
+   --------------------------------------------------------- */
+function setUnitSystem(system, options) {
+  if (system !== 'imperial' && system !== 'metric') return;
+  if (BM_UNITS.current === system && !(options && options.force)) return;
+
+  var oldSystem = BM_UNITS.current;
+  BM_UNITS.current = system;
+  savePreferredUnits(system);
+
+  // Update toggle UI
+  updateUnitToggleUI();
+
+  // Update field labels
+  if (BM_UNITS.config) {
+    updateFieldLabels(system);
+    convertFieldValues(oldSystem, system);
+  }
+
+  // Fire callbacks (tools recalculate)
+  BM_UNITS.onChangeCallbacks.forEach(function (cb) {
+    try {
+      cb(system, oldSystem);
+    } catch (e) {
+      if (window.console && console.warn) {
+        console.warn('BuildMetric: unit change callback error', e);
+      }
+    }
+  });
+}
+
+/* ---------------------------------------------------------
+   13.6 UPDATE TOGGLE UI
+   Selected button ko highlight karta hai.
+   --------------------------------------------------------- */
+function updateUnitToggleUI() {
+  var buttons = document.querySelectorAll('[data-unit-btn]');
+  buttons.forEach(function (btn) {
+    var btnSystem = btn.getAttribute('data-unit-btn');
+    var isActive = (btnSystem === BM_UNITS.current);
+    btn.classList.toggle('active', isActive);
+    btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+  });
+}
+
+/* ---------------------------------------------------------
+   13.7 UPDATE FIELD LABELS
+   Config mein har field ka label imperial/metric hota hai.
+   Yeh function label text change karta hai.
+   --------------------------------------------------------- */
+function updateFieldLabels(system) {
+  var config = BM_UNITS.config;
+  if (!config || !config.fields) return;
+
+  Object.keys(config.fields).forEach(function (fieldId) {
+    var field = config.fields[fieldId];
+    var labelEl = document.querySelector('label[for="' + fieldId + '"]');
+    if (labelEl && field.labels && field.labels[system]) {
+      labelEl.textContent = field.labels[system];
+    }
+    // Also update placeholder if defined
+    var inputEl = document.getElementById(fieldId);
+    if (inputEl && field.placeholders && field.placeholders[system]) {
+      inputEl.setAttribute('placeholder', field.placeholders[system]);
+    }
+  });
+}
+
+/* ---------------------------------------------------------
+   13.8 CONVERT FIELD VALUES
+   Agar user ne pehle se value daali hai aur toggle change
+   karta hai, toh value automatically convert ho jaati hai.
+   --------------------------------------------------------- */
+function convertFieldValues(fromSystem, toSystem) {
+  var config = BM_UNITS.config;
+  if (!config || !config.fields) return;
+  if (fromSystem === toSystem) return;
+
+  Object.keys(config.fields).forEach(function (fieldId) {
+    var field = config.fields[fieldId];
+    if (!field.conversions) return;
+
+    var inputEl = document.getElementById(fieldId);
+    if (!inputEl) return;
+
+    var rawValue = String(inputEl.value).trim();
+    if (rawValue === '') return;
+
+    var numValue = parseFloat(rawValue);
+    if (isNaN(numValue) || numValue <= 0) return;
+
+    // Get conversion factor for direction
+    var factor = field.conversions[fromSystem + 'To' + capitalize(toSystem)];
+    if (typeof factor === 'number' && isFinite(factor)) {
+      var converted = numValue * factor;
+      // Round to reasonable precision
+      inputEl.value = roundTo(converted, field.decimals || 2);
+    }
+  });
+}
+
+/* ---------------------------------------------------------
+   13.9 CAPITALIZE HELPER
+   --------------------------------------------------------- */
+function capitalize(str) {
+  if (!str) return '';
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+/* ---------------------------------------------------------
+   13.10 INITIALIZE UNIT TOGGLE
+   Har page pe DOMContentLoaded pe call hota hai.
+   --------------------------------------------------------- */
+function initUnitToggle(toolConfig) {
+  if (toolConfig) {
+    BM_UNITS.config = toolConfig;
+  }
+
+  // Set initial unit system based on preference
+  var preferred = detectPreferredUnits();
+  BM_UNITS.current = preferred;
+
+  // Update UI + labels
+  updateUnitToggleUI();
+  if (BM_UNITS.config) {
+    updateFieldLabels(preferred);
+  }
+
+  // Attach click handlers to toggle buttons
+  var buttons = document.querySelectorAll('[data-unit-btn]');
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var system = btn.getAttribute('data-unit-btn');
+      setUnitSystem(system);
+    });
+
+    // Keyboard accessibility
+    btn.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        var system = btn.getAttribute('data-unit-btn');
+        setUnitSystem(system);
+      }
+    });
+  });
+}
+
+/* =========================================================
+   SECTION 14 — UNIT TOGGLE HTML HELPER
+   =========================================================
+   Ek function jo toggle ka HTML generate karta hai.
+   Tools isse use karke inject kar sakte hain.
+   ========================================================= */
+function buildUnitToggleHTML() {
+  return (
+    '<div class="unit-toggle" role="group" aria-label="Unit system">' +
+      '<span class="unit-toggle-label">Units:</span>' +
+      '<button type="button" class="unit-btn" data-unit-btn="imperial" aria-pressed="false">' +
+        'Imperial (ft, in, lb)' +
+      '</button>' +
+      '<button type="button" class="unit-btn" data-unit-btn="metric" aria-pressed="false">' +
+        'Metric (m, cm, kg)' +
+      '</button>' +
+    '</div>'
+  );
+}
+
+/* =========================================================
+   SECTION 15 — FORMAT RESULT WITH UNITS
+   =========================================================
+   Result ko unit label ke saath format karta hai.
+   Example: formatWithUnits(1.23, 'cubic yards', 'cubic meters')
+   → Imperial mode mein "1.23 cubic yards"
+   → Metric mode mein "0.94 cubic meters"
+   ========================================================= */
+function formatWithUnits(imperialValue, metricValue, imperialUnit, metricUnit) {
+  if (BM_UNITS.current === 'metric') {
+    return fmt(metricValue, 2) + ' ' + metricUnit;
+  }
+  return fmt(imperialValue, 2) + ' ' + imperialUnit;
+}
+
+/* =========================================================
+   SECTION 16 — GET CURRENT SYSTEM
+   =========================================================
+   Tool ke andar easily check karne ke liye.
+   Example: if (isMetric()) { ... }
+   ========================================================= */
+function isMetric() {
+  return BM_UNITS.current === 'metric';
+}
+
+function isImperial() {
+  return BM_UNITS.current === 'imperial';
+}
+
+/* =========================================================
+   SECTION 17 — AUTO-INIT ON PAGE LOAD
+   =========================================================
+   Agar page pe [data-unit-btn] buttons hain, toh automatically
+   initialize kar do. Tool-specific config baad mein bhi set
+   ho sakti hai.
+   ========================================================= */
+document.addEventListener('DOMContentLoaded', function () {
+  if (document.querySelector('[data-unit-btn]')) {
+    // Don't pass config — tool apna config set karega
+    initUnitToggle(null);
+  }
+});
+
+/* =========================================================
+   SECTION 18 — EXPOSE GLOBAL API
+   =========================================================
+   Tools ko accessible banane ke liye.
+   ========================================================= */
+window.BuildMetric = {
+  units: BM_UNITS,
+  setUnitSystem: setUnitSystem,
+  initUnitToggle: initUnitToggle,
+  buildUnitToggleHTML: buildUnitToggleHTML,
+  formatWithUnits: formatWithUnits,
+  isMetric: isMetric,
+  isImperial: isImperial,
+  onUnitChange: onUnitChange,
+  // Existing helpers
+  fmt: fmt,
+  roundTo: roundTo,
+  posNum: posNum,
+  showResult: showResult,
+  showError: showError,
+  Units: Units,
+  applyWaste: applyWaste,
+  bagsNeeded: bagsNeeded
+};
+
+/* =========================================================
+   END OF SCRIPT — FINAL
+   BuildMetric — Shared JavaScript
+   Total: 18 sections
+   Sections 1–12: Core helpers (Phase 1 + 2)
+   Sections 13–18: Unit Toggle System (Phase 3)
+   ========================================================= */
