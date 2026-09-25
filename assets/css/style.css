@@ -1915,3 +1915,286 @@ code, pre {
    Sections 1–25: Core design system (Phases 1–3)
    Sections 26–30: Unit Toggle System (Phase 4)
    ========================================================= */
+
+/* =========================================================
+   SECTION 31 — CALCULATOR LAYOUT (2-Column)
+   =========================================================
+   Desktop pe calculator + sidebar side-by-side
+   Mobile pe stacked
+   ========================================================= */
+
+.calc-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 28px;
+  align-items: start;
+}
+
+.calc-main {
+  min-width: 0; /* prevents overflow issues */
+}
+
+.calc-sidebar {
+  position: sticky;
+  top: 84px; /* below sticky header */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 960px) {
+  .calc-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .calc-sidebar {
+    position: static;
+    top: auto;
+  }
+}
+
+/* ---------------------------------------------------------
+   31.1 SIDEBAR CARD
+   --------------------------------------------------------- */
+.sidebar-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 18px;
+  box-shadow: var(--shadow-xs);
+}
+
+.sidebar-card h3 {
+  font-size: 0.98rem;
+  color: var(--primary-dark);
+  margin-bottom: 14px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary-light);
+}
+
+.sidebar-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-links li {
+  margin-bottom: 8px;
+}
+
+.sidebar-links li:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-links a {
+  display: block;
+  padding: 8px 10px;
+  color: var(--text-soft);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  transition: background var(--t-fast), color var(--t-fast);
+}
+
+.sidebar-links a:hover {
+  background: var(--primary-lighter);
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* =========================================================
+   SECTION 32 — AD SLOT VARIANTS
+   ========================================================= */
+
+.ad-slot-header {
+  margin: 20px 0;
+  min-height: 90px;
+}
+
+.ad-slot-inline {
+  margin: 28px 0;
+  min-height: 100px;
+}
+
+.ad-slot-sidebar {
+  margin: 0;
+  min-height: 250px;
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ad-slot-bottom {
+  margin: 32px 0 20px;
+  min-height: 100px;
+}
+
+@media (max-width: 960px) {
+  .ad-slot-sidebar {
+    max-width: 100%;
+    min-height: 100px;
+  }
+}
+
+/* =========================================================
+   SECTION 33 — FAQ ACCORDION (Click to Open/Close)
+   ========================================================= */
+
+.faq-accordion {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--card);
+  margin-bottom: 10px;
+  transition: border-color var(--t-fast);
+}
+
+.faq-accordion:hover {
+  border-color: var(--primary);
+}
+
+.faq-accordion.open {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Question / Header */
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  background: transparent;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  letter-spacing: -0.01em;
+  line-height: 1.45;
+  transition: background var(--t-fast);
+}
+
+.faq-question:hover {
+  background: var(--primary-lighter);
+}
+
+.faq-question:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+/* Plus/Minus Icon */
+.faq-icon {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1;
+  transition: background var(--t-fast),
+              color var(--t-fast),
+              transform var(--t-base);
+  position: relative;
+}
+
+.faq-accordion.open .faq-icon {
+  background: var(--primary);
+  color: #ffffff;
+  transform: rotate(180deg);
+}
+
+/* Answer */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  padding: 0 20px;
+}
+
+.faq-accordion.open .faq-answer {
+  max-height: 800px;
+  padding: 0 20px 20px 20px;
+}
+
+.faq-answer p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* ---------------------------------------------------------
+   33.1 ICON AS +/- USING CSS
+   --------------------------------------------------------- */
+.faq-icon::before {
+  content: "+";
+  display: block;
+}
+.faq-accordion.open .faq-icon::before {
+  content: "−";
+}
+
+/* Fallback: hide any inline text inside icon */
+.faq-icon .faq-icon-text {
+  display: none;
+}
+
+/* =========================================================
+   SECTION 34 — MOBILE LAYOUT FIX
+   =========================================================
+   Screenshot problem: mobile pe calculator card lamba ho raha tha.
+   Yeh fix ensure karta hai ki content collapse na ho.
+   ========================================================= */
+
+@media (max-width: 960px) {
+  .calc-main {
+    width: 100%;
+  }
+  .calc-sidebar {
+    width: 100%;
+  }
+  .calc-wrap {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 640px) {
+  .calc-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .calc-header h1 {
+    margin-bottom: 12px;
+  }
+  .unit-toggle {
+    margin-bottom: 0;
+  }
+  .sidebar-card {
+    padding: 16px 14px;
+  }
+  .faq-question {
+    padding: 16px 16px;
+    font-size: 0.96rem;
+  }
+  .faq-answer {
+    padding: 0 16px;
+  }
+  .faq-accordion.open .faq-answer {
+    padding: 0 16px 18px 16px;
+  }
+}
