@@ -1,8 +1,7 @@
 /* =========================================================
    BuildMetric — Global Stylesheet
    File: assets/css/style.css
-   Ultra-premium, mobile-first design system for
-   construction and DIY calculators.
+   Ultra-premium, mobile-first design system.
    ========================================================= */
 
 /* =========================================================
@@ -141,14 +140,9 @@ a:hover {
   text-decoration: underline;
 }
 
-ul, ol {
-  list-style-position: outside;
-}
+ul, ol { list-style-position: outside; }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
+table { border-collapse: collapse; width: 100%; }
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -176,42 +170,22 @@ h1 {
   letter-spacing: -0.03em;
 }
 
-h2 {
-  font-size: clamp(1.35rem, 3vw, 1.75rem);
-}
-
-h3 {
-  font-size: clamp(1.1rem, 2.4vw, 1.25rem);
-}
-
-h4 {
-  font-size: 1.125rem;
-}
+h2 { font-size: clamp(1.35rem, 3vw, 1.75rem); }
+h3 { font-size: clamp(1.1rem, 2.4vw, 1.25rem); }
+h4 { font-size: 1.125rem; }
 
 p {
   margin-bottom: var(--sp-4);
   color: var(--text-soft);
 }
 
-strong, b {
-  font-weight: 700;
-  color: var(--text);
-}
+strong, b { font-weight: 700; color: var(--text); }
 
-small {
-  font-size: 0.875rem;
-  color: var(--muted);
-}
+small { font-size: 0.875rem; color: var(--muted); }
 
-code, pre {
-  font-family: var(--font-mono);
-  font-size: 0.92em;
-}
+code, pre { font-family: var(--font-mono); font-size: 0.92em; }
 
-::selection {
-  background: var(--primary);
-  color: #fff;
-}
+::selection { background: var(--primary); color: #fff; }
 
 /* =========================================================
    SECTION 4 — LAYOUT CONTAINERS
@@ -269,15 +243,9 @@ code, pre {
   transition: opacity var(--t-fast);
 }
 
-.logo:hover {
-  text-decoration: none;
-  opacity: 0.88;
-}
+.logo:hover { text-decoration: none; opacity: 0.88; }
 
-.logo span {
-  color: var(--accent);
-  margin-left: 1px;
-}
+.logo span { color: var(--accent); margin-left: 1px; }
 
 .site-nav ul {
   list-style: none;
@@ -296,10 +264,7 @@ code, pre {
   transition: color var(--t-fast);
 }
 
-.site-nav a:hover {
-  color: var(--primary);
-  text-decoration: none;
-}
+.site-nav a:hover { color: var(--primary); text-decoration: none; }
 
 .site-nav a::after {
   content: "";
@@ -312,9 +277,7 @@ code, pre {
   transition: width var(--t-base);
 }
 
-.site-nav a:hover::after {
-  width: 100%;
-}
+.site-nav a:hover::after { width: 100%; }
 
 .nav-toggle {
   display: none;
@@ -329,9 +292,7 @@ code, pre {
   transition: background var(--t-fast);
 }
 
-.nav-toggle:hover {
-  background: var(--primary-light);
-}
+.nav-toggle:hover { background: var(--primary-light); }
 
 /* =========================================================
    SECTION 6 — HERO SECTION
@@ -357,10 +318,7 @@ code, pre {
   z-index: 0;
 }
 
-.hero .container {
-  position: relative;
-  z-index: 1;
-}
+.hero .container { position: relative; z-index: 1; }
 
 .hero h1 {
   color: var(--primary-dark);
@@ -378,10 +336,7 @@ code, pre {
   line-height: 1.75;
 }
 
-.hero strong {
-  color: var(--primary-dark);
-  font-weight: 700;
-}
+.hero strong { color: var(--primary-dark); font-weight: 700; }
 
 /* =========================================================
    SECTION 7 — ACCESSIBILITY
@@ -403,16 +358,12 @@ code, pre {
   border-radius: 0 0 var(--radius-sm) 0;
 }
 
-.skip-link:focus {
-  top: 0;
-   }
+.skip-link:focus { top: 0; }
 
 /* =========================================================
-   SECTION 8 — TOOL GRID & CARDS (Homepage Directory)
+   SECTION 8 — TOOL GRID & CARDS
    ========================================================= */
-.tools-section {
-  padding: 24px 0 72px;
-}
+.tools-section { padding: 24px 0 72px; }
 
 .section-title {
   font-size: clamp(1.25rem, 2.8vw, 1.5rem);
@@ -434,6 +385,8 @@ code, pre {
   height: 2px;
   background: var(--accent);
 }
+
+.section-title:first-child { margin-top: 0; }
 
 .tool-grid {
   display: grid;
@@ -478,9 +431,7 @@ code, pre {
   text-decoration: none;
 }
 
-.tool-card:hover::before {
-  transform: scaleX(1);
-}
+.tool-card:hover::before { transform: scaleX(1); }
 
 .tool-card h3 {
   font-size: 1.05rem;
@@ -502,9 +453,7 @@ code, pre {
 /* =========================================================
    SECTION 9 — CALCULATOR PAGE LAYOUT
    ========================================================= */
-.page-main {
-  padding: 32px 0 72px;
-}
+.page-main { padding: 32px 0 72px; }
 
 .breadcrumb {
   font-size: 0.85rem;
@@ -522,18 +471,12 @@ code, pre {
   text-decoration: none;
 }
 
-.breadcrumb a:hover {
-  text-decoration: underline;
-}
+.breadcrumb a:hover { text-decoration: underline; }
 
-.breadcrumb .sep {
-  color: var(--muted-light);
-  margin: 0 2px;
-}
+.breadcrumb .sep { color: var(--muted-light); margin: 0 2px; }
 
 /* =========================================================
    SECTION 10 — CALCULATOR 2-COLUMN LAYOUT
-   Mobile pe stack, desktop pe side-by-side
    ========================================================= */
 .calc-layout {
   display: grid;
@@ -542,9 +485,7 @@ code, pre {
   align-items: start;
 }
 
-.calc-main {
-  min-width: 0;
-}
+.calc-main { min-width: 0; }
 
 .calc-sidebar {
   position: sticky;
@@ -563,7 +504,7 @@ code, pre {
     position: static;
     top: auto;
   }
-}
+   }
 
 /* =========================================================
    SECTION 11 — SIDEBAR CARD
@@ -592,13 +533,8 @@ code, pre {
   padding: 0;
 }
 
-.sidebar-links li {
-  margin-bottom: 8px;
-}
-
-.sidebar-links li:last-child {
-  margin-bottom: 0;
-}
+.sidebar-links li { margin-bottom: 8px; }
+.sidebar-links li:last-child { margin-bottom: 0; }
 
 .sidebar-links a {
   display: block;
@@ -645,7 +581,6 @@ code, pre {
   line-height: 1.7;
 }
 
-/* Calculator header — title + unit toggle inline */
 .calc-header {
   display: flex;
   flex-wrap: wrap;
@@ -679,9 +614,7 @@ code, pre {
 /* =========================================================
    SECTION 13 — FORM ELEMENTS
    ========================================================= */
-.form-row {
-  margin-bottom: 18px;
-}
+.form-row { margin-bottom: 18px; }
 
 .form-row label {
   display: block;
@@ -718,14 +651,10 @@ code, pre {
 }
 
 .form-row input::placeholder,
-.form-row textarea::placeholder {
-  color: var(--muted-light);
-}
+.form-row textarea::placeholder { color: var(--muted-light); }
 
 .form-row input:hover,
-.form-row select:hover {
-  border-color: var(--primary);
-}
+.form-row select:hover { border-color: var(--primary); }
 
 .form-row input:focus,
 .form-row select:focus,
@@ -764,15 +693,13 @@ code, pre {
   gap: 16px;
 }
 
-/* Input with unit suffix (e.g. [ 10    ft ]) */
+/* Input with unit suffix */
 .input-with-unit {
   position: relative;
   display: block;
 }
 
-.input-with-unit input {
-  padding-right: 58px;
-}
+.input-with-unit input { padding-right: 58px; }
 
 .input-with-unit .input-unit {
   position: absolute;
@@ -838,9 +765,7 @@ code, pre {
   transition: background var(--t-fast), color var(--t-fast);
 }
 
-.btn-secondary:hover {
-  background: var(--primary-light);
-}
+.btn-secondary:hover { background: var(--primary-light); }
 
 /* =========================================================
    SECTION 15 — RESULT BOX
@@ -857,9 +782,7 @@ code, pre {
   animation: fadeInUp 0.35s ease;
 }
 
-.result-box.show {
-  display: block;
-}
+.result-box.show { display: block; }
 
 .result-box h3 {
   font-size: 1.05rem;
@@ -869,10 +792,7 @@ code, pre {
   letter-spacing: -0.01em;
 }
 
-.result-box strong {
-  color: var(--primary-dark);
-  font-weight: 700;
-}
+.result-box strong { color: var(--primary-dark); font-weight: 700; }
 
 .result-box .result-primary {
   font-size: 1.45rem;
@@ -902,9 +822,7 @@ code, pre {
   color: var(--text-soft);
 }
 
-.result-box .result-line:last-child {
-  border-bottom: 0;
-}
+.result-box .result-line:last-child { border-bottom: 0; }
 
 .result-box .result-line span:last-child {
   font-weight: 700;
@@ -922,17 +840,10 @@ code, pre {
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Result actions (Copy, Reset) */
 .result-actions {
   display: flex;
   gap: 10px;
@@ -963,11 +874,10 @@ code, pre {
   background: var(--primary-lighter);
   border-color: var(--primary);
   color: var(--primary-dark);
-   }
-
+}
 
 /* =========================================================
-   SECTION 16 — CONTENT SECTIONS (Tool Page Explanations)
+   SECTION 16 — CONTENT SECTIONS
    ========================================================= */
 .content-section {
   max-width: var(--container-narrow);
@@ -984,9 +894,7 @@ code, pre {
   border-bottom: 2px solid var(--primary-light);
 }
 
-.content-section h2:first-child {
-  margin-top: 0;
-}
+.content-section h2:first-child { margin-top: 0; }
 
 .content-section h3 {
   font-size: 1.12rem;
@@ -1008,14 +916,9 @@ code, pre {
   color: var(--text-soft);
 }
 
-.content-section li {
-  margin-bottom: 8px;
-  line-height: 1.7;
-}
+.content-section li { margin-bottom: 8px; line-height: 1.7; }
 
-.content-section li strong {
-  color: var(--text);
-}
+.content-section li strong { color: var(--text); }
 
 .content-section a {
   color: var(--primary);
@@ -1026,9 +929,7 @@ code, pre {
   transition: text-decoration-color var(--t-fast);
 }
 
-.content-section a:hover {
-  text-decoration-color: var(--primary);
-}
+.content-section a:hover { text-decoration-color: var(--primary); }
 
 /* =========================================================
    SECTION 17 — FORMULA BOX
@@ -1055,7 +956,7 @@ code, pre {
 }
 
 /* =========================================================
-   SECTION 18 — CALLOUT BOX (Tips, Warnings, Notes)
+   SECTION 18 — CALLOUT BOX
    ========================================================= */
 .callout {
   background: var(--warning-light);
@@ -1075,10 +976,8 @@ code, pre {
 }
 
 /* =========================================================
-   SECTION 19 — FAQ ACCORDION (ARWallet-style)
-   Clean, numbered, list-style with +/− toggle
+   SECTION 19 — FAQ ACCORDION
    ========================================================= */
-
 .faq-accordion {
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
@@ -1090,17 +989,13 @@ code, pre {
               background var(--t-fast);
 }
 
-.faq-accordion:hover {
-  border-color: var(--primary);
-}
+.faq-accordion:hover { border-color: var(--primary); }
 
-/* Open state — question header accent color ho jata hai */
 .faq-accordion.open {
   border-color: var(--accent);
   box-shadow: var(--shadow-sm);
 }
 
-/* Question Button */
 .faq-question {
   width: 100%;
   display: flex;
@@ -1121,33 +1016,26 @@ code, pre {
   transition: background var(--t-fast), color var(--t-fast);
 }
 
-.faq-question:hover {
-  background: var(--primary-lighter);
-}
+.faq-question:hover { background: var(--primary-lighter); }
 
 .faq-question:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: -2px;
 }
 
-/* Jab FAQ open ho — header accent background */
 .faq-accordion.open .faq-question {
   background: var(--accent);
   color: #ffffff;
   font-weight: 700;
 }
 
-.faq-accordion.open .faq-question:hover {
-  background: var(--accent-dark);
-}
+.faq-accordion.open .faq-question:hover { background: var(--accent-dark); }
 
-/* Question text */
 .faq-question .faq-q-text {
   flex: 1;
   padding-right: 4px;
 }
 
-/* Plus / Minus Icon */
 .faq-icon {
   flex-shrink: 0;
   width: 22px;
@@ -1174,11 +1062,8 @@ code, pre {
   transform: rotate(180deg);
 }
 
-.faq-accordion.open .faq-icon::before {
-  content: "−";
-}
+.faq-accordion.open .faq-icon::before { content: "−"; }
 
-/* Answer */
 .faq-answer {
   max-height: 0;
   overflow: hidden;
@@ -1199,39 +1084,8 @@ code, pre {
   line-height: 1.75;
 }
 
-/* Optional: "View full text" style link (agar kabhi chahiye) */
-.faq-answer .faq-view-more {
-  display: inline-block;
-  margin-top: 10px;
-  color: var(--accent-dark);
-  font-size: 0.88rem;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-/* Mobile tweaks */
-@media (max-width: 640px) {
-  .faq-question {
-    padding: 14px 16px;
-    font-size: 0.94rem;
-    gap: 12px;
-  }
-  .faq-icon {
-    font-size: 1.35rem;
-    width: 20px;
-    height: 20px;
-  }
-  .faq-accordion.open .faq-answer {
-    padding: 16px 16px 18px 16px;
-  }
-  .faq-answer p {
-    font-size: 0.9rem;
-  }
-}
-
-
 /* =========================================================
-   SECTION 20 — RELATED TOOLS (Internal Linking)
+   SECTION 20 — RELATED TOOLS
    ========================================================= */
 .related-tools {
   margin: 40px 0 0;
@@ -1255,9 +1109,7 @@ code, pre {
   gap: 10px;
 }
 
-.related-tools li {
-  margin: 0;
-}
+.related-tools li { margin: 0; }
 
 .related-tools a {
   display: block;
@@ -1308,19 +1160,16 @@ code, pre {
   font-weight: 600;
 }
 
-/* Header banner (728x90 desktop / 320x50 mobile) */
 .ad-slot-header {
   margin: 20px 0;
   min-height: 90px;
 }
 
-/* In-content (below result) */
 .ad-slot-inline {
   margin: 28px 0;
   min-height: 100px;
 }
 
-/* Sidebar (300x250) */
 .ad-slot-sidebar {
   margin: 0;
   min-height: 250px;
@@ -1330,7 +1179,6 @@ code, pre {
   margin-right: auto;
 }
 
-/* Bottom of content */
 .ad-slot-bottom {
   margin: 32px 0 20px;
   min-height: 100px;
@@ -1409,41 +1257,6 @@ code, pre {
   transform: translateY(-1px);
 }
 
-@media (max-width: 600px) {
-  .unit-toggle {
-    width: 100%;
-    justify-content: center;
-    padding: 5px;
-    margin-bottom: 20px;
-  }
-
-  .unit-toggle-label {
-    width: 100%;
-    text-align: center;
-    padding: 4px 0 8px 0;
-    font-size: 0.8rem;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 4px;
-  }
-
-  .unit-btn {
-    flex: 1;
-    padding: 10px 12px;
-    font-size: 0.84rem;
-    text-align: center;
-  }
-}
-
-@media (max-width: 380px) {
-  .unit-btn {
-    font-size: 0.78rem;
-    padding: 9px 8px;
-  }
-  .unit-toggle-label {
-    font-size: 0.75rem;
-  }
-}
-
 /* =========================================================
    SECTION 23 — UNIT FIELD HELPERS
    ========================================================= */
@@ -1476,11 +1289,121 @@ code, pre {
   color: var(--primary-dark);
   font-style: normal;
   font-weight: 600;
-   }
-
+}
 
 /* =========================================================
-   SECTION 24 — SITE FOOTER
+   SECTION 24 — CATEGORIES (Homepage)
+   Category cards grid with icon + info
+   ========================================================= */
+.categories-intro {
+  color: var(--text-soft);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  max-width: 780px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.category-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 18px;
+  color: var(--text);
+  text-decoration: none;
+  transition: transform var(--t-base),
+              box-shadow var(--t-base),
+              border-color var(--t-base);
+  box-shadow: var(--shadow-xs);
+  position: relative;
+  overflow: hidden;
+}
+
+.category-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--primary) 0%, var(--accent) 100%);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform var(--t-base);
+}
+
+.category-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+  text-decoration: none;
+}
+
+.category-card:hover::before {
+  transform: scaleY(1);
+}
+
+.category-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-lighter) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  line-height: 1;
+  transition: transform var(--t-base);
+}
+
+.category-card:hover .category-icon {
+  transform: scale(1.06);
+}
+
+.category-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.category-info h3 {
+  font-size: 1rem;
+  color: var(--primary-dark);
+  margin-bottom: 5px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+
+.category-info p {
+  font-size: 0.86rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0 0 8px 0;
+}
+
+.category-count {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--accent-dark);
+  background: var(--accent-light);
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+}
+
+/* =========================================================
+   SECTION 25 — SITE FOOTER
    ========================================================= */
 .site-footer {
   background: linear-gradient(180deg, #0a2239 0%, #06182b 100%);
@@ -1573,7 +1496,7 @@ code, pre {
 }
 
 /* =========================================================
-   SECTION 25 — MOBILE NAVIGATION
+   SECTION 26 — MOBILE NAVIGATION
    ========================================================= */
 @media (max-width: 760px) {
   .nav-toggle {
@@ -1639,10 +1562,10 @@ code, pre {
 }
 
 /* =========================================================
-   SECTION 26 — RESPONSIVE BREAKPOINTS
+   SECTION 27 — RESPONSIVE BREAKPOINTS
    ========================================================= */
 
-/* ---------- Large tablets / small laptops ---------- */
+/* Large tablets / small laptops */
 @media (max-width: 1024px) {
   .container,
   .container-narrow {
@@ -1651,9 +1574,12 @@ code, pre {
   .tool-grid {
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   }
+  .category-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
 }
 
-/* ---------- Tablets ---------- */
+/* Tablets */
 @media (max-width: 820px) {
   .hero {
     padding: 48px 0 32px;
@@ -1669,7 +1595,7 @@ code, pre {
   }
 }
 
-/* ---------- Small tablets / large phones ---------- */
+/* Small tablets / large phones */
 @media (max-width: 640px) {
   :root {
     --header-height: 60px;
@@ -1744,6 +1670,21 @@ code, pre {
     padding: 18px 16px;
   }
 
+  .category-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .category-card {
+    padding: 18px 16px;
+  }
+
+  .category-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.45rem;
+  }
+
   .content-section h2 {
     margin-top: 28px;
   }
@@ -1766,8 +1707,15 @@ code, pre {
   }
 
   .faq-question {
-    padding: 16px 16px;
-    font-size: 0.96rem;
+    padding: 14px 16px;
+    font-size: 0.94rem;
+    gap: 12px;
+  }
+
+  .faq-icon {
+    font-size: 1.35rem;
+    width: 20px;
+    height: 20px;
   }
 
   .faq-answer {
@@ -1775,11 +1723,15 @@ code, pre {
   }
 
   .faq-accordion.open .faq-answer {
-    padding: 0 16px 18px 16px;
+    padding: 16px 16px 18px 16px;
+  }
+
+  .faq-answer p {
+    font-size: 0.9rem;
   }
 }
 
-/* ---------- Small phones ---------- */
+/* Small phones */
 @media (max-width: 480px) {
   .container {
     width: 94%;
@@ -1845,6 +1797,14 @@ code, pre {
     font-size: 1rem;
   }
 
+  .category-info h3 {
+    font-size: 0.96rem;
+  }
+
+  .category-info p {
+    font-size: 0.82rem;
+  }
+
   .breadcrumb {
     font-size: 0.8rem;
   }
@@ -1897,7 +1857,7 @@ code, pre {
   }
 }
 
-/* ---------- Extra small phones ---------- */
+/* Extra small phones */
 @media (max-width: 360px) {
   .hero h1 {
     font-size: 1.4rem;
@@ -1921,7 +1881,7 @@ code, pre {
   }
 }
 
-/* ---------- Large screens ---------- */
+/* Large screens */
 @media (min-width: 1440px) {
   :root {
     --container-max: 1220px;
@@ -1936,11 +1896,69 @@ code, pre {
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     gap: 22px;
   }
-   }
+
+  .category-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 18px;
+  }
+}
+
+/* =========================================================
+   SECTION 28 — SIDEBAR & CALC LAYOUT MOBILE FIX
+   ========================================================= */
+@media (max-width: 960px) {
+  .calc-main {
+    width: 100%;
+  }
+  .calc-sidebar {
+    width: 100%;
+  }
+  .calc-wrap {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* =========================================================
+   SECTION 29 — SMOOTH TRANSITIONS FOR UNIT SWITCH
+   ========================================================= */
+.unit-dependent {
+  transition: opacity 0.15s ease;
+}
+
+.unit-switching .unit-dependent {
+  opacity: 0.4;
+}
+
+/* =========================================================
+   SECTION 30 — HIGH CONTRAST MODE
+   ========================================================= */
+@media (prefers-contrast: high) {
+  :root {
+    --border: #000000;
+    --border-strong: #000000;
+    --text-soft: #000000;
+    --muted: #333333;
+  }
+
+  .tool-card,
+  .category-card {
+    border-width: 2px;
+  }
+
+  .form-row input,
+  .form-row select {
+    border-width: 2px;
+  }
+
+  .btn-calc {
+    border: 2px solid #000000;
+  }
+}
 
 
 /* =========================================================
-   SECTION 27 — UTILITY CLASSES
+   SECTION 31 — UTILITY CLASSES
    ========================================================= */
 .text-center { text-align: center; }
 .text-left { text-align: left; }
@@ -1975,7 +1993,7 @@ code, pre {
 .no-wrap { white-space: nowrap; }
 
 /* =========================================================
-   SECTION 28 — SUBTLE ANIMATIONS
+   SECTION 32 — ANIMATIONS
    ========================================================= */
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -1999,7 +2017,51 @@ code, pre {
 }
 
 /* =========================================================
-   SECTION 29 — PRINT STYLES
+   SECTION 33 — FOCUS & ACCESSIBILITY POLISH
+   ========================================================= */
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   SECTION 34 — SCROLLBAR STYLING
+   ========================================================= */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-alt);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--bg-alt);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-light);
+}
+
+/* =========================================================
+   SECTION 35 — PRINT STYLES
    ========================================================= */
 @media print {
   .site-header,
@@ -2013,7 +2075,8 @@ code, pre {
   .unit-toggle,
   .sidebar-card,
   .calc-sidebar,
-  .result-actions {
+  .result-actions,
+  .category-grid {
     display: none !important;
   }
 
@@ -2057,32 +2120,7 @@ code, pre {
 }
 
 /* =========================================================
-   SECTION 30 — HIGH CONTRAST MODE (Accessibility)
-   ========================================================= */
-@media (prefers-contrast: high) {
-  :root {
-    --border: #000000;
-    --border-strong: #000000;
-    --text-soft: #000000;
-    --muted: #333333;
-  }
-
-  .tool-card {
-    border-width: 2px;
-  }
-
-  .form-row input,
-  .form-row select {
-    border-width: 2px;
-  }
-
-  .btn-calc {
-    border: 2px solid #000000;
-  }
-}
-
-/* =========================================================
-   SECTION 31 — DARK MODE (Optional — disabled by default)
+   SECTION 36 — DARK MODE (Optional — disabled by default)
    =========================================================
    Uncomment to enable. Keeps brand consistency when off.
    ========================================================= */
@@ -2113,72 +2151,26 @@ code, pre {
   .hero {
     background: linear-gradient(180deg, #1a2330 0%, #0f1419 100%);
   }
+
+  .form-row input,
+  .form-row select,
+  .form-row textarea {
+    background: #1a2330;
+    color: #e6eef7;
+  }
 }
 */
 
 /* =========================================================
-   SECTION 32 — FOCUS & ACCESSIBILITY POLISH
-   ========================================================= */
-*:focus {
-  outline: none;
-}
-
-*:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 2px;
-  border-radius: 4px;
-}
-
-button:focus-visible,
-a:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 2px;
-}
-
-/* =========================================================
-   SECTION 33 — SCROLLBAR STYLING (Webkit)
-   ========================================================= */
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg-alt);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--border-strong);
-  border-radius: var(--radius-full);
-  border: 2px solid var(--bg-alt);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--muted-light);
-}
-
-/* =========================================================
-   SECTION 34 — SMOOTH TRANSITIONS FOR UNIT SWITCH
-   ========================================================= */
-.unit-dependent {
-  transition: opacity 0.15s ease;
-}
-
-.unit-switching .unit-dependent {
-  opacity: 0.4;
-}
-
-/* =========================================================
    END OF STYLESHEET — FINAL
    BuildMetric — Global Stylesheet
-   Total: 34 sections across 5 phases
-   
-   Phase 1 (Sections 1–7):   Design tokens, reset, typography, header, hero, a11y
-   Phase 2 (Sections 8–15):  Tool cards, calculator layout, forms, buttons, result box
-   Phase 3 (Sections 16–23): Content sections, formula boxes, FAQ accordion, related tools, ad slots, unit toggle
-   Phase 4 (Sections 24–26): Footer, mobile nav, responsive breakpoints
-   Phase 5 (Sections 27–34): Utilities, animations, print, high contrast, dark mode, polish
+   Total: 36 sections across 4 parts
+
+   Part 1 (Sections 1–10):   Design tokens, reset, typography, header, hero,
+                              accessibility, tool cards, calc layout
+   Part 2 (Sections 11–20):  Sidebar, calc wrap, forms, buttons, result box,
+                              content sections, formula, callout, FAQ, related
+   Part 3 (Sections 21–30):  Ad slots, unit toggle, categories, footer, mobile nav,
+                              responsive breakpoints, high contrast
+   Part 4 (Sections 31–36):  Utilities, animations, focus, scrollbar, print, dark mode
    ========================================================= */
