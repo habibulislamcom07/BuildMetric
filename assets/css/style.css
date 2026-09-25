@@ -1,15 +1,12 @@
 /* =========================================================
    BuildMetric — Global Stylesheet
    File: assets/css/style.css
-   Author: BuildMetric
-   Description: Ultra-premium, mobile-first design system for
-   construction and DIY calculators. Fast-loading, accessible,
-   global-ready (imperial + metric audience).
+   Ultra-premium, mobile-first design system for
+   construction and DIY calculators.
    ========================================================= */
 
 /* =========================================================
-   1. DESIGN TOKENS (CSS Variables)
-   Change these to rebrand the entire site instantly.
+   SECTION 1 — DESIGN TOKENS
    ========================================================= */
 :root {
   /* Brand Colors */
@@ -23,7 +20,7 @@
   --accent-dark: #e6762a;
   --accent-light: #fff1e6;
 
-  /* Neutral Palette */
+  /* Neutrals */
   --bg: #f6f8fb;
   --bg-alt: #eef2f7;
   --card: #ffffff;
@@ -34,7 +31,7 @@
   --border: #e2e8f0;
   --border-strong: #cbd5e0;
 
-  /* Semantic Colors */
+  /* Semantic */
   --success: #10b981;
   --success-light: #ecfdf5;
   --warning: #f59e0b;
@@ -48,18 +45,7 @@
   --font-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono",
                Consolas, "Courier New", monospace;
 
-  /* Font Sizes (fluid-friendly scale) */
-  --fs-xs: 0.75rem;
-  --fs-sm: 0.875rem;
-  --fs-base: 1rem;
-  --fs-md: 1.0625rem;
-  --fs-lg: 1.125rem;
-  --fs-xl: 1.25rem;
-  --fs-2xl: 1.5rem;
-  --fs-3xl: 1.875rem;
-  --fs-4xl: 2.25rem;
-
-  /* Spacing Scale */
+  /* Spacing */
   --sp-1: 4px;
   --sp-2: 8px;
   --sp-3: 12px;
@@ -71,13 +57,13 @@
   --sp-9: 48px;
   --sp-10: 64px;
 
-  /* Border Radius */
+  /* Radius */
   --radius-sm: 8px;
   --radius: 12px;
   --radius-lg: 16px;
   --radius-full: 999px;
 
-  /* Shadows (layered, subtle) */
+  /* Shadows */
   --shadow-xs: 0 1px 2px rgba(15, 76, 129, 0.04);
   --shadow-sm: 0 1px 3px rgba(15, 76, 129, 0.06),
                0 1px 2px rgba(15, 76, 129, 0.04);
@@ -99,11 +85,9 @@
 }
 
 /* =========================================================
-   2. MODERN RESET
+   SECTION 2 — MODERN RESET
    ========================================================= */
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -112,14 +96,13 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
   text-size-adjust: 100%;
   scroll-padding-top: 80px;
 }
 
 body {
   font-family: var(--font-sans);
-  font-size: var(--fs-base);
+  font-size: 1rem;
   line-height: 1.7;
   color: var(--text);
   background: var(--bg);
@@ -130,20 +113,13 @@ body {
   overflow-x: hidden;
 }
 
-img,
-picture,
-video,
-canvas,
-svg {
+img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-input,
-button,
-textarea,
-select {
+input, button, textarea, select {
   font: inherit;
   color: inherit;
 }
@@ -165,8 +141,7 @@ a:hover {
   text-decoration: underline;
 }
 
-ul,
-ol {
+ul, ol {
   list-style-position: outside;
 }
 
@@ -175,7 +150,6 @@ table {
   width: 100%;
 }
 
-/* Remove number input spinners for cleaner look */
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -187,7 +161,7 @@ input[type="number"] {
 }
 
 /* =========================================================
-   3. TYPOGRAPHY
+   SECTION 3 — TYPOGRAPHY
    ========================================================= */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
@@ -204,7 +178,6 @@ h1 {
 
 h2 {
   font-size: clamp(1.35rem, 3vw, 1.75rem);
-  letter-spacing: -0.02em;
 }
 
 h3 {
@@ -212,7 +185,7 @@ h3 {
 }
 
 h4 {
-  font-size: var(--fs-lg);
+  font-size: 1.125rem;
 }
 
 p {
@@ -226,7 +199,7 @@ strong, b {
 }
 
 small {
-  font-size: var(--fs-sm);
+  font-size: 0.875rem;
   color: var(--muted);
 }
 
@@ -235,14 +208,13 @@ code, pre {
   font-size: 0.92em;
 }
 
-/* Selection color */
 ::selection {
   background: var(--primary);
   color: #fff;
 }
 
 /* =========================================================
-   4. LAYOUT CONTAINERS
+   SECTION 4 — LAYOUT CONTAINERS
    ========================================================= */
 .container {
   width: 92%;
@@ -266,7 +238,7 @@ code, pre {
 }
 
 /* =========================================================
-   5. SITE HEADER
+   SECTION 5 — SITE HEADER
    ========================================================= */
 .site-header {
   background: #ffffff;
@@ -276,8 +248,6 @@ code, pre {
   top: 0;
   z-index: 1000;
   box-shadow: var(--shadow-xs);
-  backdrop-filter: saturate(180%) blur(8px);
-  -webkit-backdrop-filter: saturate(180%) blur(8px);
 }
 
 .header-inner {
@@ -309,7 +279,6 @@ code, pre {
   margin-left: 1px;
 }
 
-/* Navigation */
 .site-nav ul {
   list-style: none;
   display: flex;
@@ -347,7 +316,6 @@ code, pre {
   width: 100%;
 }
 
-/* Mobile nav toggle button */
 .nav-toggle {
   display: none;
   background: transparent;
@@ -366,7 +334,7 @@ code, pre {
 }
 
 /* =========================================================
-   6. HERO SECTION
+   SECTION 6 — HERO SECTION
    ========================================================= */
 .hero {
   padding: 64px 0 42px;
@@ -416,7 +384,7 @@ code, pre {
 }
 
 /* =========================================================
-   7. ACCESSIBILITY & FOCUS
+   SECTION 7 — ACCESSIBILITY
    ========================================================= */
 :focus-visible {
   outline: 3px solid var(--accent);
@@ -424,7 +392,6 @@ code, pre {
   border-radius: 4px;
 }
 
-/* Skip link (baad mein add kar sakte ho) */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -438,10 +405,10 @@ code, pre {
 
 .skip-link:focus {
   top: 0;
-}
+   }
 
 /* =========================================================
-   8. TOOL GRID & CARDS (Homepage Directory)
+   SECTION 8 — TOOL GRID & CARDS (Homepage Directory)
    ========================================================= */
 .tools-section {
   padding: 24px 0 72px;
@@ -533,7 +500,7 @@ code, pre {
 }
 
 /* =========================================================
-   9. CALCULATOR PAGE LAYOUT
+   SECTION 9 — CALCULATOR PAGE LAYOUT
    ========================================================= */
 .page-main {
   padding: 32px 0 72px;
@@ -565,14 +532,99 @@ code, pre {
 }
 
 /* =========================================================
-   10. CALCULATOR WRAPPER
+   SECTION 10 — CALCULATOR 2-COLUMN LAYOUT
+   Mobile pe stack, desktop pe side-by-side
+   ========================================================= */
+.calc-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 28px;
+  align-items: start;
+}
+
+.calc-main {
+  min-width: 0;
+}
+
+.calc-sidebar {
+  position: sticky;
+  top: 84px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 960px) {
+  .calc-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .calc-sidebar {
+    position: static;
+    top: auto;
+  }
+}
+
+/* =========================================================
+   SECTION 11 — SIDEBAR CARD
+   ========================================================= */
+.sidebar-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 18px;
+  box-shadow: var(--shadow-xs);
+}
+
+.sidebar-card h3 {
+  font-size: 0.98rem;
+  color: var(--primary-dark);
+  margin-bottom: 14px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary-light);
+}
+
+.sidebar-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-links li {
+  margin-bottom: 8px;
+}
+
+.sidebar-links li:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-links a {
+  display: block;
+  padding: 8px 10px;
+  color: var(--text-soft);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  transition: background var(--t-fast), color var(--t-fast);
+}
+
+.sidebar-links a:hover {
+  background: var(--primary-lighter);
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* =========================================================
+   SECTION 12 — CALCULATOR WRAPPER
    ========================================================= */
 .calc-wrap {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 34px 32px;
-  margin-bottom: 34px;
+  padding: 32px 28px;
+  margin-bottom: 28px;
   box-shadow: var(--shadow-sm);
   position: relative;
 }
@@ -588,13 +640,44 @@ code, pre {
 
 .calc-wrap .intro {
   color: var(--text-soft);
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   font-size: 1rem;
   line-height: 1.7;
 }
 
+/* Calculator header — title + unit toggle inline */
+.calc-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.calc-header h1 {
+  flex: 1 1 300px;
+  margin: 0;
+}
+
+.calc-header .unit-toggle {
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 700px) {
+  .calc-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .calc-header .unit-toggle {
+    align-self: center;
+    margin-top: 4px;
+  }
+}
+
 /* =========================================================
-   11. FORM ELEMENTS
+   SECTION 13 — FORM ELEMENTS
    ========================================================= */
 .form-row {
   margin-bottom: 18px;
@@ -614,7 +697,8 @@ code, pre {
   font-size: 0.8rem;
   color: var(--muted);
   font-weight: 400;
-  margin-top: 4px;
+  margin-top: 5px;
+  line-height: 1.5;
 }
 
 .form-row input,
@@ -668,22 +752,42 @@ code, pre {
   cursor: pointer;
 }
 
-/* Two-column form grid */
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
 
-/* Three-column form grid (for advanced tools) */
 .form-grid-3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 16px;
 }
 
+/* Input with unit suffix (e.g. [ 10    ft ]) */
+.input-with-unit {
+  position: relative;
+  display: block;
+}
+
+.input-with-unit input {
+  padding-right: 58px;
+}
+
+.input-with-unit .input-unit {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--muted);
+  pointer-events: none;
+  letter-spacing: 0.2px;
+}
+
 /* =========================================================
-   12. BUTTONS
+   SECTION 14 — BUTTONS
    ========================================================= */
 .btn-calc {
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
@@ -702,8 +806,6 @@ code, pre {
               box-shadow var(--t-fast),
               filter var(--t-fast);
   box-shadow: var(--shadow-sm);
-  position: relative;
-  overflow: hidden;
 }
 
 .btn-calc:hover {
@@ -741,11 +843,11 @@ code, pre {
 }
 
 /* =========================================================
-   13. RESULT BOX
+   SECTION 15 — RESULT BOX
    ========================================================= */
 .result-box {
-  margin-top: 26px;
-  padding: 24px;
+  margin-top: 24px;
+  padding: 22px;
   background: var(--primary-light);
   border-left: 4px solid var(--primary);
   border-radius: var(--radius-sm);
@@ -772,6 +874,24 @@ code, pre {
   font-weight: 700;
 }
 
+.result-box .result-primary {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.result-box .result-secondary {
+  font-size: 0.92rem;
+  color: var(--muted);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 14px;
+}
+
 .result-box .result-line {
   display: flex;
   justify-content: space-between;
@@ -790,15 +910,6 @@ code, pre {
   font-weight: 700;
   color: var(--primary-dark);
   font-size: 1.05rem;
-}
-
-.result-box .result-highlight {
-  display: block;
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--primary-dark);
-  margin: 4px 0 14px;
-  letter-spacing: -0.02em;
 }
 
 .result-box .result-note {
@@ -821,8 +932,42 @@ code, pre {
   }
 }
 
+/* Result actions (Copy, Reset) */
+.result-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(15, 76, 129, 0.12);
+  flex-wrap: wrap;
+}
+
+.result-actions button {
+  flex: 1;
+  min-width: 120px;
+  background: #ffffff;
+  border: 1.5px solid var(--border-strong);
+  color: var(--primary);
+  font-size: 0.86rem;
+  font-weight: 600;
+  padding: 9px 14px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-family: inherit;
+  transition: background var(--t-fast),
+              border-color var(--t-fast),
+              color var(--t-fast);
+}
+
+.result-actions button:hover {
+  background: var(--primary-lighter);
+  border-color: var(--primary);
+  color: var(--primary-dark);
+   }
+
+
 /* =========================================================
-   14. CONTENT SECTIONS (Tool Page Explanations)
+   SECTION 16 — CONTENT SECTIONS (Tool Page Explanations)
    ========================================================= */
 .content-section {
   max-width: var(--container-narrow);
@@ -885,7 +1030,9 @@ code, pre {
   text-decoration-color: var(--primary);
 }
 
-/* Formula highlight box */
+/* =========================================================
+   SECTION 17 — FORMULA BOX
+   ========================================================= */
 .formula-box {
   background: var(--primary-lighter);
   border: 1px solid var(--primary-light);
@@ -907,7 +1054,9 @@ code, pre {
   margin-bottom: 6px;
 }
 
-/* Info / tip callout */
+/* =========================================================
+   SECTION 18 — CALLOUT BOX (Tips, Warnings, Notes)
+   ========================================================= */
 .callout {
   background: var(--warning-light);
   border-left: 4px solid var(--warning);
@@ -916,6 +1065,7 @@ code, pre {
   margin: 20px 0;
   font-size: 0.95rem;
   color: var(--text-soft);
+  line-height: 1.7;
 }
 
 .callout strong {
@@ -925,62 +1075,111 @@ code, pre {
 }
 
 /* =========================================================
-   15. FAQ ITEMS
+   SECTION 19 — FAQ ACCORDION (Click to Open/Close)
    ========================================================= */
-.faq-item {
-  border-bottom: 1px solid var(--border);
-  padding: 20px 0;
+.faq-accordion {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--card);
+  margin-bottom: 10px;
+  transition: border-color var(--t-fast), box-shadow var(--t-fast);
 }
 
-.faq-item:last-child {
-  border-bottom: 0;
+.faq-accordion:hover {
+  border-color: var(--primary);
 }
 
-.faq-item h3 {
-  margin: 0 0 10px;
-  font-size: 1.02rem;
+.faq-accordion.open {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  background: transparent;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--primary-dark);
-  font-weight: 700;
   letter-spacing: -0.01em;
-  line-height: 1.4;
+  line-height: 1.45;
+  transition: background var(--t-fast);
 }
 
-.faq-item p {
+.faq-question:hover {
+  background: var(--primary-lighter);
+}
+
+.faq-question:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+/* Plus/Minus Icon */
+.faq-icon {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1;
+  transition: background var(--t-fast),
+              color var(--t-fast),
+              transform var(--t-base);
+}
+
+.faq-icon::before {
+  content: "+";
+  display: block;
+}
+
+.faq-accordion.open .faq-icon::before {
+  content: "−";
+}
+
+.faq-accordion.open .faq-icon {
+  background: var(--primary);
+  color: #ffffff;
+  transform: rotate(180deg);
+}
+
+/* Answer */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  padding: 0 20px;
+}
+
+.faq-accordion.open .faq-answer {
+  max-height: 800px;
+  padding: 0 20px 20px 20px;
+}
+
+.faq-answer p {
   margin: 0;
   color: var(--text-soft);
+  font-size: 0.95rem;
   line-height: 1.7;
 }
 
 /* =========================================================
-   16. AD SLOTS
-   ========================================================= */
-.ad-slot {
-  margin: 32px 0;
-  padding: 14px;
-  background: #fafbfd;
-  border: 1px dashed var(--border-strong);
-  border-radius: var(--radius-sm);
-  text-align: center;
-  min-height: 100px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-}
-
-.ad-slot small {
-  color: var(--muted-light);
-  font-size: 0.68rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-}
-
-/* =========================================================
-   17. RELATED TOOLS (Internal Linking)
+   SECTION 20 — RELATED TOOLS (Internal Linking)
    ========================================================= */
 .related-tools {
   margin: 40px 0 0;
@@ -998,6 +1197,7 @@ code, pre {
 .related-tools ul {
   list-style: none;
   margin: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 10px;
@@ -1026,11 +1226,209 @@ code, pre {
   background: var(--primary-lighter);
   transform: translateX(3px);
   text-decoration: none;
+}
+
+/* =========================================================
+   SECTION 21 — AD SLOTS (All Variants)
+   ========================================================= */
+.ad-slot {
+  margin: 32px 0;
+  padding: 14px;
+  background: #fafbfd;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  min-height: 100px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.ad-slot small {
+  color: var(--muted-light);
+  font-size: 0.68rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+}
+
+/* Header banner (728x90 desktop / 320x50 mobile) */
+.ad-slot-header {
+  margin: 20px 0;
+  min-height: 90px;
+}
+
+/* In-content (below result) */
+.ad-slot-inline {
+  margin: 28px 0;
+  min-height: 100px;
+}
+
+/* Sidebar (300x250) */
+.ad-slot-sidebar {
+  margin: 0;
+  min-height: 250px;
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Bottom of content */
+.ad-slot-bottom {
+  margin: 32px 0 20px;
+  min-height: 100px;
+}
+
+@media (max-width: 960px) {
+  .ad-slot-sidebar {
+    max-width: 100%;
+    min-height: 100px;
+  }
+}
+
+/* =========================================================
+   SECTION 22 — UNIT TOGGLE (Imperial vs Metric)
+   ========================================================= */
+.unit-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  background: var(--bg-alt);
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-full);
+  padding: 4px;
+  margin-bottom: 20px;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.unit-toggle-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+  padding: 0 12px 0 14px;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.unit-btn {
+  background: transparent;
+  border: 0;
+  color: var(--text-soft);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 9px 18px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  font-family: inherit;
+  letter-spacing: 0.1px;
+  transition: background var(--t-fast),
+              color var(--t-fast),
+              box-shadow var(--t-fast),
+              transform var(--t-fast);
+  white-space: nowrap;
+  line-height: 1.3;
+}
+
+.unit-btn:hover {
+  color: var(--primary);
+  background: rgba(15, 76, 129, 0.06);
+}
+
+.unit-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.unit-btn.active {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(15, 76, 129, 0.25);
+}
+
+.unit-btn.active:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-darker) 100%);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+  .unit-toggle {
+    width: 100%;
+    justify-content: center;
+    padding: 5px;
+    margin-bottom: 20px;
   }
 
- 
+  .unit-toggle-label {
+    width: 100%;
+    text-align: center;
+    padding: 4px 0 8px 0;
+    font-size: 0.8rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 4px;
+  }
+
+  .unit-btn {
+    flex: 1;
+    padding: 10px 12px;
+    font-size: 0.84rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .unit-btn {
+    font-size: 0.78rem;
+    padding: 9px 8px;
+  }
+  .unit-toggle-label {
+    font-size: 0.75rem;
+  }
+}
+
 /* =========================================================
-   18. SITE FOOTER
+   SECTION 23 — UNIT FIELD HELPERS
+   ========================================================= */
+.unit-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--primary);
+  background: var(--primary-light);
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.conversion-note {
+  display: block;
+  font-size: 0.84rem;
+  color: var(--muted);
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(15, 76, 129, 0.15);
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.conversion-note strong {
+  color: var(--primary-dark);
+  font-style: normal;
+  font-weight: 600;
+   }
+
+
+/* =========================================================
+   SECTION 24 — SITE FOOTER
    ========================================================= */
 .site-footer {
   background: linear-gradient(180deg, #0a2239 0%, #06182b 100%);
@@ -1123,7 +1521,7 @@ code, pre {
 }
 
 /* =========================================================
-   19. MOBILE NAVIGATION
+   SECTION 25 — MOBILE NAVIGATION
    ========================================================= */
 @media (max-width: 760px) {
   .nav-toggle {
@@ -1189,14 +1587,12 @@ code, pre {
 }
 
 /* =========================================================
-   20. RESPONSIVE BREAKPOINTS
+   SECTION 26 — RESPONSIVE BREAKPOINTS
    ========================================================= */
 
 /* ---------- Large tablets / small laptops ---------- */
 @media (max-width: 1024px) {
-  .container {
-    width: 94%;
-  }
+  .container,
   .container-narrow {
     width: 94%;
   }
@@ -1211,7 +1607,7 @@ code, pre {
     padding: 48px 0 32px;
   }
   .calc-wrap {
-    padding: 28px 24px;
+    padding: 26px 22px;
   }
   .section-title {
     margin: 34px 0 16px;
@@ -1240,8 +1636,23 @@ code, pre {
   }
 
   .calc-wrap {
-    padding: 24px 20px;
+    padding: 22px 18px;
     border-radius: var(--radius);
+    margin-bottom: 22px;
+  }
+
+  .calc-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .calc-header h1 {
+    margin-bottom: 12px;
+  }
+
+  .calc-header .unit-toggle {
+    align-self: center;
+    margin-bottom: 16px;
   }
 
   .form-grid,
@@ -1257,6 +1668,10 @@ code, pre {
 
   .result-box {
     padding: 20px 18px;
+  }
+
+  .result-box .result-primary {
+    font-size: 1.25rem;
   }
 
   .result-box .result-line {
@@ -1292,6 +1707,23 @@ code, pre {
 
   .site-footer {
     padding: 40px 0 22px;
+  }
+
+  .sidebar-card {
+    padding: 16px 14px;
+  }
+
+  .faq-question {
+    padding: 16px 16px;
+    font-size: 0.96rem;
+  }
+
+  .faq-answer {
+    padding: 0 16px;
+  }
+
+  .faq-accordion.open .faq-answer {
+    padding: 0 16px 18px 16px;
   }
 }
 
@@ -1390,6 +1822,27 @@ code, pre {
   .related-tools ul {
     grid-template-columns: 1fr;
   }
+
+  .unit-toggle {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .unit-toggle-label {
+    width: 100%;
+    text-align: center;
+    padding: 4px 0 8px 0;
+    font-size: 0.8rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 4px;
+  }
+
+  .unit-btn {
+    flex: 1;
+    padding: 10px 10px;
+    font-size: 0.82rem;
+    text-align: center;
+  }
 }
 
 /* ---------- Extra small phones ---------- */
@@ -1404,6 +1857,15 @@ code, pre {
 
   .tool-card {
     padding: 16px 14px;
+  }
+
+  .unit-btn {
+    font-size: 0.76rem;
+    padding: 9px 6px;
+  }
+
+  .unit-toggle-label {
+    font-size: 0.74rem;
   }
 }
 
@@ -1422,10 +1884,11 @@ code, pre {
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     gap: 22px;
   }
-}
+   }
+
 
 /* =========================================================
-   21. UTILITY CLASSES
+   SECTION 27 — UTILITY CLASSES
    ========================================================= */
 .text-center { text-align: center; }
 .text-left { text-align: left; }
@@ -1444,6 +1907,7 @@ code, pre {
 .mb-40 { margin-bottom: 40px; }
 
 .hidden { display: none !important; }
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1459,7 +1923,7 @@ code, pre {
 .no-wrap { white-space: nowrap; }
 
 /* =========================================================
-   22. SUBTLE ANIMATIONS (Professional, not flashy)
+   SECTION 28 — SUBTLE ANIMATIONS
    ========================================================= */
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -1483,16 +1947,21 @@ code, pre {
 }
 
 /* =========================================================
-   23. PRINT STYLES
+   SECTION 29 — PRINT STYLES
    ========================================================= */
 @media print {
   .site-header,
   .site-footer,
   .ad-slot,
   .btn-calc,
+  .btn-secondary,
   .nav-toggle,
   .breadcrumb,
-  .related-tools {
+  .related-tools,
+  .unit-toggle,
+  .sidebar-card,
+  .calc-sidebar,
+  .result-actions {
     display: none !important;
   }
 
@@ -1529,10 +1998,14 @@ code, pre {
     width: 100%;
     max-width: 100%;
   }
+
+  .calc-layout {
+    display: block;
+  }
 }
 
 /* =========================================================
-   24. HIGH CONTRAST MODE (Accessibility)
+   SECTION 30 — HIGH CONTRAST MODE (Accessibility)
    ========================================================= */
 @media (prefers-contrast: high) {
   :root {
@@ -1550,355 +2023,93 @@ code, pre {
   .form-row select {
     border-width: 2px;
   }
+
+  .btn-calc {
+    border: 2px solid #000000;
+  }
 }
 
 /* =========================================================
-   25. DARK MODE (Optional — Respects User Preference)
+   SECTION 31 — DARK MODE (Optional — disabled by default)
+   =========================================================
+   Uncomment to enable. Keeps brand consistency when off.
    ========================================================= */
+/*
 @media (prefers-color-scheme: dark) {
-  /* Uncomment below to enable full dark mode later.
-     Currently disabled to keep brand consistency. */
-
-  /*
   :root {
     --bg: #0f1419;
+    --bg-alt: #1a2330;
     --card: #1a2330;
     --text: #e6eef7;
     --text-soft: #b8c5d1;
     --muted: #8fa1b3;
+    --muted-light: #718096;
     --border: #2c3e50;
     --border-strong: #3a4a5e;
     --primary-light: #1a2c40;
     --primary-lighter: #15263a;
   }
-  */
+
+  .site-header {
+    background: #1a2330;
+  }
+
+  .site-nav {
+    background: #1a2330;
+  }
+
+  .hero {
+    background: linear-gradient(180deg, #1a2330 0%, #0f1419 100%);
+  }
 }
+*/
 
 /* =========================================================
-   END OF STYLESHEET
-   BuildMetric — Global Stylesheet
-   Total: 25 sections (design tokens → print styles)
+   SECTION 32 — FOCUS & ACCESSIBILITY POLISH
    ========================================================= */
-
-/* =========================================================
-   SECTION 26 — UNIT TOGGLE (Imperial vs Metric)
-   =========================================================
-   Premium pill-style toggle jo har calculator page pe
-   dikhega. Mobile-first, accessible, keyboard-friendly.
-   ========================================================= */
-
-/* ---------------------------------------------------------
-   26.1 TOGGLE CONTAINER
-   --------------------------------------------------------- */
-.unit-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0;
-  background: var(--bg-alt);
-  border: 1.5px solid var(--border-strong);
-  border-radius: var(--radius-full);
-  padding: 4px;
-  margin-bottom: 24px;
-  position: relative;
-  flex-wrap: wrap;
+*:focus {
+  outline: none;
 }
 
-.unit-toggle-label {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--muted);
-  padding: 0 12px 0 14px;
-  letter-spacing: 0.2px;
-  white-space: nowrap;
+*:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
-/* ---------------------------------------------------------
-   26.2 TOGGLE BUTTONS
-   --------------------------------------------------------- */
-.unit-btn {
-  background: transparent;
-  border: 0;
-  color: var(--text-soft);
-  font-size: 0.88rem;
-  font-weight: 600;
-  padding: 9px 18px;
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  font-family: inherit;
-  letter-spacing: 0.1px;
-  transition: background var(--t-fast),
-              color var(--t-fast),
-              box-shadow var(--t-fast),
-              transform var(--t-fast);
-  white-space: nowrap;
-  position: relative;
-  line-height: 1.3;
-}
-
-.unit-btn:hover {
-  color: var(--primary);
-  background: rgba(15, 76, 129, 0.06);
-}
-
-.unit-btn:focus-visible {
-  outline: 2px solid var(--accent);
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--accent);
   outline-offset: 2px;
 }
 
-/* ---------------------------------------------------------
-   26.3 ACTIVE STATE
-   Selected button ko premium filled look deta hai.
-   --------------------------------------------------------- */
-.unit-btn.active {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-  color: #ffffff;
-  box-shadow: 0 2px 8px rgba(15, 76, 129, 0.25);
-}
-
-.unit-btn.active:hover {
-  color: #ffffff;
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-darker) 100%);
-  transform: translateY(-1px);
-}
-
-/* ---------------------------------------------------------
-   26.4 RESPONSIVE — SMALL SCREENS
-   --------------------------------------------------------- */
-@media (max-width: 600px) {
-  .unit-toggle {
-    width: 100%;
-    justify-content: center;
-    padding: 5px;
-    margin-bottom: 20px;
-  }
-
-  .unit-toggle-label {
-    width: 100%;
-    text-align: center;
-    padding: 4px 0 8px 0;
-    font-size: 0.8rem;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 4px;
-  }
-
-  .unit-btn {
-    flex: 1;
-    padding: 10px 12px;
-    font-size: 0.84rem;
-    text-align: center;
-  }
-}
-
-@media (max-width: 380px) {
-  .unit-btn {
-    font-size: 0.78rem;
-    padding: 9px 8px;
-  }
-
-  .unit-toggle-label {
-    font-size: 0.75rem;
-  }
-}
-
-/* ---------------------------------------------------------
-   26.5 DARK BACKGROUND VARIANT (agar kabhi zaroorat pade)
-   --------------------------------------------------------- */
-.unit-toggle.on-dark {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.15);
-}
-
-.unit-toggle.on-dark .unit-toggle-label {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.unit-toggle.on-dark .unit-btn {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.unit-toggle.on-dark .unit-btn:hover {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.unit-toggle.on-dark .unit-btn.active {
-  background: #ffffff;
-  color: var(--primary-dark);
-}
-
 /* =========================================================
-   SECTION 27 — UNIT-RELATED FIELD HELPERS
-   =========================================================
-   Chhote helpers jo unit toggle ke saath milke kaam karte hain.
+   SECTION 33 — SCROLLBAR STYLING (Webkit)
    ========================================================= */
-
-/* ---------------------------------------------------------
-   27.1 UNIT SUFFIX INSIDE INPUT
-   Agar input ke andar right side unit label dikhana ho.
-   Example: [ 10       ft ]
-   --------------------------------------------------------- */
-.input-with-unit {
-  position: relative;
-  display: block;
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
 }
 
-.input-with-unit input {
-  padding-right: 58px;
+::-webkit-scrollbar-track {
+  background: var(--bg-alt);
 }
 
-.input-with-unit .input-unit {
-  position: absolute;
-  right: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--muted);
-  pointer-events: none;
-  letter-spacing: 0.2px;
-}
-
-/* ---------------------------------------------------------
-   27.2 UNIT BADGE (for inline labels)
-   --------------------------------------------------------- */
-.unit-badge {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  color: var(--primary);
-  background: var(--primary-light);
-  padding: 3px 9px;
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
   border-radius: var(--radius-full);
-  margin-left: 6px;
-  vertical-align: middle;
+  border: 2px solid var(--bg-alt);
 }
 
-/* ---------------------------------------------------------
-   27.3 CONVERSION NOTE
-   Result box ke neeche chhota note jo conversion batata hai.
-   Example: "1.23 cubic yards = 0.94 cubic meters"
-   --------------------------------------------------------- */
-.conversion-note {
-  display: block;
-  font-size: 0.84rem;
-  color: var(--muted);
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px dashed rgba(15, 76, 129, 0.15);
-  font-style: italic;
-  line-height: 1.55;
-}
-
-.conversion-note strong {
-  color: var(--primary-dark);
-  font-style: normal;
-  font-weight: 600;
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-light);
 }
 
 /* =========================================================
-   SECTION 28 — ENHANCED RESULT BOX (Unit-aware)
-   =========================================================
-   Result box ka extended version jo metric/imperial dono
-   dikhata hai jab zaroorat ho.
-   ========================================================= */
-.result-box .result-primary {
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: var(--primary-dark);
-  letter-spacing: -0.02em;
-  line-height: 1.25;
-  display: block;
-  margin-bottom: 6px;
-}
-
-.result-box .result-secondary {
-  font-size: 0.92rem;
-  color: var(--muted);
-  font-weight: 500;
-  display: block;
-  margin-bottom: 14px;
-}
-
-/* ---------------------------------------------------------
-   28.1 RESULT ACTIONS (Copy, Reset, Share)
-   --------------------------------------------------------- */
-.result-actions {
-  display: flex;
-  gap: 10px;
-  margin-top: 18px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(15, 76, 129, 0.12);
-  flex-wrap: wrap;
-}
-
-.result-actions button {
-  flex: 1;
-  min-width: 120px;
-  background: #ffffff;
-  border: 1.5px solid var(--border-strong);
-  color: var(--primary);
-  font-size: 0.86rem;
-  font-weight: 600;
-  padding: 9px 14px;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  font-family: inherit;
-  transition: background var(--t-fast),
-              border-color var(--t-fast),
-              color var(--t-fast);
-}
-
-.result-actions button:hover {
-  background: var(--primary-lighter);
-  border-color: var(--primary);
-  color: var(--primary-dark);
-}
-
-.result-actions button:active {
-  transform: scale(0.98);
-}
-
-/* =========================================================
-   SECTION 29 — TOOL PAGE HEADER ENHANCEMENT
-   =========================================================
-   Calculator page ke h1 ke saath unit toggle elegantly align.
-   ========================================================= */
-.calc-header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 16px;
-  margin-bottom: 24px;
-}
-
-.calc-header h1 {
-  flex: 1 1 320px;
-  margin: 0;
-}
-
-.calc-header .unit-toggle {
-  margin: 0;
-  flex: 0 0 auto;
-}
-
-@media (max-width: 700px) {
-  .calc-header {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .calc-header .unit-toggle {
-    align-self: center;
-  }
-}
-
-/* =========================================================
-   SECTION 30 — SMOOTH TRANSITIONS FOR UNIT SWITCH
-   =========================================================
-   Jab unit toggle ho, labels aur values smooth change hon.
+   SECTION 34 — SMOOTH TRANSITIONS FOR UNIT SWITCH
    ========================================================= */
 .unit-dependent {
   transition: opacity 0.15s ease;
@@ -1911,290 +2122,11 @@ code, pre {
 /* =========================================================
    END OF STYLESHEET — FINAL
    BuildMetric — Global Stylesheet
-   Total: 30 sections
-   Sections 1–25: Core design system (Phases 1–3)
-   Sections 26–30: Unit Toggle System (Phase 4)
+   Total: 34 sections across 5 phases
+   
+   Phase 1 (Sections 1–7):   Design tokens, reset, typography, header, hero, a11y
+   Phase 2 (Sections 8–15):  Tool cards, calculator layout, forms, buttons, result box
+   Phase 3 (Sections 16–23): Content sections, formula boxes, FAQ accordion, related tools, ad slots, unit toggle
+   Phase 4 (Sections 24–26): Footer, mobile nav, responsive breakpoints
+   Phase 5 (Sections 27–34): Utilities, animations, print, high contrast, dark mode, polish
    ========================================================= */
-
-/* =========================================================
-   SECTION 31 — CALCULATOR LAYOUT (2-Column)
-   =========================================================
-   Desktop pe calculator + sidebar side-by-side
-   Mobile pe stacked
-   ========================================================= */
-
-.calc-layout {
-  display: grid;
-  grid-template-columns: 1fr 320px;
-  gap: 28px;
-  align-items: start;
-}
-
-.calc-main {
-  min-width: 0; /* prevents overflow issues */
-}
-
-.calc-sidebar {
-  position: sticky;
-  top: 84px; /* below sticky header */
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-@media (max-width: 960px) {
-  .calc-layout {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  .calc-sidebar {
-    position: static;
-    top: auto;
-  }
-}
-
-/* ---------------------------------------------------------
-   31.1 SIDEBAR CARD
-   --------------------------------------------------------- */
-.sidebar-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 20px 18px;
-  box-shadow: var(--shadow-xs);
-}
-
-.sidebar-card h3 {
-  font-size: 0.98rem;
-  color: var(--primary-dark);
-  margin-bottom: 14px;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--primary-light);
-}
-
-.sidebar-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.sidebar-links li {
-  margin-bottom: 8px;
-}
-
-.sidebar-links li:last-child {
-  margin-bottom: 0;
-}
-
-.sidebar-links a {
-  display: block;
-  padding: 8px 10px;
-  color: var(--text-soft);
-  font-size: 0.9rem;
-  font-weight: 500;
-  border-radius: var(--radius-sm);
-  transition: background var(--t-fast), color var(--t-fast);
-}
-
-.sidebar-links a:hover {
-  background: var(--primary-lighter);
-  color: var(--primary);
-  text-decoration: none;
-}
-
-/* =========================================================
-   SECTION 32 — AD SLOT VARIANTS
-   ========================================================= */
-
-.ad-slot-header {
-  margin: 20px 0;
-  min-height: 90px;
-}
-
-.ad-slot-inline {
-  margin: 28px 0;
-  min-height: 100px;
-}
-
-.ad-slot-sidebar {
-  margin: 0;
-  min-height: 250px;
-  width: 100%;
-  max-width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.ad-slot-bottom {
-  margin: 32px 0 20px;
-  min-height: 100px;
-}
-
-@media (max-width: 960px) {
-  .ad-slot-sidebar {
-    max-width: 100%;
-    min-height: 100px;
-  }
-}
-
-/* =========================================================
-   SECTION 33 — FAQ ACCORDION (Click to Open/Close)
-   ========================================================= */
-
-.faq-accordion {
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  background: var(--card);
-  margin-bottom: 10px;
-  transition: border-color var(--t-fast);
-}
-
-.faq-accordion:hover {
-  border-color: var(--primary);
-}
-
-.faq-accordion.open {
-  border-color: var(--primary);
-  box-shadow: var(--shadow-sm);
-}
-
-/* Question / Header */
-.faq-question {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 14px;
-  padding: 18px 20px;
-  background: transparent;
-  border: 0;
-  text-align: left;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--primary-dark);
-  letter-spacing: -0.01em;
-  line-height: 1.45;
-  transition: background var(--t-fast);
-}
-
-.faq-question:hover {
-  background: var(--primary-lighter);
-}
-
-.faq-question:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: -2px;
-}
-
-/* Plus/Minus Icon */
-.faq-icon {
-  flex-shrink: 0;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background: var(--primary-light);
-  color: var(--primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  font-weight: 700;
-  line-height: 1;
-  transition: background var(--t-fast),
-              color var(--t-fast),
-              transform var(--t-base);
-  position: relative;
-}
-
-.faq-accordion.open .faq-icon {
-  background: var(--primary);
-  color: #ffffff;
-  transform: rotate(180deg);
-}
-
-/* Answer */
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease, padding 0.35s ease;
-  padding: 0 20px;
-}
-
-.faq-accordion.open .faq-answer {
-  max-height: 800px;
-  padding: 0 20px 20px 20px;
-}
-
-.faq-answer p {
-  margin: 0;
-  color: var(--text-soft);
-  font-size: 0.95rem;
-  line-height: 1.7;
-}
-
-/* ---------------------------------------------------------
-   33.1 ICON AS +/- USING CSS
-   --------------------------------------------------------- */
-.faq-icon::before {
-  content: "+";
-  display: block;
-}
-.faq-accordion.open .faq-icon::before {
-  content: "−";
-}
-
-/* Fallback: hide any inline text inside icon */
-.faq-icon .faq-icon-text {
-  display: none;
-}
-
-/* =========================================================
-   SECTION 34 — MOBILE LAYOUT FIX
-   =========================================================
-   Screenshot problem: mobile pe calculator card lamba ho raha tha.
-   Yeh fix ensure karta hai ki content collapse na ho.
-   ========================================================= */
-
-@media (max-width: 960px) {
-  .calc-main {
-    width: 100%;
-  }
-  .calc-sidebar {
-    width: 100%;
-  }
-  .calc-wrap {
-    width: 100%;
-    box-sizing: border-box;
-  }
-}
-
-@media (max-width: 640px) {
-  .calc-header {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .calc-header h1 {
-    margin-bottom: 12px;
-  }
-  .unit-toggle {
-    margin-bottom: 0;
-  }
-  .sidebar-card {
-    padding: 16px 14px;
-  }
-  .faq-question {
-    padding: 16px 16px;
-    font-size: 0.96rem;
-  }
-  .faq-answer {
-    padding: 0 16px;
-  }
-  .faq-accordion.open .faq-answer {
-    padding: 0 16px 18px 16px;
-  }
-}
