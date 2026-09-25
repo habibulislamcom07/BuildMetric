@@ -1075,44 +1075,50 @@ code, pre {
 }
 
 /* =========================================================
-   SECTION 19 — FAQ ACCORDION (Click to Open/Close)
+   SECTION 19 — FAQ ACCORDION (ARWallet-style)
+   Clean, numbered, list-style with +/− toggle
    ========================================================= */
+
 .faq-accordion {
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: var(--radius-sm);
   overflow: hidden;
   background: var(--card);
   margin-bottom: 10px;
-  transition: border-color var(--t-fast), box-shadow var(--t-fast);
+  transition: border-color var(--t-fast),
+              box-shadow var(--t-fast),
+              background var(--t-fast);
 }
 
 .faq-accordion:hover {
   border-color: var(--primary);
 }
 
+/* Open state — question header accent color ho jata hai */
 .faq-accordion.open {
-  border-color: var(--primary);
+  border-color: var(--accent);
   box-shadow: var(--shadow-sm);
 }
 
+/* Question Button */
 .faq-question {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 14px;
-  padding: 18px 20px;
+  gap: 16px;
+  padding: 16px 20px;
   background: transparent;
   border: 0;
   text-align: left;
   cursor: pointer;
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 0.98rem;
   font-weight: 600;
-  color: var(--primary-dark);
-  letter-spacing: -0.01em;
+  color: var(--text);
+  letter-spacing: -0.005em;
   line-height: 1.45;
-  transition: background var(--t-fast);
+  transition: background var(--t-fast), color var(--t-fast);
 }
 
 .faq-question:hover {
@@ -1124,59 +1130,105 @@ code, pre {
   outline-offset: -2px;
 }
 
-/* Plus/Minus Icon */
+/* Jab FAQ open ho — header accent background */
+.faq-accordion.open .faq-question {
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.faq-accordion.open .faq-question:hover {
+  background: var(--accent-dark);
+}
+
+/* Question text */
+.faq-question .faq-q-text {
+  flex: 1;
+  padding-right: 4px;
+}
+
+/* Plus / Minus Icon */
 .faq-icon {
   flex-shrink: 0;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background: var(--primary-light);
-  color: var(--primary);
+  width: 22px;
+  height: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 400;
   line-height: 1;
-  transition: background var(--t-fast),
-              color var(--t-fast),
-              transform var(--t-base);
+  color: var(--text);
+  transition: color var(--t-fast), transform var(--t-base);
+  position: relative;
 }
 
 .faq-icon::before {
   content: "+";
   display: block;
+  line-height: 1;
+}
+
+.faq-accordion.open .faq-icon {
+  color: #ffffff;
+  transform: rotate(180deg);
 }
 
 .faq-accordion.open .faq-icon::before {
   content: "−";
 }
 
-.faq-accordion.open .faq-icon {
-  background: var(--primary);
-  color: #ffffff;
-  transform: rotate(180deg);
-}
-
 /* Answer */
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.35s ease, padding 0.35s ease;
+  transition: max-height 0.35s ease, padding 0.3s ease;
   padding: 0 20px;
+  background: var(--card);
 }
 
 .faq-accordion.open .faq-answer {
-  max-height: 800px;
-  padding: 0 20px 20px 20px;
+  max-height: 1000px;
+  padding: 18px 20px 20px 20px;
 }
 
 .faq-answer p {
   margin: 0;
   color: var(--text-soft);
-  font-size: 0.95rem;
-  line-height: 1.7;
+  font-size: 0.94rem;
+  line-height: 1.75;
 }
+
+/* Optional: "View full text" style link (agar kabhi chahiye) */
+.faq-answer .faq-view-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--accent-dark);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Mobile tweaks */
+@media (max-width: 640px) {
+  .faq-question {
+    padding: 14px 16px;
+    font-size: 0.94rem;
+    gap: 12px;
+  }
+  .faq-icon {
+    font-size: 1.35rem;
+    width: 20px;
+    height: 20px;
+  }
+  .faq-accordion.open .faq-answer {
+    padding: 16px 16px 18px 16px;
+  }
+  .faq-answer p {
+    font-size: 0.9rem;
+  }
+}
+
 
 /* =========================================================
    SECTION 20 — RELATED TOOLS (Internal Linking)
