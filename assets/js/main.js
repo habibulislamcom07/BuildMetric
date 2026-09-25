@@ -782,10 +782,63 @@ window.BuildMetric = {
   bagsNeeded: bagsNeeded
 };
 
+
+/* =========================================================
+   SECTION 19 — FAQ ACCORDION
+   =========================================================
+   Click on FAQ question → toggle open/close
+   Auto-initializes on any page that has .faq-accordion
+   ========================================================= */
+
+function initFaqAccordion() {
+  var faqItems = document.querySelectorAll('.faq-accordion');
+  if (!faqItems.length) return;
+
+  faqItems.forEach(function (item) {
+    var button = item.querySelector('.faq-question');
+    if (!button) return;
+
+    button.addEventListener('click', function () {
+      var isOpen = item.classList.contains('open');
+
+      // Close all other FAQs (optional — remove this block to allow multiple open)
+      faqItems.forEach(function (other) {
+        if (other !== item) {
+          other.classList.remove('open');
+          var otherBtn = other.querySelector('.faq-question');
+          if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Toggle current
+      item.classList.toggle('open', !isOpen);
+      button.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+    });
+
+    // Keyboard accessibility
+    button.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        button.click();
+      }
+    });
+  });
+}
+
+/* Auto-initialize on page load */
+document.addEventListener('DOMContentLoaded', function () {
+  initFaqAccordion();
+});
+
+/* Expose globally */
+if (typeof window.BuildMetric !== 'undefined') {
+  window.BuildMetric.initFaqAccordion = initFaqAccordion;
+}
+
 /* =========================================================
    END OF SCRIPT — FINAL
    BuildMetric — Shared JavaScript
-   Total: 18 sections
+   Total: 19 sections
    Sections 1–12: Core helpers (Phase 1 + 2)
-   Sections 13–18: Unit Toggle System (Phase 3)
+   Sections 13–19: Unit Toggle System (Phase 3)
    ========================================================= */
