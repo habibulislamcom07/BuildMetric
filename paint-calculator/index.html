@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0f4c81">
+
+<title>Paint Calculator — Estimate Paint Needed for Any Room | BuildMetric</title>
+<meta name="description" content="Free paint calculator to estimate how many litres or gallons of paint you need for any room. Accounts for doors, windows, number of coats and paint type. Works in imperial and metric units.">
+<meta name="keywords" content="paint calculator, paint quantity calculator, room paint calculator, wall paint estimator, litres of paint, gallons of paint, interior paint calculator, exterior paint calculator">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="BuildMetric">
+<meta name="language" content="English">
+
+<link rel="canonical" href="https://buildmetric.org/paint-calculator/index.html">
+
+<meta property="og:title" content="Paint Calculator — Estimate Paint for Any Room">
+<meta property="og:description" content="Free paint calculator to estimate litres or gallons needed for any room. Accounts for doors, windows and number of coats.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://buildmetric.org/paint-calculator/index.html">
+<meta property="og:site_name" content="BuildMetric">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Paint Calculator — Estimate Paint for Any Room">
+<meta name="twitter:description" content="Free paint calculator to estimate litres or gallons needed for any room.">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+<!-- ============================================================
+     GOOGLE ADSENSE — Domain live hone aur approval ke baad uncomment karna
+     ============================================================
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1428550393209506" crossorigin="anonymous"></script>
+-->
+
+<!-- Structured Data — WebApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Paint Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "All",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Estimate how many litres or gallons of paint you need for any room, accounting for doors, windows and number of coats.",
+  "inLanguage": "en"
+}
+</script>
+
+<!-- Structured Data — FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"How much paint do I need for a 10x12 room?","acceptedAnswer":{"@type":"Answer","text":"A 10x12 room with 8-foot ceilings and 2 coats typically needs about 3 to 4 litres (0.8 to 1 gallon) of paint, assuming one door and one window."}},
+    {"@type":"Question","name":"How many coats of paint should I apply?","acceptedAnswer":{"@type":"Answer","text":"Two coats are standard for most interior walls. Dark colours or dramatic colour changes may need three coats. Primer may be needed for bare surfaces or drastic colour changes."}},
+    {"@type":"Question","name":"How much area does 1 litre of paint cover?","acceptedAnswer":{"@type":"Answer","text":"Most interior paints cover approximately 10 to 12 square metres per litre (about 350 to 400 square feet per gallon) in a single coat."}},
+    {"@type":"Question","name":"Does this paint calculator work in metric units?","acceptedAnswer":{"@type":"Answer","text":"Yes. Use the unit toggle at the top of the calculator to switch between Imperial (feet, gallons) and Metric (metres, litres)."}},
+    {"@type":"Question","name":"Should I subtract doors and windows from wall area?","acceptedAnswer":{"@type":"Answer","text":"Yes. Doors and windows do not need painting, so subtracting them gives a more accurate paint estimate. Our calculator automatically subtracts standard door and window areas."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ============================================================
+     SITE HEADER
+     ============================================================ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="../index.html" class="logo" aria-label="BuildMetric Home">Build<span>Metric</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#categories">Categories</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="page-main">
+
+  <!-- ============================================================
+       AD SLOT 1 — HEADER BANNER
+       ============================================================ -->
+  <div class="container">
+    <div class="ad-slot ad-slot-header" aria-label="Advertisement">
+      <small>Advertisement</small>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       BREADCRUMB
+       ============================================================ -->
+  <div class="container">
+    <p class="breadcrumb">
+      <a href="../index.html">Home</a>
+      <span class="sep">&rsaquo;</span>
+      <a href="../index.html#cat-interior">Interior &amp; Finishing</a>
+      <span class="sep">&rsaquo;</span>
+      <span>Paint Calculator</span>
+    </p>
+  </div>
+
+  <!-- ============================================================
+       CALCULATOR LAYOUT (2-Column on Desktop)
+       ============================================================ -->
+  <div class="container">
+    <div class="calc-layout">
+
+      <!-- ============ MAIN COLUMN (Everything Goes Inside) ============ -->
+      <div class="calc-main">
+
+        <div class="calc-wrap">
+
+          <div class="calc-header">
+            <h1>Paint Calculator</h1>
+            <div class="unit-toggle" role="group" aria-label="Unit system">
+              <span class="unit-toggle-label">Units:</span>
+              <button type="button" class="unit-btn" data-unit-btn="imperial" aria-pressed="false">Imperial (US)</button>
+              <button type="button" class="unit-btn" data-unit-btn="metric" aria-pressed="false">Metric (EU)</button>
+            </div>
+          </div>
+
+          <p class="intro">
+            Estimate how many litres or gallons of paint you need for any room. This calculator accounts for doors, windows, the number of coats, and whether you are painting interior or exterior walls. Works in both imperial and metric units — switch using the toggle above.
+          </p>
+
+          <!-- Calculator Form -->
+          <form id="paint-form" onsubmit="return false;">
+
+            <div class="form-grid">
+              <div class="form-row">
+                <label for="length">Room Length</label>
+                <div class="input-with-unit">
+                  <input type="number" id="length" min="0" step="0.01" placeholder="e.g. 10" inputmode="decimal">
+                  <span class="input-unit" id="length-unit">ft</span>
+                </div>
+              </div>
+              <div class="form-row">
+                <label for="width">Room Width</label>
+                <div class="input-with-unit">
+                  <input type="number" id="width" min="0" step="0.01" placeholder="e.g. 12" inputmode="decimal">
+                  <span class="input-unit" id="width-unit">ft</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="height">Wall Height</label>
+              <div class="input-with-unit">
+                <input type="number" id="height" min="0" step="0.01" placeholder="e.g. 8" inputmode="decimal">
+                <span class="input-unit" id="height-unit">ft</span>
+              </div>
+              <span class="hint">Standard ceiling height: 8–9 ft (2.4–2.7 m)</span>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-row">
+                <label for="doors">Doors</label>
+                <select id="doors">
+                  <option value="0">0 doors</option>
+                  <option value="1" selected>1 door</option>
+                  <option value="2">2 doors</option>
+                  <option value="3">3 doors</option>
+                  <option value="4">4 doors</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label for="windows">Windows</label>
+                <select id="windows">
+                  <option value="0">0 windows</option>
+                  <option value="1">1 window</option>
+                  <option value="2" selected>2 windows</option>
+                  <option value="3">3 windows</option>
+                  <option value="4">4 windows</option>
+                  <option value="5">5 windows</option>
+                  <option value="6">6 windows</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-row">
+                <label for="coats">Number of Coats</label>
+                <select id="coats">
+                  <option value="1">1 coat</option>
+                  <option value="2" selected>2 coats (recommended)</option>
+                  <option value="3">3 coats</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label for="paint-type">Paint Type</label>
+                <select id="paint-type">
+                  <option value="interior" selected>Interior wall paint</option>
+                  <option value="exterior">Exterior wall paint</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="button" class="btn-calc" onclick="calculatePaint()">
+              Calculate Paint
+            </button>
+
+            <button type="button" class="btn-secondary" onclick="resetPaint()" style="margin-top:10px;width:100%;">
+              Reset
+            </button>
+
+          </form>
+
+          <div class="result-box" id="result" role="status" aria-live="polite"></div>
+
+        </div>
+        <!-- END calc-wrap -->
+
+         
+<!-- ============================================================
+     AD SLOT 2 — BELOW RESULT (In-Content)
+     ============================================================ -->
+<div class="ad-slot ad-slot-inline" aria-label="Advertisement">
+  <small>Advertisement</small>
+  <!--
+    AdSense Unit — Below Result
+    Uncomment after AdSense approval:
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1428550393209506"
+         data-ad-slot="REPLACE_WITH_SLOT_ID"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  -->
+</div>
+
+<!-- ============================================================
+     EDUCATIONAL CONTENT — 600+ WORDS
+     ============================================================ -->
+<section class="content-section">
+
+  <h2>What Is a Paint Calculator?</h2>
+  <p>A paint calculator is a tool that estimates how much paint you need to cover a given area — measured in litres, gallons or the number of paint cans required. Instead of guessing and ending up with too little paint (which means a trip back to the store and a visible mismatch in colour or finish) or too much (which means wasted money sitting in your garage), you enter your room dimensions and the calculator works out the exact quantity.</p>
+  <p>Paint quantity depends on four main factors: the total surface area to be painted, the number of coats you plan to apply, the coverage rate of the paint you are using, and any surfaces that do not need painting (such as doors, windows and built-in furniture). This calculator takes all four factors into account so you get a reliable estimate before you buy.</p>
+
+  <h2>How to Use This Paint Calculator</h2>
+  <ol>
+    <li><strong>Enter the room dimensions.</strong> Provide the length, width and wall height of the room in your chosen unit system.</li>
+    <li><strong>Select doors and windows.</strong> Use the dropdowns to indicate how many doors and windows are on the walls you are painting. The calculator subtracts their typical area automatically.</li>
+    <li><strong>Choose the number of coats.</strong> Two coats are standard for most interior walls. Dark colours or drastic colour changes may need three coats.</li>
+    <li><strong>Select the paint type.</strong> Interior wall paint and exterior wall paint have slightly different coverage rates, so choose the correct one for your project.</li>
+    <li><strong>Click Calculate.</strong> The result shows the total paintable area, the paint needed per coat, the total paint required, and the number of standard paint cans you should buy.</li>
+  </ol>
+
+  <h2>Formula Used by This Calculator</h2>
+  <p>All calculations are performed internally in metric units, then converted back to your preferred unit system for display.</p>
+
+  <h3>Wall Area</h3>
+  <div class="formula-box">
+    <strong>Wall Area = 2 × (Length + Width) × Height</strong>
+    This gives the total wall surface area of a rectangular room, in square units.
+  </div>
+
+  <h3>Paintable Area</h3>
+  <div class="formula-box">
+    <strong>Paintable Area = Wall Area − (Doors × Door Area) − (Windows × Window Area)</strong>
+    Standard door area: 1.8 m² (about 20 sq ft)<br>
+    Standard window area: 1.5 m² (about 16 sq ft)
+  </div>
+
+  <h3>Paint Quantity</h3>
+  <div class="formula-box">
+    <strong>Paint per Coat = Paintable Area ÷ Coverage Rate</strong>
+    Interior coverage: ~10 m² per litre (~350 sq ft per gallon)<br>
+    Exterior coverage: ~8 m² per litre (~300 sq ft per gallon)<br>
+    <strong>Total Paint = Paint per Coat × Number of Coats</strong>
+  </div>
+
+  <h2>Worked Example</h2>
+  <p>Suppose you are painting a room that is <strong>10 feet long, 12 feet wide and 8 feet high</strong>, with <strong>1 door and 2 windows</strong>. You plan to apply <strong>2 coats</strong> of interior paint.</p>
+  <ol>
+    <li><strong>Convert to metres:</strong> 10 ft = 3.05 m, 12 ft = 3.66 m, 8 ft = 2.44 m</li>
+    <li><strong>Calculate wall area:</strong> 2 × (3.05 + 3.66) × 2.44 = 32.74 m²</li>
+    <li><strong>Subtract doors and windows:</strong> 32.74 − (1 × 1.8) − (2 × 1.5) = 27.94 m²</li>
+    <li><strong>Paint per coat (interior):</strong> 27.94 ÷ 10 = 2.79 litres</li>
+    <li><strong>Total paint (2 coats):</strong> 2.79 × 2 = 5.59 litres</li>
+  </ol>
+  <p>So for this room, you would buy <strong>approximately 5.6 litres of paint</strong> — or about <strong>1.5 gallons</strong> in imperial units. Since paint is usually sold in 1-litre, 4-litre or 5-litre cans (or 1-gallon cans), you would buy one 5-litre can and one 1-litre can to be safe.</p>
+
+  <div class="callout">
+    <strong>Pro Tip:</strong> Always buy slightly more paint than the calculator suggests. Paint colours can vary slightly between batches, so having a small reserve for touch-ups is essential. If you have leftover paint, store it in a sealed container, label it with the room and colour, and keep it for future touch-ups.
+  </div>
+
+</section>
+
+<!-- ============================================================
+     AD SLOT 3 — BOTTOM OF CONTENT
+     ============================================================ -->
+<div class="ad-slot ad-slot-bottom" aria-label="Advertisement">
+  <small>Advertisement</small>
+  <!-- AdSense unit yahan aayega -->
+</div>
+
+ 
+      <!-- ============================================================
+           FAQ SECTION — 5 Questions (Accordion)
+           ============================================================ -->
+      <section class="content-section">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">1. How much paint do I need for a 10×12 room?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>A 10×12 room with 8-foot ceilings and 2 coats typically needs about 5.5 to 6 litres (1.5 gallons) of paint, assuming one door and two windows. The exact amount depends on your wall height, the number of doors and windows, the paint's coverage rate and whether you are painting the ceiling or trim as well. Use the calculator above for your exact room dimensions.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">2. How many coats of paint should I apply?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Two coats are standard for most interior walls. One coat rarely provides full coverage or an even finish, even with premium paint. Three coats may be needed when painting with dark colours over light walls, when covering strong colours, or when using lower-quality paint. Primer may be required for bare drywall, patched surfaces or dramatic colour changes.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">3. How much area does 1 litre of paint cover?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Most interior wall paints cover approximately 10 to 12 square metres per litre (about 350 to 400 square feet per gallon) in a single coat. Exterior paints typically cover less — around 8 square metres per litre (about 300 square feet per gallon) — because exterior surfaces are more porous. Coverage rates are printed on the paint can and should always be checked before buying.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">4. Should I subtract doors and windows from the wall area?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Doors and windows do not need painting, so subtracting them gives a more accurate estimate. Our calculator automatically subtracts the standard area of each door (about 1.8 m² / 20 sq ft) and each window (about 1.5 m² / 16 sq ft). If your doors or windows are significantly larger or smaller than standard, adjust the result up or down by roughly 10%.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">5. Does this calculator work in metric units?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Use the unit toggle at the top of the calculator to switch between Imperial (feet, gallons) and Metric (metres, litres). The form labels, input units and result units all update automatically — and your preference is saved for future visits using your browser's local storage.</p>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ============================================================
+           RELATED TOOLS SECTION
+           ============================================================ -->
+      <section class="related-tools">
+        <h2>Related Construction Calculators</h2>
+        <ul>
+          <li><a href="../drywall-calculator/index.html">Drywall Calculator</a></li>
+          <li><a href="../tile-calculator/index.html">Tile Calculator</a></li>
+          <li><a href="../flooring-calculator/index.html">Flooring Calculator</a></li>
+          <li><a href="../wallpaper-calculator/index.html">Wallpaper Calculator</a></li>
+          <li><a href="../countertop-calculator/index.html">Countertop Calculator</a></li>
+          <li><a href="../concrete-calculator/index.html">Concrete Calculator</a></li>
+        </ul>
+      </section>
+
+    </div>
+    <!-- END calc-main -->
+
+    <!-- ============ SIDEBAR COLUMN ============ -->
+    <aside class="calc-sidebar" aria-label="Sidebar">
+
+      <!-- Ad Slot 4 — Medium Rectangle (Sidebar) -->
+      <div class="ad-slot ad-slot-sidebar" aria-label="Advertisement">
+        <small>Advertisement</small>
+        <!--
+          AdSense Unit — 300x250 Medium Rectangle
+          Uncomment after AdSense approval:
+          <ins class="adsbygoogle"
+               style="display:inline-block;width:300px;height:250px"
+               data-ad-client="ca-pub-1428550393209506"
+               data-ad-slot="REPLACE_WITH_SLOT_ID"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        -->
+      </div>
+
+      <!-- Quick Links Card -->
+      <div class="sidebar-card">
+        <h3>Popular Calculators</h3>
+        <ul class="sidebar-links">
+          <li><a href="../concrete-calculator/index.html">Concrete Calculator</a></li>
+          <li><a href="../tile-calculator/index.html">Tile Calculator</a></li>
+          <li><a href="../flooring-calculator/index.html">Flooring Calculator</a></li>
+          <li><a href="../drywall-calculator/index.html">Drywall Calculator</a></li>
+          <li><a href="../wallpaper-calculator/index.html">Wallpaper Calculator</a></li>
+          <li><a href="../countertop-calculator/index.html">Countertop Calculator</a></li>
+        </ul>
+      </div>
+
+    </aside>
+
+  </div>
+  <!-- END calc-layout -->
+
+</div>
+<!-- END container -->
+
+ 
+  <!-- ============================================================
+       PAINT CALCULATOR JAVASCRIPT
+       ============================================================ -->
+  <script>
+  /* =========================================================
+     PAINT CALCULATOR — Tool Logic
+     Room shape: rectangular
+     Units: imperial (ft) and metric (m)
+     ========================================================= */
+
+  /* ---------- 1. UNIT LABEL UPDATER ---------- */
+  function updatePaintUnitLabels() {
+    var metric = isMetric();
+    var lUnit = document.getElementById('length-unit');
+    var wUnit = document.getElementById('width-unit');
+    var hUnit = document.getElementById('height-unit');
+    if (lUnit) lUnit.textContent = metric ? 'm' : 'ft';
+    if (wUnit) wUnit.textContent = metric ? 'm' : 'ft';
+    if (hUnit) hUnit.textContent = metric ? 'm' : 'ft';
+  }
+
+  /* ---------- 2. MAIN CALCULATION ---------- */
+  function calculatePaint() {
+    var metric = isMetric();
+
+    // Get inputs
+    var length = posNum('length');
+    var width = posNum('width');
+    var height = posNum('height');
+    var doors = parseInt(document.getElementById('doors').value) || 0;
+    var windows = parseInt(document.getElementById('windows').value) || 0;
+    var coats = parseInt(document.getElementById('coats').value) || 2;
+    var paintType = document.getElementById('paint-type').value || 'interior';
+
+    // Validation
+    if (length === null || width === null || height === null) {
+      showError('Please enter valid positive numbers for length, width and wall height.');
+      return;
+    }
+
+    // Convert everything to metres internally
+    var lengthM, widthM, heightM;
+    if (metric) {
+      lengthM = length;
+      widthM = width;
+      heightM = height;
+    } else {
+      lengthM = length * 0.3048;
+      widthM = width * 0.3048;
+      heightM = height * 0.3048;
+    }
+
+    // Wall area (in sq metres)
+    var wallAreaM2 = 2 * (lengthM + widthM) * heightM;
+
+    // Subtract doors (1.8 m² each) and windows (1.5 m² each)
+    var doorArea = doors * 1.8;
+    var windowArea = windows * 1.5;
+    var paintableAreaM2 = wallAreaM2 - doorArea - windowArea;
+    if (paintableAreaM2 < 0) paintableAreaM2 = 0;
+
+    // Coverage rate (m² per litre)
+    var coverage = (paintType === 'exterior') ? 8 : 10;
+
+    // Paint per coat (litres)
+    var paintPerCoatL = paintableAreaM2 / coverage;
+
+    // Total paint (litres)
+    var totalPaintL = paintPerCoatL * coats;
+
+    // Convert to imperial for display
+    var wallAreaSqFt = wallAreaM2 * 10.7639;
+    var paintableAreaSqFt = paintableAreaM2 * 10.7639;
+    var paintPerCoatGal = paintPerCoatL * 0.264172;
+    var totalPaintGal = totalPaintL * 0.264172;
+
+    // Recommended cans (metric)
+    var cans5L = Math.floor(totalPaintL / 5);
+    var remaining = totalPaintL - (cans5L * 5);
+    var cans4L = Math.floor(remaining / 4);
+    remaining = remaining - (cans4L * 4);
+    var cans1L = Math.ceil(remaining);
+
+    // Build result HTML
+    var html = '';
+    html += '<h3>Paint Needed for Your Room</h3>';
+
+    if (metric) {
+      html += '<span class="result-primary">' + fmt(totalPaintL, 2) + ' litres</span>';
+      html += '<span class="result-secondary">' + fmt(totalPaintGal, 2) + ' gallons (imperial equivalent)</span>';
+    } else {
+      html += '<span class="result-primary">' + fmt(totalPaintGal, 2) + ' gallons</span>';
+      html += '<span class="result-secondary">' + fmt(totalPaintL, 2) + ' litres (metric equivalent)</span>';
+    }
+
+    html += '<div style="margin-top:14px;">';
+    if (metric) {
+      html += buildResultLine('Wall area (total)', fmt(wallAreaM2, 2) + ' m²');
+      html += buildResultLine('Paintable area (minus doors/windows)', fmt(paintableAreaM2, 2) + ' m²');
+      html += buildResultLine('Paint per coat', fmt(paintPerCoatL, 2) + ' L');
+      html += buildResultLine('Number of coats', coats + ' coats');
+      html += buildResultLine('Total paint needed', fmt(totalPaintL, 2) + ' L');
+    } else {
+      html += buildResultLine('Wall area (total)', fmt(wallAreaSqFt, 2) + ' sq ft');
+      html += buildResultLine('Paintable area (minus doors/windows)', fmt(paintableAreaSqFt, 2) + ' sq ft');
+      html += buildResultLine('Paint per coat', fmt(paintPerCoatGal, 2) + ' gal');
+      html += buildResultLine('Number of coats', coats + ' coats');
+      html += buildResultLine('Total paint needed', fmt(totalPaintGal, 2) + ' gal');
+    }
+    html += '</div>';
+
+    // Recommended cans
+    html += '<div style="margin-top:16px;">';
+    html += '<h3 style="font-size:0.98rem;margin-bottom:10px;">Recommended Paint Cans</h3>';
+    if (metric) {
+      if (cans5L > 0) html += buildResultLine('5-litre cans', cans5L + ' can' + (cans5L > 1 ? 's' : ''));
+      if (cans4L > 0) html += buildResultLine('4-litre cans', cans4L + ' can' + (cans4L > 1 ? 's' : ''));
+      if (cans1L > 0) html += buildResultLine('1-litre cans', cans1L + ' can' + (cans1L > 1 ? 's' : ''));
+    } else {
+      var gal1 = Math.ceil(totalPaintGal);
+      html += buildResultLine('1-gallon cans', gal1 + ' can' + (gal1 > 1 ? 's' : ''));
+    }
+    html += '</div>';
+
+    // Note
+    html += '<p class="result-note">Based on ' + (paintType === 'exterior' ? 'exterior' : 'interior') + ' paint coverage of ' + coverage + ' m² per litre. Always buy slightly more than calculated for touch-ups.</p>';
+
+    // Action buttons
+    html += '<div class="result-action-buttons">' +
+      '<button type="button" class="action-btn" onclick="printResult()">' +
+        '<svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>' +
+        'Print / Save PDF' +
+      '</button>' +
+      '<button type="button" class="action-btn action-share" onclick="shareResult()">' +
+        '<svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>' +
+        'Share' +
+      '</button>' +
+    '</div>';
+
+    showResult(html);
+  }
+
+  /* ---------- 3. RESET ---------- */
+  function resetPaint() {
+    resetForm('paint-form');
+    updatePaintUnitLabels();
+  }
+
+  /* ---------- 4. UNIT CHANGE HOOK ---------- */
+  if (typeof onUnitChange === 'function') {
+    onUnitChange(function () {
+      updatePaintUnitLabels();
+      var resultBox = document.getElementById('result');
+      if (resultBox && resultBox.classList.contains('show')) {
+        calculatePaint();
+      }
+    });
+  }
+
+  /* ---------- 5. INIT ON LOAD ---------- */
+  document.addEventListener('DOMContentLoaded', function () {
+    updatePaintUnitLabels();
+  });
+  </script>
+
+</main>
+
+<!-- ============================================================
+     SITE FOOTER — 4 Columns
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Column 1: Brand -->
+      <div>
+        <h4>BuildMetric</h4>
+        <p>Precise calculators for builders, contractors and DIYers worldwide. 200+ free tools covering every major construction and DIY calculation. Built for accuracy, transparency and global use.</p>
+      </div>
+
+      <!-- Column 2: Popular Tools -->
+      <div>
+        <h4>Popular Tools</h4>
+        <ul>
+          <li><a href="../concrete-calculator/index.html">Concrete Calculator</a></li>
+          <li><a href="../paint-calculator/index.html">Paint Calculator</a></li>
+          <li><a href="../roofing-calculator/index.html">Roofing Calculator</a></li>
+          <li><a href="../tile-calculator/index.html">Tile Calculator</a></li>
+          <li><a href="../lumber-calculator/index.html">Lumber Calculator</a></li>
+          <li><a href="../flooring-calculator/index.html">Flooring Calculator</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Information + Follow Us -->
+      <div>
+        <h4>Information</h4>
+        <ul>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="../terms-of-service.html">Terms of Service</a></li>
+          <li><a href="../disclaimer.html">Disclaimer</a></li>
+        </ul>
+
+        <h4 style="margin-top:20px;">Follow Us</h4>
+        <ul>
+          <li><a href="https://youtube.com/@buildmetrictools" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://www.facebook.com/BuildMetric" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Categories -->
+      <div>
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="../index.html#cat-concrete-masonry">Concrete &amp; Masonry</a></li>
+          <li><a href="../index.html#cat-interior">Interior &amp; Finishing</a></li>
+          <li><a href="../index.html#cat-exterior">Exterior &amp; Structure</a></li>
+          <li><a href="../index.html#cat-landscaping">Landscaping &amp; Outdoor</a></li>
+          <li><a href="../index.html#cat-lumber-framing">Lumber &amp; Framing</a></li>
+          <li><a href="../index.html#cat-energy">Energy &amp; Efficiency</a></li>
+          <li><a href="../index.html#cat-plumbing-electrical">Plumbing &amp; Electrical</a></li>
+          <li><a href="../index.html#cat-unit-converters">Unit Converters</a></li>
+          <li><a href="../index.html#cat-roofing">Roofing &amp; Waterproofing</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>&copy; <span id="yr"></span> BuildMetric. All rights reserved. Made for builders worldwide.</p>
+      <p style="margin-top:6px;font-size:0.78rem;">
+        BuildMetric calculators are provided for estimation purposes only. Always consult a qualified professional before ordering materials or starting construction work. Results may vary based on site conditions, material specifications and local building codes.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
