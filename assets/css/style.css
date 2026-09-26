@@ -2123,18 +2123,161 @@ textarea:focus-visible {
    ========================================================= */
 
 /* =========================================================
-   SECTION 38 — DESKTOP SIDEBAR STICKY FIX (≥1024px)
-   Fixes empty white space on right side next to SEO content
+   SECTION 38 — TOOL MAIN GRID (Two-Column Layout)
+   Desktop: 2-column grid, sticky sidebar
+   Mobile: single column, everything stacks
+   ========================================================= */
+
+/* ---- Mobile First (Default) ---- */
+.tool-main-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.primary-content {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sticky-sidebar {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ---- Tool Title Block (Mobile: no excessive gap) ---- */
+.tool-title-block {
+  margin-bottom: 0;
+}
+
+.tool-title-block h1 {
+  margin-bottom: 8px;
+  font-size: clamp(1.4rem, 3.6vw, 1.9rem);
+  line-height: 1.25;
+}
+
+.tool-title-block .tool-subtitle {
+  margin-bottom: 0;
+  color: var(--text-soft);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+/* Calc wrap — no extra spacing */
+.calc-wrap {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.calc-header {
+  margin-bottom: 16px;
+  min-height: 0;
+  height: auto;
+}
+
+/* Title is now in .tool-title-block — hide duplicate H1 in calc-header */
+.calc-header h1 {
+  display: none;
+}
+
+/* ---- Action Buttons Box ---- */
+.action-buttons-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* ---- Trust Badge Card (E-E-A-T) ---- */
+.trust-badge-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+  box-shadow: var(--shadow-xs);
+}
+
+.trust-badge-card h4 {
+  font-size: 0.98rem;
+  color: var(--primary-dark);
+  margin-bottom: 12px;
+  font-weight: 700;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary-light);
+}
+
+.trust-badge-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.trust-badge-card li {
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.trust-badge-card li:last-child {
+  margin-bottom: 0;
+}
+
+/* ---- Ad Slot — Half Page (300x600) ---- */
+.ad-slot-halfpage {
+  margin: 0;
+  min-height: 600px;
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---- Bottom Full-Width Section ---- */
+.bottom-full-width {
+  width: 100%;
+  padding: 40px 0 0;
+  margin-top: 40px;
+  border-top: 2px solid var(--primary-light);
+}
+
+.legal-disclaimer {
+  margin-top: 32px;
+  padding: 16px 18px;
+  background: #fafbfd;
+  border-left: 4px solid var(--muted-light);
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.legal-disclaimer p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* =========================================================
+   DESKTOP — 2-Column Grid + Sticky Sidebar (≥1024px)
    ========================================================= */
 @media (min-width: 1024px) {
-  .calc-layout {
+  .tool-main-grid {
     display: grid;
     grid-template-columns: 1fr 320px;
     gap: 32px;
     align-items: start;
   }
 
-  .calc-main {
+  .primary-content {
     min-width: 0;
     width: 100%;
     display: flex;
@@ -2142,7 +2285,7 @@ textarea:focus-visible {
     gap: 24px;
   }
 
-  .calc-sidebar {
+  .sticky-sidebar {
     position: sticky;
     top: 24px;
     align-self: start;
@@ -2151,5 +2294,171 @@ textarea:focus-visible {
     max-height: calc(100vh - 48px);
     overflow-y: auto;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .action-buttons-box {
+    flex-direction: row;
+  }
+
+  .action-btn {
+    flex: 1;
+  }
+
+  .bottom-full-width {
+    margin-top: 60px;
+    padding-top: 48px;
+  }
+}
+
+/* =========================================================
+   TABLET — 768px to 1023px
+   ========================================================= */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .tool-main-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .sticky-sidebar {
+    position: static;
+    top: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .action-buttons-box {
+    flex-direction: row;
+  }
+}
+
+/* =========================================================
+   MOBILE — ≤768px (Stack vertically + fix gaps)
+   ========================================================= */
+@media (max-width: 768px) {
+  .tool-main-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .primary-content {
+    width: 100%;
+    gap: 16px;
+  }
+
+  .sticky-sidebar {
+    width: 100%;
+    position: static;
+    top: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .tool-title-block h1 {
+    margin-bottom: 6px;
+  }
+
+  .tool-title-block .tool-subtitle {
+    font-size: 0.94rem;
+    margin-bottom: 0;
+  }
+
+  .calc-wrap {
+    padding: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .calc-header {
+    margin-bottom: 14px;
+    min-height: 0;
+    height: auto;
+  }
+
+  .calc-header h1 {
+    display: none;
+  }
+
+  .ad-slot-halfpage {
+    min-height: 250px;
+    max-width: 100%;
+  }
+
+  .bottom-full-width {
+    padding: 30px 0 0;
+    margin-top: 30px;
+  }
+
+  .legal-disclaimer {
+    font-size: 0.84rem;
+  }
+}
+
+/* =========================================================
+   PRINT STYLES — Clean PDF Output
+   ========================================================= */
+@media print {
+  .site-header,
+  .site-footer,
+  .ad-slot,
+  .ad-slot-halfpage,
+  .action-buttons-box,
+  .result-action-buttons,
+  .btn-calc,
+  .btn-secondary,
+  .nav-toggle,
+  .breadcrumb,
+  .related-tools,
+  .unit-toggle,
+  .sidebar-card,
+  .sticky-sidebar,
+  .trust-badge-card,
+  .category-grid,
+  .faq-icon,
+  .random-tool-btn,
+  .header-tools {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff;
+    color: #000000;
+    font-size: 12pt;
+  }
+
+  .calc-wrap {
+    border: 1px solid #cccccc;
+    box-shadow: none;
+    padding: 16px;
+    page-break-inside: avoid;
+  }
+
+  .result-box {
+    border: 1px solid #999999;
+    background: #ffffff;
+    display: block !important;
+  }
+
+  .content-section h2 {
+    page-break-after: avoid;
+  }
+
+  a {
+    color: #000000;
+    text-decoration: underline;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .tool-main-grid {
+    display: block;
   }
 }
