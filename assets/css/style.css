@@ -1469,10 +1469,18 @@ code, pre {
   .calc-layout {
     grid-template-columns: 1fr;
     gap: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+  .calc-main {
+    order: 1;
+    width: 100%;
   }
   .calc-sidebar {
+    order: 2;
     position: static;
     top: auto;
+    width: 100%;
   }
   .ad-slot-sidebar {
     max-width: 100%;
