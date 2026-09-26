@@ -125,7 +125,7 @@ function getSelect(id) {
   var el = document.getElementById(id);
   if (!el) return '';
   return String(el.value || '');
-}
+   }
 
 /* =========================================================
    SECTION 4 — RESULT DISPLAY HELPERS
@@ -271,6 +271,7 @@ function flashCopyFeedback(message) {
    SECTION 8 — UNIT CONVERSION HELPERS
    ========================================================= */
 var Units = {
+  /* Length */
   feetToMetres: function (ft) { return ft * 0.3048; },
   metresToFeet: function (m) { return m / 0.3048; },
   inchesToCm: function (inch) { return inch * 2.54; },
@@ -278,9 +279,11 @@ var Units = {
   inchesToFeet: function (inch) { return inch / 12; },
   feetToInches: function (ft) { return ft * 12; },
 
+  /* Area */
   sqftToSqm: function (sqft) { return sqft * 0.092903; },
   sqmToSqft: function (sqm) { return sqm / 0.092903; },
 
+  /* Volume */
   cubicFeetToCubicYards: function (cf) { return cf / 27; },
   cubicYardsToCubicFeet: function (cy) { return cy * 27; },
   cubicFeetToCubicMetres: function (cf) { return cf * 0.0283168; },
@@ -288,6 +291,7 @@ var Units = {
   litresToGallonsUS: function (l) { return l * 0.264172; },
   gallonsUSToLitres: function (g) { return g / 0.264172; },
 
+  /* Weight */
   poundsToKg: function (lb) { return lb * 0.453592; },
   kgToPounds: function (kg) { return kg / 0.453592; }
 };
@@ -553,11 +557,8 @@ function isImperial() {
   return BM_UNITS.current === 'imperial';
 }
 
-
 /* =========================================================
    SECTION 15.1 — PRINT & SHARE RESULT
-   =========================================================
-   Print/Save as PDF + native share for calculator results
    ========================================================= */
 
 /* ---------------------------------------------------------
@@ -588,7 +589,6 @@ function shareResult() {
     return;
   }
 
-  // Build share text
   var pageTitle = document.title || 'BuildMetric Calculator';
   var resultText = (resultBox.innerText || resultBox.textContent || '').trim();
   var pageUrl = window.location.href;
@@ -599,10 +599,9 @@ function shareResult() {
     url: pageUrl
   };
 
-  // Try Web Share API first (mobile + modern desktop)
+  // Web Share API (mobile + modern desktop)
   if (navigator.share) {
     navigator.share(shareData).catch(function (err) {
-      // User cancelled or error — silently ignore
       if (err && err.name !== 'AbortError' && window.console) {
         console.warn('Share cancelled or failed:', err);
       }
@@ -642,10 +641,12 @@ function legacyCopy(text) {
   }
   document.body.removeChild(temp);
 }
+
 /* =========================================================
    SECTION 16 — EXPOSE GLOBAL API
    ========================================================= */
 window.BuildMetric = {
+  // Unit system
   units: BM_UNITS,
   setUnitSystem: setUnitSystem,
   initUnitToggle: initUnitToggle,
@@ -654,6 +655,8 @@ window.BuildMetric = {
   isMetric: isMetric,
   isImperial: isImperial,
   onUnitChange: onUnitChange,
+
+  // FAQ
   initFaqAccordion: initFaqAccordion,
 
   // Helpers
@@ -676,15 +679,21 @@ window.BuildMetric = {
   safeDivide: safeDivide,
   safeMultiply: safeMultiply,
   applyWaste: applyWaste,
-  bagsNeeded: bagsNeeded
-};
+  bagsNeeded: bagsNeeded,
 
- // Print & Share (naya)
- printResult: printResult,
- shareResult: shareResult
+  // Print & Share
+  printResult: printResult,
+  shareResult: shareResult
+};
 
 /* =========================================================
    END OF SCRIPT
    BuildMetric — Shared JavaScript
-   Total: 16 sections
+   Total: 16 Sections across 5 Phases
+
+   Phase 1 (1–3):   DOM Ready, Mobile Nav, Auto Year, Init, Format, Validation
+   Phase 2 (4–8):   Result Display, Form Utilities, Scroll, Clipboard, Conversions
+   Phase 3 (9–12):  Safe Math, Waste, Bags, FAQ Accordion
+   Phase 4 (13–15): Unit Toggle System, HTML Builder, Format Result
+   Phase 5 (15.1–16): Print/Share, Global API
    ========================================================= */
