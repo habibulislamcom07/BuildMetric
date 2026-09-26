@@ -553,6 +553,95 @@ function isImperial() {
   return BM_UNITS.current === 'imperial';
 }
 
+
+/* =========================================================
+   SECTION 15.1 — PRINT & SHARE RESULT
+   =========================================================
+   Print/Save as PDF + native share for calculator results
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   15.1.1 PRINT RESULT
+   Opens browser print dialog. User can save as PDF.
+   --------------------------------------------------------- */
+function printResult() {
+  var resultBox = document.getElementById('result');
+  if (!resultBox || !resultBox.classList.contains('show')) {
+    if (window.console && console.warn) {
+      console.warn('BuildMetric: Calculate first before printing.');
+    }
+    return;
+  }
+  window.print();
+}
+
+/* ---------------------------------------------------------
+   15.1.2 SHARE RESULT
+   Uses Web Share API if available, otherwise copies to clipboard.
+   --------------------------------------------------------- */
+function shareResult() {
+  var resultBox = document.getElementById('result');
+  if (!resultBox || !resultBox.classList.contains('show')) {
+    if (window.console && console.warn) {
+      console.warn('BuildMetric: Calculate first before sharing.');
+    }
+    return;
+  }
+
+  // Build share text
+  var pageTitle = document.title || 'BuildMetric Calculator';
+  var resultText = (resultBox.innerText || resultBox.textContent || '').trim();
+  var pageUrl = window.location.href;
+
+  var shareData = {
+    title: pageTitle,
+    text: resultText + '\n\nCalculated with BuildMetric — https://buildmetric.org',
+    url: pageUrl
+  };
+
+  // Try Web Share API first (mobile + modern desktop)
+  if (navigator.share) {
+    navigator.share(shareData).catch(function (err) {
+      // User cancelled or error — silently ignore
+      if (err && err.name !== 'AbortError' && window.console) {
+        console.warn('Share cancelled or failed:', err);
+      }
+    });
+    return;
+  }
+
+  // Fallback: copy to clipboard
+  var fallbackText = shareData.text + '\n' + pageUrl;
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(fallbackText).then(function () {
+      flashCopyFeedback('Result copied — share anywhere!');
+    }).catch(function () {
+      legacyCopy(fallbackText);
+    });
+  } else {
+    legacyCopy(fallbackText);
+  }
+}
+
+/* ---------------------------------------------------------
+   15.1.3 LEGACY COPY FALLBACK
+   --------------------------------------------------------- */
+function legacyCopy(text) {
+  var temp = document.createElement('textarea');
+  temp.value = text;
+  temp.style.position = 'fixed';
+  temp.style.opacity = '0';
+  document.body.appendChild(temp);
+  temp.select();
+  try {
+    document.execCommand('copy');
+    flashCopyFeedback('Result copied — share anywhere!');
+  } catch (e) {
+    flashCopyFeedback('Press Ctrl+C to copy');
+  }
+  document.body.removeChild(temp);
+}
 /* =========================================================
    SECTION 16 — EXPOSE GLOBAL API
    ========================================================= */
