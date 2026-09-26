@@ -679,6 +679,10 @@ window.BuildMetric = {
   bagsNeeded: bagsNeeded
 };
 
+ // Print & Share (naya)
+ printResult: printResult,
+ shareResult: shareResult
+
 /* =========================================================
    END OF SCRIPT
    BuildMetric — Shared JavaScript
