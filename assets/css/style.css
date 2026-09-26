@@ -2121,3 +2121,35 @@ textarea:focus-visible {
    Phase 10B (31-37): Focus, Scrollbar, High Contrast, Print,
                       Dark Mode, Arrow Fix, Random Tool
    ========================================================= */
+
+/* =========================================================
+   SECTION 38 — DESKTOP SIDEBAR STICKY FIX (≥1024px)
+   Fixes empty white space on right side next to SEO content
+   ========================================================= */
+@media (min-width: 1024px) {
+  .calc-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 32px;
+    align-items: start;
+  }
+
+  .calc-main {
+    min-width: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .calc-sidebar {
+    position: sticky;
+    top: 24px;
+    align-self: start;
+    width: 100%;
+    min-width: 0;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
