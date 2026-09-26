@@ -1525,11 +1525,49 @@ code, pre { font-family: var(--font-mono); font-size: 0.92em; }
   text-decoration: none;
 }
 
+/* Footer Grid — Explicit Breakpoints (no auto-fit) */
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
   margin-bottom: 34px;
+}
+
+/* Large Desktop (1200px+) — 5 columns */
+@media (min-width: 1200px) {
+  .footer-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Desktop (1024px–1199px) — 4 columns */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablet (768px–1023px) — 3 columns */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Large Mobile (480px–767px) — 2 columns */
+@media (min-width: 480px) and (max-width: 767px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small Mobile (≤479px) — 1 column */
+@media (max-width: 479px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
 }
 
 .footer-grid h4 {
