@@ -2421,3 +2421,49 @@ textarea:focus-visible {
    Phase 9 (25–27): Footer, Mobile Nav, Responsive
    Phase 10 (28–36): Utility, Animations, Focus, Print, Dark Mode, Polish
    ========================================================= */
+
+/* =========================================================
+   SECTION 37 — CALC HEADER MOBILE FIX (No Empty Space)
+   ========================================================= */
+@media (max-width: 700px) {
+  .calc-header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    margin-bottom: 14px !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 0 !important;
+  }
+
+  .calc-header h1 {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 1.35rem !important;
+    line-height: 1.3 !important;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  .calc-header .unit-toggle {
+    flex: 0 0 auto !important;
+    align-self: center !important;
+    margin: 0 0 10px 0 !important;
+    width: auto !important;
+  }
+
+  .calc-wrap {
+    padding: 18px 14px !important;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  .calc-wrap .intro {
+    margin-bottom: 18px !important;
+    font-size: 0.94rem !important;
+  }
+}
