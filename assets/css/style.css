@@ -1525,59 +1525,49 @@ code, pre { font-family: var(--font-mono); font-size: 0.92em; }
   text-decoration: none;
 }
 
-/* Footer Grid — Explicit Breakpoints (no auto-fit) */
+/* ---- Footer Grid (4 Columns — Explicit Breakpoints) ---- */
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
   margin-bottom: 34px;
 }
 
-/* Large Desktop (1200px+) — 5 columns */
 @media (min-width: 1200px) {
   .footer-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
-/* Desktop (1024px–1199px) — 4 columns */
 @media (min-width: 1024px) and (max-width: 1199px) {
   .footer-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-/* Tablet (768px–1023px) — 3 columns */
 @media (min-width: 768px) and (max-width: 1023px) {
-  .footer-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Large Mobile (480px–767px) — 2 columns */
-@media (min-width: 480px) and (max-width: 767px) {
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Small Mobile (≤479px) — 1 column */
-@media (max-width: 479px) {
+@media (max-width: 767px) {
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 24px;
   }
 }
-}
 
+/* ---- Footer Headings ---- */
 .footer-grid h4 {
   color: #ffffff;
   font-size: 0.98rem;
   margin-bottom: 14px;
   font-weight: 700;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.3px;
   position: relative;
   padding-bottom: 8px;
+  text-transform: uppercase;
 }
 
 .footer-grid h4::after {
@@ -1590,6 +1580,7 @@ code, pre { font-family: var(--font-mono); font-size: 0.92em; }
   background: var(--accent);
 }
 
+/* ---- Footer Lists ---- */
 .footer-grid ul {
   list-style: none;
   margin: 0;
@@ -1601,6 +1592,7 @@ code, pre { font-family: var(--font-mono); font-size: 0.92em; }
   line-height: 1.5;
 }
 
+/* ---- Footer Paragraphs ---- */
 .footer-grid p {
   color: #8fa1b3;
   line-height: 1.7;
@@ -1608,6 +1600,7 @@ code, pre { font-family: var(--font-mono); font-size: 0.92em; }
   font-size: 0.88rem;
 }
 
+/* ---- Footer Bottom ---- */
 .footer-bottom {
   border-top: 1px solid #1e3a54;
   padding-top: 20px;
@@ -1621,6 +1614,8 @@ code, pre { font-family: var(--font-mono); font-size: 0.92em; }
   margin: 0;
   color: #718096;
 }
+
+
 
 /* =========================================================
    SECTION 26 — MOBILE NAVIGATION
