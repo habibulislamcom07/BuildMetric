@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0f4c81">
+
+<title>Rebar Calculator — Estimate Rebar Length, Weight & Cost | BuildMetric</title>
+<meta name="description" content="Free rebar calculator to estimate how much rebar you need for concrete slabs, footings and foundations. Accounts for spacing, rebar size and waste. Works in imperial and metric units.">
+<meta name="keywords" content="rebar calculator, rebar quantity calculator, rebar weight calculator, rebar spacing calculator, how much rebar do I need, rebar estimator, rebar cost calculator, concrete reinforcement calculator">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="BuildMetric">
+<meta name="language" content="English">
+
+<link rel="canonical" href="https://buildmetric.org/rebar-calculator/index.html">
+
+<meta property="og:title" content="Rebar Calculator — Estimate Rebar Length, Weight & Cost">
+<meta property="og:description" content="Free rebar calculator to estimate rebar length, weight and cost for concrete slabs, footings and foundations.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://buildmetric.org/rebar-calculator/index.html">
+<meta property="og:site_name" content="BuildMetric">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rebar Calculator — Estimate Rebar Length, Weight & Cost">
+<meta name="twitter:description" content="Free rebar calculator to estimate rebar length, weight and cost for concrete slabs.">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+<!-- GOOGLE ADSENSE — Uncomment after approval
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1428550393209506" crossorigin="anonymous"></script>
+-->
+
+<!-- Structured Data — WebApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Rebar Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "All",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Estimate rebar length, weight and cost for concrete slabs, footings and foundations.",
+  "inLanguage": "en"
+}
+</script>
+
+<!-- Structured Data — FAQPage (7 questions) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"How much rebar do I need for a 10x10 slab?","acceptedAnswer":{"@type":"Answer","text":"A 10x10 foot slab with #4 rebar at 12-inch spacing needs approximately 210 linear feet of rebar (about 11 pieces of 20-foot rebar), plus waste."}},
+    {"@type":"Question","name":"What size rebar should I use for a slab?","acceptedAnswer":{"@type":"Answer","text":"For residential slabs on grade, #3 (10mm) or #4 (12mm) rebar at 12-18 inch spacing is standard. For driveways and heavier loads, use #4 or #5 (16mm) rebar."}},
+    {"@type":"Question","name":"How much does rebar weigh per foot?","acceptedAnswer":{"@type":"Answer","text":"#3 rebar weighs 0.376 lb/ft, #4 weighs 0.668 lb/ft, #5 weighs 1.043 lb/ft, #6 weighs 1.502 lb/ft, and #8 weighs 2.670 lb/ft."}},
+    {"@type":"Question","name":"How far apart should rebar be spaced?","acceptedAnswer":{"@type":"Answer","text":"Common spacing is 12 inches (300mm) or 16 inches (400mm) on center for slabs. Footings typically use 12-inch spacing. Always follow your local building code."}},
+    {"@type":"Question","name":"Does this rebar calculator work in metric units?","acceptedAnswer":{"@type":"Answer","text":"Yes. Use the unit toggle to switch between Imperial (feet, inches) and Metric (metres, millimetres)."}},
+    {"@type":"Question","name":"Should I add waste allowance for rebar?","acceptedAnswer":{"@type":"Answer","text":"Yes. Add 5% waste for simple rectangular slabs and 10% for complex shapes with many corners, curves or cutouts."}},
+    {"@type":"Question","name":"How many pieces of rebar come in a bundle?","acceptedAnswer":{"@type":"Answer","text":"A standard bundle of #4 rebar contains 10 pieces of 20-foot length. Bundles vary by size and supplier."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="../index.html" class="logo" aria-label="BuildMetric Home">Build<span>Metric</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#categories">Categories</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="page-main">
+
+  <!-- AD SLOT 1 — HEADER BANNER -->
+  <div class="container">
+    <div class="ad-slot ad-slot-header" aria-label="Advertisement">
+      <small>Advertisement</small>
+    </div>
+  </div>
+
+  <!-- UPPER 2-COLUMN GRID -->
+  <div class="container">
+    <div class="tool-main-grid">
+
+      <!-- LEFT PRIMARY COLUMN -->
+      <div class="primary-content">
+
+        <!-- BREADCRUMB -->
+        <p class="breadcrumb">
+          <a href="../index.html">Home</a>
+          <span class="sep">&rsaquo;</span>
+          <a href="../index.html#cat-concrete-masonry">Concrete &amp; Masonry</a>
+          <span class="sep">&rsaquo;</span>
+          <span>Rebar Calculator</span>
+        </p>
+
+        <!-- TOOL TITLE + SUBTITLE -->
+        <div class="tool-title-block">
+          <h1>Rebar Calculator</h1>
+          <p class="tool-subtitle">
+            Estimate how much rebar you need for concrete slabs, footings and foundations. This calculator accounts for rebar size, spacing, slab dimensions and waste. Works in both imperial and metric units — switch using the toggle above.
+          </p>
+        </div>
+
+        <!-- CALCULATOR FORM + RESULT -->
+        <div class="calc-wrap">
+
+          <div class="calc-header">
+            <div class="unit-toggle" role="group" aria-label="Unit system">
+              <span class="unit-toggle-label">Units:</span>
+              <button type="button" class="unit-btn" data-unit-btn="imperial" aria-pressed="false">Imperial (US)</button>
+              <button type="button" class="unit-btn" data-unit-btn="metric" aria-pressed="false">Metric (EU)</button>
+            </div>
+          </div>
+
+          <form id="rebar-form" onsubmit="return false;">
+
+            <!-- Slab Dimensions -->
+            <div class="form-grid">
+              <div class="form-row">
+                <label for="length">Slab Length</label>
+                <div class="input-with-unit">
+                  <input type="number" id="length" min="0" step="0.01" placeholder="e.g. 10" inputmode="decimal">
+                  <span class="input-unit" id="length-unit">ft</span>
+                </div>
+              </div>
+              <div class="form-row">
+                <label for="width">Slab Width</label>
+                <div class="input-with-unit">
+                  <input type="number" id="width" min="0" step="0.01" placeholder="e.g. 10" inputmode="decimal">
+                  <span class="input-unit" id="width-unit">ft</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Rebar Size -->
+            <div class="form-row">
+              <label for="rebar-size">Rebar Size</label>
+              <select id="rebar-size">
+                <option value="3">#3 (10 mm) — light reinforcement</option>
+                <option value="4" selected>#4 (12 mm) — standard slabs</option>
+                <option value="5">#5 (16 mm) — driveways and footings</option>
+                <option value="6">#6 (20 mm) — structural elements</option>
+                <option value="8">#8 (25 mm) — heavy structural</option>
+              </select>
+            </div>
+
+            <!-- Spacing -->
+            <div class="form-grid">
+              <div class="form-row">
+                <label for="spacing-main">Main Spacing</label>
+                <select id="spacing-main">
+                  <option value="6">6 inches (150 mm)</option>
+                  <option value="8">8 inches (200 mm)</option>
+                  <option value="12" selected>12 inches (300 mm)</option>
+                  <option value="16">16 inches (400 mm)</option>
+                  <option value="18">18 inches (450 mm)</option>
+                  <option value="24">24 inches (600 mm)</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label for="spacing-cross">Cross Spacing</label>
+                <select id="spacing-cross">
+                  <option value="6">6 inches (150 mm)</option>
+                  <option value="8">8 inches (200 mm)</option>
+                  <option value="12" selected>12 inches (300 mm)</option>
+                  <option value="16">16 inches (400 mm)</option>
+                  <option value="18">18 inches (450 mm)</option>
+                  <option value="24">24 inches (600 mm)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Rebar Length & Waste -->
+            <div class="form-grid">
+              <div class="form-row">
+                <label for="rebar-length">Rebar Stock Length</label>
+                <select id="rebar-length">
+                  <option value="20" selected>20 feet (6 m)</option>
+                  <option value="30">30 feet (9 m)</option>
+                  <option value="40">40 feet (12 m)</option>
+                  <option value="10">10 feet (3 m)</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label for="waste">Waste Allowance (%)</label>
+                <select id="waste">
+                  <option value="5" selected>5% — simple rectangle</option>
+                  <option value="10">10% — standard recommendation</option>
+                  <option value="15">15% — complex shape</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="button" class="btn-calc" onclick="calculateRebar()">Calculate Rebar</button>
+            <button type="button" class="btn-secondary" onclick="resetRebar()" style="margin-top:10px;width:100%;">Reset</button>
+
+          </form>
+
+          <div class="result-box" id="result" role="status" aria-live="polite"></div>
+
+        </div>
+        <!-- END calc-wrap -->
+
+         
+<!-- ACTION BUTTONS BOX -->
+<div class="action-buttons-box">
+  <button type="button" class="action-btn" onclick="printResult()">
+    <svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+    Print / Save as PDF
+  </button>
+  <button type="button" class="action-btn action-share" onclick="shareCalculator()">
+    <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+    Share
+  </button>
+</div>
+
+<!-- AD SLOT 2 — IN-CONTENT -->
+<div class="ad-slot ad-slot-inline" aria-label="Advertisement">
+  <small>Advertisement</small>
+</div>
+
+<!-- ============================================================
+     SEO CONTENT — PART 1 (Original for Rebar Calculator)
+     ============================================================ -->
+<section class="content-section">
+
+  <h2>What Is a Rebar Calculator?</h2>
+  <p>A rebar calculator is a tool that estimates how much reinforcing bar (rebar) you need for a concrete slab, footing, foundation or other structural element. Instead of guessing and ending up with too little rebar (which means a trip back to the supplier and delays in your pour schedule) or too much (which means wasted money sitting in your yard), you enter your slab dimensions and rebar spacing, and the calculator works out the exact quantity.</p>
+  <p>Rebar quantity depends on several factors: the total slab surface area, the rebar spacing in both directions, the rebar size (also called bar number or diameter), the rebar stock length available from your supplier, and the waste allowance for cuts and overlaps. This calculator takes all of these into account so you get a reliable estimate before you buy.</p>
+  <p>Rebar is the backbone of reinforced concrete. It provides tensile strength that concrete alone cannot deliver, preventing cracks from spreading and holding the structure together under load. Rebar is used in almost every concrete structure — driveways, patios, footings, foundation walls, slabs, columns, beams, retaining walls and bridges. Whether you are pouring a small garden path or a large commercial foundation, accurate rebar estimation saves time, money and frustration.</p>
+  <p>Whether you are reinforcing a driveway in Texas, a house slab in London, a footing in Sydney, or a commercial foundation in Toronto, this calculator gives you an accurate estimate in both imperial and metric units.</p>
+
+  <h2>How to Use This Rebar Calculator</h2>
+  <p>Using this rebar calculator is straightforward. Follow these six steps:</p>
+  <ol>
+    <li><strong>Enter the slab dimensions.</strong> Measure the length and width of the slab, footing or foundation you are reinforcing. For irregular shapes, divide the area into rectangles, calculate each one separately, and add the results together. Provide the dimensions in your chosen unit system — feet/inches or metres/millimetres.</li>
+    <li><strong>Select the rebar size.</strong> Rebar comes in numbered sizes from #3 (10 mm) to #18 (57 mm). For residential slabs, #3 or #4 is standard. For driveways and footings, #4 or #5. For structural columns and beams, #6 and above. Choose the size specified by your engineer or building code.</li>
+    <li><strong>Set the main spacing.</strong> This is the distance between parallel rebar bars running in one direction. Common spacings are 12 inches (300 mm) or 16 inches (400 mm) on center.</li>
+    <li><strong>Set the cross spacing.</strong> This is the distance between rebar bars running perpendicular to the main direction. Often the same as the main spacing, but it can differ.</li>
+    <li><strong>Choose the rebar stock length.</strong> Standard rebar is sold in 20-foot (6 m) lengths, but 30-foot and 40-foot lengths are also available. Choose the length your supplier stocks to minimise waste from cutting.</li>
+    <li><strong>Set the waste allowance.</strong> Use 5% for simple rectangular slabs, 10% for standard slabs (recommended), and 15% for complex shapes with many corners or curves.</li>
+    <li><strong>Click Calculate.</strong> The calculator returns the number of rebar pieces, total linear length, number of stock pieces, total weight, and rebar chairs required.</li>
+  </ol>
+  <p><strong>Pro Tip:</strong> Always order 1–2 extra pieces of rebar beyond the calculated quantity. Rebar can be damaged during transport or cut incorrectly on-site. Having spares on hand means you can finish the reinforcement without a trip back to the supplier.</p>
+
+  <h2>Formula Used by This Calculator</h2>
+  <p>All calculations are performed internally in metric units, then converted back to your preferred unit system for display. The following formulas are used:</p>
+
+  <h3>Step 1 — Number of Rebar Pieces (Main Direction)</h3>
+  <div class="formula-box">
+    <strong>Pieces (Main) = Ceil(Width ÷ Main Spacing) + 1</strong>
+    Each piece runs along the full length of the slab.<br>
+    Add 1 for the edge bar at each end.
+  </div>
+
+  <h3>Step 2 — Number of Rebar Pieces (Cross Direction)</h3>
+  <div class="formula-box">
+    <strong>Pieces (Cross) = Ceil(Length ÷ Cross Spacing) + 1</strong>
+    Each piece runs along the full width of the slab.<br>
+    Add 1 for the edge bar at each end.
+  </div>
+
+  <h3>Step 3 — Total Linear Length</h3>
+  <div class="formula-box">
+    <strong>Total Length = (Pieces Main × Length) + (Pieces Cross × Width)</strong>
+    This gives the total length of rebar required before waste and overlaps.
+  </div>
+
+  <h3>Step 4 — Apply Waste Allowance</h3>
+  <div class="formula-box">
+    <strong>Total with Waste = Total Length × (1 + Waste% ÷ 100)</strong>
+    Standard waste: 5% for simple slabs, up to 15% for complex shapes.
+  </div>
+
+  <h3>Step 5 — Number of Stock Pieces</h3>
+  <div class="formula-box">
+    <strong>Stock Pieces = Ceil(Total Length with Waste ÷ Stock Length)</strong>
+    Standard stock length: 20 ft (6 m) in USA, 12 m in Europe and India.<br>
+    Always round up to the nearest whole piece.
+  </div>
+
+  <h3>Step 6 — Total Weight</h3>
+  <div class="formula-box">
+    <strong>Weight = Total Length × Weight per Foot</strong>
+    #3 (10 mm) = 0.376 lb/ft (0.560 kg/m)<br>
+    #4 (12 mm) = 0.668 lb/ft (0.994 kg/m)<br>
+    #5 (16 mm) = 1.043 lb/ft (1.552 kg/m)<br>
+    #6 (20 mm) = 1.502 lb/ft (2.235 kg/m)<br>
+    #8 (25 mm) = 2.670 lb/ft (3.973 kg/m)
+  </div>
+
+  <h3>Step 7 — Rebar Chairs (Spacers)</h3>
+  <div class="formula-box">
+    <strong>Chairs = Ceil(Total Area ÷ 4 sq ft)</strong>
+    One rebar chair supports approximately 4 square feet of rebar grid.<br>
+    Chairs hold the rebar at the correct height above the subgrade.
+  </div>
+
+  <h3>Understanding the Variables</h3>
+  <ul>
+    <li><strong>Slab Length and Width:</strong> The dimensions of the concrete element being reinforced.</li>
+    <li><strong>Rebar Size:</strong> The diameter of the bar, expressed as a number (#3, #4, etc.).</li>
+    <li><strong>Spacing:</strong> The distance between parallel rebar bars, on center.</li>
+    <li><strong>Stock Length:</strong> The length of a single bar as sold by the supplier.</li>
+    <li><strong>Waste %:</strong> Extra material for cuts, overlaps and future repairs.</li>
+    <li><strong>Weight per Foot:</strong> The standard weight of each rebar size per unit length.</li>
+  </ul>
+
+  <h3>Why Round Up, Not Down?</h3>
+  <p>Rebar calculations involve rounding in several places: pieces, stock pieces and chairs. Always round <strong>up</strong>, never down. If your calculation gives 10.2 stock pieces, order 11. If it gives 14.1 chairs, order 15. Running short mid-installation is far more expensive than having a few spare pieces at the end.</p>
+
+  <h3>Rebar Size Chart</h3>
+  <ul>
+    <li><strong>#3 (10 mm):</strong> 0.376 lb/ft — light reinforcement, patios, walkways</li>
+    <li><strong>#4 (12 mm):</strong> 0.668 lb/ft — standard residential slabs, footings</li>
+    <li><strong>#5 (16 mm):</strong> 1.043 lb/ft — driveways, heavy footings, short columns</li>
+    <li><strong>#6 (20 mm):</strong> 1.502 lb/ft — foundation walls, structural beams</li>
+    <li><strong>#7 (22 mm):</strong> 2.044 lb/ft — commercial slabs, retaining walls</li>
+    <li><strong>#8 (25 mm):</strong> 2.670 lb/ft — heavy structural elements, bridges</li>
+    <li><strong>#10 (32 mm):</strong> 4.303 lb/ft — large foundation elements</li>
+    <li><strong>#11 (36 mm):</strong> 5.313 lb/ft — large columns and piers</li>
+  </ul>
+  <p>In metric regions, rebar is specified by diameter in millimetres — 10 mm, 12 mm, 16 mm, 20 mm, 25 mm and 32 mm are the most common sizes.</p>
+
+    
+<h2>Worked Example</h2>
+<p>Let us work through three examples — a simple patio slab, a driveway, and a structural footing with heavy reinforcement.</p>
+
+<h3>Example 1 — Patio Slab (10 ft × 12 ft, #4 rebar at 12 in spacing, 5% waste)</h3>
+<ol>
+  <li><strong>Main pieces (along length):</strong> Ceil(12 ft ÷ 1 ft) + 1 = 13 pieces</li>
+  <li><strong>Cross pieces (along width):</strong> Ceil(10 ft ÷ 1 ft) + 1 = 11 pieces</li>
+  <li><strong>Main length:</strong> 13 × 10 ft = 130 ft</li>
+  <li><strong>Cross length:</strong> 11 × 12 ft = 132 ft</li>
+  <li><strong>Total length:</strong> 130 + 132 = 262 ft</li>
+  <li><strong>Waste (5%):</strong> 262 × 0.05 = 13.1 ft</li>
+  <li><strong>Total with waste:</strong> 262 + 13.1 = 275.1 ft</li>
+  <li><strong>Stock pieces (20 ft each):</strong> Ceil(275.1 ÷ 20) = 14 pieces</li>
+  <li><strong>Total weight:</strong> 275.1 × 0.668 = 183.8 lb</li>
+</ol>
+<p><strong>Result:</strong> You need 14 pieces of #4 rebar (20 ft each), weighing about 184 lb total.</p>
+
+<h3>Example 2 — Driveway (20 ft × 30 ft, #5 rebar at 16 in spacing, 10% waste)</h3>
+<ol>
+  <li><strong>Main pieces:</strong> Ceil(30 ft ÷ 1.333 ft) + 1 = 24 pieces</li>
+  <li><strong>Cross pieces:</strong> Ceil(20 ft ÷ 1.333 ft) + 1 = 16 pieces</li>
+  <li><strong>Main length:</strong> 24 × 20 ft = 480 ft</li>
+  <li><strong>Cross length:</strong> 16 × 30 ft = 480 ft</li>
+  <li><strong>Total length:</strong> 480 + 480 = 960 ft</li>
+  <li><strong>Waste (10%):</strong> 960 × 0.10 = 96 ft</li>
+  <li><strong>Total with waste:</strong> 960 + 96 = 1,056 ft</li>
+  <li><strong>Stock pieces:</strong> Ceil(1,056 ÷ 20) = 53 pieces</li>
+  <li><strong>Total weight:</strong> 1,056 × 1.043 = 1,101 lb</li>
+</ol>
+<p><strong>Result:</strong> You need 53 pieces of #5 rebar (20 ft each), weighing about 1,101 lb total.</p>
+
+<h3>Example 3 — Structural Footing (3 m × 15 m, 12 mm rebar at 200 mm spacing, 10% waste)</h3>
+<ol>
+  <li><strong>Main pieces:</strong> Ceil(15 ÷ 0.2) + 1 = 76 pieces</li>
+  <li><strong>Cross pieces:</strong> Ceil(3 ÷ 0.2) + 1 = 16 pieces</li>
+  <li><strong>Main length:</strong> 76 × 3 m = 228 m</li>
+  <li><strong>Cross length:</strong> 16 × 15 m = 240 m</li>
+  <li><strong>Total length:</strong> 228 + 240 = 468 m</li>
+  <li><strong>Waste (10%):</strong> 468 × 0.10 = 46.8 m</li>
+  <li><strong>Total with waste:</strong> 468 + 46.8 = 514.8 m</li>
+  <li><strong>Stock pieces (12 m each):</strong> Ceil(514.8 ÷ 12) = 43 pieces</li>
+  <li><strong>Total weight:</strong> 514.8 × 0.994 = 511.7 kg</li>
+</ol>
+<p><strong>Result:</strong> You need 43 pieces of 12 mm rebar (12 m each), weighing about 512 kg total.</p>
+
+<div class="callout">
+  <strong>Pro Tip:</strong> For slabs with rebar lapping (overlapping) at joints, add an extra 10–15% to your total length. Lap lengths are typically 40 times the bar diameter — for #4 rebar (12 mm), that is a 480 mm (19 inch) overlap at each joint. Lapping is essential for structural continuity.
+</div>
+
+<h2>Types of Rebar</h2>
+<p>Not all rebar is the same. Different types are designed for different applications and exposure conditions:</p>
+<ul>
+  <li><strong>Carbon Steel Rebar (Black Bar):</strong> Standard reinforcement for interior slabs and dry environments. Cheapest option.</li>
+  <li><strong>Epoxy-Coated Rebar (Green Bar):</strong> Carbon steel coated with epoxy for corrosion resistance. Used in bridges, parking structures and coastal areas.</li>
+  <li><strong>Galvanised Rebar:</strong> Zinc-coated for corrosion protection. Used in marine environments and chemical plants.</li>
+  <li><strong>Stainless Steel Rebar:</strong> Highest corrosion resistance. Used in critical structures, marine environments and chemical plants.</li>
+  <li><strong>Glass-Fiber Reinforced Polymer (GFRP):</strong> Non-metallic, non-corrosive. Used in magnetic resonance imaging (MRI) rooms and electromagnetically sensitive areas.</li>
+  <li><strong>Welded Wire Reinforcement (WWR):</strong> Pre-welded grid of thin wires. Common for slabs on grade and light reinforcement.</li>
+  <li><strong>Deformed Bar:</strong> Most common rebar type. Has ridges (deformations) that grip concrete. Standard for all structural applications.</li>
+  <li><strong>Plain Round Bar:</strong> Smooth surface. Used for dowels, spirals and some specialty applications.</li>
+</ul>
+
+<h2>Industry Standards and Codes</h2>
+<p>Rebar and reinforced concrete must comply with several industry standards and building codes:</p>
+<ul>
+  <li><strong>ASTM A615:</strong> Standard Specification for Deformed and Plain Carbon-Steel Bars for Concrete Reinforcement</li>
+  <li><strong>ASTM A706:</strong> Low-Alloy Steel Deformed Bars for Concrete Reinforcement</li>
+  <li><strong>ASTM A775:</strong> Epoxy-Coated Steel Reinforcing Bars</li>
+  <li><strong>ASTM A767:</strong> Zinc-Coated (Galvanised) Steel Bars for Concrete Reinforcement</li>
+  <li><strong>BS 4449:</strong> Steel Bar for the Reinforcement of Concrete (UK)</li>
+  <li><strong>IS 1786:</strong> High Strength Deformed Steel Bars (India)</li>
+  <li><strong>AS/NZS 4671:</strong> Steel Reinforcing Materials (Australia / New Zealand)</li>
+  <li><strong>ACI 318:</strong> Building Code Requirements for Structural Concrete</li>
+  <li><strong>Eurocode 2:</strong> Design of Concrete Structures</li>
+  <li><strong>IBC (International Building Code):</strong> Structural requirements</li>
+</ul>
+<p>Always check your local building codes before starting any reinforced concrete project. Reinforcement requirements vary significantly by region, especially for seismic zones, coastal exposure and load-bearing capacity.</p>
+
+<h2>Cost Estimation</h2>
+<p>Rebar costs vary widely by region, size and type:</p>
+<ul>
+  <li><strong>#3 (10 mm) Carbon Steel:</strong> $0.35–$0.75 per foot (USA, 2026)</li>
+  <li><strong>#4 (12 mm) Carbon Steel:</strong> $0.50–$0.90 per foot</li>
+  <li><strong>#5 (16 mm) Carbon Steel:</strong> $0.80–$1.40 per foot</li>
+  <li><strong>#6 (20 mm) Carbon Steel:</strong> $1.10–$1.80 per foot</li>
+  <li><strong>#8 (25 mm) Carbon Steel:</strong> $1.80–$3.00 per foot</li>
+  <li><strong>Epoxy-Coated (any size):</strong> 1.5–2× the price of carbon steel</li>
+  <li><strong>Stainless Steel (any size):</strong> 4–8× the price of carbon steel</li>
+  <li><strong>Rebar Chairs:</strong> $0.30–$0.80 per piece</li>
+  <li><strong>Tie Wire:</strong> $8–$20 per roll</li>
+  <li><strong>Rebar Cutters/Benders (tool):</strong> $60–$300 one-time investment</li>
+</ul>
+<p>For a 10×12 patio slab with #4 rebar at 12-inch spacing, expect $130–$250 in rebar materials. DIY installation saves 40–60% of the total cost.</p>
+
+<h2>Tools and Equipment Needed</h2>
+<p>To install rebar correctly, you will need the following tools:</p>
+<ul>
+  <li><strong>Essential:</strong> Rebar cutter (manual or hydraulic), rebar bender, tie wire, tie wire twister, measuring tape, chalk line, safety gloves</li>
+  <li><strong>Recommended:</strong> Rebar chairs (spacers), rebar caps (for safety on exposed ends), angle grinder (for cutting on-site)</li>
+  <li><strong>Safety:</strong> Leather gloves, safety glasses, steel-toe boots, hard hat, high-visibility vest</li>
+  <li><strong>Optional:</strong> Rebar tying tool (for large projects), rebar bending jig, rebar couplers</li>
+</ul>
+<p>Safety first: rebar ends are sharp and can cause serious puncture wounds. Always cap exposed ends, and wear heavy leather gloves when handling rebar. Never walk over uncapped rebar.</p>
+
+<h2>Maintenance and Care</h2>
+<p>While rebar is encased in concrete and designed to last decades, proper handling and installation are essential:</p>
+<ul>
+  <li><strong>Proper storage:</strong> Store rebar off the ground on wooden blocks to prevent rust. Cover with tarps in humid or coastal areas.</li>
+  <li><strong>Remove rust before pouring:</strong> Light surface rust is acceptable, but heavy flaking rust reduces bond strength. Clean with a wire brush.</li>
+  <li><strong>Maintain concrete cover:</strong> Rebar must be at least 2 inches (50 mm) from the concrete surface to prevent corrosion.</li>
+  <li><strong>Proper tying:</strong> Use 16-gauge tie wire at every fourth intersection. Loose rebar can shift during pouring.</li>
+  <li><strong>Inspect before pouring:</strong> Verify spacing, position and laps are correct before pouring concrete.</li>
+  <li><strong>Avoid contamination:</strong> Keep rebar away from oil, paint, grease and mud — these reduce bond strength.</li>
+  <li><strong>Inspect exposed rebar:</strong> For rebar exposed to weather (e.g., retaining walls), check annually for rust and spalling concrete.</li>
+</ul>
+
+<h2>Real-World Applications</h2>
+<p>This rebar calculator is used by a wide range of people around the world:</p>
+<ul>
+  <li><strong>Homeowners:</strong> Reinforcing driveways, patios, walkways and shed floors.</li>
+  <li><strong>DIY enthusiasts:</strong> Tackling weekend concrete projects without overspending on materials.</li>
+  <li><strong>Professional contractors:</strong> Preparing accurate material lists for client quotes and purchase orders.</li>
+  <li><strong>Civil engineers:</strong> Estimating rebar quantities for structural concrete elements.</li>
+  <li><strong>Structural engineers:</strong> Verifying reinforcement requirements during design.</li>
+  <li><strong>Architects:</strong> Specifying rebar quantities during the design phase.</li>
+  <li><strong>Property developers:</strong> Budgeting for multi-unit residential and commercial concrete work.</li>
+  <li><strong>Building contractors:</strong> Ordering rebar for new builds, extensions and refurbishments.</li>
+  <li><strong>Facility managers:</strong> Planning concrete repairs and structural upgrades.</li>
+</ul>
+
+<h2>Common Mistakes to Avoid</h2>
+<p>Even experienced contractors make mistakes when calculating rebar quantities. Here are the most common ones:</p>
+<ul>
+  <li><strong>Forgetting the edge bars:</strong> Always add 1 piece per direction for edge bars. Missing them leaves the slab edges unreinforced.</li>
+  <li><strong>Ignoring lap lengths:</strong> Rebar must overlap at joints. Lap length is typically 40× the bar diameter. Add 10–15% extra for laps.</li>
+  <li><strong>Using the wrong rebar size:</strong> Each rebar size has a different weight and strength. Check the engineer's specification before ordering.</li>
+  <li><strong>Wrong spacing:</strong> Spacing affects load capacity. Never use wider spacing than specified by your engineer or building code.</li>
+  <li><strong>Not using rebar chairs:</strong> Rebar must sit at the correct height above the subgrade. Without chairs, rebar sinks to the bottom and provides no reinforcement.</li>
+  <li><strong>Forgetting tie wire:</strong> Rebar must be tied at intersections. Without tie wire, rebar shifts during pouring.</li>
+  <li><strong>Forgetting waste allowance:</strong> Always add 5–15% depending on slab complexity.</li>
+  <li><strong>Rounding down:</strong> Always round up — never down — when ordering rebar and stock pieces.</li>
+  <li><strong>Mixing metric and imperial:</strong> Keep all measurements in the same unit system throughout. Our calculator handles conversions automatically.</li>
+  <li><strong>Not wearing safety gear:</strong> Rebar ends are sharp. Always cap exposed ends and wear gloves.</li>
+</ul>
+
+  
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">1. How much rebar do I need for a 10×10 slab?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>A 10×10 foot slab with #4 rebar at 12-inch spacing needs approximately 262 linear feet of rebar (without waste). With 5% waste, that is about 275 linear feet — which equals 14 pieces of 20-foot rebar. The total weight is approximately 184 lb. If you are using #3 rebar, the same layout needs the same length, but the weight is only 103 lb. Use the calculator above for exact numbers based on your specific rebar size and spacing.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">2. What size rebar should I use for a slab?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>For residential slabs on grade — patios, walkways and shed floors — #3 (10 mm) or #4 (12 mm) rebar at 12–18 inch spacing is standard. For driveways and heavier loads, use #4 or #5 (16 mm) rebar. For structural footings and foundation walls, #5 or #6 (20 mm) is common. Always follow the engineer's specification or your local building code. In metric regions, 10 mm, 12 mm and 16 mm rebar are the most common sizes for residential work.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">3. How much does rebar weigh per foot?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Standard rebar weights per foot: #3 (10 mm) = 0.376 lb/ft, #4 (12 mm) = 0.668 lb/ft, #5 (16 mm) = 1.043 lb/ft, #6 (20 mm) = 1.502 lb/ft, #7 (22 mm) = 2.044 lb/ft, #8 (25 mm) = 2.670 lb/ft, #10 (32 mm) = 4.303 lb/ft. In metric, the same sizes weigh: 10 mm = 0.560 kg/m, 12 mm = 0.994 kg/m, 16 mm = 1.552 kg/m, 20 mm = 2.235 kg/m, 25 mm = 3.973 kg/m, 32 mm = 6.404 kg/m. Our calculator uses these standard weights for accurate estimation.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">4. How far apart should rebar be spaced?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Common spacing for residential slabs is 12 inches (300 mm) or 16 inches (400 mm) on center. Footings typically use 12-inch spacing. Driveways often use 12–18 inches. For heavy structural slabs, 6–8 inches is common. The correct spacing depends on the load the slab will bear and is usually specified by a structural engineer or building code. Never use wider spacing than specified — reinforcement spacing directly affects the slab's load capacity.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">5. Does this rebar calculator work in metric units?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Use the unit toggle at the top of the calculator to switch between Imperial (feet, inches) and Metric (metres, millimetres). The form labels, input units and result units all update automatically — and your preference is saved for future visits using your browser's local storage. In metric regions, rebar is specified by diameter in millimetres (10 mm, 12 mm, 16 mm, 20 mm) rather than by bar number.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">6. Should I add waste allowance for rebar?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Add 5% waste for simple rectangular slabs with few cuts, 10% for standard slabs (recommended), and 15% for complex shapes with many corners, curves or cutouts. Additionally, if your project requires rebar lapping (overlapping at joints for structural continuity), add an extra 10–15%. Lap lengths are typically 40 times the bar diameter. Running short mid-installation is far more expensive than having a few spare pieces at the end.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">7. How many pieces of rebar come in a bundle?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>A standard bundle of #4 rebar contains approximately 10 pieces of 20-foot length, weighing about 134 lb total. Bundles vary by rebar size, stock length and supplier. For example, #3 rebar often comes in bundles of 15–20 pieces, while #8 rebar comes in bundles of 3–5 pieces. Always confirm with your supplier how many pieces are in the bundle you are ordering — bundles are usually sold by weight, not by piece count.</p>
+          </div>
+        </div>
+
+        <!-- AUTHOR BIO + SOURCES -->
+        <div class="author-bio">
+          <h3>About This Calculator</h3>
+          <p><strong>Written by:</strong> The BuildMetric team — builders, engineers and software developers with combined decades of experience in construction and DIY projects.</p>
+          <p><strong>Sources:</strong> Formulas based on standard construction industry practices, ASTM A615 (Deformed Carbon-Steel Bars), ASTM A706 (Low-Alloy Steel Bars), ACI 318 (Building Code Requirements for Structural Concrete), and BS 4449 (Steel Bar for Reinforcement of Concrete).</p>
+          <p><strong>Last Updated:</strong> January 2026</p>
+        </div>
+
+      </section>
+      <!-- END content-section -->
+
+    </div>
+    <!-- END primary-content -->
+
+    <!-- ============ RIGHT STICKY SIDEBAR ============ -->
+    <aside class="sticky-sidebar" aria-label="Sidebar">
+
+      <!-- AD SLOT 3 — SIDEBAR (300x250 Medium Rectangle) -->
+      <div class="ad-slot ad-slot-sidebar" aria-label="Advertisement">
+        <small>Advertisement</small>
+      </div>
+
+      <!-- Popular Calculators Widget -->
+      <div class="sidebar-card">
+        <h3>Popular Calculators</h3>
+        <ul class="sidebar-links">
+          <li><a href="../concrete-calculator/index.html">Concrete Calculator</a></li>
+          <li><a href="../brick-calculator/index.html">Brick Calculator</a></li>
+          <li><a href="../sand-calculator/index.html">Sand Calculator</a></li>
+          <li><a href="../gravel-calculator/index.html">Gravel Calculator</a></li>
+          <li><a href="../paint-calculator/index.html">Paint Calculator</a></li>
+          <li><a href="../roofing-calculator/index.html">Roofing Calculator</a></li>
+        </ul>
+      </div>
+
+      <!-- AD SLOT 4 — HALF-PAGE STICKY (300x600 desktop / 300x250 mobile) -->
+      <div class="ad-slot ad-slot-halfpage" aria-label="Advertisement">
+        <small>Advertisement</small>
+      </div>
+
+      <!-- Trust & E-E-A-T Badge Card -->
+      <div class="trust-badge-card">
+        <h4>Why Trust BuildMetric?</h4>
+        <ul>
+          <li>✅ 100% Free Forever</li>
+          <li>✅ Engineer Verified Formulas</li>
+          <li>✅ Metric &amp; Imperial Support</li>
+          <li>✅ No Sign-up Required</li>
+        </ul>
+      </div>
+
+    </aside>
+    <!-- END sticky-sidebar -->
+
+  </div>
+  <!-- END tool-main-grid -->
+
+</div>
+<!-- END container -->
+
+ 
+  <!-- ============================================================
+       LOWER FULL-WIDTH SECTION
+       ============================================================ -->
+  <section class="bottom-full-width">
+    <div class="container">
+
+      <!-- RELATED TOOLS GRID -->
+      <div class="related-tools">
+        <h2>Related Construction Calculators</h2>
+        <ul>
+          <li><a href="../concrete-calculator/index.html">Concrete Calculator</a></li>
+          <li><a href="../brick-calculator/index.html">Brick Calculator</a></li>
+          <li><a href="../sand-calculator/index.html">Sand Calculator</a></li>
+          <li><a href="../gravel-calculator/index.html">Gravel Calculator</a></li>
+          <li><a href="../mortar-calculator/index.html">Mortar Calculator</a></li>
+          <li><a href="../block-calculator/index.html">Block Calculator</a></li>
+        </ul>
+      </div>
+
+      <!-- LEGAL DISCLAIMER -->
+      <div class="legal-disclaimer">
+        <p><strong>Disclaimer:</strong> BuildMetric calculators are provided for estimation purposes only. Always consult a qualified professional before ordering materials or starting construction work. Results may vary based on site conditions, material specifications and local building codes.</p>
+      </div>
+
+    </div>
+    <!-- END container -->
+  </section>
+  <!-- END bottom-full-width -->
+
+  <!-- ============================================================
+       REBAR CALCULATOR JAVASCRIPT
+       ============================================================ -->
+  <script>
+  /* =========================================================
+     REBAR CALCULATOR — Tool Logic
+     Units: imperial (ft, in) and metric (m, mm)
+     ========================================================= */
+
+  /* ---------- 1. UNIT LABEL UPDATER ---------- */
+  function updateRebarUnitLabels() {
+    var metric = isMetric();
+    var lUnit = document.getElementById('length-unit');
+    var wUnit = document.getElementById('width-unit');
+    if (lUnit) lUnit.textContent = metric ? 'm' : 'ft';
+    if (wUnit) wUnit.textContent = metric ? 'm' : 'ft';
+  }
+
+  /* ---------- 2. REBAR WEIGHTS (lb per foot) ---------- */
+  function getRebarWeightPerFt(size) {
+    var weights = {
+      '3': 0.376,
+      '4': 0.668,
+      '5': 1.043,
+      '6': 1.502,
+      '7': 2.044,
+      '8': 2.670,
+      '10': 4.303,
+      '11': 5.313
+    };
+    return weights[size] || 0.668;
+  }
+
+  /* ---------- 3. MAIN CALCULATION ---------- */
+  function calculateRebar() {
+    var metric = isMetric();
+
+    var length = posNum('length');
+    var width = posNum('width');
+    var rebarSize = document.getElementById('rebar-size').value || '4';
+    var spacingMain = parseFloat(document.getElementById('spacing-main').value) || 12;
+    var spacingCross = parseFloat(document.getElementById('spacing-cross').value) || 12;
+    var stockLength = parseFloat(document.getElementById('rebar-length').value) || 20;
+    var wastePct = parseInt(document.getElementById('waste').value) || 5;
+
+    if (length === null || width === null) {
+      showError('Please enter valid positive numbers for slab length and width.');
+      return;
+    }
+
+    // Convert everything to feet internally
+    var lengthFt, widthFt, spacingMainFt, spacingCrossFt, stockLengthFt;
+    if (metric) {
+      lengthFt = length * 3.28084;
+      widthFt = width * 3.28084;
+      spacingMainFt = spacingMain / 304.8; // mm to ft
+      spacingCrossFt = spacingCross / 304.8;
+      // Stock length is provided in feet (20, 30, 40) or converted
+      stockLengthFt = stockLength;
+    } else {
+      lengthFt = length;
+      widthFt = width;
+      spacingMainFt = spacingMain / 12; // inches to ft
+      spacingCrossFt = spacingCross / 12;
+      stockLengthFt = stockLength;
+    }
+
+    // Number of pieces per direction
+    var mainPieces = Math.ceil(widthFt / spacingMainFt) + 1;
+    var crossPieces = Math.ceil(lengthFt / spacingCrossFt) + 1;
+
+    // Total linear length (in feet)
+    var mainLengthFt = mainPieces * lengthFt;
+    var crossLengthFt = crossPieces * widthFt;
+    var totalLengthFt = mainLengthFt + crossLengthFt;
+
+    // Apply waste
+    var wasteFt = totalLengthFt * (wastePct / 100);
+    var totalWithWasteFt = totalLengthFt + wasteFt;
+
+    // Number of stock pieces
+    var stockPieces = Math.ceil(totalWithWasteFt / stockLengthFt);
+
+    // Weight (lb)
+    var weightPerFt = getRebarWeightPerFt(rebarSize);
+    var totalWeightLb = totalWithWasteFt * weightPerFt;
+    var totalWeightKg = totalWeightLb * 0.453592;
+
+    // Rebar chairs (1 per 4 sq ft)
+    var slabAreaFt = lengthFt * widthFt;
+    var chairsNeeded = Math.ceil(slabAreaFt / 4);
+
+    // Tie wire rolls (1 roll per 500 lbs of rebar approximately)
+    var tieWireRolls = Math.ceil(totalWeightLb / 500);
+    if (tieWireRolls < 1) tieWireRolls = 1;
+
+    // Metric equivalents for display
+    var totalLengthM = totalWithWasteFt * 0.3048;
+    var mainLengthM = mainLengthFt * 0.3048;
+    var crossLengthM = crossLengthFt * 0.3048;
+
+    // Build result HTML
+    var html = '';
+    html += '<h3>Rebar Needed for Your Slab</h3>';
+
+    html += '<span class="result-primary">' + stockPieces + ' pieces of #' + rebarSize + '</span>';
+    if (metric) {
+      html += '<span class="result-secondary">' + fmt(totalLengthM, 2) + ' m total length (with ' + wastePct + '% waste)</span>';
+    } else {
+      html += '<span class="result-secondary">' + fmt(totalWithWasteFt, 2) + ' ft total length (with ' + wastePct + '% waste)</span>';
+    }
+
+    html += '<div style="margin-top:14px;">';
+    if (metric) {
+      html += buildResultLine('Main direction pieces', mainPieces + ' pieces × ' + fmt(lengthFt * 0.3048, 2) + ' m');
+      html += buildResultLine('Cross direction pieces', crossPieces + ' pieces × ' + fmt(widthFt * 0.3048, 2) + ' m');
+      html += buildResultLine('Main direction length', fmt(mainLengthM, 2) + ' m');
+      html += buildResultLine('Cross direction length', fmt(crossLengthM, 2) + ' m');
+      html += buildResultLine('Total length (no waste)', fmt(totalLengthFt * 0.3048, 2) + ' m');
+      html += buildResultLine('Waste (' + wastePct + '%)', fmt(wasteFt * 0.3048, 2) + ' m');
+      html += buildResultLine('Total length with waste', fmt(totalLengthM, 2) + ' m');
+      html += buildResultLine('Stock pieces (' + stockLength + ' ft each)', stockPieces + ' pieces');
+    } else {
+      html += buildResultLine('Main direction pieces', mainPieces + ' pieces × ' + fmt(lengthFt, 2) + ' ft');
+      html += buildResultLine('Cross direction pieces', crossPieces + ' pieces × ' + fmt(widthFt, 2) + ' ft');
+      html += buildResultLine('Main direction length', fmt(mainLengthFt, 2) + ' ft');
+      html += buildResultLine('Cross direction length', fmt(crossLengthFt, 2) + ' ft');
+      html += buildResultLine('Total length (no waste)', fmt(totalLengthFt, 2) + ' ft');
+      html += buildResultLine('Waste (' + wastePct + '%)', fmt(wasteFt, 2) + ' ft');
+      html += buildResultLine('Total length with waste', fmt(totalWithWasteFt, 2) + ' ft');
+      html += buildResultLine('Stock pieces (' + stockLength + ' ft each)', stockPieces + ' pieces');
+    }
+    html += '</div>';
+
+    // Weight + accessories
+    html += '<div style="margin-top:16px;">';
+    html += '<h3 style="font-size:0.98rem;margin-bottom:10px;">Weight &amp; Accessories</h3>';
+    if (metric) {
+      html += buildResultLine('Total weight', fmt(totalWeightKg, 1) + ' kg');
+      html += buildResultLine('Weight per metre', fmt(weightPerFt * 3.28084, 3) + ' kg/m');
+    } else {
+      html += buildResultLine('Total weight', fmt(totalWeightLb, 1) + ' lb');
+      html += buildResultLine('Weight per foot', fmt(weightPerFt, 3) + ' lb/ft');
+    }
+    html += buildResultLine('Rebar chairs (spacers)', chairsNeeded + ' chairs');
+    html += buildResultLine('Tie wire rolls', tieWireRolls + ' roll' + (tieWireRolls > 1 ? 's' : ''));
+    html += '</div>';
+
+    html += '<p class="result-note">Based on #' + rebarSize + ' rebar at ' + spacingMain + '-inch main spacing and ' + spacingCross + '-inch cross spacing. Waste allowance: ' + wastePct + '%. Always add extra for lapping at joints (approximately 10–15% more).</p>';
+
+    showResult(html);
+  }
+
+  /* ---------- 4. RESET ---------- */
+  function resetRebar() {
+    resetForm('rebar-form');
+    updateRebarUnitLabels();
+  }
+
+  /* ---------- 5. UNIT CHANGE HOOK ---------- */
+  if (typeof onUnitChange === 'function') {
+    onUnitChange(function () {
+      updateRebarUnitLabels();
+      var resultBox = document.getElementById('result');
+      if (resultBox && resultBox.classList.contains('show')) {
+        calculateRebar();
+      }
+    });
+  }
+
+  /* ---------- 6. INIT ON LOAD ---------- */
+  document.addEventListener('DOMContentLoaded', function () {
+    updateRebarUnitLabels();
+  });
+  </script>
+
+</main>
+
+<!-- ============================================================
+     SITE FOOTER — 4 Columns
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div>
+        <h4>BuildMetric</h4>
+        <p>Precise calculators for builders, contractors and DIYers worldwide. 200+ free tools covering every major construction and DIY calculation. Built for accuracy, transparency and global use.</p>
+      </div>
+
+      <div>
+        <h4>Popular Tools</h4>
+        <ul>
+          <li><a href="../concrete-calculator/index.html">Concrete Calculator</a></li>
+          <li><a href="../brick-calculator/index.html">Brick Calculator</a></li>
+          <li><a href="../paint-calculator/index.html">Paint Calculator</a></li>
+          <li><a href="../roofing-calculator/index.html">Roofing Calculator</a></li>
+          <li><a href="../tile-calculator/index.html">Tile Calculator</a></li>
+          <li><a href="../flooring-calculator/index.html">Flooring Calculator</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Information</h4>
+        <ul>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="../terms-of-service.html">Terms of Service</a></li>
+          <li><a href="../disclaimer.html">Disclaimer</a></li>
+        </ul>
+
+        <h4 style="margin-top:20px;">Follow Us</h4>
+        <ul>
+          <li><a href="https://youtube.com/@buildmetrictools" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://www.facebook.com/BuildMetric" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="../index.html#cat-concrete-masonry">Concrete &amp; Masonry</a></li>
+          <li><a href="../index.html#cat-interior">Interior &amp; Finishing</a></li>
+          <li><a href="../index.html#cat-exterior">Exterior &amp; Structure</a></li>
+          <li><a href="../index.html#cat-landscaping">Landscaping &amp; Outdoor</a></li>
+          <li><a href="../index.html#cat-lumber-framing">Lumber &amp; Framing</a></li>
+          <li><a href="../index.html#cat-energy">Energy &amp; Efficiency</a></li>
+          <li><a href="../index.html#cat-plumbing-electrical">Plumbing &amp; Electrical</a></li>
+          <li><a href="../index.html#cat-unit-converters">Unit Converters</a></li>
+          <li><a href="../index.html#cat-roofing">Roofing &amp; Waterproofing</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="yr"></span> BuildMetric. All rights reserved. Made for builders worldwide.</p>
+      <p style="margin-top:6px;font-size:0.78rem;">
+        BuildMetric calculators are provided for estimation purposes only. Always consult a qualified professional before ordering materials or starting construction work. Results may vary based on site conditions, material specifications and local building codes.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>
