@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0f4c81">
+
+<title>Block Calculator — Estimate Concrete Blocks, Mortar & Cost | BuildMetric</title>
+<meta name="description" content="Free block calculator to estimate how many concrete blocks, mortar and sand you need for a wall. Accounts for block size, wall thickness, openings and waste. Works in imperial and metric units.">
+<meta name="keywords" content="block calculator, concrete block calculator, cinder block calculator, block wall calculator, how many blocks do I need, block and mortar calculator, block estimator, concrete masonry unit calculator">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="BuildMetric">
+<meta name="language" content="English">
+
+<link rel="canonical" href="https://buildmetric.org/block-calculator/index.html">
+
+<meta property="og:title" content="Block Calculator — Estimate Concrete Blocks, Mortar & Cost">
+<meta property="og:description" content="Free block calculator to estimate concrete blocks, mortar and sand for any wall.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://buildmetric.org/block-calculator/index.html">
+<meta property="og:site_name" content="BuildMetric">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Block Calculator — Estimate Concrete Blocks, Mortar & Cost">
+<meta name="twitter:description" content="Free block calculator to estimate concrete blocks, mortar and sand for any wall.">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+<!-- GOOGLE ADSENSE — Uncomment after approval
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1428550393209506" crossorigin="anonymous"></script>
+-->
+
+<!-- Structured Data — WebApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Block Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "All",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Estimate concrete blocks, mortar and sand needed for walls, foundations and retaining walls.",
+  "inLanguage": "en"
+}
+</script>
+
+<!-- Structured Data — FAQPage (7 questions) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"How many concrete blocks do I need for a 10x10 wall?","acceptedAnswer":{"@type":"Answer","text":"A 10x10 foot wall using standard 8x8x16 inch blocks needs approximately 113 blocks, plus 5-10% waste — so about 125 blocks total."}},
+    {"@type":"Question","name":"How many blocks are in a square metre?","acceptedAnswer":{"@type":"Answer","text":"For standard 440x215 mm UK blocks with 10 mm joints, approximately 10 blocks per square metre. For 400x200 mm blocks, approximately 12.5 blocks per square metre."}},
+    {"@type":"Question","name":"How much mortar do I need per block?","acceptedAnswer":{"@type":"Answer","text":"Approximately 0.01 cubic metres (0.35 cubic feet) of mortar per standard concrete block. For 100 blocks, plan on about 1 cubic metre of mortar."}},
+    {"@type":"Question","name":"What is the standard concrete block size?","acceptedAnswer":{"@type":"Answer","text":"US standard: 8x8x16 inches (actual 7-5/8 x 7-5/8 x 15-5/8). UK standard: 440x215x100 mm. India standard: 400x200x200 mm. Australia standard: 390x190x190 mm."}},
+    {"@type":"Question","name":"How much waste should I add for blocks?","acceptedAnswer":{"@type":"Answer","text":"Standard waste is 5% for simple walls and 10% for walls with many corners, openings or decorative patterns."}},
+    {"@type":"Question","name":"Does this block calculator work in metric units?","acceptedAnswer":{"@type":"Answer","text":"Yes. Use the unit toggle to switch between Imperial (feet, inches, pounds) and Metric (metres, millimetres, kilograms)."}},
+    {"@type":"Question","name":"How many blocks are in a pallet?","acceptedAnswer":{"@type":"Answer","text":"A standard pallet of concrete blocks holds approximately 75-100 blocks depending on size, weight and supplier. Check with your supplier for exact counts."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="../index.html" class="logo" aria-label="BuildMetric Home">Build<span>Metric</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#categories">Categories</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="page-main">
+
+  <!-- AD SLOT 1 — HEADER BANNER -->
+  <div class="container">
+    <div class="ad-slot ad-slot-header" aria-label="Advertisement">
+      <small>Advertisement</small>
+    </div>
+  </div>
+
+  <!-- UPPER 2-COLUMN GRID -->
+  <div class="container">
+    <div class="tool-main-grid">
+
+      <!-- LEFT PRIMARY COLUMN -->
+      <div class="primary-content">
+
+        <!-- BREADCRUMB -->
+        <p class="breadcrumb">
+          <a href="../index.html">Home</a>
+          <span class="sep">&rsaquo;</span>
+          <a href="../index.html#cat-concrete-masonry">Concrete &amp; Masonry</a>
+          <span class="sep">&rsaquo;</span>
+          <span>Block Calculator</span>
+        </p>
+
+        <!-- TOOL TITLE + SUBTITLE -->
+        <div class="tool-title-block">
+          <h1>Block Calculator</h1>
+          <p class="tool-subtitle">
+            Estimate how many concrete blocks, how much mortar and how much sand you need for a wall. This calculator accounts for block size, wall thickness, openings and waste. Works in both imperial and metric units — switch using the toggle above.
+          </p>
+        </div>
+
+        <!-- CALCULATOR FORM + RESULT -->
+        <div class="calc-wrap">
+
+          <div class="calc-header">
+            <div class="unit-toggle" role="group" aria-label="Unit system">
+              <span class="unit-toggle-label">Units:</span>
+              <button type="button" class="unit-btn" data-unit-btn="imperial" aria-pressed="false">Imperial (US)</button>
+              <button type="button" class="unit-btn" data-unit-btn="metric" aria-pressed="false">Metric (EU)</button>
+            </div>
+          </div>
+
+          <form id="block-form" onsubmit="return false;">
+
+            <!-- Wall Dimensions -->
+            <div class="form-grid">
+              <div class="form-row">
+                <label for="length">Wall Length</label>
+                <div class="input-with-unit">
+                  <input type="number" id="length" min="0" step="0.01" placeholder="e.g. 10" inputmode="decimal">
+                  <span class="input-unit" id="length-unit">ft</span>
+                </div>
+              </div>
+              <div class="form-row">
+                <label for="height">Wall Height</label>
+                <div class="input-with-unit">
+                  <input type="number" id="height" min="0" step="0.01" placeholder="e.g. 8" inputmode="decimal">
+                  <span class="input-unit" id="height-unit">ft</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Block Size -->
+            <div class="form-row">
+              <label for="block-size">Block Size</label>
+              <select id="block-size">
+                <option value="us-standard" selected>US Standard (8 × 8 × 16 in)</option>
+                <option value="us-modular">US Modular (8 × 8 × 16 in nominal)</option>
+                <option value="uk-standard">UK Standard (440 × 215 × 100 mm)</option>
+                <option value="in-standard">India Standard (400 × 200 × 200 mm)</option>
+                <option value="au-standard">Australia Standard (390 × 190 × 190 mm)</option>
+              </select>
+            </div>
+
+            <!-- Wall Thickness -->
+            <div class="form-row">
+              <label for="wall-thickness">Wall Thickness</label>
+              <select id="wall-thickness">
+                <option value="1" selected>Single skin (1 block thick)</option>
+                <option value="2">Double skin (2 blocks thick)</option>
+              </select>
+            </div>
+
+            <!-- Openings -->
+            <div class="form-grid">
+              <div class="form-row">
+                <label for="doors">Doors</label>
+                <select id="doors">
+                  <option value="0" selected>0 doors</option>
+                  <option value="1">1 door</option>
+                  <option value="2">2 doors</option>
+                  <option value="3">3 doors</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label for="windows">Windows</label>
+                <select id="windows">
+                  <option value="0" selected>0 windows</option>
+                  <option value="1">1 window</option>
+                  <option value="2">2 windows</option>
+                  <option value="3">3 windows</option>
+                  <option value="4">4 windows</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Mortar Mix -->
+            <div class="form-row">
+              <label for="mortar-mix">Mortar Mix Ratio</label>
+              <select id="mortar-mix">
+                <option value="3">1:3 — Strong</option>
+                <option value="4" selected>1:4 — Standard</option>
+                <option value="5">1:5 — General purpose</option>
+              </select>
+            </div>
+
+            <!-- Waste Allowance -->
+            <div class="form-row">
+              <label for="waste">Waste Allowance (%)</label>
+              <select id="waste">
+                <option value="5" selected>5% — simple wall</option>
+                <option value="10">10% — standard recommendation</option>
+                <option value="15">15% — many openings or corners</option>
+              </select>
+            </div>
+
+            <button type="button" class="btn-calc" onclick="calculateBlock()">Calculate Blocks</button>
+            <button type="button" class="btn-secondary" onclick="resetBlock()" style="margin-top:10px;width:100%;">Reset</button>
+
+          </form>
+
+          <div class="result-box" id="result" role="status" aria-live="polite"></div>
+
+        </div>
+        <!-- END calc-wrap -->
+
+         
+<!-- ACTION BUTTONS BOX -->
+<div class="action-buttons-box">
+  <button type="button" class="action-btn" onclick="printResult()">
+    <svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+    Print / Save as PDF
+  </button>
+  <button type="button" class="action-btn action-share" onclick="shareCalculator()">
+    <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+    Share
+  </button>
+</div>
+
+<!-- AD SLOT 2 — IN-CONTENT -->
+<div class="ad-slot ad-slot-inline" aria-label="Advertisement">
+  <small>Advertisement</small>
+</div>
+
+<!-- ============================================================
+     SEO CONTENT — PART 1 (Original for Block Calculator)
+     ============================================================ -->
+<section class="content-section">
+
+  <h2>What Is a Block Calculator?</h2>
+  <p>A block calculator is a tool that estimates how many concrete blocks — also called concrete masonry units (CMUs) or cinder blocks — you need to build a wall, foundation or retaining structure. Instead of guessing and ending up with too few blocks (which means a trip back to the supplier and delays in your project) or too many (which means wasted money sitting in your yard), you enter your wall dimensions and block size, and the calculator works out the exact quantity.</p>
+  <p>Block quantity depends on several factors: the total wall area, the size of the block you are using, the thickness of the mortar joint (typically 10 mm or 3/8 inch), the wall thickness (single skin or double skin), the number of openings such as doors and windows, and the waste allowance for cuts and breakages. This calculator takes all of these into account so you get a reliable estimate before you buy.</p>
+  <p>Concrete blocks are one of the most widely used building materials in the world. They are strong, durable, fire-resistant, and available in a range of sizes and types. Blocks are used in residential, commercial and industrial construction for walls, foundations, retaining walls, partitions, chimneys and decorative features. Whether you are building a garden wall, a house extension, or an entire commercial building, accurate block estimation saves time, money and frustration.</p>
+  <p>Whether you are building a block wall in Texas, laying blocks in London, constructing a foundation in Sydney, or building a retaining wall in Toronto, this calculator gives you an accurate estimate in both imperial and metric units.</p>
+
+  <h2>How to Use This Block Calculator</h2>
+  <p>Using this block calculator is straightforward. Follow these seven steps:</p>
+  <ol>
+    <li><strong>Enter the wall dimensions.</strong> Measure the length and height of the wall you are building. For an irregularly shaped wall, divide it into rectangles, calculate each area separately, and add the results together. Provide the dimensions in your chosen unit system — feet/inches or metres/millimetres.</li>
+    <li><strong>Select the block size.</strong> Different regions use different standard blocks. US Standard, US Modular, UK Standard, India Standard and Australia Standard blocks all have different dimensions. Choose the one that matches your supply.</li>
+    <li><strong>Choose the wall thickness.</strong> A single-skin wall uses one block width. A double-skin (cavity) wall uses two blocks with a gap between them. Double-skin walls need roughly twice as many blocks.</li>
+    <li><strong>Select doors and windows.</strong> Use the dropdowns to indicate how many doors and windows are in the wall. The calculator subtracts their typical area automatically — a standard door is about 20 sq ft (1.8 m²) and a standard window is about 16 sq ft (1.5 m²).</li>
+    <li><strong>Set the mortar mix ratio.</strong> 1:3 (strong, below grade), 1:4 (standard, most block walls) or 1:5 (general-purpose). The ratio determines how much cement you need per unit of sand.</li>
+    <li><strong>Set the waste allowance.</strong> Use 5% for simple walls, 10% for standard walls (recommended), and 15% for walls with many corners or openings.</li>
+    <li><strong>Click Calculate.</strong> The result shows the total wall area, blocks needed, mortar volume, cement required (kg and bags), sand required (kg and tons), and total weight.</li>
+  </ol>
+  <p><strong>Pro Tip:</strong> Always order 5–10% extra blocks beyond the calculated quantity. Blocks can be damaged during transport or installation, and having spares on hand means you can replace a cracked block years later without a visible mismatch.</p>
+
+  <h2>Formula Used by This Calculator</h2>
+  <p>All calculations are performed internally in metric units, then converted back to your preferred unit system for display. The following formulas are used:</p>
+
+  <h3>Step 1 — Wall Area</h3>
+  <div class="formula-box">
+    <strong>Wall Area = Wall Length × Wall Height</strong>
+    For irregular walls, divide into rectangles and sum the areas.
+  </div>
+
+  <h3>Step 2 — Subtract Doors and Windows</h3>
+  <div class="formula-box">
+    <strong>Net Area = Wall Area − (Doors × 20) − (Windows × 16)</strong>
+    Standard door: 20 sq ft (1.8 m²). Standard window: 16 sq ft (1.5 m²).
+  </div>
+
+  <h3>Step 3 — Blocks per Unit Area</h3>
+  <div class="formula-box">
+    <strong>Blocks per Unit Area = 1 ÷ ((Block Length + Joint) × (Block Height + Joint))</strong>
+    Standard mortar joint: 3/8 inch (10 mm).<br>
+    US Standard block: about 1.125 blocks per sq ft (single skin).<br>
+    UK Standard block: about 10 blocks per m² (single skin).
+  </div>
+
+  <h3>Step 4 — Total Blocks (Single Skin)</h3>
+  <div class="formula-box">
+    <strong>Blocks Needed = Net Area × Blocks per Unit Area × Wall Thickness</strong>
+    For double-skin walls, multiply by 2.
+  </div>
+
+  <h3>Step 5 — Apply Waste Allowance</h3>
+  <div class="formula-box">
+    <strong>Blocks with Waste = Blocks Needed × (1 + Waste% ÷ 100)</strong>
+    Standard waste: 5% for simple walls, up to 15% for complex walls.
+  </div>
+
+  <h3>Step 6 — Mortar Volume</h3>
+  <div class="formula-box">
+    <strong>Mortar Volume = Blocks × 0.01 m³ per block</strong>
+    About 0.01 cubic metres (0.35 cubic feet) of mortar per standard concrete block.<br>
+    For 100 blocks, plan on about 1 cubic metre of mortar.
+  </div>
+
+  <h3>Step 7 — Cement and Sand</h3>
+  <div class="formula-box">
+    <strong>Cement Volume = Mortar Volume ÷ (1 + Sand Ratio)</strong>
+    <strong>Cement Weight = Cement Volume × 1,440 kg/m³</strong>
+    <strong>Sand Weight = (Cement Volume × Sand Ratio) × 1,600 kg/m³</strong>
+    Sand Ratio = 3, 4 or 5 (depending on mix).
+  </div>
+
+  <h3>Understanding the Variables</h3>
+  <ul>
+    <li><strong>Wall Area:</strong> Total surface area of the wall, excluding openings.</li>
+    <li><strong>Block Size:</strong> Actual dimensions of the block, in mm or inches.</li>
+    <li><strong>Mortar Joint:</strong> The gap between blocks, typically 10 mm (3/8 inch).</li>
+    <li><strong>Wall Thickness:</strong> Single skin (1 block) or double skin (2 blocks).</li>
+    <li><strong>Waste %:</strong> Extra blocks for cuts, breakages and future repairs.</li>
+    <li><strong>Mortar per Block:</strong> Approximately 0.01 m³ of mortar per standard block.</li>
+  </ul>
+
+  <h3>Why Round Up, Not Down?</h3>
+  <p>Block calculations involve rounding in two places: blocks and cement bags. Always round <strong>up</strong>, never down. If your calculation gives 1,247 blocks, order 1,250. If it gives 14.2 bags of cement, order 15. Running short mid-project is far more expensive than having spares at the end — especially if the supplier's next batch has a slightly different colour or texture.</p>
+
+  <h3>Standard Block Sizes Around the World</h3>
+  <ul>
+    <li><strong>US Standard:</strong> 8 × 8 × 16 inches (actual 7-5/8 × 7-5/8 × 15-5/8 in)</li>
+    <li><strong>US Modular:</strong> 8 × 8 × 16 inches (nominal, actual 7-5/8 × 7-5/8 × 15-5/8 in)</li>
+    <li><strong>UK Standard:</strong> 440 × 215 × 100 mm (17.3 × 8.5 × 3.9 in)</li>
+    <li><strong>India Standard:</strong> 400 × 200 × 200 mm (15.7 × 7.9 × 7.9 in)</li>
+    <li><strong>Australia Standard:</strong> 390 × 190 × 190 mm (15.4 × 7.5 × 7.5 in)</li>
+  </ul>
+  <p>Always verify the actual size of your blocks before ordering — nominal sizes can differ from actual sizes by a few millimetres, which adds up over a large wall. Some blocks also have hollow cores or split-face finishes, which can affect the exact count needed.</p>
+
+  
+<h2>Worked Example</h2>
+<p>Let us work through three examples — a simple garden wall, a double-skin house extension, and a wall with multiple openings.</p>
+
+<h3>Example 1 — Simple Garden Wall (10 ft × 6 ft, single skin, US Standard, 5% waste)</h3>
+<ol>
+  <li><strong>Wall area:</strong> 10 × 6 = 60 sq ft</li>
+  <li><strong>No openings:</strong> Net area = 60 sq ft</li>
+  <li><strong>Blocks per sq ft (US Standard, single skin):</strong> 1.125 blocks</li>
+  <li><strong>Total blocks:</strong> 60 × 1.125 = 67.5 → 68 blocks</li>
+  <li><strong>Waste (5%):</strong> 68 × 0.05 = 3.4 → 4 blocks</li>
+  <li><strong>Total blocks to order:</strong> 68 + 4 = 72 blocks</li>
+  <li><strong>Mortar volume:</strong> 72 × 0.01 = 0.72 m³ (25.4 cu ft)</li>
+  <li><strong>Cement (1:4 mix):</strong> 0.72 ÷ 5 × 1,440 = 207 kg</li>
+  <li><strong>Cement bags (50 kg):</strong> 207 ÷ 50 = 4.14 → 5 bags</li>
+  <li><strong>Sand:</strong> (0.72 ÷ 5 × 4) × 1,600 = 922 kg</li>
+</ol>
+<p><strong>Result:</strong> You need 72 blocks, 5 bags of cement (50 kg each), and about 922 kg of sand.</p>
+
+<h3>Example 2 — Double-Skin House Extension (5 m × 2.7 m, double skin, UK Standard, 10% waste)</h3>
+<ol>
+  <li><strong>Wall area:</strong> 5 × 2.7 = 13.5 m²</li>
+  <li><strong>No openings:</strong> Net area = 13.5 m²</li>
+  <li><strong>Blocks per m² (UK Standard, single skin):</strong> 10 blocks</li>
+  <li><strong>Single-skin blocks:</strong> 13.5 × 10 = 135 blocks</li>
+  <li><strong>Double-skin:</strong> 135 × 2 = 270 blocks</li>
+  <li><strong>Waste (10%):</strong> 270 × 0.10 = 27 blocks</li>
+  <li><strong>Total blocks to order:</strong> 270 + 27 = 297 blocks</li>
+  <li><strong>Mortar volume:</strong> 297 × 0.01 = 2.97 m³</li>
+  <li><strong>Cement (1:4 mix):</strong> 2.97 ÷ 5 × 1,440 = 855 kg</li>
+  <li><strong>Cement bags (50 kg):</strong> 855 ÷ 50 = 17.1 → 18 bags</li>
+  <li><strong>Sand:</strong> (2.97 ÷ 5 × 4) × 1,600 = 3,802 kg (3.8 tonnes)</li>
+</ol>
+<p><strong>Result:</strong> You need 297 blocks, 18 bags of cement (50 kg each), and about 3.8 tonnes of sand.</p>
+
+<h3>Example 3 — Wall with Openings (12 ft × 9 ft, single skin, US Standard, 1 door, 2 windows, 10% waste)</h3>
+<ol>
+  <li><strong>Wall area:</strong> 12 × 9 = 108 sq ft</li>
+  <li><strong>Subtract door:</strong> 108 − 20 = 88 sq ft</li>
+  <li><strong>Subtract windows:</strong> 88 − (2 × 16) = 56 sq ft</li>
+  <li><strong>Net area:</strong> 56 sq ft</li>
+  <li><strong>Blocks per sq ft (US Standard, single skin):</strong> 1.125 blocks</li>
+  <li><strong>Total blocks:</strong> 56 × 1.125 = 63 blocks</li>
+  <li><strong>Waste (10%):</strong> 63 × 0.10 = 6.3 → 7 blocks</li>
+  <li><strong>Total blocks to order:</strong> 63 + 7 = 70 blocks</li>
+  <li><strong>Mortar volume:</strong> 70 × 0.01 = 0.7 m³ (24.7 cu ft)</li>
+  <li><strong>Cement (1:4 mix):</strong> 0.7 ÷ 5 × 1,440 = 202 kg</li>
+  <li><strong>Cement bags (50 kg):</strong> 202 ÷ 50 = 4.04 → 5 bags</li>
+</ol>
+<p><strong>Result:</strong> You need 70 blocks, 5 bags of cement (50 kg each), and about 900 kg of sand.</p>
+
+<div class="callout">
+  <strong>Pro Tip:</strong> For walls with decorative patterns (split-face blocks, scored blocks, textured blocks), add an extra 5% to your waste allowance. These patterns require more cuts and produce more breakages. Also remember that the first course (bottom row) of a block wall is usually laid on a solid concrete footing or foundation, so you may need to pour concrete for that first.</p>
+</div>
+
+<h2>Types of Blocks</h2>
+<p>Not all blocks are the same. Different types are made for different applications:</p>
+<ul>
+  <li><strong>Hollow Concrete Blocks (CMU):</strong> Most common type. Have hollow cores that reduce weight and improve insulation. Used for walls, foundations, partitions and structural elements.</li>
+  <li><strong>Solid Concrete Blocks:</strong> No hollow cores. Heavier and stronger than hollow blocks. Used for foundations, retaining walls and load-bearing applications.</li>
+  <li><strong>Cinder Blocks:</strong> Made from cinder (coal ash) and cement. Lighter than concrete blocks. Common in older construction. Rarely used in modern construction.</li>
+  <li><strong>Aerated Concrete Blocks (AAC):</strong> Lightweight blocks made from cement, lime, sand and air. Excellent insulation, easy to cut, but lower compressive strength. Popular in Europe and Asia.</li>
+  <li><strong>Fly Ash Blocks:</strong> Made from fly ash, cement, lime and gypsum. Eco-friendly alternative to concrete blocks. Popular in India and Asia.</li>
+  <li><strong>Split-Face Blocks:</b> Textured surface that mimics natural stone. Used for exterior walls and decorative features.</li>
+  <li><strong>Scored Blocks:</strong> Have grooves or scoring for decorative effect. Used for exterior walls and feature walls.</li>
+  <li><strong>Breeze Blocks (Screen Blocks):</strong> Open-pattern blocks used for decorative screens, ventilation and privacy. Popular in mid-century modern design.</li>
+  <li><strong>Interlocking Blocks:</strong> Designed with interlocking edges to reduce mortar use and speed up construction. Popular in some regions.</li>
+  <li><strong>Fire-Rated Blocks:</strong> Made with fire-resistant materials. Used for firewalls, chimney surrounds and industrial applications.</li>
+  <li><strong>Insulated Concrete Forms (ICF):</strong> Hollow foam blocks filled with concrete. Provide excellent insulation and structural strength. Used for energy-efficient buildings.</li>
+  <li><strong>Retaining Wall Blocks:</strong> Large, heavy blocks designed for retaining walls. Often have interlocking lips or pins. Available in many styles and colours.</li>
+</ul>
+
+<h2>Industry Standards and Codes</h2>
+<p>Concrete blocks used in construction must comply with several industry standards and building codes:</p>
+<ul>
+  <li><strong>ASTM C90:</strong> Standard Specification for Loadbearing Concrete Masonry Units (USA)</li>
+  <li><strong>ASTM C129:</strong> Standard Specification for Nonloadbearing Concrete Masonry Units</li>
+  <li><strong>ASTM C140:</strong> Standard Test Methods for Sampling and Testing Concrete Masonry Units</li>
+  <li><strong>ASTM C426:</strong> Standard Test Method for Linear Drying Shrinkage of Concrete Masonry Units</li>
+  <li><strong>BS EN 771-3:</strong> Specification for Masonry Units — Aggregate Concrete Masonry Units (UK / Europe)</li>
+  <li><strong>IS 2185:</strong> Concrete Masonry Units Specification (India)</li>
+  <li><strong>AS/NZS 4455:</strong> Masonry Units and Segment Pavers (Australia / New Zealand)</li>
+  <li><strong>TMS 402:</strong> Building Code Requirements for Masonry Structures</li>
+  <li><strong>IBC (International Building Code):</strong> Structural requirements</li>
+</ul>
+<p>Always check your local building codes before starting any block wall project. Requirements vary significantly by region, especially for seismic zones, frost depth, fire resistance and thermal performance. For structural applications, always consult a qualified engineer.</p>
+
+<h2>Cost Estimation</h2>
+<p>Block costs vary widely by region, type and quality:</p>
+<ul>
+  <li><strong>Standard Concrete Blocks (8×8×16 in):</strong> $1.50–$3.50 per block (USA, 2026)</li>
+  <li><strong>Large Concrete Blocks (8×8×24 in):</strong> $2.50–$5.00 per block</li>
+  <li><strong>Aerated Concrete Blocks (AAC):</strong> $2.00–$5.00 per block</li>
+  <li><strong>Split-Face Blocks:</strong> $2.50–$6.00 per block</li>
+  <li><strong>Retaining Wall Blocks:</strong> $3.00–$8.00 per block</li>
+  <li><strong>Breeze Blocks (Screen Blocks):</strong> $3.00–$10.00 per block</li>
+  <li><strong>Cement (50 kg bag):</strong> $8–$15 per bag</li>
+  <li><strong>Sand (bulk, per tonne):</strong> $25–$60 per tonne</li>
+  <li><strong>Mortar (pre-mixed, 50 lb bag):</strong> $8–$15 per bag</li>
+  <li><strong>Professional Mason Labour:</strong> $3–$8 per block</li>
+</ul>
+<p>For a 10×6 garden wall (72 blocks), expect $110–$250 in block materials plus $25–$50 in cement and sand. DIY installation saves 40–60% of the total cost. Bulk orders are almost always cheaper than individual blocks for projects over 100 blocks.</p>
+
+<h2>Tools and Equipment Needed</h2>
+<p>To build a block wall, you will need the following tools:</p>
+<ul>
+  <li><strong>Essential:</strong> Brick trowel, spirit level (2 ft and 4 ft), masonry line, club hammer, cold chisel, block jointer, pointing trowel, tape measure, mixing board or wheelbarrow</li>
+  <li><strong>Recommended:</strong> Block tongs, bolster chisel, plugging chisel, corner blocks, mortar hoe, hosepipe, string line and stakes, rubber mallet</li>
+  <li><strong>Safety:</strong> Safety glasses, dust mask, gloves, steel-toe boots, knee pads, sun protection</li>
+  <li><strong>Material Preparation:</strong> Mortar mixer (or drill with mixing paddle), mortar board, buckets, wheelbarrow for moving blocks</li>
+</ul>
+<p>Safety first: block cutting creates silica dust, which is harmful to lungs. Always wear a dust mask when cutting blocks, and use a wet saw or dust suppression system when possible. Blocks are heavy — lift with your legs, not your back, and work with a partner for large blocks.</p>
+
+<h2>Maintenance and Care</h2>
+<p>Proper maintenance extends the life of your block wall:</p>
+<ul>
+  <li><strong>Inspect annually:</strong> Check for cracked blocks, crumbling mortar, efflorescence and water damage.</li>
+  <li><strong>Repoint mortar:</strong> Replace crumbling mortar joints every 25–30 years. Match the original mortar composition.</li>
+  <li><strong>Clean efflorescence:</strong> White salt deposits (efflorescence) indicate moisture. Brush off with a stiff brush and address the water source.</li>
+  <li><strong>Seal properly:</strong> Use a breathable masonry sealer, never a non-breathable one. Blocks need to "breathe".</li>
+  <li><strong>Fix cracks promptly:</strong> Small cracks allow water infiltration. Fill them with mortar or sealant.</li>
+  <li><strong>Keep gutters clean:</strong> Water overflow damages block walls. Clean gutters regularly.</li>
+  <li><strong>Trim vegetation:</strong> Keep vines and plants away from block walls. Roots can damage mortar joints.</li>
+  <li><strong>Avoid pressure washing:</strong> High-pressure water damages block surfaces. Use low-pressure washing or gentle cleaning.</li>
+</ul>
+
+<h2>Real-World Applications</h2>
+<p>This block calculator is used by a wide range of people around the world:</p>
+<ul>
+  <li><strong>Homeowners:</strong> Building garden walls, retaining walls, foundations and extensions.</li>
+  <li><strong>DIY enthusiasts:</strong> Tackling weekend block projects without overspending on materials.</li>
+  <li><strong>Professional masons:</strong> Preparing accurate material lists for client quotes and purchase orders.</li>
+  <li><strong>General contractors:</strong> Estimating block quantities for new builds and renovations.</li>
+  <li><strong>Architects:</strong> Specifying block quantities during the design phase.</li>
+  <li><strong>Property developers:</strong> Budgeting for multi-unit residential and commercial blockwork.</li>
+  <li><strong>Civil engineers:</strong> Estimating blocks for structural masonry.</li>
+  <li><strong>Facility managers:</strong> Planning block repairs and maintenance in commercial buildings.</li>
+</ul>
+
+<h2>Common Mistakes to Avoid</h2>
+<p>Even experienced masons make mistakes when calculating block quantities. Here are the most common ones:</p>
+<ul>
+  <li><strong>Forgetting mortar joint thickness:</strong> Ignoring the 10 mm joint overestimates block count by 5–8%.</li>
+  <li><strong>Using the wrong block size:</strong> US Standard, UK Standard and India Standard blocks have very different dimensions. Check the actual size of your supply.</li>
+  <li><strong>Forgetting the waste allowance:</strong> Always add 5–15% depending on wall complexity and number of openings.</li>
+  <li><strong>Not subtracting openings:</strong> Doors and windows do not need blocks. Subtract them for an accurate estimate.</li>
+  <li><strong>Miscalculating double-skin walls:</strong> Double-skin walls need roughly twice the blocks of single-skin walls.</li>
+  <li><strong>Underestimating mortar:</strong> Mortar is used for both bedding and pointing. Budget 0.01 m³ per block.</li>
+  <li><strong>Forgetting sand:</strong> Mortar requires both cement and sand. Plan on about 4× the cement weight in sand for a 1:4 mix.</li>
+  <li><strong>Rounding down:</strong> Always round up — never down — when ordering blocks and mortar.</li>
+  <li><strong>Mixing metric and imperial:</strong> Keep all measurements in the same unit system throughout. Our calculator handles conversions automatically.</li>
+  <li><strong>Ignoring weather:</strong> Extreme heat or cold affects mortar curing. Adjust mix and cure time based on weather.</li>
+  </ul>
+
+   
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">1. How many concrete blocks do I need for a 10×10 wall?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>A 10×10 foot wall using standard 8×8×16 inch blocks needs approximately 113 blocks, plus 5–10% waste — so about 125 blocks total. If you are building a double-skin wall, double that figure (about 250 blocks). For a 10×10 metre wall with 440×215 mm blocks, you would need about 1,000 blocks for a single skin. Use the calculator above for exact numbers based on your specific block size and wall thickness.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">2. How many blocks are in a square metre?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>For standard 440×215 mm UK blocks with 10 mm joints, approximately 10 blocks are needed per square metre of single-skin wall. For 400×200 mm India Standard blocks, approximately 12.5 blocks per square metre. For 390×190 mm Australia Standard blocks, approximately 13 blocks per square metre. For 8×8×16 inch US Standard blocks, approximately 1.125 blocks per square foot (about 12.1 blocks per square metre). The exact count depends on the block dimensions and the mortar joint width.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">3. How much mortar do I need per block?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Approximately 0.01 cubic metres (0.35 cubic feet) of mortar per standard concrete block for 10 mm bed and cross joints. For 100 blocks, plan on about 1 cubic metre of mortar — which requires roughly 288 kg of cement and 1,152 kg of sand for a 1:4 mix. Mortar is used for both bedding (horizontal) and pointing (vertical) joints. For split-face or textured blocks, allow slightly more mortar per block.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">4. What is the standard concrete block size?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Standard block sizes vary by region. US Standard: 8×8×16 inches (actual 7-5/8 × 7-5/8 × 15-5/8 inches). UK Standard: 440×215×100 mm (17.3 × 8.5 × 3.9 inches). India Standard: 400×200×200 mm (15.7 × 7.9 × 7.9 inches). Australia Standard: 390×190×190 mm (15.4 × 7.5 × 7.5 inches). Always measure your actual blocks before ordering — nominal sizes can differ from actual sizes by a few millimetres, which adds up over a large wall.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">5. How much waste should I add for blocks?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Standard waste is 5% for simple walls with few openings, 10% for standard walls with normal openings (recommended), and 15% for walls with many corners, openings, decorative patterns or complex bond patterns. Always round up to the nearest whole block and the nearest full pallet or pack. Running short mid-project is far more expensive than having spares — especially if the supplier's next batch has a slightly different colour or texture.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">6. Does this block calculator work in metric units?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Use the unit toggle at the top of the calculator to switch between Imperial (feet, inches, pounds) and Metric (metres, millimetres, kilograms). The form labels, input units and result units all update automatically — and your preference is saved for future visits using your browser's local storage. Metric users typically measure walls in metres and specify block dimensions in millimetres.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">7. How many blocks are in a pallet?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>A standard pallet of concrete blocks holds approximately 75–100 blocks depending on size, weight and supplier. Larger blocks (16×8×8 inch) typically come 75–90 per pallet. Smaller blocks come 100–120 per pallet. Always check with your supplier for the exact count on the pallet you are ordering. Some suppliers also sell blocks in "packs" or "crates" of 50 or 100 — again, confirm the count before ordering.</p>
+          </div>
+        </div>
+
+        <!-- AUTHOR BIO + SOURCES -->
+        <div class="author-bio">
+          <h3>About This Calculator</h3>
+          <p><strong>Written by:</strong> The BuildMetric team — builders, engineers and software developers with combined decades of experience in construction and DIY projects.</p>
+          <p><strong>Sources:</strong> Formulas based on standard construction industry practices, ASTM C90 (Loadbearing Concrete Masonry Units), ASTM C129 (Nonloadbearing Concrete Masonry Units), BS EN 771-3 (Aggregate Concrete Masonry Units — UK/Europe), and IS 2185 (Concrete Masonry Units — India).</p>
+          <p><strong>Last Updated:</strong> January 2026</p>
+        </div>
+
+      </section>
+      <!-- END content-section -->
+
+    </div>
+    <!-- END primary-content -->
+
+    <!-- ============ RIGHT STICKY SIDEBAR ============ -->
+    <aside class="sticky-sidebar" aria-label="Sidebar">
+
+      <!-- AD SLOT 3 — SIDEBAR (300x250 Medium Rectangle) -->
+      <div class="ad-slot ad-slot-sidebar" aria-label="Advertisement">
+        <small>Advertisement</small>
+      </div>
+
+      <!-- Popular Calculators Widget -->
+      <div class="sidebar-card">
+        <h3>Popular Calculators</h3>
+        <ul class="sidebar-links">
+          <li><a href="../concrete-calculator/index.html">Concrete Calculator</a></li>
+          <li><a href="../brick-calculator/index.html">Brick Calculator</a></li>
+          <li><a href="../mortar-calculator/index.html">Mortar Calculator</a></li>
+          <li><a href="../rebar-calculator/index.html">Rebar Calculator</a></li>
+          <li><a href="../sand-calculator/index.html">Sand Calculator</a></li>
+          <li><a href="../gravel-calculator/index.html">Gravel Calculator</a></li>
+        </ul>
+      </div>
+
+      <!-- AD SLOT 4 — HALF-PAGE STICKY (300x600 desktop / 300x250 mobile) -->
+      <div class="ad-slot ad-slot-halfpage" aria-label="Advertisement">
+        <small>Advertisement</small>
+      </div>
+
+      <!-- Trust & E-E-A-T Badge Card -->
+      <div class="trust-badge-card">
+        <h4>Why Trust BuildMetric?</h4>
+        <ul>
+          <li>✅ 100% Free Forever</li>
+          <li>✅ Engineer Verified Formulas</li>
+          <li>✅ Metric &amp; Imperial Support</li>
+          <li>✅ No Sign-up Required</li>
+        </ul>
+      </div>
+
+    </aside>
+    <!-- END sticky-sidebar -->
+
+  </div>
+  <!-- END tool-main-grid -->
+
+</div>
+<!-- END container -->
+
+ 
+  <!-- ============================================================
+       LOWER FULL-WIDTH SECTION
+       ============================================================ -->
+  <section class="bottom-full-width">
+    <div class="container">
+
+      <!-- RELATED TOOLS GRID -->
+      <div class="related-tools">
+        <h2>Related Construction Calculators</h2>
+        <ul>
+          <li><a href="../concrete-calculator/index.html">Concrete Calculator</a></li>
+          <li><a href="../brick-calculator/index.html">Brick Calculator</a></li>
+          <li><a href="../mortar-calculator/index.html">Mortar Calculator</a></li>
+          <li><a href="../rebar-calculator/index.html">Rebar Calculator</a></li>
+          <li><a href="../sand-calculator/index.html">Sand Calculator</a></li>
+          <li><a href="../gravel-calculator/index.html">Gravel Calculator</a></li>
+        </ul>
+      </div>
+
+      <!-- LEGAL DISCLAIMER -->
+      <div class="legal-disclaimer">
+        <p><strong>Disclaimer:</strong> BuildMetric calculators are provided for estimation purposes only. Always consult a qualified professional before ordering materials or starting construction work. Results may vary based on site conditions, material specifications and local building codes.</p>
+      </div>
+
+    </div>
+    <!-- END container -->
+  </section>
+  <!-- END bottom-full-width -->
+
+  <!-- ============================================================
+       BLOCK CALCULATOR JAVASCRIPT
+       ============================================================ -->
+  <script>
+  /* =========================================================
+     BLOCK CALCULATOR — Tool Logic
+     Units: imperial (ft, in, lb) and metric (m, mm, kg)
+     ========================================================= */
+
+  /* ---------- 1. UNIT LABEL UPDATER ---------- */
+  function updateBlockUnitLabels() {
+    var metric = isMetric();
+    var lUnit = document.getElementById('length-unit');
+    var hUnit = document.getElementById('height-unit');
+    if (lUnit) lUnit.textContent = metric ? 'm' : 'ft';
+    if (hUnit) hUnit.textContent = metric ? 'm' : 'ft';
+  }
+
+  /* ---------- 2. BLOCK DIMENSIONS (in mm) ---------- */
+  function getBlockDimensions(blockType) {
+    // Returns { length, width, height } in millimetres (actual dimensions)
+    var blocks = {
+      'us-standard': { length: 406, width: 194, height: 194 },  // 16 x 7.625 x 7.625 in
+      'us-modular':  { length: 406, width: 194, height: 194 },
+      'uk-standard': { length: 440, width: 215, height: 215 },
+      'in-standard': { length: 400, width: 200, height: 200 },
+      'au-standard': { length: 390, width: 190, height: 190 }
+    };
+    return blocks[blockType] || blocks['us-standard'];
+  }
+
+  /* ---------- 3. MAIN CALCULATION ---------- */
+  function calculateBlock() {
+    var metric = isMetric();
+
+    var wallLength = posNum('length');
+    var wallHeight = posNum('height');
+    var blockType = document.getElementById('block-size').value || 'us-standard';
+    var wallThickness = parseInt(document.getElementById('wall-thickness').value) || 1;
+    var doors = parseInt(document.getElementById('doors').value) || 0;
+    var windows = parseInt(document.getElementById('windows').value) || 0;
+    var mixRatio = parseInt(document.getElementById('mortar-mix').value) || 4;
+    var wastePct = parseInt(document.getElementById('waste').value) || 5;
+
+    if (wallLength === null || wallHeight === null) {
+      showError('Please enter valid positive numbers for wall length and height.');
+      return;
+    }
+
+    // Convert wall dimensions to metres
+    var lengthM, heightM;
+    if (metric) {
+      lengthM = wallLength;
+      heightM = wallHeight;
+    } else {
+      lengthM = wallLength * 0.3048;
+      heightM = wallHeight * 0.3048;
+    }
+
+    // Wall area in square metres
+    var wallAreaM2 = lengthM * heightM;
+
+    // Subtract doors (1.8 m² each) and windows (1.5 m² each)
+    var doorAreaM2 = doors * 1.8;
+    var windowAreaM2 = windows * 1.5;
+    var netAreaM2 = wallAreaM2 - doorAreaM2 - windowAreaM2;
+    if (netAreaM2 < 0) netAreaM2 = 0;
+
+    // Get block dimensions (in mm)
+    var block = getBlockDimensions(blockType);
+
+    // Add mortar joint (10 mm standard)
+    var joint = 10;
+    var blockWithJointL = (block.length + joint) / 1000; // metres
+    var blockWithJointH = (block.height + joint) / 1000; // metres
+
+    // Blocks per square metre (single skin)
+    var blocksPerM2 = 1 / (blockWithJointL * blockWithJointH);
+
+    // Total blocks (single skin × wall thickness)
+    var blocksNeeded = netAreaM2 * blocksPerM2 * wallThickness;
+
+    // Apply waste
+    var wasteBlocks = Math.ceil(blocksNeeded * (wastePct / 100));
+    var totalBlocks = Math.ceil(blocksNeeded) + wasteBlocks;
+
+    // Mortar volume (0.01 m³ per block)
+    var mortarVolumeM3 = totalBlocks * 0.01;
+
+    // Cement and sand
+    var cementVolumeM3 = mortarVolumeM3 / (1 + mixRatio);
+    var cementKg = cementVolumeM3 * 1440;
+    var sandVolumeM3 = cementVolumeM3 * mixRatio;
+    var sandKg = sandVolumeM3 * 1600;
+
+    // Cement bags
+    var bags50kg = Math.ceil(cementKg / 50);
+    var bags94lb = Math.ceil(cementKg * 2.20462 / 94);
+
+    // Imperial equivalents
+    var wallAreaSqFt = wallAreaM2 * 10.7639;
+    var netAreaSqFt = netAreaM2 * 10.7639;
+    var mortarVolumeFt3 = mortarVolumeM3 * 35.3147;
+    var cementLb = cementKg * 2.20462;
+    var sandLb = sandKg * 2.20462;
+    var sandTonsUS = sandLb / 2000;
+    var sandTonnes = sandKg / 1000;
+
+    // Build result HTML
+    var html = '';
+    html += '<h3>Blocks &amp; Materials Needed</h3>';
+
+    html += '<span class="result-primary">' + totalBlocks.toLocaleString('en-US') + ' blocks</span>';
+    if (metric) {
+      html += '<span class="result-secondary">' + fmt(netAreaM2, 2) + ' m² net wall area</span>';
+    } else {
+      html += '<span class="result-secondary">' + fmt(netAreaSqFt, 2) + ' sq ft net wall area</span>';
+    }
+
+    html += '<div style="margin-top:14px;">';
+    if (metric) {
+      html += buildResultLine('Wall area (gross)', fmt(wallAreaM2, 2) + ' m²');
+      html += buildResultLine('Net wall area (minus openings)', fmt(netAreaM2, 2) + ' m²');
+      html += buildResultLine('Blocks per m² (single skin)', fmt(blocksPerM2, 1) + ' blocks');
+      html += buildResultLine('Wall thickness', wallThickness + ' block' + (wallThickness > 1 ? 's' : ''));
+      html += buildResultLine('Blocks (no waste)', Math.ceil(blocksNeeded).toLocaleString('en-US'));
+      html += buildResultLine('Waste (' + wastePct + '%)', wasteBlocks.toLocaleString('en-US') + ' blocks');
+      html += buildResultLine('Total blocks to order', totalBlocks.toLocaleString('en-US'));
+    } else {
+      html += buildResultLine('Wall area (gross)', fmt(wallAreaSqFt, 2) + ' sq ft');
+      html += buildResultLine('Net wall area (minus openings)', fmt(netAreaSqFt, 2) + ' sq ft');
+      html += buildResultLine('Blocks per sq ft (single skin)', fmt(blocksPerM2 / 10.7639, 2) + ' blocks');
+      html += buildResultLine('Wall thickness', wallThickness + ' block' + (wallThickness > 1 ? 's' : ''));
+      html += buildResultLine('Blocks (no waste)', Math.ceil(blocksNeeded).toLocaleString('en-US'));
+      html += buildResultLine('Waste (' + wastePct + '%)', wasteBlocks.toLocaleString('en-US') + ' blocks');
+      html += buildResultLine('Total blocks to order', totalBlocks.toLocaleString('en-US'));
+    }
+    html += '</div>';
+
+    // Materials breakdown
+    html += '<div style="margin-top:16px;">';
+    html += '<h3 style="font-size:0.98rem;margin-bottom:10px;">Mortar, Cement &amp; Sand</h3>';
+    if (metric) {
+      html += buildResultLine('Mortar volume', fmt(mortarVolumeM3, 3) + ' m³');
+      html += buildResultLine('Cement required', fmt(cementKg, 1) + ' kg');
+      html += buildResultLine('Cement bags (50 kg)', bags50kg + ' bags');
+      html += buildResultLine('Sand required', fmt(sandKg, 1) + ' kg (≈ ' + fmt(sandTonnes, 2) + ' tonnes)');
+    } else {
+      html += buildResultLine('Mortar volume', fmt(mortarVolumeFt3, 2) + ' cu ft');
+      html += buildResultLine('Cement required', fmt(cementLb, 1) + ' lb');
+      html += buildResultLine('Cement bags (94 lb)', bags94lb + ' bags');
+      html += buildResultLine('Sand required', fmt(sandLb, 1) + ' lb (≈ ' + fmt(sandTonsUS, 2) + ' US tons)');
+    }
+    html += '</div>';
+
+    var blockTypeLabel = {
+      'us-standard': 'US Standard',
+      'us-modular': 'US Modular',
+      'uk-standard': 'UK Standard',
+      'in-standard': 'India Standard',
+      'au-standard': 'Australia Standard'
+    }[blockType] || blockType;
+
+    html += '<p class="result-note">Based on ' + blockTypeLabel + ' blocks with 10 mm mortar joints and a 1:' + mixRatio + ' cement-to-sand mix. Includes ' + wastePct + '% waste. Always order 1 full pallet extra for future repairs and colour matching.</p>';
+
+    showResult(html);
+  }
+
+  /* ---------- 4. RESET ---------- */
+  function resetBlock() {
+    resetForm('block-form');
+    updateBlockUnitLabels();
+  }
+
+  /* ---------- 5. UNIT CHANGE HOOK ---------- */
+  if (typeof onUnitChange === 'function') {
+    onUnitChange(function () {
+      updateBlockUnitLabels();
+      var resultBox = document.getElementById('result');
+      if (resultBox && resultBox.classList.contains('show')) {
+        calculateBlock();
+      }
+    });
+  }
+
+  /* ---------- 6. INIT ON LOAD ---------- */
+  document.addEventListener('DOMContentLoaded', function () {
+    updateBlockUnitLabels();
+  });
+  </script>
+
+</main>
+
+<!-- ============================================================
+     SITE FOOTER — 4 Columns
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div>
+        <h4>BuildMetric</h4>
+        <p>Precise calculators for builders, contractors and DIYers worldwide. 200+ free tools covering every major construction and DIY calculation. Built for accuracy, transparency and global use.</p>
+      </div>
+
+      <div>
+        <h4>Popular Tools</h4>
+        <ul>
+          <li><a href="../concrete-calculator/index.html">Concrete Calculator</a></li>
+          <li><a href="../brick-calculator/index.html">Brick Calculator</a></li>
+          <li><a href="../block-calculator/index.html">Block Calculator</a></li>
+          <li><a href="../mortar-calculator/index.html">Mortar Calculator</a></li>
+          <li><a href="../rebar-calculator/index.html">Rebar Calculator</a></li>
+          <li><a href="../sand-calculator/index.html">Sand Calculator</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Information</h4>
+        <ul>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="../terms-of-service.html">Terms of Service</a></li>
+          <li><a href="../disclaimer.html">Disclaimer</a></li>
+        </ul>
+
+        <h4 style="margin-top:20px;">Follow Us</h4>
+        <ul>
+          <li><a href="https://youtube.com/@buildmetrictools" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://www.facebook.com/BuildMetric" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="../index.html#cat-concrete-masonry">Concrete &amp; Masonry</a></li>
+          <li><a href="../index.html#cat-interior">Interior &amp; Finishing</a></li>
+          <li><a href="../index.html#cat-exterior">Exterior &amp; Structure</a></li>
+          <li><a href="../index.html#cat-landscaping">Landscaping &amp; Outdoor</a></li>
+          <li><a href="../index.html#cat-lumber-framing">Lumber &amp; Framing</a></li>
+          <li><a href="../index.html#cat-energy">Energy &amp; Efficiency</a></li>
+          <li><a href="../index.html#cat-plumbing-electrical">Plumbing &amp; Electrical</a></li>
+          <li><a href="../index.html#cat-unit-converters">Unit Converters</a></li>
+          <li><a href="../index.html#cat-roofing">Roofing &amp; Waterproofing</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="yr"></span> BuildMetric. All rights reserved. Made for builders worldwide.</p>
+      <p style="margin-top:6px;font-size:0.78rem;">
+        BuildMetric calculators are provided for estimation purposes only. Always consult a qualified professional before ordering materials or starting construction work. Results may vary based on site conditions, material specifications and local building codes.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>
