@@ -2463,10 +2463,24 @@ textarea:focus-visible {
   }
 }
 
-/* Mobile pe half-page ad chhota karo */
+/* =========================================================
+   MOBILE HALF-PAGE AD FIX — Force 300x250
+   ========================================================= */
 @media (max-width: 768px) {
   .ad-slot-halfpage {
-    min-height: 250px;
-    max-height: 250px;
+    min-height: 250px !important;
+    max-height: 250px !important;
+    height: 250px !important;
+    padding: 10px !important;
+    overflow: hidden !important;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+  .ad-slot-halfpage {
+    min-height: 200px !important;
+    max-height: 200px !important;
+    height: 200px !important;
   }
 }
