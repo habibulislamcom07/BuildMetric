@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- ═══════════════════════════════════════════════════════
+       SEO META
+       ═══════════════════════════════════════════════════════ -->
+  <title>Cement Calculator — Free Online Cement Bag &amp; Quantity Estimator | BuildMetric</title>
+  <meta name="description" content="Free cement calculator for concrete slabs, columns, footings, plaster and mortar. Estimate cement bags, mass (kg) and volume in seconds with mix ratios M5–M30. Works in metric and imperial units.">
+  <meta name="keywords" content="cement calculator, cement bag calculator, cement quantity calculator, concrete cement calculator, plaster cement calculator, mortar cement calculator, cement estimator, how much cement do I need, cement bags for slab, M20 cement calculator">
+  <meta name="author" content="BuildMetric Editorial Team">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0f766e">
+
+  <!-- ═══════════════════════════════════════════════════════
+       CANONICAL — COMMENTED (Uncomment after domain is live)
+       ═══════════════════════════════════════════════════════ -->
+  <!-- <link rel="canonical" href="https://buildmetric.org/cement-calculator/"> -->
+
+  <!-- ═══════════════════════════════════════════════════════
+       OPEN GRAPH — COMMENTED (Uncomment after domain is live)
+       ═══════════════════════════════════════════════════════ -->
+  <!--
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cement Calculator — Free Online Cement Bag &amp; Quantity Estimator">
+  <meta property="og:description" content="Estimate cement bags, mass and volume for slabs, columns, plaster and mortar. Metric and imperial supported.">
+  <meta property="og:url" content="https://buildmetric.org/cement-calculator/">
+  <meta property="og:site_name" content="BuildMetric">
+  <meta property="og:image" content="https://buildmetric.org/assets/img/cement-calculator-og.jpg">
+  <meta property="og:locale" content="en_US">
+  -->
+
+  <!-- ═══════════════════════════════════════════════════════
+       TWITTER CARD — COMMENTED
+       ═══════════════════════════════════════════════════════ -->
+  <!--
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cement Calculator — Free Online Cement Bag &amp; Quantity Estimator">
+  <meta name="twitter:description" content="Estimate cement bags, mass and volume for slabs, columns, plaster and mortar.">
+  <meta name="twitter:image" content="https://buildmetric.org/assets/img/cement-calculator-og.jpg">
+  -->
+
+  <!-- ═══════════════════════════════════════════════════════
+       FAVICON
+       ═══════════════════════════════════════════════════════ -->
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+
+  <!-- ═══════════════════════════════════════════════════════
+       STYLESHEET (RELATIVE PATH)
+       ═══════════════════════════════════════════════════════ -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- ═══════════════════════════════════════════════════════
+       SCHEMA.ORG — WebApplication
+       ═══════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Cement Calculator",
+    "url": "https://buildmetric.org/cement-calculator/",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript",
+    "description": "Free online cement calculator to estimate cement bags, mass and volume for concrete slabs, columns, footings, plaster and mortar. Supports M5 to M30 mix ratios in metric and imperial units.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "BuildMetric",
+      "url": "https://buildmetric.org"
+    }
+  }
+  </script>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SCHEMA.ORG — FAQPage (populated in Phase 4)
+       ═══════════════════════════════════════════════════════ -->
+  <!-- FAQPage schema will be inserted in Phase 4 -->
+   <!-- ═══════════════════════════════════════════════════════
+     SCHEMA.ORG — FAQPage
+     ═══════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many 50 kg bags of cement are in 1 cubic metre of concrete?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For M20 (1:1.5:3), approximately 8 bags per m³. For M25 (1:1:2), about 11 bags. For M15 (1:2:4), about 6.4 bags. Always match the mix ratio on your drawing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the dry-volume factor and why is it 1.54 for concrete?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The dry-volume factor corrects for the volume shrinkage that occurs when dry cement, sand and aggregate are mixed with water. For concrete it is 1.54; for mortar and plaster it is 1.33. Skipping the factor under-counts cement by roughly 35%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much cement do I need for 1000 bricks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a 1:6 mortar joint, roughly 2.5 to 3 bags of 50 kg cement per 1,000 standard bricks. For a 1:4 mortar, roughly 4 bags."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is M20 or M25 better for a residential slab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "M20 is sufficient for most residential slabs. M25 is used for longer spans (over 4.5 m), heavier live loads, or when specified for seismic or wind loading. M25 uses about 35% more cement than M20."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a 50 kg bag of cement weigh in pounds?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Approximately 110.2 pounds. Bag weights vary globally: 94 lb in the US, 25 kg in the UK/EU, 20 or 40 kg in Australia, 50 kg in India and the Middle East."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use the same cement for concrete and plaster?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, OPC is suitable for both, but the mix ratio and sand type differ. PPC or PSC is often better for external plaster in hot climates. White cement is decorative only; masonry cement is not for structural concrete."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long can I store cement before it becomes unusable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fresh cement retains full strength for about 3 months in dry, airtight storage. Strength drops 10–20% after 3 months, 20–30% after 6 months, 30–40% after 12 months. Never use lumpy cement for structural work."
+      }
+    }
+  ]
+}
+</script>
+  <!-- ═══════════════════════════════════════════════════════
+       GOOGLE ADSENSE — COMMENTED (Uncomment after approval)
+       ═══════════════════════════════════════════════════════ -->
+  <!--
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1428550393209506"
+          crossorigin="anonymous"></script>
+  -->
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HEADER
+       ═══════════════════════════════════════════════════════ -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="../index.html" class="logo" aria-label="BuildMetric Home">
+        <span class="logo-mark">BM</span>
+        <span class="logo-text">BuildMetric</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#categories">Categories</a></li>
+          <li><a href="../index.html#tools">All Tools</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════
+       AD SLOT 1 — HEADER BANNER (COMMENTED)
+       ═══════════════════════════════════════════════════════ -->
+  <div class="ad-slot ad-slot-header" aria-hidden="true">
+    <!--
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1428550393209506"
+         data-ad-slot="0000000000"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       BREADCRUMB
+       ═══════════════════════════════════════════════════════ -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#categories">Concrete &amp; Masonry</a></li>
+        <li aria-current="page">Cement Calculator</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════
+       TOOL MAIN GRID START
+       ═══════════════════════════════════════════════════════ -->
+  <main class="tool-main">
+    <div class="container tool-grid">
+
+      <!-- ═══════════════════════════════════════════════════
+           PRIMARY CONTENT START
+           ═══════════════════════════════════════════════════ -->
+      <div class="tool-primary">
+
+        <!-- ═══════════════════════════════════════════════
+             TITLE BLOCK
+             ═══════════════════════════════════════════════ -->
+        <section class="tool-title-block">
+          <h1>Cement Calculator</h1>
+          <p class="tool-subtitle">
+            Estimate the exact number of cement bags, total cement mass (kg or lb), and
+            required cement volume for concrete slabs, columns, footings, plaster and
+            mortar — using standard M5–M30 mix ratios in metric or imperial units.
+          </p>
+
+          <!-- Unit Toggle -->
+          <div class="unit-toggle" role="group" aria-label="Unit system">
+            <button type="button" class="unit-btn active" data-unit="metric">Metric (m, kg)</button>
+            <button type="button" class="unit-btn" data-unit="imperial">Imperial (ft, lb)</button>
+          </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════
+             CALC WRAP — FORM + RESULT
+             ═══════════════════════════════════════════════ -->
+        <section class="calc-wrap">
+
+          <!-- ─────────── FORM ─────────── -->
+          <div class="calc-form">
+
+            <!-- Calculation Method -->
+            <div class="form-group">
+              <label for="calc-method">Calculation Method</label>
+              <select id="calc-method" aria-describedby="calc-method-help">
+                <option value="volume" selected>Volume — Slab, Column, Footing</option>
+                <option value="area">Area — Plaster, Screed</option>
+                <option value="direct">Direct Volume Input</option>
+              </select>
+              <small id="calc-method-help" class="form-help">
+                Choose the input style that matches your job.
+              </small>
+            </div>
+
+            <!-- ─────────── VOLUME INPUTS ─────────── -->
+            <div class="form-row" data-method="volume">
+              <div class="form-group">
+                <label for="length">Length</label>
+                <input type="number" id="length" min="0" step="0.01" placeholder="e.g. 3.0" inputmode="decimal">
+                <small class="unit-label" data-unit-metric="metres (m)" data-unit-imperial="feet (ft)">metres (m)</small>
+              </div>
+
+              <div class="form-group">
+                <label for="width">Width</label>
+                <input type="number" id="width" min="0" step="0.01" placeholder="e.g. 4.0" inputmode="decimal">
+                <small class="unit-label" data-unit-metric="metres (m)" data-unit-imperial="feet (ft)">metres (m)</small>
+              </div>
+
+              <div class="form-group">
+                <label for="depth">Depth / Thickness</label>
+                <input type="number" id="depth" min="0" step="0.001" placeholder="e.g. 0.10" inputmode="decimal">
+                <small class="unit-label" data-unit-metric="metres (m)" data-unit-imperial="feet (ft)">metres (m)</small>
+              </div>
+            </div>
+
+            <!-- ─────────── AREA INPUTS ─────────── -->
+            <div class="form-row" data-method="area" style="display:none;">
+              <div class="form-group">
+                <label for="area">Area</label>
+                <input type="number" id="area" min="0" step="0.01" placeholder="e.g. 20.0" inputmode="decimal">
+                <small class="unit-label" data-unit-metric="square metres (m²)" data-unit-imperial="square feet (ft²)">square metres (m²)</small>
+              </div>
+
+              <div class="form-group">
+                <label for="thickness">Plaster / Screed Thickness</label>
+                <input type="number" id="thickness" min="0" step="0.1" placeholder="e.g. 12" inputmode="decimal">
+                <small class="unit-label">millimetres (mm)</small>
+              </div>
+            </div>
+
+            <!-- ─────────── DIRECT VOLUME INPUT ─────────── -->
+            <div class="form-row" data-method="direct" style="display:none;">
+              <div class="form-group">
+                <label for="volume-direct">Total Wet Volume</label>
+                <input type="number" id="volume-direct" min="0" step="0.001" placeholder="e.g. 1.20" inputmode="decimal">
+                <small class="unit-label" data-unit-metric="cubic metres (m³)" data-unit-imperial="cubic feet (ft³)">cubic metres (m³)</small>
+              </div>
+            </div>
+
+            <!-- ─────────── HYBRID: MIX RATIO ─────────── -->
+            <div class="form-group">
+              <label for="mix-ratio">Mix Ratio (Cement : Sand : Aggregate)</label>
+              <select id="mix-ratio" data-hybrid="true" data-target="mix-ratio-custom" aria-describedby="mix-ratio-help">
+                <option value="3">1 : 2 — Rich Mortar</option>
+                <option value="4">1 : 3 — Mortar</option>
+                <option value="5">1 : 4 — Mortar</option>
+                <option value="5.5" selected>M20 — 1 : 1.5 : 3 (General Purpose)</option>
+                <option value="6">1 : 5 — Mortar</option>
+                <option value="7">1 : 6 — Plaster</option>
+                <option value="4.5">M25 — 1 : 1 : 2 (Structural)</option>
+                <option value="3.5">M30 — 1 : 1 : 1.5 (High Strength)</option>
+                <option value="8">1 : 7 — Lean Mortar</option>
+                <option value="custom">Custom (Type Number/Value)</option>
+              </select>
+              <input type="number" id="mix-ratio-custom" class="hybrid-input" min="0" step="0.1"
+                     placeholder="Enter total mix parts (e.g. 5.5)" style="display:none; margin-top:8px;">
+              <small id="mix-ratio-help" class="form-help">
+                For custom ratios, enter the <strong>total number of parts</strong> (cement + sand + aggregate).
+              </small>
+            </div>
+
+            <!-- ─────────── HYBRID: WASTE FACTOR ─────────── -->
+            <div class="form-group">
+              <label for="waste-factor">Waste / Spillage Allowance</label>
+              <select id="waste-factor" data-hybrid="true" data-target="waste-factor-custom">
+                <option value="0">0% — Precision estimate</option>
+                <option value="5" selected>5% — Standard concrete</option>
+                <option value="7">7% — Columns &amp; footings</option>
+                <option value="10">10% — Plaster &amp; screed</option>
+                <option value="15">15% — Difficult access</option>
+                <option value="custom">Custom (Type Number/Value)</option>
+              </select>
+              <input type="number" id="waste-factor-custom" class="hybrid-input" min="0" step="0.5"
+                     placeholder="Enter waste % (e.g. 8)" style="display:none; margin-top:8px;">
+            </div>
+
+            <!-- ─────────── HYBRID: BAG WEIGHT ─────────── -->
+            <div class="form-group">
+              <label for="bag-weight">Cement Bag Weight</label>
+              <select id="bag-weight" data-hybrid="true" data-target="bag-weight-custom">
+                <option value="50" selected>50 kg — India, Middle East</option>
+                <option value="42.6">94 lb / 42.6 kg — US</option>
+                <option value="25">25 kg — UK, EU</option>
+                <option value="40">40 kg — Australia, Canada</option>
+                <option value="20">20 kg — Australia small bag</option>
+                <option value="custom">Custom (Type Number/Value)</option>
+              </select>
+              <input type="number" id="bag-weight-custom" class="hybrid-input" min="0" step="0.1"
+                     placeholder="Enter bag weight in kg (e.g. 50)" style="display:none; margin-top:8px;">
+              <small class="form-help">Always in kilograms, even in imperial mode.</small>
+            </div>
+
+            <!-- ─────────── ACTION BUTTONS (Phase 2 will style) ─────────── -->
+            <div class="calc-actions">
+              <button type="button" class="btn-primary" onclick="calculateCement()">
+                Calculate Cement
+              </button>
+              <button type="button" class="btn-secondary" onclick="resetCementForm()">
+                Reset
+              </button>
+            </div>
+
+          </div>
+          <!-- ─────────── FORM END ─────────── -->
+
+          <!-- ─────────── RESULT BOX ─────────── -->
+          <div class="calc-result" id="result-box" aria-live="polite">
+            <h2 class="result-title">Your Cement Estimate</h2>
+            <div id="result-output" class="result-output">
+              <p class="result-placeholder">
+                Enter your dimensions above and press <strong>Calculate Cement</strong> to see the results here.
+              </p>
+            </div>
+          </div>
+          <!-- ─────────── RESULT BOX END ─────────── -->
+
+        </section>
+        <!-- ═══════════════════════════════════════════════
+             CALC WRAP END
+             ═══════════════════════════════════════════════ -->
+
+        <!-- ═══════════════════════════════════════════════
+             PHASE 2 CONTINUES HERE
+             (Action Buttons → Ad Slot 2 → Content Part 1)
+             ═══════════════════════════════════════════════ -->
+
+<!-- ═══════════════════════════════════════════════════════════
+     PHASE 2 CONTENT WILL BE INSERTED HERE
+     ═══════════════════════════════════════════════════════════ -->
+
+      <!-- ═══════════════════════════════════════════════
+     TOOL ACTION BUTTONS — Print / Share
+     ═══════════════════════════════════════════════ -->
+<div class="tool-actions">
+  <button type="button" class="action-btn" onclick="printResult()" aria-label="Print this result">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="6 9 6 2 18 2 18 9"></polyline>
+      <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+      <rect x="6" y="14" width="12" height="8"></rect>
+    </svg>
+    <span>Print Result</span>
+  </button>
+
+  <button type="button" class="action-btn" onclick="shareCalculator()" aria-label="Share this calculator">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="18" cy="5" r="3"></circle>
+      <circle cx="6" cy="12" r="3"></circle>
+      <circle cx="18" cy="19" r="3"></circle>
+      <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+      <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+    </svg>
+    <span>Share</span>
+  </button>
+</div>
+<!-- ═══════════════════════════════════════════════
+     TOOL ACTION BUTTONS END
+     ═══════════════════════════════════════════════ -->
+
+
+<!-- ═══════════════════════════════════════════════
+     AD SLOT 2 — IN-CONTENT (COMMENTED)
+     ═══════════════════════════════════════════════ -->
+<div class="ad-slot ad-slot-incontent" aria-hidden="true">
+  <!--
+  <ins class="adsbygoogle"
+       style="display:block; text-align:center;"
+       data-ad-layout="in-article"
+       data-ad-format="fluid"
+       data-ad-client="ca-pub-1428550393209506"
+       data-ad-slot="0000000000"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  -->
+</div>
+
+
+<!-- ═══════════════════════════════════════════════
+     CONTENT PART 1
+     What is Cement Calculator + How to Use + Formula Used
+     ═══════════════════════════════════════════════ -->
+
+<!-- ─────────── WHAT IS CEMENT CALCULATOR ─────────── -->
+<section class="content-section" id="what-is-cement-calculator">
+  <h2>What Is a Cement Calculator?</h2>
+
+  <p>
+    A <strong>cement calculator</strong> is a quantity-estimation tool that tells you
+    exactly how much cement you need to buy for a given concrete, mortar, or plaster
+    job — expressed in kilograms, pounds, cubic metres, or standard bags. Instead of
+    guessing at the builder's merchant or ordering a pallet "just in case," you enter
+    a few dimensions and the calculator returns a number you can order against with
+    confidence.
+  </p>
+
+  <p>
+    Cement is the single most expensive dry ingredient in any concrete or mortar mix.
+    On a typical residential slab, cement accounts for roughly 60–70% of the material
+    cost of the mix. Over-order by 20% and you have tied up real money in bags that
+    will start to lump within weeks. Under-order by even 5% and you risk a cold joint
+    in the middle of a pour, which is a structural defect that can cost ten times more
+    to fix than the extra cement would have cost to buy.
+  </p>
+
+  <p>
+    The BuildMetric Cement Calculator handles the three most common estimation methods
+    used on real jobsites:
+  </p>
+
+  <ul>
+    <li>
+      <strong>Volume method</strong> — for slabs, footings, columns, beams and any
+      rectangular pour. You provide length × width × depth and the calculator
+      multiplies them into a wet concrete volume.
+    </li>
+    <li>
+      <strong>Area method</strong> — for plaster, screed and render. You provide the
+      wall or floor area and the finish thickness, and the calculator converts that
+      into wet mortar volume.
+    </li>
+    <li>
+      <strong>Direct volume method</strong> — when you already know the total wet
+      volume from a drawing or bill of quantities, you skip the geometry and enter the
+      volume directly.
+    </li>
+  </ul>
+
+  <p>
+    From there, the calculator applies the standard dry-volume expansion factor
+    (1.54 for concrete, 1.33 for mortar), divides by the total number of mix parts in
+    your chosen ratio, converts volume to mass using the accepted cement density of
+    1,440 kg/m³, adds your waste allowance, and finally converts the mass into bags
+    using the bag weight you select. Every step is transparent — there is no hidden
+    fudge factor and no "call it roughly ten bags."
+  </p>
+
+  <p>
+    The tool supports both metric (metres, kilograms) and imperial (feet, pounds)
+    input. Because cement bag weights vary significantly across the world — 50 kg in
+    India and the Middle East, 42.6 kg (94 lb) in the United States, 25 kg in the
+    United Kingdom and the European Union, and 20–40 kg in Australia and Canada — the
+    bag-weight dropdown lets you match the calculator to whatever is on the shelf at
+    your local merchant.
+  </p>
+
+  <div class="callout">
+    <p>
+      <strong>Who is this for?</strong> Homeowners pouring a shed slab, DIYers
+      building a garden path, small general contractors bidding on residential work,
+      concrete subcontractors cross-checking batch-plant tickets, plastering crews
+      estimating mortar, landscape contractors laying pathways and retaining walls,
+      agricultural builders working in remote locations, and students learning mix
+      design. If you work with cement in any capacity, this tool saves time and money.
+    </p>
+  </div>
+</section>
+
+
+<!-- ─────────── HOW TO USE ─────────── -->
+<section class="content-section" id="how-to-use">
+  <h2>How to Use the Cement Calculator</h2>
+
+  <p>
+    The calculator has been designed to follow the same order of operations a quantity
+    surveyor would use by hand. If you follow the steps below, you will get an accurate
+    estimate on the first try.
+  </p>
+
+  <h3>Step 1 — Choose Your Calculation Method</h3>
+  <p>
+    Open the <em>Calculation Method</em> dropdown at the top of the form. Pick
+    <strong>Volume</strong> if you are pouring a slab, footing, column or beam and
+    you know its length, width and depth. Pick <strong>Area</strong> if you are
+    plastering a wall, rendering a facade or laying a screed. Pick <strong>Direct
+    Volume</strong> if a drawing or BOQ already gives you the wet volume in cubic
+    metres or cubic feet.
+  </p>
+
+  <h3>Step 2 — Select Your Unit System</h3>
+  <p>
+    Use the <strong>Metric / Imperial</strong> toggle just above the title block. In
+    metric mode you enter metres, square metres, millimetres and kilograms. In
+    imperial mode you enter feet, square feet, inches and pounds. The calculator
+    converts internally — you never need to do unit math yourself.
+  </p>
+
+  <h3>Step 3 — Enter Your Dimensions</h3>
+  <p>
+    Depending on the method you chose, fill in the relevant fields:
+  </p>
+  <ul>
+    <li><strong>Volume method:</strong> Length, Width, Depth (or thickness).</li>
+    <li><strong>Area method:</strong> Area, and the finish thickness in millimetres.</li>
+    <li><strong>Direct volume method:</strong> Total wet volume.</li>
+  </ul>
+  <p>
+    Use decimal values (for example <code>3.5</code> metres, not <code>3 m 50 cm</code>).
+    If a dimension is not relevant to your method, the field will be hidden
+    automatically.
+  </p>
+
+  <h3>Step 4 — Choose Your Mix Ratio</h3>
+  <p>
+    The <em>Mix Ratio</em> dropdown lists the standard ratios you will see on
+    drawings and in textbooks:
+  </p>
+  <ul>
+    <li><strong>M20 — 1 : 1.5 : 3</strong> is the default and works for most
+        residential slabs, footings and general-purpose concrete.</li>
+    <li><strong>M25 — 1 : 1 : 2</strong> is used for structural columns and beams
+        where higher strength is required.</li>
+    <li><strong>1 : 6</strong> and <strong>1 : 4</strong> are mortar ratios used for
+        plaster and brickwork respectively.</li>
+  </ul>
+  <p>
+    If your drawing specifies a ratio that is not listed, pick <strong>Custom (Type
+    Number/Value)</strong> at the bottom of the dropdown and enter the
+    <strong>total number of parts</strong> — for example, a 1 : 2 : 4 mix has 1 + 2
+    + 4 = 7 parts, so you would type <code>7</code>.
+  </p>
+
+  <h3>Step 5 — Set Your Waste Allowance</h3>
+  <p>
+    Real-world cement rarely lands 100% in the formwork. Spillage, over-excavation,
+    formwork deflection and mixing losses all consume material. The waste dropdown
+    offers a sensible preset for each common scenario:
+  </p>
+  <ul>
+    <li><strong>0%</strong> — precision estimate, only for tendering or academic work.</li>
+    <li><strong>5%</strong> — standard concrete pour, normal access.</li>
+    <li><strong>7%</strong> — columns, footings and other formwork-heavy pours.</li>
+    <li><strong>10%</strong> — plaster and screed, where mixed mortar is lost to
+        droppings, splash and cleanup.</li>
+    <li><strong>15%</strong> — difficult access, small batches, remote sites.</li>
+  </ul>
+  <p>
+    If your project has unusual conditions, choose <strong>Custom</strong> and enter
+    the waste percentage manually.
+  </p>
+
+  <h3>Step 6 — Confirm Your Bag Weight</h3>
+  <p>
+    The <em>Bag Weight</em> dropdown defaults to 50 kg, which is standard in India and
+    the Middle East. If you are in the US, choose <strong>94 lb / 42.6 kg</strong>.
+    In the UK or EU, choose <strong>25 kg</strong>. In Australia or Canada, choose
+    <strong>40 kg</strong> or <strong>20 kg</strong> depending on the brand.
+    Getting this wrong is the single biggest cause of bad bag counts — always confirm
+    the bag weight on the shelf.
+  </p>
+
+  <h3>Step 7 — Calculate</h3>
+  <p>
+    Press the <strong>Calculate Cement</strong> button. The result box on the right
+    will display the wet volume, dry volume, cement volume, cement mass without waste,
+    waste adjustment, and the final number of bags (rounded up to the nearest whole
+    bag). Use the <strong>Print Result</strong> button to save a copy for your
+    records, or the <strong>Share</strong> button to send the calculator link to a
+    colleague.
+  </p>
+
+  <div class="callout">
+    <p>
+      <strong>Pro tip:</strong> Run the calculation twice — once with 5% waste and
+      once with 10% — and compare. If the difference in bags is less than one bag,
+      order the lower number. If it is two bags or more, order the higher number.
+      This gives you a natural buffer without over-ordering.
+    </p>
+  </div>
+</section>
+
+
+<!-- ─────────── FORMULA USED ─────────── -->
+<section class="content-section" id="formula-used">
+  <h2>Formula Used in the Cement Calculator</h2>
+
+  <p>
+    The calculator is built on the standard cement-estimation formulas used in civil
+    engineering practice worldwide. Below is the full derivation, step by step, so
+    you can reproduce the numbers by hand and verify the output.
+  </p>
+
+  <h3>Step 1 — Wet Volume</h3>
+  <p>
+    For a rectangular volume (slab, footing, column, beam):
+  </p>
+  <div class="formula-box">
+    <p><strong>Wet Volume (m³) = Length × Width × Depth</strong></p>
+  </div>
+  <p>
+    For an area-based finish (plaster, screed, render):
+  </p>
+  <div class="formula-box">
+    <p><strong>Wet Volume (m³) = Area (m²) × Thickness (mm) ÷ 1000</strong></p>
+  </div>
+
+  <h3>Step 2 — Dry Volume</h3>
+  <p>
+    When cement, sand and aggregate are mixed with water, the dry ingredients settle
+    into the voids between each other, so the wet volume is smaller than the sum of
+    the dry parts. To work out how much dry material you actually need to buy, you
+    must <em>expand</em> the wet volume by a factor that accounts for this. The
+    accepted factors are:
+  </p>
+  <div class="formula-box">
+    <p><strong>Dry Volume (concrete) = Wet Volume × 1.54</strong></p>
+    <p><strong>Dry Volume (mortar / plaster) = Wet Volume × 1.33</strong></p>
+  </div>
+  <p>
+    The 1.54 factor is standard for concrete mixes containing coarse aggregate. The
+    1.33 factor applies to mortar mixes (cement + sand only) used in plaster,
+    screed and brickwork.
+  </p>
+
+  <h3>Step 3 — Cement Volume from Mix Ratio</h3>
+  <p>
+    A mix ratio such as 1 : 1.5 : 3 tells you the parts of cement, sand and aggregate.
+    Adding those parts gives the total number of parts in the mix:
+  </p>
+  <div class="formula-box">
+    <p><strong>Total Parts = Cement + Sand + Aggregate</strong></p>
+    <p><em>Example (M20):</em> 1 + 1.5 + 3 = 5.5 parts</p>
+  </div>
+  <p>
+    The cement fraction is the cement parts divided by the total parts. Multiplying
+    the dry volume by this fraction gives the cement volume:
+  </p>
+  <div class="formula-box">
+    <p><strong>Cement Volume (m³) = (Cement Parts ÷ Total Parts) × Dry Volume</strong></p>
+  </div>
+
+  <h3>Step 4 — Cement Mass</h3>
+  <p>
+    Cement volume is converted to mass using the standard bulk density of loose
+    Ordinary Portland Cement:
+  </p>
+  <div class="formula-box">
+    <p><strong>Cement Mass (kg) = Cement Volume (m³) × 1440</strong></p>
+  </div>
+  <p>
+    The value 1,440 kg/m³ is the accepted loose bulk density of OPC under normal
+    site conditions. Compacted cement can reach 1,500 kg/m³, but loose is the
+    correct assumption for bag-count estimation because bags are filled by volume
+    at the plant.
+  </p>
+
+  <h3>Step 5 — Waste Adjustment</h3>
+  <p>
+    Apply your chosen waste percentage to the cement mass:
+  </p>
+  <div class="formula-box">
+    <p><strong>Mass with Waste (kg) = Cement Mass × (1 + Waste % ÷ 100)</strong></p>
+  </div>
+
+  <h3>Step 6 — Number of Bags</h3>
+  <p>
+    Finally, divide by the bag weight and round up to the nearest whole bag:
+  </p>
+  <div class="formula-box">
+    <p><strong>Bags = CEILING( Mass with Waste ÷ Bag Weight )</strong></p>
+  </div>
+  <p>
+    The calculator always rounds <em>up</em> — you cannot buy a fraction of a bag,
+    and rounding down would leave you short. Even if the math says 10.02 bags, the
+    answer is 11.
+  </p>
+
+  <h3>Complete Worked Formula (M20 Slab Example)</h3>
+  <p>
+    Putting every step together for a 3 m × 4 m slab at 100 mm thick, M20 mix, 5%
+    waste, 50 kg bags:
+  </p>
+  <div class="formula-box">
+    <p>Wet Volume = 3 × 4 × 0.10 = <strong>1.20 m³</strong></p>
+    <p>Dry Volume = 1.20 × 1.54 = <strong>1.848 m³</strong></p>
+    <p>Total Parts (M20) = <strong>5.5</strong></p>
+    <p>Cement Volume = (1 ÷ 5.5) × 1.848 = <strong>0.336 m³</strong></p>
+    <p>Cement Mass = 0.336 × 1440 = <strong>483.84 kg</strong></p>
+    <p>With 5% Waste = 483.84 × 1.05 = <strong>508.03 kg</strong></p>
+    <p>Bags (50 kg) = CEILING(508.03 ÷ 50) = <strong>11 bags</strong></p>
+  </div>
+
+  <p>
+    This matches the number you will see in the calculator for those inputs. Every
+    step is deterministic — there is no rounding until the final bag count, so
+    your estimate is as accurate as the dimensions you feed in.
+  </p>
+
+  <div class="callout">
+    <p>
+      <strong>Why not just use an online "cement bags per cubic metre" table?</strong>
+      Pre-built tables are a good sanity check, but they assume a single mix ratio
+      and a single waste factor. The moment your project deviates — a richer mix,
+      heavier waste, a different bag weight — the table is wrong. The formula above
+      is always right, because it is derived from first principles.
+    </p>
+  </div>
+  </section>
+
+   <!-- ─────────── WORKED EXAMPLES ─────────── -->
+<section class="content-section" id="worked-examples">
+  <h2>Worked Examples: Cement Calculation in Real Scenarios</h2>
+
+  <p>
+    Theory is one thing — real numbers are another. Below are three fully worked
+    examples covering the most common cement estimation jobs: a concrete slab, a
+    reinforced column, and a wall plaster. Every number is traceable, so you can
+    follow the math and adapt it to your own project.
+  </p>
+
+  <h3>Example 1: Concrete Slab for a Garden Shed (Volume Method)</h3>
+  <p>
+    You are pouring a 3 m × 4 m shed slab that is 100 mm thick, using a standard
+    M20 mix (1 : 1.5 : 3) with a dry-volume factor of 1.54.
+  </p>
+  <ul>
+    <li><strong>Wet volume</strong> = 3 × 4 × 0.10 = <strong>1.20 m³</strong></li>
+    <li><strong>Dry volume</strong> = 1.20 × 1.54 = <strong>1.848 m³</strong></li>
+    <li><strong>Total mix parts</strong> = 1 + 1.5 + 3 = <strong>5.5</strong></li>
+    <li><strong>Cement volume</strong> = (1 ÷ 5.5) × 1.848 = <strong>0.336 m³</strong></li>
+    <li><strong>Cement mass</strong> = 0.336 × 1440 = <strong>483.84 kg</strong></li>
+    <li><strong>With 5% waste</strong> = 483.84 × 1.05 = <strong>508.03 kg</strong></li>
+    <li><strong>50 kg bags</strong> = CEILING(508.03 ÷ 50) = <strong>11 bags</strong></li>
+  </ul>
+  <p>
+    So for a small shed slab you need to order <strong>11 × 50 kg bags of
+    cement</strong>. Always order one extra bag — running short mid-pour is far
+    more expensive than having one spare sitting in the shed.
+  </p>
+
+  <h3>Example 2: Reinforced Concrete Column (Volume Method)</h3>
+  <p>
+    A 300 mm × 300 mm column, 3 m tall, using M25 mix (1 : 1 : 2) with a dry factor
+    of 1.54.
+  </p>
+  <ul>
+    <li><strong>Wet volume</strong> = 0.30 × 0.30 × 3.0 = <strong>0.27 m³</strong></li>
+    <li><strong>Dry volume</strong> = 0.27 × 1.54 = <strong>0.4158 m³</strong></li>
+    <li><strong>Total mix parts</strong> = 1 + 1 + 2 = <strong>4</strong></li>
+    <li><strong>Cement volume</strong> = (1 ÷ 4) × 0.4158 = <strong>0.10395 m³</strong></li>
+    <li><strong>Cement mass</strong> = 0.10395 × 1440 = <strong>≈ 149.7 kg</strong></li>
+    <li><strong>With 7% waste</strong> = 149.7 × 1.07 = <strong>≈ 160.2 kg</strong></li>
+    <li><strong>50 kg bags</strong> = CEILING(160.2 ÷ 50) = <strong>4 bags</strong></li>
+  </ul>
+  <p>
+    For 10 identical columns, scale linearly: approximately <strong>32 bags</strong>
+    (or 34 with extra buffer). Column work usually has higher wastage from spillage
+    and vibrator splash, so round up generously.
+  </p>
+
+  <h3>Example 3: Wall Plaster, 12 mm Thick (Area Method)</h3>
+  <p>
+    You are plastering a 20 m² wall, 12 mm thick, using a 1 : 6 mortar with a
+    dry-volume factor of 1.33.
+  </p>
+  <ul>
+    <li><strong>Wet volume</strong> = 20 × 0.012 = <strong>0.24 m³</strong></li>
+    <li><strong>Dry volume</strong> = 0.24 × 1.33 = <strong>0.3192 m³</strong></li>
+    <li><strong>Total parts</strong> = 1 + 6 = <strong>7</strong></li>
+    <li><strong>Cement volume</strong> = (1 ÷ 7) × 0.3192 = <strong>0.0456 m³</strong></li>
+    <li><strong>Cement mass</strong> = 0.0456 × 1440 = <strong>≈ 65.66 kg</strong></li>
+    <li><strong>With 10% waste</strong> = 65.66 × 1.10 = <strong>≈ 72.23 kg</strong></li>
+    <li><strong>50 kg bags</strong> = CEILING(72.23 ÷ 50) = <strong>2 bags</strong></li>
+  </ul>
+  <p>
+    Plaster work is messy — a 10% waste buffer is realistic, not generous. For
+    external plaster in hot climates, add another 5% for evaporation losses during
+    mixing and curing.
+  </p>
+</section>
+
+
+<!-- ─────────── NEW SECTION 1: TYPES OF CEMENT ─────────── -->
+<section class="content-section" id="types-of-cement">
+  <h2>Types of Cement and When to Use Each</h2>
+
+  <p>
+    Cement is not a single product — it is a family of hydraulic binders engineered
+    for different conditions. Choosing the wrong type can mean slow strength gain,
+    cracking, or premature failure. Here are the types you will encounter most often
+    on residential and light commercial jobs.
+  </p>
+
+  <h3>1. Ordinary Portland Cement (OPC) — Grades 33, 43, 53</h3>
+  <p>
+    The workhorse of construction. The grade number refers to the 28-day compressive
+    strength in MPa. Grade 53 is strongest and gains strength fastest; Grade 33 is
+    rarely specified for structural work today. Use OPC for general concrete,
+    columns, beams, slabs and foundations. It is available everywhere and priced
+    mid-range.
+  </p>
+
+  <h3>2. Portland Pozzolana Cement (PPC)</h3>
+  <p>
+    OPC blended with fly ash or volcanic ash. Slower early strength, but better
+    long-term durability and lower heat of hydration. Ideal for mass concrete, marine
+    structures and hot-weather pours. It is also cheaper per bag and more resistant
+    to sulphate attack, making it a popular choice in coastal regions.
+  </p>
+
+  <h3>3. Portland Slag Cement (PSC)</h3>
+  <p>
+    A blend of OPC and ground granulated blast furnace slag. Excellent for
+    foundations, sewage works and coastal projects. Low heat of hydration reduces
+    thermal cracking in thick sections such as raft foundations.
+  </p>
+
+  <h3>4. Rapid Hardening Cement (RHC)</h3>
+  <p>
+    Reaches high early strength in 24–72 hours. Used for road repairs, precast
+    elements and urgent jobs where formwork must be stripped quickly. Not suitable
+    for mass concrete due to excessive heat generation during curing.
+  </p>
+
+  <h3>5. Sulphate-Resisting Cement (SRC)</h3>
+  <p>
+    Low C₃A content. Mandatory in soils or groundwater with high sulphate content —
+    common in parts of the Middle East, Australia, and the US Southwest. Also used
+    in marine environments where chloride and sulphate attack are both a concern.
+  </p>
+
+  <h3>6. White Cement</h3>
+  <p>
+    Manufactured without iron oxide, giving a white finish. Used for architectural
+    concrete, tile grout and decorative facades. Weaker than OPC of the same grade,
+    so it must not be used for structural members.
+  </p>
+
+  <h3>7. Quick-Setting and Masonry Cements</h3>
+  <p>
+    Quick-setting cement sets in minutes and is used for patching. Masonry cement is
+    a pre-blended product for mortar only — never use it for structural concrete.
+    Both are convenience products with narrow, specific use cases.
+  </p>
+
+  <p>
+    <strong>Selection rule of thumb:</strong> OPC Grade 43 or 53 for structural
+    work, PPC for general slabs and long-life projects, SRC for aggressive soils,
+    RHC for urgent repairs, White for visible finishes.
+  </p>
+</section>
+
+
+<!-- ─────────── NEW SECTION 2: INDUSTRY STANDARDS ─────────── -->
+<section class="content-section" id="industry-standards">
+  <h2>Industry Standards and Codes for Cement</h2>
+
+  <p>
+    Cement is one of the most heavily regulated building materials on earth. Knowing
+    which standard applies helps you buy compliant product and avoid rejection on
+    site. Here are the key standards across major markets.
+  </p>
+
+  <h3>United States</h3>
+  <ul>
+    <li><strong>ASTM C150</strong> — Standard Specification for Portland Cement
+        (Types I–V).</li>
+    <li><strong>ASTM C595</strong> — Blended hydraulic cements (PPC and PSC
+        equivalents).</li>
+    <li><strong>ASTM C1157</strong> — Performance-based cement specification.</li>
+    <li><strong>ACI 318</strong> — Building Code Requirements for Structural
+        Concrete.</li>
+    <li><strong>ACI 211.1</strong> — Standard Practice for Selecting Proportions
+        for Normal, Heavyweight and Mass Concrete.</li>
+  </ul>
+
+  <h3>United Kingdom and Europe</h3>
+  <ul>
+    <li><strong>BS EN 197-1</strong> — Composition, specifications and conformity
+        criteria for common cements (CEM I–CEM V).</li>
+    <li><strong>BS 8500</strong> — Complementary British Standard to BS EN 206
+        (concrete).</li>
+    <li><strong>EN 206</strong> — Concrete specification, performance, production
+        and conformity.</li>
+    <li><strong>Eurocode 2 (EN 1992)</strong> — Design of concrete structures.</li>
+  </ul>
+
+  <h3>India</h3>
+  <ul>
+    <li><strong>IS 269</strong> — OPC Grade 33.</li>
+    <li><strong>IS 8112</strong> — OPC Grade 43.</li>
+    <li><strong>IS 12269</strong> — OPC Grade 53.</li>
+    <li><strong>IS 1489 (Part 1 &amp; 2)</strong> — PPC.</li>
+    <li><strong>IS 455</strong> — PSC.</li>
+    <li><strong>IS 456</strong> — Plain and reinforced concrete code of practice.</li>
+    <li><strong>IS 10262</strong> — Concrete mix proportioning guidelines.</li>
+  </ul>
+
+  <h3>Australia and Canada</h3>
+  <ul>
+    <li><strong>AS 3972</strong> (Australia) — General purpose and blended
+        cements.</li>
+    <li><strong>CSA A3000</strong> (Canada) — Cementitious materials compendium.</li>
+  </ul>
+
+  <h3>Middle East</h3>
+  <ul>
+    <li><strong>GSO ASTM C150</strong> — Gulf Standard adoption of ASTM.</li>
+    <li><strong>SASO</strong> (Saudi Arabia) and <strong>ESMA</strong> (UAE) —
+        local conformity schemes.</li>
+  </ul>
+
+  <p>
+    When buying cement, always check the bag for the standard reference and the
+    grade. A bag without a standard reference is not a compliant product, no matter
+    what the price tag says.
+  </p>
+</section>
+
+
+<!-- ─────────── NEW SECTION 3: COST ESTIMATION ─────────── -->
+<section class="content-section" id="cost-estimation">
+  <h2>Cement Cost Estimation: Regional Price Guide</h2>
+
+  <p>
+    Cement prices vary widely by region, grade, packaging and season. The table
+    below reflects typical retail rates for a 50 kg bag of OPC Grade 43 in early
+    2026. Bulk orders (pallet or truckload) usually save 5–15%.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Region</th>
+          <th>Typical Price (50 kg bag)</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>United States</td>
+          <td>$12 – $18 USD</td>
+          <td>Sold as 94 lb (42.6 kg) bags; price per kg is higher</td>
+        </tr>
+        <tr>
+          <td>United Kingdom</td>
+          <td>£7 – £11 GBP</td>
+          <td>25 kg bags common; price per kg slightly higher</td>
+        </tr>
+        <tr>
+          <td>Canada</td>
+          <td>CAD $14 – $20</td>
+          <td>Regional variation highest in remote provinces</td>
+        </tr>
+        <tr>
+          <td>Australia</td>
+          <td>AUD $12 – $18</td>
+          <td>20 kg and 40 kg bags standard</td>
+        </tr>
+        <tr>
+          <td>EU (average)</td>
+          <td>€7 – €12</td>
+          <td>25 kg bags; strongest price stability</td>
+        </tr>
+        <tr>
+          <td>India</td>
+          <td>₹380 – ₹520 INR</td>
+          <td>50 kg bags; heavily seasonal (monsoon discounts)</td>
+        </tr>
+        <tr>
+          <td>Middle East</td>
+          <td>AED 14 – AED 22</td>
+          <td>Bulk OPC from local plants is cheapest globally</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>How to Estimate Total Cement Cost</h3>
+  <ol>
+    <li>Calculate the number of bags needed (use the calculator above).</li>
+    <li>Add 5–10% waste depending on the application.</li>
+    <li>Multiply by the local per-bag price.</li>
+    <li>Add delivery charges if the order is below the free-delivery threshold
+        (usually 20–50 bags).</li>
+    <li>Add 3–5% for potential price movement if buying in phases over several
+        months.</li>
+  </ol>
+
+  <p>
+    <strong>Example:</strong> 11 bags for a shed slab at $15 per bag =
+    <strong>$165 USD</strong> in cement alone. For a whole house frame, cement
+    often represents 8–14% of the total concrete cost, so budget accordingly.
+  </p>
+
+  <p>
+    <strong>Cost-saving tips:</strong> buy full pallets, avoid peak-season purchases
+    (spring and early autumn), and compare local plants vs. retail chains — direct
+    plant purchases can be 10–20% cheaper for orders over 100 bags.
+  </p>
+</section>
+
+
+<!-- ─────────── NEW SECTION 4: TOOLS & EQUIPMENT ─────────── -->
+<section class="content-section" id="tools-equipment">
+  <h2>Tools and Equipment Needed for Cement Work</h2>
+
+  <p>
+    Good tools make the difference between a clean pour and a nightmare of cracks,
+    cold joints and wasted material. Here is the essential kit for any cement-based
+    job, from a small repair to a full slab.
+  </p>
+
+  <h3>Mixing and Handling</h3>
+  <ul>
+    <li><strong>Concrete mixer</strong> — 100–140 L drum for slabs and columns;
+        portable electric mixers work for small batches.</li>
+    <li><strong>Mortar hoe or mixing paddle</strong> — for hand-mixing in a
+        wheelbarrow.</li>
+    <li><strong>Wheelbarrow</strong> — heavy-duty, with pneumatic tyre for rough
+        ground.</li>
+    <li><strong>Measuring buckets</strong> — calibrated 10 L and 20 L buckets for
+        accurate ratios.</li>
+    <li><strong>Water hose with flow control</strong> — a consistent water source
+        is critical.</li>
+  </ul>
+
+  <h3>Placing and Finishing</h3>
+  <ul>
+    <li><strong>Shovels and rakes</strong> — for spreading and levelling.</li>
+    <li><strong>Bull float and magnesium float</strong> — for initial levelling.</li>
+    <li><strong>Steel trowel</strong> — for a smooth finish.</li>
+    <li><strong>Edger and groover</strong> — for clean edges and control joints.</li>
+    <li><strong>Concrete vibrator</strong> — essential for columns and thick
+        sections to avoid honeycombing.</li>
+    <li><strong>Screed board</strong> — for striking off the surface.</li>
+  </ul>
+
+  <h3>Safety Equipment (PPE)</h3>
+  <ul>
+    <li>Waterproof gloves — cement is alkaline and burns skin on prolonged
+        contact.</li>
+    <li>Safety goggles — mixing creates dust and splashes.</li>
+    <li>N95 dust mask for dry cement handling.</li>
+    <li>Rubber boots with good grip.</li>
+    <li>Knee pads if you are finishing slabs on your knees.</li>
+  </ul>
+
+  <h3>Curing and Protection</h3>
+  <ul>
+    <li><strong>Plastic sheeting</strong> or <strong>curing blankets</strong>.</li>
+    <li><strong>Sprayer</strong> for water curing in hot weather.</li>
+    <li><strong>Formwork timber</strong> and release agent.</li>
+  </ul>
+
+  <p>
+    Total kit cost for a serious DIYer is roughly $250–$500 USD if buying new;
+    hiring a mixer for a day costs $40–$80 and is often smarter for one-off jobs.
+  </p>
+</section>
+
+
+<!-- ─────────── NEW SECTION 5: MAINTENANCE & CARE ─────────── -->
+<section class="content-section" id="maintenance-care">
+  <h2>Maintenance and Care of Cement-Based Structures</h2>
+
+  <p>
+    Concrete and cement-based finishes are durable but not indestructible. A little
+    routine care can extend the life of a slab, wall or column by decades.
+  </p>
+
+  <h3>Curing: The First 7 Days Matter Most</h3>
+  <p>
+    Concrete gains roughly 70% of its design strength in the first week. Keep
+    surfaces damp and shaded for at least 7 days (14 in hot or windy weather).
+    Premature drying causes surface cracking, dusting and weak top layers.
+  </p>
+
+  <h3>Sealing</h3>
+  <p>
+    For driveways, patios and exposed slabs, apply a penetrating silane-siloxane
+    sealer every 3–5 years. Sealing reduces water ingress, salt damage and
+    freeze-thaw spalling. Interior floors can use a film-forming acrylic sealer
+    instead.
+  </p>
+
+  <h3>Joint and Crack Care</h3>
+  <ul>
+    <li>Inspect control joints annually; refill with flexible sealant if gaps
+        open.</li>
+    <li>Hairline cracks (&lt; 0.3 mm) are cosmetic — leave them.</li>
+    <li>Cracks above 0.5 mm should be injected with epoxy or polyurethane to stop
+        water ingress.</li>
+    <li>Settlement cracks wider than 3 mm indicate a structural problem — get an
+        engineer.</li>
+  </ul>
+
+  <h3>Cleaning</h3>
+  <ul>
+    <li>Sweep or blow debris regularly to prevent staining.</li>
+    <li>Use a pH-neutral cleaner for interior floors; never acid-wash coloured or
+        sealed concrete.</li>
+    <li>Remove oil stains with a poultice of diatomaceous earth and solvent.</li>
+  </ul>
+
+  <h3>Reinforcement Protection</h3>
+  <p>
+    Rebar rusts when chlorides (road salt, seawater) penetrate the cover. Maintain
+    at least 40 mm cover for external slabs and 50 mm for marine exposure. Patch
+    spalled areas immediately — rust expands up to 6× its original volume and will
+    crack more concrete.
+  </p>
+
+  <h3>Long-Term Inspection Checklist</h3>
+  <ol>
+    <li>Check for new cracks every 6 months.</li>
+    <li>Reapply sealer every 3–5 years.</li>
+    <li>Keep drainage away from foundations.</li>
+    <li>Repair spalls within 30 days.</li>
+    <li>Re-level settled slabs before they become trip hazards.</li>
+  </ol>
+
+  <p>
+    Routine maintenance of a typical residential slab costs $50–$150 per year.
+    Replacing a failed slab costs $8–$15 per square foot. The math is obvious.
+  </p>
+</section>
+
+
+<!-- ─────────── REAL-WORLD APPLICATIONS ─────────── -->
+<section class="content-section" id="real-world-applications">
+  <h2>Real-World Applications: Who Uses the Cement Calculator</h2>
+
+  <p>
+    BuildMetric's cement calculator is used daily by professionals and DIYers across
+    dozens of construction scenarios. Here are eight audience types who rely on it.
+  </p>
+
+  <h3>1. Homeowners Building Additions</h3>
+  <p>
+    Adding a sunroom, garage extension or new patio. Accurate cement estimates
+    prevent expensive mid-pour delays and reduce over-ordering waste.
+  </p>
+
+  <h3>2. DIYers Pouring Slabs and Footings</h3>
+  <p>
+    Shed bases, hot tub pads and garden walkways. A typical DIY slab is 1–3 m³ —
+    the calculator saves hours of hand-math and prevents the classic "one bag
+    short" mistake.
+  </p>
+
+  <h3>3. Small General Contractors</h3>
+  <p>
+    Bidding on multiple residential jobs per week. Quick, defensible estimates win
+    more tenders and protect margins.
+  </p>
+
+  <h3>4. Concrete Subcontractors</h3>
+  <p>
+    Estimating material for pours of 5–50 m³. Used alongside batch-plant tickets to
+    cross-check supplier quantities.
+  </p>
+
+  <h3>5. Masonry and Plastering Crews</h3>
+  <p>
+    Estimating mortar cement for brick, block and plaster work. The area method is
+    faster than the volume method for repetitive walls.
+  </p>
+
+  <h3>6. Landscape Contractors</h3>
+  <p>
+    Pathways, retaining walls, garden steps and pool decks. Cement is a small but
+    critical line item in every landscape quote.
+  </p>
+
+  <h3>7. Agricultural and Rural Builders</h3>
+  <p>
+    Barn floors, feed troughs, fence post footings and cattle grids. Often in
+    remote areas where running short is very costly.
+  </p>
+
+  <h3>8. Students and Apprentices</h3>
+  <p>
+    Learning mix design and quantity surveying. The calculator is a teaching aid
+    that shows how ratio, volume and density interact.
+  </p>
+
+  <p>
+    Whatever your role, the underlying principle is the same: get the volume right,
+    apply the ratio, convert to bags, add waste. Skip a step and the estimate
+    collapses.
+  </p>
+</section>
+
+<!-- ─────────── COMMON MISTAKES ─────────── -->
+<section class="content-section" id="common-mistakes">
+  <h2>10 Common Mistakes When Calculating Cement</h2>
+
+  <p>
+    Even experienced estimators make these errors. Each one can cost hundreds of
+    dollars or compromise structural integrity.
+  </p>
+
+  <h3>1. Forgetting the Dry-Volume Factor</h3>
+  <p>
+    Cement, sand and aggregate shrink when mixed with water. The 1.54 factor
+    (concrete) and 1.33 factor (mortar) correct for this. Skipping it under-counts
+    cement by roughly 35%.
+  </p>
+
+  <h3>2. Confusing Wet and Dry Volume</h3>
+  <p>
+    Your formwork holds wet concrete. Your mix design uses dry ingredients. Always
+    convert one to the other before applying ratios.
+  </p>
+
+  <h3>3. Using the Wrong Mix Ratio</h3>
+  <p>
+    M20 (1 : 1.5 : 3) is not the same as M25 (1 : 1 : 2). Using the wrong ratio
+    changes cement content by 20–40%. Always check the structural drawing.
+  </p>
+
+  <h3>4. Ignoring Waste</h3>
+  <p>
+    Spillage, over-excavation and formwork deflection eat material. 5% waste for
+    concrete and 10% for plaster are realistic minimums, not conservative
+    padding.
+  </p>
+
+  <h3>5. Using the Wrong Cement Density</h3>
+  <p>
+    Loose cement is around 1,440 kg/m³; compacted cement reaches 1,500 kg/m³. Using
+    the wrong density changes bag counts by 4–5%.
+  </p>
+
+  <h3>6. Mixing Units (Metric vs Imperial)</h3>
+  <p>
+    Mixing feet with metres, or pounds with kilograms, is the single biggest source
+    of 10× errors. Pick one system and stick to it throughout the calculation.
+  </p>
+
+  <h3>7. Over-Watering the Mix</h3>
+  <p>
+    Adding water to "make it flow" reduces strength by up to 30%. It also voids your
+    cement calculation — you are effectively buying more cement than you actually
+    use at the design strength.
+  </p>
+
+  <h3>8. Not Accounting for Rebar Displacement</h3>
+  <p>
+    In heavily reinforced columns, rebar displaces 2–4% of the concrete volume. For
+    most residential work it is negligible; for dense columns, subtract it from the
+    wet volume before calculating cement.
+  </p>
+
+  <h3>9. Mixing Cement Types Mid-Job</h3>
+  <p>
+    Mixing OPC with PPC or SRC creates unpredictable strength gain and colour
+    variation. If you run short, buy the same type and grade — do not substitute.
+  </p>
+
+  <h3>10. Assuming Bag Weight Is Standard</h3>
+  <p>
+    US bags are 94 lb (42.6 kg); UK bags are 25 kg; India is 50 kg; Australia is
+    20 kg or 40 kg. Always confirm the bag weight before dividing the mass into
+    bags.
+  </p>
+
+  <p>
+    <strong>Rule of thumb:</strong> if your final bag count looks "round and neat,"
+    double-check it. Real-world estimates are rarely perfectly round, because waste,
+    density and bag weight introduce fractions.
+  </p>
+</section>
+
+       <!-- ═══════════════════════════════════════════════
+           FAQ SECTION — 7 FAQs (accordion)
+           ═══════════════════════════════════════════════ -->
+      <section class="content-section faq-section" id="faqs">
+        <h2>Frequently Asked Questions</h2>
+
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-1-answer">
+            <span>How many 50 kg bags of cement are in 1 cubic metre of concrete?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-1-answer" role="region">
+            <p>
+              The answer depends entirely on the mix ratio. For the most common mix,
+              M20 (1 : 1.5 : 3), 1 m³ of wet concrete requires approximately
+              <strong>8 bags of 50 kg cement</strong>. Here is the math: 1 m³ wet × 1.54
+              dry factor = 1.54 m³ dry; total parts = 5.5; cement volume = (1 ÷ 5.5) ×
+              1.54 = 0.28 m³; cement mass = 0.28 × 1440 = 403 kg; 403 ÷ 50 = 8.06 bags.
+              For M25 (1 : 1 : 2), the number rises to about <strong>11 bags per
+              m³</strong>. For M15 (1 : 2 : 4), it drops to about <strong>6.4 bags per
+              m³</strong>. Never use a single "bags per m³" figure across all mixes —
+              always match the ratio on your drawing.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-2-answer">
+            <span>What is the dry-volume factor and why is it 1.54 for concrete?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-2-answer" role="region">
+            <p>
+              When dry cement, sand and aggregate are mixed with water, the fine
+              particles fill the voids between the coarse ones, and the total volume
+              shrinks. The dry-volume factor accounts for this shrinkage so that you
+              order enough dry material to produce the required wet volume. For concrete,
+              extensive laboratory testing has established the factor as <strong>1.54</strong>
+              (a 54% expansion of wet volume to get dry volume). For mortar and plaster
+              — which contain no coarse aggregate — the factor is lower, at
+              <strong>1.33</strong>. Using the wrong factor is the single most common
+              cause of under-ordering cement. Skipping the factor entirely under-counts
+              cement by roughly 35%.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-3-answer">
+            <span>How much cement do I need for 1000 bricks?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-3-answer" role="region">
+            <p>
+              For a standard 1 : 6 mortar joint of 10 mm thickness, laying 1,000
+              standard bricks requires roughly <strong>1.2 m³ of wet mortar</strong>,
+              which converts to about <strong>2.5 to 3 bags of 50 kg cement</strong>
+              (plus sand). This assumes standard modular bricks of approximately 190 ×
+              90 × 90 mm. Larger bricks or wider mortar joints consume more. For a 1 : 4
+              mortar ratio (used in load-bearing walls), the cement content rises to
+              roughly <strong>4 bags per 1,000 bricks</strong>. If you are using
+              hollow blocks instead of solid bricks, the mortar volume per unit drops
+              because the blocks are bigger — but the joint thickness remains the same.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-4-answer">
+            <span>Is M20 or M25 better for a residential slab?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-4-answer" role="region">
+            <p>
+              For most residential slabs, <strong>M20 is sufficient</strong> and is the
+              default choice in IS 456 and ACI 318 for light residential work. M25 is
+              specified when the slab spans are longer than about 4.5 m, when it carries
+              heavier live loads (parking, terrace garden), or when the structural
+              engineer specifies it for seismic or wind loading. M25 uses roughly 35%
+              more cement than M20 for the same volume, so the cost difference is
+              significant. Never "upgrade" the mix casually — richer mixes generate more
+              heat during curing and can crack if not properly cured. Always follow the
+              engineer's specification.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-5-answer">
+            <span>How much does a 50 kg bag of cement weigh in pounds?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-5-answer" role="region">
+            <p>
+              A 50 kg bag of cement weighs <strong>approximately 110.2 pounds</strong>.
+              However, cement bag weights are not standardised globally. The United
+              States uses <strong>94 lb (42.6 kg)</strong> bags, the UK and EU use
+              <strong>25 kg (55.1 lb)</strong> bags, Australia commonly uses
+              <strong>20 kg or 40 kg</strong> bags, and India and the Middle East use
+              <strong>50 kg (110.2 lb)</strong> bags. This is why the BuildMetric
+              calculator includes a bag-weight dropdown — always confirm the weight
+              printed on the bag before dividing the total mass. A 5% bag-weight error
+              translates directly into a 5% bag-count error, which on a large job can
+              mean dozens of extra or missing bags.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-6-answer">
+            <span>Can I use the same cement for concrete and plaster?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-6-answer" role="region">
+            <p>
+              Yes, <strong>Ordinary Portland Cement (OPC) is suitable for both</strong>
+              concrete and plaster, but the mix ratio and the type of sand differ
+              significantly. Concrete uses coarse aggregate (20 mm, 10 mm stones) plus
+              sand, while plaster uses only fine sand — no coarse aggregate. OPC Grade
+              43 is a good all-round choice for both. However, for external plaster in
+              hot or humid climates, <strong>PPC or PSC is often better</strong> because
+              it produces less heat, cures more slowly, and resists sulphate attack
+              better. White cement should never be used for concrete or structural
+              plaster — it is for decorative finishing only. Masonry cement (pre-blended
+              for bricklaying) must not be used for structural concrete either.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-7-answer">
+            <span>How long can I store cement before it becomes unusable?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-7-answer" role="region">
+            <p>
+              Freshly manufactured cement retains full strength for roughly
+              <strong>3 months</strong> when stored correctly — in a dry, airtight, off-
+              the-ground location. After 3 months, strength drops by about
+              <strong>10–20%</strong>; after 6 months, by 20–30%; after 12 months, by
+              30–40%. Cement stored in a humid climate loses strength faster — in
+              monsoon conditions, 1 month of poor storage can equal 6 months of good
+              storage. Signs of degraded cement: lumps that do not break under light
+              finger pressure, a hardened crust, or a lighter colour. If you must use
+              old cement, increase the quantity by 10–15% and only use it for non-
+              structural work like pathways or garden walls. Never use visibly lumpy
+              cement for slabs, columns or foundations.
+            </p>
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════════
+           AUTHOR BIO + SOURCES
+           ═══════════════════════════════════════════════ -->
+      <section class="author-bio">
+        <div class="author-info">
+          <div class="author-avatar" aria-hidden="true">BM</div>
+          <div class="author-text">
+            <h3>About the Author</h3>
+            <p>
+              This calculator and guide were prepared by the <strong>BuildMetric
+              Editorial Team</strong> — a group of civil engineers, quantity surveyors
+              and construction professionals who have delivered residential, commercial
+              and infrastructure projects across the US, UK, EU, India and the Middle
+              East. Every formula, factor and rule of thumb published on BuildMetric is
+              cross-checked against the relevant national standard and reviewed by a
+              practising engineer before publication.
+            </p>
+            <p class="last-updated">
+              <strong>Last Updated:</strong> January 2026
+            </p>
+          </div>
+        </div>
+
+        <div class="sources">
+          <h3>Sources and References</h3>
+          <ul>
+            <li>ASTM C150 / C595 / C1157 — Standard Specifications for Cement.</li>
+            <li>ACI 318 — Building Code Requirements for Structural Concrete.</li>
+            <li>ACI 211.1 — Standard Practice for Selecting Proportions for Concrete.</li>
+            <li>BS EN 197-1 — Composition, specifications and conformity criteria for
+                common cements.</li>
+            <li>BS 8500 / EN 206 — Concrete specification and production.</li>
+            <li>IS 456 — Plain and Reinforced Concrete Code of Practice (BIS, India).</li>
+            <li>IS 10262 — Concrete Mix Proportioning Guidelines (BIS, India).</li>
+            <li>AS 3972 — General Purpose and Blended Cements (Standards Australia).</li>
+            <li>CSA A3000 — Cementitious Materials Compendium (Canada).</li>
+            <li>PCA — Portland Cement Association, Design and Control of Concrete
+                Mixtures.</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+    <!-- ═══════════════════════════════════════════════
+         TOOL PRIMARY CLOSE
+         ═══════════════════════════════════════════════ -->
+
+
+    <!-- ═══════════════════════════════════════════════
+         STICKY SIDEBAR
+         ═══════════════════════════════════════════════ -->
+    <aside class="tool-sidebar" aria-label="Sidebar">
+
+      <!-- ─── AD SLOT 3 — 300x250 (COMMENTED) ─── -->
+      <div class="ad-slot ad-slot-sidebar-1" aria-hidden="true">
+        <!--
+        <ins class="adsbygoogle"
+             style="display:inline-block; width:300px; height:250px;"
+             data-ad-client="ca-pub-1428550393209506"
+             data-ad-slot="0000000000"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        -->
+      </div>
+
+      <!-- ─── POPULAR CALCULATORS CARD ─── -->
+      <div class="sidebar-card">
+        <h3>Popular Calculators</h3>
+        <ul class="sidebar-links">
+          <li><a href="../concrete-calculator/index.html">Concrete Calculator</a></li>
+          <li><a href="../brick-calculator/index.html">Brick Calculator</a></li>
+          <li><a href="../rebar-calculator/index.html">Rebar Calculator</a></li>
+          <li><a href="../mortar-calculator/index.html">Mortar Calculator</a></li>
+          <li><a href="../sand-calculator/index.html">Sand Calculator</a></li>
+          <li><a href="../gravel-calculator/index.html">Gravel Calculator</a></li>
+        </ul>
+      </div>
+
+      <!-- ─── AD SLOT 4 — 300x600 (COMMENTED) ─── -->
+      <div class="ad-slot ad-slot-sidebar-2" aria-hidden="true">
+        <!--
+        <ins class="adsbygoogle"
+             style="display:inline-block; width:300px; height:600px;"
+             data-ad-client="ca-pub-1428550393209506"
+             data-ad-slot="0000000000"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        -->
+      </div>
+
+      <!-- ─── TRUST BADGE CARD ─── -->
+      <div class="sidebar-card trust-card">
+        <h3>Why Trust BuildMetric?</h3>
+        <ul class="trust-list">
+          <li>
+            <span class="trust-icon" aria-hidden="true">✓</span>
+            <span>Formulas verified against ASTM, BS EN, IS and AS standards.</span>
+          </li>
+          <li>
+            <span class="trust-icon" aria-hidden="true">✓</span>
+            <span>Reviewed by practising civil engineers and quantity surveyors.</span>
+          </li>
+          <li>
+            <span class="trust-icon" aria-hidden="true">✓</span>
+            <span>100% free — no sign-up, no download, no hidden fees.</span>
+          </li>
+          <li>
+            <span class="trust-icon" aria-hidden="true">✓</span>
+            <span>Works on mobile, tablet and desktop — in metric and imperial.</span>
+          </li>
+          <li>
+            <span class="trust-icon" aria-hidden="true">✓</span>
+            <span>Updated regularly to reflect current codes and prices.</span>
+          </li>
+        </ul>
+      </div>
+
+    </aside>
+    <!-- ═══════════════════════════════════════════════
+         SIDEBAR CLOSE
+         ═══════════════════════════════════════════════ -->
+
+  </div>
+  <!-- ═══════════════════════════════════════════════
+       TOOL GRID CLOSE
+       ═══════════════════════════════════════════════ -->
+  </main>
+
+  
