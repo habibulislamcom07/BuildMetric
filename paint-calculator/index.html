@@ -45,7 +45,7 @@
 }
 </script>
 
-<!-- Structured Data — FAQPage -->
+<!-- Structured Data — FAQPage (7 questions) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -54,8 +54,10 @@
     {"@type":"Question","name":"How much paint do I need for a 10x12 room?","acceptedAnswer":{"@type":"Answer","text":"A 10x12 room with 8-foot ceilings and 2 coats typically needs about 5.5 to 6 litres (1.5 gallons) of paint, assuming one door and two windows."}},
     {"@type":"Question","name":"How many coats of paint should I apply?","acceptedAnswer":{"@type":"Answer","text":"Two coats are standard for most interior walls. Dark colours or dramatic colour changes may need three coats."}},
     {"@type":"Question","name":"How much area does 1 litre of paint cover?","acceptedAnswer":{"@type":"Answer","text":"Most interior paints cover approximately 10 to 12 square metres per litre (about 350 to 400 square feet per gallon) in a single coat."}},
+    {"@type":"Question","name":"Should I subtract doors and windows from wall area?","acceptedAnswer":{"@type":"Answer","text":"Yes. Doors and windows do not need painting, so subtracting them gives a more accurate paint estimate."}},
     {"@type":"Question","name":"Does this paint calculator work in metric units?","acceptedAnswer":{"@type":"Answer","text":"Yes. Use the unit toggle at the top of the calculator to switch between Imperial and Metric."}},
-    {"@type":"Question","name":"Should I subtract doors and windows from wall area?","acceptedAnswer":{"@type":"Answer","text":"Yes. Doors and windows do not need painting, so subtracting them gives a more accurate paint estimate."}}
+    {"@type":"Question","name":"How do I calculate paint for a ceiling?","acceptedAnswer":{"@type":"Answer","text":"Calculating paint for a ceiling uses the same formula as walls: Length x Width = Ceiling Area. For a 10x12 foot room, the ceiling is 120 sq ft. With 2 coats, that is 240 sq ft of coverage."}},
+    {"@type":"Question","name":"Should I use primer before painting?","acceptedAnswer":{"@type":"Answer","text":"Yes, primer is recommended in most situations. Use primer when painting bare drywall, covering a dark colour with a lighter colour, painting over patched surfaces, or painting over glossy surfaces."}}
   ]
 }
 </script>
@@ -86,13 +88,11 @@
     </div>
   </div>
 
-  <!-- ============================================================
-       UPPER 2-COLUMN GRID WRAPPER
-       ============================================================ -->
+  <!-- UPPER 2-COLUMN GRID -->
   <div class="container">
     <div class="tool-main-grid">
 
-      <!-- ============ LEFT PRIMARY COLUMN ============ -->
+      <!-- LEFT PRIMARY COLUMN -->
       <div class="primary-content">
 
         <!-- BREADCRUMB -->
@@ -125,6 +125,7 @@
 
           <form id="paint-form" onsubmit="return false;">
 
+            <!-- Room Dimensions -->
             <div class="form-grid">
               <div class="form-row">
                 <label for="length">Room Length</label>
@@ -151,6 +152,7 @@
               <span class="hint">Standard ceiling height: 8–9 ft (2.4–2.7 m)</span>
             </div>
 
+            <!-- Doors & Windows -->
             <div class="form-grid">
               <div class="form-row">
                 <label for="doors">Doors</label>
@@ -176,6 +178,7 @@
               </div>
             </div>
 
+            <!-- Coats & Paint Type -->
             <div class="form-grid">
               <div class="form-row">
                 <label for="coats">Number of Coats</label>
@@ -194,6 +197,24 @@
               </div>
             </div>
 
+            <!-- Ceiling & Primer -->
+            <div class="form-grid">
+              <div class="form-row">
+                <label for="include-ceiling">Include Ceiling?</label>
+                <select id="include-ceiling">
+                  <option value="no" selected>No — walls only</option>
+                  <option value="yes">Yes — include ceiling</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label for="include-primer">Include Primer?</label>
+                <select id="include-primer">
+                  <option value="no" selected>No — paint only</option>
+                  <option value="yes">Yes — include primer coat</option>
+                </select>
+              </div>
+            </div>
+
             <button type="button" class="btn-calc" onclick="calculatePaint()">Calculate Paint</button>
             <button type="button" class="btn-secondary" onclick="resetPaint()" style="margin-top:10px;width:100%;">Reset</button>
 
@@ -204,76 +225,332 @@
         </div>
         <!-- END calc-wrap -->
 
-        <!-- ACTION BUTTONS BOX -->
-        <div class="action-buttons-box">
-          <button type="button" class="action-btn" onclick="printResult()">
-            <svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-            Print / Save as PDF
+         
+<!-- ACTION BUTTONS BOX -->
+<div class="action-buttons-box">
+  <button type="button" class="action-btn" onclick="printResult()">
+    <svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+    Print / Save as PDF
+  </button>
+  <button type="button" class="action-btn action-share" onclick="shareCalculator()">
+    <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+    Share
+  </button>
+</div>
+
+<!-- AD SLOT 2 — IN-CONTENT -->
+<div class="ad-slot ad-slot-inline" aria-label="Advertisement">
+  <small>Advertisement</small>
+</div>
+
+<!-- ============================================================
+     SEO CONTENT — PART 1 (Original for Paint Calculator)
+     ============================================================ -->
+<section class="content-section">
+
+  <h2>What Is a Paint Calculator?</h2>
+  <p>A paint calculator is a tool that estimates how much paint you need to cover a given area — measured in litres, gallons or the number of paint cans required. Instead of guessing and ending up with too little paint (which means a trip back to the store and a visible mismatch in colour or finish) or too much (which means wasted money sitting in your garage), you enter your room dimensions and the calculator works out the exact quantity.</p>
+  <p>Paint quantity depends on several factors: the total surface area to be painted (walls, ceiling and trim), the number of coats you plan to apply, the coverage rate of the paint you are using, the surfaces that do not need painting (such as doors and windows), and whether you plan to apply a primer coat first. This calculator takes all of these into account so you get a reliable estimate before you buy.</p>
+  <p>Paint is one of the most impactful and cost-effective ways to transform a space. It protects surfaces, improves appearance and can dramatically change the mood of a room. Whether you are repainting a bedroom, refreshing a living room, painting an entire house exterior, or touching up a rental property between tenants, accurate paint estimation saves time, money and frustration.</p>
+  <p>Whether you are painting an apartment in New York, a Victorian terrace in London, a modern home in Sydney, or a rental unit in Toronto, this calculator gives you an accurate estimate in both imperial and metric units.</p>
+
+  <h2>How to Use This Paint Calculator</h2>
+  <p>Using this paint calculator is straightforward. Follow these seven steps:</p>
+  <ol>
+    <li><strong>Enter the room dimensions.</strong> Provide the length, width and wall height of the room in your chosen unit system. For irregularly shaped rooms, divide the space into rectangles, calculate each area separately, and add the results together.</li>
+    <li><strong>Select doors and windows.</strong> Use the dropdowns to indicate how many doors and windows are on the walls you are painting. The calculator subtracts their typical area automatically — a standard door is about 20 sq ft (1.8 m²) and a standard window is about 16 sq ft (1.5 m²).</li>
+    <li><strong>Choose the number of coats.</strong> Two coats are standard for most interior walls. Dark colours or drastic colour changes may need three coats.</li>
+    <li><strong>Select the paint type.</strong> Interior wall paint and exterior wall paint have slightly different coverage rates, so choose the correct one for your project.</li>
+    <li><strong>Include the ceiling (optional).</strong> If you are painting the ceiling as well as the walls, choose "Yes — include ceiling." The calculator adds the ceiling area to your total.</li>
+    <li><strong>Include primer (optional).</strong> If you need a primer coat (for bare drywall, drastic colour changes or stained surfaces), choose "Yes — include primer coat." The calculator adds primer to your total.</li>
+    <li><strong>Click Calculate.</strong> The result shows the total paintable area, the paint needed per coat, the total paint required, and the number of standard paint cans you should buy.</li>
+  </ol>
+  <p><strong>Pro Tip:</strong> Always buy slightly more paint than the calculator suggests. Paint colours can vary slightly between batches, so having a small reserve for touch-ups is essential. If you have leftover paint, store it in a sealed container, label it with the room and colour, and keep it for future touch-ups.</p>
+
+  <h2>Formula Used by This Calculator</h2>
+  <p>All calculations are performed internally in metric units, then converted back to your preferred unit system for display. The following formulas are used:</p>
+
+  <h3>Step 1 — Wall Area</h3>
+  <div class="formula-box">
+    <strong>Wall Area = 2 × (Length + Width) × Height</strong>
+    This gives the total wall surface area of a rectangular room, in square units.
+  </div>
+
+  <h3>Step 2 — Ceiling Area (if included)</h3>
+  <div class="formula-box">
+    <strong>Ceiling Area = Length × Width</strong>
+    Only add this if you are painting the ceiling as well as the walls.
+  </div>
+
+  <h3>Step 3 — Subtract Doors and Windows</h3>
+  <div class="formula-box">
+    <strong>Net Area = (Wall Area + Ceiling Area) − (Doors × 20) − (Windows × 16)</strong>
+    Standard door: 20 sq ft (1.8 m²). Standard window: 16 sq ft (1.5 m²).
+  </div>
+
+  <h3>Step 4 — Paint Quantity</h3>
+  <div class="formula-box">
+    <strong>Paint per Coat = Net Area ÷ Coverage Rate</strong>
+    Interior coverage: ~10 m² per litre (~350 sq ft per gallon)<br>
+    Exterior coverage: ~8 m² per litre (~300 sq ft per gallon)
+  </div>
+
+  <h3>Step 5 — Total Paint Needed</h3>
+  <div class="formula-box">
+    <strong>Total Paint = Paint per Coat × Number of Coats</strong>
+    Standard recommendation: 2 coats.
+  </div>
+
+  <h3>Step 6 — Primer (if included)</h3>
+  <div class="formula-box">
+    <strong>Primer = Paint per Coat × 1</strong>
+    One coat of primer covers the same area as one coat of paint.
+  </div>
+
+  <h3>Step 7 — Recommended Cans</h3>
+  <div class="formula-box">
+    <strong>Cans = Total Paint ÷ Can Size</strong>
+    Common can sizes: 1 L, 4 L, 5 L (metric) or 1 gallon (imperial).<br>
+    Always round up to the nearest full can.
+  </div>
+
+  <h3>Understanding the Variables</h3>
+  <ul>
+    <li><strong>Wall Area:</strong> Total wall surface area, excluding ceiling.</li>
+    <li><strong>Ceiling Area:</strong> Ceiling surface area (only if painting the ceiling).</li>
+    <li><strong>Door/Window Area:</strong> Standard deductions for openings.</li>
+    <li><strong>Coverage Rate:</strong> The area one litre or gallon of paint covers in a single coat.</li>
+    <li><strong>Number of Coats:</strong> How many times you plan to apply paint.</li>
+    <li><strong>Primer:</strong> An optional base coat applied before paint.</li>
+  </ul>
+
+  <h3>Why Round Up, Not Down?</h3>
+  <p>Paint calculations involve rounding in two places: total paint and can count. Always round <strong>up</strong>, never down. If your calculation gives 5.2 litres, buy 6 litres. If it gives 1.4 gallons, buy 1.5 gallons. Running short mid-project is far more expensive than having spare paint at the end — especially if the store's next batch has a slightly different colour.</p>
+
+  <h3>Coverage Rates Vary by Paint Type</h3>
+  <p>Not all paints cover the same area. Premium paints typically cover more area per litre than budget paints. Similarly, darker colours and high-gloss finishes may require additional coats, reducing effective coverage. Always check the manufacturer's stated coverage on the paint can. Most interior wall paints cover 10–12 m² per litre (350–400 sq ft per gallon). Exterior paints typically cover 8–10 m² per litre (300–350 sq ft per gallon) because exterior surfaces are more porous. Primers cover 10–12 m² per litre. If you are painting over a dark colour with a light one, expect to need an extra coat, which reduces the effective coverage rate.</p>
+
+   
+<h2>Worked Example</h2>
+<p>Let us work through three examples — a small bedroom, a larger living room with ceiling, and an exterior wall.</p>
+
+<h3>Example 1 — Small Bedroom (10 ft × 12 ft × 8 ft, 1 door, 2 windows, 2 coats, interior)</h3>
+<ol>
+  <li><strong>Convert to metres:</strong> 10 ft = 3.05 m, 12 ft = 3.66 m, 8 ft = 2.44 m</li>
+  <li><strong>Wall area:</strong> 2 × (3.05 + 3.66) × 2.44 = 32.74 m²</li>
+  <li><strong>Subtract door:</strong> 32.74 − 1.8 = 30.94 m²</li>
+  <li><strong>Subtract windows:</strong> 30.94 − (2 × 1.5) = 27.94 m²</li>
+  <li><strong>Paint per coat (interior):</strong> 27.94 ÷ 10 = 2.79 litres</li>
+  <li><strong>Total paint (2 coats):</strong> 2.79 × 2 = 5.59 litres</li>
+  <li><strong>Bags needed (5L cans):</strong> 1 × 5L can + 1 × 1L can</li>
+</ol>
+<p><strong>Result:</strong> You need approximately 5.6 litres of paint — or about 1.5 gallons in imperial units. Buy one 5-litre can and one 1-litre can to be safe.</p>
+
+<h3>Example 2 — Living Room with Ceiling (4 m × 5 m × 2.7 m, 1 door, 3 windows, 2 coats, interior + ceiling)</h3>
+<ol>
+  <li><strong>Wall area:</strong> 2 × (4 + 5) × 2.7 = 48.6 m²</li>
+  <li><strong>Ceiling area:</strong> 4 × 5 = 20 m²</li>
+  <li><strong>Subtract door:</strong> 48.6 + 20 − 1.8 = 66.8 m²</li>
+  <li><strong>Subtract windows:</strong> 66.8 − (3 × 1.5) = 62.3 m²</li>
+  <li><strong>Paint per coat (interior):</strong> 62.3 ÷ 10 = 6.23 litres</li>
+  <li><strong>Total paint (2 coats):</strong> 6.23 × 2 = 12.46 litres</li>
+  <li><strong>Recommended cans:</strong> 2 × 5L cans + 1 × 4L can</li>
+</ol>
+<p><strong>Result:</strong> You need approximately 12.5 litres of paint — or about 3.3 gallons. Buy two 5-litre cans and one 4-litre can (or three 5-litre cans for extra reserve).</p>
+
+<h3>Example 3 — Exterior Wall (30 ft × 20 ft, 2 doors, 4 windows, 2 coats, exterior, 20% waste for texture)</h3>
+<ol>
+  <li><strong>Convert to metres:</strong> 30 ft = 9.14 m, 20 ft = 6.10 m</li>
+  <li><strong>Wall area:</strong> 2 × (9.14 + 6.10) × 3.05 (10 ft height) = 92.98 m²</li>
+  <li><strong>Subtract door:</strong> 92.98 − (2 × 1.8) = 89.38 m²</li>
+  <li><strong>Subtract windows:</strong> 89.38 − (4 × 1.5) = 83.38 m²</li>
+  <li><strong>Paint per coat (exterior):</strong> 83.38 ÷ 8 = 10.42 litres</li>
+  <li><strong>Total paint (2 coats):</strong> 10.42 × 2 = 20.84 litres</li>
+  <li><strong>Add 10% texture waste:</strong> 20.84 × 1.10 = 22.93 litres</li>
+</ol>
+<p><strong>Result:</strong> You need approximately 23 litres of exterior paint — or about 6 gallons. Buy five 5-litre cans or six 1-gallon cans.</p>
+
+<div class="callout">
+  <strong>Pro Tip:</strong> For textured surfaces (stucco, brick, rough wood siding), add 15–25% extra paint. Texture absorbs more paint in the first coat, and coverage is lower than on smooth surfaces. For the second coat, coverage improves significantly. For heavily textured surfaces, use a sprayer instead of a roller for better penetration.
+</div>
+
+<h2>Types of Paint</h2>
+<p>Not all paint is the same. Different types are designed for different surfaces and conditions:</p>
+<ul>
+  <li><strong>Water-Based (Latex) Paint:</strong> Most common interior paint. Easy to apply, quick drying, low odour. Clean-up with water. Suitable for walls, ceilings and most interior surfaces.</li>
+  <li><strong>Oil-Based (Alkyd) Paint:</strong> Durable, hard-wearing finish. Excellent for trim, doors and cabinets. Longer drying time and strong odour. Clean-up with mineral spirits.</li>
+  <li><strong>Primer:</strong> Applied before paint to seal surfaces and improve adhesion. Essential for bare drywall, patched surfaces and dramatic colour changes.</li>
+  <li><strong>Enamel Paint:</strong> Hard, glossy finish. Used for trim, doors and high-traffic areas. Available in water-based and oil-based formulas.</li>
+  <li><strong>Matte / Flat Paint:</strong> Non-reflective finish. Hides surface imperfections. Ideal for ceilings, low-traffic rooms and adult bedrooms.</li>
+  <li><strong>Eggshell Paint:</strong> Slight sheen. Easy to clean. Best for living rooms, hallways and family rooms.</li>
+  <li><strong>Satin Paint:</strong> Soft sheen. Durable and washable. Used for kitchens, bathrooms and trim.</li>
+  <li><strong>Semi-Gloss Paint:</strong> Shiny finish. Highly durable and easy to clean. Used for trim, doors, cabinets and bathrooms.</li>
+  <li><strong>Gloss Paint:</strong> Highest shine. Most durable. Used for trim, doors and furniture. Highlights surface imperfections.</li>
+  <li><strong>Exterior Paint:</strong> Formulated for weather resistance. Resists UV, moisture and temperature changes. Used for siding, fences and outdoor structures.</li>
+  <li><strong>Specialty Paint:</strong> Includes chalkboard, magnetic, metallic, masonry and fire-retardant paints for specific applications.</li>
+</ul>
+
+<h2>Industry Standards and Codes</h2>
+<p>Paint products must comply with several industry standards and environmental regulations:</p>
+<ul>
+  <li><strong>ASTM D16:</strong> Standard Terminology for Paint, Related Coatings, Materials and Applications</li>
+  <li><strong>ASTM D523:</strong> Standard Test Method for Specular Gloss</li>
+  <li><strong>ASTM D2486:</strong> Standard Test Methods for Scrub Resistance of Wall Paints</li>
+  <li><strong>ASTM D3359:</strong> Standard Test Methods for Measuring Adhesion by Tape Test</li>
+  <li><strong>ASTM D3960:</strong> Standard Practice for Determining Volatile Organic Compound (VOC) Content of Paints</li>
+  <li><strong>ISO 11890:</strong> Paints and Varnishes — Determination of VOC Content</li>
+  <li><strong>Green Seal GS-11:</strong> Standard for Paints, Coatings, Stains and Sealers (environmental certification)</li>
+  <li><strong>GREENGUARD Gold:</strong> Certification for low chemical emissions</li>
+</ul>
+<p>Always check local regulations for VOC limits before purchasing paint. Many regions (including the EU, California and parts of Asia) have strict limits on VOC content for both interior and exterior paints. Low-VOC and zero-VOC paints are widely available and recommended for interior use, especially in bedrooms and children's rooms.</p>
+
+<h2>Cost Estimation</h2>
+<p>Paint costs vary widely by quality, type and brand:</p>
+<ul>
+  <li><strong>Budget Interior Paint:</strong> $15–$25 per gallon (USA, 2026)</li>
+  <li><strong>Mid-Range Interior Paint:</strong> $25–$45 per gallon</li>
+  <li><strong>Premium Interior Paint:</strong> $45–$80 per gallon</li>
+  <li><strong>Oil-Based Paint:</strong> $30–$70 per gallon</li>
+  <li><strong>Exterior Paint:</strong> $30–$80 per gallon</li>
+  <li><strong>Primer:</strong> $15–$40 per gallon</li>
+  <li><strong>Specialty Paint (chalkboard, magnetic):</strong> $20–$60 per quart</li>
+  <li><strong>Paint Rollers and Brushes:</strong> $10–$50 per set</li>
+  <li><strong>Painter's Tape:</strong> $5–$15 per roll</li>
+  <li><strong>Drop Cloths:</strong> $5–$30 each</li>
+  <li><strong>Professional Painter Labour:</strong> $1.50–$4.00 per square foot</li>
+</ul>
+<p>For a typical 10×12 foot room with 8-foot ceilings, expect $60–$150 in paint materials (2 coats of mid-range paint + primer + supplies). DIY painting saves 50–70% compared to professional painting. Paint quality matters more than brand — a mid-range paint often performs as well as a premium paint for interior walls.</p>
+
+<h2>Tools and Equipment Needed</h2>
+<p>To paint a room efficiently, you will need the following tools:</p>
+<ul>
+  <li><strong>Essential:</strong> Paint rollers (9-inch for walls, 4-inch for trim), roller covers (3/8-inch nap for smooth walls, 1/2-inch for textured), angled paint brush (2–2.5 inch), paint tray, paint can opener, stirring stick</li>
+  <li><strong>Preparation:</strong> Painter's tape, drop cloths, sandpaper (120–220 grit), spackle, putty knife, caulk gun, cleaning rags</li>
+  <li><strong>Safety:</strong> Dust mask, safety glasses, gloves, ventilation (open windows and doors)</li>
+  <li><strong>Optional:</strong> Extension pole (for ceilings and high walls), paint sprayer, paint edger, ladder or step stool</li>
+</ul>
+<p>Safety first: paint fumes can be harmful. Always paint in a well-ventilated area, take breaks, and avoid painting in enclosed spaces without proper ventilation. Wear a dust mask when sanding and a respirator when using oil-based paints. Keep children and pets away from freshly painted areas.</p>
+
+<h2>Maintenance and Care</h2>
+<p>Proper maintenance extends the life of your paint job:</p>
+<ul>
+  <li><strong>Allow proper curing:</strong> Paint takes 7–30 days to fully cure. Avoid washing walls for at least 2 weeks after painting.</li>
+  <li><strong>Clean gently:</strong> Use a soft sponge and mild soap. Avoid abrasive cleaners and rough scrubbing, especially on flat finishes.</li>
+  <li><strong>Touch up promptly:</strong> Keep leftover paint for touch-ups. Store in a sealed container, label with room, colour and date.</li>
+  <li><strong>Check for moisture:</strong> Peeling or bubbling paint indicates moisture problems. Fix leaks before repainting.</li>
+  <li><strong>Repaint every 5–10 years:</strong> Interior walls need repainting every 5–10 years. High-traffic areas may need more frequent repainting.</li>
+  <li><strong>Use low-VOC paint:</strong> Low-VOC and zero-VOC paints have less odour and are safer for indoor air quality.</li>
+  <li><strong>Proper storage:</strong> Store paint in a cool, dry place away from direct sunlight. Keep cans sealed tightly.</li>
+  <li><strong>Dispose properly:</strong> Never pour paint down drains. Take leftover paint to a local hazardous waste facility.</li>
+</ul>
+
+<h2>Real-World Applications</h2>
+<p>This paint calculator is used by a wide range of people around the world:</p>
+<ul>
+  <li><strong>Homeowners:</strong> Repainting bedrooms, living rooms, kitchens, bathrooms and exteriors.</li>
+  <li><strong>DIY enthusiasts:</strong> Tackling weekend painting projects without overspending on materials.</li>
+  <li><strong>Professional painters:</strong> Preparing accurate material lists for client quotes and purchase orders.</li>
+  <li><strong>Interior designers:</strong> Specifying paint quantities for residential and commercial projects.</li>
+  <li><strong>Architects:</strong> Estimating paint quantities during the design phase.</li>
+  <li><strong>Property managers:</strong> Planning painting for rental turnovers and maintenance.</li>
+  <li><strong>Building contractors:</strong> Estimating paint for new builds, extensions and refurbishments.</li>
+  <li><strong>Real estate investors:</strong> Budgeting for cosmetic updates before listing properties.</li>
+</ul>
+
+<h2>Common Mistakes to Avoid</h2>
+<p>Even experienced painters make mistakes when calculating paint quantities. Here are the most common ones:</p>
+<ul>
+  <li><strong>Forgetting to subtract doors and windows:</strong> These openings do not need paint. Subtract them for a more accurate estimate.</li>
+  <li><strong>Applying only one coat:</strong> One coat rarely provides full coverage. Two coats are standard.</li>
+  <li><strong>Using the wrong coverage rate:</strong> Interior paint covers 10–12 m²/L, exterior 8–10 m²/L. Textured surfaces need 15–25% more.</li>
+  <li><strong>Forgetting primer:</strong> Primer is essential for bare drywall, patched surfaces and dramatic colour changes.</li>
+  <li><strong>Buying budget paint:</strong> Cheap paint covers less area, requires more coats, and wears faster. Mid-range paint is the best value.</li>
+  <li><strong>Miscalculating ceiling paint:</strong> Ceilings absorb more paint in the first coat. Add 10–15% extra.</li>
+  <li><strong>Rounding down:</strong> Always round up — never down — when buying paint.</li>
+  <li><strong>Ignoring colour batch:</strong> Paint colours vary slightly between batches. Buy all cans in one batch.</li>
+  <li><strong>Mixing metric and imperial:</strong> Keep all measurements in the same unit system throughout. Our calculator handles conversions automatically.</li>
+  <li><strong>Not ventilating:</strong> Paint fumes are harmful. Always paint in a well-ventilated space.</li>
+</ul>
+
+  
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">1. How much paint do I need for a 10×12 room?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
           </button>
-          <button type="button" class="action-btn action-share" onclick="shareCalculator()">
-            <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-            Share
+          <div class="faq-answer">
+            <p>A 10×12 room with 8-foot ceilings and 2 coats typically needs about 5.5 to 6 litres (1.5 gallons) of paint, assuming one door and two windows. If you are painting the ceiling as well, add about 1 litre (0.25 gallon). If you are using a primer coat, add another 2.8 litres (0.75 gallon). For 3 coats, add 50% more paint. Use the calculator above for exact numbers based on your specific room dimensions.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">2. How many coats of paint should I apply?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
           </button>
+          <div class="faq-answer">
+            <p>Two coats are standard for most interior walls. One coat rarely provides full coverage or an even finish, even with premium paint. Three coats may be needed when painting with dark colours over light walls, when covering strong colours, or when using lower-quality paint. Primer may be required for bare drywall, patched surfaces or dramatic colour changes. For exterior surfaces, two coats are also standard, but they may need to be applied over a primer coat for best results.</p>
+          </div>
         </div>
 
-        <!-- IN-CONTENT AD SLOT -->
-        <div class="ad-slot ad-slot-inline" aria-label="Advertisement">
-          <small>Advertisement</small>
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">3. How much area does 1 litre of paint cover?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Most interior wall paints cover approximately 10 to 12 square metres per litre (about 350 to 400 square feet per gallon) in a single coat. Exterior paints typically cover less — around 8 square metres per litre (about 300 square feet per gallon) — because exterior surfaces are more porous. Primer covers 10–12 m²/L. Coverage rates are printed on the paint can and should always be checked before buying. Textured surfaces (stucco, brick, rough wood) reduce coverage by 15–25%.</p>
+          </div>
         </div>
 
-        <!-- SEO EXPLANATION CONTENT — PART 1 -->
-        <section class="content-section">
-          <h2>What Is a Paint Calculator?</h2>
-          <p>A paint calculator is a tool that estimates how much paint you need to cover a given area — measured in litres, gallons or the number of paint cans required. Instead of guessing and ending up with too little paint (which means a trip back to the store and a visible mismatch in colour or finish) or too much (which means wasted money sitting in your garage), you enter your room dimensions and the calculator works out the exact quantity.</p>
-          <p>Paint quantity depends on four main factors: the total surface area to be painted, the number of coats you plan to apply, the coverage rate of the paint you are using, and any surfaces that do not need painting (such as doors, windows and built-in furniture).</p>
-
-          <h2>How to Use This Paint Calculator</h2>
-          <ol>
-            <li><strong>Enter the room dimensions.</strong> Provide the length, width and wall height of the room in your chosen unit system.</li>
-            <li><strong>Select doors and windows.</strong> Use the dropdowns to indicate how many doors and windows are on the walls you are painting.</li>
-            <li><strong>Choose the number of coats.</strong> Two coats are standard for most interior walls.</li>
-            <li><strong>Select the paint type.</strong> Interior and exterior paint have slightly different coverage rates.</li>
-            <li><strong>Click Calculate.</strong> The result shows the total paintable area, paint per coat, total paint required and recommended can sizes.</li>
-           </ol>
-
-          
-        <h2>Formula Used by This Calculator</h2>
-        <p>All calculations are performed internally in metric units, then converted back to your preferred unit system for display.</p>
-
-        <h3>Wall Area</h3>
-        <div class="formula-box">
-          <strong>Wall Area = 2 × (Length + Width) × Height</strong>
-          This gives the total wall surface area of a rectangular room, in square units.
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">4. Should I subtract doors and windows from the wall area?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Doors and windows do not need painting, so subtracting them gives a more accurate estimate. Our calculator automatically subtracts the standard area of each door (about 1.8 m² / 20 sq ft) and each window (about 1.5 m² / 16 sq ft). If your doors or windows are significantly larger or smaller than standard, adjust the result up or down by roughly 10%. For rooms with many large windows or French doors, the savings can be significant.</p>
+          </div>
         </div>
 
-        <h3>Paintable Area</h3>
-        <div class="formula-box">
-          <strong>Paintable Area = Wall Area − (Doors × Door Area) − (Windows × Window Area)</strong>
-          Standard door area: 1.8 m² (about 20 sq ft)<br>
-          Standard window area: 1.5 m² (about 16 sq ft)
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">5. Does this calculator work in metric units?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Use the unit toggle at the top of the calculator to switch between Imperial (feet, inches, gallons) and Metric (metres, centimetres, litres). The form labels, input units and result units all update automatically — and your preference is saved for future visits using your browser's local storage. In metric regions, paint is typically sold in 1L, 4L, 5L and 10L cans.</p>
+          </div>
         </div>
 
-        <h3>Paint Quantity</h3>
-        <div class="formula-box">
-          <strong>Paint per Coat = Paintable Area ÷ Coverage Rate</strong>
-          Interior coverage: ~10 m² per litre (~350 sq ft per gallon)<br>
-          Exterior coverage: ~8 m² per litre (~300 sq ft per gallon)<br>
-          <strong>Total Paint = Paint per Coat × Number of Coats</strong>
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">6. How do I calculate paint for a ceiling?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Calculating paint for a ceiling uses the same formula as walls: Length × Width = Ceiling Area. For a 10×12 foot room, the ceiling is 120 sq ft (11.15 m²). With 2 coats, that is 240 sq ft (22.3 m²) of coverage — about 1 litre (0.25 gallon) of paint. Ceilings are usually painted with a flat, white paint, which has excellent coverage. Add 10–15% extra for the first coat on a bare or textured ceiling. Use the "Include Ceiling?" option in the calculator to add the ceiling to your total estimate.</p>
+          </div>
         </div>
 
-        <h2>Worked Example</h2>
-        <p>Suppose you are painting a room that is <strong>10 feet long, 12 feet wide and 8 feet high</strong>, with <strong>1 door and 2 windows</strong>. You plan to apply <strong>2 coats</strong> of interior paint.</p>
-        <ol>
-          <li><strong>Convert to metres:</strong> 10 ft = 3.05 m, 12 ft = 3.66 m, 8 ft = 2.44 m</li>
-          <li><strong>Calculate wall area:</strong> 2 × (3.05 + 3.66) × 2.44 = 32.74 m²</li>
-          <li><strong>Subtract doors and windows:</strong> 32.74 − (1 × 1.8) − (2 × 1.5) = 27.94 m²</li>
-          <li><strong>Paint per coat (interior):</strong> 27.94 ÷ 10 = 2.79 litres</li>
-          <li><strong>Total paint (2 coats):</strong> 2.79 × 2 = 5.59 litres</li>
-        </ol>
-        <p>So for this room, you would buy <strong>approximately 5.6 litres of paint</strong> — or about <strong>1.5 gallons</strong> in imperial units. Since paint is usually sold in 1-litre, 4-litre or 5-litre cans (or 1-gallon cans), you would buy one 5-litre can and one 1-litre can to be safe.</p>
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">7. Should I use primer before painting?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, primer is recommended in most situations. Use primer when: (a) painting bare drywall or new wood, (b) covering a dark colour with a lighter colour, (c) painting over patched or repaired surfaces, (d) painting over glossy surfaces, (e) painting over smoke or water stains, or (f) painting exterior surfaces for the first time. Primer seals the surface, improves adhesion, and reduces the number of topcoats needed. For rooms with only minor colour changes on previously painted walls, a paint-and-primer combination may be sufficient. Our calculator includes a primer option so you can estimate both in one calculation.</p>
+          </div>
+        </div>
 
-        <div class="callout">
-          <strong>Pro Tip:</strong> Always buy slightly more paint than the calculator suggests. Paint colours can vary slightly between batches, so having a small reserve for touch-ups is essential.
+        <!-- AUTHOR BIO + SOURCES -->
+        <div class="author-bio">
+          <h3>About This Calculator</h3>
+          <p><strong>Written by:</strong> The BuildMetric team — builders, engineers and software developers with combined decades of experience in construction and DIY projects.</p>
+          <p><strong>Sources:</strong> Formulas based on standard construction industry practices, ASTM D16 (Paint Terminology), ASTM D2486 (Scrub Resistance), ISO 11890 (VOC Content), and Green Seal GS-11 (Environmental Standards for Paints).</p>
+          <p><strong>Last Updated:</strong> January 2026</p>
         </div>
 
       </section>
@@ -285,7 +562,7 @@
     <!-- ============ RIGHT STICKY SIDEBAR ============ -->
     <aside class="sticky-sidebar" aria-label="Sidebar">
 
-      <!-- Ad Slot 1 — 300x250 Medium Rectangle -->
+      <!-- AD SLOT 3 — SIDEBAR (300x250 Medium Rectangle) -->
       <div class="ad-slot ad-slot-sidebar" aria-label="Advertisement">
         <small>Advertisement</small>
       </div>
@@ -294,16 +571,16 @@
       <div class="sidebar-card">
         <h3>Popular Calculators</h3>
         <ul class="sidebar-links">
-          <li><a href="../concrete-calculator/index.html">Concrete Calculator</a></li>
           <li><a href="../tile-calculator/index.html">Tile Calculator</a></li>
           <li><a href="../flooring-calculator/index.html">Flooring Calculator</a></li>
           <li><a href="../drywall-calculator/index.html">Drywall Calculator</a></li>
           <li><a href="../wallpaper-calculator/index.html">Wallpaper Calculator</a></li>
-          <li><a href="../countertop-calculator/index.html">Countertop Calculator</a></li>
+          <li><a href="../concrete-calculator/index.html">Concrete Calculator</a></li>
+          <li><a href="../roofing-calculator/index.html">Roofing Calculator</a></li>
         </ul>
       </div>
 
-      <!-- Ad Slot 2 — 300x600 Half-Page Sticky Banner -->
+      <!-- AD SLOT 4 — HALF-PAGE STICKY (300x600 desktop / 300x250 mobile) -->
       <div class="ad-slot ad-slot-halfpage" aria-label="Advertisement">
         <small>Advertisement</small>
       </div>
@@ -329,105 +606,42 @@
 <!-- END container -->
 
  
-<!-- ============================================================
-     LOWER FULL-WIDTH SECTION
-     ============================================================ -->
-<section class="bottom-full-width">
-  <div class="container">
+  <!-- ============================================================
+       LOWER FULL-WIDTH SECTION
+       ============================================================ -->
+  <section class="bottom-full-width">
+    <div class="container">
 
-    <!-- ============================================================
-         FAQ ACCORDION SECTION
-         ============================================================ -->
-    <div class="content-section">
-      <h2>Frequently Asked Questions</h2>
-
-      <div class="faq-accordion">
-        <button class="faq-question" type="button" aria-expanded="false">
-          <span class="faq-q-text">1. How much paint do I need for a 10×12 room?</span>
-          <span class="faq-icon" aria-hidden="true"></span>
-        </button>
-        <div class="faq-answer">
-          <p>A 10×12 room with 8-foot ceilings and 2 coats typically needs about 5.5 to 6 litres (1.5 gallons) of paint, assuming one door and two windows. The exact amount depends on your wall height, the number of doors and windows, the paint's coverage rate and whether you are painting the ceiling or trim as well. Use the calculator above for your exact room dimensions.</p>
-        </div>
+      <!-- RELATED TOOLS GRID -->
+      <div class="related-tools">
+        <h2>Related Construction Calculators</h2>
+        <ul>
+          <li><a href="../tile-calculator/index.html">Tile Calculator</a></li>
+          <li><a href="../flooring-calculator/index.html">Flooring Calculator</a></li>
+          <li><a href="../drywall-calculator/index.html">Drywall Calculator</a></li>
+          <li><a href="../wallpaper-calculator/index.html">Wallpaper Calculator</a></li>
+          <li><a href="../countertop-calculator/index.html">Countertop Calculator</a></li>
+          <li><a href="../concrete-calculator/index.html">Concrete Calculator</a></li>
+        </ul>
       </div>
 
-      <div class="faq-accordion">
-        <button class="faq-question" type="button" aria-expanded="false">
-          <span class="faq-q-text">2. How many coats of paint should I apply?</span>
-          <span class="faq-icon" aria-hidden="true"></span>
-        </button>
-        <div class="faq-answer">
-          <p>Two coats are standard for most interior walls. One coat rarely provides full coverage or an even finish, even with premium paint. Three coats may be needed when painting with dark colours over light walls, when covering strong colours, or when using lower-quality paint. Primer may be required for bare drywall, patched surfaces or dramatic colour changes.</p>
-        </div>
-      </div>
-
-      <div class="faq-accordion">
-        <button class="faq-question" type="button" aria-expanded="false">
-          <span class="faq-q-text">3. How much area does 1 litre of paint cover?</span>
-          <span class="faq-icon" aria-hidden="true"></span>
-        </button>
-        <div class="faq-answer">
-          <p>Most interior wall paints cover approximately 10 to 12 square metres per litre (about 350 to 400 square feet per gallon) in a single coat. Exterior paints typically cover less — around 8 square metres per litre (about 300 square feet per gallon) — because exterior surfaces are more porous. Coverage rates are printed on the paint can and should always be checked before buying.</p>
-        </div>
-      </div>
-
-      <div class="faq-accordion">
-        <button class="faq-question" type="button" aria-expanded="false">
-          <span class="faq-q-text">4. Should I subtract doors and windows from the wall area?</span>
-          <span class="faq-icon" aria-hidden="true"></span>
-        </button>
-        <div class="faq-answer">
-          <p>Yes. Doors and windows do not need painting, so subtracting them gives a more accurate estimate. Our calculator automatically subtracts the standard area of each door (about 1.8 m² / 20 sq ft) and each window (about 1.5 m² / 16 sq ft). If your doors or windows are significantly larger or smaller than standard, adjust the result up or down by roughly 10%.</p>
-        </div>
-      </div>
-
-      <div class="faq-accordion">
-        <button class="faq-question" type="button" aria-expanded="false">
-          <span class="faq-q-text">5. Does this calculator work in metric units?</span>
-          <span class="faq-icon" aria-hidden="true"></span>
-        </button>
-        <div class="faq-answer">
-          <p>Yes. Use the unit toggle at the top of the calculator to switch between Imperial (feet, gallons) and Metric (metres, litres). The form labels, input units and result units all update automatically — and your preference is saved for future visits using your browser's local storage.</p>
-        </div>
+      <!-- LEGAL DISCLAIMER -->
+      <div class="legal-disclaimer">
+        <p><strong>Disclaimer:</strong> BuildMetric calculators are provided for estimation purposes only. Always consult a qualified professional before ordering materials or starting construction work. Results may vary based on site conditions, material specifications and local building codes.</p>
       </div>
 
     </div>
+    <!-- END container -->
+  </section>
+  <!-- END bottom-full-width -->
 
-    <!-- ============================================================
-         RELATED TOOLS GRID
-         ============================================================ -->
-    <div class="related-tools">
-      <h2>Related Construction Calculators</h2>
-      <ul>
-        <li><a href="../drywall-calculator/index.html">Drywall Calculator</a></li>
-        <li><a href="../tile-calculator/index.html">Tile Calculator</a></li>
-        <li><a href="../flooring-calculator/index.html">Flooring Calculator</a></li>
-        <li><a href="../wallpaper-calculator/index.html">Wallpaper Calculator</a></li>
-        <li><a href="../countertop-calculator/index.html">Countertop Calculator</a></li>
-        <li><a href="../concrete-calculator/index.html">Concrete Calculator</a></li>
-      </ul>
-    </div>
-
-    <!-- ============================================================
-         LEGAL DISCLAIMER
-         ============================================================ -->
-    <div class="legal-disclaimer">
-      <p><strong>Disclaimer:</strong> BuildMetric calculators are provided for estimation purposes only. Always consult a qualified professional before ordering materials or starting construction work. Results may vary based on site conditions, material specifications and local building codes.</p>
-    </div>
-
-  </div>
-  <!-- END container -->
-</section>
-<!-- END bottom-full-width -->
-
- 
   <!-- ============================================================
        PAINT CALCULATOR JAVASCRIPT
        ============================================================ -->
   <script>
   /* =========================================================
      PAINT CALCULATOR — Tool Logic
-     Units: imperial (ft) and metric (m)
+     Units: imperial (ft, gal) and metric (m, L)
      ========================================================= */
 
   /* ---------- 1. UNIT LABEL UPDATER ---------- */
@@ -452,42 +666,67 @@
     var windows = parseInt(document.getElementById('windows').value) || 0;
     var coats = parseInt(document.getElementById('coats').value) || 2;
     var paintType = document.getElementById('paint-type').value || 'interior';
+    var includeCeiling = document.getElementById('include-ceiling').value === 'yes';
+    var includePrimer = document.getElementById('include-primer').value === 'yes';
 
     if (length === null || width === null || height === null) {
       showError('Please enter valid positive numbers for length, width and wall height.');
       return;
     }
 
+    // Convert to metres internally
     var lengthM, widthM, heightM;
     if (metric) {
-      lengthM = length; widthM = width; heightM = height;
+      lengthM = length;
+      widthM = width;
+      heightM = height;
     } else {
       lengthM = length * 0.3048;
       widthM = width * 0.3048;
       heightM = height * 0.3048;
     }
 
+    // Wall area (sq metres)
     var wallAreaM2 = 2 * (lengthM + widthM) * heightM;
-    var doorArea = doors * 1.8;
-    var windowArea = windows * 1.5;
-    var paintableAreaM2 = wallAreaM2 - doorArea - windowArea;
-    if (paintableAreaM2 < 0) paintableAreaM2 = 0;
 
+    // Ceiling area (sq metres) — only if included
+    var ceilingAreaM2 = includeCeiling ? (lengthM * widthM) : 0;
+
+    // Subtract doors (1.8 m² each) and windows (1.5 m² each)
+    var doorAreaM2 = doors * 1.8;
+    var windowAreaM2 = windows * 1.5;
+
+    // Net area
+    var netAreaM2 = wallAreaM2 + ceilingAreaM2 - doorAreaM2 - windowAreaM2;
+    if (netAreaM2 < 0) netAreaM2 = 0;
+
+    // Coverage rate (m² per litre)
     var coverage = (paintType === 'exterior') ? 8 : 10;
-    var paintPerCoatL = paintableAreaM2 / coverage;
+
+    // Paint per coat (litres)
+    var paintPerCoatL = netAreaM2 / coverage;
+
+    // Total paint (litres) — number of coats
     var totalPaintL = paintPerCoatL * coats;
 
-    var wallAreaSqFt = wallAreaM2 * 10.7639;
-    var paintableAreaSqFt = paintableAreaM2 * 10.7639;
-    var paintPerCoatGal = paintPerCoatL * 0.264172;
-    var totalPaintGal = totalPaintL * 0.264172;
+    // Primer (optional) — 1 coat of primer at same coverage
+    var primerL = includePrimer ? paintPerCoatL : 0;
 
+    // Convert to imperial for display
+    var netAreaSqFt = netAreaM2 * 10.7639;
+    var wallAreaSqFt = wallAreaM2 * 10.7639;
+    var ceilingAreaSqFt = ceilingAreaM2 * 10.7639;
+    var totalPaintGal = totalPaintL * 0.264172;
+    var primerGal = primerL * 0.264172;
+
+    // Recommended cans (5L, 4L, 1L for metric; 1 gal for imperial)
     var cans5L = Math.floor(totalPaintL / 5);
     var remaining = totalPaintL - (cans5L * 5);
     var cans4L = Math.floor(remaining / 4);
     remaining = remaining - (cans4L * 4);
     var cans1L = Math.ceil(remaining);
 
+    // Build result HTML
     var html = '';
     html += '<h3>Paint Needed for Your Room</h3>';
 
@@ -502,19 +741,32 @@
     html += '<div style="margin-top:14px;">';
     if (metric) {
       html += buildResultLine('Wall area (total)', fmt(wallAreaM2, 2) + ' m²');
-      html += buildResultLine('Paintable area (minus doors/windows)', fmt(paintableAreaM2, 2) + ' m²');
+      if (includeCeiling) {
+        html += buildResultLine('Ceiling area', fmt(ceilingAreaM2, 2) + ' m²');
+      }
+      html += buildResultLine('Paintable area (minus openings)', fmt(netAreaM2, 2) + ' m²');
       html += buildResultLine('Paint per coat', fmt(paintPerCoatL, 2) + ' L');
-      html += buildResultLine('Number of coats', coats + ' coats');
+      html += buildResultLine('Number of coats', coats + ' coat' + (coats > 1 ? 's' : ''));
       html += buildResultLine('Total paint needed', fmt(totalPaintL, 2) + ' L');
+      if (includePrimer) {
+        html += buildResultLine('Primer (1 coat)', fmt(primerL, 2) + ' L');
+      }
     } else {
       html += buildResultLine('Wall area (total)', fmt(wallAreaSqFt, 2) + ' sq ft');
-      html += buildResultLine('Paintable area (minus doors/windows)', fmt(paintableAreaSqFt, 2) + ' sq ft');
-      html += buildResultLine('Paint per coat', fmt(paintPerCoatGal, 2) + ' gal');
-      html += buildResultLine('Number of coats', coats + ' coats');
+      if (includeCeiling) {
+        html += buildResultLine('Ceiling area', fmt(ceilingAreaSqFt, 2) + ' sq ft');
+      }
+      html += buildResultLine('Paintable area (minus openings)', fmt(netAreaSqFt, 2) + ' sq ft');
+      html += buildResultLine('Paint per coat', fmt(paintPerCoatL * 0.264172, 2) + ' gal');
+      html += buildResultLine('Number of coats', coats + ' coat' + (coats > 1 ? 's' : ''));
       html += buildResultLine('Total paint needed', fmt(totalPaintGal, 2) + ' gal');
+      if (includePrimer) {
+        html += buildResultLine('Primer (1 coat)', fmt(primerGal, 2) + ' gal');
+      }
     }
     html += '</div>';
 
+    // Recommended cans
     html += '<div style="margin-top:16px;">';
     html += '<h3 style="font-size:0.98rem;margin-bottom:10px;">Recommended Paint Cans</h3>';
     if (metric) {
@@ -527,7 +779,13 @@
     }
     html += '</div>';
 
-    html += '<p class="result-note">Based on ' + (paintType === 'exterior' ? 'exterior' : 'interior') + ' paint coverage of ' + coverage + ' m² per litre. Always buy slightly more than calculated for touch-ups.</p>';
+    // Note
+    var noteText = 'Based on ' + (paintType === 'exterior' ? 'exterior' : 'interior') + ' paint coverage of ' + coverage + ' m² per litre.';
+    if (includeCeiling) noteText += ' Ceiling included.';
+    if (includePrimer) noteText += ' Primer coat included.';
+    noteText += ' Always buy slightly more than calculated for touch-ups.';
+
+    html += '<p class="result-note">' + noteText + '</p>';
 
     showResult(html);
   }
@@ -573,11 +831,11 @@
         <h4>Popular Tools</h4>
         <ul>
           <li><a href="../concrete-calculator/index.html">Concrete Calculator</a></li>
+          <li><a href="../brick-calculator/index.html">Brick Calculator</a></li>
           <li><a href="../paint-calculator/index.html">Paint Calculator</a></li>
-          <li><a href="../roofing-calculator/index.html">Roofing Calculator</a></li>
           <li><a href="../tile-calculator/index.html">Tile Calculator</a></li>
-          <li><a href="../lumber-calculator/index.html">Lumber Calculator</a></li>
           <li><a href="../flooring-calculator/index.html">Flooring Calculator</a></li>
+          <li><a href="../roofing-calculator/index.html">Roofing Calculator</a></li>
         </ul>
       </div>
 
