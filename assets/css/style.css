@@ -2462,3 +2462,11 @@ textarea:focus-visible {
     display: block;
   }
 }
+
+/* Mobile pe half-page ad chhota karo */
+@media (max-width: 768px) {
+  .ad-slot-halfpage {
+    min-height: 250px;
+    max-height: 250px;
+  }
+}
