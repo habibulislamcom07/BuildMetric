@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0f4c81">
+
+<title>Concrete Calculator — Estimate Cubic Yards, Bags & Cost | BuildMetric</title>
+<meta name="description" content="Free concrete calculator to estimate cubic yards, cubic metres, bags and cost of concrete for slabs, footings, columns and stairs. Works in imperial and metric units.">
+<meta name="keywords" content="concrete calculator, concrete volume calculator, concrete slab calculator, cubic yards calculator, concrete bags calculator, cement calculator, concrete cost calculator, concrete footing calculator">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="BuildMetric">
+<meta name="language" content="English">
+
+<link rel="canonical" href="https://buildmetric.org/concrete-calculator/index.html">
+
+<meta property="og:title" content="Concrete Calculator — Estimate Cubic Yards, Bags & Cost">
+<meta property="og:description" content="Free concrete calculator to estimate cubic yards, bags and cost for slabs, footings and columns.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://buildmetric.org/concrete-calculator/index.html">
+<meta property="og:site_name" content="BuildMetric">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Concrete Calculator — Estimate Cubic Yards, Bags & Cost">
+<meta name="twitter:description" content="Free concrete calculator to estimate cubic yards, bags and cost for slabs, footings and columns.">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+<!-- GOOGLE ADSENSE — Uncomment after approval
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1428550393209506" crossorigin="anonymous"></script>
+-->
+
+<!-- Structured Data — WebApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Concrete Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "All",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Estimate cubic yards, cubic metres, bags and cost of concrete for slabs, footings, columns and stairs.",
+  "inLanguage": "en"
+}
+</script>
+
+<!-- Structured Data — FAQPage (7 questions) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"How many bags of concrete do I need for a 10x10 slab?","acceptedAnswer":{"@type":"Answer","text":"A 10x10 foot slab at 4 inches thick needs about 1.23 cubic yards of concrete, which equals roughly 56 bags of 80 lb mix or 74 bags of 60 lb mix."}},
+    {"@type":"Question","name":"How thick should a concrete slab be?","acceptedAnswer":{"@type":"Answer","text":"For residential walkways and patios, 4 inches is standard. For driveways, 5-6 inches. Footings typically require 8-12 inches depending on load and soil."}},
+    {"@type":"Question","name":"What is the formula for concrete volume?","acceptedAnswer":{"@type":"Answer","text":"Volume = Length x Width x Thickness, all in the same unit. Divide cubic feet by 27 to get cubic yards."}},
+    {"@type":"Question","name":"How much does concrete cost per cubic yard?","acceptedAnswer":{"@type":"Answer","text":"Ready-mix concrete typically costs $125-$175 per cubic yard in the US, depending on region and mix type. Pre-mixed bags cost more per unit volume."}},
+    {"@type":"Question","name":"Does this concrete calculator work in metric units?","acceptedAnswer":{"@type":"Answer","text":"Yes. Toggle the unit switcher to Metric and the calculator will accept metres, centimetres and return cubic metres."}},
+    {"@type":"Question","name":"Should I add extra concrete for waste?","acceptedAnswer":{"@type":"Answer","text":"Yes. Add 5-10% to your calculated volume to account for spillage, uneven subgrade and small measurement errors."}},
+    {"@type":"Question","name":"How long does concrete take to cure?","acceptedAnswer":{"@type":"Answer","text":"Concrete reaches about 70% of its strength in 7 days and full strength in 28 days. Keep it moist during the first 3-7 days."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="../index.html" class="logo" aria-label="BuildMetric Home">Build<span>Metric</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#categories">Categories</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="page-main">
+
+  <!-- AD SLOT 1 — HEADER BANNER -->
+  <div class="container">
+    <div class="ad-slot ad-slot-header" aria-label="Advertisement">
+      <small>Advertisement</small>
+    </div>
+  </div>
+
+  <!-- UPPER 2-COLUMN GRID -->
+  <div class="container">
+    <div class="tool-main-grid">
+
+      <!-- LEFT PRIMARY COLUMN -->
+      <div class="primary-content">
+
+        <!-- BREADCRUMB -->
+        <p class="breadcrumb">
+          <a href="../index.html">Home</a>
+          <span class="sep">&rsaquo;</span>
+          <a href="../index.html#cat-concrete-masonry">Concrete &amp; Masonry</a>
+          <span class="sep">&rsaquo;</span>
+          <span>Concrete Calculator</span>
+        </p>
+
+        <!-- TOOL TITLE + SUBTITLE -->
+        <div class="tool-title-block">
+          <h1>Concrete Calculator</h1>
+          <p class="tool-subtitle">
+            Estimate the volume of concrete you need for a slab, footing, column or stair in cubic yards, cubic metres and 80 lb bags. Works in both imperial and metric units — switch using the toggle above.
+          </p>
+        </div>
+
+        <!-- CALCULATOR FORM + RESULT -->
+        <div class="calc-wrap">
+
+          <div class="calc-header">
+            <div class="unit-toggle" role="group" aria-label="Unit system">
+              <span class="unit-toggle-label">Units:</span>
+              <button type="button" class="unit-btn" data-unit-btn="imperial" aria-pressed="false">Imperial (US)</button>
+              <button type="button" class="unit-btn" data-unit-btn="metric" aria-pressed="false">Metric (EU)</button>
+            </div>
+          </div>
+
+          <form id="concrete-form" onsubmit="return false;">
+
+            <!-- Shape Selector -->
+            <div class="form-row">
+              <label for="shape">Select Shape</label>
+              <select id="shape" onchange="toggleConcreteShape()">
+                <option value="slab">Slab / Rectangular (patio, driveway, footing)</option>
+                <option value="column">Round Column / Pier (post, pillar)</option>
+                <option value="stair">Staircase (steps)</option>
+              </select>
+            </div>
+
+            <!-- Slab Inputs -->
+            <div id="slab-inputs">
+              <div class="form-grid">
+                <div class="form-row">
+                  <label for="length">Length</label>
+                  <div class="input-with-unit">
+                    <input type="number" id="length" min="0" step="0.01" placeholder="e.g. 10" inputmode="decimal">
+                    <span class="input-unit" id="length-unit">ft</span>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <label for="width">Width</label>
+                  <div class="input-with-unit">
+                    <input type="number" id="width" min="0" step="0.01" placeholder="e.g. 10" inputmode="decimal">
+                    <span class="input-unit" id="width-unit">ft</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <label for="thickness">Thickness / Depth</label>
+                <div class="input-with-unit">
+                  <input type="number" id="thickness" min="0" step="0.25" placeholder="e.g. 4" inputmode="decimal">
+                  <span class="input-unit" id="thickness-unit">in</span>
+                </div>
+                <span class="hint">Standard: 4 in (walkway), 5–6 in (driveway), 8–12 in (footing)</span>
+              </div>
+            </div>
+
+            <!-- Column Inputs -->
+            <div id="column-inputs" style="display:none;">
+              <div class="form-grid">
+                <div class="form-row">
+                  <label for="diameter">Diameter</label>
+                  <div class="input-with-unit">
+                    <input type="number" id="diameter" min="0" step="0.25" placeholder="e.g. 12" inputmode="decimal">
+                    <span class="input-unit" id="diameter-unit">in</span>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <label for="height">Height</label>
+                  <div class="input-with-unit">
+                    <input type="number" id="height" min="0" step="0.01" placeholder="e.g. 8" inputmode="decimal">
+                    <span class="input-unit" id="height-unit">ft</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stair Inputs -->
+            <div id="stair-inputs" style="display:none;">
+              <div class="form-grid">
+                <div class="form-row">
+                  <label for="stair-width">Stair Width</label>
+                  <div class="input-with-unit">
+                    <input type="number" id="stair-width" min="0" step="0.01" placeholder="e.g. 3" inputmode="decimal">
+                    <span class="input-unit" id="stair-width-unit">ft</span>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <label for="stair-rise">Step Rise</label>
+                  <div class="input-with-unit">
+                    <input type="number" id="stair-rise" min="0" step="0.25" placeholder="e.g. 7" inputmode="decimal">
+                    <span class="input-unit" id="stair-rise-unit">in</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-grid">
+                <div class="form-row">
+                  <label for="stair-run">Step Run (Tread)</label>
+                  <div class="input-with-unit">
+                    <input type="number" id="stair-run" min="0" step="0.25" placeholder="e.g. 11" inputmode="decimal">
+                    <span class="input-unit" id="stair-run-unit">in</span>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <label for="stair-count">Number of Steps</label>
+                  <input type="number" id="stair-count" min="1" step="1" placeholder="e.g. 5" inputmode="numeric">
+                </div>
+              </div>
+            </div>
+
+            <!-- Waste Allowance -->
+            <div class="form-row">
+              <label for="waste">Waste Allowance (%)</label>
+              <select id="waste">
+                <option value="0">0% — exact calculation</option>
+                <option value="5">5% — smooth subgrade</option>
+                <option value="10" selected>10% — standard recommendation</option>
+                <option value="15">15% — rough or uneven subgrade</option>
+              </select>
+            </div>
+
+            <button type="button" class="btn-calc" onclick="calculateConcrete()">Calculate Concrete</button>
+            <button type="button" class="btn-secondary" onclick="resetConcrete()" style="margin-top:10px;width:100%;">Reset</button>
+
+          </form>
+
+          <div class="result-box" id="result" role="status" aria-live="polite"></div>
+
+        </div>
+        <!-- END calc-wrap -->
+
+         
+<!-- ACTION BUTTONS BOX -->
+<div class="action-buttons-box">
+  <button type="button" class="action-btn" onclick="printResult()">
+    <svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+    Print / Save as PDF
+  </button>
+  <button type="button" class="action-btn action-share" onclick="shareCalculator()">
+    <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+    Share
+  </button>
+</div>
+
+<!-- AD SLOT 2 — IN-CONTENT -->
+<div class="ad-slot ad-slot-inline" aria-label="Advertisement">
+  <small>Advertisement</small>
+</div>
+
+<!-- ============================================================
+     SEO CONTENT — PART 1
+     ============================================================ -->
+<section class="content-section">
+
+  <h2>What Is a Concrete Calculator?</h2>
+  <p>A concrete calculator is a tool that estimates how much concrete you need for a project — measured in cubic yards, cubic metres, or bags of pre-mixed concrete. Instead of guessing and ending up with too little concrete (which forces an extra trip to the store and creates a visible cold joint) or too much (which wastes money), you enter your project's dimensions and the calculator returns the exact volume required.</p>
+  <p>Concrete quantity depends on several factors: the shape of the pour (slab, footing, column, stair), the dimensions, the thickness or depth, the mix design, and the waste allowance for spillage and uneven subgrade. This calculator takes all of these into account so you get a reliable estimate before you order.</p>
+  <p>Concrete is one of the most widely used construction materials in the world. It is used in foundations, footings, slabs, driveways, patios, sidewalks, columns, beams, stairs, retaining walls and countless other structures. Whether you are pouring a small garden path or a large commercial foundation, accurate concrete estimation saves time, money and frustration.</p>
+  <p>Whether you are pouring a driveway in Texas, laying a patio in London, building a deck footing in Sydney, or renovating a basement in Toronto, this calculator gives you an accurate estimate in both imperial and metric units.</p>
+
+  <h2>How to Use This Concrete Calculator</h2>
+  <p>Using this concrete calculator is straightforward. Follow these six steps:</p>
+  <ol>
+    <li><strong>Choose the shape.</strong> Most DIY projects use a rectangular slab (patio, driveway, footing). For a pier, post or pillar, choose the round column option. For a staircase, choose the stair option.</li>
+    <li><strong>Select your unit system.</strong> Use the toggle at the top to switch between Imperial (feet, inches) and Metric (metres, centimetres). Your preference is saved for next time.</li>
+    <li><strong>Enter the dimensions.</strong> For a slab, provide length, width and thickness. For a column, provide diameter and height. For a stair, provide width, rise, run and number of steps. Use the same units shown on each field.</li>
+    <li><strong>Set a waste allowance.</strong> We default to 10%, which is the standard recommendation. Use 5% for perfectly smooth subgrade and 15% for rough or uneven ground.</li>
+    <li><strong>Choose your concrete type.</strong> The calculator supports ready-mix (by volume) and pre-mixed bags in 80 lb, 60 lb, 50 kg and 25 kg sizes.</li>
+    <li><strong>Click Calculate.</strong> The result shows volume in cubic feet, cubic yards, cubic metres and litres — plus the number of bags needed for common pre-mix sizes.</li>
+  </ol>
+  <p><strong>Pro Tip:</strong> Always order 1–2 extra bags beyond the calculated quantity. Concrete can be damaged during transport, spilled during pouring, or wasted due to uneven subgrade. Having spares on hand means you can finish the pour without a cold joint.</p>
+
+  <h2>Formula Used by This Calculator</h2>
+  <p>All calculations are performed internally in metric units, then converted back to your preferred unit system for display. The following formulas are used:</p>
+
+  <h3>Step 1 — Rectangular Slab Volume</h3>
+  <div class="formula-box">
+    <strong>Volume = Length × Width × Thickness</strong>
+    All measurements must be in the same unit.<br>
+    Divide cubic feet by 27 to get cubic yards.<br>
+    Multiply cubic feet by 0.0283168 to get cubic metres.
+  </div>
+
+  <h3>Step 2 — Round Column Volume</h3>
+  <div class="formula-box">
+    <strong>Volume = π × r² × Height</strong>
+    Where r = radius (diameter ÷ 2).<br>
+    π (pi) ≈ 3.14159.<br>
+    Result is in the same cubic unit as your input.
+  </div>
+
+  <h3>Step 3 — Staircase Volume</h3>
+  <div class="formula-box">
+    <strong>Volume = Steps × Width × Rise × Run ÷ 2</strong>
+    This formula assumes a standard staircase profile.<br>
+    Each step is treated as a triangular prism.
+  </div>
+
+  <h3>Step 4 — Waste Allowance</h3>
+  <div class="formula-box">
+    <strong>Final Volume = Volume × (1 + Waste% ÷ 100)</strong>
+    Standard recommendation: 10%.
+  </div>
+
+  <h3>Step 5 — Bags of Concrete</h3>
+  <div class="formula-box">
+    <strong>Bags = Final Volume ÷ Yield per Bag</strong>
+    80 lb bag = 0.6 cu ft (0.017 m³)<br>
+    60 lb bag = 0.45 cu ft (0.0127 m³)<br>
+    50 kg bag = 1.25 cu ft (0.0353 m³)<br>
+    25 kg bag = 0.625 cu ft (0.0177 m³)
+  </div>
+
+  <h3>Understanding the Variables</h3>
+  <ul>
+    <li><strong>Length, Width, Thickness:</strong> Dimensions of the pour, all in the same unit.</li>
+    <li><strong>Radius:</strong> Half the diameter of a round column.</li>
+    <li><strong>Rise:</strong> Vertical height of each stair step.</li>
+    <li><strong>Run:</strong> Horizontal depth of each stair tread.</li>
+    <li><strong>Waste %:</strong> Extra material for spillage, uneven subgrade and future repairs.</li>
+    <li><strong>Yield per Bag:</strong> Volume of concrete produced by one bag of pre-mix.</li>
+  </ul>
+
+  <h3>Why Round Up, Not Down?</h3>
+  <p>Concrete calculations involve rounding in several places: bags, cubic yards and cubic metres. Always round <strong>up</strong>, never down. If your calculation gives 1.23 cubic yards, order 1.25 cubic yards (ready-mix is sold in 0.25-yard increments). If it gives 55.2 bags, order 56. Running short mid-pour causes cold joints that weaken the slab permanently.</p>
+
+  <h3>Concrete Mix Types</h3>
+  <p>Concrete is available in several mix types for different applications:</p>
+  <ul>
+    <li><strong>Standard concrete (3000 PSI):</strong> General-purpose, for patios, walkways and footings</li>
+    <li><strong>High-strength concrete (4000 PSI):</strong> Driveways, garage floors and structural elements</li>
+    <li><strong>Fast-setting concrete:</strong> Fence posts and urgent repairs (sets in 20–40 minutes)</li>
+    <li><strong>Crack-resistant concrete:</strong> Adds fibers to reduce cracking in slabs</li>
+    <li><strong>High-early-strength concrete:</strong> Reaches full strength in 3–7 days instead of 28</li>
+  </ul>
+
+    
+<h2>Worked Example</h2>
+<p>Let us work through three examples — a simple patio slab, a round footing pier, and a small staircase.</p>
+
+<h3>Example 1 — Patio Slab (10 ft × 12 ft, 4 in thick, 10% waste)</h3>
+<ol>
+  <li><strong>Convert thickness to feet:</strong> 4 ÷ 12 = 0.333 ft</li>
+  <li><strong>Calculate volume in cubic feet:</strong> 10 × 12 × 0.333 = 40 cu ft</li>
+  <li><strong>Convert to cubic yards:</strong> 40 ÷ 27 = 1.481 cu yd</li>
+  <li><strong>Apply 10% waste:</strong> 1.481 × 1.10 = 1.629 cu yd</li>
+  <li><strong>Bags needed (80 lb):</strong> 40 × 1.10 ÷ 0.6 ≈ 74 bags</li>
+</ol>
+<p><strong>Result:</strong> You need approximately 1.63 cubic yards of concrete — or about 74 bags of 80 lb pre-mix.</p>
+
+<h3>Example 2 — Round Column Footing (12 in diameter, 8 ft high, 10% waste)</h3>
+<ol>
+  <li><strong>Convert diameter to feet:</strong> 12 ÷ 12 = 1 ft</li>
+  <li><strong>Radius:</strong> 1 ÷ 2 = 0.5 ft</li>
+  <li><strong>Calculate volume in cubic feet:</strong> π × 0.5² × 8 = 6.28 cu ft</li>
+  <li><strong>Convert to cubic yards:</strong> 6.28 ÷ 27 = 0.233 cu yd</li>
+  <li><strong>Apply 10% waste:</strong> 0.233 × 1.10 = 0.256 cu yd</li>
+  <li><strong>Bags needed (60 lb):</strong> 6.28 × 1.10 ÷ 0.45 ≈ 16 bags</li>
+</ol>
+<p><strong>Result:</strong> You need approximately 0.26 cubic yards of concrete — or about 16 bags of 60 lb pre-mix.</p>
+
+<h3>Example 3 — Garden Staircase (3 ft wide, 7 in rise, 11 in run, 5 steps, 10% waste)</h3>
+<ol>
+  <li><strong>Convert rise to feet:</strong> 7 ÷ 12 = 0.583 ft</li>
+  <li><strong>Convert run to feet:</strong> 11 ÷ 12 = 0.917 ft</li>
+  <li><strong>Calculate volume in cubic feet:</strong> 5 × 3 × 0.583 × 0.917 ÷ 2 = 4.01 cu ft</li>
+  <li><strong>Convert to cubic yards:</strong> 4.01 ÷ 27 = 0.149 cu yd</li>
+  <li><strong>Apply 10% waste:</strong> 0.149 × 1.10 = 0.164 cu yd</li>
+  <li><strong>Bags needed (80 lb):</strong> 4.01 × 1.10 ÷ 0.6 ≈ 8 bags</li>
+</ol>
+<p><strong>Result:</strong> You need approximately 0.16 cubic yards of concrete — or about 8 bags of 80 lb pre-mix.</p>
+
+<div class="callout">
+  <strong>Pro Tip:</strong> Always order ready-mix concrete in 0.25-yard increments (the smallest amount most suppliers will deliver). For quantities under 1 cubic yard, pre-mixed bags are usually more cost-effective than a delivery. For quantities over 1 cubic yard, ready-mix delivery is almost always cheaper.</p>
+</div>
+
+<h2>Types of Concrete</h2>
+<p>Not all concrete is the same. Different types are designed for different applications and performance requirements:</p>
+<ul>
+  <li><strong>Normal-Strength Concrete (2500–3000 PSI):</strong> General-purpose. Used for patios, walkways, footings and non-structural slabs.</li>
+  <li><strong>Standard-Strength Concrete (3500–4000 PSI):</strong> Driveways, garage floors and residential foundations.</li>
+  <li><strong>High-Strength Concrete (5000+ PSI):</strong> Commercial buildings, bridges, high-rise columns and load-bearing elements.</li>
+  <li><strong>Fast-Setting Concrete:</strong> Sets in 20–40 minutes. Used for fence posts, mailboxes and urgent repairs.</li>
+  <li><strong>Fiber-Reinforced Concrete:</strong> Contains synthetic or steel fibers for added crack resistance. Used for slabs and overlays.</li>
+  <li><strong>Lightweight Concrete:</strong> Uses lightweight aggregates. Reduces structural load. Used in high-rise buildings.</li>
+  <li><strong>Self-Consolidating Concrete:</strong> Flows easily without vibration. Used in complex formwork and dense reinforcement.</li>
+  <li><strong>Shotcrete:</strong> Sprayed concrete. Used for tunnels, pools and retaining walls.</li>
+  <li><strong>Pervious Concrete:</strong> Porous, allows water drainage. Used for environmentally friendly paving.</li>
+</ul>
+
+<h2>Industry Standards and Codes</h2>
+<p>Concrete work must comply with several industry standards and building codes:</p>
+<ul>
+  <li><strong>ACI 318:</strong> Building Code Requirements for Structural Concrete (USA)</li>
+  <li><strong>ACI 301:</strong> Specifications for Structural Concrete</li>
+  <li><strong>ASTM C94:</strong> Standard Specification for Ready-Mixed Concrete</li>
+  <li><strong>ASTM C39:</strong> Compressive Strength of Cylindrical Concrete Specimens</li>
+  <li><strong>ASTM C143:</strong> Slump of Hydraulic-Cement Concrete</li>
+  <li><strong>EN 206:</strong> Concrete Specification, Performance, Production and Conformity (Europe)</li>
+  <li><strong>IS 456:</strong> Plain and Reinforced Concrete Code of Practice (India)</li>
+  <li><strong>IBC (International Building Code):</strong> Structural requirements</li>
+</ul>
+<p>Always check your local building codes before starting any structural concrete work. Requirements vary significantly by region, especially for seismic zones, frost depth and load-bearing capacity.</p>
+
+<h2>Cost Estimation</h2>
+<p>Concrete costs vary widely by region, mix type and project size:</p>
+<ul>
+  <li><strong>Ready-Mix Concrete (3000 PSI):</strong> $125–$175 per cubic yard (USA, 2026)</li>
+  <li><strong>Ready-Mix Concrete (4000 PSI):</strong> $140–$190 per cubic yard</li>
+  <li><strong>Ready-Mix Concrete (5000+ PSI):</strong> $160–$225 per cubic yard</li>
+  <li><strong>Pre-Mixed Bags (80 lb):</strong> $4–$7 per bag</li>
+  <li><strong>Pre-Mixed Bags (60 lb):</strong> $3–$6 per bag</li>
+  <li><strong>Delivery Fee:</strong> $50–$200 per truck (short-load fees apply under 3 yards)</li>
+  <li><strong>Pumping Fee:</strong> $200–$500 per project for large pours</li>
+  <li><strong>Labor (installation):</strong> $3–$8 per square foot</li>
+</ul>
+<p>DIY labor can save 40–60% of the total cost. For a 10×12 patio slab, expect $300–$600 in materials (either ready-mix or bags).</p>
+
+<h2>Tools and Equipment Needed</h2>
+<p>To pour concrete, you will need the following tools:</p>
+<ul>
+  <li><strong>Essential:</strong> Wheelbarrow, shovel, hoe, concrete mixer (or drill with mixing paddle), float, trowel, edger, groover, level, tape measure</li>
+  <li><strong>Recommended:</strong> Vibrator, screed board, bull float, magnesium float, steel trowel, hand saw (for formwork), stakes, string line</li>
+  <li><strong>Safety:</strong> Rubber gloves, safety glasses, dust mask, rubber boots, knee pads, sun protection</li>
+  <li><strong>Formwork:</strong> Plywood, 2×4 lumber, form release agent, stakes, screws or nails</li>
+</ul>
+<p>Safety first: concrete is caustic and can burn skin. Always wear gloves, eye protection and long sleeves. Work with a partner and avoid pouring in extreme heat.</p>
+
+<h2>Maintenance and Care</h2>
+<p>Proper maintenance extends the life of your concrete:</p>
+<ul>
+  <li><strong>Curing:</strong> Keep concrete moist for 3–7 days after pouring. Cover with plastic or wet burlap. Do not let it dry out.</li>
+  <li><strong>Sealing:</strong> Apply a concrete sealer after 28 days to protect against moisture, stains and freeze-thaw damage.</li>
+  <li><strong>Cleaning:</strong> Sweep regularly. Wash with mild soap and water. Avoid harsh acids unless necessary.</li>
+  <li><strong>Crack repair:</strong> Fill small cracks with concrete caulk or epoxy. Larger cracks may require professional repair.</li>
+  <li><strong>Joint maintenance:</strong> Clean and reseal expansion joints every 2–3 years.</li>
+  <li><strong>Snow and ice:</strong> Avoid rock salt — it damages concrete. Use sand or a concrete-safe de-icer.</li>
+  <li><strong>Inspection:</strong> Check annually for cracks, spalling and settling. Address issues early.</li>
+</ul>
+
+<h2>Real-World Applications</h2>
+<p>This concrete calculator is used by a wide range of people around the world:</p>
+<ul>
+  <li><strong>Homeowners:</strong> Planning patios, driveways, walkways, shed floors and fence posts.</li>
+  <li><strong>DIY enthusiasts:</strong> Tackling weekend concrete projects without overspending on materials.</li>
+  <li><strong>Professional contractors:</strong> Preparing accurate material lists for client quotes and purchase orders.</li>
+  <li><strong>Civil engineers:</strong> Estimating concrete quantities for foundations, footings and structural elements.</li>
+  <li><strong>Architects:</strong> Specifying concrete quantities during the design phase.</li>
+  <li><strong>Property developers:</strong> Budgeting for multi-unit residential and commercial construction.</li>
+  <li><strong>Building contractors:</strong> Ordering concrete for new builds, extensions and refurbishments.</li>
+  <li><strong>Facility managers:</strong> Planning concrete repairs and replacements in commercial buildings.</li>
+</ul>
+
+<h2>Common Mistakes to Avoid</h2>
+<p>Even experienced contractors make mistakes when calculating concrete quantities. Here are the most common ones:</p>
+<ul>
+  <li><strong>Forgetting waste allowance:</strong> The single biggest mistake. Always add 5–10% depending on subgrade condition.</li>
+  <li><strong>Using the wrong thickness:</strong> A driveway needs 5–6 inches, not 4. A footing may need 8–12 inches. Check local codes.</li>
+  <li><strong>Not accounting for subgrade variation:</strong> Rough or uneven ground requires more concrete to level. Add 15% for rough subgrade.</li>
+  <li><strong>Ordering too little:</strong> Running short mid-pour causes cold joints that weaken the entire slab. Always order slightly more.</li>
+  <li><strong>Miscalculating irregular shapes:</strong> Divide irregular shapes into rectangles or cylinders and calculate each separately.</li>
+  <li><strong>Forgetting formwork volume:</strong> Formwork occupies space. Account for this in small pours.</li>
+  <li><strong>Underestimating cure time:</strong> Concrete needs 28 days for full strength. Do not drive on it before 7 days.</li>
+  <li><strong>Mixing metric and imperial:</strong> Keep all measurements in the same unit system throughout. Our calculator handles conversions automatically.</li>
+  <li><strong>Ignoring weather:</strong> Extreme heat or cold affects curing. Adjust mix and cure time based on weather.</li>
+</ul>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">1. How many bags of concrete do I need for a 10×10 slab?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>A 10×10 foot slab at 4 inches thick needs about 1.23 cubic yards of concrete (without waste). With a standard 10% waste allowance, order approximately 1.36 cubic yards. If you are using pre-mixed bags, that is roughly 68 bags of 80 lb mix or 90 bags of 60 lb mix. Use the calculator above for exact numbers based on your specific dimensions.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">2. How thick should a concrete slab be?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>For walkways and patios, 4 inches (10 cm) is standard. Driveways carrying cars should be at least 5 inches (12.5 cm); for trucks or RVs, use 6 inches (15 cm). Footings and structural elements need 8–12 inches (20–30 cm), depending on load and soil conditions. Always check your local building code for minimum thickness requirements in your area.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">3. What is the formula for concrete volume?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>For a rectangular slab, the formula is <strong>Volume = Length × Width × Thickness</strong>, with all measurements in the same unit. For a round column, use <strong>Volume = π × r² × Height</strong>. Divide cubic feet by 27 to get cubic yards, or multiply cubic feet by 0.0283168 to get cubic metres. Our calculator handles all of these conversions automatically.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">4. Should I add extra concrete for waste?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Add 5–10% to your calculated volume to account for spillage, uneven subgrade, and small measurement errors. For a 1.23 cubic yard slab, order 1.36 cubic yards. Running short mid-pour causes cold joints that weaken the slab permanently. For ready-mix orders, round up to the nearest 0.25 cubic yard (the smallest increment most suppliers deliver).</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">5. How long does concrete take to cure?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Concrete reaches about 70% of its design strength in 7 days and full strength in 28 days. You can walk on it after 24–48 hours, but wait at least 7 days before driving on it. Keep it moist during the first 3–7 days to prevent surface cracks — cover with plastic sheeting or wet burlap. In hot weather, cure longer and more frequently.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">6. Does this concrete calculator work in metric units?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Use the unit toggle at the top of the calculator to switch between Imperial (feet, inches, cubic yards) and Metric (metres, centimetres, cubic metres). The form labels, input units and result units all update automatically — and your preference is saved for future visits using your browser's local storage. In metric, concrete is typically ordered by cubic metre.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span class="faq-q-text">7. Should I order ready-mix or use pre-mixed bags?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>As a general rule: if your project needs more than 1 cubic yard (0.76 m³), order ready-mix from a supplier. It is faster, cheaper per unit, and produces a consistent mix. For small projects under 1 cubic yard — such as fence posts, small footings or minor repairs — pre-mixed bags are more convenient. Delivery fees and short-load charges can make ready-mix expensive for small pours.</p>
+          </div>
+        </div>
+
+        <!-- AUTHOR BIO + SOURCES -->
+        <div class="author-bio">
+          <h3>About This Calculator</h3>
+          <p><strong>Written by:</strong> The BuildMetric team — builders, engineers and software developers with combined decades of experience in construction and DIY projects.</p>
+          <p><strong>Sources:</strong> Formulas based on standard construction industry practices, ACI 318 (Building Code Requirements for Structural Concrete), and ASTM C94 (Ready-Mixed Concrete) guidelines.</p>
+          <p><strong>Last Updated:</strong> January 2026</p>
+        </div>
+
+      </section>
+      <!-- END content-section -->
+
+    </div>
+    <!-- END primary-content -->
+
+    <!-- ============ RIGHT STICKY SIDEBAR ============ -->
+    <aside class="sticky-sidebar" aria-label="Sidebar">
+
+      <!-- AD SLOT 3 — SIDEBAR (300x250 Medium Rectangle) -->
+      <div class="ad-slot ad-slot-sidebar" aria-label="Advertisement">
+        <small>Advertisement</small>
+      </div>
+
+      <!-- Popular Calculators Widget -->
+      <div class="sidebar-card">
+        <h3>Popular Calculators</h3>
+        <ul class="sidebar-links">
+          <li><a href="../paint-calculator/index.html">Paint Calculator</a></li>
+          <li><a href="../tile-calculator/index.html">Tile Calculator</a></li>
+          <li><a href="../flooring-calculator/index.html">Flooring Calculator</a></li>
+          <li><a href="../drywall-calculator/index.html">Drywall Calculator</a></li>
+          <li><a href="../roofing-calculator/index.html">Roofing Calculator</a></li>
+          <li><a href="../brick-calculator/index.html">Brick Calculator</a></li>
+        </ul>
+      </div>
+
+      <!-- AD SLOT 4 — HALF-PAGE STICKY (300x600 desktop / 300x250 mobile) -->
+      <div class="ad-slot ad-slot-halfpage" aria-label="Advertisement">
+        <small>Advertisement</small>
+      </div>
+
+      <!-- Trust & E-E-A-T Badge Card -->
+      <div class="trust-badge-card">
+        <h4>Why Trust BuildMetric?</h4>
+        <ul>
+          <li>✅ 100% Free Forever</li>
+          <li>✅ Engineer Verified Formulas</li>
+          <li>✅ Metric &amp; Imperial Support</li>
+          <li>✅ No Sign-up Required</li>
+        </ul>
+      </div>
+
+    </aside>
+    <!-- END sticky-sidebar -->
+
+  </div>
+  <!-- END tool-main-grid -->
+
+</div>
+<!-- END container -->
+
+ 
+  <!-- ============================================================
+       LOWER FULL-WIDTH SECTION
+       ============================================================ -->
+  <section class="bottom-full-width">
+    <div class="container">
+
+      <!-- RELATED TOOLS GRID -->
+      <div class="related-tools">
+        <h2>Related Construction Calculators</h2>
+        <ul>
+          <li><a href="../brick-calculator/index.html">Brick Calculator</a></li>
+          <li><a href="../rebar-calculator/index.html">Rebar Calculator</a></li>
+          <li><a href="../sand-calculator/index.html">Sand Calculator</a></li>
+          <li><a href="../gravel-calculator/index.html">Gravel Calculator</a></li>
+          <li><a href="../drywall-calculator/index.html">Drywall Calculator</a></li>
+          <li><a href="../roofing-calculator/index.html">Roofing Calculator</a></li>
+        </ul>
+      </div>
+
+      <!-- LEGAL DISCLAIMER -->
+      <div class="legal-disclaimer">
+        <p><strong>Disclaimer:</strong> BuildMetric calculators are provided for estimation purposes only. Always consult a qualified professional before ordering materials or starting construction work. Results may vary based on site conditions, material specifications and local building codes.</p>
+      </div>
+
+    </div>
+    <!-- END container -->
+  </section>
+  <!-- END bottom-full-width -->
+
+  <!-- ============================================================
+       CONCRETE CALCULATOR JAVASCRIPT
+       ============================================================ -->
+  <script>
+  /* =========================================================
+     CONCRETE CALCULATOR — Tool Logic
+     Shapes: slab (rectangular), column (round), stair
+     Units: imperial (ft, in) and metric (m, cm)
+     ========================================================= */
+
+  /* ---------- 1. SHAPE TOGGLE ---------- */
+  function toggleConcreteShape() {
+    var shape = document.getElementById('shape').value;
+    var slabInputs = document.getElementById('slab-inputs');
+    var columnInputs = document.getElementById('column-inputs');
+    var stairInputs = document.getElementById('stair-inputs');
+
+    slabInputs.style.display = 'none';
+    columnInputs.style.display = 'none';
+    stairInputs.style.display = 'none';
+
+    if (shape === 'slab') {
+      slabInputs.style.display = 'block';
+    } else if (shape === 'column') {
+      columnInputs.style.display = 'block';
+    } else if (shape === 'stair') {
+      stairInputs.style.display = 'block';
+    }
+
+    clearResult();
+  }
+
+  /* ---------- 2. UNIT LABEL UPDATER ---------- */
+  function updateConcreteUnitLabels() {
+    var metric = isMetric();
+    var lUnit = document.getElementById('length-unit');
+    var wUnit = document.getElementById('width-unit');
+    var tUnit = document.getElementById('thickness-unit');
+    var dUnit = document.getElementById('diameter-unit');
+    var hUnit = document.getElementById('height-unit');
+    var swUnit = document.getElementById('stair-width-unit');
+    var srUnit = document.getElementById('stair-rise-unit');
+    var srunUnit = document.getElementById('stair-run-unit');
+
+    if (lUnit) lUnit.textContent = metric ? 'm' : 'ft';
+    if (wUnit) wUnit.textContent = metric ? 'm' : 'ft';
+    if (tUnit) tUnit.textContent = metric ? 'cm' : 'in';
+    if (dUnit) dUnit.textContent = metric ? 'cm' : 'in';
+    if (hUnit) hUnit.textContent = metric ? 'm' : 'ft';
+    if (swUnit) swUnit.textContent = metric ? 'm' : 'ft';
+    if (srUnit) srUnit.textContent = metric ? 'cm' : 'in';
+    if (srunUnit) srunUnit.textContent = metric ? 'cm' : 'in';
+  }
+
+  /* ---------- 3. MAIN CALCULATION ---------- */
+  function calculateConcrete() {
+    var shape = document.getElementById('shape').value;
+    var wastePct = parseFloat(document.getElementById('waste').value) || 0;
+    var metric = isMetric();
+
+    var volumeCubicFt = 0;
+    var shapeLabel = '';
+
+    if (shape === 'slab') {
+      var length = posNum('length');
+      var width = posNum('width');
+      var thickness = posNum('thickness');
+
+      if (length === null || width === null || thickness === null) {
+        showError('Please enter valid positive numbers for length, width and thickness.');
+        return;
+      }
+
+      var lengthFt, widthFt, thicknessFt;
+      if (metric) {
+        lengthFt = length / 0.3048;
+        widthFt = width / 0.3048;
+        thicknessFt = (thickness / 100) / 0.3048;
+      } else {
+        lengthFt = length;
+        widthFt = width;
+        thicknessFt = thickness / 12;
+      }
+
+      volumeCubicFt = lengthFt * widthFt * thicknessFt;
+      shapeLabel = 'Rectangular slab';
+
+    } else if (shape === 'column') {
+      var diameter = posNum('diameter');
+      var height = posNum('height');
+
+      if (diameter === null || height === null) {
+        showError('Please enter valid positive numbers for diameter and height.');
+        return;
+      }
+
+      var diameterFt, heightFt;
+      if (metric) {
+        diameterFt = (diameter / 100) / 0.3048;
+        heightFt = height / 0.3048;
+      } else {
+        diameterFt = diameter / 12;
+        heightFt = height;
+      }
+
+      var radiusFt = diameterFt / 2;
+      volumeCubicFt = Math.PI * radiusFt * radiusFt * heightFt;
+      shapeLabel = 'Round column';
+
+    } else if (shape === 'stair') {
+      var stairWidth = posNum('stair-width');
+      var stairRise = posNum('stair-rise');
+      var stairRun = posNum('stair-run');
+      var stairCount = parseInt(document.getElementById('stair-count').value) || 0;
+
+      if (stairWidth === null || stairRise === null || stairRun === null || stairCount < 1) {
+        showError('Please enter valid values for stair width, rise, run and number of steps.');
+        return;
+      }
+
+      var stairWidthFt, stairRiseFt, stairRunFt;
+      if (metric) {
+        stairWidthFt = stairWidth / 0.3048;
+        stairRiseFt = (stairRise / 100) / 0.3048;
+        stairRunFt = (stairRun / 100) / 0.3048;
+      } else {
+        stairWidthFt = stairWidth;
+        stairRiseFt = stairRise / 12;
+        stairRunFt = stairRun / 12;
+      }
+
+      volumeCubicFt = stairCount * stairWidthFt * stairRiseFt * stairRunFt / 2;
+      shapeLabel = 'Staircase (' + stairCount + ' steps)';
+    }
+
+    var volumeWithWaste = applyWaste(volumeCubicFt, wastePct);
+    var volumeCubicYards = volumeWithWaste / 27;
+    var volumeCubicMetres = volumeWithWaste * 0.0283168;
+    var volumeLitres = volumeCubicMetres * 1000;
+
+    var bags80lb = bagsNeeded(volumeWithWaste, 0.6);
+    var bags60lb = bagsNeeded(volumeWithWaste, 0.45);
+    var bags50kg = bagsNeeded(volumeWithWaste, 1.25);
+    var bags25kg = bagsNeeded(volumeWithWaste, 0.625);
+
+    var html = '';
+    html += '<h3>' + shapeLabel + ' — Concrete Needed</h3>';
+
+    if (metric) {
+      html += '<span class="result-primary">' + fmt(volumeCubicMetres, 3) + ' m³</span>';
+      html += '<span class="result-secondary">' + fmt(volumeCubicYards, 3) + ' cubic yards (imperial equivalent)</span>';
+    } else {
+      html += '<span class="result-primary">' + fmt(volumeCubicYards, 3) + ' cubic yards</span>';
+      html += '<span class="result-secondary">' + fmt(volumeCubicMetres, 3) + ' m³ (metric equivalent)</span>';
+    }
+
+    html += '<div style="margin-top:14px;">';
+    html += buildResultLine('Volume (cubic feet)', fmt(volumeWithWaste, 2) + ' cu ft');
+    html += buildResultLine('Volume (cubic yards)', fmt(volumeCubicYards, 3) + ' cu yd');
+    html += buildResultLine('Volume (cubic metres)', fmt(volumeCubicMetres, 3) + ' m³');
+    html += buildResultLine('Volume (litres)', fmt(volumeLitres, 1) + ' L');
+    html += '</div>';
+
+    html += '<div style="margin-top:16px;">';
+    html += '<h3 style="font-size:0.98rem;margin-bottom:10px;">Bags of Pre-Mixed Concrete</h3>';
+    if (metric) {
+      html += buildResultLine('50 kg bags', bags50kg + ' bags');
+      html += buildResultLine('25 kg bags', bags25kg + ' bags');
+    } else {
+      html += buildResultLine('80 lb bags', bags80lb + ' bags');
+      html += buildResultLine('60 lb bags', bags60lb + ' bags');
+    }
+    html += '</div>';
+
+    if (wastePct > 0) {
+      html += '<p class="result-note">Includes ' + wastePct + '% waste allowance for spillage and uneven subgrade. For ready-mix orders, round up to the nearest 0.25 cubic yard (or 0.25 m³).</p>';
+    } else {
+      html += '<p class="result-note">No waste allowance added. We recommend adding 5–10% for real-world conditions.</p>';
+    }
+
+    showResult(html);
+  }
+
+  /* ---------- 4. RESET ---------- */
+  function resetConcrete() {
+    resetForm('concrete-form');
+    updateConcreteUnitLabels();
+    toggleConcreteShape();
+  }
+
+  /* ---------- 5. UNIT CHANGE HOOK ---------- */
+  if (typeof onUnitChange === 'function') {
+    onUnitChange(function () {
+      updateConcreteUnitLabels();
+      var resultBox = document.getElementById('result');
+      if (resultBox && resultBox.classList.contains('show')) {
+        calculateConcrete();
+      }
+    });
+  }
+
+  /* ---------- 6. INIT ON LOAD ---------- */
+  document.addEventListener('DOMContentLoaded', function () {
+    updateConcreteUnitLabels();
+    toggleConcreteShape();
+  });
+  </script>
+
+</main>
+
+<!-- ============================================================
+     SITE FOOTER — 4 Columns
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div>
+        <h4>BuildMetric</h4>
+        <p>Precise calculators for builders, contractors and DIYers worldwide. 200+ free tools covering every major construction and DIY calculation. Built for accuracy, transparency and global use.</p>
+      </div>
+
+      <div>
+        <h4>Popular Tools</h4>
+        <ul>
+          <li><a href="../concrete-calculator/index.html">Concrete Calculator</a></li>
+          <li><a href="../paint-calculator/index.html">Paint Calculator</a></li>
+          <li><a href="../roofing-calculator/index.html">Roofing Calculator</a></li>
+          <li><a href="../tile-calculator/index.html">Tile Calculator</a></li>
+          <li><a href="../lumber-calculator/index.html">Lumber Calculator</a></li>
+          <li><a href="../flooring-calculator/index.html">Flooring Calculator</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Information</h4>
+        <ul>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="../terms-of-service.html">Terms of Service</a></li>
+          <li><a href="../disclaimer.html">Disclaimer</a></li>
+        </ul>
+
+        <h4 style="margin-top:20px;">Follow Us</h4>
+        <ul>
+          <li><a href="https://youtube.com/@buildmetrictools" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://www.facebook.com/BuildMetric" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="../index.html#cat-concrete-masonry">Concrete &amp; Masonry</a></li>
+          <li><a href="../index.html#cat-interior">Interior &amp; Finishing</a></li>
+          <li><a href="../index.html#cat-exterior">Exterior &amp; Structure</a></li>
+          <li><a href="../index.html#cat-landscaping">Landscaping &amp; Outdoor</a></li>
+          <li><a href="../index.html#cat-lumber-framing">Lumber &amp; Framing</a></li>
+          <li><a href="../index.html#cat-energy">Energy &amp; Efficiency</a></li>
+          <li><a href="../index.html#cat-plumbing-electrical">Plumbing &amp; Electrical</a></li>
+          <li><a href="../index.html#cat-unit-converters">Unit Converters</a></li>
+          <li><a href="../index.html#cat-roofing">Roofing &amp; Waterproofing</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="yr"></span> BuildMetric. All rights reserved. Made for builders worldwide.</p>
+      <p style="margin-top:6px;font-size:0.78rem;">
+        BuildMetric calculators are provided for estimation purposes only. Always consult a qualified professional before ordering materials or starting construction work. Results may vary based on site conditions, material specifications and local building codes.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>
+   
