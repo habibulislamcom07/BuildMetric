@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Cement Calculator - Multi-Standard Construction Tool | Calcora</title>
+  <meta name="description" content="International cement calculator for ACI, IS Code, and Eurocode standards. Calculate 50kg, 94lb, 40kg cement bags, sand, aggregate, and water instantly.">
+  <link rel="canonical" href="https://calcora.com/cement-calculator">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calcora International Cement Calculator",
+    "url": "https://calcora.com/cement-calculator",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All"
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #0f4c81;
+      --primary-hover: #0a355c;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --success: #10b981;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
+    
+    header { background: #fff; border-bottom: 1px solid var(--border); padding: 1rem 0; }
+    .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+    
+    .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr; gap: 2rem; }
+    @media (min-width: 992px) { .container { grid-template-columns: 2fr 1fr; } }
+
+    .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    h1 { font-size: 1.8rem; color: var(--primary); margin-bottom: 0.5rem; }
+    .subtitle { color: var(--muted); margin-bottom: 1.5rem; font-size: 0.95rem; }
+
+    .form-group { margin-bottom: 1.2rem; }
+    label { display: block; font-weight: 600; margin-bottom: 0.4rem; font-size: 0.9rem; }
+    input, select { width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; outline: none; background: #fff; }
+    input:focus, select:focus { border-color: var(--primary); }
+
+    /* International Hybrid Unit Selector */
+    .unit-switch { display: flex; gap: 6px; margin-bottom: 1.5rem; background: #f1f5f9; padding: 4px; border-radius: 8px; }
+    .unit-btn { flex: 1; padding: 8px 4px; border: none; background: transparent; font-weight: 600; font-size: 0.85rem; cursor: pointer; border-radius: 6px; color: var(--muted); text-align: center; }
+    .unit-btn.active { background: #fff; color: var(--primary); box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+
+    .btn-calc { width: 100%; background: var(--primary); color: #fff; padding: 0.85rem; border: none; border-radius: 8px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+    .btn-calc:hover { background: var(--primary-hover); }
+
+    .result-box { display: none; margin-top: 1.5rem; background: #f0f7ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 1.2rem; }
+    .result-line { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px dashed #cbd5e1; font-size: 0.95rem; }
+    .result-line:last-child { border-bottom: none; }
+    .result-line span:last-child { font-weight: 700; color: var(--primary); }
+
+    /* Green Checkmarks Trust Badge */
+    .trust-badge-card { background: #ffffff; border: 1px solid var(--border); border-left: 4px solid var(--success); border-radius: 8px; padding: 20px; margin-top: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    .trust-badge-card h4 { margin-top: 0; margin-bottom: 12px; color: var(--primary); font-size: 1.1rem; }
+    .trust-badge-card ul { list-style: none; padding: 0; margin: 0; }
+    .trust-badge-card li { position: relative; padding-left: 28px; margin-bottom: 10px; font-size: 0.95rem; color: #334155; line-height: 1.4; }
+    .trust-badge-card li::before { content: "✔"; position: absolute; left: 0; top: 0; color: var(--success); font-weight: 800; font-size: 1.05rem; }
+
+    /* Single Icon FAQ Styling */
+    .faq-question { display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 8px; font-size: 1rem; font-weight: 600; color: #1e293b; text-align: left; cursor: pointer; transition: background 0.2s; }
+    .faq-question:hover { background-color: #f8fafc; }
+    .faq-icon { font-size: 1.25rem; font-weight: 700; color: var(--primary); line-height: 1; margin-left: 12px; flex-shrink: 0; }
+    .faq-answer { display: none; padding: 12px 20px; background: #f8fafc; border-radius: 0 0 8px 8px; margin-top: -8px; margin-bottom: 8px; font-size: 0.95rem; color: #475569; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <a href="#" class="logo">Calcora</a>
+  </div>
+</header>
+
+<div class="container">
+  <main>
+    <div class="card">
+      <h1>International Cement Calculator</h1>
+      <p class="subtitle">Global material estimation engine compliant with ACI 318, IS 456 & Eurocode standards.</p>
+
+      <!-- Dynamic Hybrid Unit Switcher -->
+      <div class="unit-switch">
+        <button class="unit-btn active" id="btn-metric" onclick="setUnit('metric')">Metric (m / mm)</button>
+        <button class="unit-btn" id="btn-imperial" onclick="setUnit('imperial')">US Customary (ft / in)</button>
+        <button class="unit-btn" id="btn-asian" onclick="setUnit('asian')">Asian Standard (Sft / in)</button>
+      </div>
+
+      <form id="cementForm" onsubmit="calculate(event)">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <div class="form-group">
+            <label for="application">Application Type</label>
+            <select id="application" onchange="toggleInputs()">
+              <option value="concrete">Concrete Slab / Footing</option>
+              <option value="mortar">Mortar Mix (Brick / Plaster)</option>
+            </select>
+          </div>
+
+          <!-- International Bag Standard Selector -->
+          <div class="form-group">
+            <label for="bagStandard">Cement Bag Weight</label>
+            <select id="bagStandard">
+              <option value="50kg">50 kg Bag (Global / Asia / EU)</option>
+              <option value="94lb">94 lb Bag (US Portland Standard)</option>
+              <option value="40kg">40 kg Bag (UK / AU Retail)</option>
+              <option value="25kg">25 kg Pre-mix Bag</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="mixGrade">Concrete Mix Grade / Volumetric Ratio</label>
+          <select id="mixGrade">
+            <option value="1:1.5:3">M20 / C20 (1 : 1.5 : 3) - Structural Standard</option>
+            <option value="1:2:4">M15 / C15 (1 : 2 : 4) - Slabs & Paths</option>
+            <option value="1:1:2">M25 / C25 (1 : 1 : 2) - Columns & Heavy Duty</option>
+            <option value="1:3">1 : 3 Mortar Mix (High Load Masonry)</option>
+            <option value="1:4">1 : 4 Mortar Mix (Plastering / Brickwork)</option>
+            <option value="1:6">1 : 6 Mortar Mix (Pointing Work)</option>
+          </select>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
+          <div class="form-group">
+            <label for="length">Length (<span class="u-len">m</span>)</label>
+            <input type="number" id="length" step="0.01" value="10" required>
+          </div>
+          <div class="form-group">
+            <label for="width">Width (<span class="u-len">m</span>)</label>
+            <input type="number" id="width" step="0.01" value="10" required>
+          </div>
+          <div class="form-group">
+            <label for="thickness">Thickness (<span class="u-thk">mm</span>)</label>
+            <input type="number" id="thickness" step="0.1" value="100" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="waste">Wastage & Spillage Allowance (%)</label>
+          <input type="number" id="waste" value="10">
+        </div>
+
+        <button type="submit" class="btn-calc">Calculate Material Requirements</button>
+      </form>
+
+      <div id="result" class="result-box"></div>
+    </div>
+
+         <!-- Article Section & International Calculation Standards -->
+    <article style="margin-top: 2rem;" class="card">
+      <h2 style="color: var(--primary); font-size: 1.5rem; margin-bottom: 1rem;">International Cement & Concrete Estimation Guide</h2>
+      <p style="margin-bottom: 1rem; font-size: 0.95rem; color: #334155;">
+        Accurate material estimation requires accounting for international unit conversions, local packaging standards, and dry volume shrinkage factors. Whether following American Concrete Institute (ACI 318), Indian Standards (IS 456), or Eurocode (BS EN 1992) guidelines, dry ingredients shrink significantly upon adding water due to void air displacement.
+      </p>
+
+      <h3 style="color: var(--primary); font-size: 1.2rem; margin: 1.2rem 0 0.5rem;">Volumetric Conversion & Shrinkage Factors</h3>
+      <ul style="margin-left: 1.2rem; margin-bottom: 1rem; font-size: 0.95rem; color: #334155;">
+        <li><strong>Concrete Dry Factor (1.54):</strong> Dry concrete ingredients reduce by approximately 35% in volume when water is mixed. Multiply wet concrete volume by 1.54 to determine required dry batch material.</li>
+        <li><strong>Mortar Dry Factor (1.33):</strong> Brickwork and plastering mortar reduces by approximately 25% when mixed. Multiply wet volume by 1.33 for dry material estimations.</li>
+        <li><strong>Global Bag Standards:</strong> 50 kg (Asia/Europe), 94 lb (US Portland), 40 kg (UK/AU retail), and 25 kg (DIY pre-mix).</li>
+      </ul>
+
+      <h3 style="color: var(--primary); font-size: 1.2rem; margin: 1.2rem 0 0.5rem;">International Mix Grades & Ratios</h3>
+      <ul style="margin-left: 1.2rem; margin-bottom: 1rem; font-size: 0.95rem; color: #334155;">
+        <li><strong>M15 / C15 (1 : 2 : 4):</strong> General non-structural slabs, garden paths, and patio bases.</li>
+        <li><strong>M20 / C20 (1 : 1.5 : 3):</strong> Standard structural concrete for foundations, footings, and slabs.</li>
+        <li><strong>M25 / C25 (1 : 1 : 2):</strong> Heavy-duty structural concrete for reinforced columns, beams, and retaining walls.</li>
+      </ul>
+
+      <h3 style="color: var(--primary); font-size: 1.2rem; margin: 1.2rem 0 0.5rem;">Worked Calculation Example</h3>
+      <div style="background: #f8fafc; padding: 1rem; border-left: 4px solid var(--primary); border-radius: 4px; font-size: 0.9rem; color: #334155; margin-bottom: 1.5rem;">
+        <strong>Example — Concrete Slab (10 m × 10 m, 100 mm thick, M20 Grade, 10% waste)</strong>
+        <ol style="margin-left: 1.2rem; margin-top: 0.5rem;">
+          <li><strong>Convert thickness to metres:</strong> 100 mm = 0.1 m</li>
+          <li><strong>Calculate wet volume:</strong> 10 × 10 × 0.1 = 10 m³</li>
+          <li><strong>Add 10% waste margin:</strong> 10 × 1.10 = 11 m³ total wet volume</li>
+          <li><strong>Apply dry shrinkage factor (1.54):</strong> 11 × 1.54 = 16.94 m³ dry volume required</li>
+          <li><strong>Mix Breakdown (M20 = 1:1.5:3, total 5.5 parts):</strong> Cement Volume = 16.94 × (1 / 5.5) = 3.08 m³</li>
+          <li><strong>Calculate mass and bags:</strong> 3.08 m³ × 1,440 kg/m³ = 4,435.2 kg &rarr; 4,435.2 ÷ 50 kg = <strong>89 bags</strong> (50 kg each)</li>
+        </ol>
+      </div>
+
+      <!-- 7 FAQs Section with Single Toggle Icon (+) -->
+      <h2 style="color: var(--primary); font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem;">Frequently Asked Questions</h2>
+      
+      <div class="faq-accordion">
+        <button class="faq-question" type="button">
+          <span>1. How many bags of cement do I need for 1 cubic metre of concrete?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>For a standard M20 concrete mix (1:1.5:3 ratio), you need approximately 8 bags of 50kg cement per cubic metre of wet concrete.</p>
+        </div>
+      </div>
+
+      <div class="faq-accordion">
+        <button class="faq-question" type="button">
+          <span>2. How many 94lb cement bags make 1 cubic yard of concrete?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>For general structural concrete, approximately 6 to 7 bags of 94lb US Portland cement are required per cubic yard of wet concrete.</p>
+        </div>
+      </div>
+
+      <div class="faq-accordion">
+        <button class="faq-question" type="button">
+          <span>3. What is dry volume factor in cement calculations?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Dry mix volume shrinks when combined with water due to air void displacement. Wet volume is multiplied by a dry volume conversion factor of 1.54 for concrete mixes and 1.33 for mortar mixes.</p>
+        </div>
+      </div>
+
+      <div class="faq-accordion">
+        <button class="faq-question" type="button">
+          <span>4. What is the standard water-cement ratio?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>The typical water-cement mass ratio ranges between 0.40 and 0.50, equating to roughly 20 to 25 litres of water per 50kg bag of cement.</p>
+        </div>
+      </div>
+
+      <div class="faq-accordion">
+        <button class="faq-question" type="button">
+          <span>5. What is the mix ratio for M15, M20, and M25 grade concrete?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>M15 uses 1:2:4, M20 uses 1:1.5:3, and M25 uses 1:1:2 (Cement : Fine Aggregate : Coarse Aggregate by volume).</p>
+        </div>
+      </div>
+
+      <div class="faq-accordion">
+        <button class="faq-question" type="button">
+          <span>6. How much waste margin should I add when ordering cement?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>A standard waste margin of 5% to 10% is recommended to compensate for formwork bowing, subgrade irregularities, and site handling loss.</p>
+        </div>
+      </div>
+
+      <div class="faq-accordion">
+        <button class="faq-question" type="button">
+          <span>7. Can this calculator switch between Imperial and Metric units?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes, Calcora's International Cement Calculator supports Metric, US Customary, and Asian Standard Sft measurements with multiple bag weight options.</p>
+        </div>
+      </div>
+
+      <!-- E-E-A-T Author Card -->
+      <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.85rem; color: var(--muted);">
+        <p><strong>Written by:</strong> The Calcora Engineering Team — civil engineers, estimators, and software developers with global construction management experience.</p>
+        <p><strong>Sources:</strong> Compliant with ACI 318, IS 456:2000, and Eurocode 2 (BS EN 1992) concrete engineering specifications.</p>
+        <p><strong>Last Updated:</strong> September 2026</p>
+      </div>
+    </article>
+  </main>
+
+  <!-- Sidebar -->
+  <aside>
+    <!-- Green Checkmarks Trust Badge Card -->
+    <div class="trust-badge-card">
+      <h4>Why Trust Calcora?</h4>
+      <ul>
+        <li>ACI, IS Code &amp; Eurocode Compliant Algorithms</li>
+        <li>Hybrid Multi-Unit &amp; Bag Weight Switcher</li>
+        <li>Real-Time Spillage &amp; Volumetric Shrinkage Factor</li>
+        <li>100% Free, Ad-Lite &amp; Fully Mobile Responsive</li>
+      </ul>
+    </div>
+
+    <!-- Related Masonry Tools -->
+    <div class="card" style="margin-top: 1.5rem;">
+      <h4 style="color: var(--primary); margin-bottom: 1rem;">Related Masonry Tools</h4>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <a href="#" style="display: block; padding: 10px; background: #f8fafc; border: 1px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.9rem;">Concrete Calculator</a>
+        <a href="#" style="display: block; padding: 10px; background: #f8fafc; border: 1px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.9rem;">Mortar Calculator</a>
+        <a href="#" style="display: block; padding: 10px; background: #f8fafc; border: 1px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.9rem;">Block Calculator</a>
+        <a href="#" style="display: block; padding: 10px; background: #f8fafc; border: 1px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.9rem;">Brick Calculator</a>
+        <a href="#" style="display: block; padding: 10px; background: #f8fafc; border: 1px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.9rem;">Sand Calculator</a>
+      </div>
+    </div>
+
+    <div style="margin-top: 1.5rem; padding: 12px; background: #fff; border: 1px solid var(--border); border-radius: 8px; font-size: 0.8rem; color: var(--muted);">
+      <strong>Disclaimer:</strong> Calcora material calculations are structural estimates based on dry bulk densities. Always verify local site conditions, moisture levels, and building codes prior to pouring.
+    </div>
+  </aside>
+</div>
+
+<footer style="background: #0a192f; color: #cbd5e1; padding: 2rem 0; margin-top: 4rem;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 1rem; font-size: 0.85rem;">
+    <p style="font-weight: 700; color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">CALCORA</p>
+    <p>International-grade, professional calculation tools for builders, contractors, and civil engineers worldwide.</p>
+  </div>
+</footer>
+  
+ <script>
+let currentUnit = 'metric';
+
+function setUnit(unit) {
+  currentUnit = unit;
+  document.getElementById('btn-metric').classList.toggle('active', unit === 'metric');
+  document.getElementById('btn-imperial').classList.toggle('active', unit === 'imperial');
+  document.getElementById('btn-asian').classList.toggle('active', unit === 'asian');
+
+  const lenUnits = document.querySelectorAll('.u-len');
+  const thkUnits = document.querySelectorAll('.u-thk');
+
+  if (unit === 'metric') {
+    lenUnits.forEach(el => el.textContent = 'm');
+    thkUnits.forEach(el => el.textContent = 'mm');
+    document.getElementById('bagStandard').value = '50kg';
+  } else if (unit === 'imperial') {
+    lenUnits.forEach(el => el.textContent = 'ft');
+    thkUnits.forEach(el => el.textContent = 'in');
+    document.getElementById('bagStandard').value = '94lb';
+  } else if (unit === 'asian') {
+    lenUnits.forEach(el => el.textContent = 'ft');
+    thkUnits.forEach(el => el.textContent = 'in');
+    document.getElementById('bagStandard').value = '50kg';
+  }
+}
+
+function toggleInputs() {
+  const app = document.getElementById('application').value;
+  const mixSelect = document.getElementById('mixGrade');
+  
+  if (app === 'mortar') {
+    mixSelect.innerHTML = `
+      <option value="1:3">1 : 3 Mortar Mix (High Load Masonry)</option>
+      <option value="1:4">1 : 4 Mortar Mix (Plastering / Brickwork)</option>
+      <option value="1:6">1 : 6 Mortar Mix (Pointing Work)</option>
+    `;
+  } else {
+    mixSelect.innerHTML = `
+      <option value="1:1.5:3">M20 / C20 (1 : 1.5 : 3) - Structural Standard</option>
+      <option value="1:2:4">M15 / C15 (1 : 2 : 4) - Slabs & Paths</option>
+      <option value="1:1:2">M25 / C25 (1 : 1 : 2) - Columns & Heavy Duty</option>
+    `;
+  }
+}
+
+function fmt(num, decimals) {
+  return num.toLocaleString('en-US', {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals
+  });
+}
+
+function buildResultLine(label, value) {
+  return '<div class="result-line"><span>' + label + '</span><span>' + value + '</span></div>';
+}
+
+function showResult(html) {
+  const resDiv = document.getElementById('result');
+  resDiv.innerHTML = html;
+  resDiv.style.display = 'block';
+}
+
+function calculate(e) {
+  e.preventDefault();
+
+  const app = document.getElementById('application').value;
+  const bagStd = document.getElementById('bagStandard').value;
+  const mixStr = document.getElementById('mixGrade').value;
+  const parts = mixStr.split(':').map(Number);
+  
+  const cementPart = parts[0];
+  const sandPart = parts[1];
+  const aggPart = parts[2] || 0;
+  const totalParts = cementPart + sandPart + aggPart;
+
+  const length = parseFloat(document.getElementById('length').value) || 0;
+  const width = parseFloat(document.getElementById('width').value) || 0;
+  const thickness = parseFloat(document.getElementById('thickness').value) || 0;
+  const wastePct = parseFloat(document.getElementById('waste').value) || 0;
+
+  const wasteFactor = 1 + (wastePct / 100);
+
+  // Bag Weight in KG
+  let bagWeightKg = 50;
+  if (bagStd === '94lb') bagWeightKg = 42.6377; // 94 lbs in kg
+  else if (bagStd === '40kg') bagWeightKg = 40;
+  else if (bagStd === '25kg') bagWeightKg = 25;
+
+  // Dry volume factor: 1.54 for concrete, 1.33 for mortar
+  const dryFactor = (app === 'concrete') ? 1.54 : 1.33;
+
+  let wetVolM3 = 0;
+  let wetVolFt3 = 0;
+
+  if (currentUnit === 'metric') {
+    const thkM = thickness / 1000;
+    wetVolM3 = length * width * thkM * wasteFactor;
+    wetVolFt3 = wetVolM3 * 35.3147;
+  } else {
+    // Imperial or Asian Standard (ft + in)
+    const thkFt = thickness / 12;
+    wetVolFt3 = length * width * thkFt * wasteFactor;
+    wetVolM3 = wetVolFt3 * 0.0283168;
+  }
+
+  const wetVolYd3 = wetVolFt3 / 27;
+  const dryVolM3 = wetVolM3 * dryFactor;
+
+  const cementVolM3 = dryVolM3 * (cementPart / totalParts);
+  const sandVolM3 = dryVolM3 * (sandPart / totalParts);
+  const aggVolM3 = aggPart > 0 ? dryVolM3 * (aggPart / totalParts) : 0;
+
+  // Mass Calculations (Densities: Cement 1440 kg/m3, Sand 1600 kg/m3, Gravel 1520 kg/m3)
+  const cementKg = cementVolM3 * 1440;
+  const sandKg = sandVolM3 * 1600;
+  const aggKg = aggVolM3 * 1520;
+
+  const totalBags = Math.ceil(cementKg / bagWeightKg);
+  const sandTonnes = sandKg / 1000;
+  const aggTonnes = aggKg / 1000;
+  const waterLiters = cementKg * 0.45;
+
+  // Imperial Conversions
+  const cementLb = cementKg * 2.20462;
+  const sandLb = sandKg * 2.20462;
+  const sandTonsUS = sandLb / 2000;
+  const aggLb = aggKg * 2.20462;
+  const aggTonsUS = aggLb / 2000;
+  const waterGallons = waterLiters * 0.264172;
+
+  let html = '';
+
+  // Main Header Result
+  html += '<div style="font-size:1.4rem;font-weight:700;color:#0f4c81;margin-bottom:4px;">' + totalBags + ' Bags of Cement (' + bagStd + ')</div>';
+  html += '<div style="color:#64748b;margin-bottom:12px;">' + fmt(wetVolM3, 2) + ' m³ (' + fmt(wetVolYd3, 2) + ' cu yd / ' + fmt(wetVolFt3, 1) + ' cu ft) total wet volume</div>';
+
+  html += '<div style="margin-top:14px;">';
+  html += buildResultLine('Total Wet Volume (incl. waste)', fmt(wetVolM3, 3) + ' m³ / ' + fmt(wetVolFt3, 1) + ' cu ft');
+  html += buildResultLine('Total Dry Volume Required', fmt(dryVolM3, 3) + ' m³ / ' + fmt(dryVolM3 * 35.3147, 1) + ' cu ft');
+  html += buildResultLine('Cement Mass Required', fmt(cementKg, 1) + ' kg (' + fmt(cementLb, 1) + ' lbs)');
+  html += buildResultLine('Total Cement Bags (' + bagStd + ')', totalBags + ' bags');
+  html += buildResultLine('Fine Aggregate (Sand)', fmt(sandKg, 1) + ' kg (' + fmt(sandTonnes, 2) + ' Tonnes / ' + fmt(sandTonsUS, 2) + ' US Tons)');
+  
+  if (aggPart > 0) {
+    html += buildResultLine('Coarse Aggregate (Gravel)', fmt(aggKg, 1) + ' kg (' + fmt(aggTonnes, 2) + ' Tonnes / ' + fmt(aggTonsUS, 2) + ' US Tons)');
+  }
+  
+  html += buildResultLine('Water Required', fmt(waterLiters, 1) + ' Litres (' + fmt(waterGallons, 1) + ' US Gal)');
+  html += '</div>';
+
+  html += '<p style="font-size:0.85rem;color:#64748b;margin-top:12px;">Calculations apply international dry compaction factors (1.54 concrete / 1.33 mortar), a 0.45 water-cement ratio, and ' + wastePct + '% waste allowance.</p>';
+
+  showResult(html);
+}
+
+// Single Icon FAQ Toggle Event Listener (Fixes double '+' issue)
+document.querySelectorAll('.faq-question').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    const parent = this.parentElement;
+    const ans = parent.querySelector('.faq-answer');
+    const icon = this.querySelector('.faq-icon');
+    
+    const isOpen = ans.style.display === 'block';
+    ans.style.display = isOpen ? 'none' : 'block';
+    icon.textContent = isOpen ? '+' : '−';
+  });
+});
+</script>
+
+</body>
+</html>
