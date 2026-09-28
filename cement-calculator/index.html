@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0f4c81">
+
+<title>Cement Calculator — Estimate Cement Bags, Sand & Aggregate | Calcora</title>
+<meta name="description" content="Free cement calculator to estimate exact cement bags (50kg / 94lb), sand weight, and aggregate volume for slab, footing, column, mortar, and plaster mix ratios. Works in Imperial and Metric units.">
+<meta name="keywords" content="cement calculator, cement bags calculator, concrete ratio calculator, cement sand aggregate calculator, how many cement bags do I need, slab cement calculator, mortar cement estimator">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="Calcora">
+<meta name="language" content="English">
+
+<link rel="canonical" href="https://calcora.com/cement-calculator/index.html">
+
+<meta property="og:title" content="Cement Calculator — Estimate Cement Bags, Sand & Aggregate">
+<meta property="og:description" content="Calculate exact cement bags, aggregate volume, and sand tonnage for slabs, footings, mortar, and plaster. Works in imperial and metric units.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://calcora.com/cement-calculator/index.html">
+<meta property="og:site_name" content="Calcora">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cement Calculator — Estimate Cement Bags, Sand & Aggregate">
+<meta property="twitter:description" content="Accurate cement bag and aggregate quantity estimator for contractors and DIY builders. Fast, free, and precise.">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+<!-- Structured Data — WebApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Cement Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "All",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Estimate total cement bags, sand mass, gravel volume, and water requirements for various mix grades, slabs, footings, and mortar applications.",
+  "inLanguage": "en"
+}
+</script>
+
+<!-- Structured Data — FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"How many bags of cement do I need for 1 cubic metre of concrete?","acceptedAnswer":{"@type":"Answer","text":"For a standard M20 concrete mix grade (1:1.5:3 ratio), you need approximately 8 bags of 50kg cement per cubic metre of wet concrete."}},
+    {"@type":"Question","name":"How many 94lb cement bags make 1 cubic yard of concrete?","acceptedAnswer":{"@type":"Answer","text":"For a general structural mix (around 4,000 PSI), approximately 6 to 7 bags of 94lb Portland cement are required per cubic yard of wet concrete."}},
+    {"@type":"Question","name":"What is dry volume factor in cement calculations?","acceptedAnswer":{"@type":"Answer","text":"Dry mix volume shrinks when combined with water. To account for air void displacement, wet volume is multiplied by a dry volume conversion factor of 1.54 for concrete mixes and 1.33 for mortar mixes."}},
+    {"@type":"Question","name":"What is the standard water-cement ratio?","acceptedAnswer":{"@type":"Answer","text":"The typical water-cement mass ratio ranges between 0.40 and 0.50, equating to roughly 20 to 25 litres (5.3 to 6.6 US gallons) of water per 50kg bag of cement."}},
+    {"@type":"Question","name":"What is the mix ratio for M15, M20, and M25 grade concrete?","acceptedAnswer":{"@type":"Answer","text":"M15 uses 1:2:4, M20 uses 1:1.5:3, and M25 uses 1:1:2 (Cement : Sand : Coarse Aggregate by volume)."}},
+    {"@type":"Question","name":"How much waste margin should I add when ordering cement?","acceptedAnswer":{"@type":"Answer","text":"A standard waste margin of 5% to 10% is recommended to compensate for formwork bowing, subgrade irregularities, and batch handling loss."}},
+    {"@type":"Question","name":"Can this calculator switch between Imperial and Metric units?","acceptedAnswer":{"@type":"Answer","text":"Yes, Calcora's Cement Calculator features dynamic switching between Metric (m, m³, kg, tonnes) and Imperial (ft, cu ft, cu yd, lbs, US tons) unit systems."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="../index.html" class="logo" aria-label="Calcora Home">Calc<span>ora</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#categories">Categories</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="page-main">
+
+  <div class="container">
+    <div class="ad-slot ad-slot-header" aria-label="Advertisement">
+      <small>ADVERTISEMENT</small>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="tool-main-grid">
+
+      <div class="primary-content">
+
+        <p class="breadcrumb">
+          <a href="../index.html">Home</a>
+          <span class="sep">&rsaquo;</span>
+          <a href="../index.html#cat-concrete-masonry">Concrete &amp; Masonry</a>
+          <span class="sep">&rsaquo;</span>
+          <span>Cement Calculator</span>
+        </p>
+
+        <div class="tool-title-block">
+          <h1>Cement Calculator</h1>
+          <p class="tool-subtitle">
+            Estimate the precise quantity of cement bags, fine aggregate (sand), coarse aggregate, and water needed for slabs, footings, columns, brickwork mortar, or wall plastering. Supports Imperial and Metric unit conversions.
+          </p>
+        </div>
+
+        <div class="calc-wrap">
+
+          <div class="calc-header">
+            <div class="unit-toggle" role="group" aria-label="Unit system">
+              <span class="unit-toggle-label">Units:</span>
+              <button type="button" class="unit-btn" data-unit-btn="imperial" aria-pressed="false">Imperial (US)</button>
+              <button type="button" class="unit-btn active" data-unit-btn="metric" aria-pressed="true">Metric (EU)</button>
+            </div>
+          </div>
+
+          <form id="cement-form" onsubmit="return false;">
+
+            <div class="form-row">
+              <label for="application-type">Application / Work Type</label>
+              <select id="application-type" onchange="toggleCementApp()">
+                <option value="concrete" selected>Concrete Work (Slab, Footing, Beam, Column)</option>
+                <option value="mortar">Masonry Mortar (Brick / Block Work)</option>
+                <option value="plaster">Wall Plastering Work</option>
+              </select>
+            </div>
+
+            <!-- Dimensions Input Mode -->
+            <div id="concrete-inputs">
+              <div class="form-grid">
+                <div class="form-row">
+                  <label for="c-length">Length</label>
+                  <div class="input-with-unit">
+                    <input type="number" id="c-length" min="0" step="0.01" placeholder="e.g. 10" inputmode="decimal">
+                    <span class="input-unit" id="len-unit">m</span>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <label for="c-width">Width</label>
+                  <div class="input-with-unit">
+                    <input type="number" id="c-width" min="0" step="0.01" placeholder="e.g. 10" inputmode="decimal">
+                    <span class="input-unit" id="wid-unit">m</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label for="c-thickness">Thickness / Depth</label>
+                <div class="input-with-unit">
+                  <input type="number" id="c-thickness" min="0" step="0.01" placeholder="e.g. 100" inputmode="decimal">
+                  <span class="input-unit" id="thk-unit">mm</span>
+                </div>
+                <small class="input-hint">Standard: 100 mm (walkway), 125-150 mm (driveway), 200-300 mm (footing)</small>
+              </div>
+
+              <div class="form-row" id="grade-row">
+                <label for="concrete-grade">Concrete Mix Grade / Ratio</label>
+                <select id="concrete-grade">
+                  <option value="m10">M10 / 1:3:6 — Low Strength (Patio / Non-Structural)</option>
+                  <option value="m15">M15 / 1:2:4 — General Purpose (Driveway / Walkway)</option>
+                  <option value="m20" selected>M20 / 1:1.5:3 — Structural Grade (Slabs, Beams, Footings)</option>
+                  <option value="m25">M25 / 1:1:2 — Heavy Load Structural (Columns / Retaining Walls)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Mortar Mix Grade Dropdown -->
+            <div class="form-row" id="mortar-grade-row" style="display:none;">
+              <label for="mortar-ratio">Mortar Ratio (Cement : Sand)</label>
+              <select id="mortar-ratio">
+                <option value="3">1 : 3 — High Strength Masonry / Damp Proofing</option>
+                <option value="4" selected>1 : 4 — Standard Brickwork / Blockwork</option>
+                <option value="5">1 : 5 — Medium Strength Interior Masonry</option>
+                <option value="6">1 : 6 — Architectural Non-Load-Bearing Work</option>
+              </select>
+            </div>
+
+            <!-- Plaster Thickness & Ratio -->
+            <div id="plaster-inputs" style="display:none;">
+              <div class="form-row">
+                <label for="plaster-ratio">Plaster Ratio (Cement : Sand)</label>
+                <select id="plaster-ratio">
+                  <option value="3">1 : 3 — Ceiling Plaster / External High-Exposure</option>
+                  <option value="4" selected>1 : 4 — External Wall Plastering</option>
+                  <option value="6">1 : 6 — Internal Room Wall Plastering</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Waste Allowance -->
+            <div class="form-row">
+              <label for="waste">Waste Allowance (%)</label>
+              <select id="waste">
+                <option value="0">0% — Exact Theoretical Limit</option>
+                <option value="5">5% — Smooth subgrade / minimal loss</option>
+                <option value="10" selected>10% — standard recommendation</option>
+                <option value="15">15% — Rough ground / site loss allowance</option>
+              </select>
+            </div>
+
+            <button type="button" class="btn-calc" onclick="calculateCement()">Calculate Cement</button>
+            <button type="button" class="btn-secondary" onclick="resetCement()" style="margin-top:10px;width:100%;">Reset</button>
+
+          </form>
+
+          <div class="result-box" id="result" role="status" aria-live="polite"></div>
+
+        </div>
+
+        <div class="action-buttons-box">
+          <button type="button" class="action-btn" onclick="printResult()">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            Print / Save as PDF
+          </button>
+          <button type="button" class="action-btn action-share" onclick="shareCalculator()">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            Share
+          </button>
+        </div>
+
+        <div class="ad-slot ad-slot-inline" aria-label="Advertisement">
+          <small>ADVERTISEMENT</small>
+  </div>
+           <!-- SEO CONTENT SECTION -->
+        <section class="content-section">
+
+          <h2>What Is a Cement Calculator?</h2>
+          <p>A cement calculator is an essential construction utility designed to estimate the exact quantity of cement bags, sand, coarse aggregate, and water needed for structural concrete or masonry mortar projects. Rather than relying on rough guesses that result in material shortages or expensive excess inventory, this calculator processes exact structural dimensions and mix proportions to deliver a precise bill of materials.</p>
+          <p>Concrete and mortar quantities depend heavily on project design (slabs, footings, columns, bricklaying, wall plastering), structural thickness, and dry material shrinkage factors. By accounting for volume compaction, dry-to-wet conversion factors, and site spillage allowances, this tool ensures accurate estimates prior to ordering.</p>
+
+          <h2>How to Use This Cement Calculator</h2>
+          <p>Using this calculator is simple and straightforward. Follow these steps:</p>
+          <ol>
+            <li><strong>Select Work Type:</strong> Choose between Concrete Work (slabs, footings, columns), Masonry Mortar (brick/block work), or Wall Plastering.</li>
+            <li><strong>Select Unit System:</strong> Use the unit toggle at the top to switch between Imperial (feet, inches, 94lb bags) and Metric (metres, millimetres, 50kg bags).</li>
+            <li><strong>Enter Dimensions:</strong> Input length, width, and thickness or depth for your target project area.</li>
+            <li><strong>Set Waste Allowance:</strong> We default to 10% for general site spillage and subgrade variation. Use 5% for smooth, factory-prepared subgrades or 15% for rough ground.</li>
+            <li><strong>Select Concrete Grade or Mortar Ratio:</strong> Choose standard grades like M20 (1:1.5:3) for structural concrete or 1:4 for standard brickwork mortar.</li>
+            <li><strong>Click Calculate:</strong> Review instantaneous output showing total cement bags, aggregate volumes, sand mass, and hydration water needed.</li>
+          </ol>
+
+          <p><strong>Pro Tip:</strong> Always order 1–2 extra bags beyond the calculated quantity to avoid mid-pour stops or cold joints during construction.</p>
+
+          <h2>Formula Used by This Calculator</h2>
+          <p>All calculations process dry material bulk density compaction to convert wet volume into raw material dry volume:</p>
+
+          <h3>Step 1 — Wet Volume Calculation</h3>
+          <div class="formula-box">
+            <strong>Volume = Length &times; Width &times; Thickness</strong>
+          </div>
+
+          <h3>Step 2 — Apply Waste Allowance</h3>
+          <div class="formula-box">
+            <strong>Total Wet Volume = Volume &times; (1 + Waste% / 100)</strong>
+          </div>
+
+          <h3>Step 3 — Convert to Dry Mix Volume</h3>
+          <p>When dry cement powder and aggregates mix with water, air voids collapse. A multiplier factor is applied to calculate necessary dry volume:</p>
+          <div class="formula-box">
+            <strong>Dry Volume (Concrete) = Wet Volume &times; 1.54</strong><br>
+            <strong>Dry Volume (Mortar / Plaster) = Wet Volume &times; 1.33</strong>
+          </div>
+
+          <h3>Step 4 — Individual Material Quantities</h3>
+          <div class="formula-box">
+            <strong>Cement Volume = Dry Volume &times; (Cement Ratio / Sum of Mix Parts)</strong><br>
+            <strong>Cement Weight (kg) = Cement Volume (m&sup3;) &times; 1,440 kg/m&sup3;</strong><br>
+            <strong>Cement Bags (50kg) = Cement Weight (kg) / 50</strong><br>
+            <strong>Cement Bags (94lb) = Cement Weight (lbs) / 94</strong>
+          </div>
+
+          <h2>Why Round Up, Not Down?</h2>
+          <p>Material ordering involves rounding up for cement bags and aggregate batches. Always round up—never down. Running short mid-pour creates weak cold joints that compromise structural strength permanently.</p>
+
+          <h2>Concrete Mix Types &amp; Ratios</h2>
+          <ul>
+            <li><strong>M10 Grade (1 : 3 : 6):</strong> Low-strength concrete for levelling pads and non-structural bases.</li>
+            <li><strong>M15 Grade (1 : 2 : 4):</strong> Standard general-purpose mix for residential driveways and walkways.</li>
+            <li><strong>M20 Grade (1 : 1.5 : 3):</strong> Standard structural concrete for foundations, slabs, beams, and footings.</li>
+            <li><strong>M25 Grade (1 : 1 : 2):</strong> Heavy-duty structural concrete for columns, beams, and load-bearing walls.</li>
+          </ul>
+
+          <h2>Worked Example</h2>
+          <p>Let us work through a simple patio slab example:</p>
+
+          <h3>Example — Concrete Patio Slab (10 m &times; 10 m, 100 mm thick, M20 Grade, 10% waste)</h3>
+          <ol>
+            <li><strong>Convert thickness to metres:</strong> 100 mm &divide; 1,000 = 0.1 m</li>
+            <li><strong>Calculate base wet volume:</strong> 10 &times; 10 &times; 0.1 = 10 m&sup3;</li>
+            <li><strong>Apply 10% waste allowance:</strong> 10 &times; 1.10 = 11 m&sup3; wet volume</li>
+            <li><strong>Calculate required dry volume:</strong> 11 &times; 1.54 = 16.94 m&sup3;</li>
+            <li><strong>Mix ratio breakdown (M20 = 1:1.5:3, total parts = 5.5):</strong>
+              <br>Cement Volume = 16.94 &times; (1 / 5.5) = 3.08 m&sup3;
+            </li>
+            <li><strong>Calculate cement mass and bags:</strong>
+              <br>3.08 m&sup3; &times; 1,440 kg/m&sup3; = 4,435.2 kg
+              <br>4,435.2 &divide; 50 kg = <strong>89 bags</strong> (50 kg)
+            </li>
+          </ol>
+
+          <h2>Frequently Asked Questions</h2>
+
+          <div class="faq-accordion">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span class="faq-q-text">1. How many bags of cement do I need for 1 cubic metre of concrete?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>For standard M20 concrete mix (1:1.5:3 ratio), you need approximately 8 bags of 50kg cement per cubic metre of wet concrete.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span class="faq-q-text">2. How many 94lb cement bags make 1 cubic yard of concrete?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>For general structural concrete, approximately 6 to 7 bags of 94lb Portland cement are required per cubic yard of wet concrete.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span class="faq-q-text">3. What is dry volume factor in cement calculations?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Dry mix volume shrinks when combined with water due to air void displacement. Wet volume is multiplied by a dry volume conversion factor of 1.54 for concrete mixes and 1.33 for mortar mixes.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span class="faq-q-text">4. What is the standard water-cement ratio?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>The typical water-cement mass ratio ranges between 0.40 and 0.50, equating to roughly 20 to 25 litres of water per 50kg bag of cement.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span class="faq-q-text">5. What is the mix ratio for M15, M20, and M25 grade concrete?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>M15 uses 1:2:4, M20 uses 1:1.5:3, and M25 uses 1:1:2 (Cement : Fine Aggregate : Coarse Aggregate by volume).</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span class="faq-q-text">6. How much waste margin should I add when ordering cement?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>A standard waste margin of 5% to 10% is recommended to compensate for formwork bowing, subgrade irregularities, and site handling loss.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span class="faq-q-text">7. Can this calculator switch between Imperial and Metric units?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, Calcora's Cement Calculator features dynamic switching between Metric (m, m³, kg, tonnes) and Imperial (ft, cu ft, cu yd, lbs, US tons) unit systems.</p>
+            </div>
+          </div>
+
+          <div class="author-bio">
+            <h3>About This Calculator</h3>
+            <p><strong>Written by:</strong> The Calcora Engineering Team — builders, civil engineers, and software developers with decades of material estimation experience.</p>
+            <p><strong>Sources:</strong> Formulas based on standard construction industry practices, ACI 318 (Building Code Requirements for Structural Concrete), and ASTM C94 guidelines.</p>
+            <p><strong>Last Updated:</strong> September 2026</p>
+          </div>
+
+        </section>
+
+      </div>
+
+      <aside class="sticky-sidebar" aria-label="Sidebar">
+        <div class="ad-slot ad-slot-sidebar" aria-label="Advertisement">
+          <small>ADVERTISEMENT</small>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Popular Calculators</h3>
+          <ul class="sidebar-links">
+            <li><a href="../concrete-calculator/index.html">Concrete Calculator</a></li>
+            <li><a href="../mortar-calculator/index.html">Mortar Calculator</a></li>
+            <li><a href="../block-calculator/index.html">Block Calculator</a></li>
+            <li><a href="../brick-calculator/index.html">Brick Calculator</a></li>
+            <li><a href="../rebar-calculator/index.html">Rebar Calculator</a></li>
+            <li><a href="../sand-calculator/index.html">Sand Calculator</a></li>
+          </ul>
+        </div>
+
+        <div class="ad-slot ad-slot-halfpage" aria-label="Advertisement">
+          <small>ADVERTISEMENT</small>
+        </div>
+
+        <div class="trust-badge-card">
+          <h4>Why Trust Calcora?</h4>
+          <ul>
+            <li>✔ ACI &amp; IS Code Compliant</li>
+            <li>✔ Instant Metric &amp; Imperial Switch</li>
+            <li>✔ Free &amp; Fully Responsive</li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <section class="bottom-full-width">
+    <div class="container">
+      <div class="related-tools">
+        <h2>Related Masonry Tools</h2>
+        <ul>
+          <li><a href="../concrete-calculator/index.html">Concrete Calculator</a></li>
+          <li><a href="../mortar-calculator/index.html">Mortar Calculator</a></li>
+          <li><a href="../block-calculator/index.html">Block Calculator</a></li>
+          <li><a href="../brick-calculator/index.html">Brick Calculator</a></li>
+          <li><a href="../sand-calculator/index.html">Sand Calculator</a></li>
+        </ul>
+      </div>
+
+      <div class="legal-disclaimer">
+        <p><strong>Disclaimer:</strong> Calcora cement material calculations are structural estimates based on ideal dry aggregate bulk densities. Always verify site moisture, aggregate absorption, and local structural building codes prior to pouring.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+  var currentUnit = 'metric';
+
+  function isMetric() {
+    return currentUnit === 'metric';
+  }
+
+  function setUnit(unit) {
+    currentUnit = unit;
+    var btns = document.querySelectorAll('.unit-btn');
+    btns.forEach(function(b) {
+      if (b.getAttribute('data-unit-btn') === unit) {
+        b.classList.add('active');
+        b.setAttribute('aria-pressed', 'true');
+      } else {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      }
+    });
+    updateCementUnitLabels();
+    calculateCement();
+  }
+
+  document.querySelectorAll('.unit-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      setUnit(this.getAttribute('data-unit-btn'));
+    });
+  });
+
+  function updateCementUnitLabels() {
+    var metric = isMetric();
+    var lUnit = document.getElementById('len-unit');
+    var wUnit = document.getElementById('wid-unit');
+    var tUnit = document.getElementById('thk-unit');
+    
+    if (lUnit) lUnit.textContent = metric ? 'm' : 'ft';
+    if (wUnit) wUnit.textContent = metric ? 'm' : 'ft';
+    if (tUnit) tUnit.textContent = metric ? 'mm' : 'in';
+  }
+
+  function toggleCementApp() {
+    var app = document.getElementById('application-type').value;
+    var concreteInputs = document.getElementById('concrete-inputs');
+    var gradeRow = document.getElementById('grade-row');
+    var mortarGradeRow = document.getElementById('mortar-grade-row');
+    var plasterInputs = document.getElementById('plaster-inputs');
+
+    if (app === 'concrete') {
+      concreteInputs.style.display = 'block';
+      gradeRow.style.display = 'block';
+      mortarGradeRow.style.display = 'none';
+      plasterInputs.style.display = 'none';
+    } else if (app === 'mortar') {
+      concreteInputs.style.display = 'block';
+      gradeRow.style.display = 'none';
+      mortarGradeRow.style.display = 'block';
+      plasterInputs.style.display = 'none';
+    } else if (app === 'plaster') {
+      concreteInputs.style.display = 'block';
+      gradeRow.style.display = 'none';
+      mortarGradeRow.style.display = 'none';
+      plasterInputs.style.display = 'block';
+    }
+  }
+
+  function posNum(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return (isNaN(v) || v <= 0) ? null : v;
+  }
+
+  function fmt(val, dec) {
+    return val.toLocaleString(undefined, { minimumFractionDigits: dec, maximumFractionDigits: dec });
+  }
+
+  function buildResultLine(label, value) {
+    return '<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #e2e8f0;">' +
+           '<span>' + label + '</span><strong>' + value + '</strong></div>';
+  }
+
+  function showError(msg) {
+    var res = document.getElementById('result');
+    res.style.display = 'block';
+    res.className = 'result-box show';
+    res.innerHTML = '<p style="color:#c53030;margin:0;font-weight:600;">' + msg + '</p>';
+  }
+
+  function showResult(html) {
+    var res = document.getElementById('result');
+    res.style.display = 'block';
+    res.className = 'result-box show';
+    res.innerHTML = html;
+  }
+
+  function calculateCement() {
+    var metric = isMetric();
+    var app = document.getElementById('application-type').value;
+    var len = posNum('c-length');
+    var wid = posNum('c-width');
+    var thk = posNum('c-thickness');
+    var wastePct = parseInt(document.getElementById('waste').value) || 0;
+
+    if (len === null || wid === null || thk === null) {
+      var resBox = document.getElementById('result');
+      if (resBox && resBox.classList.contains('show')) {
+        showError('Please enter valid positive numbers for length, width, and thickness.');
+      }
+      return;
+    }
+
+    var lenM = metric ? len : len * 0.3048;
+    var widM = metric ? wid : wid * 0.3048;
+    var thkM = metric ? thk / 1000 : thk * 0.0254;
+
+    var wetVolM3 = lenM * widM * thkM;
+    wetVolM3 = wetVolM3 * (1 + (wastePct / 100));
+
+    var cementPart = 1, sandPart = 1.5, aggPart = 3;
+    var dryMultiplier = 1.54;
+
+    if (app === 'concrete') {
+      var grade = document.getElementById('concrete-grade').value;
+      dryMultiplier = 1.54;
+      if (grade === 'm10') { cementPart = 1; sandPart = 3; aggPart = 6; }
+      else if (grade === 'm15') { cementPart = 1; sandPart = 2; aggPart = 4; }
+      else if (grade === 'm20') { cementPart = 1; sandPart = 1.5; aggPart = 3; }
+      else if (grade === 'm25') { cementPart = 1; sandPart = 1; aggPart = 2; }
+    } else if (app === 'mortar') {
+      dryMultiplier = 1.33;
+      sandPart = parseInt(document.getElementById('mortar-ratio').value) || 4;
+      aggPart = 0;
+    } else if (app === 'plaster') {
+      dryMultiplier = 1.33;
+      sandPart = parseInt(document.getElementById('plaster-ratio').value) || 4;
+      aggPart = 0;
+    }
+
+    var totalParts = cementPart + sandPart + aggPart;
+    var dryVolM3 = wetVolM3 * dryMultiplier;
+
+    var cementVolM3 = dryVolM3 * (cementPart / totalParts);
+    var sandVolM3 = dryVolM3 * (sandPart / totalParts);
+    var aggVolM3 = aggPart > 0 ? dryVolM3 * (aggPart / totalParts) : 0;
+
+    var cementKg = cementVolM3 * 1440;
+    var sandKg = sandVolM3 * 1600;
+    var aggKg = aggVolM3 * 1520;
+    var waterLiters = cementKg * 0.45;
+
+    var bags50kg = Math.ceil(cementKg / 50);
+    var bags94lb = Math.ceil((cementKg * 2.20462) / 94);
+
+    var wetVolYd3 = wetVolM3 * 1.30795;
+    var wetVolFt3 = wetVolM3 * 35.3147;
+    var cementLb = cementKg * 2.20462;
+    var sandLb = sandKg * 2.20462;
+    var aggLb = aggKg * 2.20462;
+    var sandTonsUS = sandLb / 2000;
+    var aggTonsUS = aggLb / 2000;
+    var sandTonnes = sandKg / 1000;
+    var aggTonnes = aggKg / 1000;
+    var waterGallons = waterLiters * 0.264172;
+
+    var html = '<h3 style="margin-top:0;">Cement &amp; Aggregate Material Estimate</h3>';
+
+    if (metric) {
+      html += '<div style="font-size:1.5rem;font-weight:700;color:#0f4c81;margin-bottom:4px;">' + bags50kg + ' Bags of Cement (50kg)</div>';
+      html += '<div style="color:#64748b;margin-bottom:12px;">' + fmt(wetVolM3, 2) + ' m³ total wet volume</div>';
+
+      html += '<div style="margin-top:14px;">';
+      html += buildResultLine('Total Wet Volume (with waste)', fmt(wetVolM3, 3) + ' m³');
+      html += buildResultLine('Total Dry Volume Required', fmt(dryVolM3, 3) + ' m³');
+      html += buildResultLine('Cement Mass Required', fmt(cementKg, 1) + ' kg');
+      html += buildResultLine('Cement Bags (50 kg each)', bags50kg + ' bags');
+      html += buildResultLine('Fine Aggregate (Sand)', fmt(sandKg, 1) + ' kg (' + fmt(sandTonnes, 2) + ' tonnes)');
+      if (aggPart > 0) {
+        html += buildResultLine('Coarse Aggregate (Gravel)', fmt(aggKg, 1) + ' kg (' + fmt(aggTonnes, 2) + ' tonnes)');
+      }
+      html += buildResultLine('Water Required', fmt(waterLiters, 1) + ' Litres');
+      html += '</div>';
+    } else {
+      html += '<div style="font-size:1.5rem;font-weight:700;color:#0f4c81;margin-bottom:4px;">' + bags94lb + ' Bags of Cement (94lb)</div>';
+      html += '<div style="color:#64748b;margin-bottom:12px;">' + fmt(wetVolYd3, 2) + ' cu yd (' + fmt(wetVolFt3, 1) + ' cu ft) wet volume</div>';
+
+      html += '<div style="margin-top:14px;">';
+      html += buildResultLine('Total Wet Volume', fmt(wetVolYd3, 2) + ' cu yd');
+      html += buildResultLine('Total Dry Volume Required', fmt(dryVolM3 * 35.3147, 1) + ' cu ft');
+      html += buildResultLine('Cement Mass Required', fmt(cementLb, 1) + ' lbs');
+      html += buildResultLine('Cement Bags (94 lb US)', bags94lb + ' bags');
+      html += buildResultLine('Fine Aggregate (Sand)', fmt(sandLb, 1) + ' lbs (' + fmt(sandTonsUS, 2) + ' US tons)');
+      if (aggPart > 0) {
+        html += buildResultLine('Coarse Aggregate (Gravel)', fmt(aggLb, 1) + ' lbs (' + fmt(aggTonsUS, 2) + ' US tons)');
+      }
+      html += buildResultLine('Water Required', fmt(waterGallons, 1) + ' US Gal');
+      html += '</div>';
+    }
+
+    html += '<p style="font-size:0.85rem;color:#64748b;margin-top:12px;">Calculations reflect dry compaction multipliers (1.54 for concrete / 1.33 for mortar) and a 0.45 water-cement ratio with ' + wastePct + '% waste allowance.</p>';
+
+    showResult(html);
+  }
+
+  function resetCement() {
+    document.getElementById('cement-form').reset();
+    toggleCementApp();
+    updateCementUnitLabels();
+    var resBox = document.getElementById('result');
+    if (resBox) {
+      resBox.innerHTML = '';
+      resBox.className = 'result-box';
+      resBox.style.display = 'none';
+    }
+  }
+
+  function printResult() {
+    window.print();
+  }
+
+  function shareCalculator() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Cement Calculator — Calcora',
+        url: window.location.href
+      }).catch(function() {});
+    } else {
+      navigator.clipboard.writeText(window.location.href);
+      alert('Link copied to clipboard!');
+    }
+  }
+
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      var ans = this.nextElementSibling;
+      if (ans) {
+        ans.style.display = expanded ? 'none' : 'block';
+      }
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    updateCementUnitLabels();
+    var yrSpan = document.getElementById('yr');
+    if (yrSpan) yrSpan.textContent = new Date().getFullYear();
+  });
+  </script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Calcora</h4>
+        <p>International grade, professional calculation tools for builders, contractors, and home improvement enthusiasts. Over 50 free web utilities.</p>
+      </div>
+      <div>
+        <h4>Popular Tools</h4>
+        <ul>
+          <li><a href="../concrete-calculator/index.html">Concrete Calculator</a></li>
+          <li><a href="../mortar-calculator/index.html">Mortar Calculator</a></li>
+          <li><a href="../cement-calculator/index.html">Cement Calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal &amp; Support</h4>
+        <ul>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="../terms-of-service.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="../index.html#cat-concrete-masonry">Concrete &amp; Masonry</a></li>
+          <li><a href="../index.html#cat-interior">Interior &amp; Finishing</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="yr">2026</span> Calcora. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>
+
+ 
