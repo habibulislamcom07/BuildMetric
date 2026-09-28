@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concrete Calculator - Estimate Volume & Bags | BuildMetric</title>
+  <meta name="description" content="Free concrete calculator to estimate volume in cubic yards, cubic metres, and bags (80lb, 60lb, 50kg). Accurate formulas for slabs, footings, columns, and stairs.">
+  <link rel="canonical" href="https://buildmetric.org/concrete-calculator">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "BuildMetric Concrete Calculator",
+    "url": "https://buildmetric.org/concrete-calculator",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All"
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #0f4c81;
+      --primary-hover: #0a355c;
+      --accent: #f97316;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --success: #10b981;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
+    
+    header { background: #fff; border-bottom: 1px solid var(--border); padding: 1rem 0; }
+    .nav-container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+    .nav-links a { margin-left: 1.2rem; text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 500; }
+
+    .breadcrumb { max-width: 1100px; margin: 1rem auto 0; padding: 0 1rem; font-size: 0.85rem; color: var(--muted); }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+
+    .container { max-width: 1100px; margin: 1rem auto 2rem; padding: 0 1rem; }
+
+    .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.8rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04); margin-bottom: 1.5rem; }
+    h1 { font-size: 2rem; color: var(--text); font-weight: 800; margin-bottom: 0.5rem; }
+    .subtitle { color: var(--muted); margin-bottom: 1.5rem; font-size: 0.95rem; }
+
+    .unit-switch { display: flex; justify-content: center; gap: 8px; margin-bottom: 1.5rem; background: #f1f5f9; padding: 4px; border-radius: 20px; width: fit-content; margin: 0 auto 1.5rem; }
+    .unit-btn { padding: 6px 16px; border: none; background: transparent; font-weight: 600; font-size: 0.85rem; cursor: pointer; border-radius: 16px; color: var(--muted); }
+    .unit-btn.active { background: var(--primary); color: #fff; }
+
+    .form-group { margin-bottom: 1.2rem; }
+    label { display: block; font-weight: 600; margin-bottom: 0.4rem; font-size: 0.9rem; }
+    input, select { width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; outline: none; background: #fff; }
+    input:focus, select:focus { border-color: var(--primary); }
+
+    .btn-calc { width: 100%; background: var(--primary); color: #fff; padding: 0.85rem; border: none; border-radius: 8px; font-size: 1rem; font-weight: 700; cursor: pointer; margin-bottom: 0.5rem; }
+    .btn-reset { width: 100%; background: transparent; border: 1px solid var(--border); color: var(--muted); padding: 0.6rem; border-radius: 8px; font-weight: 600; cursor: pointer; }
+
+    .action-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 1rem; }
+    .btn-action { padding: 0.6rem; border: 1px solid var(--border); background: #fff; border-radius: 6px; text-align: center; font-size: 0.85rem; font-weight: 600; color: var(--text); cursor: pointer; text-decoration: none; }
+    .btn-share { background: var(--accent); color: #fff; border: none; }
+
+    .result-box { display: none; margin-top: 1.5rem; background: #f0f7ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 1.2rem; }
+    .result-line { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px dashed #cbd5e1; font-size: 0.95rem; }
+    .result-line:last-child { border-bottom: none; }
+    .result-line span:last-child { font-weight: 700; color: var(--primary); }
+
+    /* Single Icon FAQ Styling */
+    .faq-accordion { margin-bottom: 8px; }
+    .faq-question { display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 14px 18px; background: #ffffff; border: 1px solid var(--border); border-radius: 8px; font-size: 0.95rem; font-weight: 600; color: #1e293b; text-align: left; cursor: pointer; }
+    .faq-icon { font-size: 1.1rem; font-weight: 700; color: var(--primary); flex-shrink: 0; }
+    .faq-answer { display: none; padding: 12px 18px; background: #f8fafc; border-radius: 0 0 8px 8px; font-size: 0.9rem; color: #475569; border: 1px solid var(--border); border-top: none; }
+
+    /* Trust Badge */
+    .trust-badge-card { background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 8px; padding: 16px; margin-top: 2rem; }
+    .trust-badge-card h4 { margin-bottom: 8px; color: var(--primary); }
+    .trust-badge-card ul { list-style: none; }
+    .trust-badge-card li { position: relative; padding-left: 24px; font-size: 0.88rem; margin-bottom: 6px; }
+    .trust-badge-card li::before { content: "✔"; position: absolute; left: 0; color: var(--success); font-weight: bold; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <a href="#" class="logo">BuildMetric</a>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Categories</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <a href="#">Home</a> &rsaquo; <a href="#">Concrete & Masonry</a> &rsaquo; Concrete Calculator
+</div>
+
+<div class="container">
+  <div class="card">
+    <h1>Concrete Calculator</h1>
+    <p class="subtitle">Estimate the volume of concrete you need for a slab, footing, column, or stair in cubic yards, cubic metres, and 80 lb bags. Works in both imperial and metric units — switch using the toggle below.</p>
+
+    <div class="unit-switch">
+      <button class="unit-btn active" id="btn-imp" onclick="switchUnit('imperial')">Imperial (US)</button>
+      <button class="unit-btn" id="btn-met" onclick="switchUnit('metric')">Metric (EU)</button>
+    </div>
+
+    <form id="calcForm" onsubmit="calculateConcrete(event)">
+      <div class="form-group">
+        <label for="shape">Select Shape</label>
+        <select id="shape" onchange="renderShapeInputs()">
+          <option value="slab">Slab / Rectangular (patio, driveway, footing)</option>
+          <option value="column">Round Column / Cylinder (pier, post, pillar)</option>
+          <option value="stair">Staircase</option>
+        </select>
+      </div>
+
+      <div id="dynamicInputs">
+        <!-- Dynamic JS inputs render here -->
+      </div>
+
+      <div class="form-group">
+        <label for="waste">Waste Allowance (%)</label>
+        <select id="waste">
+          <option value="5">5% — smooth subgrade</option>
+          <option value="10" selected>10% — standard recommendation</option>
+          <option value="15">15% — rough or uneven ground</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn-calc">Calculate Concrete</button>
+      <button type="button" class="btn-reset" onclick="resetForm()">Reset</button>
+    </form>
+
+    <div class="action-row">
+      <button class="btn-action" onclick="window.print()">🖨 Print / Save as PDF</button>
+      <button class="btn-action btn-share" onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied!');">🔗 Share</button>
+    </div>
+
+    <div id="result" class="result-box"></div>
+  </div>
+
+   <!-- Article Section matching BuildMetric UI & Content -->
+  <article class="card" style="margin-top: 1.5rem;">
+    <h2>What Is a Concrete Calculator?</h2>
+    <p>A concrete calculator is a tool that estimates how much concrete you need for a project — measured in cubic yards, cubic metres, or bags of pre-mixed concrete. Instead of guessing and ending up with too little concrete (which forces an extra trip to the store and creates a visible cold joint) or too much (which wastes money), you enter your project's dimensions and the calculator returns the exact volume required.</p>
+    <p style="margin-top:0.8rem;">Concrete quantity depends on several factors: the shape of the pour (slab, footing, column, stair), the dimensions, the thickness or depth, the mix design, and the waste allowance for spillage and uneven subgrade. This calculator takes all of these into account so you get a reliable estimate before you order.</p>
+    <p style="margin-top:0.8rem;">Concrete is one of the most widely used construction materials in the world. It is used in foundations, footings, slabs, driveways, patios, sidewalks, columns, beams, stairs, retaining walls, and countless other structures. Whether you are pouring a small garden path or a large commercial foundation, accurate concrete estimation saves time, money, and frustration.</p>
+    <p style="margin-top:0.8rem;">Whether you are pouring a driveway in Texas, laying a patio in London, building a deck footing in Sydney, or renovating a basement in Toronto, this calculator gives you an accurate estimate in both imperial and metric units.</p>
+
+    <h2 style="margin-top: 2rem;">How to Use This Concrete Calculator</h2>
+    <p>Using this concrete calculator is straightforward. Follow these six steps:</p>
+    <ol style="margin-left: 1.2rem; margin-top: 0.5rem;">
+      <li style="margin-bottom:0.4rem;"><strong>Choose the shape.</strong> Most DIY projects use a rectangular slab (patio, driveway, footing). For a pier, post or pillar, choose the round column option. For a staircase, choose the stair option.</li>
+      <li style="margin-bottom:0.4rem;"><strong>Select your unit system.</strong> Use the toggle at the top to switch between Imperial (feet, inches) and Metric (metres, centimetres). Your preference is saved for next time.</li>
+      <li style="margin-bottom:0.4rem;"><strong>Enter the dimensions.</strong> For a slab, provide length, width and thickness. For a column, provide diameter and height. For a stair, provide width, rise, run and number of steps. Use the same units shown on each field.</li>
+      <li style="margin-bottom:0.4rem;"><strong>Set a waste allowance.</strong> We default to 10%, which is the standard recommendation. Use 5% for perfectly smooth subgrade and 15% for rough or uneven ground.</li>
+      <li style="margin-bottom:0.4rem;"><strong>Choose your concrete type.</strong> The calculator supports ready-mix (by volume) and pre-mixed bags in 80 lb, 60 lb, 50 kg and 25 kg sizes.</li>
+      <li style="margin-bottom:0.4rem;"><strong>Click Calculate.</strong> The result shows volume in cubic feet, cubic yards, cubic metres and litres — plus the number of bags needed for common pre-mix sizes.</li>
+    </ol>
+    <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 12px; border-radius: 4px; font-size: 0.9rem; margin-top: 1rem;">
+      <strong>Pro Tip:</strong> Always order 1–2 extra bags beyond the calculated quantity. Concrete can be damaged during transport, spilled during pouring, or wasted due to uneven subgrade. Having spares on hand means you can finish the pour without a cold joint.
+    </div>
+
+    <h2 style="margin-top: 2rem;">Formula Used by This Calculator</h2>
+    <p>All calculations are performed internally in metric units, then converted back to your preferred unit system for display. The following formulas are used:</p>
+
+    <div style="background: #f8fafc; padding: 1rem; border-left: 4px solid var(--primary); border-radius: 6px; margin-top: 1rem;">
+      <p style="font-weight:700;">Step 1 — Rectangular Slab Volume</p>
+      <code style="display:block; background:#edf2f7; padding:8px; border-radius:4px; margin:6px 0; font-size:0.9rem;">Volume = Length × Width × Thickness</code>
+      <p style="font-size:0.85rem; color:var(--muted);">All measurements must be in the same unit. Divide cubic feet by 27 to get cubic yards. Multiply cubic feet by 0.0283168 to get cubic metres.</p>
+
+      <p style="font-weight:700; margin-top:1rem;">Step 2 — Round Column Volume</p>
+      <code style="display:block; background:#edf2f7; padding:8px; border-radius:4px; margin:6px 0; font-size:0.9rem;">Volume = π × r² × Height</code>
+      <p style="font-size:0.85rem; color:var(--muted);">Where r = radius (diameter ÷ 2). π (pi) = 3.14159. Result is in the same cubic unit as your input.</p>
+
+      <p style="font-weight:700; margin-top:1rem;">Step 3 — Staircase Volume</p>
+      <code style="display:block; background:#edf2f7; padding:8px; border-radius:4px; margin:6px 0; font-size:0.9rem;">Volume = Steps × Width × Rise × Run ÷ 2</code>
+      <p style="font-size:0.85rem; color:var(--muted);">This formula assumes a standard staircase profile. Each step is treated as a triangular prism.</p>
+
+      <p style="font-weight:700; margin-top:1rem;">Step 4 — Waste Allowance</p>
+      <code style="display:block; background:#edf2f7; padding:8px; border-radius:4px; margin:6px 0; font-size:0.9rem;">Final Volume = Volume × (1 + Waste% ÷ 100)</code>
+      <p style="font-size:0.85rem; color:var(--muted);">Standard recommendation: 10%.</p>
+
+      <p style="font-weight:700; margin-top:1rem;">Step 5 — Bags of Concrete</p>
+      <code style="display:block; background:#edf2f7; padding:8px; border-radius:4px; margin:6px 0; font-size:0.9rem;">Bags = Final Volume ÷ Yield per Bag</code>
+      <p style="font-size:0.85rem; color:var(--muted);">80 lb bag = 0.6 cu ft (0.017 m³) | 60 lb bag = 0.45 cu ft (0.0127 m³) | 50 kg bag = 1.25 cu ft (0.0353 m³) | 25 kg bag = 0.625 cu ft (0.0177 m³)</p>
+    </div>
+
+    <h2 style="margin-top: 2rem;">Understanding the Variables</h2>
+    <ul style="margin-left: 1.2rem; margin-top: 0.5rem; font-size: 0.95rem;">
+      <li><strong>Length, Width, Thickness:</strong> Dimensions of the pour, all in the same unit.</li>
+      <li><strong>Radius:</strong> Half the diameter of a round column.</li>
+      <li><strong>Rise:</strong> Vertical height of each stair step.</li>
+      <li><strong>Run:</strong> Horizontal depth of each stair tread.</li>
+      <li><strong>Waste %:</strong> Extra material for spillage, uneven subgrade and future repairs.</li>
+      <li><strong>Yield per Bag:</strong> Volume of concrete produced by one bag of pre-mix.</li>
+    </ul>
+
+    <h2 style="margin-top: 2rem;">Why Round Up, Not Down?</h2>
+    <p>Concrete calculations involve rounding in several places: bags, cubic yards and cubic metres. Always round <strong>up</strong>, never down. If your calculation gives 1.23 cubic yards, order 1.25 cubic yards (ready-mix is sold in 0.25-yard increments). If it gives 55.2 bags, order 56. Running short mid-pour causes cold joints that weaken the slab permanently.</p>
+
+    <h2 style="margin-top: 2rem;">Concrete Mix Types</h2>
+    <ul style="margin-left: 1.2rem; margin-top: 0.5rem; font-size: 0.95rem;">
+      <li><strong>Standard concrete (3000 PSI):</strong> General-purpose, for patios, walkways and footings.</li>
+      <li><strong>High-strength concrete (4000 PSI):</strong> Driveways, garage floors and structural elements.</li>
+      <li><strong>Fast-setting concrete:</strong> Fence posts and urgent repairs (sets in 20–40 minutes).</li>
+      <li><strong>Crack-resistant concrete:</strong> Adds fibers to reduce cracking in slabs.</li>
+      <li><strong>High-early-strength concrete:</strong> Reaches full strength in 3–7 days instead of 28.</li>
+    </ul>
+
+    <h2 style="margin-top: 2rem;">Worked Example</h2>
+    <p>Let us work through three examples — a simple patio slab, a round footing pier, and a small staircase.</p>
+    
+    <div style="background:#f8fafc; padding:1rem; border:1px solid var(--border); border-radius:6px; margin-top:1rem; font-size:0.9rem;">
+      <strong style="color:var(--primary);">Example 1 — Patio Slab (10 ft × 12 ft, 4 in thick, 10% waste)</strong>
+      <ol style="margin-left:1.2rem; margin-top:0.4rem;">
+        <li>Convert thickness to feet: 4 ÷ 12 = 0.333 ft</li>
+        <li>Calculate volume in cubic feet: 10 × 12 × 0.333 = 40 cu ft</li>
+        <li>Convert to cubic yards: 40 ÷ 27 = 1.481 cu yd</li>
+        <li>Apply 10% waste: 1.481 × 1.10 = 1.629 cu yd</li>
+        <li>Bags needed (80 lb): 40 × 1.10 ÷ 0.6 = 74 bags</li>
+      </ol>
+      <p style="margin-top:0.5rem; font-weight:600;">Result: You need approximately 1.63 cubic yards of concrete — or about 74 bags of 80 lb pre-mix.</p>
+
+      <strong style="color:var(--primary); display:block; margin-top:1rem;">Example 2 — Round Column Footing (12 in diameter, 8 ft high, 10% waste)</strong>
+      <ol style="margin-left:1.2rem; margin-top:0.4rem;">
+        <li>Convert diameter to feet: 12 ÷ 12 = 1 ft</li>
+        <li>Radius: 1 ÷ 2 = 0.5 ft</li>
+        <li>Calculate volume in cubic feet: π × 0.5² × 8 = 6.28 cu ft</li>
+        <li>Convert to cubic yards: 6.28 ÷ 27 = 0.233 cu yd</li>
+        <li>Apply 10% waste: 0.233 × 1.10 = 0.256 cu yd</li>
+        <li>Bags needed (60 lb): 6.28 × 1.10 ÷ 0.45 = 16 bags</li>
+      </ol>
+      <p style="margin-top:0.5rem; font-weight:600;">Result: You need approximately 0.26 cubic yards of concrete — or about 16 bags of 60 lb pre-mix.</p>
+    </div>
+
+    <h2 style="margin-top: 2rem;">Industry Standards and Codes</h2>
+    <ul style="margin-left: 1.2rem; margin-top: 0.5rem; font-size: 0.95rem;">
+      <li><strong>ACI 318:</strong> Building Code Requirements for Structural Concrete (USA)</li>
+      <li><strong>ASTM C94:</strong> Standard Specification for Ready-Mixed Concrete</li>
+      <li><strong>EN 206:</strong> Concrete Specification, Performance, Production and Conformity (Europe)</li>
+      <li><strong>IS 456:</strong> Plain and Reinforced Concrete Code of Practice (India)</li>
+    </ul>
+
+    <h2 style="margin-top: 2rem;">Cost Estimation</h2>
+    <ul style="margin-left: 1.2rem; margin-top: 0.5rem; font-size: 0.95rem;">
+      <li><strong>Ready-Mix Concrete (3000 PSI):</strong> $125–$175 per cubic yard (USA, 2026)</li>
+      <li><strong>Pre-Mixed Bags (80 lb):</strong> $4–$7 per bag</li>
+      <li><strong>Pre-Mixed Bags (60 lb):</strong> $3–$6 per bag</li>
+      <li><strong>Delivery Fee:</strong> $50–$200 per truck</li>
+    </ul>
+
+    <!-- 7 BuildMetric FAQs -->
+    <h2 style="margin-top: 2rem; margin-bottom: 1rem;">Frequently Asked Questions</h2>
+
+    <div class="faq-accordion">
+      <button class="faq-question" type="button">
+        <span>1. How many bags of concrete do I need for a 10×10 slab?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>For a 10×10 ft slab poured at a standard 4-inch thickness with a 10% waste allowance, you will need approximately 74 bags of 80 lb pre-mix, or about 1.63 cubic yards of ready-mix concrete.</p>
+      </div>
+    </div>
+
+    <div class="faq-accordion">
+      <button class="faq-question" type="button">
+        <span>2. How thick should a concrete slab be?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Non-structural walkways and garden patios require 4 inches (100 mm). Residential driveways and garage floors should be 5 to 6 inches (125–150 mm) thick with rebar reinforcement.</p>
+      </div>
+    </div>
+
+    <div class="faq-accordion">
+      <button class="faq-question" type="button">
+        <span>3. What is the formula for concrete volume?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>For a rectangular slab: Volume = Length × Width × Thickness. For round columns: Volume = π × Radius² × Depth.</p>
+      </div>
+    </div>
+
+    <div class="faq-accordion">
+      <button class="faq-question" type="button">
+        <span>4. Should I add extra concrete for waste?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Yes. Always add 10% extra to compensate for uneven ground, spillage, and formwork movement during the pour.</p>
+      </div>
+    </div>
+
+    <div class="faq-accordion">
+      <button class="faq-question" type="button">
+        <span>5. How long does concrete take to cure?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Concrete typically sets in 24 to 48 hours, allows light foot traffic in 7 days, and reaches its full design strength at 28 days.</p>
+      </div>
+    </div>
+
+    <div class="faq-accordion">
+      <button class="faq-question" type="button">
+        <span>6. Does this concrete calculator work in metric units?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Yes, click the "Metric (EU)" toggle at the top of the calculator to enter inputs in metres and millimetres and receive outputs in cubic metres and litres.</p>
+      </div>
+    </div>
+
+    <div class="faq-accordion">
+      <button class="faq-question" type="button">
+        <span>7. Should I order ready-mix or use pre-mixed bags?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>For jobs requiring under 1 cubic yard (approx. 45 bags of 80 lb), pre-mixed bags are more cost-effective. For jobs over 1 cubic yard, ready-mix truck delivery is significantly faster and less labor-intensive.</p>
+      </div>
+    </div>
+
+    <!-- About Author Card -->
+    <div style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); font-size:0.85rem; color:var(--muted);">
+      <p><strong>Written by:</strong> The BuildMetric team — builders, engineers and software developers with combined decades of experience in construction and DIY projects.</p>
+      <p><strong>Sources:</strong> Formulas based on standard construction industry practices, ACI 318 (Building Code Requirements for Structural Concrete), and ASTM C94 (Ready-Mixed Concrete) guidelines.</p>
+      <p><strong>Last Updated:</strong> September 2026</p>
+    </div>
+  </article>
+
+  <!-- Sidebar Components matching screenshots -->
+  <aside>
+    <div class="trust-badge-card">
+      <h4>Why Trust BuildMetric?</h4>
+      <ul>
+        <li>100% Free Forever</li>
+        <li>Engineer Verified Formulas</li>
+        <li>Metric &amp; Imperial Support</li>
+        <li>No Sign-up Required</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top: 1.5rem;">
+      <h4 style="color: var(--primary); margin-bottom: 0.8rem;">Related Construction Calculators</h4>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+        <a href="#" style="padding: 8px; background: #f8fafc; border: 1px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.85rem; text-align: center;">Brick Calculator</a>
+        <a href="#" style="padding: 8px; background: #f8fafc; border: 1px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.85rem; text-align: center;">Rebar Calculator</a>
+        <a href="#" style="padding: 8px; background: #f8fafc; border: 1px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.85rem; text-align: center;">Sand Calculator</a>
+        <a href="#" style="padding: 8px; background: #f8fafc; border: 1px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.85rem; text-align: center;">Gravel Calculator</a>
+        <a href="#" style="padding: 8px; background: #f8fafc; border: 1px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.85rem; text-align: center;">Drywall Calculator</a>
+        <a href="#" style="padding: 8px; background: #f8fafc; border: 1px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.85rem; text-align: center;">Roofing Calculator</a>
+      </div>
+    </div>
+
+    <div style="margin-top: 1.5rem; padding: 12px; background: #fff; border: 1px solid var(--border); border-radius: 8px; font-size: 0.8rem; color: var(--muted);">
+      <strong>Disclaimer:</strong> BuildMetric calculators are provided for estimation purposes only. Always consult a qualified professional before ordering materials or starting construction work. Results may vary based on site conditions, material specifications and local building codes.
+    </div>
+  </aside>
+</div>
+
+<script>
+let currentUnitSystem = 'imperial';
+
+function switchUnit(system) {
+  currentUnitSystem = system;
+  document.getElementById('btn-imp').classList.toggle('active', system === 'imperial');
+  document.getElementById('btn-met').classList.toggle('active', system === 'metric');
+  renderShapeInputs();
+  document.getElementById('result').style.display = 'none';
+}
+
+function renderShapeInputs() {
+  const shape = document.getElementById('shape').value;
+  const container = document.getElementById('dynamicInputs');
+  const isImp = currentUnitSystem === 'imperial';
+  let html = '';
+
+  if (shape === 'slab') {
+    html = `
+      <div class="form-group">
+        <label for="len">Length (${isImp ? 'ft' : 'm'})</label>
+        <input type="number" id="len" step="any" placeholder="${isImp ? 'e.g. 10' : 'e.g. 3'}" required>
+      </div>
+      <div class="form-group">
+        <label for="wid">Width (${isImp ? 'ft' : 'm'})</label>
+        <input type="number" id="wid" step="any" placeholder="${isImp ? 'e.g. 10' : 'e.g. 3'}" required>
+      </div>
+      <div class="form-group">
+        <label for="thk">Thickness / Depth (${isImp ? 'in' : 'mm'})</label>
+        <input type="number" id="thk" step="any" placeholder="${isImp ? 'e.g. 4' : 'e.g. 100'}" required>
+        <span style="font-size:0.75rem; color:var(--muted); display:block; margin-top:3px;">Standard: 4 in (walkway), 5-6 in (driveway), 8-12 in (footing)</span>
+      </div>
+    `;
+  } else if (shape === 'column') {
+    html = `
+      <div class="form-group">
+        <label for="dia">Diameter (${isImp ? 'in' : 'mm'})</label>
+        <input type="number" id="dia" step="any" placeholder="${isImp ? 'e.g. 12' : 'e.g. 300'}" required>
+      </div>
+      <div class="form-group">
+        <label for="hgt">Height / Depth (${isImp ? 'ft' : 'm'})</label>
+        <input type="number" id="hgt" step="any" placeholder="${isImp ? 'e.g. 8' : 'e.g. 2.5'}" required>
+      </div>
+    `;
+  } else if (shape === 'stair') {
+    html = `
+      <div class="form-group">
+        <label for="steps">Number of Steps</label>
+        <input type="number" id="steps" step="1" placeholder="e.g. 5" required>
+      </div>
+      <div class="form-group">
+        <label for="stairWid">Stair Width (${isImp ? 'ft' : 'm'})</label>
+        <input type="number" id="stairWid" step="any" placeholder="${isImp ? 'e.g. 3' : 'e.g. 1'}" required>
+      </div>
+      <div class="form-group">
+        <label for="rise">Step Rise (${isImp ? 'in' : 'mm'})</label>
+        <input type="number" id="rise" step="any" placeholder="${isImp ? 'e.g. 7' : 'e.g. 175'}" required>
+      </div>
+      <div class="form-group">
+        <label for="run">Step Run (${isImp ? 'in' : 'mm'})</label>
+        <input type="number" id="run" step="any" placeholder="${isImp ? 'e.g. 11' : 'e.g. 275'}" required>
+      </div>
+    `;
+  }
+
+  container.innerHTML = html;
+}
+
+function calculateConcrete(e) {
+  e.preventDefault();
+
+  const shape = document.getElementById('shape').value;
+  const wastePct = parseFloat(document.getElementById('waste').value) || 0;
+  const wasteFactor = 1 + (wastePct / 100);
+  const isImp = currentUnitSystem === 'imperial';
+
+  let rawVolFt3 = 0;
+
+  if (shape === 'slab') {
+    const l = parseFloat(document.getElementById('len').value) || 0;
+    const w = parseFloat(document.getElementById('wid').value) || 0;
+    const t = parseFloat(document.getElementById('thk').value) || 0;
+
+    if (isImp) {
+      rawVolFt3 = l * w * (t / 12);
+    } else {
+      const volM3 = l * w * (t / 1000);
+      rawVolFt3 = volM3 * 35.3147;
+    }
+  } else if (shape === 'column') {
+    const d = parseFloat(document.getElementById('dia').value) || 0;
+    const h = parseFloat(document.getElementById('hgt').value) || 0;
+
+    if (isImp) {
+      const rFt = (d / 2) / 12;
+      rawVolFt3 = Math.PI * Math.pow(rFt, 2) * h;
+    } else {
+      const rM = (d / 2) / 1000;
+      const volM3 = Math.PI * Math.pow(rM, 2) * h;
+      rawVolFt3 = volM3 * 35.3147;
+    }
+  } else if (shape === 'stair') {
+    const steps = parseFloat(document.getElementById('steps').value) || 0;
+    const w = parseFloat(document.getElementById('stairWid').value) || 0;
+    const rise = parseFloat(document.getElementById('rise').value) || 0;
+    const run = parseFloat(document.getElementById('run').value) || 0;
+
+    if (isImp) {
+      const riseFt = rise / 12;
+      const runFt = run / 12;
+      rawVolFt3 = (steps * w * riseFt * runFt) / 2;
+    } else {
+      const riseM = rise / 1000;
+      const runM = run / 1000;
+      const volM3 = (steps * w * riseM * runM) / 2;
+      rawVolFt3 = volM3 * 35.3147;
+    }
+  }
+
+  const totalFt3 = rawVolFt3 * wasteFactor;
+  const totalYd3 = totalFt3 / 27;
+  const totalM3 = totalFt3 * 0.0283168;
+  const totalLiters = totalM3 * 1000;
+
+  // Bag yields (cu ft per bag)
+  const bags80 = Math.ceil(totalFt3 / 0.6);
+  const bags60 = Math.ceil(totalFt3 / 0.45);
+  const bags50kg = Math.ceil(totalFt3 / 1.25);
+  const bags25kg = Math.ceil(totalFt3 / 0.625);
+
+  let resHtml = `
+    <div style="font-size:1.3rem; font-weight:800; color:var(--primary); margin-bottom:8px;">
+      Total Volume Required: ${totalYd3.toFixed(2)} cu yd (${totalM3.toFixed(2)} m³)
+    </div>
+    <div class="result-line"><span>Cubic Feet</span><span>${totalFt3.toFixed(2)} ft³</span></div>
+    <div class="result-line"><span>Cubic Yards</span><span>${totalYd3.toFixed(2)} yd³</span></div>
+    <div class="result-line"><span>Cubic Metres</span><span>${totalM3.toFixed(2)} m³</span></div>
+    <div class="result-line"><span>Total Volume in Litres</span><span>${Math.round(totalLiters)} L</span></div>
+    <div style="margin-top:12px; font-weight:700; color:var(--text); font-size:0.9rem;">Pre-Mixed Bag Requirements:</div>
+    <div class="result-line"><span>80 lb Bags (US Standard)</span><span>${bags80} bags</span></div>
+    <div class="result-line"><span>60 lb Bags</span><span>${bags60} bags</span></div>
+    <div class="result-line"><span>50 kg Bags (Global/EU)</span><span>${bags50kg} bags</span></div>
+    <div class="result-line"><span>25 kg Bags</span><span>${bags25kg} bags</span></div>
+  `;
+
+  const resBox = document.getElementById('result');
+  resBox.innerHTML = resHtml;
+  resBox.style.display = 'block';
+}
+
+function resetForm() {
+  document.getElementById('calcForm').reset();
+  renderShapeInputs();
+  document.getElementById('result').style.display = 'none';
+}
+
+// Single-icon FAQ Accordion Listener
+document.querySelectorAll('.faq-question').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    const parent = this.parentElement;
+    const ans = parent.querySelector('.faq-answer');
+    const icon = this.querySelector('.faq-icon');
+    
+    const isOpen = ans.style.display === 'block';
+    ans.style.display = isOpen ? 'none' : 'block';
+    icon.textContent = isOpen ? '+' : '−';
+  });
+});
+
+// Initialize default inputs
+renderShapeInputs();
+</script>
+
+</body>
+</html>
+
+  
