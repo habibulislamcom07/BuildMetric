@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#ffffff"/>
+
+  <g transform="translate(0, 0)">
+    <!-- Main Logomark: Bold Geometric 'B' with Integrated Compass Needle -->
+    <!-- Formed using precise SVG paths for clean scaling at 32x32 -->
+    
+    <!-- Letter 'B' Main Structure -->
+    <!-- Outer boundary of B -->
+    <path fill="#0f766e" fill-rule="evenodd" d="
+      M 112 80 
+      L 256 80 
+      C 310 80, 344 104, 344 152 
+      C 344 186, 322 210, 288 222 
+      C 334 234, 360 264, 360 312 
+      C 360 376, 312 400, 248 400 
+      L 112 400 
+      Z 
+      
+      M 184 136 
+      L 184 212 
+      L 248 212 
+      C 272 212, 284 200, 284 174 
+      C 284 148, 272 136, 248 136 
+      Z 
+      
+      M 184 268 
+      L 184 344 
+      L 252 344 
+      C 280 344, 296 330, 296 306 
+      C 296 282, 280 268, 252 268 
+      Z
+    "/>
+
+    <!-- Compass Needle Tip integrated seamlessly into top-left of 'B' -->
+    <!-- Replaces the top-left square corner with an upward precision point -->
+    <path fill="#0f766e" d="
+      M 112 80 
+      L 184 80 
+      L 184 136 
+      L 112 136 
+      Z
+    "/>
+    
+    <!-- Precision Compass Cutout Pointer at Top -->
+    <polygon points="112,80 148,16 184,80" fill="#0f766e"/>
+    
+    <!-- Negative space compass dial accent line -->
+    <line x1="148" y1="36" x2="148" y2="116" stroke="#ffffff" stroke-width="10" stroke-linecap="round"/>
+  </g>
+
+  <!-- Typography: Clean Sans-Serif "BuildMetric" -->
+  <text x="256" y="468" 
+        font-family="'Inter', 'Poppins', -apple-system, sans-serif" 
+        font-size="42" 
+        font-weight="700" 
+        fill="#0f766e" 
+        text-anchor="middle" 
+        letter-spacing="-0.5">BuildMetric</text>
+</svg>
