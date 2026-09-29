@@ -4632,6 +4632,7 @@ main {
     gap: var(--sp-2, 0.5rem);
   }
 
+   
   .geo-c-flag {
     font-size: 1.25rem;
   }
@@ -9384,3 +9385,10 @@ code,
 
    BuildMetric.org — Free professional construction calculators.
    ============================================================= */
+
+/* TEMPORARY — JS baad mein load hone tak drawer force-hide */
+@media (max-width: 768px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
