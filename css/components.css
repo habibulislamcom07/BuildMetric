@@ -6311,3 +6311,1082 @@ button:disabled {
    END OF components.css
    Next file in load order: homepage.css
    ═══════════════════════════════════════════════════════════════ */
+
+/* ═══════════════════════════════════════════════════════════════
+   BUILDMETRIC — components.css (continued)
+   PART 11A/11: Filter bar, mobile filter drawer, progress meter,
+                inline alerts, dropdown menu, sticky action bar,
+                compare strip
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ═══════════════ 61. FILTER / SORT BAR ═══════════════ */
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+  padding: var(--sp-4) 0;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: var(--sp-6);
+}
+
+.filter-bar-left,
+.filter-bar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.filter-bar-label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-200);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--slate-light);
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+/* ── Sort dropdown (native select, styled) ─────── */
+
+.sort-select {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 36px 0 var(--sp-4);
+  font-family: var(--font-mono);
+  font-size: var(--fs-300);
+  font-weight: 500;
+  color: var(--ink);
+  background-color: var(--white);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='square'%3e%3cpath d='M6 9l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px 16px;
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+
+.sort-select:hover {
+  border-color: var(--blue-deep);
+}
+
+.sort-select:focus {
+  border-color: var(--blue-deep);
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.12);
+  outline: none;
+}
+
+/* ── Filter toggle (mobile — opens drawer) ─────── */
+
+.filter-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 8px 14px;
+  min-height: 40px;
+  font-size: var(--fs-300);
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--white);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+
+.filter-toggle:hover,
+.filter-toggle:focus-visible {
+  border-color: var(--blue-deep);
+  outline: none;
+}
+
+.filter-toggle svg {
+  width: 16px;
+  height: 16px;
+}
+
+.filter-toggle-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--blue-pale);
+  background: var(--blue-deep);
+  border-radius: var(--radius-pill);
+  line-height: 1;
+}
+
+/* ═══════════════ 62. MOBILE FILTER DRAWER ═══════════════ */
+
+.filter-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: min(340px, 88vw);
+  background: var(--white);
+  border-right: 1.5px solid var(--border-color);
+  z-index: var(--z-mobile-nav);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  transition: transform var(--dur-slow) var(--ease-out);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.filter-drawer.is-open {
+  transform: translateX(0);
+  box-shadow: 8px 0 32px rgba(15, 23, 42, 0.18);
+}
+
+.filter-drawer-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-5);
+  border-bottom: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.filter-drawer-title {
+  font-family: var(--font-mono);
+  font-size: var(--fs-200);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--forest-green);
+  margin: 0;
+}
+
+.filter-drawer-close {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--slate-med);
+  border-radius: var(--radius-sm);
+  font-size: 18px;
+}
+
+.filter-drawer-close:hover {
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.filter-drawer-body {
+  flex: 1;
+  padding: var(--sp-5);
+}
+
+.filter-drawer-foot {
+  padding: var(--sp-4) var(--sp-5);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  gap: var(--sp-3);
+  flex-shrink: 0;
+  background: var(--surface);
+}
+
+.filter-drawer-foot .btn {
+  flex: 1;
+}
+
+.filter-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  z-index: calc(var(--z-mobile-nav) - 1);
+  opacity: 0;
+  transition: opacity var(--dur-base) var(--ease-out);
+}
+
+.filter-backdrop.is-open {
+  opacity: 1;
+}
+
+/* ═══════════════ 63. PROGRESS METER ═══════════════ */
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--surface);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--green-light);
+  border-radius: var(--radius-pill);
+  transition: width var(--dur-slow) var(--ease-out);
+  width: 0%;
+}
+
+.progress-bar-fill.is-blue {
+  background: var(--blue-deep);
+}
+
+.progress-bar-fill.is-amber {
+  background: var(--amber-orange);
+}
+
+.progress-bar-fill.is-striped {
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.18) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.18) 50%,
+    rgba(255, 255, 255, 0.18) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 12px 12px;
+}
+
+.progress-label {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  font-size: var(--fs-300);
+  line-height: 1.4;
+}
+
+.progress-label-text {
+  color: var(--slate-med);
+  font-weight: 500;
+}
+
+.progress-label-value {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums slashed-zero;
+}
+
+/* ═══════════════ 64. INLINE ALERT / BANNER ═══════════════ */
+
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  padding: var(--sp-4) var(--sp-5);
+  border-radius: var(--radius-sm);
+  border-left: 4px solid;
+  font-size: var(--fs-300);
+  line-height: 1.55;
+  margin-bottom: var(--sp-5);
+}
+
+.alert:last-child {
+  margin-bottom: 0;
+}
+
+.alert-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1;
+  border-radius: 50%;
+  margin-top: 1px;
+}
+
+.alert-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.alert-title {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 2px;
+  color: inherit;
+}
+
+.alert-body p {
+  margin: 0;
+  max-width: none;
+  color: inherit;
+}
+
+.alert-body p + p {
+  margin-top: var(--sp-2);
+}
+
+.alert-body a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
+/* ── Alert variants ────────────────────────────── */
+
+.alert-info {
+  background: var(--blue-pale);
+  border-left-color: var(--blue-deep);
+  color: var(--blue-deep);
+}
+
+.alert-info .alert-icon {
+  background: var(--blue-deep);
+  color: var(--blue-pale);
+}
+
+.alert-success {
+  background: var(--green-pale);
+  border-left-color: var(--green-light);
+  color: var(--forest-green);
+}
+
+.alert-success .alert-icon {
+  background: var(--forest-green);
+  color: var(--green-pale);
+}
+
+.alert-warning {
+  background: var(--orange-pale);
+  border-left-color: var(--orange-deep);
+  color: var(--orange-deep);
+}
+
+.alert-warning .alert-icon {
+  background: var(--orange-deep);
+  color: var(--orange-pale);
+}
+
+.alert-error {
+  background: #fef2f2;
+  border-left-color: #dc2626;
+  color: #b91c1c;
+}
+
+.alert-error .alert-icon {
+  background: #dc2626;
+  color: #fee2e2;
+}
+
+/* ═══════════════ 65. DROPDOWN MENU (base) ═══════════════ */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 220px;
+  max-width: 320px;
+  background: var(--white);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.14);
+  padding: var(--sp-2);
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+  transition:
+    opacity var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
+}
+
+.dropdown.is-open .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown-menu[hidden] {
+  display: none;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  width: 100%;
+  padding: 10px var(--sp-3);
+  font-size: var(--fs-300);
+  font-weight: 500;
+  color: var(--ink);
+  text-align: left;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus-visible {
+  background: var(--surface);
+  color: var(--blue-deep);
+  text-decoration: none;
+  outline: none;
+}
+
+.dropdown-item.is-selected {
+  background: var(--blue-pale);
+  color: var(--blue-deep);
+  font-weight: 600;
+}
+
+.dropdown-item.is-selected::after {
+  content: '✓';
+  margin-left: auto;
+  color: var(--forest-green);
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.dropdown-divider {
+  height: 1px;
+  background: var(--border-color);
+  margin: var(--sp-2) 0;
+}
+
+/* ═══════════════ 66. STICKY MOBILE ACTION BAR ═══════════════ */
+
+.sticky-action-bar {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .sticky-action-bar {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-3);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: var(--z-scroll-top);
+    padding: var(--sp-3) var(--gutter);
+    padding-bottom: max(var(--sp-3), env(safe-area-inset-bottom));
+    background: var(--white);
+    border-top: 1.5px solid var(--border-color);
+    box-shadow: 0 -4px 16px rgba(15, 23, 42, 0.08);
+    transform: translateY(100%);
+    transition: transform var(--dur-base) var(--ease-out);
+  }
+
+  .sticky-action-bar.is-visible {
+    transform: translateY(0);
+  }
+
+  .sticky-action-bar-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .sticky-action-bar-label {
+    font-family: var(--font-mono);
+    font-size: var(--fs-100);
+    font-weight: 500;
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    color: var(--slate-light);
+    line-height: 1.4;
+  }
+
+  .sticky-action-bar-value {
+    font-family: var(--font-mono);
+    font-size: var(--fs-400);
+    font-weight: 700;
+    color: var(--forest-green);
+    line-height: 1.2;
+    font-variant-numeric: tabular-nums slashed-zero;
+  }
+
+  .sticky-action-bar .btn {
+    flex-shrink: 0;
+    min-width: 0;
+  }
+}
+
+/* Add bottom spacing to body when sticky bar is active */
+body.has-sticky-bar {
+  padding-bottom: 76px;
+}
+
+@media (min-width: 901px) {
+  body.has-sticky-bar {
+    padding-bottom: 0;
+  }
+}
+
+/* ═══════════════ 67. COMPARE STRIP (side-by-side numbers) ═══════════════ */
+
+.compare-strip {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-3);
+  margin-top: var(--sp-5);
+}
+
+@media (min-width: 560px) {
+  .compare-strip-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .compare-strip-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.compare-item {
+  padding: var(--sp-4) var(--sp-5);
+  background: var(--white);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+.compare-item.is-primary {
+  border-color: var(--green-light);
+  background: var(--green-pale);
+}
+
+.compare-item-label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-100);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--slate-med);
+  line-height: 1.4;
+}
+
+.compare-item.is-primary .compare-item-label {
+  color: var(--forest-green);
+}
+
+.compare-item-value {
+  font-family: var(--font-mono);
+  font-size: var(--fs-600);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--blue-deep);
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums slashed-zero;
+}
+
+.compare-item.is-primary .compare-item-value {
+  color: var(--forest-green);
+}
+
+.compare-item-unit {
+  font-size: 0.6em;
+  font-weight: 500;
+  opacity: 0.7;
+  margin-left: 3px;
+}
+
+.compare-item-diff {
+  font-family: var(--font-mono);
+  font-size: var(--fs-200);
+  font-weight: 500;
+  color: var(--slate-light);
+  line-height: 1.4;
+}
+
+.compare-item-diff.is-up {
+  color: var(--forest-green);
+}
+
+.compare-item-diff.is-down {
+  color: var(--orange-deep);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BUILDMETRIC — components.css (continued)
+   PART 11B/11 (FINAL SUPPLEMENT): Sidebar widget, recently viewed,
+                step indicator, metric card, changelog, shortcuts,
+                split-compare, safety fallbacks + file close
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ═══════════════ 68. SIDEBAR WIDGET SHELL ═══════════════ */
+
+.widget {
+  background: var(--white);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--sp-5);
+  margin-bottom: var(--sp-5);
+}
+
+.widget:last-child {
+  margin-bottom: 0;
+}
+
+.widget-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-4);
+  padding-bottom: var(--sp-3);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.widget-title {
+  font-family: var(--font-mono);
+  font-size: var(--fs-200);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--forest-green);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.widget-link {
+  font-size: var(--fs-200);
+  font-weight: 600;
+  color: var(--ocean-blue);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.widget-link:hover {
+  color: var(--forest-green);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.widget-body {
+  min-width: 0;
+}
+
+/* ═══════════════ 69. RECENTLY VIEWED STRIP ═══════════════ */
+
+.recently-viewed {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recently-viewed li {
+  display: block;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.recently-viewed li:last-child {
+  border-bottom: none;
+}
+
+.recently-viewed a {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-3) 0;
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.recently-viewed a:hover {
+  color: var(--blue-deep);
+  text-decoration: none;
+}
+
+.recently-viewed-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-xs);
+  background: var(--green-pale);
+  color: var(--forest-green);
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.recently-viewed-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.recently-viewed-title {
+  font-size: var(--fs-300);
+  font-weight: 600;
+  line-height: 1.35;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.recently-viewed-meta {
+  font-family: var(--font-mono);
+  font-size: var(--fs-100);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--slate-light);
+  line-height: 1.4;
+}
+
+/* ═══════════════ 70. STEP INDICATOR (multi-step tools) ═══════════════ */
+
+.step-indicator {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-6);
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: var(--sp-1);
+}
+
+.step-indicator::-webkit-scrollbar {
+  display: none;
+}
+
+.step-indicator-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 6px 12px;
+  min-height: 32px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-200);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--slate-med);
+  background: var(--white);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  flex-shrink: 0;
+  line-height: 1.4;
+  transition:
+    background-color var(--dur-base) var(--ease-out),
+    border-color var(--dur-base) var(--ease-out),
+    color var(--dur-base) var(--ease-out);
+}
+
+.step-indicator-item.is-current {
+  background: var(--blue-deep);
+  border-color: var(--blue-deep);
+  color: var(--blue-pale);
+}
+
+.step-indicator-item.is-done {
+  background: var(--green-pale);
+  border-color: var(--green-light);
+  color: var(--forest-green);
+}
+
+.step-indicator-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: currentColor;
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.step-indicator-item.is-current .step-indicator-num {
+  background: var(--amber-orange);
+  color: var(--ink);
+}
+
+.step-indicator-item.is-done .step-indicator-num {
+  background: var(--forest-green);
+  color: var(--green-pale);
+}
+
+.step-indicator-sep {
+  color: var(--slate-light);
+  font-family: var(--font-mono);
+  font-size: var(--fs-300);
+  flex-shrink: 0;
+  user-select: none;
+}
+
+/* ═══════════════ 71. METRIC COMPARISON CARD ═══════════════ */
+
+.metric-card {
+  padding: var(--sp-5);
+  background: var(--white);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  min-width: 0;
+}
+
+.metric-card-label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-100);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--slate-light);
+  line-height: 1.4;
+}
+
+.metric-card-value {
+  font-family: var(--font-mono);
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--blue-deep);
+  line-height: 1;
+  font-variant-numeric: tabular-nums slashed-zero;
+}
+
+.metric-card-unit {
+  font-size: 0.55em;
+  font-weight: 500;
+  color: var(--slate-med);
+  margin-left: 4px;
+}
+
+.metric-card-delta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-200);
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: var(--sp-1);
+}
+
+.metric-card-delta.is-up {
+  color: var(--forest-green);
+}
+
+.metric-card-delta.is-down {
+  color: #dc2626;
+}
+
+.metric-card-delta.is-flat {
+  color: var(--slate-med);
+}
+
+/* ═══════════════ 72. CHANGELOG / UPDATE LIST ═══════════════ */
+
+.changelog {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.changelog-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--sp-4);
+  padding: var(--sp-4) 0;
+  border-bottom: 1px solid var(--border-color);
+  align-items: baseline;
+}
+
+.changelog-item:last-child {
+  border-bottom: none;
+}
+
+.changelog-date {
+  font-family: var(--font-mono);
+  font-size: var(--fs-200);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--forest-green);
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: 90px;
+}
+
+.changelog-body {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.changelog-title {
+  font-size: var(--fs-300);
+  font-weight: 700;
+  color: var(--blue-deep);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.changelog-desc {
+  font-size: var(--fs-300);
+  line-height: 1.55;
+  color: var(--slate-med);
+  margin: 0;
+  max-width: none;
+}
+
+/* ═══════════════ 73. KBD SHORTCUT GRID ═══════════════ */
+
+.shortcut-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-2) var(--sp-6);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 560px) {
+  .shortcut-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.shortcut-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  padding: var(--sp-3) 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.shortcut-label {
+  font-size: var(--fs-300);
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.shortcut-keys {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ═══════════════ 74. SPLIT-SCREEN COMPARE (formula vs result) ═══════════════ */
+
+.split-compare {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-4);
+  margin-top: var(--sp-5);
+}
+
+@media (min-width: 720px) {
+  .split-compare {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-5);
+  }
+}
+
+/* ═══════════════ 75. FINAL SAFETY + FALLBACKS ═══════════════ */
+
+/* Ensure no dropdown/menu ever pushes horizontally off-screen */
+.dropdown-menu {
+  max-width: min(320px, calc(100vw - 32px));
+}
+
+/* Ensure sticky action bar never covers the scroll-top button */
+body.has-sticky-bar .scroll-top {
+  bottom: 92px;
+}
+
+@media (min-width: 901px) {
+  body.has-sticky-bar .scroll-top {
+    bottom: 20px;
+  }
+}
+
+/* Reduced motion for new animations */
+@media (prefers-reduced-motion: reduce) {
+  .filter-drawer,
+  .dropdown-menu,
+  .sticky-action-bar,
+  .progress-bar-fill {
+    transition: none;
+  }
+}
+
+/* High contrast for new components */
+@media (forced-colors: active) {
+  .filter-drawer,
+  .dropdown-menu,
+  .widget,
+  .metric-card,
+  .compare-item {
+    border: 1px solid CanvasText;
+  }
+
+  .alert {
+    border: 1px solid CanvasText;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   END OF components.css (SUPPLEMENT CLOSED)
+   Next file in load order: homepage.css
+   ═══════════════════════════════════════════════════════════════ */
