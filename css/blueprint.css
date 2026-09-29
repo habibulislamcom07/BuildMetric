@@ -1,0 +1,2221 @@
+/* ============================================================
+   BUILDMETRIC.ORG — BLUEPRINT.CSS
+   Design system: tokens, reset, base typography, layout primitives
+   Palette: "Iron & Blueprint"
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. DESIGN TOKENS
+   ------------------------------------------------------------ */
+:root {
+
+  /* --- Core palette (locked) --- */
+  --iron-black:     #0A0A0A;
+  --blueprint-navy: #0F2744;
+  --steel:          #1E293B;
+  --steel-line:     #334155;
+  --safety-yellow:  #FFD500;
+  --caution-orange: #FF6B00;
+  --site-red:       #E63946;
+  --concrete:       #F2F4F7;
+  --paper:          #FFFFFF;
+  --ink:            #0A0A0A;
+  --ink-muted:      #64748B;
+  --verified-green: #16A34A;
+
+  /* --- Derived neutrals (for contrast-safe text on dark) --- */
+  --text-on-dark:        #F2F4F7;   /* concrete — body & headings on dark */
+  --text-on-dark-muted:  #94A3B8;   /* secondary on dark */
+  --text-on-dark-faint:  #64748B;   /* tertiary on dark */
+  --text-on-light:       #0A0A0A;
+  --text-on-light-muted: #64748B;
+
+  /* --- Semantic roles --- */
+  --bg-page:        var(--paper);
+  --bg-section:     var(--concrete);
+  --bg-dark:        var(--iron-black);
+  --bg-navy:        var(--blueprint-navy);
+  --bg-card-light:  var(--paper);
+  --bg-card-dark:   var(--steel);
+
+  --border-light:   1px solid rgba(10, 10, 10, 0.12);
+  --border-strong:  2px solid var(--blueprint-navy);
+  --border-dark:    1px solid var(--steel-line);
+  --border-yellow:  2px solid var(--safety-yellow);
+
+  --link:           var(--blueprint-navy);
+  --link-hover:     var(--caution-orange);
+  --link-on-dark:   var(--safety-yellow);
+
+  /* --- Type scale (fluid, clamps) --- */
+  --font-body:      'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono:      'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+
+  --fs-xs:    clamp(0.72rem, 0.70rem + 0.10vw, 0.78rem);
+  --fs-sm:    clamp(0.82rem, 0.80rem + 0.12vw, 0.90rem);
+  --fs-base:  clamp(0.94rem, 0.92rem + 0.14vw, 1.02rem);
+  --fs-md:    clamp(1.05rem, 1.00rem + 0.24vw, 1.18rem);
+  --fs-lg:    clamp(1.20rem, 1.12rem + 0.40vw, 1.42rem);
+  --fs-xl:    clamp(1.44rem, 1.30rem + 0.70vw, 1.80rem);
+  --fs-2xl:   clamp(1.75rem, 1.50rem + 1.20vw, 2.40rem);
+  --fs-3xl:   clamp(2.10rem, 1.70rem + 2.00vw, 3.20rem);
+  --fs-4xl:   clamp(2.60rem, 2.00rem + 3.00vw, 4.20rem);
+
+  /* --- Line heights --- */
+  --lh-tight:   1.15;
+  --lh-snug:    1.30;
+  --lh-base:    1.6;
+  --lh-relaxed: 1.75;
+
+  /* --- Letter spacing --- */
+  --ls-tight:   -0.03em;
+  --ls-snug:    -0.02em;
+  --ls-normal:  0;
+  --ls-wide:    0.06em;
+  --ls-wider:   0.12em;
+
+  /* --- Font weights --- */
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+  --fw-black:    800;
+  --fw-ultra:    900;
+
+  /* --- Spacing scale (4px base) --- */
+  --sp-1:  0.25rem;   /*  4px */
+  --sp-2:  0.5rem;    /*  8px */
+  --sp-3:  0.75rem;   /* 12px */
+  --sp-4:  1rem;      /* 16px */
+  --sp-5:  1.25rem;   /* 20px */
+  --sp-6:  1.5rem;    /* 24px */
+  --sp-8:  2rem;      /* 32px */
+  --sp-10: 2.5rem;    /* 40px */
+  --sp-12: 3rem;      /* 48px */
+  --sp-16: 4rem;      /* 64px */
+  --sp-20: 5rem;      /* 80px */
+  --sp-24: 6rem;      /* 96px */
+  --sp-32: 8rem;      /* 128px */
+
+  /* --- Section rhythm --- */
+  --section-py:  clamp(3rem, 2rem + 4vw, 5.5rem);
+  --container-max: 1280px;
+  --container-narrow: 860px;
+  --container-pad: clamp(1rem, 0.5rem + 2vw, 2.5rem);
+
+  /* --- Radii (hard edges, max 4px) --- */
+  --r-0: 0;
+  --r-1: 2px;
+  --r-2: 4px;
+
+  /* --- Borders & strokes --- */
+  --stroke-1: 1px;
+  --stroke-2: 2px;
+  --stroke-3: 3px;
+
+  /* --- Focus ring --- */
+  --focus-ring: 0 0 0 2px var(--paper), 0 0 0 4px var(--caution-orange);
+  --focus-ring-dark: 0 0 0 2px var(--iron-black), 0 0 0 4px var(--safety-yellow);
+
+  /* --- Motion --- */
+  --t-fast:  120ms;
+  --t-base:  200ms;
+  --t-slow:  320ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* --- Blueprint grid --- */
+  --grid-size: 40px;
+  --grid-line: rgba(242, 244, 247, 0.03);
+  --grid-line-strong: rgba(242, 244, 247, 0.06);
+
+  /* --- Z-index scale --- */
+  --z-header:   100;
+  --z-drawer:   200;
+  --z-overlay:  300;
+  --z-modal:    400;
+  --z-banner:   500;
+  --z-top:      600;
+
+  /* --- Header height (used for sticky offsets) --- */
+  --header-h: 64px;
+}
+
+/* ------------------------------------------------------------
+   2. MODERN RESET
+   ------------------------------------------------------------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 16px);
+  tab-size: 2;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-base);
+  color: var(--text-on-light);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+body.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  background-color: var(--concrete); /* avoids white flash on slow loads */
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+  text-align: inherit;
+}
+
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+textarea {
+  resize: vertical;
+}
+
+fieldset {
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+hr {
+  border: none;
+  height: var(--stroke-2);
+  background: var(--blueprint-navy);
+  opacity: 0.12;
+  margin: var(--sp-6) 0;
+}
+
+/* Remove number input spinners — steppers replace them */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* Search field default decorations off */
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* ------------------------------------------------------------
+   3. BASE TYPOGRAPHY
+   ------------------------------------------------------------ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-snug);
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-ultra);
+  letter-spacing: var(--ls-tight);
+}
+
+h2 {
+  font-size: var(--fs-3xl);
+  font-weight: var(--fw-black);
+  letter-spacing: var(--ls-tight);
+}
+
+h3 {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+}
+
+h4 {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+}
+
+h5 {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+}
+
+h6 {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-normal);
+}
+
+p {
+  line-height: var(--lh-base);
+  text-wrap: pretty;
+}
+
+p + p {
+  margin-top: var(--sp-4);
+}
+
+strong,
+b {
+  font-weight: var(--fw-bold);
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+small {
+  font-size: var(--fs-sm);
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  text-underline-offset: 3px;
+  transition: color var(--t-fast) var(--ease-out);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+a:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: var(--r-1);
+}
+
+/* Ensure links inside body copy are obvious */
+p a,
+li a:not([class]),
+td a:not([class]) {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgba(15, 39, 68, 0.35);
+}
+
+p a:hover,
+li a:not([class]):hover {
+  text-decoration-color: currentColor;
+}
+
+ul,
+ol {
+  padding-left: 1.4em;
+}
+
+li {
+  line-height: var(--lh-base);
+}
+
+li + li {
+  margin-top: var(--sp-1);
+}
+
+/* --- On dark sections: force readable text --- */
+.is-dark,
+.section--dark,
+.hero,
+.site-footer,
+.b2b,
+.how-to,
+.why-exists,
+.quicklinks {
+  color: var(--text-on-dark);
+}
+
+.is-dark h1,
+.is-dark h2,
+.is-dark h3,
+.is-dark h4,
+.is-dark h5,
+.is-dark h6,
+.hero h1,
+.site-footer h2,
+.site-footer h3 {
+  color: var(--text-on-dark);
+}
+
+.is-dark p,
+.hero p,
+.site-footer p {
+  color: var(--text-on-dark);
+}
+
+.is-dark a:not([class]),
+.hero a:not([class]) {
+  color: var(--link-on-dark);
+}
+
+/* ------------------------------------------------------------
+   4. TYPOGRAPHY UTILITIES
+   ------------------------------------------------------------ */
+
+/* Screen-reader only */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Skip link — visible on focus */
+.skip-link {
+  position: fixed;
+  top: var(--sp-3);
+  left: var(--sp-3);
+  z-index: var(--z-top);
+  padding: var(--sp-3) var(--sp-5);
+  background: var(--safety-yellow);
+  color: var(--iron-black);
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sm);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  border: var(--stroke-2) solid var(--iron-black);
+  transform: translateY(-200%);
+  transition: transform var(--t-base) var(--ease-out);
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+/* Monospace utility — every quantity, result, formula */
+.mono,
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1, 'zero' 1;
+}
+
+code {
+  font-size: 0.92em;
+  padding: 0.12em 0.4em;
+  background: var(--concrete);
+  color: var(--blueprint-navy);
+  border: var(--border-light);
+  border-radius: var(--r-1);
+}
+
+.is-dark code,
+.hero code,
+.site-footer code {
+  background: rgba(255, 213, 0, 0.10);
+  color: var(--safety-yellow);
+  border-color: rgba(255, 213, 0, 0.25);
+}
+
+pre {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-snug);
+  padding: var(--sp-5);
+  overflow-x: auto;
+  background: var(--blueprint-navy);
+  color: var(--safety-yellow);
+  border: var(--stroke-2) solid var(--steel-line);
+  border-radius: var(--r-2);
+  -webkit-overflow-scrolling: touch;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* Formula block — used in tool pages */
+.code-block {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  line-height: 1.7;
+  padding: var(--sp-5) var(--sp-6);
+  background: var(--blueprint-navy);
+  color: var(--safety-yellow);
+  border: var(--stroke-2) solid var(--steel-line);
+  border-left: var(--stroke-3) solid var(--safety-yellow);
+  border-radius: var(--r-2);
+  overflow-x: auto;
+  white-space: pre;
+  letter-spacing: 0;
+}
+
+/* Inline keyboard hint */
+.kbd {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  padding: 0.18em 0.5em;
+  min-width: 1.4em;
+  text-align: center;
+  background: var(--safety-yellow);
+  color: var(--iron-black);
+  border: var(--stroke-1) solid rgba(10, 10, 10, 0.25);
+  border-radius: var(--r-1);
+  vertical-align: 1px;
+}
+
+.is-dark .kbd,
+.hero .kbd {
+  background: var(--safety-yellow);
+  color: var(--iron-black);
+  border-color: var(--iron-black);
+}
+
+/* Required-field asterisk */
+.req {
+  color: var(--site-red);
+  font-weight: var(--fw-bold);
+  margin-left: 2px;
+}
+
+/* ------------------------------------------------------------
+   5. FOCUS & MOTION
+   ------------------------------------------------------------ */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--caution-orange);
+  outline-offset: 2px;
+  border-radius: var(--r-1);
+}
+
+.is-dark :focus-visible,
+.hero :focus-visible,
+.site-footer :focus-visible {
+  outline-color: var(--safety-yellow);
+}
+
+::selection {
+  background: var(--safety-yellow);
+  color: var(--iron-black);
+}
+
+.is-dark ::selection,
+.hero ::selection {
+  background: var(--safety-yellow);
+  color: var(--iron-black);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (forced-colors: active) {
+  * {
+    border-color: currentColor;
+  }
+  .btn,
+  .chip,
+  .region-opt,
+  input,
+  select,
+  textarea {
+    border: 1px solid currentColor;
+  }
+  .corner-bl,
+  .corner-br,
+  .ruler,
+  .grid-bg {
+    display: none;
+  }
+}
+
+/* ------------------------------------------------------------
+   6. LAYOUT PRIMITIVES
+   ------------------------------------------------------------ */
+
+/* --- Section wrapper --- */
+.section {
+  position: relative;
+  padding-block: var(--section-py);
+}
+
+.section-inner {
+  position: relative;
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+  z-index: 1;
+}
+
+.section-inner--narrow {
+  max-width: var(--container-narrow);
+}
+
+/* --- Section header block --- */
+.section-head {
+  max-width: 780px;
+  margin-bottom: var(--sp-12);
+}
+
+.section-head--onDark {
+  color: var(--text-on-dark);
+}
+
+.section-title {
+  font-size: var(--fs-3xl);
+  font-weight: var(--fw-black);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  color: var(--ink);
+  margin-top: var(--sp-3);
+  text-wrap: balance;
+}
+
+.section-head--onDark .section-title,
+.is-dark .section-title {
+  color: var(--text-on-dark);
+}
+
+.section-lede {
+  margin-top: var(--sp-5);
+  font-size: var(--fs-md);
+  line-height: var(--lh-relaxed);
+  color: var(--ink-muted);
+  max-width: 64ch;
+  text-wrap: pretty;
+}
+
+.section-lede--onDark,
+.is-dark .section-lede {
+  color: var(--text-on-dark-muted);
+}
+
+/* --- Section label — // SECTION A-A // --- */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--blueprint-navy);
+  line-height: 1;
+}
+
+.section-label--sm {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+}
+
+.section-head--onDark .section-label,
+.is-dark .section-label {
+  color: var(--safety-yellow);
+}
+
+.label-tick {
+  display: inline-block;
+  width: 14px;
+  height: 2px;
+  background: var(--safety-yellow);
+  flex-shrink: 0;
+}
+
+.section-label:not(.section-label--onDark) .label-tick {
+  background: var(--caution-orange);
+}
+
+/* --- Dark section base --- */
+.section--dark {
+  background: var(--blueprint-navy);
+  color: var(--text-on-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.section--navy {
+  background: var(--blueprint-navy);
+}
+
+.section--iron {
+  background: var(--iron-black);
+}
+
+.section--concrete {
+  background: var(--concrete);
+}
+
+.section--paper {
+  background: var(--paper);
+}
+
+/* ------------------------------------------------------------
+   7. BLUEPRINT GRID BACKGROUND
+   ------------------------------------------------------------ */
+.grid-bg,
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+  background-position: 0 0;
+}
+
+/* Fade the grid at the edges so it does not look like a tiled wallpaper */
+.grid-bg::after,
+.hero-grid::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 40%, transparent 30%, var(--blueprint-navy) 100%);
+  opacity: 0.85;
+}
+
+/* On lighter dark backgrounds, soften the fade */
+.section--iron .grid-bg::after {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 40%, transparent 30%, var(--iron-black) 100%);
+}
+
+/* Subgrid — for smaller surfaces (cards on dark) */
+.grid-bg--sm {
+  --grid-size: 20px;
+}
+
+/* ------------------------------------------------------------
+   8. RULER TICK MARKS
+   ------------------------------------------------------------ */
+.ruler {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 32px;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.55;
+}
+
+.ruler-left  { left: 0; }
+.ruler-right { right: 0; }
+
+/* Tick pattern via repeating gradient */
+.ruler::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 23px,
+      rgba(255, 213, 0, 0.55) 23px,
+      rgba(255, 213, 0, 0.55) 24px,
+      transparent 24px,
+      transparent 47px,
+      rgba(255, 213, 0, 0.30) 47px,
+      rgba(255, 213, 0, 0.30) 48px
+    );
+}
+
+.ruler-left::before  { left: 6px;  width: 10px; }
+.ruler-right::before { right: 6px; width: 10px; }
+
+/* Only show rulers on wider screens where they do not crowd the content */
+@media (max-width: 1023px) {
+  .ruler { display: none; }
+}
+
+/* ------------------------------------------------------------
+   9. CORNER BRACKETS — L-shaped marks on important cards
+   ------------------------------------------------------------ */
+.corner-bl,
+.corner-br {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity var(--t-base) var(--ease-out),
+              width var(--t-base) var(--ease-out),
+              height var(--t-base) var(--ease-out);
+}
+
+.corner-bl {
+  bottom: 0;
+  left: 0;
+  border-left: var(--stroke-2) solid var(--safety-yellow);
+  border-bottom: var(--stroke-2) solid var(--safety-yellow);
+}
+
+.corner-br {
+  bottom: 0;
+  right: 0;
+  border-right: var(--stroke-2) solid var(--safety-yellow);
+  border-bottom: var(--stroke-2) solid var(--safety-yellow);
+}
+
+/* Reveal on parent hover/focus */
+.cat-card:hover .corner-bl,
+.cat-card:hover .corner-br,
+.cat-card:focus-within .corner-bl,
+.cat-card:focus-within .corner-br,
+.feat-card:hover .corner-bl,
+.feat-card:hover .corner-br,
+.feat-card:focus-within .corner-bl,
+.feat-card:focus-within .corner-br,
+.trust-card:hover .corner-bl,
+.std-card:hover .corner-bl,
+.media-card:hover .corner-bl,
+.b2b-form-card .corner-bl,
+.b2b-form-card .corner-br,
+.modal-card .corner-bl,
+.modal-card .corner-br {
+  opacity: 1;
+}
+
+/* Always visible on form cards and modal */
+.b2b-form-card .corner-bl,
+.b2b-form-card .corner-br,
+.modal-card .corner-bl,
+.modal-card .corner-br {
+  width: 18px;
+  height: 18px;
+}
+
+/* ------------------------------------------------------------
+   10. RULE / HAIRLINE PRIMITIVES
+   ------------------------------------------------------------ */
+.rule {
+  height: var(--stroke-2);
+  background: var(--blueprint-navy);
+  border: none;
+  opacity: 0.15;
+}
+
+.is-dark .rule {
+  background: var(--text-on-dark);
+  opacity: 0.20;
+}
+
+.rule--yellow {
+  background: var(--safety-yellow);
+  opacity: 1;
+  height: var(--stroke-2);
+}
+
+/* Vertical hairline — used on wide layouts */
+.rule-v {
+  width: var(--stroke-2);
+  align-self: stretch;
+  background: rgba(10, 10, 10, 0.12);
+}
+
+.is-dark .rule-v {
+  background: rgba(242, 244, 247, 0.15);
+}
+
+/* ------------------------------------------------------------
+   11. SAFETY STRIPES — yellow/black diagonals
+   ------------------------------------------------------------ */
+.safety-stripes {
+  height: 8px;
+  width: 100%;
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--safety-yellow) 0,
+    var(--safety-yellow) 10px,
+    var(--iron-black) 10px,
+    var(--iron-black) 20px
+  );
+}
+
+/* Small striped accent — used on CTA hover */
+.stripes-edge {
+  position: relative;
+}
+.stripes-edge::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--safety-yellow) 0,
+    var(--safety-yellow) 4px,
+    var(--iron-black) 4px,
+    var(--iron-black) 8px
+  );
+}
+
+/* ------------------------------------------------------------
+   12. AD SLOT RESERVATIONS (CLS prevention)
+   ------------------------------------------------------------ */
+.ad-slot {
+  display: block;
+  width: 100%;
+  background: transparent;
+  padding-block: var(--sp-6);
+  position: relative;
+}
+
+.ad-slot .ad-inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 10, 10, 0.02);
+  border: 1px dashed rgba(10, 10, 10, 0.12);
+  border-radius: var(--r-2);
+  min-height: 90px;
+}
+
+.ad-slot--leaderboard .ad-inner { min-height: 90px; }
+.ad-slot--billboard .ad-inner   { min-height: 250px; }
+.ad-slot--sidebar .ad-inner     { min-height: 600px; }
+
+.ad-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  opacity: 0.6;
+  user-select: none;
+}
+
+.is-dark .ad-slot .ad-inner,
+.section--dark .ad-slot .ad-inner {
+  background: rgba(242, 244, 247, 0.03);
+  border-color: rgba(242, 244, 247, 0.10);
+}
+
+.is-dark .ad-label,
+.section--dark .ad-label {
+  color: var(--text-on-dark-faint);
+}
+
+/* ------------------------------------------------------------
+   13. SECTION DIVIDERS — ruler-line between sections
+   ------------------------------------------------------------ */
+.section-divider {
+  height: 1px;
+  background: rgba(10, 10, 10, 0.10);
+  max-width: var(--container-max);
+  margin-inline: auto;
+}
+
+.section-divider--yellow {
+  background: var(--safety-yellow);
+  height: 2px;
+  opacity: 0.4
+}
+
+/* ------------------------------------------------------------
+   14. BUTTON PRIMITIVES
+   ------------------------------------------------------------ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-3);
+  padding: 0 var(--sp-6);
+  min-height: 48px;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  border: var(--stroke-2) solid transparent;
+  border-radius: var(--r-2);
+  cursor: pointer;
+  user-select: none;
+  transition:
+    background-color var(--t-fast) var(--ease-out),
+    border-color var(--t-fast) var(--ease-out),
+    color var(--t-fast) var(--ease-out),
+    transform var(--t-fast) var(--ease-out);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.is-dark .btn:focus-visible,
+.hero .btn:focus-visible {
+  box-shadow: var(--focus-ring-dark);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* --- Primary: caution-orange --- */
+.btn-orange {
+  background: var(--caution-orange);
+  color: var(--iron-black);
+  border-color: var(--caution-orange);
+}
+
+.btn-orange:hover {
+  background: #FF8124;
+  border-color: #FF8124;
+  color: var(--iron-black);
+}
+
+.btn-orange:active {
+  background: #E55F00;
+  border-color: #E55F00;
+}
+
+/* --- Secondary: safety-yellow --- */
+.btn-yellow {
+  background: var(--safety-yellow);
+  color: var(--iron-black);
+  border-color: var(--safety-yellow);
+}
+
+.btn-yellow:hover {
+  background: #FFE23D;
+  border-color: #FFE23D;
+  color: var(--iron-black);
+}
+
+.btn-yellow:active {
+  background: #E6C000;
+  border-color: #E6C000;
+}
+
+/* --- Ghost: outline on light --- */
+.btn-ghost {
+  background: transparent;
+  color: var(--blueprint-navy);
+  border-color: var(--blueprint-navy);
+}
+
+.btn-ghost:hover {
+  background: var(--blueprint-navy);
+  color: var(--text-on-dark);
+  border-color: var(--blueprint-navy);
+}
+
+/* --- Ghost on dark --- */
+.is-dark .btn-ghost,
+.hero .btn-ghost,
+.section--dark .btn-ghost {
+  background: transparent;
+  color: var(--text-on-dark);
+  border-color: var(--text-on-dark);
+}
+
+.is-dark .btn-ghost:hover,
+.hero .btn-ghost:hover,
+.section--dark .btn-ghost:hover {
+  background: var(--safety-yellow);
+  color: var(--iron-black);
+  border-color: var(--safety-yellow);
+}
+
+/* --- Arrow buttons: [ LABEL → ] --- */
+.btn-arrow .arrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 1.15em;
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  transform: translateX(0);
+  transition: transform var(--t-base) var(--ease-out);
+}
+
+.btn-arrow:hover .arrow,
+.btn-arrow:focus-visible .arrow {
+  transform: translateX(4px);
+}
+
+/* Alternate arrow glyphs */
+.btn-arrow .arrow[data-glyph='down']::before { content: '↓'; }
+.btn-arrow .arrow[data-glyph='external']::before { content: '↗'; }
+
+/* --- Sizes --- */
+.btn-sm {
+  min-height: 40px;
+  padding: 0 var(--sp-5);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.04em;
+}
+
+.btn-lg {
+  min-height: 56px;
+  padding: 0 var(--sp-8);
+  font-size: var(--fs-base);
+}
+
+/* --- Block --- */
+.btn-block {
+  display: flex;
+  width: 100%;
+}
+
+/* --- Disabled --- */
+.btn:disabled,
+.btn[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn:disabled:hover,
+.btn[aria-disabled='true']:hover {
+  transform: none;
+}
+
+/* --- Icon-only buttons --- */
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: transparent;
+  color: var(--text-on-dark);
+  border: var(--stroke-1) solid transparent;
+  border-radius: var(--r-2);
+  cursor: pointer;
+  transition:
+    background-color var(--t-fast) var(--ease-out),
+    color var(--t-fast) var(--ease-out),
+    border-color var(--t-fast) var(--ease-out);
+}
+
+.icon-btn:hover {
+  background: rgba(242, 244, 247, 0.08);
+  border-color: rgba(242, 244, 247, 0.20);
+  color: var(--safety-yellow);
+}
+
+.icon-btn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring-dark);
+}
+
+.icon-btn svg {
+  flex-shrink: 0;
+}
+
+/* Light variant of icon button */
+.icon-btn--light {
+  color: var(--ink);
+}
+.icon-btn--light:hover {
+  background: rgba(10, 10, 10, 0.06);
+  border-color: rgba(10, 10, 10, 0.15);
+  color: var(--caution-orange);
+}
+.icon-btn--light:focus-visible {
+  box-shadow: var(--focus-ring);
+}
+
+/* ------------------------------------------------------------
+   15. CHIP PRIMITIVES
+   ------------------------------------------------------------ */
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  align-items: center;
+}
+
+.chips-label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--text-on-dark-faint);
+  margin-right: var(--sp-1);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-4);
+  min-height: 36px;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  color: var(--text-on-dark);
+  background: rgba(242, 244, 247, 0.06);
+  border: var(--stroke-1) solid rgba(242, 244, 247, 0.14);
+  border-radius: var(--r-2);
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background-color var(--t-fast) var(--ease-out),
+    border-color var(--t-fast) var(--ease-out),
+    color var(--t-fast) var(--ease-out);
+}
+
+.chip:hover,
+.chip:focus-visible {
+  background: var(--safety-yellow);
+  color: var(--iron-black);
+  border-color: var(--safety-yellow);
+  text-decoration: none;
+}
+
+.chip:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring-dark);
+}
+
+/* Chip on light background */
+.chip--light {
+  color: var(--blueprint-navy);
+  background: var(--concrete);
+  border-color: rgba(10, 10, 10, 0.12);
+}
+
+.chip--light:hover,
+.chip--light:focus-visible {
+  background: var(--safety-yellow);
+  color: var(--iron-black);
+  border-color: var(--safety-yellow);
+}
+
+/* Link-styled chip */
+.chip-link {
+  text-decoration: none;
+}
+
+/* ------------------------------------------------------------
+   16. BADGE PRIMITIVES
+   ------------------------------------------------------------ */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-1);
+  padding: 3px var(--sp-3);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  line-height: 1.3;
+  border: var(--stroke-1) solid transparent;
+  border-radius: var(--r-1);
+  white-space: nowrap;
+}
+
+.badge-yellow {
+  background: var(--safety-yellow);
+  color: var(--iron-black);
+  border-color: var(--safety-yellow);
+}
+
+.badge-orange {
+  background: var(--caution-orange);
+  color: var(--iron-black);
+  border-color: var(--caution-orange);
+}
+
+.badge-green {
+  background: var(--verified-green);
+  color: var(--iron-black);
+  border-color: var(--verified-green);
+}
+
+.badge-red {
+  background: var(--site-red);
+  color: var(--iron-black);
+  border-color: var(--site-red);
+}
+
+.badge-navy {
+  background: var(--blueprint-navy);
+  color: var(--safety-yellow);
+  border-color: var(--blueprint-navy);
+}
+
+.badge-outline {
+  background: transparent;
+  color: var(--blueprint-navy);
+  border-color: rgba(15, 39, 68, 0.30);
+}
+
+.badge-outline--dark {
+  background: transparent;
+  color: var(--text-on-dark);
+  border-color: rgba(242, 244, 247, 0.30);
+}
+
+/* ------------------------------------------------------------
+   17. COUNT BADGES (category / tool counts)
+   ------------------------------------------------------------ */
+.count-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  height: 26px;
+  padding: 0 var(--sp-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.02em;
+  background: var(--safety-yellow);
+  color: var(--iron-black);
+  border: var(--stroke-1) solid var(--iron-black);
+  border-radius: var(--r-1);
+}
+
+.count-badge--muted {
+  background: var(--concrete);
+  color: var(--blueprint-navy);
+  border-color: rgba(10, 10, 10, 0.15);
+}
+
+/* ------------------------------------------------------------
+   18. TAG (small inline metadata)
+   ------------------------------------------------------------ */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px var(--sp-2);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  background: transparent;
+  border: var(--stroke-1) solid rgba(10, 10, 10, 0.14);
+  border-radius: var(--r-1);
+  white-space: nowrap;
+}
+
+.is-dark .tag {
+  color: var(--text-on-dark-muted);
+  border-color: rgba(242, 244, 247, 0.18);
+}
+
+.tag--yellow {
+  color: var(--iron-black);
+  background: var(--safety-yellow);
+  border-color: var(--safety-yellow);
+}
+
+/* ------------------------------------------------------------
+   19. FORM FIELD PRIMITIVES
+   ------------------------------------------------------------ */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  width: 100%;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-4);
+  width: 100%;
+}
+
+.field label,
+.field-label {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.is-dark .field label,
+.is-dark .field-label,
+.section--dark .field label {
+  color: var(--text-on-dark);
+}
+
+.field input[type='text'],
+.field input[type='email'],
+.field input[type='tel'],
+.field input[type='number'],
+.field input[type='search'],
+.field input[type='url'],
+.field input[type='password'],
+.field input[type='date'],
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: var(--sp-3) var(--sp-4);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-medium);
+  line-height: 1.4;
+  color: var(--ink);
+  background: var(--paper);
+  border: var(--stroke-2) solid rgba(10, 10, 10, 0.15);
+  border-radius: var(--r-2);
+  transition:
+    border-color var(--t-fast) var(--ease-out),
+    background-color var(--t-fast) var(--ease-out),
+    box-shadow var(--t-fast) var(--ease-out);
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--ink-muted);
+  opacity: 0.75;
+}
+
+.field input:hover,
+.field select:hover,
+.field textarea:hover {
+  border-color: rgba(10, 10, 10, 0.32);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--blueprint-navy);
+  box-shadow: 0 0 0 3px rgba(15, 39, 68, 0.12);
+}
+
+.field input:invalid:not(:placeholder-shown),
+.field select:invalid,
+.field textarea:invalid:not(:placeholder-shown) {
+  border-color: var(--site-red);
+}
+
+.field input[aria-invalid='true'],
+.field select[aria-invalid='true'],
+.field textarea[aria-invalid='true'] {
+  border-color: var(--site-red);
+  background: rgba(230, 57, 70, 0.03);
+}
+
+.field textarea {
+  min-height: 108px;
+  padding-top: var(--sp-3);
+  line-height: 1.5;
+  resize: vertical;
+}
+
+/* Select arrow (custom) */
+.field select {
+  padding-right: var(--sp-10);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--blueprint-navy) 50%),
+    linear-gradient(135deg, var(--blueprint-navy) 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(50% - 2px),
+    calc(100% - 14px) calc(50% - 2px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.field select:focus {
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--caution-orange) 50%),
+    linear-gradient(135deg, var(--caution-orange) 50%, transparent 50%);
+}
+
+/* --- Field error --- */
+.field-error {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--site-red);
+  line-height: 1.35;
+  margin-top: 2px;
+}
+
+.field-error::before {
+  content: '!';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  font-family: var(--font-mono);
+  font-weight: var(--fw-bold);
+  font-size: 10px;
+  background: var(--site-red);
+  color: var(--iron-black);
+  border-radius: var(--r-1);
+  flex-shrink: 0;
+}
+
+.field-error[hidden] {
+  display: none;
+}
+
+/* --- Field hint --- */
+.field-hint {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-regular);
+  color: var(--ink-muted);
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+.is-dark .field-hint {
+  color: var(--text-on-dark-faint);
+}
+
+/* --- Field consent (checkbox) --- */
+.field-consent {
+  gap: var(--sp-3);
+}
+
+.consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-regular);
+  line-height: 1.5;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.consent-label input[type='checkbox'] {
+  appearance: none;
+  -webkit-appearance: none;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin-top: 1px;
+  padding: 0;
+  min-height: 0;
+  background: var(--paper);
+  border: var(--stroke-2) solid rgba(10, 10, 10, 0.28);
+  border-radius: var(--r-1);
+  cursor: pointer;
+  position: relative;
+  transition:
+    background-color var(--t-fast) var(--ease-out),
+    border-color var(--t-fast) var(--ease-out);
+}
+
+.consent-label input[type='checkbox']:hover {
+  border-color: var(--blueprint-navy);
+}
+
+.consent-label input[type='checkbox']:checked {
+  background: var(--safety-yellow);
+  border-color: var(--iron-black);
+}
+
+.consent-label input[type='checkbox']:checked::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 6px;
+  height: 12px;
+  border-right: 3px solid var(--iron-black);
+  border-bottom: 3px solid var(--iron-black);
+  transform: rotate(45deg);
+}
+
+.consent-label input[type='checkbox']:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.consent-label a {
+  color: var(--blueprint-navy);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.consent-label a:hover {
+  color: var(--caution-orange);
+}
+
+/* --- Honeypot — hidden from users, visible to bots --- */
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  top: auto !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.hp-field label {
+  display: block;
+}
+
+/* --- Form status / feedback --- */
+.form-status {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  padding: var(--sp-4) var(--sp-5);
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  line-height: 1.5;
+  border: var(--stroke-2) solid transparent;
+  border-radius: var(--r-2);
+  margin-top: var(--sp-4);
+}
+
+.form-status[hidden] {
+  display: none;
+}
+
+.form-status--success {
+  background: rgba(22, 163, 74, 0.08);
+  border-color: var(--verified-green);
+  color: var(--verified-green);
+}
+
+.form-status--error {
+  background: rgba(230, 57, 70, 0.06);
+  border-color: var(--site-red);
+  color: var(--site-red);
+}
+
+.form-status--info {
+  background: rgba(15, 39, 68, 0.05);
+  border-color: var(--blueprint-navy);
+  color: var(--blueprint-navy);
+}
+
+.form-status strong {
+  font-weight: var(--fw-bold);
+}
+
+/* --- Fieldset grouping --- */
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.field-group + .field-group {
+  margin-top: var(--sp-5);
+  padding-top: var(--sp-5);
+  border-top: var(--stroke-1) solid rgba(10, 10, 10, 0.08);
+}
+
+.is-dark .field-group + .field-group {
+  border-top-color: rgba(242, 244, 247, 0.10);
+}
+
+.field-group-title {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: var(--sp-1);
+}
+
+.is-dark .field-group-title {
+  color: var(--text-on-dark-faint);
+}
+
+/* ------------------------------------------------------------
+   20. FORM LAYOUT HELPERS
+   ------------------------------------------------------------ */
+.form-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  align-items: center;
+  margin-top: var(--sp-5);
+}
+
+.form-actions--end {
+  justify-content: flex-end;
+}
+
+.form-actions--between {
+  justify-content: space-between;
+}
+
+/* ------------------------------------------------------------
+   21. TOGGLE SWITCH (waste toggle, settings)
+   ------------------------------------------------------------ */
+.switch {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-3);
+  cursor: pointer;
+  user-select: none;
+}
+
+.switch input[type='checkbox'] {
+  appearance: none;
+  -webkit-appearance: none;
+  flex-shrink: 0;
+  width: 46px;
+  height: 26px;
+  margin: 0;
+  padding: 0;
+  min-height: 0;
+  background: rgba(10, 10, 10, 0.22);
+  border: var(--stroke-2) solid transparent;
+  border-radius: var(--r-2);
+  position: relative;
+  cursor: pointer;
+  transition:
+    background-color var(--t-fast) var(--ease-out),
+    border-color var(--t-fast) var(--ease-out);
+}
+
+.switch input[type='checkbox']::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background: var(--paper);
+  border-radius: var(--r-1);
+  transition: transform var(--t-base) var(--ease-out);
+}
+
+.switch input[type='checkbox']:checked {
+  background: var(--safety-yellow);
+  border-color: var(--iron-black);
+}
+
+.switch input[type='checkbox']:checked::after {
+  transform: translateX(20px);
+  background: var(--iron-black);
+}
+
+.switch input[type='checkbox']:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.switch-label {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--ink);
+  line-height: 1.35;
+}
+
+.is-dark .switch-label {
+  color: var(--text-on-dark);
+}
+
+/* ------------------------------------------------------------
+   22. PILL TOGGLE GROUP (unit toggle: Imperial | Metric)
+   ------------------------------------------------------------ */
+.pill-toggle {
+  display: inline-flex;
+  align-items: stretch;
+  padding: 3px;
+  background: rgba(10, 10, 10, 0.06);
+  border: var(--stroke-1) solid rgba(10, 10, 10, 0.10);
+  border-radius: var(--r-2);
+  gap: 2px;
+}
+
+.is-dark .pill-toggle,
+.section--dark .pill-toggle {
+  background: rgba(242, 244, 247, 0.06);
+  border-color: rgba(242, 244, 247, 0.12);
+}
+
+.pill-toggle button,
+.pill-toggle label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--sp-4);
+  min-height: 36px;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  line-height: 1;
+  color: var(--blueprint-navy);
+  background: transparent;
+  border: none;
+  border-radius: var(--r-1);
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background-color var(--t-fast) var(--ease-out),
+    color var(--t-fast) var(--ease-out);
+}
+
+.is-dark .pill-toggle button,
+.is-dark .pill-toggle label,
+.section--dark .pill-toggle button,
+.section--dark .pill-toggle label {
+  color: var(--text-on-dark);
+}
+
+.pill-toggle button:hover:not([aria-pressed='true']),
+.pill-toggle label:hover:not([aria-pressed='true']) {
+  background: rgba(10, 10, 10, 0.05);
+}
+
+.pill-toggle button[aria-pressed='true'],
+.pill-toggle label[aria-pressed='true'],
+.pill-toggle .is-active {
+  background: var(--safety-yellow);
+  color: var(--iron-black);
+  font-weight: var(--fw-bold);
+}
+
+.pill-toggle button:focus-visible,
+.pill-toggle label:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.is-dark .pill-toggle button:focus-visible,
+.section--dark .pill-toggle button:focus-visible {
+  box-shadow: var(--focus-ring-dark);
+}
+
+/* --- Currency chip (tool page header) --- */
+.currency-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-3);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.04em;
+  color: var(--blueprint-navy);
+  background: var(--concrete);
+  border: var(--stroke-1) solid rgba(10, 10, 10, 0.14);
+  border-radius: var(--r-1);
+  cursor: pointer;
+  transition:
+    background-color var(--t-fast) var(--ease-out),
+    border-color var(--t-fast) var(--ease-out);
+}
+
+.currency-chip:hover {
+  background: var(--safety-yellow);
+  border-color: var(--iron-black);
+  color: var(--iron-black);
+}
+
+.currency-chip:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+/* ------------------------------------------------------------
+   23. OVERLAY / SCRIM
+   ------------------------------------------------------------ */
+.scrim {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-overlay);
+  background: rgba(10, 10, 10, 0.72);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  opacity: 0;
+  transition: opacity var(--t-base) var(--ease-out);
+}
+
+.scrim[hidden] {
+  display: none;
+}
+
+.scrim.is-open {
+  opacity: 1;
+}
+
+/* ------------------------------------------------------------
+   24. SCROLL TO TOP BUTTON
+   ------------------------------------------------------------ */
+.to-top {
+  position: fixed;
+  bottom: var(--sp-6);
+  right: var(--sp-6);
+  z-index: var(--z-top);
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--safety-yellow);
+  color: var(--iron-black);
+  border: var(--stroke-2) solid var(--iron-black);
+  border-radius: var(--r-2);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity var(--t-base) var(--ease-out),
+    transform var(--t-base) var(--ease-out),
+    background-color var(--t-fast) var(--ease-out);
+}
+
+.to-top[hidden] {
+  display: none;
+}
+
+.to-top.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.to-top:hover {
+  background: var(--caution-orange);
+  color: var(--iron-black);
+}
+
+.to-top:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+@media (max-width: 640px) {
+  .to-top {
+    bottom: var(--sp-4);
+    right: var(--sp-4);
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* ------------------------------------------------------------
+   25. FOCUS TRAP HELPERS
+   ------------------------------------------------------------ */
+.focus-trap {
+  position: relative;
+}
+
+/* Elements that are hidden but focusable should be excluded */
+[inert],
+[aria-hidden='true']:not(svg):not(img) {
+  pointer-events: none;
+}
+
+[data-focus-sentinel] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ------------------------------------------------------------
+   26. ANIMATION KEYFRAMES
+   ------------------------------------------------------------ */
+
+/* Yellow flash — result value updates */
+@keyframes bm-flash-yellow {
+  0%   { background-color: rgba(255, 213, 0, 0.30); }
+  100% { background-color: transparent; }
+}
+
+.flash-yellow {
+  animation: bm-flash-yellow 700ms var(--ease-out) 1;
+}
+
+/* Subtle pulse — attention (live region updates, "new" indicators) */
+@keyframes bm-pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.55; }
+}
+
+.pulse {
+  animation: bm-pulse 1600ms var(--ease-in-out) infinite;
+}
+
+/* Arrow slide — for CTAs that do not use .btn-arrow hover */
+@keyframes bm-arrow-nudge {
+  0%, 100% { transform: translateX(0); }
+  50%      { transform: translateX(4px); }
+}
+
+.arrow-nudge {
+  animation: bm-arrow-nudge 1400ms var(--ease-in-out) infinite;
+}
+
+/* Slide in from right — result panels */
+@keyframes bm-slide-in-right {
+  from { opacity: 0; transform: translateX(16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.slide-in-right {
+  animation: bm-slide-in-right var(--t-slow) var(--ease-out) 1 both;
+}
+
+/* Fade up — sections on first paint */
+@keyframes bm-fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  animation: bm-fade-up var(--t-slow) var(--ease-out) 1 both;
+}
+
+/* Number-roll spinner — for calculators while debouncing */
+@keyframes bm-spin {
+  to { transform: rotate(360deg); }
+}
+
+.spin {
+  animation: bm-spin 900ms linear infinite;
+}
+
+/* ------------------------------------------------------------
+   27. UTILITY MODIFIERS
+   ------------------------------------------------------------ */
+.no-anim,
+.no-anim * {
+  animation: none !important;
+  transition: none !important;
+}
+
+.no-select {
+  user-select: none;
+}
+
+.pointer-none {
+  pointer-events: none;
+}
+
+.text-center { text-align: center; }
+.text-left   { text-align: left; }
+.text-right  { text-align: right; }
+
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+}
+
+.mono-num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1, 'zero' 1;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hide-mobile {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hide-mobile { display: revert; }
+  .hide-desktop { display: none; }
+}
+
+/* ------------------------------------------------------------
+   28. PRINTSAFE DEFAULTS
+   ------------------------------------------------------------ */
+@media print {
+  .site-header,
+  .site-footer,
+  .geo-banner,
+  .cookie-banner,
+  .to-top,
+  .scrim,
+  .ad-slot,
+  .mobile-nav,
+  .search-overlay,
+  .b2b-form-card,
+  .ruler,
+  .grid-bg,
+  .hero-grid {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 11pt;
+  }
+
+  .section-inner {
+    max-width: 100% !important;
+    padding-inline: 0 !important;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ------------------------------------------------------------
+   29. HARD-STOP SAFEGUARDS
+   Ensures the file fails gracefully if a downstream stylesheet
+   or script forgets to load — the page stays readable.
+   ------------------------------------------------------------ */
+html {
+  min-height: 100%;
+}
+
+body:not(.is-ready) {
+  /* Until main.js marks the page ready, keep content visible and
+     avoid layout jump from animations. */
+  opacity: 1;
+}
+
+img[loading='lazy'] {
+  content-visibility: auto;
+}
