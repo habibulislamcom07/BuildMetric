@@ -4685,7 +4685,96 @@ pre,
 }
 
 /* ============================================================
+   NAVY HEADER OVERRIDE
+   ============================================================ */
+.site-header-navy {
+  background: var(--brand-dark);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.site-header-navy.is-scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.brand-on-navy,
+.brand-on-navy:hover {
+  color: var(--c-white);
+}
+
+.brand-build-on-navy { color: var(--c-white); }
+
+.primary-nav-on-navy .nav-link { color: rgba(255, 255, 255, 0.7); }
+.primary-nav-on-navy .nav-link:hover {
+  color: var(--c-white);
+  background: rgba(255, 255, 255, 0.08);
+}
+.primary-nav-on-navy .nav-link[aria-current="page"] {
+  color: var(--c-white);
+}
+.primary-nav-on-navy .nav-link[aria-current="page"]::after {
+  background: var(--brand-primary);
+}
+
+.nav-toggle-on-navy .nav-toggle-bar { background: var(--c-white); }
+.nav-toggle-on-navy:hover { background: rgba(255, 255, 255, 0.08); }
+
+@media (max-width: 767px) {
+  .primary-nav-on-navy {
+    background: var(--brand-dark);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+  .primary-nav-on-navy .nav-link {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+  .primary-nav-on-navy .nav-link[aria-current="page"] {
+    color: var(--brand-primary);
+    background: rgba(245, 158, 11, 0.1);
+  }
+}
+
+/* ============================================================
+   LEAN HERO OVERRIDE
+   ============================================================ */
+.hero-lean {
+  padding-block: var(--sp-10) var(--sp-8);
+}
+
+.hero-lean .hero-title {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--sp-2);
+}
+
+.hero-lean .hero-subtitle {
+  font-size: var(--fs-base);
+  color: var(--c-text-soft);
+  margin-bottom: var(--sp-6);
+}
+
+.hero-prefs-inline {
+  gap: var(--sp-3) var(--sp-4);
+  margin-bottom: 0;
+}
+
+.hero-prefs-inline .pref-select {
+  min-width: 90px;
+}
+
+@media (min-width: 640px) {
+  .hero-lean {
+    padding-block: var(--sp-12) var(--sp-10);
+  }
+  .hero-lean .hero-title {
+    font-size: var(--fs-3xl);
+  }
+}
+
+@media (min-width: 960px) {
+  .hero-lean .hero-title {
+    font-size: var(--fs-4xl);
+  }
+}
+/* ============================================================
    END OF STYLESHEET
    BuildMetric — main.css
-   14 phases total | ~3,400 lines
+   15 phases total | ~3,400 lines
    ============================================================ */
