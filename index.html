@@ -1,2046 +1,2208 @@
 <!DOCTYPE html>
-<html lang="en" data-locale="US">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0F5132">
-
-<!-- ═══════════════ PRIMARY META ═══════════════ -->
-<title>BuildMetric — 300+ Free Construction Calculators | Concrete, Framing, Roofing, Solar</title>
-<meta name="description" content="300+ free construction calculators for concrete, framing, roofing, electrical, plumbing, solar and cost estimation. Instant results, real formulas, US/UK/AU/CA/IN standards. No signup.">
-<meta name="keywords" content="construction calculator, concrete calculator, framing calculator, roofing calculator, solar calculator, cost estimator, lumber calculator, rebar calculator, free construction tools">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BuildMetric — Free Construction Calculators for Builders, Contractors & DIYers</title>
+<meta name="description" content="300+ free construction calculators for concrete, lumber, roofing, electrical, plumbing, solar and cost estimation. Instant results, transparent formulas, metric and imperial.">
+<meta name="keywords" content="construction calculator, concrete calculator, lumber calculator, roofing calculator, paint calculator, solar calculator, free construction tools">
 <meta name="author" content="BuildMetric">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-<meta name="googlebot" content="index, follow">
-<meta name="rating" content="general">
-<meta name="referrer" content="strict-origin-when-cross-origin">
-
-<!-- ═══════════════ CANONICAL + HREFLANG ═══════════════ -->
+<meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://buildmetric.org/">
-<link rel="alternate" hreflang="en-us" href="https://buildmetric.org/">
-<link rel="alternate" hreflang="en-gb" href="https://buildmetric.org/">
-<link rel="alternate" hreflang="en-au" href="https://buildmetric.org/">
-<link rel="alternate" hreflang="en-ca" href="https://buildmetric.org/">
-<link rel="alternate" hreflang="en-in" href="https://buildmetric.org/">
-<link rel="alternate" hreflang="en-nz" href="https://buildmetric.org/">
-<link rel="alternate" hreflang="x-default" href="https://buildmetric.org/">
-
-<!-- ═══════════════ OPEN GRAPH ═══════════════ -->
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="BuildMetric">
-<meta property="og:title" content="BuildMetric — 300+ Free Construction Calculators">
-<meta property="og:description" content="Instant construction calculators. Real formulas, real standards, no signup. Concrete, framing, roofing, electrical, solar and 300+ more.">
+<meta property="og:title" content="BuildMetric — Free Construction Calculators">
+<meta property="og:description" content="300+ free calculators for builders, contractors and DIYers.">
 <meta property="og:url" content="https://buildmetric.org/">
-<meta property="og:image" content="https://buildmetric.org/assets/og-home.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="BuildMetric — construction calculator platform">
-<meta property="og:locale" content="en_US">
-
-<!-- ═══════════════ TWITTER ═══════════════ -->
+<meta property="og:site_name" content="BuildMetric">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="BuildMetric — 300+ Free Construction Calculators">
-<meta name="twitter:description" content="Instant construction calculators. Real formulas, real standards, no signup.">
-<meta name="twitter:image" content="https://buildmetric.org/assets/og-home.jpg">
-<meta name="twitter:image:alt" content="BuildMetric — construction calculator platform">
-
-<!-- ═══════════════ ICONS ═══════════════ -->
-<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-<link rel="manifest" href="/manifest.webmanifest">
-
-<!-- ═══════════════ PRECONNECT ═══════════════ -->
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://ipapi.co">
-<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- ═══════════════ FONTS ═══════════════ -->
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"></noscript>
-
-<!-- ═══════════════ CSS ═══════════════ -->
-<link rel="stylesheet" href="/css/blueprint.css">
-<link rel="stylesheet" href="/css/components.css">
-<link rel="stylesheet" href="/css/homepage.css">
-<link rel="stylesheet" href="/css/responsive.css">
-
-<!-- ═══════════════ CRITICAL INLINE (above-fold) ═══════════════ -->
-<style>
-:root{
-  --forest-green:#0F5132; --green-light:#10B981; --green-pale:#D1FAE5;
-  --blue-deep:#1E3A8A; --ocean-blue:#1E40AF; --blue-pale:#DBEAFE;
-  --amber-orange:#F59E0B; --orange-deep:#D97706; --orange-pale:#FEF3C7;
-  --ink:#0F172A; --slate-dark:#1E293B; --slate-med:#475569; --slate-light:#94A3B8;
-  --border:#E2E8F0; --surface:#F8FAFC; --white:#FFFFFF;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{
-  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-  font-size:16px;line-height:1.6;color:var(--ink);background:var(--surface);
-  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
-  overflow-x:hidden;
-}
-.mono,code,pre,.num{font-family:'JetBrains Mono','Courier New',monospace;font-variant-numeric:tabular-nums}
-img,svg{max-width:100%;height:auto;display:block}
-a{color:var(--ocean-blue);text-decoration:none}
-a:hover{text-decoration:underline}
-.skip-link{position:absolute;left:-9999px;top:0;background:var(--amber-orange);color:var(--ink);
-  padding:12px 20px;font-weight:700;z-index:10000;border-radius:0 0 6px 0}
-.skip-link:focus{left:0;outline:3px solid var(--ink);outline-offset:2px}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
-  clip:rect(0,0,0,0);white-space:nowrap;border:0}
-:focus-visible{outline:3px solid var(--amber-orange);outline-offset:2px;border-radius:2px}
-@media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;
-    transition-duration:.01ms!important;scroll-behavior:auto!important}
-}
-</style>
-
-<!-- ═══════════════ JSON-LD: ORGANIZATION ═══════════════ -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"Organization",
-  "@id":"https://buildmetric.org/#organization",
   "name":"BuildMetric",
   "url":"https://buildmetric.org/",
-  "logo":{
-    "@type":"ImageObject",
-    "url":"https://buildmetric.org/assets/logo.png",
-    "width":512,
-    "height":512
-  },
   "email":"contact.buildmetric@gmail.com",
-  "description":"Free construction calculator platform with 300+ tools across 12 categories. Instant results, real formulas, international standards.",
-  "foundingDate":"2024",
-  "sameAs":[
-    "https://facebook.com/BuildMetric",
-    "https://youtube.com/@buildmetricyt"
-  ],
-  "contactPoint":[{
-    "@type":"ContactPoint",
-    "email":"contact.buildmetric@gmail.com",
-    "contactType":"customer support",
-    "availableLanguage":["English"]
-  }]
+  "sameAs":["https://facebook.com/BuildMetric","https://youtube.com/@buildmetricyt"]
 }
 </script>
 
-<!-- ═══════════════ JSON-LD: WEBSITE + SEARCHACTION ═══════════════ -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"WebSite",
-  "@id":"https://buildmetric.org/#website",
   "url":"https://buildmetric.org/",
   "name":"BuildMetric",
-  "publisher":{"@id":"https://buildmetric.org/#organization"},
-  "inLanguage":"en",
   "potentialAction":{
     "@type":"SearchAction",
-    "target":{
-      "@type":"EntryPoint",
-      "urlTemplate":"https://buildmetric.org/search.html?q={search_term_string}"
-    },
+    "target":"https://buildmetric.org/search?q={search_term_string}",
     "query-input":"required name=search_term_string"
   }
 }
 </script>
 
-<!-- ═══════════════ JSON-LD: FAQPage (homepage) ═══════════════ -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {
-      "@type":"Question",
-      "name":"Are BuildMetric calculators free to use?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"Yes. Every calculator on BuildMetric is free, requires no signup, and shows the formula used. We are supported by clean, non-intrusive advertising and optional B2B supplier connections. There are no paywalls, no trial periods, and no email gates."
-      }
-    },
-    {
-      "@type":"Question",
-      "name":"Which construction standards do the calculators follow?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"Calculators follow the standard relevant to your detected region: ACI 318-19 for USA, BS EN 1992 for UK, AS 3600 for Australia, CSA A23.3 for Canada, IS 456 for India, and Eurocode for EU countries. The active standard is displayed on every tool page and can be overridden manually."
-      }
-    },
-    {
-      "@type":"Question",
-      "name":"Do I need to create an account to save results?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"No account is needed. Saved results are stored locally in your browser using localStorage. You can export any result as a PDF for offline use. Nothing is uploaded to our servers."
-      }
-    },
-    {
-      "@type":"Question",
-      "name":"How accurate are the material estimates?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"Calculators use published formulas from recognised standards bodies and material suppliers. Waste factors can be toggled (5-15 percent, category dependent) to account for cutting, spillage, and breakage. For structural work, always have final quantities verified by a licensed engineer."
-      }
-    },
-    {
-      "@type":"Question",
-      "name":"Can I use BuildMetric on a job site with no signal?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"Core calculator logic runs entirely in the browser. Once a page has loaded, it will continue to work without a network connection. We recommend saving frequently used tool pages to your device before going on site."
-      }
-    }
-  ]
+<style>
+/* ═══════════ RESET ═══════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  font-size:15px;line-height:1.6;color:#334155;background:#f8fafc;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
 }
-</script>
+img,svg{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;background:none;border:none;cursor:pointer;color:inherit}
+ul,ol{list-style:none}
+input,textarea,select{font:inherit;color:inherit}
 
-<!-- ═══════════════ JSON-LD: ITEMLIST (categories) ═══════════════ -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"ItemList",
-  "name":"BuildMetric Calculator Categories",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Concrete & Masonry Calculators","url":"https://buildmetric.org/categories/concrete-masonry.html"},
-    {"@type":"ListItem","position":2,"name":"Interior Finishing Calculators","url":"https://buildmetric.org/categories/interior-finishing.html"},
-    {"@type":"ListItem","position":3,"name":"Exterior Structure Calculators","url":"https://buildmetric.org/categories/exterior-structure.html"},
-    {"@type":"ListItem","position":4,"name":"Landscaping & Outdoor Calculators","url":"https://buildmetric.org/categories/landscaping-outdoor.html"},
-    {"@type":"ListItem","position":5,"name":"Lumber & Framing Calculators","url":"https://buildmetric.org/categories/lumber-framing.html"},
-    {"@type":"ListItem","position":6,"name":"Electrical & HVAC Calculators","url":"https://buildmetric.org/categories/electrical-hvac.html"},
-    {"@type":"ListItem","position":7,"name":"Plumbing & Piping Calculators","url":"https://buildmetric.org/categories/plumbing-piping.html"},
-    {"@type":"ListItem","position":8,"name":"Roofing & Siding Calculators","url":"https://buildmetric.org/categories/roofing-siding.html"},
-    {"@type":"ListItem","position":9,"name":"Painting & Wallpaper Calculators","url":"https://buildmetric.org/categories/painting-wallpaper.html"},
-    {"@type":"ListItem","position":10,"name":"Road & Driveway Calculators","url":"https://buildmetric.org/categories/road-driveway.html"},
-    {"@type":"ListItem","position":11,"name":"Cost Estimators","url":"https://buildmetric.org/categories/cost-estimators.html"},
-    {"@type":"ListItem","position":12,"name":"Solar & Energy Calculators","url":"https://buildmetric.org/categories/solar-energy.html"}
-  ]
+/* ═══════════ VARIABLES ═══════════ */
+:root{
+  --navy:#0f172a;
+  --navy-2:#1e293b;
+  --orange:#f97316;
+  --orange-2:#fb923c;
+  --orange-soft:#fff7ed;
+  --orange-border:#fed7aa;
+  --gray-50:#f8fafc;
+  --gray-100:#f1f5f9;
+  --gray-200:#e2e8f0;
+  --gray-300:#cbd5e1;
+  --gray-400:#94a3b8;
+  --gray-500:#64748b;
+  --gray-600:#475569;
+  --gray-700:#334155;
+  --white:#ffffff;
+  --border:#e5e7eb;
 }
-</script>
 
+/* ═══════════ CONTAINER ═══════════ */
+.container{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* ═══════════ HEADER ═══════════ */
+.site-header{
+  background:var(--white);
+  border-bottom:1px solid var(--border);
+  position:sticky;top:0;z-index:100;
+}
+.header-inner{
+  max-width:1180px;margin:0 auto;padding:0 20px;
+  height:62px;display:flex;align-items:center;justify-content:space-between;gap:32px;
+}
+.logo{
+  display:inline-flex;align-items:baseline;gap:0;
+  font-size:19px;font-weight:800;letter-spacing:-0.02em;
+  text-decoration:none;white-space:nowrap;
+}
+.logo-build{color:var(--navy)}
+.logo-metric{color:var(--orange)}
+.primary-nav{display:flex;gap:4px;align-items:center}
+.primary-nav a{
+  display:inline-block;padding:8px 14px;
+  font-size:14px;font-weight:500;color:var(--gray-600);
+  border-radius:6px;transition:color .15s,background .15s;
+}
+.primary-nav a:hover{color:var(--navy);background:var(--gray-100)}
+.primary-nav a.is-active{color:var(--navy);font-weight:600}
+
+.menu-toggle{display:none;width:40px;height:40px;flex-direction:column;gap:5px;align-items:center;justify-content:center;border-radius:6px}
+.menu-toggle span{display:block;width:20px;height:2px;background:var(--navy);border-radius:1px;transition:.2s}
+
+@media (max-width:760px){
+  .primary-nav{
+    display:none;position:absolute;top:62px;left:0;right:0;
+    background:var(--white);flex-direction:column;padding:12px 20px 20px;
+    border-bottom:1px solid var(--border);gap:2px;
+  }
+  .primary-nav.is-open{display:flex}
+  .primary-nav a{width:100%;padding:12px 8px;font-size:15px}
+  .menu-toggle{display:flex}
+}
+
+/* ═══════════ PAGE INTRO ═══════════ */
+.page-intro{
+  background:var(--white);
+  border-bottom:1px solid var(--border);
+  padding:48px 0 44px;
+}
+.page-intro h1{
+  font-size:clamp(26px,3vw,36px);
+  font-weight:800;letter-spacing:-0.025em;line-height:1.18;
+  color:var(--navy);margin-bottom:14px;max-width:820px;
+}
+.page-intro p{
+  font-size:16px;line-height:1.6;color:var(--gray-500);
+  max-width:720px;
+}
+
+/* ═══════════ CATEGORY OVERVIEW ═══════════ */
+.cat-overview{padding:52px 0 40px;background:var(--gray-50)}
+.cat-overview-head{margin-bottom:26px}
+.cat-overview-head h2{
+  font-size:20px;font-weight:800;color:var(--navy);
+  letter-spacing:-0.02em;line-height:1.3;
+}
+.cat-overview-grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media (min-width:640px){.cat-overview-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.cat-overview-grid{grid-template-columns:repeat(3,1fr)}}
+
+.cat-overview-card{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:16px;background:var(--white);
+  border:1px solid var(--border);border-radius:10px;
+  transition:border-color .15s,transform .15s,box-shadow .15s;
+  text-decoration:none;
+}
+.cat-overview-card:hover{
+  border-color:var(--orange);
+  transform:translateY(-2px);
+  box-shadow:0 4px 12px rgba(15,23,42,.06);
+}
+.cat-overview-icon{
+  font-size:24px;line-height:1;flex-shrink:0;
+  width:42px;height:42px;display:flex;align-items:center;justify-content:center;
+  background:var(--gray-100);border-radius:8px;
+}
+.cat-overview-body{flex:1;min-width:0}
+.cat-overview-title{
+  display:block;font-size:15px;font-weight:700;color:var(--navy);
+  letter-spacing:-0.01em;margin-bottom:3px;line-height:1.3;
+}
+.cat-overview-desc{
+  display:block;font-size:13px;line-height:1.5;color:var(--gray-500);
+  margin-bottom:10px;
+}
+.cat-overview-count{
+  display:inline-block;font-size:10.5px;font-weight:700;
+  letter-spacing:.08em;color:var(--orange);
+  background:var(--orange-soft);padding:3px 8px;border-radius:4px;
+  text-transform:uppercase;
+}
+
+/* ═══════════ CATEGORY SECTION ═══════════ */
+.cat-section{padding:52px 0;background:var(--gray-50);scroll-margin-top:80px}
+.cat-section:nth-of-type(even){background:var(--white)}
+.cat-section-head{margin-bottom:26px}
+.cat-section-title{
+  display:inline-block;
+  font-size:20px;font-weight:800;color:var(--navy);
+  letter-spacing:-0.02em;line-height:1.3;
+  padding-bottom:10px;position:relative;
+}
+.cat-section-title::after{
+  content:'';position:absolute;left:0;bottom:0;
+  width:36px;height:3px;background:var(--orange);border-radius:2px;
+}
+
+/* ═══════════ TOOL GRID ═══════════ */
+.tool-grid{display:grid;grid-template-columns:1fr;gap:10px}
+@media (min-width:600px){.tool-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:960px){.tool-grid{grid-template-columns:repeat(3,1fr)}}
+
+.tool-card{
+  display:block;padding:16px 44px 16px 18px;
+  background:var(--white);
+  border:1px solid var(--border);border-radius:10px;
+  position:relative;text-decoration:none;
+  transition:border-color .15s,transform .15s,box-shadow .15s;
+}
+.tool-card:hover{
+  border-color:var(--orange);
+  transform:translateY(-2px);
+  box-shadow:0 4px 14px rgba(15,23,42,.07);
+}
+.tool-card-title{
+  font-size:14.5px;font-weight:700;color:var(--navy);
+  letter-spacing:-0.01em;line-height:1.35;
+  margin-bottom:5px;
+}
+.tool-card-desc{
+  font-size:12.5px;line-height:1.5;color:var(--gray-500);
+}
+.tool-card::after{
+  content:'→';
+  position:absolute;top:16px;right:16px;
+  font-size:15px;color:var(--gray-300);
+  transition:color .15s,transform .15s;
+  font-family:'Inter',sans-serif;
+}
+.tool-card:hover::after{
+  color:var(--orange);
+  transform:translateX(3px);
+}
+</style>
 </head>
 <body>
 
-<a href="#main" class="skip-link">Skip to main content</a>
-
-<!-- ═══════════════ COOKIE / CONSENT STATE (JS reads this) ═══════════════ -->
-<div id="consent-state" data-consent="pending" hidden></div>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     HEADER — sticky, forest-green
-     ═══════════════════════════════════════════════════════════════ -->
-<header class="site-header" id="site-header" role="banner">
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header class="site-header">
   <div class="header-inner">
-
-    <!-- Logo -->
     <a href="/" class="logo" aria-label="BuildMetric home">
-      <svg class="logo-mark" width="36" height="36" viewBox="0 0 36 36" role="img" aria-hidden="true" focusable="false">
-        <rect x="1" y="1" width="34" height="34" rx="4" fill="#0F5132" stroke="#10B981" stroke-width="2"/>
-        <path d="M9 26V10h5.5c3 0 5 1.6 5 4.2 0 1.9-1.1 3.2-2.7 3.7 2 .4 3.4 1.9 3.4 4 0 2.8-2.2 4.5-5.6 4.5H9Zm3.2-9.6h2.1c1.5 0 2.4-.7 2.4-1.9s-.9-1.8-2.4-1.8h-2.1v3.7Zm0 7.2h2.4c1.7 0 2.7-.8 2.7-2.1 0-1.4-1-2.1-2.7-2.1h-2.4v4.2Z" fill="#10B981"/>
-        <path d="M22 26V10h3.3l3.2 8.4c.4 1.1.7 2.3.9 3.4h.1c.2-1.1.5-2.3.9-3.4l3.1-8.4h3.3v16h-2.9V18c0-1.5.2-3.4.4-4.7h-.1l-2.9 7.6c-.5 1.4-1 2.7-1.4 4.1h-1.9c-.4-1.4-.9-2.7-1.4-4.1l-2.9-7.6h-.1c.2 1.3.4 3.2.4 4.7v8h-2.8Z" fill="#F59E0B" transform="translate(-4 0)"/>
-      </svg>
-      <span class="logo-text">
-        <span class="logo-build">Build</span><span class="logo-metric">Metric</span>
-      </span>
+      <span class="logo-build">Build</span><span class="logo-metric">Metric</span>
     </a>
 
-    <!-- Primary navigation (desktop) -->
-    <nav class="primary-nav" aria-label="Primary">
-      <ul class="nav-list">
-        <li><a href="/categories/">Categories</a></li>
-        <li><a href="/tools/">All Tools</a></li>
-        <li><a href="/how-to-use.html">How to Use</a></li>
-        <li><a href="/why-trust.html">Why Trust Us</a></li>
-        <li><a href="/suppliers.html">For Suppliers</a></li>
-      </ul>
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+      <a href="/" class="is-active">Home</a>
+      <a href="/categories/">Categories</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
     </nav>
 
-    <!-- Header search (compact, desktop) -->
-    <form class="header-search" role="search" action="/search.html" method="get" aria-label="Search calculators">
-      <label for="header-search-input" class="sr-only">Search 300+ calculators</label>
-      <input
-        type="search"
-        id="header-search-input"
-        name="q"
-        placeholder="Search 300+ tools…"
-        autocomplete="off"
-        spellcheck="false"
-        inputmode="search"
-        enterkeyhint="search">
-      <button type="submit" aria-label="Search">
-        <span aria-hidden="true">→</span>
-      </button>
-    </form>
-
-    <!-- Mobile menu toggle -->
-    <button
-      class="menu-toggle"
-      id="menu-toggle"
-      type="button"
-      aria-label="Open menu"
-      aria-controls="mobile-nav"
-      aria-expanded="false">
-      <span class="menu-bar"></span>
-      <span class="menu-bar"></span>
-      <span class="menu-bar"></span>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Toggle menu" aria-controls="primary-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
     </button>
-
   </div>
 </header>
 
-<!-- ═══════════════ MOBILE NAV DRAWER ═══════════════ -->
-<div class="mobile-nav-backdrop" id="mobile-nav-backdrop" hidden></div>
-<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile" hidden>
-  <div class="mobile-nav-header">
-    <span class="mobile-nav-title mono">// MENU //</span>
-    <button class="mobile-nav-close" id="mobile-nav-close" type="button" aria-label="Close menu">✕</button>
+<!-- ═══════════════ PAGE INTRO ═══════════════ -->
+<section class="page-intro">
+  <div class="container">
+    <h1>Free Construction Calculators for Builders, Contractors &amp; DIYers</h1>
+    <p>300+ tools covering every major construction and DIY calculation. Instant results, transparent formulas, and full support for both metric and imperial units — no signup required.</p>
   </div>
-  <form class="mobile-nav-search" role="search" action="/search.html" method="get">
-    <label for="mobile-search-input" class="sr-only">Search calculators</label>
-    <input type="search" id="mobile-search-input" name="q" placeholder="Search 300+ tools…" autocomplete="off">
-    <button type="submit" aria-label="Search">→</button>
-  </form>
-  <ul class="mobile-nav-list">
-    <li><a href="/categories/">All Categories</a></li>
-    <li><a href="/tools/">All Tools</a></li>
-    <li><a href="/how-to-use.html">How to Use</a></li>
-    <li><a href="/why-trust.html">Why Trust Us</a></li>
-    <li><a href="/why-we-exist.html">Why We Exist</a></li>
-    <li><a href="/about.html">About</a></li>
-    <li><a href="/suppliers.html">For Suppliers</a></li>
-    <li><a href="/contact.html">Contact</a></li>
-  </ul>
-  <div class="mobile-nav-footer">
-    <p class="mono mobile-nav-stat">300+ tools · 12 categories · Free</p>
-    <a href="/suppliers.html" class="btn-amber mobile-nav-cta">GET SUPPLIER QUOTES →</a>
-  </div>
-</nav>
+</section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     GEO BANNER — dismissible, blue-pale
-     ═══════════════════════════════════════════════════════════════ -->
-<aside
-  class="geo-banner"
-  id="geo-banner"
-  role="status"
-  aria-live="polite"
-  hidden>
-  <div class="geo-banner-inner">
-    <span class="geo-flag" id="geo-flag" aria-hidden="true">🇺🇸</span>
-    <p class="geo-text">
-      Showing <strong id="geo-region">US</strong> units
-      (<span id="geo-units">Imperial</span>,
-      <span id="geo-currency">USD</span>,
-      <span class="mono" id="geo-standard">ACI 318-19</span>).
-      <button type="button" class="geo-change" id="geo-change">Change</button>
-    </p>
-    <button
-      type="button"
-      class="geo-dismiss"
-      id="geo-dismiss"
-      aria-label="Dismiss region notice">✕</button>
-  </div>
-  <div class="geo-picker" id="geo-picker" hidden>
-    <label for="geo-select" class="sr-only">Select your region</label>
-    <select id="geo-select">
-      <option value="US">🇺🇸 United States — Imperial · USD · ACI 318-19</option>
-      <option value="GB">🇬🇧 United Kingdom — Metric · GBP · BS EN 1992</option>
-      <option value="AU">🇦🇺 Australia — Metric · AUD · AS 3600</option>
-      <option value="CA">🇨🇦 Canada — Imperial · CAD · CSA A23.3</option>
-      <option value="IN">🇮🇳 India — Metric · INR · IS 456</option>
-      <option value="NZ">🇳🇿 New Zealand — Metric · NZD · AS/NZS</option>
-      <option value="ZA">🇿🇦 South Africa — Metric · ZAR · SANS</option>
-      <option value="AE">🇦🇪 UAE — Metric · AED · BS</option>
-      <option value="DE">🇩🇪 Germany — Metric · EUR · Eurocode</option>
-      <option value="FR">🇫🇷 France — Metric · EUR · Eurocode</option>
-    </select>
-    <button type="button" class="geo-save" id="geo-save">Save →</button>
-  </div>
-</aside>
-
- <!-- ═══════════════════════════════════════════════════════════════
-     MAIN — HERO + AD SLOT 1
-     ═══════════════════════════════════════════════════════════════ -->
-<main id="main" role="main">
-
-<!-- ═══════════════ HERO ═══════════════ -->
-<section class="hero" aria-labelledby="hero-heading">
-  <div class="hero-grid-overlay" aria-hidden="true"></div>
-
-  <div class="hero-inner">
-
-    <!-- Left: copy + search -->
-    <div class="hero-copy">
-      <p class="section-label mono">// CONSTRUCTION CALCULATORS //</p>
-
-      <h1 id="hero-heading" class="hero-heading">
-        Build Right.<br>
-        <span class="hero-heading-accent">Measure Twice.</span>
-      </h1>
-
-      <p class="hero-sub">
-        300+ calculators for concrete, framing, roofing, electrical, plumbing, solar and cost estimation. Real formulas, cited standards, instant results. No signup.
-      </p>
-
-      <!-- Hero search (primary CTA of this section) -->
-      <form class="hero-search" role="search" action="/search.html" method="get" aria-label="Search calculators">
-        <div class="hero-search-field">
-          <span class="hero-search-icon" aria-hidden="true">🔍</span>
-          <label for="hero-search-input" class="sr-only">What are you building? Search 300+ calculators</label>
-          <input
-            type="search"
-            id="hero-search-input"
-            name="q"
-            placeholder="What are you building? e.g. slab, roof pitch, rebar…"
-            autocomplete="off"
-            spellcheck="false"
-            inputmode="search"
-            enterkeyhint="search"
-            aria-describedby="hero-search-hint">
-          <button type="submit" class="hero-search-btn">
-            SEARCH <span aria-hidden="true">→</span>
-          </button>
-        </div>
-        <p id="hero-search-hint" class="hero-search-hint mono">
-          Try: <em>concrete slab</em> · <em>roof pitch</em> · <em>rebar spacing</em> · <em>solar kW</em>
-        </p>
-
-        <!-- Live filter results (JS-enhanced; falls back to /search.html) -->
-        <div class="hero-search-results" id="hero-search-results" hidden role="listbox" aria-label="Search suggestions"></div>
-      </form>
-
-      <!-- Popular chips -->
-      <div class="hero-chips" aria-label="Popular calculators">
-        <span class="chips-label mono">POPULAR:</span>
-        <a href="/tools/concrete-slab-calculator.html" class="chip">Concrete Slab</a>
-        <a href="/tools/rebar-calculator.html" class="chip">Rebar</a>
-        <a href="/tools/roof-pitch-calculator.html" class="chip">Roof Pitch</a>
-        <a href="/tools/solar-panel-calculator.html" class="chip">Solar Panels</a>
-        <a href="/tools/lumber-calculator.html" class="chip">Lumber</a>
-        <a href="/tools/paint-calculator.html" class="chip">Paint</a>
-      </div>
-
-      <!-- Stats row -->
-      <dl class="hero-stats" aria-label="Platform at a glance">
-        <div class="stat">
-          <dt class="stat-label mono">TOOLS</dt>
-          <dd class="stat-value mono">300+</dd>
-        </div>
-        <div class="stat">
-          <dt class="stat-label mono">CATEGORIES</dt>
-          <dd class="stat-value mono">12</dd>
-        </div>
-        <div class="stat">
-          <dt class="stat-label mono">COUNTRIES</dt>
-          <dd class="stat-value mono">4+</dd>
-        </div>
-        <div class="stat">
-          <dt class="stat-label mono">STANDARDS</dt>
-          <dd class="stat-value mono">9</dd>
-        </div>
-      </dl>
+<!-- ═══════════════ CATEGORY OVERVIEW ═══════════════ -->
+<section class="cat-overview">
+  <div class="container">
+    <div class="cat-overview-head">
+      <h2>Browse by Category</h2>
     </div>
 
-    <!-- Right: real construction photo -->
-    <div class="hero-media">
-      <picture>
-        <source
-          srcset="/assets/hero-site-800.webp 800w,
-                  /assets/hero-site-1200.webp 1200w,
-                  /assets/hero-site-1600.webp 1600w"
-          sizes="(max-width: 768px) 100vw, 50vw"
-          type="image/webp">
-        <source
-          srcset="/assets/hero-site-800.jpg 800w,
-                  /assets/hero-site-1200.jpg 1200w,
-                  /assets/hero-site-1600.jpg 1600w"
-          sizes="(max-width: 768px) 100vw, 50vw"
-          type="image/jpeg">
-        <img
-          src="/assets/hero-site-1200.jpg"
-          alt="Steel reinforcement cage tied and set inside formwork on a concrete slab pour, ready for placement"
-          width="1200"
-          height="900"
-          loading="eager"
-          fetchpriority="high"
-          decoding="async"
-          class="hero-photo">
-      </picture>
-      <div class="hero-media-frame" aria-hidden="true"></div>
-      <figcaption class="hero-media-caption mono">
-        // SLAB POUR — REBAR CAGE SET, FORMWORK CHECKED //
-      </figcaption>
-    </div>
+    <div class="cat-overview-grid">
 
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     AD SLOT 1 — below hero, above trust strip
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="ad-slot ad-slot-leaderboard" aria-label="Advertisement">
-  <div class="ad-slot-inner">
-    <span class="ad-slot-label mono" aria-hidden="true">// SPONSORED //</span>
-    <!-- REPLACE: real publisher ID ca-pub-XXXXXXXXXXXXXXXX -->
-    <ins class="adsbygoogle"
-         style="display:block;min-height:90px"
-         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-         data-ad-slot="1111111111"
-         data-ad-format="auto"
-         data-full-width-responsive="true"
-         data-adsbygoogle-status="pending"></ins>
-    <noscript>
-      <div class="ad-slot-fallback mono">Advertisement (JavaScript disabled)</div>
-    </noscript>
-  </div>
-</section>
-
-  <!-- ═══════════════════════════════════════════════════════════════
-     TRUST STRIP — 5 green-pale pills
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="trust-strip" aria-label="Why builders use BuildMetric">
-  <div class="trust-strip-inner">
-    <ul class="trust-pills">
-      <li class="trust-pill">
-        <span class="trust-pill-icon" aria-hidden="true">✓</span>
-        <span class="trust-pill-text">No signup required</span>
-      </li>
-      <li class="trust-pill">
-        <span class="trust-pill-icon" aria-hidden="true">✓</span>
-        <span class="trust-pill-text">Formulas shown &amp; cited</span>
-      </li>
-      <li class="trust-pill">
-        <span class="trust-pill-icon" aria-hidden="true">✓</span>
-        <span class="trust-pill-text">Works offline after load</span>
-      </li>
-      <li class="trust-pill">
-        <span class="trust-pill-icon" aria-hidden="true">✓</span>
-        <span class="trust-pill-text">Imperial &amp; metric</span>
-      </li>
-      <li class="trust-pill">
-        <span class="trust-pill-icon" aria-hidden="true">✓</span>
-        <span class="trust-pill-text">9 regional standards</span>
-      </li>
-    </ul>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     CATEGORIES — one clean grid, no ads between
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="categories-section" id="categories" aria-labelledby="categories-heading">
-  <div class="section-inner">
-
-    <header class="section-head">
-      <p class="section-label mono">// CATEGORIES //</p>
-      <h2 id="categories-heading" class="section-heading">
-        12 categories. 300+ calculators.<br>
-        <span class="section-heading-sub">Pick a trade and get numbers.</span>
-      </h2>
-      <p class="section-lede">
-        Every category follows the same rules: instant results, visible formulas, local standards, no dead ends.
-      </p>
-    </header>
-
-    <ul class="category-grid">
-
-      <!-- 1. Concrete & Masonry -->
-      <li class="category-card">
-        <a href="/categories/concrete-masonry.html" class="category-link">
-          <span class="category-corner" aria-hidden="true"></span>
-          <span class="category-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" focusable="false">
-              <rect x="3" y="12" width="18" height="8"/>
-              <path d="M3 12h18M7 12V8M12 12V6M17 12V8"/>
-              <path d="M5 16h2M11 16h2M17 16h2" stroke-dasharray="1 2"/>
-            </svg>
-          </span>
-          <h3 class="category-title">Concrete &amp; Masonry</h3>
-          <p class="category-desc">
-            Slabs, footings, columns, rebar, block, mortar. Volume, weight, bag counts, and cure planning.
-          </p>
-          <span class="category-meta mono">28+ TOOLS</span>
-          <span class="category-arrow" aria-hidden="true">→</span>
-        </a>
-      </li>
-
-      <!-- 2. Interior Finishing -->
-      <li class="category-card">
-        <a href="/categories/interior-finishing.html" class="category-link">
-          <span class="category-corner" aria-hidden="true"></span>
-          <span class="category-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" focusable="false">
-              <rect x="3" y="3" width="8" height="8"/>
-              <rect x="13" y="3" width="8" height="8"/>
-              <rect x="3" y="13" width="8" height="8"/>
-              <rect x="13" y="13" width="8" height="8"/>
-            </svg>
-          </span>
-          <h3 class="category-title">Interior Finishing</h3>
-          <p class="category-desc">
-            Drywall, tile, flooring, trim, baseboard, ceilings. Sheet counts, adhesive, and coverage.
-          </p>
-          <span class="category-meta mono">28+ TOOLS</span>
-          <span class="category-arrow" aria-hidden="true">→</span>
-        </a>
-      </li>
-
-      <!-- 3. Exterior Structure -->
-      <li class="category-card">
-        <a href="/categories/exterior-structure.html" class="category-link">
-          <span class="category-corner" aria-hidden="true"></span>
-          <span class="category-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" focusable="false">
-              <path d="M3 21V9l9-6 9 6v12"/>
-              <path d="M9 21v-6h6v6"/>
-              <path d="M12 9v3"/>
-            </svg>
-          </span>
-          <h3 class="category-title">Exterior Structure</h3>
-          <p class="category-desc">
-            Walls, decks, fences, stairs, retaining walls. Framing, fasteners, and load considerations.
-          </p>
-          <span class="category-meta mono">26+ TOOLS</span>
-          <span class="category-arrow" aria-hidden="true">→</span>
-        </a>
-      </li>
-
-      <!-- 4. Landscaping & Outdoor -->
-      <li class="category-card">
-        <a href="/categories/landscaping-outdoor.html" class="category-link">
-          <span class="category-corner" aria-hidden="true"></span>
-          <span class="category-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" focusable="false">
-              <path d="M3 20h18"/>
-              <path d="M6 20v-6l6-6 6 6v6"/>
-              <path d="M12 8V4"/>
-              <path d="M12 4l3 2-3 2"/>
-            </svg>
-          </span>
-          <h3 class="category-title">Landscaping &amp; Outdoor</h3>
-          <p class="category-desc">
-            Sod, mulch, gravel, pavers, irrigation, plant spacing. Volume, coverage, and edge restraint.
-          </p>
-          <span class="category-meta mono">24+ TOOLS</span>
-          <span class="category-arrow" aria-hidden="true">→</span>
-        </a>
-      </li>
-
-      <!-- 5. Lumber & Framing -->
-      <li class="category-card">
-        <a href="/categories/lumber-framing.html" class="category-link">
-          <span class="category-corner" aria-hidden="true"></span>
-          <span class="category-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" focusable="false">
-              <path d="M3 6h18M3 12h18M3 18h18"/>
-              <path d="M7 6v12M17 6v12" stroke-dasharray="2 2"/>
-            </svg>
-          </span>
-          <h3 class="category-title">Lumber &amp; Framing</h3>
-          <p class="category-desc">
-            Studs, joists, rafters, sheathing, board feet, spans. Cut lists and waste-aware quantities.
-          </p>
-          <span class="category-meta mono">24+ TOOLS</span>
-          <span class="category-arrow" aria-hidden="true">→</span>
-        </a>
-      </li>
-
-      <!-- 6. Electrical & HVAC -->
-      <li class="category-card">
-        <a href="/categories/electrical-hvac.html" class="category-link">
-          <span class="category-corner" aria-hidden="true"></span>
-          <span class="category-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" focusable="false">
-              <path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/>
-            </svg>
-          </span>
-          <h3 class="category-title">Electrical &amp; HVAC</h3>
-          <p class="category-desc">
-            Load, wire gauge, conduit fill, BTU, duct sizing, voltage drop. NEC and IEC aligned.
-          </p>
-          <span class="category-meta mono">26+ TOOLS</span>
-          <span class="category-arrow" aria-hidden="true">→</span>
-        </a>
-      </li>
-
-      <!-- 7. Plumbing & Piping -->
-      <li class="category-card">
-        <a href="/categories/plumbing-piping.html" class="category-link">
-          <span class="category-corner" aria-hidden="true"></span>
-          <span class="category-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" focusable="false">
-              <path d="M4 6h6a3 3 0 0 1 3 3v6a3 3 0 0 0 3 3h4"/>
-              <path d="M4 4v4M20 16v4"/>
-            </svg>
-          </span>
-          <h3 class="category-title">Plumbing &amp; Piping</h3>
-          <p class="category-desc">
-            Pipe volume, flow, slope, pressure drop, tank sizing. Fixture units and drain sizing.
-          </p>
-          <span class="category-meta mono">24+ TOOLS</span>
-          <span class="category-arrow" aria-hidden="true">→</span>
-        </a>
-      </li>
-
-      <!-- 8. Roofing & Siding -->
-      <li class="category-card">
-        <a href="/categories/roofing-siding.html" class="category-link">
-          <span class="category-corner" aria-hidden="true"></span>
-          <span class="category-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" focusable="false">
-              <path d="M2 12l10-8 10 8"/>
-              <path d="M6 12v8h12v-8"/>
-              <path d="M9 14h6v6" stroke-dasharray="1 2"/>
-            </svg>
-          </span>
-          <h3 class="category-title">Roofing &amp; Siding</h3>
-          <p class="category-desc">
-            Pitch, squares, underlayment, shingles, siding, gutters. Waste-aware ordering.
-          </p>
-          <span class="category-meta mono">24+ TOOLS</span>
-          <span class="category-arrow" aria-hidden="true">→</span>
-        </a>
-      </li>
-
-      <!-- 9. Painting & Wallpaper -->
-      <li class="category-card">
-        <a href="/categories/painting-wallpaper.html" class="category-link">
-          <span class="category-corner" aria-hidden="true"></span>
-          <span class="category-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" focusable="false">
-              <path d="M4 4h12v8H4z"/>
-              <path d="M16 8h3v6h-6v4"/>
-              <path d="M10 12v8" stroke-dasharray="1 2"/>
-            </svg>
-          </span>
-          <h3 class="category-title">Painting &amp; Wallpaper</h3>
-          <p class="category-desc">
-            Wall area, paint volume, primer, wallpaper rolls, pattern matching. Recoat intervals.
-          </p>
-          <span class="category-meta mono">22+ TOOLS</span>
-          <span class="category-arrow" aria-hidden="true">→</span>
-        </a>
-      </li>
-
-      <!-- 10. Road & Driveway -->
-      <li class="category-card">
-        <a href="/categories/road-driveway.html" class="category-link">
-          <span class="category-corner" aria-hidden="true"></span>
-          <span class="category-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" focusable="false">
-              <path d="M8 3h8l2 18H6L8 3z"/>
-              <path d="M12 6v3M12 11v3M12 16v3" stroke-dasharray="2 2"/>
-            </svg>
-          </span>
-          <h3 class="category-title">Road &amp; Driveway</h3>
-          <p class="category-desc">
-            Asphalt, gravel, base course, subgrade, drainage. Tonnage, compaction, and slope.
-          </p>
-          <span class="category-meta mono">22+ TOOLS</span>
-          <span class="category-arrow" aria-hidden="true">→</span>
-        </a>
-      </li>
-
-      <!-- 11. Cost Estimators -->
-      <li class="category-card">
-        <a href="/categories/cost-estimators.html" class="category-link">
-          <span class="category-corner" aria-hidden="true"></span>
-          <span class="category-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" focusable="false">
-              <rect x="4" y="4" width="16" height="16"/>
-              <path d="M4 9h16"/>
-              <path d="M8 13h2M14 13h2M8 17h2M14 17h2"/>
-            </svg>
-          </span>
-          <h3 class="category-title">Cost Estimators</h3>
-          <p class="category-desc">
-            Labour, material, overhead, margin, and full project budgets by region and trade.
-          </p>
-          <span class="category-meta mono">26+ TOOLS</span>
-          <span class="category-arrow" aria-hidden="true">→</span>
-        </a>
-      </li>
-
-      <!-- 12. Solar & Energy -->
-      <li class="category-card">
-        <a href="/categories/solar-energy.html" class="category-link">
-          <span class="category-corner" aria-hidden="true"></span>
-          <span class="category-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" focusable="false">
-              <circle cx="12" cy="12" r="4"/>
-              <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/>
-            </svg>
-          </span>
-          <h3 class="category-title">Solar &amp; Energy</h3>
-          <p class="category-desc">
-            PV sizing, battery banks, inverters, irradiance, payback. Region-aware production models.
-          </p>
-          <span class="category-meta mono">26+ TOOLS</span>
-          <span class="category-arrow" aria-hidden="true">→</span>
-        </a>
-      </li>
-
-    </ul>
-
-    <div class="categories-foot">
-      <a href="/categories/" class="btn-outline">
-        BROWSE ALL CATEGORIES <span aria-hidden="true">→</span>
+      <a href="#concrete-masonry" class="cat-overview-card">
+        <span class="cat-overview-icon" aria-hidden="true">🧱</span>
+        <span class="cat-overview-body">
+          <span class="cat-overview-title">Concrete &amp; Masonry</span>
+          <span class="cat-overview-desc">Concrete, rebar, brick, block, mortar, sand and gravel.</span>
+          <span class="cat-overview-count">28 TOOLS</span>
+        </span>
       </a>
-    </div>
 
-  </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════════════════
-     AD SLOT 2 — between categories and "Why We Exist"
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="ad-slot ad-slot-rectangle" aria-label="Advertisement">
-  <div class="ad-slot-inner">
-    <span class="ad-slot-label mono" aria-hidden="true">// SPONSORED //</span>
-    <!-- REPLACE: real publisher ID ca-pub-XXXXXXXXXXXXXXXX -->
-    <ins class="adsbygoogle"
-         style="display:block;min-height:250px"
-         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-         data-ad-slot="2222222222"
-         data-ad-format="auto"
-         data-full-width-responsive="true"
-         data-adsbygoogle-status="pending"></ins>
-    <noscript>
-      <div class="ad-slot-fallback mono">Advertisement (JavaScript disabled)</div>
-    </noscript>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     WHY BUILDMETRIC EXISTS — blue-deep, engineer voice, 500+ words
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="why-exists" id="why-exists" aria-labelledby="why-exists-heading">
-  <div class="why-exists-grid" aria-hidden="true"></div>
-  <div class="section-inner">
-
-    <header class="section-head section-head-dark">
-      <p class="section-label mono">// WHY WE EXIST //</p>
-      <h2 id="why-exists-heading" class="section-heading section-heading-dark">
-        Most construction calculators online are either toys or traps.
-      </h2>
-    </header>
-
-    <div class="why-exists-body">
-
-      <p>
-        A <strong>toy</strong> gives you a number with no formula shown, no units enforced, and no standard cited. Type feet into a field expecting inches and it happily returns nonsense. A <strong>trap</strong> hides the number behind a signup wall, then sells your email to three suppliers who call you for a week. Both are common. Neither is what a tradesperson needs at 6:40 am with a pour scheduled for 8.
-      </p>
-
-      <p>
-        BuildMetric was built because the arithmetic of construction is <em>not</em> complicated — it is <em>unforgiving</em>. A slab that is 0.4 m³ short stops a pour. A footing that is 15% under-designed fails inspection. A roof with the wrong pitch drains water into a wall and rots a header three winters later. Getting the number right is the entire job. Every calculator on this site exists to make that faster and less error-prone.
-      </p>
-
-      <h3 class="why-exists-subhead">Three commitments we will not break</h3>
-
-      <p>
-        <strong>One: show the formula.</strong> Every result is accompanied by the equation that produced it, the units it expects, and the standard it follows. If a calculation is region-dependent — concrete cover, rebar lap length, wire gauge ampacity, snow load — the applicable code is named and can be overridden. You should never have to trust a black box on a job site.
-      </p>
-
-      <p>
-        <strong>Two: no signup, no email wall, no upsell.</strong> The calculators run entirely in the browser. Nothing you type is sent to a server. Saved results live in <code class="mono">localStorage</code> on your device. You can export a PDF without giving us anything. The only place we ask for contact information is the supplier-quote form, and that is opt-in, clearly labelled, and never required to use a tool.
-      </p>
-
-      <p>
-        <strong>Three: work in the units and standards you actually use.</strong> A Canadian framer works in feet, inches, and fractions, and follows CSA A23.3 for concrete. An Indian site engineer works in metres, millimetres, and IS 456. A German crew works entirely in Eurocode. The same tool adapts to all three without a language barrier or a unit conversion mistake. Region is auto-detected, cached, and overridable in one click.
-      </p>
-
-      <h3 class="why-exists-subhead">What we are not</h3>
-
-      <p>
-        We are not a design service. These calculators compute quantities, spans, volumes, loads, and costs from inputs you provide. They do <em>not</em> replace structural engineering, licensed trade judgement, or a stamped set of drawings. Where a calculation touches structural safety — beam sizing, column loads, footing bearing, anchor pull-out — the result is clearly marked as preliminary and the tool links to the governing code clause so you or your engineer can verify. We would rather be useful and honest than useful and dangerous.
-      </p>
-
-      <p>
-        We are also not a marketplace. There are no affiliate links, no paid placements inside results, and no sponsored tools. Where a supplier form appears, it is labelled and it is optional. The calculators come first. Advertising keeps the lights on; it never enters the numbers.
-      </p>
-
-      <h3 class="why-exists-subhead">Built for the field, not the boardroom</h3>
-
-      <p>
-        BuildMetric pages are tuned to load in under 1.5 seconds on a mid-range phone over 4G, and to keep working after the first load even with no signal — because basements, tunnels, and rural job sites do not have reliable connectivity. Every input control is at least 44 pixels tall so it can be tapped with a gloved thumb. Every number is set in a monospaced font so digits line up and misread zeros are less likely. Nothing plays automatically, nothing pops up, and nothing moves unless you asked it to.
-      </p>
-
-      <p>
-        That is the whole product. Numbers you can trust, at the speed you need them, in the units you already use. Everything else on this site is in service of that.
-      </p>
-
-    </div>
-
-    <div class="why-exists-foot">
-      <a href="/why-we-exist.html" class="btn-outline btn-outline-dark">
-        READ THE FULL STORY <span aria-hidden="true">→</span>
+      <a href="#interior-finishing" class="cat-overview-card">
+        <span class="cat-overview-icon" aria-hidden="true">🛠️</span>
+        <span class="cat-overview-body">
+          <span class="cat-overview-title">Interior &amp; Finishing</span>
+          <span class="cat-overview-desc">Drywall, paint, tile, flooring, trim and wallpaper.</span>
+          <span class="cat-overview-count">28 TOOLS</span>
+        </span>
       </a>
-    </div>
 
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     WHY TRUST US — surface bg, 6 green-bordered cards
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="why-trust" id="why-trust" aria-labelledby="why-trust-heading">
-  <div class="section-inner">
-
-    <header class="section-head">
-      <p class="section-label mono">// WHY TRUST US //</p>
-      <h2 id="why-trust-heading" class="section-heading">
-        Six reasons the numbers hold up.
-      </h2>
-      <p class="section-lede">
-        No fake badges. No invented reviews. Just the verifiable things we do differently.
-      </p>
-    </header>
-
-    <ul class="trust-cards">
-
-      <li class="trust-card">
-        <span class="trust-card-corner" aria-hidden="true"></span>
-        <div class="trust-card-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" focusable="false">
-            <path d="M4 4h13l3 3v13H4z"/>
-            <path d="M8 9h8M8 13h8M8 17h5"/>
-          </svg>
-        </div>
-        <h3 class="trust-card-title">Formulas on every page</h3>
-        <p class="trust-card-body">
-          Each tool displays its equation in a syntax-highlighted code block, with the standard it derives from. If you disagree with the method, you can see exactly what it does.
-        </p>
-      </li>
-
-      <li class="trust-card">
-        <span class="trust-card-corner" aria-hidden="true"></span>
-        <div class="trust-card-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" focusable="false">
-            <circle cx="12" cy="12" r="9"/>
-            <path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18"/>
-          </svg>
-        </div>
-        <h3 class="trust-card-title">Region-aware standards</h3>
-        <p class="trust-card-body">
-          The code that governs your numbers changes with location. ACI 318-19, BS EN 1992, AS 3600, CSA A23.3, IS 456, NZS 3101, SANS 10100, and Eurocode are all built in and switch automatically.
-        </p>
-      </li>
-
-      <li class="trust-card">
-        <span class="trust-card-corner" aria-hidden="true"></span>
-        <div class="trust-card-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" focusable="false">
-            <rect x="3" y="5" width="18" height="14"/>
-            <path d="M7 9h4M7 13h7M7 17h5"/>
-            <path d="M17 9l2 2-2 2"/>
-          </svg>
-        </div>
-        <h3 class="trust-card-title">Worked examples in US &amp; metric</h3>
-        <p class="trust-card-body">
-          Every tool includes at least one fully worked example in both imperial and metric units, so you can check the arithmetic against your own project before you rely on it.
-        </p>
-      </li>
-
-      <li class="trust-card">
-        <span class="trust-card-corner" aria-hidden="true"></span>
-        <div class="trust-card-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" focusable="false">
-            <path d="M12 2l8 4v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10V6z"/>
-            <path d="M8 12l3 3 5-6"/>
-          </svg>
-        </div>
-        <h3 class="trust-card-title">No hidden data collection</h3>
-        <p class="trust-card-body">
-          Calculator inputs never leave your browser. There is no account, no tracking of values, and no third-party analytics on form fields. The only data we ever receive is what you explicitly submit on the supplier form.
-        </p>
-      </li>
-
-      <li class="trust-card">
-        <span class="trust-card-corner" aria-hidden="true"></span>
-        <div class="trust-card-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" focusable="false">
-            <path d="M4 20L20 4"/>
-            <path d="M4 4h6v6H4zM14 14h6v6h-6z"/>
-          </svg>
-        </div>
-        <h3 class="trust-card-title">Waste factors you control</h3>
-        <p class="trust-card-body">
-          Real jobs lose material to cutting, breakage, spillage, and over-excavation. Waste is togglable per tool with sensible per-trade defaults (5–15%) — never hidden inside the number.
-        </p>
-      </li>
-
-      <li class="trust-card">
-        <span class="trust-card-corner" aria-hidden="true"></span>
-        <div class="trust-card-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" focusable="false">
-            <path d="M4 12a8 8 0 1 1 8 8"/>
-            <path d="M4 12v-4M4 12h4"/>
-            <path d="M12 8v4l3 2"/>
-          </svg>
-        </div>
-        <h3 class="trust-card-title">Fast enough to use on site</h3>
-        <p class="trust-card-body">
-          Pages are target-built for under 1.5 seconds on 4G. Calculators update as you type with a 250 ms debounce. No spinners, no loading states, no waiting — because a job-site question needs an answer now.
-        </p>
-      </li>
-
-    </ul>
-
-  </div>
-</section>
-
-  <!-- ═══════════════════════════════════════════════════════════════
-     HOW TO USE — blue-deep bg, 3 numbered steps
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="how-to" id="how-to" aria-labelledby="how-to-heading">
-  <div class="how-to-grid" aria-hidden="true"></div>
-  <div class="section-inner">
-
-    <header class="section-head section-head-dark">
-      <p class="section-label mono">// HOW TO USE //</p>
-      <h2 id="how-to-heading" class="section-heading section-heading-dark">
-        Three steps. Under sixty seconds.
-      </h2>
-      <p class="section-lede section-lede-dark">
-        Every tool follows the same layout. Learn it once and you have learned all 300.
-      </p>
-    </header>
-
-    <ol class="how-to-steps">
-
-      <li class="how-to-step">
-        <div class="how-to-step-num mono" aria-hidden="true">01</div>
-        <h3 class="how-to-step-title">Pick the tool</h3>
-        <p class="how-to-step-body">
-          Search by what you are building — <em>slab</em>, <em>stair stringer</em>, <em>duct size</em> — or browse the twelve categories. Each tool page opens with a one-paragraph scope statement so you know it is the right calculator before you start entering numbers.
-        </p>
-      </li>
-
-      <li class="how-to-step">
-        <div class="how-to-step-num mono" aria-hidden="true">02</div>
-        <h3 class="how-to-step-title">Enter your dimensions</h3>
-        <p class="how-to-step-body">
-          Use the unit toggle to switch imperial or metric in one tap. Steppers respond to tap, long-press, and arrow keys. Waste factor is on by default at the recommended percentage for the trade — adjust it if your job runs tighter or looser.
-        </p>
-      </li>
-
-      <li class="how-to-step">
-        <div class="how-to-step-num mono" aria-hidden="true">03</div>
-        <h3 class="how-to-step-title">Read the result, take it with you</h3>
-        <p class="how-to-step-body">
-          Results update as you type — there is no calculate button to forget. Copy the number, export a PDF for the file, or request supplier quotes if you want current local pricing. Saved results stay in your browser for offline use.
-        </p>
-      </li>
-
-    </ol>
-
-    <div class="how-to-foot">
-      <a href="/how-to-use.html" class="btn-outline btn-outline-dark">
-        FULL WALKTHROUGH <span aria-hidden="true">→</span>
+      <a href="#exterior-structure" class="cat-overview-card">
+        <span class="cat-overview-icon" aria-hidden="true">🏠</span>
+        <span class="cat-overview-body">
+          <span class="cat-overview-title">Exterior &amp; Structure</span>
+          <span class="cat-overview-desc">Decks, fences, retaining walls, stairs and structures.</span>
+          <span class="cat-overview-count">26 TOOLS</span>
+        </span>
       </a>
-    </div>
 
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     STANDARDS — white bg, 6 standard cards
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="standards" id="standards" aria-labelledby="standards-heading">
-  <div class="section-inner">
-
-    <header class="section-head">
-      <p class="section-label mono">// STANDARDS WE FOLLOW //</p>
-      <h2 id="standards-heading" class="section-heading">
-        Nine regional codes. One interface.
-      </h2>
-      <p class="section-lede">
-        BuildMetric ships with the codes that govern concrete cover, rebar development length, wind and snow loads, wire ampacity, duct sizing, and pipe capacity across the major English-speaking and European markets. Region is auto-detected and overridable.
-      </p>
-    </header>
-
-    <ul class="standards-grid">
-
-      <li class="standard-card">
-        <span class="standard-flag mono" aria-hidden="true">US</span>
-        <h3 class="standard-name">ACI 318-19</h3>
-        <p class="standard-desc">
-          Building Code Requirements for Structural Concrete. Drives cover, lap length, and shear checks in the concrete and masonry tools.
-        </p>
-      </li>
-
-      <li class="standard-card">
-        <span class="standard-flag mono" aria-hidden="true">UK</span>
-        <h3 class="standard-name">BS EN 1992</h3>
-        <p class="standard-desc">
-          Eurocode 2 — Design of Concrete Structures, as adopted in the UK National Annex. Governs cover, anchorage, and durability classes.
-        </p>
-      </li>
-
-      <li class="standard-card">
-        <span class="standard-flag mono" aria-hidden="true">AU</span>
-        <h3 class="standard-name">AS 3600</h3>
-        <p class="standard-desc">
-          Concrete Structures (Australia). Used for member sizing, deflection limits, and exposure classification across Australian tools.
-        </p>
-      </li>
-
-      <li class="standard-card">
-        <span class="standard-flag mono" aria-hidden="true">CA</span>
-        <h3 class="standard-name">CSA A23.3</h3>
-        <p class="standard-desc">
-          Design of Concrete Structures (Canada). Governs concrete tools in Canada, including cold-weather placement guidance.
-        </p>
-      </li>
-
-      <li class="standard-card">
-        <span class="standard-flag mono" aria-hidden="true">IN</span>
-        <h3 class="standard-name">IS 456:2000</h3>
-        <p class="standard-desc">
-          Plain and Reinforced Concrete — Code of Practice (India). Basis for cover, mix proportions, and rebar spacing in Indian tools.
-        </p>
-      </li>
-
-      <li class="standard-card">
-        <span class="standard-flag mono" aria-hidden="true">EU</span>
-        <h3 class="standard-name">Eurocode</h3>
-        <p class="standard-desc">
-          EN 1990 through EN 1999. Applied for DE and FR regions across concrete, steel, and geotechnical calculators.
-        </p>
-      </li>
-
-    </ul>
-
-    <p class="standards-note mono">
-      NZ → AS/NZS 3600 · ZA → SANS 10100 · AE → BS EN (default) · Regional override available on every tool page.
-    </p>
-
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     FEATURED TOOLS — surface bg, 6 cards
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="featured-tools" id="featured" aria-labelledby="featured-heading">
-  <div class="section-inner">
-
-    <header class="section-head">
-      <p class="section-label mono">// FEATURED TOOLS //</p>
-      <h2 id="featured-heading" class="section-heading">
-        The six most-used calculators this month.
-      </h2>
-      <p class="section-lede">
-        Straight from usage data — no paid placements, no sponsored cards. These are simply the tools tradespeople open most.
-      </p>
-    </header>
-
-    <ul class="featured-grid">
-
-      <li class="featured-card">
-        <a href="/tools/concrete-slab-calculator.html" class="featured-link">
-          <span class="featured-corner" aria-hidden="true"></span>
-          <span class="featured-cat mono">CONCRETE</span>
-          <h3 class="featured-title">Concrete Slab Calculator</h3>
-          <p class="featured-desc">
-            Volume in m³ or yd³, cement bags, sand, aggregate, and water by mix ratio. Handles slabs, footings, and pads.
-          </p>
-          <span class="featured-cta mono">CALCULATE <span aria-hidden="true">→</span></span>
-        </a>
-      </li>
-
-      <li class="featured-card">
-        <a href="/tools/rebar-calculator.html" class="featured-link">
-          <span class="featured-corner" aria-hidden="true"></span>
-          <span class="featured-cat mono">CONCRETE</span>
-          <h3 class="featured-title">Rebar Calculator</h3>
-          <p class="featured-desc">
-            Bar count, spacing, lap length, and total weight for slab and footing mats. Imperial bar sizes or metric diameters.
-          </p>
-          <span class="featured-cta mono">CALCULATE <span aria-hidden="true">→</span></span>
-        </a>
-      </li>
-
-      <li class="featured-card">
-        <a href="/tools/roof-pitch-calculator.html" class="featured-link">
-          <span class="featured-corner" aria-hidden="true"></span>
-          <span class="featured-cat mono">ROOFING</span>
-          <h3 class="featured-title">Roof Pitch Calculator</h3>
-          <p class="featured-desc">
-            Convert between rise/run, degrees, and x:12 pitch. Returns rafter length, ridge height, and roof area per plane.
-          </p>
-          <span class="featured-cta mono">CALCULATE <span aria-hidden="true">→</span></span>
-        </a>
-      </li>
-
-      <li class="featured-card">
-        <a href="/tools/lumber-calculator.html" class="featured-link">
-          <span class="featured-corner" aria-hidden="true"></span>
-          <span class="featured-cat mono">FRAMING</span>
-          <h3 class="featured-title">Lumber Calculator</h3>
-          <p class="featured-desc">
-            Board feet, linear feet, and piece counts for studs, joists, rafters, and plates. Waste-aware and cut-list ready.
-          </p>
-          <span class="featured-cta mono">CALCULATE <span aria-hidden="true">→</span></span>
-        </a>
-      </li>
-
-      <li class="featured-card">
-        <a href="/tools/paint-calculator.html" class="featured-link">
-          <span class="featured-corner" aria-hidden="true"></span>
-          <span class="featured-cat mono">FINISHING</span>
-          <h3 class="featured-title">Paint Calculator</h3>
-          <p class="featured-desc">
-            Wall and ceiling area, primer and topcoat litres or gallons, coat count, and dry-time scheduling per surface.
-          </p>
-          <span class="featured-cta mono">CALCULATE <span aria-hidden="true">→</span></span>
-        </a>
-      </li>
-
-      <li class="featured-card">
-        <a href="/tools/solar-panel-calculator.html" class="featured-link">
-          <span class="featured-corner" aria-hidden="true"></span>
-          <span class="featured-cat mono">SOLAR</span>
-          <h3 class="featured-title">Solar Panel Calculator</h3>
-          <p class="featured-desc">
-            Array size in kW, panel count, inverter match, and annual production from your location's peak sun hours.
-          </p>
-          <span class="featured-cta mono">CALCULATE <span aria-hidden="true">→</span></span>
-        </a>
-      </li>
-
-    </ul>
-
-    <div class="featured-foot">
-      <a href="/tools/" class="btn-outline">
-        VIEW ALL 300+ TOOLS <span aria-hidden="true">→</span>
+      <a href="#landscaping-outdoor" class="cat-overview-card">
+        <span class="cat-overview-icon" aria-hidden="true">🌳</span>
+        <span class="cat-overview-body">
+          <span class="cat-overview-title">Landscaping &amp; Outdoor</span>
+          <span class="cat-overview-desc">Mulch, topsoil, sod, pavers and garden beds.</span>
+          <span class="cat-overview-count">24 TOOLS</span>
+        </span>
       </a>
-    </div>
 
-  </div>
-</section>
-
-  <!-- ═══════════════════════════════════════════════════════════════
-     AD SLOT 3 — between Featured Tools and B2B lead form
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="ad-slot ad-slot-rectangle" aria-label="Advertisement">
-  <div class="ad-slot-inner">
-    <span class="ad-slot-label mono" aria-hidden="true">// SPONSORED //</span>
-    <!-- REPLACE: real publisher ID ca-pub-XXXXXXXXXXXXXXXX -->
-    <ins class="adsbygoogle"
-         style="display:block;min-height:250px"
-         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-         data-ad-slot="3333333333"
-         data-ad-format="auto"
-         data-full-width-responsive="true"
-         data-adsbygoogle-status="pending"></ins>
-    <noscript>
-      <div class="ad-slot-fallback mono">Advertisement (JavaScript disabled)</div>
-    </noscript>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     B2B SUPPLIER LEAD — forest-green, form + benefits
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="b2b-lead" id="supplier-quotes" aria-labelledby="b2b-heading">
-  <div class="b2b-grid" aria-hidden="true"></div>
-  <div class="section-inner">
-
-    <div class="b2b-layout">
-
-      <!-- Left: pitch -->
-      <div class="b2b-copy">
-        <p class="section-label mono">// FOR CONTRACTORS &amp; BUILDERS //</p>
-        <h2 id="b2b-heading" class="section-heading section-heading-dark">
-          Get material quotes from verified suppliers in your region.
-        </h2>
-        <p class="b2b-lede">
-          Submit the form once and we forward your project to suppliers who actually stock what you need — ready-mix plants, rebar fabricators, lumber yards, PV distributors. No broker chains. No lead auctions. Response within 24–48 hours.
-        </p>
-
-        <ul class="b2b-benefits">
-          <li class="b2b-benefit">
-            <span class="b2b-benefit-icon mono" aria-hidden="true">01</span>
-            <span class="b2b-benefit-text">Matched to your material category and region — no generic blasts.</span>
-          </li>
-          <li class="b2b-benefit">
-            <span class="b2b-benefit-icon mono" aria-hidden="true">02</span>
-            <span class="b2b-benefit-text">Volume pricing tiers from suppliers who handle your order size.</span>
-          </li>
-          <li class="b2b-benefit">
-            <span class="b2b-benefit-icon mono" aria-hidden="true">03</span>
-            <span class="b2b-benefit-text">Full audit trail — you see who received your enquiry and when.</span>
-          </li>
-          <li class="b2b-benefit">
-            <span class="b2b-benefit-icon mono" aria-hidden="true">04</span>
-            <span class="b2b-benefit-text">Opt out in one reply. We do not resell your contact details.</span>
-          </li>
-        </ul>
-
-        <p class="b2b-fineprint mono">
-          Response target: 24–48 hours · USA, UK, AU, CA, IN, NZ, ZA, AE, DE, FR
-        </p>
-      </div>
-
-      <!-- Right: form -->
-      <div class="b2b-form-wrap">
-        <form
-          class="b2b-form"
-          id="b2b-form"
-          name="b2b-lead"
-          method="POST"
-          action="/api/b2b-lead"
-          novalidate
-          aria-labelledby="b2b-form-heading">
-
-          <h3 id="b2b-form-heading" class="b2b-form-title mono">// SUPPLIER QUOTE REQUEST //</h3>
-
-          <!-- Honeypot: hidden from users, bots fill it -->
-          <div class="b2b-honeypot" aria-hidden="true">
-            <label for="b2b-website">Website (leave blank)</label>
-            <input type="text" id="b2b-website" name="website" tabindex="-1" autocomplete="off">
-          </div>
-
-          <div class="b2b-field">
-            <label for="b2b-name">Full name <span class="req" aria-hidden="true">*</span></label>
-            <input type="text" id="b2b-name" name="name" required autocomplete="name" placeholder="e.g. Daniel Okafor">
-          </div>
-
-          <div class="b2b-field">
-            <label for="b2b-company">Company <span class="req" aria-hidden="true">*</span></label>
-            <input type="text" id="b2b-company" name="company" required autocomplete="organization" placeholder="e.g. Northline Concrete Ltd.">
-          </div>
-
-          <div class="b2b-field">
-            <label for="b2b-email">Work email <span class="req" aria-hidden="true">*</span></label>
-            <input type="email" id="b2b-email" name="email" required autocomplete="email" placeholder="you@company.com" inputmode="email">
-          </div>
-
-          <div class="b2b-field">
-            <label for="b2b-phone">Phone <span class="opt mono">OPTIONAL</span></label>
-            <input type="tel" id="b2b-phone" name="phone" autocomplete="tel" placeholder="+1 555 0100" inputmode="tel">
-          </div>
-
-          <div class="b2b-row">
-            <div class="b2b-field">
-              <label for="b2b-country">Country <span class="req" aria-hidden="true">*</span></label>
-              <select id="b2b-country" name="country" required>
-                <option value="">Select…</option>
-                <option value="US">United States</option>
-                <option value="GB">United Kingdom</option>
-                <option value="AU">Australia</option>
-                <option value="CA">Canada</option>
-                <option value="IN">India</option>
-                <option value="NZ">New Zealand</option>
-                <option value="ZA">South Africa</option>
-                <option value="AE">United Arab Emirates</option>
-                <option value="DE">Germany</option>
-                <option value="FR">France</option>
-                <option value="OTHER">Other</option>
-              </select>
-            </div>
-
-            <div class="b2b-field">
-              <label for="b2b-zip">ZIP / Postcode <span class="req" aria-hidden="true">*</span></label>
-              <input type="text" id="b2b-zip" name="zip" required autocomplete="postal-code" placeholder="e.g. 90210" inputmode="numeric">
-            </div>
-          </div>
-
-          <div class="b2b-field">
-            <label for="b2b-category">Material category <span class="req" aria-hidden="true">*</span></label>
-            <select id="b2b-category" name="category" required>
-              <option value="">Select a category…</option>
-              <option value="concrete-masonry">Concrete &amp; Masonry — ready-mix, rebar, block</option>
-              <option value="lumber-framing">Lumber &amp; Framing — studs, joists, sheathing</option>
-              <option value="roofing-siding">Roofing &amp; Siding — shingles, underlayment, siding</option>
-              <option value="interior-finishing">Interior Finishing — drywall, tile, flooring</option>
-              <option value="electrical-hvac">Electrical &amp; HVAC — cable, conduit, ductwork</option>
-              <option value="plumbing-piping">Plumbing &amp; Piping — pipe, fittings, fixtures</option>
-              <option value="solar-energy">Solar &amp; Energy — panels, inverters, batteries</option>
-              <option value="road-driveway">Road &amp; Driveway — asphalt, aggregate, geotextile</option>
-              <option value="landscaping-outdoor">Landscaping — sod, mulch, pavers, irrigation</option>
-              <option value="painting-wallpaper">Painting — paint, primer, wallpaper</option>
-              <option value="exterior-structure">Exterior Structure — decks, fences, retaining</option>
-              <option value="cost-estimators">Full project — mixed trades</option>
-            </select>
-          </div>
-
-          <div class="b2b-field">
-            <label for="b2b-project">Project description <span class="req" aria-hidden="true">*</span></label>
-            <textarea
-              id="b2b-project"
-              name="project"
-              required
-              rows="4"
-              maxlength="800"
-              placeholder="e.g. 240 m² suspended slab, 200 mm thick, C32/40, 3 tonnes of A393 mesh, delivery week of 14 April, site has crane access only."></textarea>
-            <p class="b2b-hint mono" id="b2b-project-hint">Include quantities, spec, and delivery window. <span id="b2b-char-count">0 / 800</span></p>
-          </div>
-
-          <div class="b2b-consent">
-            <input type="checkbox" id="b2b-consent" name="consent" required>
-            <label for="b2b-consent">
-              I agree that BuildMetric may forward this enquiry to relevant suppliers in my region. I understand my details will not be sold and I can opt out at any time. <a href="/privacy.html">Privacy policy</a>.
-            </label>
-          </div>
-
-          <div class="b2b-submit-row">
-            <button type="submit" class="btn-amber b2b-submit" id="b2b-submit">
-              GET SUPPLIER QUOTES <span aria-hidden="true">→</span>
-            </button>
-            <p class="b2b-submit-note mono" id="b2b-status" role="status" aria-live="polite"></p>
-          </div>
-
-          <p class="b2b-alt mono">
-            Prefer email? Write to <a href="mailto:contact.buildmetric@gmail.com">contact.buildmetric@gmail.com</a>
-          </p>
-
-        </form>
-      </div>
-
-    </div>
-  </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════════════════
-     MEDIA — YouTube + Newsletter, one each, no clutter
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="media" id="media" aria-labelledby="media-heading">
-  <div class="section-inner">
-
-    <header class="section-head">
-      <p class="section-label mono">// FOLLOW &amp; SUBSCRIBE //</p>
-      <h2 id="media-heading" class="section-heading">
-        Watch the walkthrough. Get the updates.
-      </h2>
-      <p class="section-lede">
-        Two channels. No auto-play, no pop-ups, no dark patterns. Subscribe if it's useful — leave if it isn't.
-      </p>
-    </header>
-
-    <div class="media-grid">
-
-      <!-- YouTube -->
-      <article class="media-card">
-        <span class="media-card-corner" aria-hidden="true"></span>
-        <div class="media-card-head">
-          <span class="media-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" focusable="false">
-              <rect x="2" y="5" width="20" height="14" rx="3"/>
-              <path d="M10 9l5 3-5 3z" fill="currentColor"/>
-            </svg>
-          </span>
-          <span class="media-card-tag mono">YOUTUBE</span>
-        </div>
-        <h3 class="media-card-title">BuildMetric on YouTube</h3>
-        <p class="media-card-body">
-          Short, screen-recorded walkthroughs of every major calculator. Field-tested examples: a real slab take-off, a real rafter cut list, a real solar sizing for a 6 kW residential array. No talking-head intros. No "hey guys, welcome back."
-        </p>
-        <ul class="media-card-points mono">
-          <li>→ One tool per video, 4–7 minutes</li>
-          <li>→ Worked example with real numbers</li>
-          <li>→ New walkthroughs weekly</li>
-        </ul>
-        <a
-          href="https://youtube.com/@buildmetricyt"
-          class="btn-outline media-cta"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Subscribe to BuildMetric on YouTube (opens in new tab)">
-          SUBSCRIBE ON YOUTUBE <span aria-hidden="true">→</span>
-        </a>
-      </article>
-
-      <!-- Newsletter -->
-      <article class="media-card">
-        <span class="media-card-corner" aria-hidden="true"></span>
-        <div class="media-card-head">
-          <span class="media-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" focusable="false">
-              <rect x="3" y="5" width="18" height="14"/>
-              <path d="M3 7l9 6 9-6"/>
-            </svg>
-          </span>
-          <span class="media-card-tag mono">NEWSLETTER</span>
-        </div>
-        <h3 class="media-card-title">The Take-Off</h3>
-        <p class="media-card-body">
-          One email per fortnight. Three new calculators, one code-update note, one field tip from a working trade. Written like a site engineer's note, not a marketing blast. Unsubscribe link in every send.
-        </p>
-        <form
-          class="newsletter-form"
-          id="newsletter-form"
-          method="POST"
-          action="/api/newsletter"
-          novalidate
-          aria-labelledby="newsletter-heading">
-          <h4 id="newsletter-heading" class="sr-only">Subscribe to The Take-Off newsletter</h4>
-
-          <div class="newsletter-honeypot" aria-hidden="true">
-            <label for="nl-website">Website (leave blank)</label>
-            <input type="text" id="nl-website" name="website" tabindex="-1" autocomplete="off">
-          </div>
-
-          <div class="newsletter-row">
-            <label for="nl-email" class="sr-only">Email address</label>
-            <input
-              type="email"
-              id="nl-email"
-              name="email"
-              required
-              autocomplete="email"
-              placeholder="you@domain.com"
-              inputmode="email">
-            <button type="submit" class="btn-amber newsletter-submit">
-              SUBSCRIBE <span aria-hidden="true">→</span>
-            </button>
-          </div>
-
-          <p class="newsletter-fineprint mono">
-            No spam. No resale. Unsubscribe in one click.
-          </p>
-          <p class="newsletter-status mono" id="nl-status" role="status" aria-live="polite"></p>
-        </form>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     FAQ — white bg, 5 questions (matches FAQPage JSON-LD in head)
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="faq" id="faq" aria-labelledby="faq-heading">
-  <div class="section-inner">
-
-    <header class="section-head">
-      <p class="section-label mono">// FAQ //</p>
-      <h2 id="faq-heading" class="section-heading">
-        Straight answers.
-      </h2>
-      <p class="section-lede">
-        The questions we get most. Nothing padded, nothing dodged.
-      </p>
-    </header>
-
-    <ul class="faq-list">
-
-      <li class="faq-item">
-        <details>
-          <summary>
-            <span class="faq-q">Are BuildMetric calculators free to use?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-a">
-            <p>
-              Yes. Every calculator on BuildMetric is free, requires no signup, and shows the formula used. We are supported by clean, non-intrusive advertising and optional B2B supplier connections. There are no paywalls, no trial periods, and no email gates. If a future feature ever changes that, it will be clearly labelled and separate from the core tools.
-            </p>
-          </div>
-        </details>
-      </li>
-
-      <li class="faq-item">
-        <details>
-          <summary>
-            <span class="faq-q">Which construction standards do the calculators follow?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-a">
-            <p>
-              Calculators follow the standard relevant to your detected region: ACI 318-19 for USA, BS EN 1992 for UK, AS 3600 for Australia, CSA A23.3 for Canada, IS 456 for India, NZS/AS 3600 for New Zealand, SANS 10100 for South Africa, and Eurocode for Germany and France. The active standard is displayed on every tool page, cited against the specific equation it governs, and can be overridden manually from the geo banner.
-            </p>
-          </div>
-        </details>
-      </li>
-
-      <li class="faq-item">
-        <details>
-          <summary>
-            <span class="faq-q">Do I need to create an account to save results?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-a">
-            <p>
-              No account is needed. Saved results are stored locally in your browser using <code class="mono">localStorage</code>. You can export any result as a PDF for offline use, or copy a permalink that reopens the same tool with your inputs pre-filled. Nothing is uploaded to our servers, and clearing your browser data clears your saved results — which is the correct privacy trade-off for job-site numbers.
-            </p>
-          </div>
-        </details>
-      </li>
-
-      <li class="faq-item">
-        <details>
-          <summary>
-            <span class="faq-q">How accurate are the material estimates?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-a">
-            <p>
-              Calculators use published formulas from recognised standards bodies and material suppliers. Waste factors can be toggled (5–15%, category-dependent) to account for cutting, spillage, and breakage. Results are typically within 3–5% of a manual take-off on straightforward geometry. For structural work — beams, columns, footings, anchors — always have final quantities and member sizes verified by a licensed engineer. The calculators are accurate; they are not a substitute for a stamped drawing.
-            </p>
-          </div>
-        </details>
-      </li>
-
-      <li class="faq-item">
-        <details>
-          <summary>
-            <span class="faq-q">Can I use BuildMetric on a job site with no signal?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-a">
-            <p>
-              Core calculator logic runs entirely in the browser. Once a page has loaded, it will continue to work without a network connection. We recommend opening frequently used tool pages while you still have signal — the browser caches CSS, JS, and fonts, so reopening them offline works reliably. Saved results and exports are unaffected by loss of connectivity.
-            </p>
-          </div>
-        </details>
-      </li>
-
-    </ul>
-
-  </div>
-</section>
-
-  <!-- ═══════════════════════════════════════════════════════════════
-     QUICK LINKS — blue-deep bg, dense SEO-friendly sitemap teaser
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="quick-links" id="quick-links" aria-labelledby="quick-links-heading">
-  <div class="quick-links-grid" aria-hidden="true"></div>
-  <div class="section-inner">
-
-    <header class="section-head section-head-dark">
-      <p class="section-label mono">// QUICK LINKS //</p>
-      <h2 id="quick-links-heading" class="section-heading section-heading-dark">
-        Jump straight to a tool.
-      </h2>
-      <p class="section-lede section-lede-dark">
-        The most-opened calculators by trade. Every link goes directly to the tool, not a category page.
-      </p>
-    </header>
-
-    <div class="quick-links-columns">
-
-      <nav class="quick-links-col" aria-label="Concrete and masonry tools">
-        <h3 class="quick-links-col-title mono">CONCRETE &amp; MASONRY</h3>
-        <ul>
-          <li><a href="/tools/concrete-slab-calculator.html">Concrete slab calculator</a></li>
-          <li><a href="/tools/concrete-footing-calculator.html">Concrete footing calculator</a></li>
-          <li><a href="/tools/concrete-column-calculator.html">Concrete column calculator</a></li>
-          <li><a href="/tools/rebar-calculator.html">Rebar calculator</a></li>
-          <li><a href="/tools/concrete-mix-ratio-calculator.html">Concrete mix ratio</a></li>
-          <li><a href="/tools/block-calculator.html">Block / CMU calculator</a></li>
-          <li><a href="/tools/mortar-calculator.html">Mortar calculator</a></li>
-        </ul>
-      </nav>
-
-      <nav class="quick-links-col" aria-label="Lumber and framing tools">
-        <h3 class="quick-links-col-title mono">LUMBER &amp; FRAMING</h3>
-        <ul>
-          <li><a href="/tools/lumber-calculator.html">Lumber calculator</a></li>
-          <li><a href="/tools/stud-calculator.html">Stud calculator</a></li>
-          <li><a href="/tools/joist-calculator.html">Floor joist calculator</a></li>
-          <li><a href="/tools/rafter-calculator.html">Rafter calculator</a></li>
-          <li><a href="/tools/board-foot-calculator.html">Board foot calculator</a></li>
-          <li><a href="/tools/deck-calculator.html">Deck calculator</a></li>
-          <li><a href="/tools/stair-calculator.html">Stair stringer calculator</a></li>
-        </ul>
-      </nav>
-
-      <nav class="quick-links-col" aria-label="Roofing and siding tools">
-        <h3 class="quick-links-col-title mono">ROOFING &amp; SIDING</h3>
-        <ul>
-          <li><a href="/tools/roof-pitch-calculator.html">Roof pitch calculator</a></li>
-          <li><a href="/tools/roof-area-calculator.html">Roof area calculator</a></li>
-          <li><a href="/tools/shingle-calculator.html">Shingle calculator</a></li>
-          <li><a href="/tools/roofing-squares-calculator.html">Roofing squares</a></li>
-          <li><a href="/tools/underlayment-calculator.html">Underlayment calculator</a></li>
-          <li><a href="/tools/siding-calculator.html">Siding calculator</a></li>
-          <li><a href="/tools/gutter-calculator.html">Gutter calculator</a></li>
-        </ul>
-      </nav>
-
-      <nav class="quick-links-col" aria-label="Electrical and HVAC tools">
-        <h3 class="quick-links-col-title mono">ELECTRICAL &amp; HVAC</h3>
-        <ul>
-          <li><a href="/tools/ohms-law-calculator.html">Ohm's law calculator</a></li>
-          <li><a href="/tools/wire-gauge-calculator.html">Wire gauge calculator</a></li>
-          <li><a href="/tools/voltage-drop-calculator.html">Voltage drop calculator</a></li>
-          <li><a href="/tools/load-calculator.html">Electrical load calculator</a></li>
-          <li><a href="/tools/btu-calculator.html">BTU calculator</a></li>
-          <li><a href="/tools/duct-size-calculator.html">Duct size calculator</a></li>
-          <li><a href="/tools/conduit-fill-calculator.html">Conduit fill calculator</a></li>
-        </ul>
-      </nav>
-
-      <nav class="quick-links-col" aria-label="Plumbing and piping tools">
-        <h3 class="quick-links-col-title mono">PLUMBING &amp; PIPING</h3>
-        <ul>
-          <li><a href="/tools/pipe-volume-calculator.html">Pipe volume calculator</a></li>
-          <li><a href="/tools/pipe-flow-calculator.html">Pipe flow calculator</a></li>
-          <li><a href="/tools/drain-slope-calculator.html">Drain slope calculator</a></li>
-          <li><a href="/tools/water-tank-calculator.html">Water tank calculator</a></li>
-          <li><a href="/tools/fixture-unit-calculator.html">Fixture unit calculator</a></li>
-          <li><a href="/tools/pressure-drop-calculator.html">Pressure drop calculator</a></li>
-          <li><a href="/tools/pipe-insulation-calculator.html">Pipe insulation calculator</a></li>
-        </ul>
-      </nav>
-
-      <nav class="quick-links-col" aria-label="Solar and energy tools">
-        <h3 class="quick-links-col-title mono">SOLAR &amp; ENERGY</h3>
-        <ul>
-          <li><a href="/tools/solar-panel-calculator.html">Solar panel calculator</a></li>
-          <li><a href="/tools/solar-battery-calculator.html">Solar battery calculator</a></li>
-          <li><a href="/tools/inverter-size-calculator.html">Inverter size calculator</a></li>
-          <li><a href="/tools/solar-payback-calculator.html">Solar payback calculator</a></li>
-          <li><a href="/tools/off-grid-solar-calculator.html">Off-grid solar calculator</a></li>
-          <li><a href="/tools/panel-tilt-calculator.html">Panel tilt calculator</a></li>
-          <li><a href="/tools/annual-production-calculator.html">Annual production calculator</a></li>
-        </ul>
-      </nav>
-
-      <nav class="quick-links-col" aria-label="Cost estimation tools">
-        <h3 class="quick-links-col-title mono">COST ESTIMATORS</h3>
-        <ul>
-          <li><a href="/tools/construction-cost-calculator.html">Construction cost calculator</a></li>
-          <li><a href="/tools/labour-cost-calculator.html">Labour cost calculator</a></li>
-          <li><a href="/tools/markup-margin-calculator.html">Markup / margin calculator</a></li>
-          <li><a href="/tools/roof-replacement-cost.html">Roof replacement cost</a></li>
-          <li><a href="/tools/kitchen-remodel-cost.html">Kitchen remodel cost</a></li>
-          <li><a href="/tools/bathroom-remodel-cost.html">Bathroom remodel cost</a></li>
-          <li><a href="/tools/concrete-cost-calculator.html">Concrete cost calculator</a></li>
-        </ul>
-      </nav>
-
-      <nav class="quick-links-col" aria-label="Painting and finishing tools">
-        <h3 class="quick-links-col-title mono">PAINTING &amp; FINISHING</h3>
-        <ul>
-          <li><a href="/tools/paint-calculator.html">Paint calculator</a></li>
-          <li><a href="/tools/primer-calculator.html">Primer calculator</a></li>
-          <li><a href="/tools/wallpaper-calculator.html">Wallpaper calculator</a></li>
-          <li><a href="/tools/drywall-calculator.html">Drywall calculator</a></li>
-          <li><a href="/tools/tile-calculator.html">Tile calculator</a></li>
-          <li><a href="/tools/flooring-calculator.html">Flooring calculator</a></li>
-          <li><a href="/tools/baseboard-calculator.html">Baseboard calculator</a></li>
-        </ul>
-      </nav>
-
-    </div>
-
-    <div class="quick-links-foot">
-      <a href="/sitemap.html" class="btn-outline btn-outline-dark">
-        FULL TOOL INDEX <span aria-hidden="true">→</span>
+      <a href="#lumber-framing" class="cat-overview-card">
+        <span class="cat-overview-icon" aria-hidden="true">🪵</span>
+        <span class="cat-overview-body">
+          <span class="cat-overview-title">Lumber &amp; Framing</span>
+          <span class="cat-overview-desc">Lumber, board feet, studs, joists, rafters and sheathing.</span>
+          <span class="cat-overview-count">24 TOOLS</span>
+        </span>
       </a>
-    </div>
 
+      <a href="#electrical-hvac" class="cat-overview-card">
+        <span class="cat-overview-icon" aria-hidden="true">⚡</span>
+        <span class="cat-overview-body">
+          <span class="cat-overview-title">Electrical &amp; HVAC</span>
+          <span class="cat-overview-desc">Wire gauge, load, voltage drop, BTU and duct sizing.</span>
+          <span class="cat-overview-count">26 TOOLS</span>
+        </span>
+      </a>
+
+      <a href="#plumbing-piping" class="cat-overview-card">
+        <span class="cat-overview-icon" aria-hidden="true">🔧</span>
+        <span class="cat-overview-body">
+          <span class="cat-overview-title">Plumbing &amp; Piping</span>
+          <span class="cat-overview-desc">Pipe volume, flow, water tank, drain slope and pressure.</span>
+          <span class="cat-overview-count">24 TOOLS</span>
+        </span>
+      </a>
+
+      <a href="#roofing-siding" class="cat-overview-card">
+        <span class="cat-overview-icon" aria-hidden="true">🏘️</span>
+        <span class="cat-overview-body">
+          <span class="cat-overview-title">Roofing &amp; Siding</span>
+          <span class="cat-overview-desc">Roofing, shingles, gutters, siding and underlayment.</span>
+          <span class="cat-overview-count">24 TOOLS</span>
+        </span>
+      </a>
+
+      <a href="#painting-wallpaper" class="cat-overview-card">
+        <span class="cat-overview-icon" aria-hidden="true">🎨</span>
+        <span class="cat-overview-body">
+          <span class="cat-overview-title">Painting &amp; Wallpaper</span>
+          <span class="cat-overview-desc">Wall area, paint, primer and wallpaper rolls.</span>
+          <span class="cat-overview-count">22 TOOLS</span>
+        </span>
+      </a>
+
+      <a href="#road-driveway" class="cat-overview-card">
+        <span class="cat-overview-icon" aria-hidden="true">🛣️</span>
+        <span class="cat-overview-body">
+          <span class="cat-overview-title">Road &amp; Driveway</span>
+          <span class="cat-overview-desc">Asphalt, gravel, base course and driveway drainage.</span>
+          <span class="cat-overview-count">22 TOOLS</span>
+        </span>
+      </a>
+
+      <a href="#cost-estimators" class="cat-overview-card">
+        <span class="cat-overview-icon" aria-hidden="true">💰</span>
+        <span class="cat-overview-body">
+          <span class="cat-overview-title">Cost Estimators</span>
+          <span class="cat-overview-desc">Material and labour cost estimates for common projects.</span>
+          <span class="cat-overview-count">26 TOOLS</span>
+        </span>
+      </a>
+
+      <a href="#solar-energy" class="cat-overview-card">
+        <span class="cat-overview-icon" aria-hidden="true">☀️</span>
+        <span class="cat-overview-body">
+          <span class="cat-overview-title">Solar &amp; Energy</span>
+          <span class="cat-overview-desc">Solar panels, batteries, inverters and payback.</span>
+          <span class="cat-overview-count">26 TOOLS</span>
+        </span>
+      </a>
+
+    </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     FOOTER — forest-green, 4 columns
-     ═══════════════════════════════════════════════════════════════ -->
-<footer class="site-footer" role="contentinfo">
-  <div class="footer-inner">
+  <!-- ═══════════════ CONCRETE & MASONRY (28 tools) ═══════════════ -->
+<section class="cat-section" id="concrete-masonry">
+  <div class="container">
+    <div class="cat-section-head">
+      <h2 class="cat-section-title">Concrete &amp; Masonry Calculators</h2>
+    </div>
+    <div class="tool-grid">
 
-    <div class="footer-top">
+      <a href="/tools/concrete-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Concrete Calculator</h3>
+        <p class="tool-card-desc">Estimate cubic yards and bags of concrete for slabs, footings and columns.</p>
+      </a>
 
-      <!-- Column 1: brand + contact -->
+      <a href="/tools/concrete-bag-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Concrete Bag Calculator</h3>
+        <p class="tool-card-desc">Find how many bags of pre-mixed concrete you need for any project.</p>
+      </a>
+
+      <a href="/tools/concrete-slab-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Concrete Slab Calculator</h3>
+        <p class="tool-card-desc">Calculate concrete volume for patios, driveways and shed floors.</p>
+      </a>
+
+      <a href="/tools/concrete-footing-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Concrete Footing Calculator</h3>
+        <p class="tool-card-desc">Estimate concrete for foundation footings and structural bases.</p>
+      </a>
+
+      <a href="/tools/concrete-column-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Concrete Column Calculator</h3>
+        <p class="tool-card-desc">Work out concrete volume for round and square columns.</p>
+      </a>
+
+      <a href="/tools/concrete-mix-ratio-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Concrete Mix Ratio Calculator</h3>
+        <p class="tool-card-desc">Determine cement, sand and aggregate quantities for your mix.</p>
+      </a>
+
+      <a href="/tools/water-cement-ratio-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Water Cement Ratio Calculator</h3>
+        <p class="tool-card-desc">Calculate the correct water-to-cement ratio for concrete strength.</p>
+      </a>
+
+      <a href="/tools/concrete-cure-time-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Concrete Cure Time Calculator</h3>
+        <p class="tool-card-desc">Estimate curing time based on temperature and mix type.</p>
+      </a>
+
+      <a href="/tools/concrete-strength-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Concrete Strength Calculator</h3>
+        <p class="tool-card-desc">Estimate compressive strength from mix design and age.</p>
+      </a>
+
+      <a href="/tools/brick-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Brick Calculator</h3>
+        <p class="tool-card-desc">Calculate the number of bricks and mortar needed for a wall.</p>
+      </a>
+
+      <a href="/tools/block-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Block Calculator</h3>
+        <p class="tool-card-desc">Estimate concrete blocks and mortar for masonry walls.</p>
+      </a>
+
+      <a href="/tools/mortar-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Mortar Calculator</h3>
+        <p class="tool-card-desc">Work out mortar quantity for brick and block laying.</p>
+      </a>
+
+      <a href="/tools/grout-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Grout Calculator</h3>
+        <p class="tool-card-desc">Calculate grout needed for tiles, pavers and stone.</p>
+      </a>
+
+      <a href="/tools/cement-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Cement Calculator</h3>
+        <p class="tool-card-desc">Estimate cement bags for concrete, mortar and render.</p>
+      </a>
+
+      <a href="/tools/rebar-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Rebar Calculator</h3>
+        <p class="tool-card-desc">Determine rebar quantity and spacing for concrete slabs.</p>
+      </a>
+
+      <a href="/tools/rebar-spacing-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Rebar Spacing Calculator</h3>
+        <p class="tool-card-desc">Calculate correct rebar spacing for slabs and footings.</p>
+      </a>
+
+      <a href="/tools/rebar-weight-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Rebar Weight Calculator</h3>
+        <p class="tool-card-desc">Estimate weight of rebar based on diameter and length.</p>
+      </a>
+
+      <a href="/tools/sand-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Sand Calculator</h3>
+        <p class="tool-card-desc">Find how much sand you need for paving, patios or sandboxes.</p>
+      </a>
+
+      <a href="/tools/gravel-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Gravel Calculator</h3>
+        <p class="tool-card-desc">Estimate gravel tonnage for driveways and pathways.</p>
+      </a>
+
+      <a href="/tools/formwork-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Formwork Calculator</h3>
+        <p class="tool-card-desc">Calculate formwork materials for concrete pours.</p>
+      </a>
+
+      <a href="/tools/shoring-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Shoring Calculator</h3>
+        <p class="tool-card-desc">Estimate shoring requirements for excavation and foundations.</p>
+      </a>
+
+      <a href="/tools/concrete-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Concrete Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate total cost of concrete based on volume and price.</p>
+      </a>
+
+      <a href="/tools/concrete-stairs-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Concrete Stairs Calculator</h3>
+        <p class="tool-card-desc">Calculate concrete volume and materials for stairs.</p>
+      </a>
+
+      <a href="/tools/concrete-wall-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Concrete Wall Calculator</h3>
+        <p class="tool-card-desc">Estimate concrete for retaining and structural walls.</p>
+      </a>
+
+      <a href="/tools/concrete-driveway-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Concrete Driveway Calculator</h3>
+        <p class="tool-card-desc">Calculate concrete needed for a driveway slab.</p>
+      </a>
+
+      <a href="/tools/paver-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Paver Calculator</h3>
+        <p class="tool-card-desc">Estimate pavers, sand and base material for any patio.</p>
+      </a>
+
+      <a href="/tools/retaining-wall-block-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Retaining Wall Block Calculator</h3>
+        <p class="tool-card-desc">Calculate blocks, caps and gravel for retaining walls.</p>
+      </a>
+
+      <a href="/tools/masonry-sand-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Masonry Sand Calculator</h3>
+        <p class="tool-card-desc">Find how much masonry sand you need for mortar and bedding.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ INTERIOR & FINISHING (28 tools) ═══════════════ -->
+<section class="cat-section" id="interior-finishing">
+  <div class="container">
+    <div class="cat-section-head">
+      <h2 class="cat-section-title">Interior &amp; Finishing Calculators</h2>
+    </div>
+    <div class="tool-grid">
+
+      <a href="/tools/drywall-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Drywall Calculator</h3>
+        <p class="tool-card-desc">Estimate drywall sheets, joint compound and screws.</p>
+      </a>
+
+      <a href="/tools/drywall-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Drywall Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate total cost of drywall installation.</p>
+      </a>
+
+      <a href="/tools/paint-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Paint Calculator</h3>
+        <p class="tool-card-desc">Calculate paint needed for walls, ceilings and trim.</p>
+      </a>
+
+      <a href="/tools/paint-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Paint Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate cost of paint based on area and paint type.</p>
+      </a>
+
+      <a href="/tools/primer-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Primer Calculator</h3>
+        <p class="tool-card-desc">Estimate primer needed before painting walls and ceilings.</p>
+      </a>
+
+      <a href="/tools/wallpaper-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Wallpaper Calculator</h3>
+        <p class="tool-card-desc">Work out wallpaper rolls needed for any room.</p>
+      </a>
+
+      <a href="/tools/wallpaper-pattern-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Wallpaper Pattern Calculator</h3>
+        <p class="tool-card-desc">Calculate wallpaper rolls needed for patterned wallpaper.</p>
+      </a>
+
+      <a href="/tools/tile-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Tile Calculator</h3>
+        <p class="tool-card-desc">Find how many tiles you need for floors or walls.</p>
+      </a>
+
+      <a href="/tools/tile-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Tile Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate tile cost based on area and tile size.</p>
+      </a>
+
+      <a href="/tools/tile-layout-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Tile Layout Calculator</h3>
+        <p class="tool-card-desc">Plan tile layout and calculate cut pieces needed.</p>
+      </a>
+
+      <a href="/tools/grout-line-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Grout Line Calculator</h3>
+        <p class="tool-card-desc">Calculate grout line width and quantity for tiles.</p>
+      </a>
+
+      <a href="/tools/flooring-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Flooring Calculator</h3>
+        <p class="tool-card-desc">Calculate flooring area, boxes and waste allowance.</p>
+      </a>
+
+      <a href="/tools/flooring-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Flooring Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate total cost of flooring based on material and area.</p>
+      </a>
+
+      <a href="/tools/flooring-waste-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Flooring Waste Calculator</h3>
+        <p class="tool-card-desc">Calculate waste allowance for different flooring layouts.</p>
+      </a>
+
+      <a href="/tools/room-area-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Room Area Calculator</h3>
+        <p class="tool-card-desc">Calculate floor area of any room shape.</p>
+      </a>
+
+      <a href="/tools/wall-area-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Wall Area Calculator</h3>
+        <p class="tool-card-desc">Calculate wall area minus doors and windows.</p>
+      </a>
+
+      <a href="/tools/ceiling-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Ceiling Calculator</h3>
+        <p class="tool-card-desc">Estimate ceiling materials for any room.</p>
+      </a>
+
+      <a href="/tools/baseboard-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Baseboard Calculator</h3>
+        <p class="tool-card-desc">Calculate baseboard length and pieces needed.</p>
+      </a>
+
+      <a href="/tools/crown-molding-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Crown Molding Calculator</h3>
+        <p class="tool-card-desc">Estimate crown molding length and cuts.</p>
+      </a>
+
+      <a href="/tools/trim-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Trim Calculator</h3>
+        <p class="tool-card-desc">Calculate trim materials for doors, windows and walls.</p>
+      </a>
+
+      <a href="/tools/shiplap-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Shiplap Calculator</h3>
+        <p class="tool-card-desc">Estimate shiplap boards and spacing for accent walls.</p>
+      </a>
+
+      <a href="/tools/wainscoting-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Wainscoting Calculator</h3>
+        <p class="tool-card-desc">Calculate wainscoting panels and trim.</p>
+      </a>
+
+      <a href="/tools/accent-wall-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Accent Wall Calculator</h3>
+        <p class="tool-card-desc">Estimate materials for accent walls and feature panels.</p>
+      </a>
+
+      <a href="/tools/door-frame-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Door Frame Calculator</h3>
+        <p class="tool-card-desc">Calculate door frame materials and dimensions.</p>
+      </a>
+
+      <a href="/tools/window-frame-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Window Frame Calculator</h3>
+        <p class="tool-card-desc">Estimate window frame materials and trim.</p>
+      </a>
+
+      <a href="/tools/cabinet-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Cabinet Calculator</h3>
+        <p class="tool-card-desc">Estimate cabinet materials and dimensions.</p>
+      </a>
+
+      <a href="/tools/shelf-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Shelf Calculator</h3>
+        <p class="tool-card-desc">Calculate shelf materials and spacing for any room.</p>
+      </a>
+
+      <a href="/tools/countertop-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Countertop Calculator</h3>
+        <p class="tool-card-desc">Estimate square footage and cost of kitchen countertops.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ═══════════════ EXTERIOR & STRUCTURE (26 tools) ═══════════════ -->
+<section class="cat-section" id="exterior-structure">
+  <div class="container">
+    <div class="cat-section-head">
+      <h2 class="cat-section-title">Exterior &amp; Structure Calculators</h2>
+    </div>
+    <div class="tool-grid">
+
+      <a href="/tools/deck-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Deck Calculator</h3>
+        <p class="tool-card-desc">Estimate decking boards, joists and framing for any deck.</p>
+      </a>
+
+      <a href="/tools/deck-board-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Deck Board Calculator</h3>
+        <p class="tool-card-desc">Calculate deck boards needed for any deck size.</p>
+      </a>
+
+      <a href="/tools/deck-joist-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Deck Joist Calculator</h3>
+        <p class="tool-card-desc">Calculate deck joists, spacing and size.</p>
+      </a>
+
+      <a href="/tools/deck-beam-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Deck Beam Calculator</h3>
+        <p class="tool-card-desc">Calculate deck beam size and span.</p>
+      </a>
+
+      <a href="/tools/deck-stair-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Deck Stair Calculator</h3>
+        <p class="tool-card-desc">Calculate deck stair stringers, rise and run.</p>
+      </a>
+
+      <a href="/tools/deck-railing-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Deck Railing Calculator</h3>
+        <p class="tool-card-desc">Estimate deck railing materials and post spacing.</p>
+      </a>
+
+      <a href="/tools/deck-footing-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Deck Footing Calculator</h3>
+        <p class="tool-card-desc">Calculate concrete for deck footings and piers.</p>
+      </a>
+
+      <a href="/tools/fence-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Fence Calculator</h3>
+        <p class="tool-card-desc">Estimate posts, rails, pickets and concrete for fences.</p>
+      </a>
+
+      <a href="/tools/fence-post-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Fence Post Calculator</h3>
+        <p class="tool-card-desc">Calculate fence posts and spacing for any fence line.</p>
+      </a>
+
+      <a href="/tools/picket-fence-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Picket Fence Calculator</h3>
+        <p class="tool-card-desc">Estimate pickets, rails and posts for picket fences.</p>
+      </a>
+
+      <a href="/tools/privacy-fence-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Privacy Fence Calculator</h3>
+        <p class="tool-card-desc">Calculate materials for privacy fence panels.</p>
+      </a>
+
+      <a href="/tools/chain-link-fence-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Chain Link Fence Calculator</h3>
+        <p class="tool-card-desc">Estimate chain link fence materials and posts.</p>
+      </a>
+
+      <a href="/tools/retaining-wall-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Retaining Wall Calculator</h3>
+        <p class="tool-card-desc">Calculate blocks, gravel and backfill for retaining walls.</p>
+      </a>
+
+      <a href="/tools/retaining-wall-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Retaining Wall Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate cost of a retaining wall project.</p>
+      </a>
+
+      <a href="/tools/stair-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Stair Calculator</h3>
+        <p class="tool-card-desc">Calculate stair stringers, rise and run for any height.</p>
+      </a>
+
+      <a href="/tools/stair-stringer-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Stair Stringer Calculator</h3>
+        <p class="tool-card-desc">Calculate stair stringer length and cuts.</p>
+      </a>
+
+      <a href="/tools/handrail-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Handrail Calculator</h3>
+        <p class="tool-card-desc">Calculate handrail length and materials for stairs.</p>
+      </a>
+
+      <a href="/tools/railing-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Railing Calculator</h3>
+        <p class="tool-card-desc">Estimate railing materials and post spacing.</p>
+      </a>
+
+      <a href="/tools/porch-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Porch Calculator</h3>
+        <p class="tool-card-desc">Estimate materials for porch construction.</p>
+      </a>
+
+      <a href="/tools/pergola-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Pergola Calculator</h3>
+        <p class="tool-card-desc">Calculate lumber for a pergola based on size and style.</p>
+      </a>
+
+      <a href="/tools/carport-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Carport Calculator</h3>
+        <p class="tool-card-desc">Estimate materials for carport construction.</p>
+      </a>
+
+      <a href="/tools/gazebo-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Gazebo Calculator</h3>
+        <p class="tool-card-desc">Calculate materials for a wood gazebo.</p>
+      </a>
+
+      <a href="/tools/shed-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Shed Calculator</h3>
+        <p class="tool-card-desc">Estimate materials for shed construction.</p>
+      </a>
+
+      <a href="/tools/deck-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Deck Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate cost of a deck project by material and size.</p>
+      </a>
+
+      <a href="/tools/fence-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Fence Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate fence installation cost by material and length.</p>
+      </a>
+
+      <a href="/tools/deck-paint-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Deck Paint Calculator</h3>
+        <p class="tool-card-desc">Calculate stain or paint needed for a deck.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ LANDSCAPING & OUTDOOR (24 tools) ═══════════════ -->
+<section class="cat-section" id="landscaping-outdoor">
+  <div class="container">
+    <div class="cat-section-head">
+      <h2 class="cat-section-title">Landscaping &amp; Outdoor Calculators</h2>
+    </div>
+    <div class="tool-grid">
+
+      <a href="/tools/mulch-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Mulch Calculator</h3>
+        <p class="tool-card-desc">Calculate bags or cubic yards of mulch for garden beds.</p>
+      </a>
+
+      <a href="/tools/topsoil-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Topsoil Calculator</h3>
+        <p class="tool-card-desc">Calculate topsoil volume needed for lawns and beds.</p>
+      </a>
+
+      <a href="/tools/sod-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Sod Calculator</h3>
+        <p class="tool-card-desc">Estimate sod pallets needed for any lawn area.</p>
+      </a>
+
+      <a href="/tools/grass-seed-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Grass Seed Calculator</h3>
+        <p class="tool-card-desc">Calculate grass seed needed based on lawn size and seed type.</p>
+      </a>
+
+      <a href="/tools/fertilizer-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Fertilizer Calculator</h3>
+        <p class="tool-card-desc">Calculate fertilizer needed based on lawn area and NPK ratio.</p>
+      </a>
+
+      <a href="/tools/garden-bed-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Garden Bed Calculator</h3>
+        <p class="tool-card-desc">Calculate soil and amendments for raised garden beds.</p>
+      </a>
+
+      <a href="/tools/raised-bed-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Raised Bed Calculator</h3>
+        <p class="tool-card-desc">Calculate soil volume for raised garden beds.</p>
+      </a>
+
+      <a href="/tools/plant-spacing-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Plant Spacing Calculator</h3>
+        <p class="tool-card-desc">Calculate how many plants fit based on spacing.</p>
+      </a>
+
+      <a href="/tools/landscape-rock-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Landscape Rock Calculator</h3>
+        <p class="tool-card-desc">Calculate landscape rock needed for yards and beds.</p>
+      </a>
+
+      <a href="/tools/pea-gravel-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Pea Gravel Calculator</h3>
+        <p class="tool-card-desc">Estimate pea gravel needed for pathways and play areas.</p>
+      </a>
+
+      <a href="/tools/crushed-stone-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Crushed Stone Calculator</h3>
+        <p class="tool-card-desc">Calculate crushed stone needed for driveways and paths.</p>
+      </a>
+
+      <a href="/tools/river-rock-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">River Rock Calculator</h3>
+        <p class="tool-card-desc">Estimate river rock needed for landscaping projects.</p>
+      </a>
+
+      <a href="/tools/pool-volume-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Pool Volume Calculator</h3>
+        <p class="tool-card-desc">Calculate pool volume in gallons or litres.</p>
+      </a>
+
+      <a href="/tools/pool-salt-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Pool Salt Calculator</h3>
+        <p class="tool-card-desc">Calculate salt needed for saltwater pool.</p>
+      </a>
+
+      <a href="/tools/pool-heater-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Pool Heater Calculator</h3>
+        <p class="tool-card-desc">Size pool heater based on pool volume and climate.</p>
+      </a>
+
+      <a href="/tools/pool-pump-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Pool Pump Calculator</h3>
+        <p class="tool-card-desc">Calculate pool pump size and turnover rate.</p>
+      </a>
+
+      <a href="/tools/pool-tile-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Pool Tile Calculator</h3>
+        <p class="tool-card-desc">Estimate tiles needed for pool waterline.</p>
+      </a>
+
+      <a href="/tools/irrigation-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Irrigation Calculator</h3>
+        <p class="tool-card-desc">Calculate water flow and irrigation zones for lawns.</p>
+      </a>
+
+      <a href="/tools/sprinkler-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Sprinkler Calculator</h3>
+        <p class="tool-card-desc">Estimate sprinkler heads needed based on coverage.</p>
+      </a>
+
+      <a href="/tools/drip-irrigation-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Drip Irrigation Calculator</h3>
+        <p class="tool-card-desc">Calculate drip irrigation emitters and tubing.</p>
+      </a>
+
+      <a href="/tools/rainwater-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Rainwater Calculator</h3>
+        <p class="tool-card-desc">Calculate rainwater harvest potential from roof area.</p>
+      </a>
+
+      <a href="/tools/retaining-wall-landscape-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Landscape Retaining Wall Calculator</h3>
+        <p class="tool-card-desc">Calculate landscape retaining wall materials and cost.</p>
+      </a>
+
+      <a href="/tools/wall-block-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Wall Block Calculator</h3>
+        <p class="tool-card-desc">Estimate wall blocks, caps and base material.</p>
+      </a>
+
+      <a href="/tools/edging-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Edging Calculator</h3>
+        <p class="tool-card-desc">Calculate garden edging needed for beds and paths.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ═══════════════ LUMBER & FRAMING (24 tools) ═══════════════ -->
+<section class="cat-section" id="lumber-framing">
+  <div class="container">
+    <div class="cat-section-head">
+      <h2 class="cat-section-title">Lumber &amp; Framing Calculators</h2>
+    </div>
+    <div class="tool-grid">
+
+      <a href="/tools/lumber-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Lumber Calculator</h3>
+        <p class="tool-card-desc">Estimate board feet and lumber quantity for projects.</p>
+      </a>
+
+      <a href="/tools/board-foot-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Board Foot Calculator</h3>
+        <p class="tool-card-desc">Calculate board feet for any lumber dimension.</p>
+      </a>
+
+      <a href="/tools/stud-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Stud Calculator</h3>
+        <p class="tool-card-desc">Calculate wall studs needed based on spacing.</p>
+      </a>
+
+      <a href="/tools/wall-stud-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Wall Stud Calculator</h3>
+        <p class="tool-card-desc">Calculate wall studs at 16" or 24" spacing.</p>
+      </a>
+
+      <a href="/tools/joist-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Joist Calculator</h3>
+        <p class="tool-card-desc">Calculate floor or ceiling joists, spacing and size.</p>
+      </a>
+
+      <a href="/tools/floor-joist-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Floor Joist Calculator</h3>
+        <p class="tool-card-desc">Calculate floor joists based on span and load.</p>
+      </a>
+
+      <a href="/tools/ceiling-joist-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Ceiling Joist Calculator</h3>
+        <p class="tool-card-desc">Calculate ceiling joists based on span and load.</p>
+      </a>
+
+      <a href="/tools/rafter-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Rafter Calculator</h3>
+        <p class="tool-card-desc">Calculate rafter length, angle and quantity.</p>
+      </a>
+
+      <a href="/tools/roof-rafter-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Roof Rafter Calculator</h3>
+        <p class="tool-card-desc">Calculate roof rafters for any pitch and span.</p>
+      </a>
+
+      <a href="/tools/rafter-length-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Rafter Length Calculator</h3>
+        <p class="tool-card-desc">Calculate rafter length from rise and run.</p>
+      </a>
+
+      <a href="/tools/beam-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Beam Calculator</h3>
+        <p class="tool-card-desc">Calculate beam size and load capacity.</p>
+      </a>
+
+      <a href="/tools/beam-load-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Beam Load Calculator</h3>
+        <p class="tool-card-desc">Calculate load capacity of wood beams.</p>
+      </a>
+
+      <a href="/tools/header-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Header Calculator</h3>
+        <p class="tool-card-desc">Calculate header size for doors and windows.</p>
+      </a>
+
+      <a href="/tools/column-load-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Column Load Calculator</h3>
+        <p class="tool-card-desc">Calculate axial load capacity of columns.</p>
+      </a>
+
+      <a href="/tools/wall-framing-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Wall Framing Calculator</h3>
+        <p class="tool-card-desc">Estimate studs, plates and framing for walls.</p>
+      </a>
+
+      <a href="/tools/floor-framing-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Floor Framing Calculator</h3>
+        <p class="tool-card-desc">Calculate floor joists, beams and subfloor.</p>
+      </a>
+
+      <a href="/tools/roof-framing-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Roof Framing Calculator</h3>
+        <p class="tool-card-desc">Estimate rafters, ridge beams and roof framing.</p>
+      </a>
+
+      <a href="/tools/plywood-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Plywood Calculator</h3>
+        <p class="tool-card-desc">Calculate plywood sheets needed for any area.</p>
+      </a>
+
+      <a href="/tools/osb-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">OSB Calculator</h3>
+        <p class="tool-card-desc">Estimate OSB sheets for walls, floors and roofs.</p>
+      </a>
+
+      <a href="/tools/mdf-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">MDF Calculator</h3>
+        <p class="tool-card-desc">Calculate MDF sheets for interior projects.</p>
+      </a>
+
+      <a href="/tools/trim-board-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Trim Board Calculator</h3>
+        <p class="tool-card-desc">Calculate trim boards for doors, windows and walls.</p>
+      </a>
+
+      <a href="/tools/insulation-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Insulation Calculator</h3>
+        <p class="tool-card-desc">Calculate insulation rolls or batts needed per area.</p>
+      </a>
+
+      <a href="/tools/sheathing-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Sheathing Calculator</h3>
+        <p class="tool-card-desc">Calculate sheathing panels for walls and roofs.</p>
+      </a>
+
+      <a href="/tools/lumber-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Lumber Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate total cost of lumber for your project.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ELECTRICAL & HVAC (26 tools) ═══════════════ -->
+<section class="cat-section" id="electrical-hvac">
+  <div class="container">
+    <div class="cat-section-head">
+      <h2 class="cat-section-title">Electrical &amp; HVAC Calculators</h2>
+    </div>
+    <div class="tool-grid">
+
+      <a href="/tools/ohms-law-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Ohm's Law Calculator</h3>
+        <p class="tool-card-desc">Calculate voltage, current, resistance and power.</p>
+      </a>
+
+      <a href="/tools/wire-gauge-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Wire Gauge Calculator</h3>
+        <p class="tool-card-desc">Determine correct wire gauge based on load and distance.</p>
+      </a>
+
+      <a href="/tools/wire-size-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Wire Size Calculator</h3>
+        <p class="tool-card-desc">Calculate the correct wire size for any circuit.</p>
+      </a>
+
+      <a href="/tools/voltage-drop-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Voltage Drop Calculator</h3>
+        <p class="tool-card-desc">Calculate voltage drop across wire runs.</p>
+      </a>
+
+      <a href="/tools/electrical-load-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Electrical Load Calculator</h3>
+        <p class="tool-card-desc">Calculate total electrical load for a home or building.</p>
+      </a>
+
+      <a href="/tools/panel-size-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Panel Size Calculator</h3>
+        <p class="tool-card-desc">Size the electrical panel for your service.</p>
+      </a>
+
+      <a href="/tools/circuit-breaker-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Circuit Breaker Calculator</h3>
+        <p class="tool-card-desc">Calculate circuit breaker size for any load.</p>
+      </a>
+
+      <a href="/tools/amp-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Amp Calculator</h3>
+        <p class="tool-card-desc">Convert watts to amps for electrical planning.</p>
+      </a>
+
+      <a href="/tools/kw-to-amp-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">kW to Amp Calculator</h3>
+        <p class="tool-card-desc">Convert kW to amps for single and three phase.</p>
+      </a>
+
+      <a href="/tools/conduit-fill-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Conduit Fill Calculator</h3>
+        <p class="tool-card-desc">Calculate conduit fill percentage and wire capacity.</p>
+      </a>
+
+      <a href="/tools/conduit-size-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Conduit Size Calculator</h3>
+        <p class="tool-card-desc">Determine the correct conduit size for wire runs.</p>
+      </a>
+
+      <a href="/tools/cable-tray-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Cable Tray Calculator</h3>
+        <p class="tool-card-desc">Calculate cable tray size and fill ratio.</p>
+      </a>
+
+      <a href="/tools/btu-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">BTU Calculator</h3>
+        <p class="tool-card-desc">Calculate BTU needed to heat or cool a room.</p>
+      </a>
+
+      <a href="/tools/ac-size-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">AC Size Calculator</h3>
+        <p class="tool-card-desc">Calculate air conditioner size based on room size.</p>
+      </a>
+
+      <a href="/tools/heater-size-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Heater Size Calculator</h3>
+        <p class="tool-card-desc">Calculate heater size needed for any space.</p>
+      </a>
+
+      <a href="/tools/furnace-size-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Furnace Size Calculator</h3>
+        <p class="tool-card-desc">Calculate furnace size based on square footage and climate.</p>
+      </a>
+
+      <a href="/tools/duct-size-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Duct Size Calculator</h3>
+        <p class="tool-card-desc">Calculate duct size based on airflow and velocity.</p>
+      </a>
+
+      <a href="/tools/ductwork-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Ductwork Calculator</h3>
+        <p class="tool-card-desc">Calculate ductwork materials for HVAC installation.</p>
+      </a>
+
+      <a href="/tools/cfm-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">CFM Calculator</h3>
+        <p class="tool-card-desc">Calculate cubic feet per minute for ventilation.</p>
+      </a>
+
+      <a href="/tools/airflow-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Airflow Calculator</h3>
+        <p class="tool-card-desc">Calculate airflow requirements for rooms and ducts.</p>
+      </a>
+
+      <a href="/tools/cooling-load-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Cooling Load Calculator</h3>
+        <p class="tool-card-desc">Calculate cooling load for HVAC design.</p>
+      </a>
+
+      <a href="/tools/heating-load-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Heating Load Calculator</h3>
+        <p class="tool-card-desc">Calculate heating load for HVAC design.</p>
+      </a>
+
+      <a href="/tools/kwh-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">kWh Calculator</h3>
+        <p class="tool-card-desc">Calculate electricity usage in kWh from appliance wattage.</p>
+      </a>
+
+      <a href="/tools/electricity-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Electricity Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate electricity cost based on usage and rate.</p>
+      </a>
+
+      <a href="/tools/led-lighting-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">LED Lighting Calculator</h3>
+        <p class="tool-card-desc">Calculate LED lumens needed for any room.</p>
+      </a>
+
+      <a href="/tools/generator-size-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Generator Size Calculator</h3>
+        <p class="tool-card-desc">Calculate generator size based on appliance load.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ═══════════════ PLUMBING & PIPING (24 tools) ═══════════════ -->
+<section class="cat-section" id="plumbing-piping">
+  <div class="container">
+    <div class="cat-section-head">
+      <h2 class="cat-section-title">Plumbing &amp; Piping Calculators</h2>
+    </div>
+    <div class="tool-grid">
+
+      <a href="/tools/pipe-volume-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Pipe Volume Calculator</h3>
+        <p class="tool-card-desc">Calculate the volume of water inside any pipe.</p>
+      </a>
+
+      <a href="/tools/pipe-flow-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Pipe Flow Calculator</h3>
+        <p class="tool-card-desc">Calculate flow rate through pipes based on diameter and pressure.</p>
+      </a>
+
+      <a href="/tools/pipe-slope-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Pipe Slope Calculator</h3>
+        <p class="tool-card-desc">Calculate correct slope for drainage pipes.</p>
+      </a>
+
+      <a href="/tools/drain-slope-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Drain Slope Calculator</h3>
+        <p class="tool-card-desc">Calculate the slope of drain pipes for proper flow.</p>
+      </a>
+
+      <a href="/tools/pipe-size-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Pipe Size Calculator</h3>
+        <p class="tool-card-desc">Determine the correct pipe diameter for any flow rate.</p>
+      </a>
+
+      <a href="/tools/water-tank-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Water Tank Calculator</h3>
+        <p class="tool-card-desc">Calculate water tank capacity in gallons or litres.</p>
+      </a>
+
+      <a href="/tools/water-tank-size-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Water Tank Size Calculator</h3>
+        <p class="tool-card-desc">Size a water tank based on household demand.</p>
+      </a>
+
+      <a href="/tools/fixture-unit-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Fixture Unit Calculator</h3>
+        <p class="tool-card-desc">Calculate plumbing fixture units for sizing pipes.</p>
+      </a>
+
+      <a href="/tools/pressure-drop-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Pressure Drop Calculator</h3>
+        <p class="tool-card-desc">Calculate pressure drop in pipes for any flow rate.</p>
+      </a>
+
+      <a href="/tools/water-pressure-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Water Pressure Calculator</h3>
+        <p class="tool-card-desc">Calculate water pressure from height and flow.</p>
+      </a>
+
+      <a href="/tools/pipe-insulation-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Pipe Insulation Calculator</h3>
+        <p class="tool-card-desc">Calculate pipe insulation needed for any length.</p>
+      </a>
+
+      <a href="/tools/pipe-weight-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Pipe Weight Calculator</h3>
+        <p class="tool-card-desc">Calculate pipe weight per foot or metre.</p>
+      </a>
+
+      <a href="/tools/sewer-line-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Sewer Line Calculator</h3>
+        <p class="tool-card-desc">Calculate sewer line size and slope requirements.</p>
+      </a>
+
+      <a href="/tools/septic-tank-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Septic Tank Calculator</h3>
+        <p class="tool-card-desc">Size a septic tank based on bedroom count.</p>
+      </a>
+
+      <a href="/tools/drain-field-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Drain Field Calculator</h3>
+        <p class="tool-card-desc">Calculate septic drain field size and length.</p>
+      </a>
+
+      <a href="/tools/water-heater-size-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Water Heater Size Calculator</h3>
+        <p class="tool-card-desc">Size a water heater based on household demand.</p>
+      </a>
+
+      <a href="/tools/expansion-tank-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Expansion Tank Calculator</h3>
+        <p class="tool-card-desc">Calculate expansion tank size for heating systems.</p>
+      </a>
+
+      <a href="/tools/water-flow-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Water Flow Calculator</h3>
+        <p class="tool-card-desc">Calculate water flow rate through pipes and fittings.</p>
+      </a>
+
+      <a href="/tools/gutter-downspout-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Gutter Downspout Calculator</h3>
+        <p class="tool-card-desc">Calculate downspout quantity and placement.</p>
+      </a>
+
+      <a href="/tools/sump-pump-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Sump Pump Calculator</h3>
+        <p class="tool-card-desc">Size a sump pump based on water volume and head.</p>
+      </a>
+
+      <a href="/tools/well-pump-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Well Pump Calculator</h3>
+        <p class="tool-card-desc">Calculate well pump size based on depth and demand.</p>
+      </a>
+
+      <a href="/tools/irrigation-flow-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Irrigation Flow Calculator</h3>
+        <p class="tool-card-desc">Calculate flow requirements for irrigation systems.</p>
+      </a>
+
+      <a href="/tools/hose-flow-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Hose Flow Calculator</h3>
+        <p class="tool-card-desc">Calculate flow rate for garden hoses by diameter.</p>
+      </a>
+
+      <a href="/tools/pipe-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Pipe Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate pipe cost based on length and material.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ROOFING & SIDING (24 tools) ═══════════════ -->
+<section class="cat-section" id="roofing-siding">
+  <div class="container">
+    <div class="cat-section-head">
+      <h2 class="cat-section-title">Roofing &amp; Siding Calculators</h2>
+    </div>
+    <div class="tool-grid">
+
+      <a href="/tools/roof-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Roof Calculator</h3>
+        <p class="tool-card-desc">Calculate roofing squares, shingles and underlayment.</p>
+      </a>
+
+      <a href="/tools/roof-pitch-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Roof Pitch Calculator</h3>
+        <p class="tool-card-desc">Calculate roof pitch, slope and angle in degrees.</p>
+      </a>
+
+      <a href="/tools/roof-area-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Roof Area Calculator</h3>
+        <p class="tool-card-desc">Estimate total roof surface area including overhangs.</p>
+      </a>
+
+      <a href="/tools/roofing-squares-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Roofing Squares Calculator</h3>
+        <p class="tool-card-desc">Convert roof area to roofing squares.</p>
+      </a>
+
+      <a href="/tools/shingle-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Shingle Calculator</h3>
+        <p class="tool-card-desc">Calculate shingle bundles needed for your roof.</p>
+      </a>
+
+      <a href="/tools/shingle-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Shingle Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate cost of shingles for your roof.</p>
+      </a>
+
+      <a href="/tools/underlayment-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Underlayment Calculator</h3>
+        <p class="tool-card-desc">Calculate underlayment rolls needed for your roof.</p>
+      </a>
+
+      <a href="/tools/roof-vent-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Roof Vent Calculator</h3>
+        <p class="tool-card-desc">Calculate attic ventilation needed for your roof.</p>
+      </a>
+
+      <a href="/tools/ridge-cap-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Ridge Cap Calculator</h3>
+        <p class="tool-card-desc">Calculate ridge cap shingles for your roof.</p>
+      </a>
+
+      <a href="/tools/roof-flashing-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Roof Flashing Calculator</h3>
+        <p class="tool-card-desc">Calculate flashing materials for roof penetrations.</p>
+      </a>
+
+      <a href="/tools/roof-truss-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Roof Truss Calculator</h3>
+        <p class="tool-card-desc">Estimate roof truss dimensions and materials.</p>
+      </a>
+
+      <a href="/tools/roof-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Roof Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate total roof replacement or installation cost.</p>
+      </a>
+
+      <a href="/tools/siding-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Siding Calculator</h3>
+        <p class="tool-card-desc">Calculate siding materials needed for your home.</p>
+      </a>
+
+      <a href="/tools/vinyl-siding-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Vinyl Siding Calculator</h3>
+        <p class="tool-card-desc">Estimate vinyl siding panels and accessories.</p>
+      </a>
+
+      <a href="/tools/hardie-siding-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Hardie Siding Calculator</h3>
+        <p class="tool-card-desc">Calculate fiber cement siding for your home.</p>
+      </a>
+
+      <a href="/tools/wood-siding-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Wood Siding Calculator</h3>
+        <p class="tool-card-desc">Estimate wood siding boards for exterior walls.</p>
+      </a>
+
+      <a href="/tools/siding-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Siding Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate cost of siding installation by material.</p>
+      </a>
+
+      <a href="/tools/gutter-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Gutter Calculator</h3>
+        <p class="tool-card-desc">Calculate gutter length and downspout requirements.</p>
+      </a>
+
+      <a href="/tools/gutter-size-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Gutter Size Calculator</h3>
+        <p class="tool-card-desc">Size gutters based on roof area and rainfall.</p>
+      </a>
+
+      <a href="/tools/fascia-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Fascia Calculator</h3>
+        <p class="tool-card-desc">Calculate fascia board length and materials.</p>
+      </a>
+
+      <a href="/tools/soffit-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Soffit Calculator</h3>
+        <p class="tool-card-desc">Calculate soffit panels and ventilation requirements.</p>
+      </a>
+
+      <a href="/tools/chimney-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Chimney Calculator</h3>
+        <p class="tool-card-desc">Estimate chimney materials and dimensions.</p>
+      </a>
+
+      <a href="/tools/skylight-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Skylight Calculator</h3>
+        <p class="tool-card-desc">Calculate skylight sizing and placement.</p>
+      </a>
+
+      <a href="/tools/roof-snow-load-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Roof Snow Load Calculator</h3>
+        <p class="tool-card-desc">Calculate snow load on a roof by region and pitch.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ═══════════════ PAINTING & WALLPAPER (22 tools) ═══════════════ -->
+<section class="cat-section" id="painting-wallpaper">
+  <div class="container">
+    <div class="cat-section-head">
+      <h2 class="cat-section-title">Painting &amp; Wallpaper Calculators</h2>
+    </div>
+    <div class="tool-grid">
+
+      <a href="/tools/wall-area-paint-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Wall Area Calculator</h3>
+        <p class="tool-card-desc">Calculate paintable wall area excluding doors and windows.</p>
+      </a>
+
+      <a href="/tools/paint-coverage-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Paint Coverage Calculator</h3>
+        <p class="tool-card-desc">Calculate paint needed based on coverage per litre or gallon.</p>
+      </a>
+
+      <a href="/tools/paint-per-room-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Paint Per Room Calculator</h3>
+        <p class="tool-card-desc">Calculate paint required for a single room including ceiling.</p>
+      </a>
+
+      <a href="/tools/ceiling-paint-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Ceiling Paint Calculator</h3>
+        <p class="tool-card-desc">Calculate paint needed for ceilings by area and coat count.</p>
+      </a>
+
+      <a href="/tools/exterior-paint-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Exterior Paint Calculator</h3>
+        <p class="tool-card-desc">Calculate exterior paint based on siding area and coats.</p>
+      </a>
+
+      <a href="/tools/trim-paint-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Trim Paint Calculator</h3>
+        <p class="tool-card-desc">Calculate paint needed for trim, baseboards and doors.</p>
+      </a>
+
+      <a href="/tools/door-paint-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Door Paint Calculator</h3>
+        <p class="tool-card-desc">Calculate paint needed per door and per coat.</p>
+      </a>
+
+      <a href="/tools/wood-stain-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Wood Stain Calculator</h3>
+        <p class="tool-card-desc">Calculate stain needed for decks, fences and siding.</p>
+      </a>
+
+      <a href="/tools/varnish-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Varnish Calculator</h3>
+        <p class="tool-card-desc">Calculate varnish needed for wood surfaces and coats.</p>
+      </a>
+
+      <a href="/tools/paint-cost-estimator.html" class="tool-card">
+        <h3 class="tool-card-title">Paint Cost Estimator</h3>
+        <p class="tool-card-desc">Estimate total painting cost including materials and labour.</p>
+      </a>
+
+      <a href="/tools/paint-labour-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Paint Labour Calculator</h3>
+        <p class="tool-card-desc">Estimate painter labour hours and cost by area.</p>
+      </a>
+
+      <a href="/tools/paint-drying-time-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Paint Drying Time Calculator</h3>
+        <p class="tool-card-desc">Estimate dry and recoat times by paint type and climate.</p>
+      </a>
+
+      <a href="/tools/primer-coverage-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Primer Coverage Calculator</h3>
+        <p class="tool-card-desc">Calculate primer needed based on surface and porosity.</p>
+      </a>
+
+      <a href="/tools/roller-nap-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Roller Nap Calculator</h3>
+        <p class="tool-card-desc">Choose the correct roller nap for any surface.</p>
+      </a>
+
+      <a href="/tools/paint-sheen-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Paint Sheen Calculator</h3>
+        <p class="tool-card-desc">Pick the right sheen by room, traffic and durability.</p>
+      </a>
+
+      <a href="/tools/wallpaper-rolls-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Wallpaper Rolls Calculator</h3>
+        <p class="tool-card-desc">Calculate wallpaper rolls needed based on wall area.</p>
+      </a>
+
+      <a href="/tools/wallpaper-repeat-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Wallpaper Repeat Calculator</h3>
+        <p class="tool-card-desc">Calculate wallpaper waste from pattern repeat.</p>
+      </a>
+
+      <a href="/tools/wallpaper-adhesive-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Wallpaper Adhesive Calculator</h3>
+        <p class="tool-card-desc">Calculate adhesive needed for wallpaper installation.</p>
+      </a>
+
+      <a href="/tools/wallpaper-removal-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Wallpaper Removal Calculator</h3>
+        <p class="tool-card-desc">Estimate time and materials for wallpaper removal.</p>
+      </a>
+
+      <a href="/tools/paint-waste-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Paint Waste Calculator</h3>
+        <p class="tool-card-desc">Add accurate waste factor to any paint project.</p>
+      </a>
+
+      <a href="/tools/mural-paint-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Mural Paint Calculator</h3>
+        <p class="tool-card-desc">Calculate paint needed for murals by colour and area.</p>
+      </a>
+
+      <a href="/tools/spray-paint-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Spray Paint Calculator</h3>
+        <p class="tool-card-desc">Calculate spray paint cans needed for any project.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ROAD & DRIVEWAY (22 tools) ═══════════════ -->
+<section class="cat-section" id="road-driveway">
+  <div class="container">
+    <div class="cat-section-head">
+      <h2 class="cat-section-title">Road &amp; Driveway Calculators</h2>
+    </div>
+    <div class="tool-grid">
+
+      <a href="/tools/asphalt-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Asphalt Calculator</h3>
+        <p class="tool-card-desc">Calculate asphalt tonnage for driveways and roads.</p>
+      </a>
+
+      <a href="/tools/asphalt-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Asphalt Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate asphalt cost based on area and thickness.</p>
+      </a>
+
+      <a href="/tools/asphalt-driveway-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Asphalt Driveway Calculator</h3>
+        <p class="tool-card-desc">Calculate asphalt needed for a driveway project.</p>
+      </a>
+
+      <a href="/tools/blacktop-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Blacktop Calculator</h3>
+        <p class="tool-card-desc">Estimate blacktop tonnage and cost for any area.</p>
+      </a>
+
+      <a href="/tools/gravel-driveway-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Gravel Driveway Calculator</h3>
+        <p class="tool-card-desc">Calculate gravel needed for a driveway by depth and area.</p>
+      </a>
+
+      <a href="/tools/road-base-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Road Base Calculator</h3>
+        <p class="tool-card-desc">Calculate road base material for driveways and roads.</p>
+      </a>
+
+      <a href="/tools/crushed-concrete-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Crushed Concrete Calculator</h3>
+        <p class="tool-card-desc">Calculate crushed concrete needed for base and fill.</p>
+      </a>
+
+      <a href="/tools/sub-base-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Sub Base Calculator</h3>
+        <p class="tool-card-desc">Calculate sub-base material for driveways and paths.</p>
+      </a>
+
+      <a href="/tools/compaction-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Compaction Calculator</h3>
+        <p class="tool-card-desc">Calculate compaction requirements for base layers.</p>
+      </a>
+
+      <a href="/tools/road-slope-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Road Slope Calculator</h3>
+        <p class="tool-card-desc">Calculate road and driveway slope for drainage.</p>
+      </a>
+
+      <a href="/tools/driveway-drainage-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Driveway Drainage Calculator</h3>
+        <p class="tool-card-desc">Calculate drainage needs for a driveway surface.</p>
+      </a>
+
+      <a href="/tools/driveway-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Driveway Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate driveway cost by material and area.</p>
+      </a>
+
+      <a href="/tools/concrete-driveway-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Concrete Driveway Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate concrete driveway cost based on size and finish.</p>
+      </a>
+
+      <a href="/tools/paver-driveway-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Paver Driveway Calculator</h3>
+        <p class="tool-card-desc">Calculate pavers, sand and base for a paver driveway.</p>
+      </a>
+
+      <a href="/tools/driveway-sealer-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Driveway Sealer Calculator</h3>
+        <p class="tool-card-desc">Calculate sealer needed for asphalt driveways.</p>
+      </a>
+
+      <a href="/tools/parking-lot-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Parking Lot Calculator</h3>
+        <p class="tool-card-desc">Calculate asphalt and base for parking lots.</p>
+      </a>
+
+      <a href="/tools/sidewalk-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Sidewalk Calculator</h3>
+        <p class="tool-card-desc">Calculate concrete for sidewalks and walkways.</p>
+      </a>
+
+      <a href="/tools/curb-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Curb Calculator</h3>
+        <p class="tool-card-desc">Calculate concrete for curbs and edging.</p>
+      </a>
+
+      <a href="/tools/line-marking-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Line Marking Calculator</h3>
+        <p class="tool-card-desc">Calculate paint for line marking of parking lots.</p>
+      </a>
+
+      <a href="/tools/gravel-road-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Gravel Road Calculator</h3>
+        <p class="tool-card-desc">Calculate gravel needed for rural and access roads.</p>
+      </a>
+
+      <a href="/tools/road-base-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Road Base Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate road base cost by material and volume.</p>
+      </a>
+
+      <a href="/tools/driveway-slope-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Driveway Slope Calculator</h3>
+        <p class="tool-card-desc">Calculate driveway slope for drainage and access.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ COST ESTIMATORS (26 tools) ═══════════════ -->
+<section class="cat-section" id="cost-estimators">
+  <div class="container">
+    <div class="cat-section-head">
+      <h2 class="cat-section-title">Cost Estimator Calculators</h2>
+    </div>
+    <div class="tool-grid">
+
+      <a href="/tools/construction-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Construction Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate total construction cost by area and quality level.</p>
+      </a>
+
+      <a href="/tools/building-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Building Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate building cost per square foot or metre.</p>
+      </a>
+
+      <a href="/tools/house-build-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">House Build Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate cost to build a house by size and spec.</p>
+      </a>
+
+      <a href="/tools/renovation-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Renovation Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate renovation cost by room and scope.</p>
+      </a>
+
+      <a href="/tools/kitchen-remodel-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Kitchen Remodel Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate kitchen remodel cost by size and finish.</p>
+      </a>
+
+      <a href="/tools/bathroom-remodel-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Bathroom Remodel Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate bathroom remodel cost by size and spec.</p>
+      </a>
+
+      <a href="/tools/roof-replacement-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Roof Replacement Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate roof replacement cost by material and size.</p>
+      </a>
+
+      <a href="/tools/flooring-installation-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Flooring Installation Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate flooring installation cost by material.</p>
+      </a>
+
+      <a href="/tools/labour-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Labour Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate labour cost by trade, hours and rate.</p>
+      </a>
+
+      <a href="/tools/labour-rate-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Labour Rate Calculator</h3>
+        <p class="tool-card-desc">Calculate hourly rate from annual target income.</p>
+      </a>
+
+      <a href="/tools/markup-margin-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Markup &amp; Margin Calculator</h3>
+        <p class="tool-card-desc">Calculate markup, margin and selling price.</p>
+      </a>
+
+      <a href="/tools/profit-margin-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Profit Margin Calculator</h3>
+        <p class="tool-card-desc">Calculate profit margin on any construction job.</p>
+      </a>
+
+      <a href="/tools/overhead-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Overhead Calculator</h3>
+        <p class="tool-card-desc">Calculate overhead costs for construction businesses.</p>
+      </a>
+
+      <a href="/tools/change-order-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Change Order Calculator</h3>
+        <p class="tool-card-desc">Price change orders with labour, material and markup.</p>
+      </a>
+
+      <a href="/tools/estimate-template-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Estimate Calculator</h3>
+        <p class="tool-card-desc">Build a project estimate from line items and costs.</p>
+      </a>
+
+      <a href="/tools/material-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Material Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate total material cost for a project.</p>
+      </a>
+
+      <a href="/tools/waste-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Waste Cost Calculator</h3>
+        <p class="tool-card-desc">Calculate the cost impact of material waste.</p>
+      </a>
+
+      <a href="/tools/contingency-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Contingency Calculator</h3>
+        <p class="tool-card-desc">Add a contingency buffer to any project estimate.</p>
+      </a>
+
+      <a href="/tools/square-footage-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Square Footage Cost Calculator</h3>
+        <p class="tool-card-desc">Calculate cost per square foot or square metre.</p>
+      </a>
+
+      <a href="/tools/square-metre-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Square Metre Cost Calculator</h3>
+        <p class="tool-card-desc">Calculate cost per square metre for any project.</p>
+      </a>
+
+      <a href="/tools/contractor-quote-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Contractor Quote Calculator</h3>
+        <p class="tool-card-desc">Build a professional contractor quote from cost items.</p>
+      </a>
+
+      <a href="/tools/project-budget-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Project Budget Calculator</h3>
+        <p class="tool-card-desc">Build a project budget from categories and costs.</p>
+      </a>
+
+      <a href="/tools/roi-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">ROI Calculator</h3>
+        <p class="tool-card-desc">Calculate return on investment for property projects.</p>
+      </a>
+
+      <a href="/tools/flip-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">House Flip Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate full cost of a house flip by scope.</p>
+      </a>
+
+      <a href="/tools/rental-renovation-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Rental Renovation Calculator</h3>
+        <p class="tool-card-desc">Estimate renovation cost for rental properties.</p>
+      </a>
+
+      <a href="/tools/insurance-value-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Insurance Value Calculator</h3>
+        <p class="tool-card-desc">Calculate rebuild value for insurance purposes.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SOLAR & ENERGY (26 tools) ═══════════════ -->
+<section class="cat-section" id="solar-energy">
+  <div class="container">
+    <div class="cat-section-head">
+      <h2 class="cat-section-title">Solar &amp; Energy Calculators</h2>
+    </div>
+    <div class="tool-grid">
+
+      <a href="/tools/solar-panel-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Solar Panel Calculator</h3>
+        <p class="tool-card-desc">Calculate solar panels needed for your home or business.</p>
+      </a>
+
+      <a href="/tools/solar-panel-cost-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Solar Panel Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate total cost of a solar panel system.</p>
+      </a>
+
+      <a href="/tools/solar-panel-output-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Solar Panel Output Calculator</h3>
+        <p class="tool-card-desc">Estimate annual solar output by location and size.</p>
+      </a>
+
+      <a href="/tools/solar-battery-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Solar Battery Calculator</h3>
+        <p class="tool-card-desc">Size battery bank for solar power storage.</p>
+      </a>
+
+      <a href="/tools/solar-battery-size-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Solar Battery Size Calculator</h3>
+        <p class="tool-card-desc">Calculate battery bank size from daily energy use.</p>
+      </a>
+
+      <a href="/tools/inverter-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Inverter Calculator</h3>
+        <p class="tool-card-desc">Calculate inverter size for solar or backup power.</p>
+      </a>
+
+      <a href="/tools/inverter-size-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Inverter Size Calculator</h3>
+        <p class="tool-card-desc">Size an inverter for peak and continuous load.</p>
+      </a>
+
+      <a href="/tools/off-grid-solar-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Off-Grid Solar Calculator</h3>
+        <p class="tool-card-desc">Design an off-grid solar system by consumption.</p>
+      </a>
+
+      <a href="/tools/grid-tie-solar-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Grid-Tie Solar Calculator</h3>
+        <p class="tool-card-desc">Size a grid-tie solar system by usage and rate.</p>
+      </a>
+
+      <a href="/tools/hybrid-solar-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Hybrid Solar Calculator</h3>
+        <p class="tool-card-desc">Design a hybrid solar and battery system.</p>
+      </a>
+
+      <a href="/tools/solar-payback-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Solar Payback Calculator</h3>
+        <p class="tool-card-desc">Calculate payback period for a solar installation.</p>
+      </a>
+
+      <a href="/tools/solar-savings-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Solar Savings Calculator</h3>
+        <p class="tool-card-desc">Estimate long-term savings from solar energy.</p>
+      </a>
+
+      <a href="/tools/solar-roi-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Solar ROI Calculator</h3>
+        <p class="tool-card-desc">Calculate return on investment for solar panels.</p>
+      </a>
+
+      <a href="/tools/panel-tilt-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Solar Panel Tilt Calculator</h3>
+        <p class="tool-card-desc">Calculate optimal panel tilt angle by latitude.</p>
+      </a>
+
+      <a href="/tools/solar-tilt-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Solar Tilt Calculator</h3>
+        <p class="tool-card-desc">Optimal panel tilt for maximum annual production.</p>
+      </a>
+
+      <a href="/tools/solar-azimuth-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Solar Azimuth Calculator</h3>
+        <p class="tool-card-desc">Calculate optimal panel azimuth for any location.</p>
+      </a>
+
+      <a href="/tools/annual-production-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Annual Production Calculator</h3>
+        <p class="tool-card-desc">Estimate annual solar production in kWh.</p>
+      </a>
+
+      <a href="/tools/solar-irradiance-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Solar Irradiance Calculator</h3>
+        <p class="tool-card-desc">Find peak sun hours and irradiance by region.</p>
+      </a>
+
+      <a href="/tools/panel-count-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Panel Count Calculator</h3>
+        <p class="tool-card-desc">Calculate number of panels for a target system size.</p>
+      </a>
+
+      <a href="/tools/solar-cable-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Solar Cable Calculator</h3>
+        <p class="tool-card-desc">Calculate solar cable size for DC and AC runs.</p>
+      </a>
+
+      <a href="/tools/solar-mounting-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Solar Mounting Calculator</h3>
+        <p class="tool-card-desc">Calculate solar mounting rails and hardware.</p>
+      </a>
+
+      <a href="/tools/solar-carport-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Solar Carport Calculator</h3>
+        <p class="tool-card-desc">Size a solar carport system by area and load.</p>
+      </a>
+
+      <a href="/tools/solar-water-heater-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Solar Water Heater Calculator</h3>
+        <p class="tool-card-desc">Size a solar water heating system by household.</p>
+      </a>
+
+      <a href="/tools/heat-pump-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Heat Pump Calculator</h3>
+        <p class="tool-card-desc">Size a heat pump by heating and cooling load.</p>
+      </a>
+
+      <a href="/tools/heat-loss-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Heat Loss Calculator</h3>
+        <p class="tool-card-desc">Calculate building heat loss for heating design.</p>
+      </a>
+
+      <a href="/tools/insulation-r-value-calculator.html" class="tool-card">
+        <h3 class="tool-card-title">Insulation R-Value Calculator</h3>
+        <p class="tool-card-desc">Calculate R-value and required insulation thickness.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+
       <div class="footer-col footer-col-brand">
-        <a href="/" class="footer-logo" aria-label="BuildMetric home">
-          <span class="footer-logo-text">
-            <span class="footer-logo-build">Build</span><span class="footer-logo-metric">Metric</span>
-          </span>
-        </a>
-        <p class="footer-tagline">
-          Free construction calculators with real formulas and cited standards. Built for the field.
-        </p>
-        <ul class="footer-contact">
-          <li>
-            <span class="footer-contact-label mono">EMAIL</span>
-            <a href="mailto:contact.buildmetric@gmail.com">contact.buildmetric@gmail.com</a>
-          </li>
-          <li>
-            <span class="footer-contact-label mono">DOMAIN</span>
-            <span>buildmetric.org</span>
-          </li>
-        </ul>
-        <ul class="footer-social" aria-label="BuildMetric on social media">
-          <li>
-            <a
-              href="https://facebook.com/BuildMetric"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="BuildMetric on Facebook (opens in new tab)">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">
-                <path d="M13.5 22v-9h3l.5-3.5h-3.5V7.3c0-1 .3-1.7 1.7-1.7H17V2.5C16.7 2.5 15.6 2.4 14.4 2.4c-2.5 0-4.2 1.5-4.2 4.3v2.4H7V12.5h3.2V22h3.3z"/>
-              </svg>
-              <span>Facebook</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://youtube.com/@buildmetricyt"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="BuildMetric on YouTube (opens in new tab)">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">
-                <path d="M23 7.2s-.2-1.5-.9-2.2c-.8-.9-1.7-.9-2.2-.9C17.1 4 12 4 12 4s-5.1 0-7.9.1c-.5 0-1.4 0-2.2.9C1.2 5.7 1 7.2 1 7.2S.8 9 .8 10.8v1.7c0 1.8.2 3.6.2 3.6s.2 1.5.9 2.2c.8.9 1.9.8 2.4.9 1.7.2 7.7.2 7.7.2s5.1 0 7.9-.1c.5 0 1.4 0 2.2-.9.7-.7.9-2.2.9-2.2s.2-1.8.2-3.6v-1.7c0-1.8-.2-3.6-.2-3.6zM9.7 14.6V8.4l6 3.1-6 3.1z"/>
-              </svg>
-              <span>YouTube</span>
-            </a>
-          </li>
+        <h3 class="footer-brand-title">BUILDMETRIC</h3>
+        <p class="footer-brand-desc">Precise calculators for builders, contractors and DIYers worldwide. 300+ free tools covering every major construction and DIY calculation. Built for accuracy, transparency and global use.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">POPULAR TOOLS</h4>
+        <ul>
+          <li><a href="/tools/concrete-calculator.html">Concrete Calculator</a></li>
+          <li><a href="/tools/paint-calculator.html">Paint Calculator</a></li>
+          <li><a href="/tools/roofing-calculator.html">Roofing Calculator</a></li>
+          <li><a href="/tools/tile-calculator.html">Tile Calculator</a></li>
+          <li><a href="/tools/lumber-calculator.html">Lumber Calculator</a></li>
+          <li><a href="/tools/flooring-calculator.html">Flooring Calculator</a></li>
         </ul>
       </div>
 
-      <!-- Column 2: Tools -->
-      <nav class="footer-col" aria-label="Tool categories">
-        <h2 class="footer-col-heading mono">// TOOLS //</h2>
+      <div class="footer-col">
+        <h4 class="footer-heading">INFORMATION</h4>
         <ul>
-          <li><a href="/categories/concrete-masonry.html">Concrete &amp; Masonry</a></li>
-          <li><a href="/categories/lumber-framing.html">Lumber &amp; Framing</a></li>
-          <li><a href="/categories/roofing-siding.html">Roofing &amp; Siding</a></li>
-          <li><a href="/categories/electrical-hvac.html">Electrical &amp; HVAC</a></li>
-          <li><a href="/categories/plumbing-piping.html">Plumbing &amp; Piping</a></li>
-          <li><a href="/categories/solar-energy.html">Solar &amp; Energy</a></li>
-          <li><a href="/categories/cost-estimators.html">Cost Estimators</a></li>
-          <li><a href="/categories/">All 12 categories</a></li>
-        </ul>
-      </nav>
-
-      <!-- Column 3: Company -->
-      <nav class="footer-col" aria-label="Company and resources">
-        <h2 class="footer-col-heading mono">// COMPANY //</h2>
-        <ul>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/why-we-exist.html">Why we exist</a></li>
-          <li><a href="/why-trust.html">Why trust us</a></li>
-          <li><a href="/how-to-use.html">How to use</a></li>
-          <li><a href="/suppliers.html">For suppliers</a></li>
+          <li><a href="/about.html">About Us</a></li>
           <li><a href="/contact.html">Contact</a></li>
-          <li><a href="/sitemap.html">Sitemap</a></li>
-        </ul>
-      </nav>
-
-      <!-- Column 4: Legal -->
-      <nav class="footer-col" aria-label="Legal">
-        <h2 class="footer-col-heading mono">// LEGAL //</h2>
-        <ul>
-          <li><a href="/privacy.html">Privacy policy</a></li>
-          <li><a href="/terms.html">Terms of use</a></li>
-          <li><a href="/cookies.html">Cookie policy</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms of Service</a></li>
           <li><a href="/disclaimer.html">Disclaimer</a></li>
         </ul>
-        <p class="footer-legal-note">
-          Calculators are estimates. Verify quantities and structural members with a licensed engineer before construction.
-        </p>
-      </nav>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">FOLLOW US</h4>
+        <ul>
+          <li><a href="https://youtube.com/@buildmetricyt" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          <li><a href="https://facebook.com/BuildMetric" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">CATEGORIES</h4>
+        <ul>
+          <li><a href="#concrete-masonry">Concrete &amp; Masonry</a></li>
+          <li><a href="#interior-finishing">Interior &amp; Finishing</a></li>
+          <li><a href="#exterior-structure">Exterior &amp; Structure</a></li>
+          <li><a href="#landscaping-outdoor">Landscaping &amp; Outdoor</a></li>
+          <li><a href="#lumber-framing">Lumber &amp; Framing</a></li>
+          <li><a href="#electrical-hvac">Electrical &amp; HVAC</a></li>
+          <li><a href="#plumbing-piping">Plumbing &amp; Piping</a></li>
+          <li><a href="#roofing-siding">Roofing &amp; Siding</a></li>
+        </ul>
+      </div>
 
     </div>
 
     <div class="footer-bottom">
-      <p class="footer-copy mono">
-        © <span id="footer-year">2026</span> BuildMetric. All rights reserved.
-      </p>
-      <p class="footer-region mono">
-        <span id="footer-region-label">Region: US · Imperial · USD · ACI 318-19</span>
-      </p>
+      <p>© <span id="footer-year">2026</span> BuildMetric. All rights reserved. Made for builders worldwide.</p>
+      <p class="footer-disclaimer">BuildMetric calculators are provided for estimation purposes only. Always consult a qualified professional before ordering materials or starting construction work. Results may vary based on site conditions, material specifications and local building codes.</p>
     </div>
-
   </div>
 </footer>
 
-  </main>
+<style>
+/* ═══════════ FOOTER ═══════════ */
+.site-footer{
+  background:var(--navy-2);
+  color:#cbd5e1;
+  padding:56px 0 24px;
+  margin-top:0;
+  font-size:13px;
+}
+.footer-grid{
+  display:grid;grid-template-columns:1fr;gap:32px;
+  padding-bottom:36px;border-bottom:1px solid rgba(203,213,225,.12);
+}
+@media (min-width:640px){.footer-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:960px){.footer-grid{grid-template-columns:1.5fr 1fr 1fr 1fr 1.2fr;gap:32px}}
 
-  <!-- ═══════════════════════════════════════════════════════════════
-     SCROLL TO TOP — appears after 600px scroll, dismissible
-     ═══════════════════════════════════════════════════════════════ -->
-<button
-  type="button"
-  class="scroll-top"
-  id="scroll-top"
-  aria-label="Scroll back to top of page"
-  hidden>
-  <span aria-hidden="true">↑</span>
-  <span class="scroll-top-label mono">TOP</span>
-</button>
+.footer-col{min-width:0}
+.footer-brand-title{
+  font-size:13px;font-weight:800;letter-spacing:.1em;
+  color:var(--white);margin-bottom:14px;line-height:1.3;
+}
+.footer-heading{
+  font-size:12px;font-weight:700;letter-spacing:.1em;
+  color:var(--white);margin-bottom:14px;line-height:1.3;
+  position:relative;padding-bottom:10px;
+}
+.footer-heading::after{
+  content:'';position:absolute;left:0;bottom:0;
+  width:22px;height:2px;background:var(--orange);border-radius:2px;
+}
+.footer-brand-desc{
+  font-size:13px;line-height:1.6;color:#94a3b8;max-width:340px;
+}
 
-<!-- ═══════════════════════════════════════════════════════════════
-     COOKIE CONSENT BANNER — under 15% viewport height
-     ═══════════════════════════════════════════════════════════════ -->
-<div
-  class="cookie-banner"
-  id="cookie-banner"
-  role="dialog"
-  aria-modal="false"
-  aria-labelledby="cookie-heading"
-  aria-describedby="cookie-desc"
-  hidden>
+.footer-col ul{display:flex;flex-direction:column;gap:9px}
+.footer-col ul a{
+  font-size:13px;line-height:1.4;color:#cbd5e1;
+  transition:color .15s;
+}
+.footer-col ul a:hover{color:var(--orange);text-decoration:none}
 
-  <div class="cookie-inner">
+.footer-bottom{
+  padding-top:24px;
+  display:flex;flex-direction:column;gap:10px;
+  align-items:flex-start;text-align:left;
+}
+@media (min-width:800px){
+  .footer-bottom{flex-direction:row;align-items:center;justify-content:space-between;gap:32px}
+}
+.footer-bottom p{
+  font-size:12px;line-height:1.6;color:#94a3b8;margin:0;max-width:none;
+}
+.footer-disclaimer{
+  font-size:11.5px;line-height:1.55;color:#64748b;
+  max-width:820px;
+}
 
-    <div class="cookie-copy">
-      <h2 id="cookie-heading" class="cookie-heading mono">// COOKIES //</h2>
-      <p id="cookie-desc" class="cookie-desc">
-        We use essential cookies to keep the site working, and optional cookies to measure traffic and show ads that fund the free calculators. You can accept all, use essential only, or choose per-category.
-        <a href="/cookies.html">Cookie policy</a>.
-      </p>
-    </div>
+/* ═══════════ SCROLL-TO-TOP ═══════════ */
+.scroll-top{
+  position:fixed;right:20px;bottom:20px;z-index:50;
+  width:44px;height:44px;
+  background:var(--navy);color:var(--white);
+  border-radius:10px;font-size:18px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 14px rgba(15,23,42,.22);
+  opacity:0;transform:translateY(10px);
+  pointer-events:none;
+  transition:opacity .2s,transform .2s,background .15s;
+}
+.scroll-top.is-visible{opacity:1;transform:translateY(0);pointer-events:auto}
+.scroll-top:hover{background:var(--orange)}
+</style>
 
-    <div class="cookie-actions">
-      <button type="button" class="cookie-btn cookie-btn-ghost" id="cookie-preferences">
-        PREFERENCES
-      </button>
-      <button type="button" class="cookie-btn cookie-btn-outline" id="cookie-essential">
-        ESSENTIAL ONLY
-      </button>
-      <button type="button" class="cookie-btn cookie-btn-amber" id="cookie-accept">
-        ACCEPT ALL <span aria-hidden="true">→</span>
-      </button>
-    </div>
+<button class="scroll-top" id="scroll-top" type="button" aria-label="Scroll to top">↑</button>
 
-  </div>
-
-  <!-- Preferences panel (hidden until Preferences clicked) -->
-  <div class="cookie-prefs" id="cookie-prefs" hidden>
-    <h3 class="cookie-prefs-heading mono">// MANAGE PREFERENCES //</h3>
-
-    <ul class="cookie-prefs-list">
-
-      <li class="cookie-pref">
-        <div class="cookie-pref-info">
-          <strong>Essential</strong>
-          <p>Required for the site to function — navigation, saved results, security. Cannot be disabled.</p>
-        </div>
-        <span class="cookie-pref-always mono">ALWAYS ON</span>
-      </li>
-
-      <li class="cookie-pref">
-        <div class="cookie-pref-info">
-          <strong>Analytics</strong>
-          <p>Anonymous page-view counts so we know which calculators are used. No personal data, no cross-site tracking.</p>
-        </div>
-        <label class="cookie-switch">
-          <input type="checkbox" id="cookie-analytics" name="analytics" value="granted">
-          <span class="cookie-switch-track" aria-hidden="true"><span class="cookie-switch-thumb"></span></span>
-          <span class="sr-only">Enable analytics cookies</span>
-        </label>
-      </li>
-
-      <li class="cookie-pref">
-        <div class="cookie-pref-info">
-          <strong>Advertising</strong>
-          <p>Google AdSense personalisation. Disabling shows non-personalised ads only. Site remains fully functional either way.</p>
-        </div>
-        <label class="cookie-switch">
-          <input type="checkbox" id="cookie-ads" name="ads" value="granted">
-          <span class="cookie-switch-track" aria-hidden="true"><span class="cookie-switch-thumb"></span></span>
-          <span class="sr-only">Enable advertising cookies</span>
-        </label>
-      </li>
-
-    </ul>
-
-    <div class="cookie-prefs-actions">
-      <button type="button" class="cookie-btn cookie-btn-outline" id="cookie-prefs-cancel">
-        CANCEL
-      </button>
-      <button type="button" class="cookie-btn cookie-btn-amber" id="cookie-prefs-save">
-        SAVE PREFERENCES <span aria-hidden="true">→</span>
-      </button>
-    </div>
-  </div>
-
-</div>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     AD SLOT 4 — desktop sidebar / mobile inline bottom
-     ═══════════════════════════════════════════════════════════════ -->
-<aside class="ad-slot ad-slot-footer-bottom" aria-label="Advertisement">
-  <div class="ad-slot-inner">
-    <span class="ad-slot-label mono" aria-hidden="true">// SPONSORED //</span>
-    <!-- REPLACE: real publisher ID ca-pub-XXXXXXXXXXXXXXXX -->
-    <ins class="adsbygoogle"
-         style="display:block;min-height:250px"
-         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-         data-ad-slot="4444444444"
-         data-ad-format="auto"
-         data-full-width-responsive="true"
-         data-adsbygoogle-status="pending"></ins>
-    <noscript>
-      <div class="ad-slot-fallback mono">Advertisement (JavaScript disabled)</div>
-    </noscript>
-  </div>
-</aside>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     SCRIPTS — all deferred, no jQuery, no frameworks
-     ═══════════════════════════════════════════════════════════════ -->
-
-<!-- Core site scripts -->
-<script src="/js/main.js" defer></script>
-<script src="/js/geo-detection.js" defer></script>
-<script src="/js/search.js" defer></script>
-<script src="/js/b2b.js" defer></script>
-<script src="/js/analytics.js" defer></script>
-
-<!-- ═══════════════ ADSENSE (async, consent-gated) ═══════════════
-     The AdSense script itself only loads AFTER the user grants
-     advertising consent. Before that, the <ins> blocks remain
-     invisible placeholders and no third-party request is made.
-     ═══════════════════════════════════════════════════════════════ -->
 <script>
-(function () {
-  'use strict';
-
-  var ADSENSE_CLIENT = 'ca-pub-XXXXXXXXXXXXXXXX'; // REPLACE with real ID
-  var ADSENSE_SRC = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + ADSENSE_CLIENT;
-  var loaded = false;
-
-  function loadAdSense() {
-    if (loaded) return;
-    loaded = true;
-
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = ADSENSE_SRC;
-    s.crossOrigin = 'anonymous';
-    s.onload = function () {
-      // Push every <ins> block on the page once AdSense is ready.
-      var slots = document.querySelectorAll('ins.adsbygoogle');
-      for (var i = 0; i < slots.length; i++) {
-        try { (window.adsbygoogle = window.adsbygoogle || []).push({}); }
-        catch (e) { /* no-op — ads are not core to page function */ }
+(function(){
+  var toggle=document.getElementById('menu-toggle');
+  var nav=document.getElementById('primary-nav');
+  if(toggle&&nav){
+    toggle.addEventListener('click',function(){
+      var open=nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded',open?'true':'false');
+    });
+    nav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'&&window.innerWidth<760){
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded','false');
       }
-    };
-    document.head.appendChild(s);
+    });
   }
 
-  // AdSense loader watches for the consent change emitted by analytics.js
-  window.addEventListener('bm:consent-ads-granted', loadAdSense);
+  var st=document.getElementById('scroll-top');
+  if(st){
+    var onScroll=function(){
+      if(window.scrollY>600){st.classList.add('is-visible');}
+      else{st.classList.remove('is-visible');}
+    };
+    window.addEventListener('scroll',onScroll,{passive:true});
+    st.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+  }
 
-  // If consent was already granted on a previous visit, load immediately.
-  try {
-    var raw = localStorage.getItem('bm_consent_v1');
-    if (raw) {
-      var c = JSON.parse(raw);
-      if (c && c.ads === 'granted') loadAdSense();
-    }
-  } catch (e) { /* localStorage unavailable — leave ads unloaded */ }
-})();
-</script>
-
-<!-- ═══════════════ FOOTER YEAR + REGION LABEL (tiny inline) ═══════════════ -->
-<script>
-(function () {
-  'use strict';
-  var y = document.getElementById('footer-year');
-  if (y) y.textContent = String(new Date().getFullYear());
+  var y=document.getElementById('footer-year');
+  if(y){y.textContent=new Date().getFullYear();}
 })();
 </script>
 
 </body>
-</html>
+</html>  
+
