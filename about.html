@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About BuildMetric — Free Construction Calculators Built by Engineers</title>
+<meta name="description" content="BuildMetric is a free construction calculator platform with 300+ tools. Learn who we are, how we work, why every formula is shown, and our 7-phase growth roadmap.">
+<meta name="author" content="BuildMetric">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://buildmetric.org/about.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About BuildMetric — Free Construction Calculators">
+<meta property="og:description" content="300+ construction calculators. Real formulas, cited standards, no signup.">
+<meta property="og:url" content="https://buildmetric.org/about.html">
+<meta property="og:site_name" content="BuildMetric">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","@id":"https://buildmetric.org/#organization","name":"BuildMetric","url":"https://buildmetric.org/","email":"contact.buildmetric@gmail.com","sameAs":["https://facebook.com/BuildMetric","https://youtube.com/@buildmetricyt"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AboutPage","url":"https://buildmetric.org/about.html","name":"About BuildMetric","publisher":{"@id":"https://buildmetric.org/#organization"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://buildmetric.org/"},{"@type":"ListItem","position":2,"name":"About","item":"https://buildmetric.org/about.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is BuildMetric?","acceptedAnswer":{"@type":"Answer","text":"BuildMetric is a free construction calculator platform with 300+ tools across 12 categories. Every calculator runs entirely in your browser, requires no signup, and shows the formula it uses."}},
+{"@type":"Question","name":"Are BuildMetric calculators really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every calculator is 100% free with no signup, no trial period, and no email gate. We are supported by clean advertising and optional B2B supplier connections."}},
+{"@type":"Question","name":"Do BuildMetric calculators work in both metric and imperial units?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every calculator supports both imperial and metric units with a single click, and your preference is saved for future visits."}},
+{"@type":"Question","name":"How accurate are BuildMetric calculators?","acceptedAnswer":{"@type":"Answer","text":"Calculators use published formulas from recognised standards bodies. Waste factors can be toggled. Results are usually within 3-5% of a manual take-off. For structural work, always verify with a licensed engineer."}},
+{"@type":"Question","name":"How many calculators does BuildMetric offer?","acceptedAnswer":{"@type":"Answer","text":"Over 300 calculators across 12 categories: Concrete & Masonry, Interior & Finishing, Exterior & Structure, Landscaping & Outdoor, Lumber & Framing, Electrical & HVAC, Plumbing & Piping, Roofing & Siding, Painting & Wallpaper, Road & Driveway, Cost Estimators and Solar & Energy."}},
+{"@type":"Question","name":"Can I use BuildMetric calculators on mobile devices?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every calculator is designed for mobile phones, tablets and desktop computers with touch-friendly controls sized for gloved hands."}},
+{"@type":"Question","name":"Do I need to create an account to use the calculators?","acceptedAnswer":{"@type":"Answer","text":"No. BuildMetric does not require any account, login or email address. All calculators work instantly when you open the page. We do not store your calculations or personal information on our servers. Your unit preference (Imperial or Metric) is saved locally in your own browser, so it remembers your choice next time — but this data never leaves your device."}}
+]}
+</script>
+
+<style>
+/* ═══════════ RESET ═══════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  font-size:16px;line-height:1.75;color:#475569;background:#ffffff;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  font-weight:400;
+}
+img,svg{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;background:none;border:none;cursor:pointer;color:inherit}
+ul,ol{list-style:none}
+input,textarea,select{font:inherit;color:inherit}
+
+:root{
+  --navy:#0f172a;
+  --navy-2:#1e293b;
+  --heading:#0f172a;
+  --body:#475569;
+  --body-strong:#334155;
+  --muted:#64748b;
+  --orange:#f97316;
+  --orange-dark:#ea580c;
+  --orange-soft:#fff7ed;
+  --orange-border:#fed7aa;
+  --gray-50:#f8fafc;
+  --gray-100:#f1f5f9;
+  --gray-200:#e2e8f0;
+  --gray-300:#cbd5e1;
+  --gray-400:#94a3b8;
+  --white:#ffffff;
+  --border:#e5e7eb;
+  --border-soft:#eef2f7;
+}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+.container{max-width:1120px;margin:0 auto;padding:0 20px}
+.container-narrow{max-width:780px;margin:0 auto;padding:0 20px}
+
+/* ═══════════ HEADER ═══════════ */
+.site-header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{max-width:1120px;margin:0 auto;padding:0 20px;height:60px;display:flex;align-items:center;justify-content:space-between;gap:32px}
+.logo{display:inline-flex;align-items:baseline;font-size:19px;font-weight:800;letter-spacing:-0.02em;white-space:nowrap}
+.logo-build{color:var(--navy)}
+.logo-metric{color:var(--orange)}
+.primary-nav{display:flex;gap:2px;align-items:center}
+.primary-nav a{display:inline-block;padding:8px 16px;font-size:14px;font-weight:500;color:var(--body-strong);border-radius:6px;transition:color .15s,background .15s}
+.primary-nav a:hover{color:var(--navy);background:var(--gray-100)}
+.primary-nav a.is-active{color:var(--navy);font-weight:600}
+
+.menu-toggle{display:none;width:40px;height:40px;flex-direction:column;gap:5px;align-items:center;justify-content:center;border-radius:6px}
+.menu-toggle span{display:block;width:20px;height:2px;background:var(--navy);border-radius:1px}
+
+@media (max-width:760px){
+  .primary-nav{display:none;position:absolute;top:60px;left:0;right:0;background:var(--white);flex-direction:column;padding:12px 20px 20px;border-bottom:1px solid var(--border);gap:2px}
+  .primary-nav.is-open{display:flex}
+  .primary-nav a{width:100%;padding:12px 8px;font-size:15px}
+  .menu-toggle{display:flex}
+}
+
+/* ═══════════ BREADCRUMB ═══════════ */
+.breadcrumb{background:var(--white);border-bottom:1px solid var(--border-soft);padding:14px 0;font-size:13px}
+.breadcrumb-inner{max-width:1120px;margin:0 auto;padding:0 20px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.breadcrumb a{color:var(--muted);transition:color .15s}
+.breadcrumb a:hover{color:var(--orange)}
+.breadcrumb-sep{color:var(--gray-400);font-weight:400}
+.breadcrumb-current{color:var(--navy);font-weight:500}
+
+/* ═══════════ PAGE HERO ═══════════ */
+.page-hero{background:var(--white);padding:72px 0 56px;text-align:center;border-bottom:1px solid var(--border-soft)}
+.page-hero-inner{max-width:780px;margin:0 auto;padding:0 20px}
+.page-hero h1{
+  font-size:clamp(30px,4vw,44px);
+  font-weight:800;letter-spacing:-0.03em;line-height:1.15;
+  color:var(--heading);margin-bottom:20px;
+}
+.page-hero p{
+  font-size:17px;line-height:1.7;color:var(--body);
+  max-width:680px;margin:0 auto;
+}
+
+/* ═══════════ CONTENT SECTION ═══════════ */
+.content{padding:72px 0;background:var(--white);border-bottom:1px solid var(--border-soft)}
+.content.alt{background:var(--gray-50)}
+
+.section-head{margin-bottom:36px}
+.section-head.center{text-align:center;margin-left:auto;margin-right:auto;max-width:780px}
+.section-title{
+  font-size:clamp(24px,2.8vw,30px);
+  font-weight:800;color:var(--heading);
+  letter-spacing:-0.025em;line-height:1.2;
+  margin-bottom:16px;
+}
+.section-lede{
+  font-size:16.5px;line-height:1.7;color:var(--body);
+  max-width:720px;
+}
+.section-head.center .section-lede{margin-left:auto;margin-right:auto;text-align:left}
+
+/* ═══════════ PROSE ═══════════ */
+.prose{max-width:720px;font-size:16px;line-height:1.75;color:var(--body)}
+.prose p{margin-bottom:22px}
+.prose p:last-child{margin-bottom:0}
+.prose strong{color:var(--heading);font-weight:700}
+.prose em{font-style:normal;color:var(--orange-dark);font-weight:600}
+
+/* ═══════════ NUMBERED SUBSECTION ═══════════ */
+.subsection{margin-top:40px}
+.subsection:first-of-type{margin-top:0}
+.subsection-title{
+  display:flex;align-items:baseline;gap:10px;
+  font-size:17px;font-weight:700;color:var(--heading);
+  letter-spacing:-0.015em;line-height:1.4;
+  margin-bottom:12px;
+}
+.subsection-title .num{
+  display:inline-flex;align-items:baseline;
+  font-variant-numeric:tabular-nums;
+  color:var(--heading);font-weight:700;
+}
+.subsection-body{font-size:16px;line-height:1.75;color:var(--body);max-width:720px}
+.subsection-body p{margin-bottom:18px}
+.subsection-body p:last-child{margin-bottom:0}
+.subsection-body strong{color:var(--heading);font-weight:700}
+
+/* ═══════════ H3 SUBSECTION ═══════════ */
+.subhead{margin-top:40px}
+.subhead:first-of-type{margin-top:0}
+.subhead-title{
+  font-size:17px;font-weight:700;color:var(--heading);
+  letter-spacing:-0.015em;line-height:1.4;
+  margin-bottom:12px;
+}
+.subhead-body{font-size:16px;line-height:1.75;color:var(--body);max-width:720px}
+.subhead-body p{margin-bottom:18px}
+.subhead-body p:last-child{margin-bottom:0}
+.subhead-body strong{color:var(--heading);font-weight:700}
+
+/* ═══════════ PHASE LIST ═══════════ */
+.phases{max-width:780px;margin-top:36px}
+.phase{margin-bottom:36px}
+.phase:last-child{margin-bottom:0}
+.phase-title{
+  font-size:16.5px;font-weight:700;color:var(--heading);
+  letter-spacing:-0.01em;line-height:1.4;
+  margin-bottom:10px;
+}
+.phase-title .phase-num{color:var(--heading)}
+.phase-body{font-size:15.5px;line-height:1.75;color:var(--body)}
+.phase-body strong{color:var(--heading);font-weight:700}
+
+/* ═══════════ ADVERTISEMENT ═══════════ */
+.ad-block{padding:40px 0;background:var(--white);border-bottom:1px solid var(--border-soft)}
+.ad-block-inner{max-width:1120px;margin:0 auto;padding:0 20px}
+.ad-box{
+  border:1.5px dashed var(--gray-300);
+  border-radius:8px;
+  padding:36px 20px;
+  text-align:center;
+  background:var(--white);
+}
+.ad-box-label{
+  display:block;
+  font-size:10.5px;font-weight:600;letter-spacing:.18em;
+  color:var(--gray-400);text-transform:uppercase;
+  margin-bottom:0;
+}
+.ad-box ins{display:block;min-height:1px}
+
+/* ═══════════ FAQ ═══════════ */
+.faq-section{padding:72px 0 80px;background:var(--white)}
+.faq-head{max-width:780px;margin:0 auto 32px;padding:0 20px}
+.faq-title{
+  font-size:clamp(24px,2.8vw,30px);
+  font-weight:800;color:var(--heading);
+  letter-spacing:-0.025em;line-height:1.2;
+}
+.faq-list{
+  max-width:780px;margin:0 auto;padding:0 20px;
+  display:flex;flex-direction:column;gap:12px;
+}
+.faq-item{
+  background:var(--white);
+  border:1.5px solid var(--border);
+  border-radius:10px;
+  overflow:hidden;
+  transition:border-color .18s,background .18s;
+}
+.faq-item:hover{border-color:var(--gray-300)}
+.faq-item summary{
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+  padding:20px 24px;cursor:pointer;list-style:none;min-height:64px;
+  font-size:15.5px;font-weight:600;color:var(--heading);
+  line-height:1.45;text-align:left;letter-spacing:-0.01em;
+  transition:background .18s,color .18s;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::marker{display:none}
+.faq-item summary:hover{background:var(--gray-50)}
+.faq-toggle{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:30px;height:30px;flex-shrink:0;
+  font-size:20px;font-weight:400;line-height:1;
+  color:var(--gray-400);
+  transition:transform .2s,color .2s;
+}
+.faq-item[open]{border-color:var(--orange);background:var(--orange-soft)}
+.faq-item[open] summary{background:var(--orange);color:var(--white)}
+.faq-item[open] summary:hover{background:var(--orange-dark)}
+.faq-item[open] .faq-toggle{color:var(--white);transform:rotate(45deg);font-size:22px}
+.faq-answer{
+  padding:22px 24px 24px;
+  font-size:15px;line-height:1.75;
+  color:var(--body-strong);
+  background:var(--white);
+  border-top:1.5px solid var(--orange-border);
+}
+.faq-answer strong{color:var(--heading);font-weight:700}
+.faq-answer a{color:var(--orange-dark);font-weight:600;border-bottom:1.5px solid var(--orange-border)}
+
+/* ═══════════ CONTACT STRIP ═══════════ */
+.contact-strip{
+  max-width:780px;margin:0 auto;padding:32px;
+  background:var(--navy);border-radius:12px;color:#cbd5e1;
+  position:relative;overflow:hidden;
+}
+.contact-strip::before{
+  content:'';position:absolute;top:-40%;right:-10%;
+  width:340px;height:340px;
+  background:radial-gradient(circle,rgba(249,115,22,.22) 0%,transparent 65%);
+  pointer-events:none;
+}
+.contact-strip-inner{position:relative;z-index:1}
+.contact-strip-title{font-size:20px;font-weight:800;color:var(--white);letter-spacing:-0.02em;line-height:1.3;margin-bottom:10px}
+.contact-strip-desc{font-size:14.5px;line-height:1.65;color:#cbd5e1;max-width:600px;margin-bottom:20px}
+.contact-strip-link{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 22px;background:var(--orange);color:var(--white);
+  border-radius:8px;font-size:14px;font-weight:700;letter-spacing:.01em;
+  transition:background .15s;
+}
+.contact-strip-link:hover{background:var(--orange-dark)}
+
+/* ═══════════ FOOTER ═══════════ */
+.site-footer{background:var(--navy-2);color:#cbd5e1;padding:64px 0 28px;font-size:13.5px}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:36px;padding-bottom:40px;border-bottom:1px solid rgba(203,213,225,.12)}
+@media (min-width:640px){.footer-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:960px){.footer-grid{grid-template-columns:1.5fr 1fr 1fr 1fr 1.2fr;gap:36px}}
+.footer-brand-title{font-size:13px;font-weight:800;letter-spacing:.1em;color:var(--white);margin-bottom:16px;line-height:1.3}
+.footer-heading{font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--white);margin-bottom:16px;line-height:1.3;position:relative;padding-bottom:10px}
+.footer-heading::after{content:'';position:absolute;left:0;bottom:0;width:22px;height:2px;background:var(--orange);border-radius:2px}
+.footer-brand-desc{font-size:13.5px;line-height:1.65;color:#94a3b8;max-width:340px}
+.footer-col ul{display:flex;flex-direction:column;gap:10px}
+.footer-col ul a{font-size:13.5px;line-height:1.4;color:#cbd5e1;transition:color .15s}
+.footer-col ul a:hover{color:var(--orange)}
+.footer-bottom{padding-top:28px;display:flex;flex-direction:column;gap:12px;align-items:flex-start;text-align:left}
+@media (min-width:800px){.footer-bottom{flex-direction:row;align-items:center;justify-content:space-between;gap:32px}}
+.footer-bottom p{font-size:12.5px;line-height:1.65;color:#94a3b8;margin:0}
+.footer-disclaimer{font-size:12px;line-height:1.6;color:#64748b;max-width:820px}
+
+/* ═══════════ SCROLL-TOP ═══════════ */
+.scroll-top{
+  position:fixed;right:20px;bottom:20px;z-index:50;
+  width:44px;height:44px;background:var(--navy);color:var(--white);
+  border-radius:10px;font-size:18px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 14px rgba(15,23,42,.22);
+  opacity:0;transform:translateY(10px);pointer-events:none;
+  transition:opacity .2s,transform .2s,background .15s;
+}
+.scroll-top.is-visible{opacity:1;transform:translateY(0);pointer-events:auto}
+.scroll-top:hover{background:var(--orange)}
+
+@media (max-width:600px){
+  .page-hero{padding:48px 0 40px}
+  .content{padding:52px 0}
+  .faq-section{padding:52px 0 60px}
+  .contact-strip{padding:24px 20px}
+  .contact-strip-title{font-size:18px}
+  .faq-item summary{padding:16px 18px;font-size:15px}
+  .faq-answer{padding:18px}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo" aria-label="BuildMetric home">
+      <span class="logo-build">Build</span><span class="logo-metric">Metric</span>
+    </a>
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/categories/">Categories</a>
+      <a href="/about.html" class="is-active">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Toggle menu" aria-controls="primary-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ═══════════════ BREADCRUMB ═══════════════ -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current" aria-current="page">About</span>
+  </div>
+</nav>
+
+<!-- ═══════════════ PAGE HERO ═══════════════ -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <h1>About BuildMetric</h1>
+    <p>
+      BuildMetric is a free construction calculator platform with 300+ tools across 12 categories. It exists because the arithmetic of construction should not be hidden behind a signup wall, an affiliate link, or a blurry PDF from 2009.
+    </p>
+  </div>
+</section>
+
+  <!-- ═══════════════ BUILT FOR ACCURACY ═══════════════ -->
+<section class="content">
+  <div class="container-narrow">
+    <div class="section-head">
+      <h2 class="section-title">Built for Accuracy, Trust and Global Use</h2>
+      <p class="section-lede">
+        Every BuildMetric calculator follows the same three principles. These principles are not marketing slogans — they are the rules we apply to every formula, every label and every result we publish.
+      </p>
+    </div>
+
+    <div class="subsection">
+      <h3 class="subsection-title"><span class="num">1.</span> Verified Formulas</h3>
+      <div class="subsection-body">
+        <p>
+          Each calculation is based on standard industry formulas used by contractors, civil engineers and building authorities across the world. We do not invent shortcuts. We do not approximate without saying so. Where there is a widely accepted standard — <strong>such as 4 inches for a patio slab, or 5% waste for pre-mixed concrete</strong> — we follow it and cite it clearly on the page.
+        </p>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <h3 class="subsection-title"><span class="num">2.</span> Original Explanations</h3>
+      <div class="subsection-body">
+        <p>
+          Every page includes unique, human-written content explaining the concept, the formula, the worked example and common use cases. We do not copy from other websites. We do not use auto-generated text. We do not spin content. If a calculator exists on BuildMetric, <strong>someone sat down and wrote the explanation from scratch</strong> so that a first-time DIYer can understand it and a professional can verify it.
+        </p>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <h3 class="subsection-title"><span class="num">3.</span> Global Units</h3>
+      <div class="subsection-body">
+        <p>
+          Calculators support both imperial units (feet, inches, pounds, gallons) and metric units (metres, centimetres, kilograms, litres). You can switch between the two with a single click, and your choice is remembered for the next time you visit. This makes every tool usable whether you are building in <strong>New York, London, Sydney, Toronto, Dubai, Cape Town or Mumbai</strong>.
+        </p>
+      </div>
+    </div>
+
+    <div class="subhead">
+      <h3 class="subhead-title">Our Independence Pledge</h3>
+      <div class="subhead-body">
+        <p>
+          BuildMetric is independent. We do not sell building materials, tools or contractor services. We do not accept payment to recommend any product or brand. Our only goal is to give builders, contractors and DIYers free, reliable calculators they can trust — <strong>with transparent formulas and no commercial pressure</strong>.
+        </p>
+      </div>
+    </div>
+
+    <div class="subhead">
+      <h3 class="subhead-title">Accessibility Commitment</h3>
+      <div class="subhead-body">
+        <p>
+          Every calculator is designed to work on mobile phones, tablets and desktop computers. Forms are keyboard-accessible, labels are properly associated with inputs, and results are announced to screen readers. We believe useful tools should be <strong>available to everyone, regardless of device or ability</strong>.
+        </p>
+      </div>
+    </div>
+
+    <div class="subhead">
+      <h3 class="subhead-title">Accuracy Disclaimer</h3>
+      <div class="subhead-body">
+        <p>
+          While we take great care to ensure every formula is correct, construction conditions vary from site to site. Soil type, moisture, temperature, material quality and local building codes can all affect the amount of material you actually need. Always add a <strong>5–10% waste allowance</strong> and consult a qualified professional before placing a final order or beginning structural work.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ ADVERTISEMENT ═══════════════ -->
+<section class="ad-block">
+  <div class="ad-block-inner">
+    <div class="ad-box">
+      <span class="ad-box-label">Advertisement</span>
+      <!-- REPLACE: real publisher ID ca-pub-XXXXXXXXXXXXXXXX -->
+      <ins class="adsbygoogle"
+           style="display:block;min-height:1px"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot="1111111111"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ 7-PHASE GROWTH ROADMAP ═══════════════ -->
+<section class="content alt">
+  <div class="container-narrow">
+    <div class="section-head">
+      <h2 class="section-title">Our 7-Phase Growth Roadmap</h2>
+      <p class="section-lede">
+        BuildMetric is being built in seven carefully planned phases. Each phase adds new tools, deeper explanations and broader coverage — so quality is never sacrificed for speed. Our long-term commitment is to reach <strong style="color:var(--heading)">over 300 calculators</strong>, covering every major construction and DIY calculation needed worldwide.
+      </p>
+    </div>
+
+    <div class="phases">
+
+      <div class="phase">
+        <h3 class="phase-title"><span class="phase-num">Phase 1 —</span> Foundation Tools (24 Calculators)</h3>
+        <p class="phase-body">
+          The most searched calculators go live first. Concrete, paint, drywall, roofing, flooring, tiles, lumber, insulation and similar essentials form the backbone of the platform. These tools cover the highest-volume searches in the construction niche and provide the strongest foundation for organic growth.
+        </p>
+      </div>
+
+      <div class="phase">
+        <h3 class="phase-title"><span class="phase-num">Phase 2 —</span> Traffic-Building Calculators (40 Calculators)</h3>
+        <p class="phase-body">
+          Room area, wall area, roof pitch, gutter sizing, shingles, mortar, grout, garden beds and soil calculators are added. These target long-tail keywords that bring in steady, consistent organic traffic from homeowners and small contractors.
+        </p>
+      </div>
+
+      <div class="phase">
+        <h3 class="phase-title"><span class="phase-num">Phase 3 —</span> Professional &amp; Trade Tools (56 Calculators)</h3>
+        <p class="phase-body">
+          Framing, joists, rafters, beams, plumbing, electrical, HVAC and detailed cost estimators are introduced. This phase establishes BuildMetric as a serious daily resource for professional contractors and trade specialists.
+        </p>
+      </div>
+
+      <div class="phase">
+        <h3 class="phase-title"><span class="phase-num">Phase 4 —</span> Unit Converters &amp; Engineering Calculators (60 Calculators)</h3>
+        <p class="phase-body">
+          Feet to metres, cubic yards to cubic feet, board-feet conversions, rebar spacing, concrete mix ratios, load calculations and slope gradients. These serve both DIYers working on weekend projects and engineers working across imperial and metric systems.
+        </p>
+      </div>
+
+      <div class="phase">
+        <h3 class="phase-title"><span class="phase-num">Phase 5 —</span> Energy &amp; Efficiency Calculators (40 Calculators)</h3>
+        <p class="phase-body">
+          Solar panel sizing, battery backup, generator sizing, LED savings, insulation payback, heat loss and energy cost calculators for the rapidly growing green-building audience and homeowners seeking long-term savings.
+        </p>
+      </div>
+
+      <div class="phase">
+        <h3 class="phase-title"><span class="phase-num">Phase 6 —</span> Smart Home &amp; Safety Calculators (20 Calculators)</h3>
+        <p class="phase-body">
+          Security camera coverage, Wi-Fi planning, fire sprinkler demand, smoke detector placement and fall-protection calculators for modern homes and code-compliance work.
+        </p>
+      </div>
+
+      <div class="phase">
+        <h3 class="phase-title"><span class="phase-num">Phase 7 —</span> International &amp; Metric Expansion (20 Calculators)</h3>
+        <p class="phase-body">
+          Metric-first versions of every major calculator, plus regional cost estimators, so builders in Europe, Asia, Africa, the Middle East and Latin America get the same accuracy and detail as those using imperial units.
+        </p>
+      </div>
+
+      <div class="phase">
+        <p class="phase-body" style="font-weight:500;color:var(--heading);margin-top:8px">
+          <strong>Total target:</strong> 300+ calculators, each with original explanatory content, verified formulas, worked examples and a clear FAQ section.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CONTACT STRIP ═══════════════ -->
+<section class="content">
+  <div class="container-narrow">
+    <div class="section-head" style="margin-bottom:24px">
+      <h2 class="section-title">Get in Touch</h2>
+    </div>
+    <div class="contact-strip">
+      <div class="contact-strip-inner">
+        <h3 class="contact-strip-title">Found a bug, wrong formula or missing tool?</h3>
+        <p class="contact-strip-desc">
+          We read every message and reply within 2–3 working days. For calculator corrections, please include the tool URL and the standard you are working to — it speeds up the review enormously.
+        </p>
+        <a href="mailto:contact.buildmetric@gmail.com" class="contact-strip-link">
+          contact.buildmetric@gmail.com →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ═══════════════ FAQ ═══════════════ -->
+<section class="faq-section" id="faq">
+  <div class="faq-head">
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+  </div>
+
+  <div class="faq-list">
+
+    <details class="faq-item">
+      <summary>
+        1. What is BuildMetric?
+        <span class="faq-toggle" aria-hidden="true">+</span>
+      </summary>
+      <div class="faq-answer">
+        BuildMetric is a free construction calculator platform with <strong>300+ tools across 12 categories</strong> — concrete, paint, drywall, roofing, flooring, tiles, lumber, plumbing, electrical, HVAC, solar and cost estimation. Every calculator runs entirely in your browser, requires no signup, and shows the formula it uses so you always know how the number was calculated.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        2. Are BuildMetric calculators really free?
+        <span class="faq-toggle" aria-hidden="true">+</span>
+      </summary>
+      <div class="faq-answer">
+        Yes. Every calculator on BuildMetric is <strong>100% free</strong> with no signup, no trial period, and no email gate. We are supported by clean, non-intrusive advertising and optional B2B supplier connections that you never have to use. There are no paywalls and no hidden fees.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        3. Do BuildMetric calculators work in both metric and imperial units?
+        <span class="faq-toggle" aria-hidden="true">+</span>
+      </summary>
+      <div class="faq-answer">
+        Yes. Every calculator supports both imperial units (feet, inches, pounds, gallons) and metric units (metres, centimetres, kilograms, litres). You can switch between the two with <strong>a single click</strong> on any calculator page, and your preference is saved for future visits. This makes every tool usable whether you are building in the United States, United Kingdom, Australia, Canada, Europe, Asia or Africa.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        4. How accurate are BuildMetric calculators?
+        <span class="faq-toggle" aria-hidden="true">+</span>
+      </summary>
+      <div class="faq-answer">
+        Calculators use published formulas from recognised standards bodies and material suppliers. Waste factors can be toggled (typically 5–15%) to account for cutting, spillage and breakage. Results are usually <strong>within 3–5% of a manual take-off</strong> on straightforward geometry. For structural work, always have final quantities verified by a licensed engineer.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        5. How many calculators does BuildMetric offer?
+        <span class="faq-toggle" aria-hidden="true">+</span>
+      </summary>
+      <div class="faq-answer">
+        BuildMetric currently offers over <strong>300 calculators across 12 categories</strong>: Concrete &amp; Masonry, Interior &amp; Finishing, Exterior &amp; Structure, Landscaping &amp; Outdoor, Lumber &amp; Framing, Electrical &amp; HVAC, Plumbing &amp; Piping, Roofing &amp; Siding, Painting &amp; Wallpaper, Road &amp; Driveway, Cost Estimators and Solar &amp; Energy. New calculators are added regularly.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        6. Can I use BuildMetric calculators on mobile devices?
+        <span class="faq-toggle" aria-hidden="true">+</span>
+      </summary>
+      <div class="faq-answer">
+        Yes. Every calculator is designed to work on mobile phones, tablets and desktop computers. The interface is mobile-first, with touch-friendly controls sized for gloved hands on a job site. Pages load in under 1.5 seconds on 4G and continue to work offline after the first load.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        7. Do I need to create an account to use the calculators?
+        <span class="faq-toggle" aria-hidden="true">+</span>
+      </summary>
+      <div class="faq-answer">
+        No. BuildMetric does not require any account, login or email address. All calculators work instantly when you open the page. We do not store your calculations or personal information on our servers. Your unit preference (Imperial or Metric) is saved locally in your own browser, so it remembers your choice next time — <strong>but this data never leaves your device</strong>.
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-col">
+        <h3 class="footer-brand-title">BUILDMETRIC</h3>
+        <p class="footer-brand-desc">Precise calculators for builders, contractors and DIYers worldwide. 300+ free tools covering every major construction and DIY calculation. Built for accuracy, transparency and global use.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">POPULAR TOOLS</h4>
+        <ul>
+          <li><a href="/tools/concrete-calculator.html">Concrete Calculator</a></li>
+          <li><a href="/tools/paint-calculator.html">Paint Calculator</a></li>
+          <li><a href="/tools/roof-calculator.html">Roofing Calculator</a></li>
+          <li><a href="/tools/tile-calculator.html">Tile Calculator</a></li>
+          <li><a href="/tools/lumber-calculator.html">Lumber Calculator</a></li>
+          <li><a href="/tools/flooring-calculator.html">Flooring Calculator</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">INFORMATION</h4>
+        <ul>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms of Service</a></li>
+          <li><a href="/disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">FOLLOW US</h4>
+        <ul>
+          <li><a href="https://youtube.com/@buildmetricyt" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          <li><a href="https://facebook.com/BuildMetric" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">CATEGORIES</h4>
+        <ul>
+          <li><a href="/categories/concrete-masonry.html">Concrete &amp; Masonry</a></li>
+          <li><a href="/categories/interior-finishing.html">Interior &amp; Finishing</a></li>
+          <li><a href="/categories/exterior-structure.html">Exterior &amp; Structure</a></li>
+          <li><a href="/categories/landscaping-outdoor.html">Landscaping &amp; Outdoor</a></li>
+          <li><a href="/categories/lumber-framing.html">Lumber &amp; Framing</a></li>
+          <li><a href="/categories/electrical-hvac.html">Electrical &amp; HVAC</a></li>
+          <li><a href="/categories/plumbing-piping.html">Plumbing &amp; Piping</a></li>
+          <li><a href="/categories/roofing-siding.html">Roofing &amp; Siding</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="footer-year">2026</span> BuildMetric. All rights reserved. Made for builders worldwide.</p>
+      <p class="footer-disclaimer">BuildMetric calculators are provided for estimation purposes only. Always consult a qualified professional before ordering materials or starting construction work. Results may vary based on site conditions, material specifications and local building codes.</p>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scroll-top" type="button" aria-label="Scroll to top">↑</button>
+
+<script>
+(function(){
+  'use strict';
+
+  /* Mobile menu toggle */
+  var toggle = document.getElementById('menu-toggle');
+  var nav = document.getElementById('primary-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if (e.target.tagName === 'A' && window.innerWidth < 760) {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  /* Scroll-to-top */
+  var st = document.getElementById('scroll-top');
+  if (st) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 600) st.classList.add('is-visible');
+      else st.classList.remove('is-visible');
+    }, { passive: true });
+    st.addEventListener('click', function(){
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* Footer year */
+  var y = document.getElementById('footer-year');
+  if (y) y.textContent = new Date().getFullYear();
+
+  /* Only one FAQ open at a time */
+  var faqs = document.querySelectorAll('.faq-item');
+  faqs.forEach(function(item){
+    item.addEventListener('toggle', function(){
+      if (item.open) {
+        faqs.forEach(function(other){
+          if (other !== item && other.open) other.open = false;
+        });
+      }
+    });
+  });
+
+})();
+</script>
+
+</body>
+</html>
