@@ -8215,5 +8215,1287 @@ console.log('✅ BuildMetric: ' + TOOLS_DATA.length + ' tools loaded');
 })();
 </script>
 
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- JAVASCRIPT — PART 3: FILTERS + CATEGORY CARDS -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<script>
+'use strict';
 
+(function initFiltersAndCategories() {
+  const filtersBar = document.getElementById('filters');
+  const categoryBlocks = document.querySelectorAll('.category-block');
+  const resultCount = document.getElementById('resultCount');
+  const loadMoreWrap = document.querySelector('.load-more-wrap');
+
+  if (!filtersBar || categoryBlocks.length === 0) return;
+
+  const totalTools = document.querySelectorAll('.tool-card').length;
+
+  // Update result count text
+  function updateResultCount(visibleCount, filterName) {
+    if (!resultCount) return;
+    if (filterName === 'all') {
+      resultCount.textContent = 'Showing all ' + totalTools + ' free construction calculators';
+    } else {
+      const catName = filterName.charAt(0).toUpperCase() + filterName.slice(1);
+      resultCount.textContent = 'Showing ' + visibleCount + ' ' + catName + ' calculator' + (visibleCount !== 1 ? 's' : '');
+    }
+  }
+
+  // Filter by category
+  function filterByCategory(cat) {
+    let visibleTotal = 0;
+
+    categoryBlocks.forEach(function(block) {
+      const blockCat = block.dataset.category;
+      if (cat === 'all' || blockCat === cat) {
+        block.style.display = '';
+        block.classList.remove('hidden');
+        visibleTotal += block.querySelectorAll('.tool-card').length;
+      } else {
+        block.style.display = 'none';
+        block.classList.add('hidden');
+      }
+    });
+
+    // Hide load more when filtering single category
+    if (loadMoreWrap) {
+      loadMoreWrap.style.display = (cat === 'all') ? '' : 'none';
+    }
+
+    updateResultCount(visibleTotal, cat);
+  }
+
+  // Set active chip
+  function setActiveChip(cat) {
+    filtersBar.querySelectorAll('.chip').forEach(function(c) {
+      const isMatch = (c.dataset.cat === cat);
+      c.classList.toggle('active', isMatch);
+      c.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+    });
+  }
+
+  // Smooth scroll to tools section
+  function scrollToTools() {
+    const toolsSection = document.getElementById('all-tools');
+    if (!toolsSection) return;
+    const headerHeight = (document.querySelector('.header') || {}).offsetHeight || 72;
+    const top = toolsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+    window.scrollTo({ top: top, behavior: 'smooth' });
+  }
+
+  // Chip click handler
+  filtersBar.addEventListener('click', function(e) {
+    const chip = e.target.closest('.chip');
+    if (!chip) return;
+
+    setActiveChip(chip.dataset.cat || 'all');
+    const cat = chip.dataset.cat || 'all';
+    filterByCategory(cat);
+    scrollToTools();
+  });
+
+  // Category card click → filter + scroll
+  const catCards = document.querySelectorAll('.cat-card');
+  catCards.forEach(function(card) {
+    card.addEventListener('click', function(e) {
+      const href = this.getAttribute('href') || '';
+      const match = href.match(/\/tools\/([^\/]+)\//);
+      if (!match) return;
+
+      const cat = match[1];
+      const chipExists = document.querySelector('.chip[data-cat="' + cat + '"]');
+
+      if (chipExists) {
+        e.preventDefault();
+        setActiveChip(cat);
+        filterByCategory(cat);
+        scrollToTools();
+        history.replaceState(null, '', '#cat-' + cat);
+      }
+    });
+  });
+
+  // Expose globally for other scripts
+  window.BuildMetricFilter = {
+    apply: filterByCategory,
+    setActiveChip: setActiveChip,
+    scrollToTools: scrollToTools
+  };
+
+  // Check URL hash on load (e.g. #cat-concrete)
+  if (window.location.hash && window.location.hash.indexOf('#cat-') === 0) {
+    const cat = window.location.hash.replace('#cat-', '');
+    if (document.querySelector('.chip[data-cat="' + cat + '"]')) {
+      setTimeout(function() {
+        setActiveChip(cat);
+        filterByCategory(cat);
+      }, 100);
+    }
+  }
+
+  // Reset to "All" on logo click
+  const logo = document.querySelector('.logo');
+  if (logo) {
+    logo.addEventListener('click', function() {
+      setActiveChip('all');
+      filterByCategory('all');
+    });
+  }
+
+})();
+</script>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+<!-- JAVASCRIPT — PART 4: LOAD MORE + SHOW ALL -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<script>
+'use strict';
+
+(function initLoadMore() {
+  const loadMoreBtn = document.getElementById('loadMore');
+  if (!loadMoreBtn) return;
+
+  const btnText = loadMoreBtn.querySelector('.btn-text');
+  const INITIAL_SHOW = 8;   // Tools per category visible initially
+  const BATCH_SIZE = 8;     // Tools revealed per click
+
+  let isLoading = false;
+
+  // Hide extra tools per category initially
+  function initHiddenTools() {
+    const blocks = document.querySelectorAll('.category-block');
+    let visibleTotal = 0;
+
+    blocks.forEach(function(block) {
+      const cards = block.querySelectorAll('.tool-card');
+      cards.forEach(function(card, idx) {
+        if (idx >= INITIAL_SHOW) {
+          card.classList.add('hidden-tool');
+          card.style.display = 'none';
+        } else {
+          visibleTotal++;
+        }
+      });
+    });
+
+    // Update result count text
+    const resultCount = document.getElementById('resultCount');
+    if (resultCount) {
+      const totalTools = document.querySelectorAll('.tool-card').length;
+      resultCount.textContent = 'Showing ' + visibleTotal + ' of ' + totalTools + ' free construction calculators';
+    }
+
+    // Hide load more if no hidden tools
+    const hiddenCount = document.querySelectorAll('.tool-card.hidden-tool').length;
+    if (hiddenCount === 0) {
+      loadMoreBtn.style.display = 'none';
+    }
+  }
+
+  // Load next batch
+  function loadNextBatch() {
+    const hiddenTools = document.querySelectorAll('.tool-card.hidden-tool:not(.revealed)');
+    const batch = Array.prototype.slice.call(hiddenTools, 0, BATCH_SIZE);
+
+    if (batch.length === 0) {
+      loadMoreBtn.style.display = 'none';
+      return;
+    }
+
+    batch.forEach(function(card, idx) {
+      setTimeout(function() {
+        card.classList.remove('hidden-tool');
+        card.classList.add('revealed');
+        card.style.display = '';
+        card.style.animation = 'fadeInUp 0.4s ease forwards';
+      }, idx * 50);
+    });
+
+    // Check if all loaded
+    setTimeout(function() {
+      const remaining = document.querySelectorAll('.tool-card.hidden-tool:not(.revealed)').length;
+      if (remaining === 0) {
+        loadMoreBtn.style.display = 'none';
+
+        // Update button text
+        if (btnText) btnText.textContent = 'All Tools Loaded';
+
+        // Show "back to top" hint
+        setTimeout(function() {
+          loadMoreBtn.style.opacity = '0.5';
+          loadMoreBtn.style.pointerEvents = 'none';
+        }, 500);
+      }
+    }, batch.length * 50 + 100);
+  }
+
+  // Click handler
+  loadMoreBtn.addEventListener('click', function() {
+    if (isLoading) return;
+    isLoading = true;
+
+    loadMoreBtn.classList.add('loading');
+    if (btnText) btnText.textContent = 'Loading...';
+
+    // Small delay for UX
+    setTimeout(function() {
+      loadNextBatch();
+
+      loadMoreBtn.classList.remove('loading');
+      if (btnText && loadMoreBtn.style.display !== 'none') {
+        btnText.textContent = 'Load More Tools';
+      }
+
+      isLoading = false;
+    }, 400);
+  });
+
+  // Expose for other scripts
+  window.BuildMetricLoadMore = {
+    init: initHiddenTools,
+    showAllInCategory: function(cat) {
+      // When a category is filtered, show ALL tools in that category
+      const block = document.querySelector('.category-block[data-category="' + cat + '"]');
+      if (!block) return;
+
+      block.querySelectorAll('.tool-card').forEach(function(card) {
+        card.style.display = '';
+        card.classList.remove('hidden-tool');
+      });
+
+      // Update result count
+      const resultCount = document.getElementById('resultCount');
+      if (resultCount) {
+        const count = block.querySelectorAll('.tool-card').length;
+        const catName = cat.charAt(0).toUpperCase() + cat.slice(1);
+        resultCount.textContent = 'Showing all ' + count + ' ' + catName + ' calculators';
+      }
+    },
+    reset: function() {
+      // Reset hidden state when "All" is selected
+      initHiddenTools();
+    }
+  };
+
+  // Init on DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initHiddenTools);
+  } else {
+    initHiddenTools();
+  }
+
+  // Hook into filter changes
+  const originalFilter = window.BuildMetricFilter;
+  if (originalFilter) {
+    const originalApply = originalFilter.apply;
+
+    originalFilter.apply = function(cat) {
+      originalApply.call(this, cat);
+
+      if (cat === 'all') {
+        // Reset load-more state
+        if (window.BuildMetricLoadMore) {
+          window.BuildMetricLoadMore.reset();
+        }
+      } else {
+        // Show all in category
+        if (window.BuildMetricLoadMore) {
+          window.BuildMetricLoadMore.showAllInCategory(cat);
+        }
+      }
+    };
+  }
+
+})();
+</script>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+<!-- JAVASCRIPT — PART 5: FAQ ACCORDION + COUNT-UP ANIMATION -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<script>
+'use strict';
+
+/* ═══════════════════════════════════════════════════════════ */
+/* FAQ ACCORDION */
+/* ═══════════════════════════════════════════════════════════ */
+(function initFAQ() {
+  const faqList = document.getElementById('faqList');
+  if (!faqList) return;
+
+  const faqItems = faqList.querySelectorAll('.faq-item');
+
+  faqItems.forEach(function(item) {
+    const btn = item.querySelector('.faq-question');
+    if (!btn) return;
+
+    btn.addEventListener('click', function() {
+      const isOpen = item.classList.contains('open');
+
+      // Close all other FAQs (accordion behavior - only one open at a time)
+      faqItems.forEach(function(other) {
+        if (other !== item) {
+          other.classList.remove('open');
+          const otherBtn = other.querySelector('.faq-question');
+          if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Toggle current
+      if (isOpen) {
+        item.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+
+    // Keyboard: Space/Enter already work on button
+    // But add Escape to close
+    btn.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && item.classList.contains('open')) {
+        item.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.focus();
+      }
+    });
+  });
+
+  // Open first FAQ by default (nice UX + shows how it works)
+  if (faqItems.length > 0) {
+    faqItems[0].classList.add('open');
+    const firstBtn = faqItems[0].querySelector('.faq-question');
+    if (firstBtn) firstBtn.setAttribute('aria-expanded', 'true');
+  }
+
+  // Deep link support: #faq-3 opens FAQ 3
+  if (window.location.hash && window.location.hash.indexOf('#faq-') === 0) {
+    const idx = parseInt(window.location.hash.replace('#faq-', ''), 10) - 1;
+    if (faqItems[idx]) {
+      setTimeout(function() {
+        faqItems.forEach(function(other) {
+          other.classList.remove('open');
+          const otherBtn = other.querySelector('.faq-question');
+          if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+        });
+        faqItems[idx].classList.add('open');
+        const targetBtn = faqItems[idx].querySelector('.faq-question');
+        if (targetBtn) targetBtn.setAttribute('aria-expanded', 'true');
+        faqItems[idx].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 300);
+    }
+  }
+
+})();
+
+/* ═══════════════════════════════════════════════════════════ */
+/* COUNT-UP ANIMATION */
+/* ═══════════════════════════════════════════════════════════ */
+(function initCountUp() {
+  const counters = document.querySelectorAll('[data-count]');
+  if (counters.length === 0) return;
+
+  // Check for reduced motion preference
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function animateCount(el) {
+    const target = parseInt(el.dataset.count, 10);
+    const suffix = el.dataset.suffix || '';
+    const duration = 1500; // ms
+    const startTime = performance.now();
+    const startValue = 0;
+
+    function update(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+
+      // Ease-out cubic (fast start, slow end)
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.floor(startValue + (target - startValue) * eased);
+
+      el.textContent = current + suffix;
+
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        el.textContent = target + suffix;
+      }
+    }
+
+    requestAnimationFrame(update);
+  }
+
+  // Use IntersectionObserver to trigger when visible
+  if ('IntersectionObserver' in window && !prefersReducedMotion) {
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting && !entry.target.dataset.counted) {
+          entry.target.dataset.counted = 'true';
+          animateCount(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.3,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    counters.forEach(function(counter) {
+      observer.observe(counter);
+    });
+  } else {
+    // Fallback: animate immediately (or skip animation if reduced motion)
+    counters.forEach(function(counter) {
+      if (prefersReducedMotion) {
+        const target = parseInt(counter.dataset.count, 10);
+        const suffix = counter.dataset.suffix || '';
+        counter.textContent = target + suffix;
+      } else {
+        animateCount(counter);
+      }
+    });
+  }
+
+})();
+
+/* ═══════════════════════════════════════════════════════════ */
+/* TOOL COUNT UPDATE (Dynamic number from TOOLS_DATA) */
+/* ═══════════════════════════════════════════════════════════ */
+(function updateToolCount() {
+  const toolCountEl = document.getElementById('toolCount');
+  if (!toolCountEl || typeof TOOLS_DATA === 'undefined') return;
+
+  const count = TOOLS_DATA.length;
+  toolCountEl.textContent = count + '+';
+  toolCountEl.dataset.count = count;
+
+})();
+</script>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+<!-- JAVASCRIPT — PART 6: LEAD FORM + NEWSLETTER + B2B PLANS -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<script>
+'use strict';
+
+/* ═══════════════════════════════════════════════════════════ */
+/* LEAD FORM — Validation + Submit */
+/* ═══════════════════════════════════════════════════════════ */
+(function initLeadForm() {
+  const form = document.getElementById('leadForm');
+  const submitBtn = document.getElementById('leadSubmit');
+  const successEl = document.getElementById('leadSuccess');
+  const formCard = document.querySelector('.lead-form-card');
+
+  if (!form) return;
+
+  const fields = {
+    name:    document.getElementById('leadName'),
+    email:   document.getElementById('leadEmail'),
+    phone:   document.getElementById('leadPhone'),
+    country: document.getElementById('leadCountry'),
+    project: document.getElementById('leadProject'),
+    details: document.getElementById('leadDetails'),
+    consent: form.querySelector('input[name="consent"]')
+  };
+
+  // Clear error state on input
+  Object.keys(fields).forEach(function(key) {
+    const field = fields[key];
+    if (!field) return;
+    field.addEventListener('input', function() {
+      field.classList.remove('error');
+      const err = field.parentElement.querySelector('.form-error');
+      if (err) err.remove();
+    });
+    field.addEventListener('change', function() {
+      field.classList.remove('error');
+    });
+  });
+
+  // Show error message under field
+  function showError(field, message) {
+    field.classList.add('error');
+    field.style.borderColor = 'var(--danger)';
+
+    const existing = field.parentElement.querySelector('.form-error');
+    if (existing) existing.remove();
+
+    const err = document.createElement('span');
+    err.className = 'form-error';
+    err.style.cssText = 'font-size:0.75rem;color:var(--danger);font-weight:600;margin-top:4px;display:block;';
+    err.textContent = message;
+    field.parentElement.appendChild(err);
+  }
+
+  // Validate single field
+  function validateField(key) {
+    const field = fields[key];
+    if (!field) return true;
+
+    const value = (field.value || '').trim();
+
+    // Required
+    if (field.required && !value) {
+      showError(field, 'This field is required.');
+      return false;
+    }
+
+    // Email
+    if (key === 'email' && value) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(value)) {
+        showError(field, 'Please enter a valid email address.');
+        return false;
+      }
+    }
+
+    // Phone (min 7 digits)
+    if (key === 'phone' && value) {
+      const digits = value.replace(/\D/g, '');
+      if (digits.length < 7) {
+        showError(field, 'Please enter a valid phone number.');
+        return false;
+      }
+    }
+
+    // Name (min 2 chars)
+    if (key === 'name' && value && value.length < 2) {
+      showError(field, 'Name is too short.');
+      return false;
+    }
+
+    // Consent checkbox
+    if (key === 'consent' && field.required && !field.checked) {
+      showError(field, 'Please accept the Privacy Policy to continue.');
+      return false;
+    }
+
+    return true;
+  }
+
+  // Validate all fields
+  function validateAll() {
+    let isValid = true;
+    Object.keys(fields).forEach(function(key) {
+      if (!validateField(key)) {
+        isValid = false;
+      }
+    });
+    return isValid;
+  }
+
+  // Format phone as user types
+  if (fields.phone) {
+    fields.phone.addEventListener('input', function() {
+      let value = this.value.replace(/[^\d+\-\s()]/g, '');
+      this.value = value.slice(0, 20);
+    });
+  }
+
+  // Submit handler
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    if (!validateAll()) {
+      // Scroll to first error
+      const firstError = form.querySelector('.error');
+      if (firstError) {
+        firstError.focus();
+        firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      return;
+    }
+
+    // Loading state
+    submitBtn.classList.add('loading');
+    submitBtn.disabled = true;
+
+    // Collect data
+    const formData = {
+      name: fields.name.value.trim(),
+      email: fields.email.value.trim(),
+      phone: fields.phone.value.trim(),
+      country: fields.country.value,
+      project_type: fields.project.value,
+      details: fields.details ? fields.details.value.trim() : '',
+      consent: fields.consent.checked,
+      source: 'homepage-lead',
+      timestamp: new Date().toISOString(),
+      page: window.location.href
+    };
+
+    // Simulate API call (replace with real fetch when backend ready)
+    // Uncomment below for real API:
+    /*
+    fetch('/api/lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    })
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      showSuccess();
+    })
+    .catch(function(err) {
+      submitBtn.classList.remove('loading');
+      submitBtn.disabled = false;
+      alert('Something went wrong. Please try again or email hello@buildmetric.org');
+    });
+    */
+
+    // For now — simulated success
+    setTimeout(function() {
+      console.log('Lead submitted:', formData);
+
+      // Track event (if GA4 loaded)
+      if (typeof gtag === 'function') {
+        gtag('event', 'generate_lead', {
+          'event_category': 'Lead',
+          'event_label': formData.project_type,
+          'value': 1
+        });
+      }
+
+      showSuccess();
+    }, 1200);
+
+    function showSuccess() {
+      form.style.display = 'none';
+      if (successEl) {
+        successEl.classList.add('visible');
+      }
+      // Scroll to success
+      if (formCard) {
+        formCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  });
+
+})();
+
+/* ═══════════════════════════════════════════════════════════ */
+/* NEWSLETTER FORM */
+/* ═══════════════════════════════════════════════════════════ */
+(function initNewsletterForm() {
+  const form = document.getElementById('newsletterForm');
+  const emailInput = document.getElementById('newsletterEmail');
+  const submitBtn = document.getElementById('newsletterSubmit');
+  const successEl = document.getElementById('newsletterSuccess');
+
+  if (!form) return;
+
+  // Clear error on input
+  if (emailInput) {
+    emailInput.addEventListener('input', function() {
+      this.style.borderColor = '';
+    });
+  }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const email = (emailInput ? emailInput.value : '').trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+      if (emailInput) {
+        emailInput.style.borderColor = 'var(--danger)';
+        emailInput.focus();
+      }
+      return;
+    }
+
+    // Loading state
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.7';
+    }
+
+    // Simulate API call
+    setTimeout(function() {
+      console.log('Newsletter subscribed:', { email: email, source: 'homepage-newsletter' });
+
+      // Track event
+      if (typeof gtag === 'function') {
+        gtag('event', 'newsletter_signup', {
+          'event_category': 'Newsletter'
+        });
+      }
+
+      form.style.display = 'none';
+      if (successEl) {
+        successEl.classList.add('visible');
+      }
+    }, 800);
+  });
+
+})();
+
+/* ═══════════════════════════════════════════════════════════ */
+/* B2B PLAN BUTTONS */
+/* ═══════════════════════════════════════════════════════════ */
+(function initB2BPlans() {
+  const planButtons = document.querySelectorAll('.plan-cta');
+  if (planButtons.length === 0) return;
+
+  planButtons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const plan = this.dataset.plan || 'unknown';
+
+      // Track event
+      if (typeof gtag === 'function') {
+        gtag('event', 'select_plan', {
+          'event_category': 'B2B',
+          'event_label': plan,
+          'value': plan === 'premium' ? 299 : (plan === 'featured' ? 29 : 0)
+        });
+      }
+
+      // Route based on plan
+      const routes = {
+        'free':     '/directory/join/?plan=free',
+        'featured': '/directory/join/?plan=featured',
+        'premium':  '/directory/join/?plan=premium'
+      };
+
+      const url = routes[plan] || '/directory/join/';
+
+      // Show brief feedback
+      const originalText = this.innerHTML;
+      this.innerHTML = 'Redirecting...';
+      this.disabled = true;
+
+      setTimeout(function() {
+        window.location.href = url;
+      }, 400);
+    });
+  });
+
+})();
+
+/* ═══════════════════════════════════════════════════════════ */
+/* CONTACT BUTTONS (Contractor cards) */
+/* ═══════════════════════════════════════════════════════════ */
+(function initContactButtons() {
+  const contactBtns = document.querySelectorAll('.contractor-footer .contact-btn');
+  if (contactBtns.length === 0) return;
+
+  contactBtns.forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      // Let parent link handle navigation
+      const card = this.closest('.contractor-card');
+      if (card) {
+        const name = card.querySelector('.contractor-info h3');
+        if (typeof gtag === 'function' && name) {
+          gtag('event', 'contractor_contact', {
+            'event_category': 'Directory',
+            'event_label': name.textContent
+          });
+        }
+      }
+    });
+  });
+
+})();
+</script>
   
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- JAVASCRIPT — PART 7: SHARE/SAVE + BACK TO TOP + MENU + HEADER -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<script>
+'use strict';
+
+/* ═══════════════════════════════════════════════════════════ */
+/* MOBILE MENU TOGGLE */
+/* ═══════════════════════════════════════════════════════════ */
+(function initMenuToggle() {
+  const toggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  if (!toggle || !navLinks) return;
+
+  toggle.addEventListener('click', function() {
+    const isOpen = navLinks.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  // Close menu when a link is clicked
+  navLinks.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      navLinks.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+
+  // Close on outside click
+  document.addEventListener('click', function(e) {
+    if (navLinks.classList.contains('open') &&
+        !navLinks.contains(e.target) &&
+        !toggle.contains(e.target)) {
+      navLinks.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+      navLinks.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      toggle.focus();
+    }
+  });
+
+  // Close on resize to desktop
+  let resizeTimer;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      if (window.innerWidth > 968 && navLinks.classList.contains('open')) {
+        navLinks.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+    }, 150);
+  });
+
+})();
+
+/* ═══════════════════════════════════════════════════════════ */
+/* HEADER SCROLL SHADOW */
+/* ═══════════════════════════════════════════════════════════ */
+(function initHeaderScroll() {
+  const header = document.getElementById('header');
+  if (!header) return;
+
+  let lastScroll = 0;
+
+  function onScroll() {
+    const y = window.pageYOffset;
+    if (y > 10) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+    lastScroll = y;
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+})();
+
+/* ═══════════════════════════════════════════════════════════ */
+/* BACK TO TOP BUTTON */
+/* ═══════════════════════════════════════════════════════════ */
+(function initBackToTop() {
+  const btn = document.getElementById('backToTop');
+  if (!btn) return;
+
+  function onScroll() {
+    if (window.pageYOffset > 300) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Track event
+    if (typeof gtag === 'function') {
+      gtag('event', 'back_to_top', { 'event_category': 'UX' });
+    }
+  });
+
+})();
+
+/* ═══════════════════════════════════════════════════════════ */
+/* SHARE FUNCTIONALITY (Native + Fallback) */
+/* ═══════════════════════════════════════════════════════════ */
+(function initShare() {
+  // Add share button dynamically to each tool card
+  const toolCards = document.querySelectorAll('.tool-card');
+  if (toolCards.length === 0) return;
+
+  // Create share bar for tool cards
+  toolCards.forEach(function(card) {
+    const shareBtn = document.createElement('button');
+    shareBtn.type = 'button';
+    shareBtn.className = 'tool-share-btn';
+    shareBtn.setAttribute('aria-label', 'Share this tool');
+    shareBtn.innerHTML = '📤';
+    shareBtn.style.cssText =
+      'position:absolute;bottom:12px;right:12px;width:32px;height:32px;' +
+      'border-radius:50%;background:var(--gray-lighter);color:var(--gray);' +
+      'border:none;cursor:pointer;font-size:0.875rem;display:flex;' +
+      'align-items:center;justify-content:center;opacity:0;' +
+      'transition:all 0.2s ease;z-index:2;';
+
+    // Show on card hover
+    card.addEventListener('mouseenter', function() {
+      shareBtn.style.opacity = '1';
+    });
+    card.addEventListener('mouseleave', function() {
+      shareBtn.style.opacity = '0';
+    });
+
+    // Hover on button
+    shareBtn.addEventListener('mouseenter', function() {
+      shareBtn.style.background = 'var(--primary)';
+      shareBtn.style.color = 'var(--white)';
+      shareBtn.style.transform = 'scale(1.1)';
+    });
+    shareBtn.addEventListener('mouseleave', function() {
+      shareBtn.style.background = 'var(--gray-lighter)';
+      shareBtn.style.color = 'var(--gray)';
+      shareBtn.style.transform = 'scale(1)';
+    });
+
+    // Share click
+    shareBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const url = window.location.origin + card.getAttribute('href');
+      const title = card.querySelector('.name') ? card.querySelector('.name').textContent : 'BuildMetric Tool';
+
+      // Try native share first (mobile)
+      if (navigator.share) {
+        navigator.share({
+          title: title + ' — BuildMetric',
+          text: 'Check out this free construction calculator:',
+          url: url
+        }).then(function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'share', { 'method': 'native', 'content_type': 'tool' });
+          }
+        }).catch(function(err) {
+          if (err.name !== 'AbortError') {
+            fallbackShare(url, title);
+          }
+        });
+      } else {
+        fallbackShare(url, title);
+      }
+    });
+
+    card.style.position = 'relative';
+    card.appendChild(shareBtn);
+  });
+
+  // Fallback: copy link to clipboard + show toast
+  function fallbackShare(url, title) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(function() {
+        showToast('✅ Link copied to clipboard!');
+        if (typeof gtag === 'function') {
+          gtag('event', 'share', { 'method': 'clipboard', 'content_type': 'tool' });
+        }
+      }).catch(function() {
+        promptCopy(url);
+      });
+    } else {
+      promptCopy(url);
+    }
+  }
+
+  function promptCopy(url) {
+    window.prompt('Copy this link:', url);
+  }
+
+  // Toast notification
+  function showToast(message) {
+    let toast = document.getElementById('bm-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'bm-toast';
+      toast.style.cssText =
+        'position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);' +
+        'background:var(--dark);color:var(--white);padding:12px 24px;' +
+        'border-radius:999px;font-size:0.875rem;font-weight:600;' +
+        'box-shadow:0 12px 32px rgba(15,23,42,0.25);z-index:9999;' +
+        'opacity:0;transition:all 0.3s ease;pointer-events:none;';
+      document.body.appendChild(toast);
+    }
+
+    toast.textContent = message;
+    requestAnimationFrame(function() {
+      toast.style.opacity = '1';
+      toast.style.transform = 'translateX(-50%) translateY(0)';
+    });
+
+    setTimeout(function() {
+      toast.style.opacity = '0';
+      toast.style.transform = 'translateX(-50%) translateY(20px)';
+    }, 2500);
+  }
+
+  // Expose globally
+  window.BuildMetricShare = {
+    share: function(url, title) {
+      if (navigator.share) {
+        navigator.share({ title: title, url: url });
+      } else {
+        fallbackShare(url, title);
+      }
+    },
+    toast: showToast
+  };
+
+})();
+
+/* ═══════════════════════════════════════════════════════════ */
+/* SAVE TO LOCALSTORAGE (Saved Tools) */
+/* ═══════════════════════════════════════════════════════════ */
+(function initSaveFeature() {
+  const SAVE_KEY = 'buildmetric_saved_tools';
+
+  // Add save button dynamically to each tool card
+  const toolCards = document.querySelectorAll('.tool-card');
+  if (toolCards.length === 0) return;
+
+  // Get saved tools from localStorage
+  function getSaved() {
+    try {
+      const raw = localStorage.getItem(SAVE_KEY);
+      return raw ? JSON.parse(raw) : [];
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function setSaved(arr) {
+    try {
+      localStorage.setItem(SAVE_KEY, JSON.stringify(arr));
+    } catch (e) {
+      // localStorage disabled or full
+    }
+  }
+
+  // Check if a tool is saved
+  function isSaved(url) {
+    return getSaved().some(function(item) { return item.url === url; });
+  }
+
+  // Toggle save state
+  function toggleSave(url, name, icon) {
+    const saved = getSaved();
+    const idx = saved.findIndex(function(item) { return item.url === url; });
+
+    if (idx >= 0) {
+      saved.splice(idx, 1);
+      setSaved(saved);
+      return false;
+    } else {
+      saved.push({
+        url: url,
+        name: name,
+        icon: icon,
+        savedAt: new Date().toISOString()
+      });
+      setSaved(saved);
+      return true;
+    }
+  }
+
+  // Add save button to each card
+  toolCards.forEach(function(card) {
+    const url = card.getAttribute('href');
+    const nameEl = card.querySelector('.name');
+    const iconEl = card.querySelector('.icon');
+
+    if (!url || !nameEl) return;
+
+    const name = nameEl.textContent;
+    const icon = iconEl ? iconEl.textContent.trim() : '🔧';
+
+    const saveBtn = document.createElement('button');
+    saveBtn.type = 'button';
+    saveBtn.className = 'tool-save-btn';
+    saveBtn.setAttribute('aria-label', 'Save this tool');
+    saveBtn.style.cssText =
+      'position:absolute;bottom:12px;right:52px;width:32px;height:32px;' +
+      'border-radius:50%;background:var(--gray-lighter);color:var(--gray);' +
+      'border:none;cursor:pointer;font-size:0.875rem;display:flex;' +
+      'align-items:center;justify-content:center;opacity:0;' +
+      'transition:all 0.2s ease;z-index:2;';
+
+    // Set initial state
+    function updateSaveIcon() {
+      const saved = isSaved(url);
+      saveBtn.innerHTML = saved ? '❤️' : '🤍';
+      saveBtn.setAttribute('aria-pressed', saved ? 'true' : 'false');
+      saveBtn.title = saved ? 'Remove from saved' : 'Save this tool';
+    }
+    updateSaveIcon();
+
+    // Show on card hover (always visible if saved)
+    card.addEventListener('mouseenter', function() {
+      saveBtn.style.opacity = '1';
+    });
+    card.addEventListener('mouseleave', function() {
+      if (!isSaved(url)) {
+        saveBtn.style.opacity = '0';
+      }
+    });
+
+    // Hover style
+    saveBtn.addEventListener('mouseenter', function() {
+      saveBtn.style.transform = 'scale(1.1)';
+    });
+    saveBtn.addEventListener('mouseleave', function() {
+      saveBtn.style.transform = 'scale(1)';
+    });
+
+    // Save click
+    saveBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const saved = toggleSave(url, name, icon);
+      updateSaveIcon();
+
+      if (saved) {
+        saveBtn.style.opacity = '1';
+        if (window.BuildMetricShare && window.BuildMetricShare.toast) {
+          window.BuildMetricShare.toast('❤️ Saved: ' + name);
+        }
+        if (typeof gtag === 'function') {
+          gtag('event', 'save_tool', { 'event_category': 'Engagement', 'event_label': name });
+        }
+      } else {
+        if (window.BuildMetricShare && window.BuildMetricShare.toast) {
+          window.BuildMetricShare.toast('Removed from saved');
+        }
+      }
+    });
+
+    // Set initial opacity if already saved
+    if (isSaved(url)) {
+      saveBtn.style.opacity = '1';
+    }
+
+    card.style.position = 'relative';
+    card.appendChild(saveBtn);
+  });
+
+  // Expose globally
+  window.BuildMetricSave = {
+    getSaved: getSaved,
+    isSaved: isSaved,
+    toggle: toggleSave
+  };
+
+})();
+
+/* ═══════════════════════════════════════════════════════════ */
+/* SMOOTH SCROLL FOR ANCHOR LINKS */
+/* ═══════════════════════════════════════════════════════════ */
+(function initSmoothAnchors() {
+  document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === '#' || href === '#!') return;
+
+      const target = document.querySelector(href);
+      if (!target) return;
+
+      e.preventDefault();
+
+      const header = document.querySelector('.header');
+      const headerHeight = header ? header.offsetHeight : 72;
+      const top = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+
+      window.scrollTo({ top: top, behavior: 'smooth' });
+      history.replaceState(null, '', href);
+    });
+  });
+
+})();
+
+/* ═══════════════════════════════════════════════════════════ */
+/* LAZY LOADING — Reveal cards on scroll */
+/* ═══════════════════════════════════════════════════════════ */
+(function initRevealOnScroll() {
+  if (!('IntersectionObserver' in window)) return;
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) return;
+
+  const targets = document.querySelectorAll('.cat-card, .blog-card, .b2b-prop, .why-item, .contractor-card');
+  if (targets.length === 0) return;
+
+  targets.forEach(function(el) {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  });
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        // Stagger based on position
+        const delay = Array.prototype.indexOf.call(el.parentElement.children, el) * 60;
+        setTimeout(function() {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        }, Math.min(delay, 400));
+        observer.unobserve(el);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  targets.forEach(function(el) { observer.observe(el); });
+
+})();
+
+/* ═══════════════════════════════════════════════════════════ */
+/* CONSOLE WELCOME */
+/* ═══════════════════════════════════════════════════════════ */
+(function consoleWelcome() {
+  const styles = [
+    'background: linear-gradient(135deg, #E85D04, #FFBA08)',
+    'color: white',
+    'padding: 12px 24px',
+    'border-radius: 8px',
+    'font-size: 16px',
+    'font-weight: bold',
+    'font-family: -apple-system, sans-serif'
+  ].join(';');
+
+  console.log('%c🏗️ BuildMetric', styles);
+  console.log(
+    '%c🚀 200+ Free Construction Calculators\n' +
+    '📍 https://buildmetric.org\n' +
+    '📺 https://youtube.com/@buildmetricyt\n' +
+    '📘 https://facebook.com/BuildMetric',
+    'color: #64748B; font-size: 13px; line-height: 1.6;'
+  );
+  console.log(
+    '%c💡 Want to partner or advertise? partners@buildmetric.org',
+    'color: #E85D04; font-size: 12px; font-weight: bold;'
+  );
+})();
+</script>
+
+  </body>
+  </html>
