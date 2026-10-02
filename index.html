@@ -6734,7 +6734,7 @@ textarea:focus-visible{
       </div>
 
       <div class="stat">
-        <span class="num" data-count="13">13</span>
+        <span class="num" data-count="12">12</span>
         <span class="lbl">Categories</span>
       </div>
 
@@ -9496,5 +9496,302 @@ console.log('✅ BuildMetric: ' + TOOLS_DATA.length + ' tools loaded');
 })();
 </script>
 
+  <!-- ═══════════════════════════════════════════════════════════ -->
+<!-- LOAD MORE + ALL FEATURES -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<script>
+'use strict';
+
+/* ═══ LOAD MORE ═══ */
+(function initLoadMore() {
+  var btn = document.getElementById('loadMore');
+  if (!btn) return;
+
+  var INIT = 8;    // 8 tools per category initially
+  var BATCH = 8;   // 8 more on each click
+  var loading = false;
+
+  function init() {
+    document.querySelectorAll('.category-block').forEach(function(b) {
+      b.querySelectorAll('.tool-card').forEach(function(c, i) {
+        if (i >= INIT) {
+          c.classList.add('hidden-tool');
+          c.style.display = 'none';
+        }
+      });
+    });
+    if (document.querySelectorAll('.tool-card.hidden-tool').length === 0) {
+      btn.style.display = 'none';
+    }
+  }
+
+  function loadNext() {
+    var hidden = document.querySelectorAll('.tool-card.hidden-tool:not(.revealed)');
+    var batch = Array.prototype.slice.call(hidden, 0, BATCH);
+
+    if (!batch.length) {
+      btn.style.display = 'none';
+      return;
+    }
+
+    batch.forEach(function(c, i) {
+      setTimeout(function() {
+        c.classList.remove('hidden-tool');
+        c.classList.add('revealed');
+        c.style.display = '';
+        c.style.animation = 'fadeInUp 0.4s ease forwards';
+      }, i * 50);
+    });
+
+    setTimeout(function() {
+      var remaining = document.querySelectorAll('.tool-card.hidden-tool:not(.revealed)').length;
+      if (remaining === 0) {
+        btn.style.display = 'none';
+      }
+    }, batch.length * 50 + 100);
+  }
+
+  btn.addEventListener('click', function() {
+    if (loading) return;
+    loading = true;
+    btn.classList.add('loading');
+
+    var btnText = btn.querySelector('.btn-text');
+    if (btnText) btnText.textContent = 'Loading...';
+
+    setTimeout(function() {
+      loadNext();
+      btn.classList.remove('loading');
+      if (btnText) btnText.textContent = 'Load More Tools';
+      loading = false;
+    }, 400);
+  });
+
+  init();
+})();
+
+/* ═══ FILTER CHIPS ═══ */
+(function initFilters() {
+  var bar = document.getElementById('filters');
+  var blocks = document.querySelectorAll('.category-block');
+  var countEl = document.getElementById('resultCount');
+  var loadWrap = document.querySelector('.load-more-wrap');
+  if (!bar || !blocks.length) return;
+
+  var total = document.querySelectorAll('.tool-card').length;
+
+  function apply(cat) {
+    var vis = 0;
+    blocks.forEach(function(b) {
+      if (cat === 'all' || b.dataset.category === cat) {
+        b.style.display = '';
+        vis += b.querySelectorAll('.tool-card').length;
+      } else {
+        b.style.display = 'none';
+      }
+    });
+    if (loadWrap) loadWrap.style.display = (cat === 'all') ? '' : 'none';
+    if (countEl) {
+      if (cat === 'all') countEl.textContent = 'Showing ' + total + ' free construction calculators';
+      else {
+        var name = cat.charAt(0).toUpperCase() + cat.slice(1);
+        countEl.textContent = 'Showing ' + vis + ' ' + name + ' calculator' + (vis !== 1 ? 's' : '');
+      }
+    }
+  }
+
+  bar.addEventListener('click', function(e) {
+    var chip = e.target.closest('.chip');
+    if (!chip) return;
+    bar.querySelectorAll('.chip').forEach(function(c) {
+      c.classList.remove('active');
+      c.setAttribute('aria-selected', 'false');
+    });
+    chip.classList.add('active');
+    chip.setAttribute('aria-selected', 'true');
+    apply(chip.dataset.cat || 'all');
+    var tools = document.getElementById('all-tools');
+    if (tools) {
+      var h = (document.querySelector('.header') || {}).offsetHeight || 72;
+      window.scrollTo({ top: tools.offsetTop - h - 20, behavior: 'smooth' });
+    }
+  });
+
+  document.querySelectorAll('.cat-card').forEach(function(card) {
+    card.addEventListener('click', function(e) {
+      var m = (this.getAttribute('href') || '').match(/\/tools\/([^\/]+)\//);
+      if (!m) return;
+      var cat = m[1];
+      if (document.querySelector('.chip[data-cat="' + cat + '"]')) {
+        e.preventDefault();
+        bar.querySelectorAll('.chip').forEach(function(c) {
+          var active = c.dataset.cat === cat;
+          c.classList.toggle('active', active);
+          c.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
+        apply(cat);
+        var tools = document.getElementById('all-tools');
+        if (tools) {
+          var h = (document.querySelector('.header') || {}).offsetHeight || 72;
+          window.scrollTo({ top: tools.offsetTop - h - 20, behavior: 'smooth' });
+        }
+      }
+    });
+  });
+})();
+
+/* ═══ FAQ ACCORDION ═══ */
+(function initFAQ() {
+  var items = document.querySelectorAll('#faqList .faq-item');
+  if (!items.length) return;
+  items.forEach(function(item) {
+    var btn = item.querySelector('.faq-question');
+    if (!btn) return;
+    btn.addEventListener('click', function() {
+      var open = item.classList.contains('open');
+      items.forEach(function(o) {
+        o.classList.remove('open');
+        var b = o.querySelector('.faq-question');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      });
+      if (!open) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+  if (items[0]) {
+    items[0].classList.add('open');
+    var fb = items[0].querySelector('.faq-question');
+    if (fb) fb.setAttribute('aria-expanded', 'true');
+  }
+})();
+
+/* ═══ COUNT-UP ═══ */
+(function initCountUp() {
+  var counters = document.querySelectorAll('[data-count]');
+  if (!counters.length) return;
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function animate(el) {
+    var target = parseInt(el.dataset.count, 10);
+    var suffix = el.dataset.suffix || '';
+    var start = performance.now();
+    function tick(now) {
+      var p = Math.min((now - start) / 1500, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.floor(target * eased) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+      else el.textContent = target + suffix;
+    }
+    requestAnimationFrame(tick);
+  }
+  if ('IntersectionObserver' in window && !reduced) {
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting && !e.target.dataset.counted) {
+          e.target.dataset.counted = 'true';
+          animate(e.target);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    counters.forEach(function(c) { obs.observe(c); });
+  } else {
+    counters.forEach(function(c) {
+      c.textContent = parseInt(c.dataset.count, 10) + (c.dataset.suffix || '');
+    });
+  }
+})();
+
+/* ═══ LEAD FORM ═══ */
+(function initLeadForm() {
+  var form = document.getElementById('leadForm');
+  if (!form) return;
+  var btn = document.getElementById('leadSubmit');
+  var success = document.getElementById('leadSuccess');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var valid = true;
+    form.querySelectorAll('[required]').forEach(function(f) {
+      if (!f.value || (f.type === 'checkbox' && !f.checked)) {
+        f.style.borderColor = 'var(--danger)';
+        valid = false;
+      } else {
+        f.style.borderColor = '';
+      }
+    });
+    if (!valid) return;
+    btn.classList.add('loading');
+    btn.disabled = true;
+    setTimeout(function() {
+      form.style.display = 'none';
+      if (success) success.classList.add('visible');
+    }, 1200);
+  });
+})();
+
+/* ═══ NEWSLETTER ═══ */
+(function initNewsletter() {
+  var form = document.getElementById('newsletterForm');
+  if (!form) return;
+  var success = document.getElementById('newsletterSuccess');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var email = document.getElementById('newsletterEmail');
+    if (!email.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+      email.style.borderColor = 'var(--danger)';
+      return;
+    }
+    form.style.display = 'none';
+    if (success) success.classList.add('visible');
+  });
+})();
+
+/* ═══ B2B PLANS ═══ */
+(function initB2B() {
+  document.querySelectorAll('.plan-cta').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var plan = this.dataset.plan || 'free';
+      window.location.href = '/directory/join/?plan=' + plan;
+    });
+  });
+})();
+
+/* ═══ MENU TOGGLE ═══ */
+(function initMenu() {
+  var toggle = document.getElementById('menuToggle');
+  var links = document.getElementById('navLinks');
+  if (!toggle || !links) return;
+  toggle.addEventListener('click', function() {
+    var open = links.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  links.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      links.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+
+/* ═══ HEADER + BACK TO TOP ═══ */
+(function initScroll() {
+  var header = document.getElementById('header');
+  var back = document.getElementById('backToTop');
+  window.addEventListener('scroll', function() {
+    var y = window.pageYOffset;
+    if (header) header.classList.toggle('scrolled', y > 10);
+    if (back) back.classList.toggle('visible', y > 300);
+  }, { passive: true });
+  if (back) back.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+
+console.log('✅ BuildMetric: All features loaded');
+</script>
+  
   </body>
   </html>
