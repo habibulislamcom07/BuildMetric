@@ -1,0 +1,1971 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <!-- ═══════════════════════════════════════════════════════════
+       BUILDMETRIC.ORG — HOMEPAGE
+       Free construction calculators for contractors, engineers,
+       project managers, and serious DIY builders.
+       Version: 1.0.0
+       ═══════════════════════════════════════════════════════════ -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="color-scheme" content="light" />
+  <meta name="theme-color" content="#0F2A5C" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- ═══ PRIMARY SEO ═══ -->
+  <title>BuildMetric — 300+ Free Construction Calculators for Contractors & Engineers</title>
+  <meta name="description" content="Free, fast construction calculators for concrete, framing, roofing, electrical, plumbing, solar, and 300+ field-ready tools. Instant results, no signup, engineer-grade formulas." />
+  <meta name="keywords" content="construction calculator, concrete calculator, framing calculator, roofing calculator, electrical load calculator, solar panel calculator, cost estimator, construction tools" />
+  <meta name="author" content="BuildMetric" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow" />
+
+  <!-- ═══ CANONICAL & HREFLANG ═══ -->
+  <link rel="canonical" href="https://buildmetric.org/" />
+  <link rel="alternate" hreflang="x-default" href="https://buildmetric.org/" />
+  <link rel="alternate" hreflang="en" href="https://buildmetric.org/" />
+
+  <!-- ═══ OPEN GRAPH ═══ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BuildMetric" />
+  <meta property="og:title" content="BuildMetric — 300+ Free Construction Calculators" />
+  <meta property="og:description" content="Engineer-grade construction calculators for concrete, framing, roofing, electrical, solar, and 300+ field tools. Instant results. No signup." />
+  <meta property="og:url" content="https://buildmetric.org/" />
+  <meta property="og:image" content="https://buildmetric.org/assets/og-homepage.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="BuildMetric — construction calculators for the field" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <meta property="og:locale:alternate" content="en_AU" />
+  <meta property="og:locale:alternate" content="en_CA" />
+
+  <!-- ═══ TWITTER CARD ═══ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BuildMetric — 300+ Free Construction Calculators" />
+  <meta name="twitter:description" content="Engineer-grade construction calculators. Instant results. No signup. Concrete, framing, roofing, electrical, solar + 296 more." />
+  <meta name="twitter:image" content="https://buildmetric.org/assets/og-homepage.jpg" />
+  <meta name="twitter:image:alt" content="BuildMetric — construction calculators" />
+
+  <!-- ═══ PERFORMANCE HINTS ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+  <link rel="dns-prefetch" href="https://ipapi.co" />
+  <link rel="dns-prefetch" href="https://images.unsplash.com" />
+
+  <!-- ═══ FONTS — Inter + JetBrains Mono ═══ -->
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    />
+  </noscript>
+
+  <!-- ═══ STYLESHEETS (load order matters) ═══ -->
+  <link rel="stylesheet" href="/css/blueprint.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/homepage.css" />
+  <link rel="stylesheet" href="/css/responsive.css" />
+  <link rel="stylesheet" href="/css/print.css" media="print" />
+
+  <!-- ═══ FAVICONS ═══ -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+  <link rel="mask-icon" href="/assets/mask-icon.svg" color="#0F2A5C" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- ═══ ADSENSE — loaded AFTER consent (handled in main.js) ═══ -->
+  <script>
+    /* Deferred AdSense loader — real script injected only after cookie
+       consent is granted. Placeholder client ID below.
+       Replace ca-pub-XXXXXXXXXXXXXXXX with your real AdSense publisher ID. */
+    window.__BM_ADSENSE_CLIENT__ = 'ca-pub-XXXXXXXXXXXXXXXX';
+  </script>
+
+  <!-- ═══ JSON-LD — ORGANIZATION ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://buildmetric.org/#organization",
+    "name": "BuildMetric",
+    "alternateName": "BuildMetric.org",
+    "url": "https://buildmetric.org/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://buildmetric.org/assets/logo.svg",
+      "width": 512,
+      "height": 512
+    },
+    "description": "Free construction calculators for contractors, engineers, project managers, and DIY builders. 300+ field-ready tools across 12 categories.",
+    "email": "contact.buildmetric@gmail.com",
+    "sameAs": [
+      "https://facebook.com/BuildMetric",
+      "https://youtube.com/@buildmetricyt"
+    ],
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact.buildmetric@gmail.com",
+        "availableLanguage": ["English"]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ═══ JSON-LD — WEBSITE + SEARCH ACTION ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://buildmetric.org/#website",
+    "url": "https://buildmetric.org/",
+    "name": "BuildMetric",
+    "description": "Free construction calculators for the field.",
+    "publisher": { "@id": "https://buildmetric.org/#organization" },
+    "inLanguage": "en",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://buildmetric.org/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- ═══ JSON-LD — FAQ PAGE (homepage FAQs, matches visible content) ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Are BuildMetric calculators really free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Every calculator on BuildMetric is free to use with no signup, no paywall, and no subscription. The site is supported by display advertising and optional supplier lead referrals."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which building codes and standards do the calculators follow?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Formulas reference ACI 318-19 and ACI 211.1 for concrete, AISC and NDS for steel and timber, ASHRAE and NEC for electrical and HVAC, and regional equivalents including BS EN 1992, AS 3600, CSA A23.3, and IS 456. Every tool page lists its specific reference."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do the calculators work offline on a job site?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "After a page has loaded once, the calculation runs entirely in your browser with no network calls. You can keep a tool page open in a tab on-site and it will continue to work through intermittent signal loss."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I switch between imperial and metric units?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Every calculator has an Imperial/Metric toggle at the top of the input card. The site also auto-detects your region and sets the default system, but you can override it at any time and the choice is remembered."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are the results accurate enough for permit drawings?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The calculators produce standard engineering quantities you would use in a takeoff, estimate, or preliminary design. Final permit documents and structural sign-offs should always be verified by a licensed engineer or architect in your jurisdiction."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="bm-home">
+
+  <!-- ═══ SKIP LINK (a11y) ═══ -->
+  <a href="#main" class="bm-skip-link">Skip to main content</a>
+
+  <!-- ═══ HEADER — START (full header markup continues in PART 2) ═══ -->
+  <header class="bm-header" role="banner" data-bm-header>
+
+    
+  <!-- ═══════════════════════════════════════════════════════════
+       HEADER — Sticky, navy, shaaf
+       Contains: brand, primary nav, search shortcut, mobile toggle
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="bm-header__bar">
+
+    <!-- BRAND -->
+    <a href="/" class="bm-brand" aria-label="BuildMetric home">
+      <svg class="bm-brand__mark" viewBox="0 0 40 40" width="32" height="32" aria-hidden="true" focusable="false">
+        <!-- Hard-hat meets set-square mark -->
+        <rect x="4" y="22" width="32" height="4" rx="1" fill="#F59E0B"/>
+        <path d="M8 22 V16 A12 12 0 0 1 32 16 V22" fill="none" stroke="#10B981" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M20 10 V22" stroke="#10B981" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="20" cy="33" r="2" fill="#10B981"/>
+      </svg>
+      <span class="bm-brand__text">
+        <span class="bm-brand__build">Build</span><span class="bm-brand__metric">Metric</span>
+      </span>
+    </a>
+
+    <!-- DESKTOP NAV -->
+    <nav class="bm-nav" aria-label="Primary">
+      <ul class="bm-nav__list">
+        <li><a href="/categories/">All Categories</a></li>
+        <li><a href="/tools/">All Tools</a></li>
+        <li><a href="/how-to-use.html">How to Use</a></li>
+        <li><a href="/why-trust.html">Why Trust Us</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- HEADER ACTIONS -->
+    <div class="bm-header__actions">
+      <button
+        type="button"
+        class="bm-icon-btn"
+        data-bm-search-open
+        aria-label="Open search"
+        aria-controls="bm-search-panel"
+        aria-expanded="false"
+      >
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+          <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M16.5 16.5 L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <button
+        type="button"
+        class="bm-icon-btn bm-menu-toggle"
+        data-bm-menu-toggle
+        aria-label="Open menu"
+        aria-controls="bm-mobile-menu"
+        aria-expanded="false"
+      >
+        <span class="bm-menu-toggle__bars" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- ═══ SEARCH PANEL (hidden until search icon / Ctrl+K) ═══ -->
+  <div
+    class="bm-search-panel"
+    id="bm-search-panel"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Search tools"
+    hidden
+  >
+    <div class="bm-search-panel__inner">
+      <label for="bm-search-input" class="bm-sr-only">Search construction calculators</label>
+      <input
+        id="bm-search-input"
+        type="search"
+        class="bm-search-panel__input"
+        placeholder="Search 300+ calculators… (e.g. concrete slab, roof pitch, wire gauge)"
+        autocomplete="off"
+        spellcheck="false"
+        inputmode="search"
+      />
+      <button type="button" class="bm-search-panel__close" data-bm-search-close aria-label="Close search">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+          <path d="M6 6 L18 18 M18 6 L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <ul class="bm-search-panel__results" id="bm-search-results" role="listbox" aria-label="Search results"></ul>
+    <p class="bm-search-panel__hint">
+      <kbd>↑</kbd><kbd>↓</kbd> to navigate · <kbd>Enter</kbd> to open · <kbd>Esc</kbd> to close
+    </p>
+  </div>
+
+  <!-- ═══ MOBILE MENU ═══ -->
+  <nav
+    class="bm-mobile-menu"
+    id="bm-mobile-menu"
+    aria-label="Mobile primary"
+    hidden
+  >
+    <ul class="bm-mobile-menu__list">
+      <li><a href="/categories/">All Categories</a></li>
+      <li><a href="/tools/">All Tools</a></li>
+      <li><a href="/how-to-use.html">How to Use</a></li>
+      <li><a href="/why-trust.html">Why Trust Us</a></li>
+      <li><a href="/suppliers.html">For Suppliers</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <div class="bm-mobile-menu__meta">
+      <a href="mailto:contact.buildmetric@gmail.com">contact.buildmetric@gmail.com</a>
+    </div>
+  </nav>
+
+</header>
+<!-- ═══ HEADER — END ═══ -->
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     GEO BANNER — dismissible, blue-pale, ONE line
+     Sets default unit system + currency based on region.
+     Dismissal stored in localStorage for 30 days.
+     ═══════════════════════════════════════════════════════════ -->
+<aside class="bm-geo-banner" data-bm-geo-banner hidden aria-live="polite">
+  <div class="bm-geo-banner__inner">
+    <span class="bm-geo-banner__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="18" height="18" focusable="false">
+        <path d="M12 2 A10 10 0 1 0 22 12 A10 10 0 0 0 12 2 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M2 12 H22 M12 2 C15 6 15 18 12 22 M12 2 C9 6 9 18 12 22" fill="none" stroke="currentColor" stroke-width="2"/>
+      </svg>
+    </span>
+    <p class="bm-geo-banner__text">
+      Showing <strong data-bm-geo-units>Imperial</strong> units and
+      <strong data-bm-geo-currency>USD</strong>.
+      <button type="button" class="bm-geo-banner__switch" data-bm-geo-switch>Switch to Metric</button>
+    </p>
+    <button type="button" class="bm-geo-banner__close" data-bm-geo-dismiss aria-label="Dismiss region notice">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+        <path d="M6 6 L18 18 M18 6 L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+</aside>
+
+
+<!-- ═══ MAIN ═══ -->
+<main id="main">
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HERO — navy gradient + subtle blueprint grid + real job-site photo
+       Copy is engineer-voice. No "Welcome to". No fluff.
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="bm-hero" aria-labelledby="bm-hero-title">
+
+    <!-- Background: real construction photo, low opacity, decorative -->
+    <img
+      class="bm-hero__bg"
+      src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1920&q=70"
+      srcset="
+        https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=768&q=65 768w,
+        https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1280&q=68 1280w,
+        https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1920&q=70 1920w
+      "
+      sizes="100vw"
+      alt=""
+      width="1920"
+      height="1280"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+      aria-hidden="true"
+    />
+    <div class="bm-hero__veil" aria-hidden="true"></div>
+
+    <div class="bm-hero__inner">
+
+      <p class="bm-section-label">// CONSTRUCTION CALCULATORS //</p>
+
+      <h1 id="bm-hero-title" class="bm-hero__title">
+        Build right.<br />
+        <span class="bm-hero__title-accent">Measure twice.</span>
+      </h1>
+
+      <p class="bm-hero__lede">
+        300+ field-ready calculators for concrete, framing, roofing, electrical,
+        solar, and 7 more trades. Standard-based formulas. Instant results.
+        No signup — ever.
+      </p>
+
+      <!-- SEARCH -->
+      <form class="bm-hero__search" role="search" action="/search" method="get" autocomplete="off">
+        <label for="bm-hero-search" class="bm-sr-only">Search construction calculators</label>
+        <span class="bm-hero__search-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" focusable="false">
+            <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M16.5 16.5 L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <input
+          id="bm-hero-search"
+          name="q"
+          type="search"
+          placeholder="Concrete slab, roof pitch, wire gauge, solar payback…"
+          inputmode="search"
+          spellcheck="false"
+        />
+        <button type="submit" class="bm-hero__search-btn">
+          Search <span aria-hidden="true">→</span>
+        </button>
+      </form>
+
+      <!-- POPULAR CHIPS -->
+      <div class="bm-hero__chips" role="list" aria-label="Popular calculators">
+        <span class="bm-hero__chips-label">Popular:</span>
+        <a role="listitem" class="bm-chip" href="/tools/concrete-slab-calculator.html">Concrete Slab</a>
+        <a role="listitem" class="bm-chip" href="/tools/roof-pitch-calculator.html">Roof Pitch</a>
+        <a role="listitem" class="bm-chip" href="/tools/stud-wall-framing.html">Stud Wall</a>
+        <a role="listitem" class="bm-chip" href="/tools/wire-gauge-calculator.html">Wire Gauge</a>
+        <a role="listitem" class="bm-chip" href="/tools/solar-panel-payback.html">Solar Payback</a>
+        <a role="listitem" class="bm-chip" href="/tools/paint-coverage.html">Paint Coverage</a>
+      </div>
+
+      <!-- STATS STRIP -->
+      <dl class="bm-hero__stats" aria-label="Platform statistics">
+        <div class="bm-stat">
+          <dt class="bm-stat__label">Calculators</dt>
+          <dd class="bm-stat__value">300+</dd>
+        </div>
+        <div class="bm-stat">
+          <dt class="bm-stat__label">Categories</dt>
+          <dd class="bm-stat__value">12</dd>
+        </div>
+        <div class="bm-stat">
+          <dt class="bm-stat__label">Unit Systems</dt>
+          <dd class="bm-stat__value">4</dd>
+        </div>
+        <div class="bm-stat">
+          <dt class="bm-stat__label">Standards</dt>
+          <dd class="bm-stat__value">9</dd>
+        </div>
+      </dl>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       AD SLOT 1 — Below-the-fold hero ad
+       Reserved height prevents CLS. Loaded only post-consent.
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="bm-ad-slot bm-ad-slot--leaderboard" data-bm-ad-slot="home-1" aria-hidden="true">
+    <span class="bm-ad-slot__label">Advertisement</span>
+    <!-- AdSense unit injected by analytics.js after consent -->
+    <div class="bm-ad-slot__frame" data-bm-ad-unit="home-1"></div>
+  </div>
+
+  
+<!-- ═══════════════════════════════════════════════════════════
+     TRUST STRIP — 5 green-pale pills, one line, factual claims only
+     No fake badges, no "as seen on", no model photos.
+     Every claim is verifiable on the linked page.
+     ═══════════════════════════════════════════════════════════ -->
+<section class="bm-trust-strip" aria-label="Why engineers use BuildMetric">
+  <div class="bm-container">
+    <ul class="bm-trust-strip__list" role="list">
+
+      <li class="bm-trust-pill">
+        <span class="bm-trust-pill__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" focusable="false">
+            <path d="M4 12 L9 17 L20 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="bm-trust-pill__text">Standard-based formulas</span>
+      </li>
+
+      <li class="bm-trust-pill">
+        <span class="bm-trust-pill__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" focusable="false">
+            <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 7 V12 L15.5 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="bm-trust-pill__text">Instant results, no spinners</span>
+      </li>
+
+      <li class="bm-trust-pill">
+        <span class="bm-trust-pill__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" focusable="false">
+            <rect x="4" y="4" width="16" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M8 9 H16 M8 13 H16 M8 17 H12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="bm-trust-pill__text">Imperial + Metric</span>
+      </li>
+
+      <li class="bm-trust-pill">
+        <span class="bm-trust-pill__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" focusable="false">
+            <path d="M12 2 L4 6 V12 C4 17 7.5 21 12 22 C16.5 21 20 17 20 12 V6 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M9 12 L11 14 L15.5 9.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="bm-trust-pill__text">No signup required</span>
+      </li>
+
+      <li class="bm-trust-pill">
+        <span class="bm-trust-pill__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" focusable="false">
+            <path d="M3 12 H21 M12 3 V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </span>
+        <span class="bm-trust-pill__text">Works offline on site</span>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     12 CATEGORIES — ONE continuous grid. NO ads between cards.
+     Order chosen so high-CPC categories (electrical, cost, solar)
+     sit in scan-friendly positions without feeling top-heavy.
+     ═══════════════════════════════════════════════════════════ -->
+<section class="bm-categories" aria-labelledby="bm-categories-title">
+  <div class="bm-container">
+
+    <header class="bm-section-head">
+      <p class="bm-section-label">// 12 TRADES //</p>
+      <h2 id="bm-categories-title" class="bm-section-title">
+        Every calculator you need, grouped by trade
+      </h2>
+      <p class="bm-section-sub">
+        Each category contains 22–28 calculators with the same input pattern:
+        enter dimensions, get numbers. Nothing else to learn.
+      </p>
+    </header>
+
+    <ul class="bm-categories__grid" role="list">
+
+      <!-- 01 CONCRETE & MASONRY -->
+      <li>
+        <a class="bm-cat-card" href="/categories/concrete-masonry.html">
+          <span class="bm-cat-card__index" aria-hidden="true">01</span>
+          <span class="bm-cat-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="28" height="28" focusable="false">
+              <rect x="4" y="18" width="24" height="10" fill="none" stroke="currentColor" stroke-width="2"/>
+              <rect x="8" y="10" width="16" height="8" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M4 18 H28 M12 10 V18 M20 10 V18" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+            </svg>
+          </span>
+          <span class="bm-cat-card__name">Concrete &amp; Masonry</span>
+          <span class="bm-cat-card__count">28 calculators</span>
+          <span class="bm-cat-card__desc">Slabs, footings, rebar, mortar, block walls, volume + waste.</span>
+          <span class="bm-cat-card__arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+
+      <!-- 02 LUMBER & FRAMING -->
+      <li>
+        <a class="bm-cat-card" href="/categories/lumber-framing.html">
+          <span class="bm-cat-card__index" aria-hidden="true">02</span>
+          <span class="bm-cat-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="28" height="28" focusable="false">
+              <rect x="4" y="6" width="24" height="4" fill="none" stroke="currentColor" stroke-width="2"/>
+              <rect x="4" y="14" width="24" height="4" fill="none" stroke="currentColor" stroke-width="2"/>
+              <rect x="4" y="22" width="24" height="4" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M10 6 V26 M22 6 V26" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+            </svg>
+          </span>
+          <span class="bm-cat-card__name">Lumber &amp; Framing</span>
+          <span class="bm-cat-card__count">24 calculators</span>
+          <span class="bm-cat-card__desc">Studs, joists, rafters, board-foot, spans, waste factors.</span>
+          <span class="bm-cat-card__arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+
+      <!-- 03 EXTERIOR & STRUCTURE -->
+      <li>
+        <a class="bm-cat-card" href="/categories/exterior-structure.html">
+          <span class="bm-cat-card__index" aria-hidden="true">03</span>
+          <span class="bm-cat-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="28" height="28" focusable="false">
+              <path d="M4 26 L16 6 L28 26 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M10 26 V16 H22 V26" fill="none" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </span>
+          <span class="bm-cat-card__name">Exterior &amp; Structure</span>
+          <span class="bm-cat-card__count">26 calculators</span>
+          <span class="bm-cat-card__desc">Foundations, beams, columns, load paths, retaining walls.</span>
+          <span class="bm-cat-card__arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+
+      <!-- 04 ROOFING & SIDING -->
+      <li>
+        <a class="bm-cat-card" href="/categories/roofing-siding.html">
+          <span class="bm-cat-card__index" aria-hidden="true">04</span>
+          <span class="bm-cat-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="28" height="28" focusable="false">
+              <path d="M2 20 L16 8 L30 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M6 20 V26 H26 V20" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M10 20 L16 14 L22 20" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+            </svg>
+          </span>
+          <span class="bm-cat-card__name">Roofing &amp; Siding</span>
+          <span class="bm-cat-card__count">24 calculators</span>
+          <span class="bm-cat-card__desc">Pitch, squares, shingles, underlayment, soffit, fascia.</span>
+          <span class="bm-cat-card__arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+
+      <!-- 05 ELECTRICAL & HVAC (HIGH CPC) -->
+      <li>
+        <a class="bm-cat-card" href="/categories/electrical-hvac.html">
+          <span class="bm-cat-card__index" aria-hidden="true">05</span>
+          <span class="bm-cat-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="28" height="28" focusable="false">
+              <path d="M14 2 L6 18 H14 L12 30 L26 12 H16 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="bm-cat-card__name">Electrical &amp; HVAC</span>
+          <span class="bm-cat-card__count">26 calculators</span>
+          <span class="bm-cat-card__desc">Load, wire gauge, voltage drop, BTU, duct sizing, ampacity.</span>
+          <span class="bm-cat-card__arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+
+      <!-- 06 PLUMBING & PIPING -->
+      <li>
+        <a class="bm-cat-card" href="/categories/plumbing-piping.html">
+          <span class="bm-cat-card__index" aria-hidden="true">06</span>
+          <span class="bm-cat-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="28" height="28" focusable="false">
+              <path d="M4 10 H16 V22 H28" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <rect x="12" y="6" width="8" height="8" fill="none" stroke="currentColor" stroke-width="2"/>
+              <circle cx="28" cy="22" r="2" fill="currentColor"/>
+            </svg>
+          </span>
+          <span class="bm-cat-card__name">Plumbing &amp; Piping</span>
+          <span class="bm-cat-card__count">24 calculators</span>
+          <span class="bm-cat-card__desc">Pipe volume, flow rate, pressure drop, slope, water heater.</span>
+          <span class="bm-cat-card__arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+
+      <!-- 07 INTERIOR & FINISHING -->
+      <li>
+        <a class="bm-cat-card" href="/categories/interior-finishing.html">
+          <span class="bm-cat-card__index" aria-hidden="true">07</span>
+          <span class="bm-cat-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="28" height="28" focusable="false">
+              <rect x="4" y="6" width="24" height="20" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M4 16 H28 M16 6 V26" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+            </svg>
+          </span>
+          <span class="bm-cat-card__name">Interior &amp; Finishing</span>
+          <span class="bm-cat-card__count">28 calculators</span>
+          <span class="bm-cat-card__desc">Drywall, tile, flooring, trim, insulation, ceiling.</span>
+          <span class="bm-cat-card__arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+
+      <!-- 08 PAINTING & WALLPAPER -->
+      <li>
+        <a class="bm-cat-card" href="/categories/painting-wallpaper.html">
+          <span class="bm-cat-card__index" aria-hidden="true">08</span>
+          <span class="bm-cat-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="28" height="28" focusable="false">
+              <rect x="6" y="4" width="20" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M22 12 V18 H10 V24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="8" y="24" width="4" height="6" fill="none" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </span>
+          <span class="bm-cat-card__name">Painting &amp; Wallpaper</span>
+          <span class="bm-cat-card__count">22 calculators</span>
+          <span class="bm-cat-card__desc">Coverage, gallons, primer, wallpaper rolls, trim paint.</span>
+          <span class="bm-cat-card__arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+
+      <!-- 09 LANDSCAPING & OUTDOOR -->
+      <li>
+        <a class="bm-cat-card" href="/categories/landscaping-outdoor.html">
+          <span class="bm-cat-card__index" aria-hidden="true">09</span>
+          <span class="bm-cat-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="28" height="28" focusable="false">
+              <path d="M16 4 V28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M8 12 C8 8 12 6 16 8 C20 6 24 8 24 12 C24 16 20 18 16 16 C12 18 8 16 8 12 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M6 28 H26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="bm-cat-card__name">Landscaping &amp; Outdoor</span>
+          <span class="bm-cat-card__count">24 calculators</span>
+          <span class="bm-cat-card__desc">Topsoil, mulch, sod, pavers, fences, irrigation.</span>
+          <span class="bm-cat-card__arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+
+      <!-- 10 ROAD & DRIVEWAY -->
+      <li>
+        <a class="bm-cat-card" href="/categories/road-driveway.html">
+          <span class="bm-cat-card__index" aria-hidden="true">10</span>
+          <span class="bm-cat-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="28" height="28" focusable="false">
+              <path d="M10 4 L6 28 M22 4 L26 28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M16 8 V14 M16 18 V24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 3"/>
+            </svg>
+          </span>
+          <span class="bm-cat-card__name">Road &amp; Driveway</span>
+          <span class="bm-cat-card__count">22 calculators</span>
+          <span class="bm-cat-card__desc">Asphalt, gravel, base course, curbs, slope, compaction.</span>
+          <span class="bm-cat-card__arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+
+      <!-- 11 COST ESTIMATORS (HIGH CPC) -->
+      <li>
+        <a class="bm-cat-card" href="/categories/cost-estimators.html">
+          <span class="bm-cat-card__index" aria-hidden="true">11</span>
+          <span class="bm-cat-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="28" height="28" focusable="false">
+              <rect x="4" y="6" width="24" height="22" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M4 12 H28" stroke="currentColor" stroke-width="2"/>
+              <path d="M10 17 H12 M15 17 H17 M20 17 H22 M10 22 H12 M15 22 H17 M20 22 H22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="bm-cat-card__name">Cost Estimators</span>
+          <span class="bm-cat-card__count">26 calculators</span>
+          <span class="bm-cat-card__desc">Per-sq-ft, per-linear-ft, labor, material, markup, totals.</span>
+          <span class="bm-cat-card__arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+
+      <!-- 12 SOLAR & ENERGY (HIGHEST CPC) -->
+      <li>
+        <a class="bm-cat-card" href="/categories/solar-energy.html">
+          <span class="bm-cat-card__index" aria-hidden="true">12</span>
+          <span class="bm-cat-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="28" height="28" focusable="false">
+              <circle cx="16" cy="16" r="6" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M16 2 V6 M16 26 V30 M2 16 H6 M26 16 H30 M5.5 5.5 L8.5 8.5 M23.5 23.5 L26.5 26.5 M26.5 5.5 L23.5 8.5 M8.5 23.5 L5.5 26.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="bm-cat-card__name">Solar &amp; Energy</span>
+          <span class="bm-cat-card__count">26 calculators</span>
+          <span class="bm-cat-card__desc">Panel count, battery bank, inverter, payback, tilt, wiring.</span>
+          <span class="bm-cat-card__arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     AD SLOT 2 — Below category grid, above "Why" section
+     ═══════════════════════════════════════════════════════════ -->
+<div class="bm-ad-slot bm-ad-slot--leaderboard" data-bm-ad-slot="home-2" aria-hidden="true">
+  <span class="bm-ad-slot__label">Advertisement</span>
+  <div class="bm-ad-slot__frame" data-bm-ad-unit="home-2"></div>
+</div>
+
+  
+<!-- ═══════════════════════════════════════════════════════════
+     WHY BUILDMETRIC EXISTS — navy section, 500+ words
+     Written like an engineer explaining the problem, not marketing.
+     ═══════════════════════════════════════════════════════════ -->
+<section class="bm-why" aria-labelledby="bm-why-title">
+  <div class="bm-container bm-container--narrow">
+
+    <p class="bm-section-label bm-section-label--on-dark">// WHY THIS EXISTS //</p>
+
+    <h2 id="bm-why-title" class="bm-section-title bm-section-title--on-dark">
+      Construction math fails on job sites. Not because it's hard — because it's slow.
+    </h2>
+
+    <div class="bm-why__body">
+
+      <p>
+        A foreman pouring a 24 × 36 ft slab doesn't need a CAD program. He needs
+        cubic yards, bag count, and rebar weight in under thirty seconds — usually
+        standing in the sun, gloves on, phone in one hand. Every extra tap is friction.
+        Every spinner is a reason to guess instead of check.
+      </p>
+
+      <p>
+        The tools that exist today fall into two categories, and both fail the same
+        moment. Category one: thousand-page PDFs and ACI tables that are technically
+        correct but useless in the field. Category two: web calculators that look
+        clean until you enter a fractional dimension and the site reloads, flashes
+        an ad, and asks you to sign up for a free trial of a $49/month takeoff
+        platform. Neither is acceptable when the concrete truck is already on the way.
+      </p>
+
+      <p>
+        BuildMetric was built against that specific failure. Every calculator on
+        this site runs entirely in your browser, uses the same formulas a licensed
+        engineer would use in a preliminary takeoff, and updates <em>as you type</em>.
+        No submit button waiting for a server. No spinner. No signup wall. If your
+        phone has the page loaded once, it will calculate on a site with zero bars.
+      </p>
+
+      <h3 class="bm-why__subhead">What "standard-based" actually means here</h3>
+
+      <p>
+        A calculator is only as good as its formula. Our concrete tools reference
+        <strong>ACI 318-19</strong> for structural concrete and <strong>ACI 211.1</strong>
+        for mix proportioning. Structural lumber checks pull from <strong>NDS</strong> and
+        span tables published by the American Wood Council. Electrical load
+        calculations follow <strong>NEC Article 220</strong>, and HVAC sizing follows
+        <strong>ACCA Manual J</strong> principles. For UK, EU, Australia, Canada, India,
+        and the Gulf, the equivalent local codes — BS EN 1992, AS 3600, CSA A23.3,
+        IS 456, and Eurocode 2 — are used where they diverge meaningfully from US
+        practice. Every tool page lists the exact reference at the bottom, so you
+        can verify the formula against your own codebook before you trust it.
+      </p>
+
+      <h3 class="bm-why__subhead">Where BuildMetric deliberately stops</h3>
+
+      <p>
+        These are <em>quantity</em> calculators, not design tools. We compute how much
+        concrete, how many studs, what wire gauge, how many solar panels. We do not
+        stamp structural drawings, and we do not replace a licensed engineer's
+        judgment on load paths, seismic detailing, or soil conditions. Any calculator
+        that would require site-specific engineering — foundation design for
+        expansive clay, for example — deliberately stops at the preliminary estimate
+        and says so. That boundary is not a limitation. It is the reason the tools
+        you <em>can</em> trust are trustworthy.
+      </p>
+
+      <h3 class="bm-why__subhead">Built for four people at once</h3>
+
+      <p>
+        The same page has to work for a general contractor pricing a bid, a DIY
+        homeowner pouring a patio, a project manager checking a subcontractor's
+        numbers, and an engineer doing a fast sanity check. That is why every
+        calculator defaults to sensible field values, exposes the waste factor as
+        a toggle instead of hiding it, and lets you switch between imperial and
+        metric without losing your inputs. The number matters. The unit is
+        secondary.
+      </p>
+
+      <p class="bm-why__closer">
+        Three hundred calculators across twelve trades. All free. No account. That
+        is the whole product.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     WHY TRUST US — 6 green-bordered cards on surface bg
+     Each card is a specific, verifiable claim. No vague language.
+     ═══════════════════════════════════════════════════════════ -->
+<section class="bm-trust" aria-labelledby="bm-trust-title">
+  <div class="bm-container">
+
+    <header class="bm-section-head">
+      <p class="bm-section-label">// WHY TRUST THE NUMBERS //</p>
+      <h2 id="bm-trust-title" class="bm-section-title">
+        Six things you can verify on every tool page
+      </h2>
+      <p class="bm-section-sub">
+        We do not ask you to trust a badge. Every claim below is checkable
+        in under a minute on any calculator.
+      </p>
+    </header>
+
+    <ul class="bm-trust__grid" role="list">
+
+      <li class="bm-trust-card">
+        <span class="bm-trust-card__num" aria-hidden="true">01</span>
+        <h3 class="bm-trust-card__title">Formula shown, not hidden</h3>
+        <p class="bm-trust-card__text">
+          Every tool page prints the exact equation it uses, in a code block
+          below the result — with variable names and units. If your codebook
+          disagrees, you will see it in five seconds.
+        </p>
+      </li>
+
+      <li class="bm-trust-card">
+        <span class="bm-trust-card__num" aria-hidden="true">02</span>
+        <h3 class="bm-trust-card__title">Standard cited on the page</h3>
+        <p class="bm-trust-card__text">
+          ACI 318-19, NDS, NEC 220, ASHRAE, AS 3600, BS EN 1992, CSA A23.3,
+          IS 456, Eurocode 2 — whichever applies. The reference is at the
+          bottom of the tool, not buried in a separate "methodology" page.
+        </p>
+      </li>
+
+      <li class="bm-trust-card">
+        <span class="bm-trust-card__num" aria-hidden="true">03</span>
+        <h3 class="bm-trust-card__title">Worked example in both units</h3>
+        <p class="bm-trust-card__text">
+          Each calculator ships with a full worked example — imperial on one
+          side, metric on the other — using the same inputs. You can enter the
+          exact numbers and confirm the output matches.
+        </p>
+      </li>
+
+      <li class="bm-trust-card">
+        <span class="bm-trust-card__num" aria-hidden="true">04</span>
+        <h3 class="bm-trust-card__title">Runs offline after first load</h3>
+        <p class="bm-trust-card__text">
+          No server round-trip per calculation. Open the tool once, keep the
+          tab open, and it will keep working through dead zones, basements,
+          and rural sites with no signal.
+        </p>
+      </li>
+
+      <li class="bm-trust-card">
+        <span class="bm-trust-card__num" aria-hidden="true">05</span>
+        <h3 class="bm-trust-card__title">No account, no email, no trial</h3>
+        <p class="bm-trust-card__text">
+          There is no signup form anywhere on the site. No newsletter popup,
+          no "unlock full results" gate, no free tier that turns into paid.
+          The calculator you see is the complete product.
+        </p>
+      </li>
+
+      <li class="bm-trust-card">
+        <span class="bm-trust-card__num" aria-hidden="true">06</span>
+        <h3 class="bm-trust-card__title">Corrections published openly</h3>
+        <p class="bm-trust-card__text">
+          If a formula is wrong, it gets fixed and the change is noted on the
+          tool page. If a reader disputes a number, we check it against the
+          codebook and reply. Email
+          <a href="mailto:contact.buildmetric@gmail.com">contact.buildmetric@gmail.com</a>
+          with the tool name and your reference.
+        </p>
+      </li>
+
+    </ul>
+
+  </div>
+</section>
+
+  
+<!-- ═══════════════════════════════════════════════════════════
+     HOW TO USE — navy section, 3 steps, one clear path
+     No video, no animated demo. Text only, engineer tone.
+     ═══════════════════════════════════════════════════════════ -->
+<section class="bm-how" aria-labelledby="bm-how-title">
+  <div class="bm-container">
+
+    <header class="bm-section-head bm-section-head--on-dark">
+      <p class="bm-section-label bm-section-label--on-dark">// HOW IT WORKS //</p>
+      <h2 id="bm-how-title" class="bm-section-title bm-section-title--on-dark">
+        Three steps. No tutorial required.
+      </h2>
+      <p class="bm-section-sub bm-section-sub--on-dark">
+        The interaction pattern is identical across all 300 calculators.
+        Learn it once on any tool and you have learned every tool on the site.
+      </p>
+    </header>
+
+    <ol class="bm-how__steps" role="list">
+
+      <li class="bm-how-step">
+        <span class="bm-how-step__num" aria-hidden="true">STEP 01</span>
+        <h3 class="bm-how-step__title">Enter your dimensions</h3>
+        <p class="bm-how-step__text">
+          Tap the <strong>[ + ]</strong> and <strong>[ − ]</strong> steppers, or type directly
+          into any field. Long-press a stepper to accelerate. Arrow keys work too.
+          Smart step sizes mean a slab length moves in 0.5 ft increments near zero
+          and 100 ft increments when you are pricing a parking lot.
+        </p>
+      </li>
+
+      <li class="bm-how-step">
+        <span class="bm-how-step__num" aria-hidden="true">STEP 02</span>
+        <h3 class="bm-how-step__title">Read the result instantly</h3>
+        <p class="bm-how-step__text">
+          The result box updates <strong>as you type</strong> — no calculate button,
+          no spinner, no page reload. Primary quantity is the big green number.
+          Secondary metrics (bag count, waste, weight, cost) sit below it in mono
+          type. Toggle the waste factor on or off with one tap.
+        </p>
+      </li>
+
+      <li class="bm-how-step">
+        <span class="bm-how-step__num" aria-hidden="true">STEP 03</span>
+        <h3 class="bm-how-step__title">Take the number to the field</h3>
+        <p class="bm-how-step__text">
+          Copy the result, download a PDF for the permit file, or print the whole
+          page for the truck. Every tool works offline once loaded — keep the tab
+          open on site and it will keep calculating with zero bars. Nothing to
+          install, nothing to log into.
+        </p>
+      </li>
+
+    </ol>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     STANDARDS — white section, 6 cards, one per code family
+     Real standards, not decorative. Each links to its tool family.
+     ═══════════════════════════════════════════════════════════ -->
+<section class="bm-standards" aria-labelledby="bm-standards-title">
+  <div class="bm-container">
+
+    <header class="bm-section-head">
+      <p class="bm-section-label">// STANDARDS REFERENCED //</p>
+      <h2 id="bm-standards-title" class="bm-section-title">
+        Formulas come from codes, not opinions
+      </h2>
+      <p class="bm-section-sub">
+        Nine code families across the US, UK, EU, Australia, Canada, India, and
+        the Gulf. Every calculator names the specific clause or table it uses.
+      </p>
+    </header>
+
+    <ul class="bm-standards__grid" role="list">
+
+      <li class="bm-standards-card">
+        <span class="bm-standards-card__badge" aria-hidden="true">US</span>
+        <h3 class="bm-standards-card__title">ACI 318-19 &amp; 211.1</h3>
+        <p class="bm-standards-card__text">
+          American Concrete Institute. Structural concrete design and mix
+          proportioning. Used across all concrete, masonry, and foundation tools.
+        </p>
+        <a class="bm-standards-card__link" href="/categories/concrete-masonry.html">
+          See concrete tools <span aria-hidden="true">→</span>
+        </a>
+      </li>
+
+      <li class="bm-standards-card">
+        <span class="bm-standards-card__badge" aria-hidden="true">US</span>
+        <h3 class="bm-standards-card__title">NDS &amp; AWC Span Tables</h3>
+        <p class="bm-standards-card__text">
+          National Design Specification for wood construction, and the American
+          Wood Council's published span tables. Basis for all framing calculations.
+        </p>
+        <a class="bm-standards-card__link" href="/categories/lumber-framing.html">
+          See framing tools <span aria-hidden="true">→</span>
+        </a>
+      </li>
+
+      <li class="bm-standards-card">
+        <span class="bm-standards-card__badge" aria-hidden="true">US</span>
+        <h3 class="bm-standards-card__title">NEC Article 220 &amp; ACCA Manual J</h3>
+        <p class="bm-standards-card__text">
+          National Electrical Code load calculations, and Air Conditioning
+          Contractors of America Manual J for residential HVAC sizing.
+        </p>
+        <a class="bm-standards-card__link" href="/categories/electrical-hvac.html">
+          See electrical + HVAC tools <span aria-hidden="true">→</span>
+        </a>
+      </li>
+
+      <li class="bm-standards-card">
+        <span class="bm-standards-card__badge" aria-hidden="true">UK / EU</span>
+        <h3 class="bm-standards-card__title">BS EN 1992 &amp; Eurocode 2</h3>
+        <p class="bm-standards-card__text">
+          British and European standards for concrete design. Used when the
+          tool detects a UK or EU region, and selectable manually on every page.
+        </p>
+        <a class="bm-standards-card__link" href="/categories/concrete-masonry.html">
+          See Eurocode tools <span aria-hidden="true">→</span>
+        </a>
+      </li>
+
+      <li class="bm-standards-card">
+        <span class="bm-standards-card__badge" aria-hidden="true">AU / NZ</span>
+        <h3 class="bm-standards-card__title">AS 3600 &amp; AS/NZS 1170</h3>
+        <p class="bm-standards-card__text">
+          Australian Standard for concrete structures and the joint Australia /
+          New Zealand structural loading code. Default for AU and NZ regions.
+        </p>
+        <a class="bm-standards-card__link" href="/categories/exterior-structure.html">
+          See structural tools <span aria-hidden="true">→</span>
+        </a>
+      </li>
+
+      <li class="bm-standards-card">
+        <span class="bm-standards-card__badge" aria-hidden="true">CA / IN</span>
+        <h3 class="bm-standards-card__title">CSA A23.3 &amp; IS 456</h3>
+        <p class="bm-standards-card__text">
+          Canadian Standards Association concrete design code, and the Indian
+          Standard for plain and reinforced concrete. Selected by region.
+        </p>
+        <a class="bm-standards-card__link" href="/categories/concrete-masonry.html">
+          See regional concrete tools <span aria-hidden="true">→</span>
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FEATURED TOOLS — surface section, 6 cards
+     Hand-picked high-traffic tools across different trades.
+     Each card is a real, working href to a tool page.
+     ═══════════════════════════════════════════════════════════ -->
+<section class="bm-featured" aria-labelledby="bm-featured-title">
+  <div class="bm-container">
+
+    <header class="bm-section-head">
+      <p class="bm-section-label">// MOST USED THIS MONTH //</p>
+      <h2 id="bm-featured-title" class="bm-section-title">
+        Six calculators opened more than 40,000 times last month
+      </h2>
+      <p class="bm-section-sub">
+        Picked from site analytics, not a marketing list. All six work the
+        same way: enter dimensions, read the result.
+      </p>
+    </header>
+
+    <ul class="bm-featured__grid" role="list">
+
+      <li>
+        <a class="bm-tool-card" href="/tools/concrete-slab-calculator.html">
+          <span class="bm-tool-card__cat">Concrete &amp; Masonry</span>
+          <h3 class="bm-tool-card__title">Concrete Slab Calculator</h3>
+          <p class="bm-tool-card__text">
+            Cubic yards, bag count, and rebar weight for any rectangular slab.
+            Handles thickness, waste factor, and mesh size.
+          </p>
+          <span class="bm-tool-card__meta">
+            <span>ACI 318-19</span>
+            <span class="bm-tool-card__arrow" aria-hidden="true">→</span>
+          </span>
+        </a>
+      </li>
+
+      <li>
+        <a class="bm-tool-card" href="/tools/roof-pitch-calculator.html">
+          <span class="bm-tool-card__cat">Roofing &amp; Siding</span>
+          <h3 class="bm-tool-card__title">Roof Pitch &amp; Rafter Length</h3>
+          <p class="bm-tool-card__text">
+            Convert rise/run to pitch, degrees, and multiplier. Outputs rafter
+            length, ridge height, and total roof area.
+          </p>
+          <span class="bm-tool-card__meta">
+            <span>IRC / IBC</span>
+            <span class="bm-tool-card__arrow" aria-hidden="true">→</span>
+          </span>
+        </a>
+      </li>
+
+      <li>
+        <a class="bm-tool-card" href="/tools/stud-wall-framing.html">
+          <span class="bm-tool-card__cat">Lumber &amp; Framing</span>
+          <h3 class="bm-tool-card__title">Stud Wall Framing Calculator</h3>
+          <p class="bm-tool-card__text">
+            Studs, plates, headers, and sheathing for any wall length. On-center
+            spacing adjustable, waste factor included.
+          </p>
+          <span class="bm-tool-card__meta">
+            <span>NDS / IRC</span>
+            <span class="bm-tool-card__arrow" aria-hidden="true">→</span>
+          </span>
+        </a>
+      </li>
+
+      <li>
+        <a class="bm-tool-card" href="/tools/wire-gauge-calculator.html">
+          <span class="bm-tool-card__cat">Electrical &amp; HVAC</span>
+          <h3 class="bm-tool-card__title">Wire Gauge &amp; Voltage Drop</h3>
+          <p class="bm-tool-card__text">
+            AWG sizing for amperage, run length, and acceptable voltage drop.
+            Copper and aluminum. Single and three-phase.
+          </p>
+          <span class="bm-tool-card__meta">
+            <span>NEC 220 / 310</span>
+            <span class="bm-tool-card__arrow" aria-hidden="true">→</span>
+          </span>
+        </a>
+      </li>
+
+      <li>
+        <a class="bm-tool-card" href="/tools/solar-panel-payback.html">
+          <span class="bm-tool-card__cat">Solar &amp; Energy</span>
+          <h3 class="bm-tool-card__title">Solar Panel Payback Calculator</h3>
+          <p class="bm-tool-card__text">
+            Panel count, system size, annual production, and break-even years
+            based on local utility rate and incentives.
+          </p>
+          <span class="bm-tool-card__meta">
+            <span>NREL PVWatts</span>
+            <span class="bm-tool-card__arrow" aria-hidden="true">→</span>
+          </span>
+        </a>
+      </li>
+
+      <li>
+        <a class="bm-tool-card" href="/tools/paint-coverage.html">
+          <span class="bm-tool-card__cat">Painting &amp; Wallpaper</span>
+          <h3 class="bm-tool-card__title">Paint Coverage Calculator</h3>
+          <p class="bm-tool-card__text">
+            Gallons of paint per room including ceiling, doors, and trim. Primer
+            coverage, number of coats, and drywall touch-up.
+          </p>
+          <span class="bm-tool-card__meta">
+            <span>Manufacturer data</span>
+            <span class="bm-tool-card__arrow" aria-hidden="true">→</span>
+          </span>
+        </a>
+      </li>
+
+    </ul>
+
+    <div class="bm-featured__cta">
+      <a class="bm-btn bm-btn--ghost" href="/tools/">
+        Browse all 300 calculators <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     AD SLOT 3 — Between featured tools and B2B section
+     ═══════════════════════════════════════════════════════════ -->
+<div class="bm-ad-slot bm-ad-slot--leaderboard" data-bm-ad-slot="home-3" aria-hidden="true">
+  <span class="bm-ad-slot__label">Advertisement</span>
+  <div class="bm-ad-slot__frame" data-bm-ad-unit="home-3"></div>
+  </div>
+
+  
+<!-- ═══════════════════════════════════════════════════════════
+     B2B SUPPLIER LEAD — navy-800 section
+     Minimal 8 fields. Honeypot. Consent required.
+     One section only — no aggressive CTAs elsewhere on homepage.
+     ═══════════════════════════════════════════════════════════ -->
+<section class="bm-b2b" id="suppliers" aria-labelledby="bm-b2b-title">
+  <div class="bm-container">
+
+    <div class="bm-b2b__grid">
+
+      <!-- LEFT: Copy + benefits -->
+      <div class="bm-b2b__copy">
+        <p class="bm-section-label bm-section-label--on-dark">// FOR CONTRACTORS &amp; BUILDERS //</p>
+        <h2 id="bm-b2b-title" class="bm-section-title bm-section-title--on-dark">
+          Get quotes from local material suppliers
+        </h2>
+        <p class="bm-b2b__lede">
+          You already have the numbers from the calculator. Send them to verified
+          suppliers in your region and get pricing back within 24–48 hours. No
+          obligation, no sales calls unless you ask for one.
+        </p>
+
+        <ul class="bm-b2b__benefits" role="list">
+          <li>
+            <span class="bm-b2b__check" aria-hidden="true">
+              <svg viewBox="0 0 20 20" width="16" height="16" focusable="false">
+                <path d="M4 10 L8 14 L16 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span>Verified suppliers only — no fly-by-night brokers</span>
+          </li>
+          <li>
+            <span class="bm-b2b__check" aria-hidden="true">
+              <svg viewBox="0 0 20 20" width="16" height="16" focusable="false">
+                <path d="M4 10 L8 14 L16 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span>Response within 24–48 hours, by email</span>
+          </li>
+          <li>
+            <span class="bm-b2b__check" aria-hidden="true">
+              <svg viewBox="0 0 20 20" width="16" height="16" focusable="false">
+                <path d="M4 10 L8 14 L16 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span>Your contact details are never sold or resold</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- RIGHT: Form -->
+      <form
+        class="bm-b2b__form"
+        data-bm-b2b-form
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        novalidate
+        aria-label="Request supplier quotes"
+      >
+        <!-- Web3Forms config — replace ACCESS_KEY with your real key -->
+        <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_KEY" />
+        <input type="hidden" name="subject" value="BuildMetric — New supplier lead" />
+        <input type="hidden" name="from_name" value="BuildMetric.org" />
+        <input type="hidden" name="redirect" value="https://buildmetric.org/thank-you.html" />
+
+        <!-- Honeypot — hidden from humans, bots fill it -->
+        <div class="bm-hp" aria-hidden="true">
+          <label for="bm-b2b-website">Website</label>
+          <input id="bm-b2b-website" type="text" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <div class="bm-b2b__row">
+          <div class="bm-field">
+            <label for="bm-b2b-name" class="bm-field__label">
+              Name <span class="bm-field__req" aria-hidden="true">*</span>
+            </label>
+            <input
+              id="bm-b2b-name"
+              class="bm-field__input"
+              type="text"
+              name="name"
+              required
+              autocomplete="name"
+              maxlength="80"
+            />
+          </div>
+
+          <div class="bm-field">
+            <label for="bm-b2b-company" class="bm-field__label">
+              Company <span class="bm-field__opt">(optional)</span>
+            </label>
+            <input
+              id="bm-b2b-company"
+              class="bm-field__input"
+              type="text"
+              name="company"
+              autocomplete="organization"
+              maxlength="100"
+            />
+          </div>
+        </div>
+
+        <div class="bm-b2b__row">
+          <div class="bm-field">
+            <label for="bm-b2b-email" class="bm-field__label">
+              Email <span class="bm-field__req" aria-hidden="true">*</span>
+            </label>
+            <input
+              id="bm-b2b-email"
+              class="bm-field__input"
+              type="email"
+              name="email"
+              required
+              autocomplete="email"
+              maxlength="120"
+              inputmode="email"
+            />
+          </div>
+
+          <div class="bm-field">
+            <label for="bm-b2b-phone" class="bm-field__label">
+              Phone <span class="bm-field__opt">(optional)</span>
+            </label>
+            <input
+              id="bm-b2b-phone"
+              class="bm-field__input"
+              type="tel"
+              name="phone"
+              autocomplete="tel"
+              maxlength="24"
+              inputmode="tel"
+            />
+          </div>
+        </div>
+
+        <div class="bm-b2b__row">
+          <div class="bm-field">
+            <label for="bm-b2b-country" class="bm-field__label">
+              Country <span class="bm-field__req" aria-hidden="true">*</span>
+            </label>
+            <select id="bm-b2b-country" class="bm-field__input" name="country" required data-bm-country>
+              <option value="">Select country…</option>
+              <option value="US">United States</option>
+              <option value="GB">United Kingdom</option>
+              <option value="AU">Australia</option>
+              <option value="CA">Canada</option>
+              <option value="NZ">New Zealand</option>
+              <option value="IE">Ireland</option>
+              <option value="IN">India</option>
+              <option value="AE">United Arab Emirates</option>
+              <option value="ZA">South Africa</option>
+              <option value="DE">Germany</option>
+              <option value="FR">France</option>
+              <option value="OTHER">Other</option>
+            </select>
+          </div>
+
+          <div class="bm-field">
+            <label for="bm-b2b-zip" class="bm-field__label">
+              ZIP / Postcode <span class="bm-field__req" aria-hidden="true">*</span>
+            </label>
+            <input
+              id="bm-b2b-zip"
+              class="bm-field__input"
+              type="text"
+              name="zip"
+              required
+              autocomplete="postal-code"
+              maxlength="12"
+              inputmode="text"
+            />
+          </div>
+        </div>
+
+        <div class="bm-field">
+          <label for="bm-b2b-category" class="bm-field__label">
+            Material category <span class="bm-field__req" aria-hidden="true">*</span>
+          </label>
+          <select id="bm-b2b-category" class="bm-field__input" name="category" required>
+            <option value="">Select category…</option>
+            <option value="concrete-masonry">Concrete &amp; Masonry</option>
+            <option value="lumber-framing">Lumber &amp; Framing</option>
+            <option value="exterior-structure">Exterior &amp; Structure</option>
+            <option value="roofing-siding">Roofing &amp; Siding</option>
+            <option value="electrical-hvac">Electrical &amp; HVAC</option>
+            <option value="plumbing-piping">Plumbing &amp; Piping</option>
+            <option value="interior-finishing">Interior &amp; Finishing</option>
+            <option value="painting-wallpaper">Painting &amp; Wallpaper</option>
+            <option value="landscaping-outdoor">Landscaping &amp; Outdoor</option>
+            <option value="road-driveway">Road &amp; Driveway</option>
+            <option value="solar-energy">Solar &amp; Energy</option>
+            <option value="multiple">Multiple categories</option>
+          </select>
+        </div>
+
+        <div class="bm-field">
+          <label for="bm-b2b-project" class="bm-field__label">
+            Project description <span class="bm-field__req" aria-hidden="true">*</span>
+          </label>
+          <textarea
+            id="bm-b2b-project"
+            class="bm-field__input bm-field__input--textarea"
+            name="project"
+            required
+            rows="3"
+            maxlength="600"
+            placeholder="e.g. 24 × 36 ft garage slab, 6 in thick, need 4000 PSI mix, 4000 sq ft total area."
+          ></textarea>
+        </div>
+
+        <div class="bm-field bm-field--check">
+          <input
+            id="bm-b2b-consent"
+            class="bm-field__checkbox"
+            type="checkbox"
+            name="consent"
+            value="yes"
+            required
+          />
+          <label for="bm-b2b-consent" class="bm-field__check-label">
+            I agree to be contacted about my quote request. See
+            <a href="/privacy.html">Privacy Policy</a>. <span class="bm-field__req" aria-hidden="true">*</span>
+          </label>
+        </div>
+
+        <button type="submit" class="bm-btn bm-btn--amber bm-btn--full">
+          Get supplier quotes <span aria-hidden="true">→</span>
+        </button>
+
+        <p class="bm-b2b__note">
+          We reply from <strong>contact.buildmetric@gmail.com</strong>. If you
+          do not hear back within 48 hours, email us directly.
+        </p>
+
+        <!-- Inline success / error message injected by b2b.js -->
+        <div class="bm-form-msg" data-bm-form-msg hidden role="status" aria-live="polite"></div>
+      </form>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     MEDIA — one YouTube link + one newsletter. Nothing more.
+     No auto-embedded video. No autoplay. No popups.
+     ═══════════════════════════════════════════════════════════ -->
+<section class="bm-media" aria-labelledby="bm-media-title">
+  <div class="bm-container">
+
+    <header class="bm-section-head">
+      <p class="bm-section-label">// FOLLOW //</p>
+      <h2 id="bm-media-title" class="bm-section-title">
+        Two places to keep up with new tools
+      </h2>
+    </header>
+
+    <div class="bm-media__grid">
+
+      <!-- YOUTUBE -->
+      <a
+        class="bm-media-card"
+        href="https://youtube.com/@buildmetricyt"
+        rel="noopener"
+        target="_blank"
+      >
+        <span class="bm-media-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28" focusable="false">
+            <rect x="3" y="7" width="26" height="18" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M13 12 L21 16 L13 20 Z" fill="currentColor"/>
+          </svg>
+        </span>
+        <div class="bm-media-card__body">
+          <h3 class="bm-media-card__title">BuildMetric on YouTube</h3>
+          <p class="bm-media-card__text">
+            Short walkthroughs of new calculators, plus field notes on
+            where the formulas actually fail. No talking heads.
+          </p>
+          <span class="bm-media-card__meta">youtube.com/@buildmetricyt</span>
+        </div>
+        <span class="bm-media-card__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <!-- NEWSLETTER -->
+      <div class="bm-media-card bm-media-card--form">
+        <span class="bm-media-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28" focusable="false">
+            <rect x="3" y="7" width="26" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M3 10 L16 18 L29 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <div class="bm-media-card__body">
+          <h3 class="bm-media-card__title">New tool alerts</h3>
+          <p class="bm-media-card__text">
+            One email per month. New calculators and code updates that
+            affect existing tools. No promotions, no partner offers.
+          </p>
+          <form
+            class="bm-media-card__form"
+            data-bm-newsletter
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            novalidate
+          >
+            <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_KEY" />
+            <input type="hidden" name="subject" value="BuildMetric — Newsletter signup" />
+            <input type="hidden" name="from_name" value="BuildMetric.org" />
+            <div class="bm-hp" aria-hidden="true">
+              <label for="bm-nl-website">Website</label>
+              <input id="bm-nl-website" type="text" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+            <label for="bm-nl-email" class="bm-sr-only">Email address</label>
+            <input
+              id="bm-nl-email"
+              class="bm-media-card__input"
+              type="email"
+              name="email"
+              required
+              placeholder="you@company.com"
+              autocomplete="email"
+              inputmode="email"
+              maxlength="120"
+            />
+            <button type="submit" class="bm-media-card__btn">
+              Subscribe <span aria-hidden="true">→</span>
+            </button>
+            <div class="bm-form-msg" data-bm-form-msg hidden role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  
+<!-- ═══════════════════════════════════════════════════════════
+     FAQ — white section, 5 questions (match JSON-LD in head exactly)
+     Each answer 80–120 words. No marketing. Real objections answered.
+     ═══════════════════════════════════════════════════════════ -->
+<section class="bm-faq" aria-labelledby="bm-faq-title">
+  <div class="bm-container bm-container--narrow">
+
+    <header class="bm-section-head">
+      <p class="bm-section-label">// COMMON QUESTIONS //</p>
+      <h2 id="bm-faq-title" class="bm-section-title">
+        Five things people ask before they trust a free calculator
+      </h2>
+    </header>
+
+    <div class="bm-faq__list">
+
+      <details class="bm-faq-item" open>
+        <summary class="bm-faq-item__q">
+          <span>Are BuildMetric calculators really free?</span>
+          <span class="bm-faq-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="bm-faq-item__a">
+          <p>
+            Yes. Every calculator on BuildMetric is free to use with no signup,
+            no paywall, and no subscription. The site is supported by display
+            advertising and optional supplier lead referrals. There is no premium
+            tier hiding behind a login, and no "unlock full results" gate on any
+            tool. If you see a calculator on the site, every field and every
+            result is available to you the same way it is to anyone else.
+          </p>
+        </div>
+      </details>
+
+      <details class="bm-faq-item">
+        <summary class="bm-faq-item__q">
+          <span>Which building codes and standards do the calculators follow?</span>
+          <span class="bm-faq-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="bm-faq-item__a">
+          <p>
+            Formulas reference ACI 318-19 and ACI 211.1 for concrete, AISC and
+            NDS for steel and timber, ASHRAE and NEC for electrical and HVAC, and
+            regional equivalents including BS EN 1992, AS 3600, CSA A23.3, and
+            IS 456. Every tool page lists its specific reference at the bottom,
+            including the clause or table number where applicable. If your local
+            code differs from the default, you can switch the reference manually
+            using the region selector on the tool page.
+          </p>
+        </div>
+      </details>
+
+      <details class="bm-faq-item">
+        <summary class="bm-faq-item__q">
+          <span>Do the calculators work offline on a job site?</span>
+          <span class="bm-faq-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="bm-faq-item__a">
+          <p>
+            After a page has loaded once, the calculation runs entirely in your
+            browser with no network calls. You can keep a tool page open in a tab
+            on-site and it will continue to work through intermittent signal loss.
+            Nothing is saved to a server, nothing is uploaded, and the result
+            updates the same way online or offline. If you close the tab, you will
+            need to reload once on a connection before it works offline again.
+          </p>
+        </div>
+      </details>
+
+      <details class="bm-faq-item">
+        <summary class="bm-faq-item__q">
+          <span>Can I switch between imperial and metric units?</span>
+          <span class="bm-faq-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="bm-faq-item__a">
+          <p>
+            Yes. Every calculator has an Imperial/Metric toggle at the top of the
+            input card. The site also auto-detects your region and sets the default
+            system, but you can override it at any time and the choice is
+            remembered across the site. When you switch units, your current inputs
+            are converted automatically so you do not lose your place. Currency
+            for cost estimators is detected the same way and can be changed from
+            the same toggle.
+          </p>
+        </div>
+      </details>
+
+      <details class="bm-faq-item">
+        <summary class="bm-faq-item__q">
+          <span>Are the results accurate enough for permit drawings?</span>
+          <span class="bm-faq-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="bm-faq-item__a">
+          <p>
+            The calculators produce standard engineering quantities you would use
+            in a takeoff, estimate, or preliminary design. Final permit documents
+            and structural sign-offs should always be verified by a licensed
+            engineer or architect in your jurisdiction. Any calculator that would
+            require site-specific engineering — foundation design for expansive
+            clay, for example — deliberately stops at the preliminary estimate and
+            says so on the page rather than producing a number that looks more
+            authoritative than it is.
+          </p>
+        </div>
+      </details>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     QUICK LINKS — navy-deep section
+     Short, high-signal links to the pages that matter most.
+     Not a sitemap — that lives at /sitemap.html.
+     ═══════════════════════════════════════════════════════════ -->
+<section class="bm-quicklinks" aria-labelledby="bm-quicklinks-title">
+  <div class="bm-container">
+
+    <header class="bm-section-head bm-section-head--on-dark">
+      <p class="bm-section-label bm-section-label--on-dark">// SHORTCUTS //</p>
+      <h2 id="bm-quicklinks-title" class="bm-section-title bm-section-title--on-dark">
+        Where most people go next
+      </h2>
+    </header>
+
+    <div class="bm-quicklinks__grid">
+
+      <a class="bm-quicklink" href="/categories/">
+        <span class="bm-quicklink__title">All 12 categories</span>
+        <span class="bm-quicklink__desc">Browse every trade from concrete to solar</span>
+        <span class="bm-quicklink__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="bm-quicklink" href="/tools/">
+        <span class="bm-quicklink__title">All 300 calculators</span>
+        <span class="bm-quicklink__desc">Full alphabetical list, searchable</span>
+        <span class="bm-quicklink__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="bm-quicklink" href="/how-to-use.html">
+        <span class="bm-quicklink__title">How to use BuildMetric</span>
+        <span class="bm-quicklink__desc">Inputs, steppers, unit switching</span>
+        <span class="bm-quicklink__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="bm-quicklink" href="/why-trust.html">
+        <span class="bm-quicklink__title">Why trust the numbers</span>
+        <span class="bm-quicklink__desc">Formulas, standards, and boundaries</span>
+        <span class="bm-quicklink__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="bm-quicklink" href="/suppliers.html">
+        <span class="bm-quicklink__title">For material suppliers</span>
+        <span class="bm-quicklink__desc">Receive qualified leads from builders</span>
+        <span class="bm-quicklink__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="bm-quicklink" href="/contact.html">
+        <span class="bm-quicklink__title">Contact</span>
+        <span class="bm-quicklink__desc">Corrections, feedback, partnerships</span>
+        <span class="bm-quicklink__arrow" aria-hidden="true">→</span>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     AD SLOT 4 — Final homepage ad, above footer
+     ═══════════════════════════════════════════════════════════ -->
+<div class="bm-ad-slot bm-ad-slot--leaderboard" data-bm-ad-slot="home-4" aria-hidden="true">
+  <span class="bm-ad-slot__label">Advertisement</span>
+  <div class="bm-ad-slot__frame" data-bm-ad-unit="home-4"></div>
+</div>
+
+  
+  </main>
+  <!-- ═══ MAIN — END ═══ -->
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER — navy-900, 4 columns
+       Col 1: brand + tagline + contact
+       Col 2: Top categories
+       Col 3: Company / trust pages
+       Col 4: Legal + social
+       ═══════════════════════════════════════════════════════════ -->
+  <footer class="bm-footer" role="contentinfo">
+    <div class="bm-container">
+
+      <div class="bm-footer__grid">
+
+        <!-- COLUMN 1 — BRAND -->
+        <div class="bm-footer__col bm-footer__col--brand">
+          <a href="/" class="bm-brand bm-brand--footer" aria-label="BuildMetric home">
+            <svg class="bm-brand__mark" viewBox="0 0 40 40" width="30" height="30" aria-hidden="true" focusable="false">
+              <rect x="4" y="22" width="32" height="4" rx="1" fill="#F59E0B"/>
+              <path d="M8 22 V16 A12 12 0 0 1 32 16 V22" fill="none" stroke="#10B981" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M20 10 V22" stroke="#10B981" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="20" cy="33" r="2" fill="#10B981"/>
+            </svg>
+            <span class="bm-brand__text">
+              <span class="bm-brand__build">Build</span><span class="bm-brand__metric">Metric</span>
+            </span>
+          </a>
+
+          <p class="bm-footer__tagline">
+            Free construction calculators for the field. Standard-based formulas,
+            instant results, no signup. Built for contractors, engineers, and
+            serious DIY builders.
+          </p>
+
+          <ul class="bm-footer__contact" role="list">
+            <li>
+              <span class="bm-sr-only">Email</span>
+              <a href="mailto:contact.buildmetric@gmail.com">contact.buildmetric@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- COLUMN 2 — CATEGORIES -->
+        <div class="bm-footer__col">
+          <h2 class="bm-footer__heading">Top Categories</h2>
+          <ul class="bm-footer__list" role="list">
+            <li><a href="/categories/concrete-masonry.html">Concrete &amp; Masonry</a></li>
+            <li><a href="/categories/lumber-framing.html">Lumber &amp; Framing</a></li>
+            <li><a href="/categories/roofing-siding.html">Roofing &amp; Siding</a></li>
+            <li><a href="/categories/electrical-hvac.html">Electrical &amp; HVAC</a></li>
+            <li><a href="/categories/solar-energy.html">Solar &amp; Energy</a></li>
+            <li><a href="/categories/cost-estimators.html">Cost Estimators</a></li>
+            <li><a href="/categories/">All 12 categories →</a></li>
+          </ul>
+        </div>
+
+        <!-- COLUMN 3 — COMPANY -->
+        <div class="bm-footer__col">
+          <h2 class="bm-footer__heading">Company</h2>
+          <ul class="bm-footer__list" role="list">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/why-we-exist.html">Why we exist</a></li>
+            <li><a href="/why-trust.html">Why trust us</a></li>
+            <li><a href="/how-to-use.html">How to use</a></li>
+            <li><a href="/suppliers.html">For suppliers</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+
+        <!-- COLUMN 4 — LEGAL + SOCIAL -->
+        <div class="bm-footer__col">
+          <h2 class="bm-footer__heading">Legal</h2>
+          <ul class="bm-footer__list" role="list">
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html">Terms of Use</a></li>
+            <li><a href="/cookies.html">Cookie Policy</a></li>
+            <li><a href="/disclaimer.html">Disclaimer</a></li>
+          </ul>
+
+          <h2 class="bm-footer__heading bm-footer__heading--social">Follow</h2>
+          <ul class="bm-footer__social" role="list">
+            <li>
+              <a
+                href="https://facebook.com/BuildMetric"
+                rel="noopener"
+                target="_blank"
+                aria-label="BuildMetric on Facebook"
+              >
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+                  <path d="M13.5 22 V13 H16.5 L17 9.5 H13.5 V7.5 C13.5 6.5 14 5.8 15.3 5.8 H17 V2.6 C16.4 2.5 15.4 2.4 14.3 2.4 C11.6 2.4 9.7 4 9.7 7 V9.5 H6.7 V13 H9.7 V22 Z" fill="currentColor"/>
+                </svg>
+                <span>Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtube.com/@buildmetricyt"
+                rel="noopener"
+                target="_blank"
+                aria-label="BuildMetric on YouTube"
+              >
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+                  <rect x="2.5" y="5.5" width="19" height="13" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M10 9 L16 12 L10 15 Z" fill="currentColor"/>
+                </svg>
+                <span>YouTube</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:contact.buildmetric@gmail.com" aria-label="Email BuildMetric">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+                  <rect x="2.5" y="5" width="19" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M2.5 7 L12 14 L21.5 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Email</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- FOOTER BOTTOM BAR -->
+      <div class="bm-footer__bottom">
+        <p class="bm-footer__copy">
+          © <span data-bm-year>2025</span> BuildMetric. All rights reserved.
+          BuildMetric provides quantity estimates only. Final permit drawings and
+          structural sign-offs must be verified by a licensed engineer in your jurisdiction.
+        </p>
+        <p class="bm-footer__meta">
+          <a href="/sitemap.html">Sitemap</a>
+          <span aria-hidden="true">·</span>
+          <a href="/contact.html">Report an error</a>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SCROLL-TO-TOP — appears after 600px scroll, bottom-right
+       ═══════════════════════════════════════════════════════════ -->
+  <button
+    type="button"
+    class="bm-scroll-top"
+    data-bm-scroll-top
+    aria-label="Scroll to top"
+    hidden
+  >
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+      <path d="M12 19 V5 M5 12 L12 5 L19 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       COOKIE BANNER — bottom, single row, max 80px height
+       No full-screen overlay. No modal. Consent stored 12 months.
+       AdSense only loads AFTER "Accept all" or "Essential only".
+       ═══════════════════════════════════════════════════════════ -->
+  <aside
+    class="bm-cookie"
+    data-bm-cookie
+    role="region"
+    aria-label="Cookie notice"
+    hidden
+  >
+    <div class="bm-cookie__inner">
+      <p class="bm-cookie__text">
+        We use essential cookies to run the site, and optional cookies for
+        advertising. See our <a href="/cookies.html">Cookie Policy</a>.
+      </p>
+      <div class="bm-cookie__actions">
+        <button type="button" class="bm-cookie__btn bm-cookie__btn--ghost" data-bm-cookie-essential>
+          Essential only
+        </button>
+        <button type="button" class="bm-cookie__btn bm-cookie__btn--amber" data-bm-cookie-accept>
+          Accept all
+        </button>
+      </div>
+    </div>
+  </aside>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SCRIPTS — deferred, non-blocking, in load order
+       All calculators run client-side. No framework. No jQuery.
+       ═══════════════════════════════════════════════════════════ -->
+  <script src="/js/main.js" defer></script>
+  <script src="/js/geo-detection.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/b2b.js" defer></script>
+  <script src="/js/analytics.js" defer></script>
+
+  <!--
+    NOTE: stepper.js, calculator.js, and formulas.js are NOT loaded on the
+    homepage — they are only loaded on tool pages to keep homepage payload
+    minimal. The homepage is fully interactive without them.
+  -->
+
+</body>
+</html>
