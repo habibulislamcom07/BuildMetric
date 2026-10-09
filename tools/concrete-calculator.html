@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concrete Calculator — Free &amp; Accurate | BuildMetric</title>
+    <meta name="description" content="Calculate concrete volume for slabs, footings and columns. Free, accurate, works in metric and imperial units. Shows the exact formula used.">
+    <link rel="canonical" href="https://buildmetric.org/tools/concrete-calculator.html">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <!-- Same header -->
+</header>
+
+<main>
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <div class="container">
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li><a href="/material/">Material Estimators</a></li>
+                <li aria-current="page">Concrete Calculator</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Tool Hero -->
+    <section class="tool-hero">
+        <div class="container">
+            <h1>Concrete Calculator</h1>
+            <p>Estimate the exact volume of concrete you need for slabs, footings, columns and more. Works in metric and imperial units.</p>
+        </div>
+    </section>
+
+    <!-- Tool Interface -->
+    <section class="tool-interface">
+        <div class="container">
+            <form id="concreteForm" class="tool-form">
+                <div class="form-row">
+                    <label for="length">Length</label>
+                    <input type="number" id="length" name="length" placeholder="e.g. 10" required>
+                    <select name="lengthUnit">
+                        <option value="ft">feet</option>
+                        <option value="m">metres</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="width">Width</label>
+                    <input type="number" id="width" name="width" placeholder="e.g. 5" required>
+                    <select name="widthUnit">
+                        <option value="ft">feet</option>
+                        <option value="m">metres</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="depth">Depth / Thickness</label>
+                    <input type="number" id="depth" name="depth" placeholder="e.g. 4" required>
+                    <select name="depthUnit">
+                        <option value="in">inches</option>
+                        <option value="cm">centimetres</option>
+                    </select>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Calculate</button>
+                    <button type="button" class="btn-secondary" onclick="resetTool('concreteForm')">Reset</button>
+                </div>
+            </form>
+            
+            <!-- Result -->
+            <div class="tool-result" id="concreteResult" role="region" aria-live="polite">
+                <!-- Result will appear here -->
+            </div>
+            
+            <!-- Save/Share Buttons -->
+            <div class="tool-actions">
+                <button type="button" class="btn-save" id="saveBtn">💾 Save</button>
+                <button type="button" class="btn-share" id="shareBtn">📤 Share</button>
+                <button type="button" class="btn-copy" id="copyBtn">📋 Copy</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use -->
+    <section class="tool-content">
+        <div class="container">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+                <li>Enter the length, width and depth of your concrete project.</li>
+                <li>Choose your preferred units (metric or imperial).</li>
+                <li>Click Calculate to see the exact volume you need.</li>
+                <li>Add 5-10% waste allowance before ordering.</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Formula -->
+    <section class="tool-content">
+        <div class="container">
+            <h2>Formula Used</h2>
+            <p><strong>Volume = Length × Width × Depth</strong></p>
+            <p>Example: 10 ft × 5 ft × 0.33 ft = 16.5 cubic feet = 0.61 cubic metres</p>
+        </div>
+    </section>
+
+    <!-- FAQ (7 questions) -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <!-- 7 FAQ items -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools -->
+    <section class="related-tools">
+        <div class="container">
+            <h2>Related Calculators</h2>
+            <div class="tool-grid">
+                <a href="/tools/paint-calculator.html" class="tool-card">
+                    <div class="tool-icon">🎨</div>
+                    <h3 class="tool-name">Paint Calculator</h3>
+                    <span class="tool-arrow">→</span>
+                </a>
+                <!-- 3-4 related tools -->
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <!-- Footer content -->
+</footer>
+
+<script src="/js/main.js" defer></script>
+<script src="/js/faq.js" defer></script>
+<script src="/js/search.js" defer></script>
+<script src="/js/save-share.js" defer></script>
+
+</body>
+</html>
