@@ -1,226 +1,184 @@
 /* ═══════════════════════════════════════════════════════════════
    BUILDMETRIC.ORG — BLUEPRINT.CSS
    Foundation layer: tokens, reset, typography, layout, utilities.
-   This file must load FIRST. Nothing here depends on other files.
-   ═══════════════════════════════════════════════════════════════
-
-   LAYER ORDER (cascade):
-   1. blueprint.css  ← you are here (tokens, reset, base)
-   2. components.css (buttons, cards, forms, header, footer)
-   3. homepage.css   (page-specific sections)
-   4. category.css   (category page specific)
-   5. tool.css       (tool page specific)
-   6. responsive.css (media queries, all breakpoints)
-   7. print.css      (print only)
-
-   No !important except where explicitly noted.
-   No utility class explosion. Semantic class names only.
+   Load order: blueprint → components → homepage → responsive → print
+   No framework. No !important except where noted.
    ═══════════════════════════════════════════════════════════════ */
 
-
 /* ═══════════════════════════════════════════════════════════════
-   1. DESIGN TOKENS — COLOUR SYSTEM ("USA TRUST & BUILD")
-   ═══════════════════════════════════════════════════════════════
-   Navy = trust, authority, engineering (primary)
-   Green = verified, success, money (accent, sparingly)
-   Amber = action, CTA (accent, sparingly)
-   Neutrals = ink, slate, surface
+   01. DESIGN TOKENS — USA TRUST & BUILD PALETTE
+   Navy = trust. Amber = action. Green = verified.
    ═══════════════════════════════════════════════════════════════ */
 
 :root {
-  /* ─── NAVY — PRIMARY BRAND ─────────────────────────────── */
-  --navy-900:        #0A1F44;  /* deepest — footer, dark anchors */
-  --navy-800:        #0F2A5C;  /* header bg, H1 on light, dark sections */
-  --navy-700:        #1E3A8A;  /* H2, hero gradient start */
-  --navy-600:        #1E40AF;  /* links, focus rings */
-  --navy-500:        #2563EB;  /* hover states */
-  --navy-pale:       #DBEAFE;  /* nav links on dark, light text on navy */
-  --navy-tint:       #EFF6FF;  /* light section backgrounds */
+  /* ─── NAVY (Primary brand — trust, engineering) ────────── */
+  --navy-900:        #0A1F44;
+  --navy-800:        #0F2A5C;
+  --navy-700:        #1E3A8A;
+  --navy-600:        #1E40AF;
+  --navy-500:        #2563EB;
+  --navy-pale:       #DBEAFE;
+  --navy-tint:       #EFF6FF;
 
-  /* ─── AMBER — ACTION ───────────────────────────────────── */
-  --amber-500:       #F59E0B;  /* primary CTAs */
-  --amber-600:       #D97706;  /* button hover */
-  --amber-700:       #B45309;  /* amber text on light bg (AA) */
-  --amber-pale:      #FEF3C7;  /* highlights, warning bg */
+  /* ─── AMBER (Action — CTA, hard-hat yellow) ───────────── */
+  --amber-400:       #FBBF24;
+  --amber-500:       #F59E0B;
+  --amber-600:       #D97706;
+  --amber-700:       #B45309;
+  --amber-pale:      #FEF3C7;
 
-  /* ─── GREEN — SUCCESS / VERIFIED ───────────────────────── */
-  --green-700:       #047857;  /* success text, verified badges */
-  --green-600:       #059669;  /* success bg */
-  --green-500:       #10B981;  /* positive results, checks */
-  --green-pale:      #D1FAE5;  /* light success bg, trust pills */
+  /* ─── GREEN (Verified, success, money) ────────────────── */
+  --green-700:       #047857;
+  --green-600:       #059669;
+  --green-500:       #10B981;
+  --green-pale:      #D1FAE5;
 
-  /* ─── NEUTRALS — INK & SLATE ───────────────────────────── */
-  --ink:             #0F172A;  /* body text */
-  --slate-dark:      #1E293B;  /* dark cards, secondary sections */
-  --slate-med:       #475569;  /* secondary text, labels */
-  --slate-light:     #94A3B8;  /* muted, placeholders */
-  --slate-lighter:   #CBD5E1;  /* disabled, dividers */
-  --border:          #E2E8F0;  /* light borders, dividers */
-  --border-strong:   #CBD5E1;  /* stronger borders on hover */
-  --surface:         #F8FAFC;  /* page background */
-  --surface-alt:     #F1F5F9;  /* alternate surface */
-  --white:           #FFFFFF;  /* cards ONLY */
+  /* ─── NEUTRALS (Ink, slate) ───────────────────────────── */
+  --ink:             #0F172A;
+  --slate-dark:      #1E293B;
+  --slate-med:       #475569;
+  --slate-light:     #94A3B8;
+  --slate-lighter:   #CBD5E1;
+  --border:          #E2E8F0;
+  --border-strong:   #CBD5E1;
+  --surface:         #F8FAFC;
+  --surface-alt:     #F1F5F9;
+  --white:           #FFFFFF;
 
-  /* ─── SEMANTIC COLOURS ─────────────────────────────────── */
-  --color-text:           var(--ink);
-  --color-text-muted:     var(--slate-med);
-  --color-text-subtle:    var(--slate-light);
-  --color-bg:             var(--surface);
-  --color-bg-card:        var(--white);
-  --color-bg-dark:        var(--navy-900);
-  --color-heading:        var(--navy-800);
-  --color-heading-dark:   var(--navy-pale);
-  --color-link:           var(--navy-600);
-  --color-link-hover:     var(--navy-500);
-  --color-border:         var(--border);
+  /* ─── SEMANTIC ALIASES ────────────────────────────────── */
+  --color-text:         var(--ink);
+  --color-text-muted:   var(--slate-med);
+  --color-text-subtle:  var(--slate-light);
+  --color-bg:           var(--surface);
+  --color-bg-card:      var(--white);
+  --color-bg-dark:      var(--navy-900);
+  --color-heading:      var(--navy-800);
+  --color-heading-dark: var(--navy-pale);
+  --color-link:         var(--navy-600);
+  --color-link-hover:   var(--navy-500);
 
-  /* ─── STATE COLOURS ────────────────────────────────────── */
-  --color-success:        var(--green-600);
-  --color-success-bg:     var(--green-pale);
-  --color-warning:        var(--amber-600);
-  --color-warning-bg:     var(--amber-pale);
-  --color-danger:         #B91C1C;
-  --color-danger-bg:      #FEE2E2;
-  --color-info:           var(--navy-600);
-  --color-info-bg:        var(--navy-tint);
+  /* ─── STATE COLOURS ───────────────────────────────────── */
+  --color-success:       var(--green-600);
+  --color-success-bg:    var(--green-pale);
+  --color-warning:       var(--amber-600);
+  --color-warning-bg:    var(--amber-pale);
+  --color-danger:        #B91C1C;
+  --color-danger-bg:     #FEE2E2;
+  --color-info:          var(--navy-600);
+  --color-info-bg:       var(--navy-tint);
 
-
-  /* ═══════════════════════════════════════════════════════════
-     2. TYPOGRAPHY SCALE
-     Inter for UI + body. JetBrains Mono for numbers + labels.
-     Ratio 1.25 (major third) — professional, not trendy.
-     ═══════════════════════════════════════════════════════════ */
+  /* ═════════════════════════════════════════════════════════
+     TYPOGRAPHY
+     ═════════════════════════════════════════════════════════ */
   --font-sans:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
                 Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-mono:  'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code',
                 'Roboto Mono', Consolas, 'Courier New', monospace;
 
-  --font-weight-regular:  400;
-  --font-weight-medium:   500;
-  --font-weight-semibold: 600;
-  --font-weight-bold:     700;
-  --font-weight-black:    800;
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+  --fw-black:    800;
 
-  /* Font sizes — mobile-first base */
-  --fs-xs:     0.75rem;    /* 12px — micro labels, legal */
-  --fs-sm:     0.8125rem;  /* 13px — small text, meta */
-  --fs-base:   0.9375rem;  /* 15px — body default */
-  --fs-md:     1rem;       /* 16px — larger body, inputs */
-  --fs-lg:     1.125rem;   /* 18px — lead paragraph */
-  --fs-xl:     1.375rem;   /* 22px — H4 */
-  --fs-2xl:    1.75rem;    /* 28px — H3 */
-  --fs-3xl:    2.125rem;   /* 34px — H2 */
-  --fs-4xl:    2.75rem;    /* 44px — H1 desktop */
-  --fs-5xl:    3.5rem;     /* 56px — hero H1 desktop */
-  --fs-6xl:    4.5rem;     /* 72px — hero result number */
+  --fs-xs:     0.75rem;    /* 12px */
+  --fs-sm:     0.8125rem;  /* 13px */
+  --fs-base:   0.9375rem;  /* 15px */
+  --fs-md:     1rem;       /* 16px */
+  --fs-lg:     1.125rem;   /* 18px */
+  --fs-xl:     1.375rem;   /* 22px */
+  --fs-2xl:    1.75rem;    /* 28px */
+  --fs-3xl:    2.125rem;   /* 34px */
+  --fs-4xl:    2.75rem;    /* 44px */
+  --fs-5xl:    3.5rem;     /* 56px */
+  --fs-6xl:    4.5rem;     /* 72px */
 
-  /* Line heights */
-  --lh-tight:    1.15;     /* huge headings */
-  --lh-snug:     1.3;      /* subheads */
-  --lh-normal:   1.5;      /* UI, labels */
-  --lh-relaxed:  1.6;      /* body paragraphs */
-  --lh-loose:    1.7;      /* long-form copy */
+  --lh-tight:    1.15;
+  --lh-snug:     1.3;
+  --lh-normal:   1.5;
+  --lh-relaxed:  1.6;
+  --lh-loose:    1.7;
 
-  /* Letter spacing */
-  --tracking-tight:   -0.03em;  /* H1, H2 */
-  --tracking-snug:    -0.02em;  /* H3, H4 */
+  --tracking-tight:   -0.03em;
+  --tracking-snug:    -0.02em;
   --tracking-normal:   0;
-  --tracking-wide:     0.02em;  /* small caps labels */
-  --tracking-widest:   0.08em;  /* mono section labels */
+  --tracking-wide:     0.02em;
+  --tracking-widest:   0.08em;
 
+  /* ═════════════════════════════════════════════════════════
+     SPACING (4px base)
+     ═════════════════════════════════════════════════════════ */
+  --sp-1:   0.25rem;
+  --sp-2:   0.5rem;
+  --sp-3:   0.75rem;
+  --sp-4:   1rem;
+  --sp-5:   1.25rem;
+  --sp-6:   1.5rem;
+  --sp-8:   2rem;
+  --sp-10:  2.5rem;
+  --sp-12:  3rem;
+  --sp-16:  4rem;
+  --sp-20:  5rem;
+  --sp-24:  6rem;
 
-  /* ═══════════════════════════════════════════════════════════
-     3. SPACING SCALE (4px base)
-     ═══════════════════════════════════════════════════════════ */
-  --sp-1:   0.25rem;   /*  4px */
-  --sp-2:   0.5rem;    /*  8px */
-  --sp-3:   0.75rem;   /* 12px */
-  --sp-4:   1rem;      /* 16px */
-  --sp-5:   1.25rem;   /* 20px */
-  --sp-6:   1.5rem;    /* 24px */
-  --sp-8:   2rem;      /* 32px */
-  --sp-10:  2.5rem;    /* 40px */
-  --sp-12:  3rem;      /* 48px */
-  --sp-16:  4rem;      /* 64px */
-  --sp-20:  5rem;      /* 80px */
-  --sp-24:  6rem;      /* 96px */
-  --sp-32:  8rem;      /* 128px */
+  --section-py-sm:  clamp(2.5rem, 5vw, 4rem);
+  --section-py-md:  clamp(3.5rem, 7vw, 6rem);
+  --section-py-lg:  clamp(4.5rem, 9vw, 8rem);
 
-  /* Section vertical rhythm (fluid) */
-  --section-py-sm:   clamp(2.5rem, 5vw, 4rem);
-  --section-py-md:   clamp(3.5rem, 7vw, 6rem);
-  --section-py-lg:   clamp(4.5rem, 9vw, 8rem);
+  /* ═════════════════════════════════════════════════════════
+     LAYOUT
+     ═════════════════════════════════════════════════════════ */
+  --container-max:     1280px;
+  --container-narrow:  760px;
+  --container-wide:    1440px;
 
-
-  /* ═══════════════════════════════════════════════════════════
-     4. LAYOUT TOKENS
-     ═══════════════════════════════════════════════════════════ */
-  --container-max:      1280px;
-  --container-narrow:   760px;   /* long-form reading width */
-  --container-wide:     1440px;
-
-  --gutter-mobile:  1rem;    /* 16px */
-  --gutter-tablet:  1.5rem;  /* 24px */
-  --gutter-desktop: 2rem;    /* 32px */
+  --gutter-mobile:  1rem;
+  --gutter-tablet:  1.5rem;
+  --gutter-desktop: 2rem;
 
   --header-h:       64px;
   --header-h-md:    72px;
 
-  --grid-gap-sm:    1rem;
-  --grid-gap-md:    1.25rem;
-  --grid-gap-lg:    1.5rem;
+  --grid-gap-sm:  1rem;
+  --grid-gap-md:  1.25rem;
+  --grid-gap-lg:  1.5rem;
 
-
-  /* ═══════════════════════════════════════════════════════════
-     5. RADII (hard edges — max 6px per brand rules)
-     ═══════════════════════════════════════════════════════════ */
+  /* ═════════════════════════════════════════════════════════
+     RADII (max 6px — hard edges per brand)
+     ═════════════════════════════════════════════════════════ */
   --radius-xs:   2px;
   --radius-sm:   4px;
-  --radius-md:   6px;   /* default card radius */
-  --radius-pill: 999px; /* only for tags / chips */
+  --radius-md:   6px;
+  --radius-pill: 999px;
 
-
-  /* ═══════════════════════════════════════════════════════════
-     6. BORDERS
-     ═══════════════════════════════════════════════════════════ */
-  --border-1:        1px solid var(--border);
-  --border-1-strong: 1px solid var(--border-strong);
-  --border-2-navy:   2px solid var(--navy-800);
-  --border-2-amber:  2px solid var(--amber-500);
-  --border-4-amber:  4px solid var(--amber-500);
-
-
-  /* ═══════════════════════════════════════════════════════════
-     7. SHADOWS (minimal — precision, not depth)
-     Only used on interactive cards + modals.
-     ═══════════════════════════════════════════════════════════ */
+  /* ═════════════════════════════════════════════════════════
+     SHADOWS (minimal — precision not depth)
+     ═════════════════════════════════════════════════════════ */
   --shadow-xs:  0 1px 2px rgba(15, 23, 42, 0.04);
   --shadow-sm:  0 1px 3px rgba(15, 23, 42, 0.06),
                 0 1px 2px rgba(15, 23, 42, 0.04);
   --shadow-md:  0 4px 12px rgba(15, 23, 42, 0.08);
   --shadow-lg:  0 12px 32px rgba(15, 23, 42, 0.12);
-  --shadow-focus: 0 0 0 3px rgba(30, 64, 175, 0.35);
+  --shadow-focus:       0 0 0 3px rgba(30, 64, 175, 0.35);
   --shadow-focus-amber: 0 0 0 3px rgba(245, 158, 11, 0.4);
 
-
-  /* ═══════════════════════════════════════════════════════════
-     8. Z-INDEX SCALE (predictable layering)
-     ═══════════════════════════════════════════════════════════ */
-  --z-base:       1;
-  --z-dropdown:   100;
-  --z-sticky:     200;
-  --z-header:     300;
-  --z-search:     400;
+  /* ═════════════════════════════════════════════════════════
+     Z-INDEX SCALE
+     ═════════════════════════════════════════════════════════ */
+  --z-base:        1;
+  --z-dropdown:    100;
+  --z-sticky:      200;
+  --z-header:      300;
+  --z-search:      400;
   --z-mobile-menu: 450;
-  --z-scroll-top: 500;
-  --z-cookie:     550;
-  --z-modal:      600;
-  --z-toast:      700;
+  --z-scroll-top:  500;
+  --z-cookie:      550;
+  --z-modal:       600;
+  --z-toast:       700;
 
-
-  /* ═══════════════════════════════════════════════════════════
-     9. MOTION (fast, precise — no bouncing)
-     ═══════════════════════════════════════════════════════════ */
+  /* ═════════════════════════════════════════════════════════
+     MOTION (fast, no bounce)
+     ═════════════════════════════════════════════════════════ */
   --dur-instant:  80ms;
   --dur-fast:     120ms;
   --dur-base:     180ms;
@@ -228,23 +186,21 @@
   --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out:  cubic-bezier(0.4, 0, 0.2, 1);
 
-
-  /* ═══════════════════════════════════════════════════════════
-     10. BLUEPRINT VISUAL DNA
-     ═══════════════════════════════════════════════════════════ */
-  --blueprint-grid-size:    40px;
-  --blueprint-grid-color:   rgba(219, 234, 254, 0.06);
+  /* ═════════════════════════════════════════════════════════
+     BLUEPRINT VISUAL DNA
+     ═════════════════════════════════════════════════════════ */
+  --blueprint-grid-size:        40px;
+  --blueprint-grid-color:       rgba(219, 234, 254, 0.06);
   --blueprint-grid-color-light: rgba(30, 58, 138, 0.05);
-  --ruler-tick-height:      8px;
-  --corner-bracket-size:    14px;
-  --corner-bracket-thick:   2px;
+  --ruler-tick-height:          8px;
+  --corner-bracket-size:        14px;
+  --corner-bracket-thick:       2px;
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   11. MODERN CSS RESET
+   02. MODERN CSS RESET
    Opinionated, minimal, no framework bloat.
-   Based on Andy Bell's reset + Josh Comeau's, trimmed to what
-   this site actually needs.
+   Ensures consistent rendering across browsers.
    ═══════════════════════════════════════════════════════════════ */
 
 /* ─── Box model ─────────────────────────────────────────── */
@@ -264,7 +220,7 @@ ol, ul, menu {
   padding: 0;
 }
 
-/* ─── Lists: reset only when marked as such ─────────────── */
+/* ─── Lists: reset only when role="list" ────────────────── */
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
@@ -272,28 +228,16 @@ ol[role="list"] {
 
 /* ─── Root / html ───────────────────────────────────────── */
 html {
-  /* Smooth scroll only if user hasn't requested reduced motion */
   scroll-behavior: smooth;
-  /* Prevent iOS text size adjustment on rotate */
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  /* Tabular nums baseline for mono numbers */
   font-variant-numeric: tabular-nums;
-  /* Prevent horizontal scroll from wide children */
   overflow-x: hidden;
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
-  }
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
   }
 }
 
@@ -303,7 +247,7 @@ body {
   min-height: 100dvh;
   font-family: var(--font-sans);
   font-size: var(--fs-base);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--fw-regular);
   line-height: var(--lh-relaxed);
   color: var(--color-text);
   background-color: var(--color-bg);
@@ -383,12 +327,11 @@ input[type="radio"]:disabled {
   opacity: 0.5;
 }
 
-/* ─── Remove inner focus ring on non-keyboard focus ─────── */
+/* ─── Focus policy ──────────────────────────────────────── */
 :focus:not(:focus-visible) {
   outline: none;
 }
 
-/* ─── Consistent focus-visible outline ──────────────────── */
 :focus-visible {
   outline: 2px solid var(--navy-600);
   outline-offset: 2px;
@@ -407,7 +350,7 @@ input[type="radio"]:disabled {
   display: none !important;
 }
 
-/* ─── Prevent long URLs from breaking layout ────────────── */
+/* ─── Prevent long URLs breaking layout ─────────────────── */
 p,
 li,
 dd,
@@ -470,7 +413,7 @@ pre {
 /* ─── Strong / bold consistency ─────────────────────────── */
 b,
 strong {
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--fw-bold);
 }
 
 /* ─── Small ─────────────────────────────────────────────── */
@@ -478,16 +421,17 @@ small {
   font-size: var(--fs-sm);
 }
 
-
 /* ═══════════════════════════════════════════════════════════════
-   12. BASE TYPOGRAPHY
-   Semantic HTML tags get sensible defaults.
-   Components override only where needed.
+   03. BASE TYPOGRAPHY
+   Semantic HTML tags get sensible defaults. Components override
+   only where needed. Every heading has a purpose, every paragraph
+   is readable. No visual noise.
    ═══════════════════════════════════════════════════════════════ */
 
+/* ─── Headings ──────────────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-sans);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--fw-bold);
   line-height: var(--lh-tight);
   letter-spacing: var(--tracking-tight);
   color: var(--color-heading);
@@ -496,7 +440,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: var(--fs-3xl);
-  font-weight: var(--font-weight-black);
+  font-weight: var(--fw-black);
   letter-spacing: var(--tracking-tight);
 }
 
@@ -512,16 +456,17 @@ h3 {
 
 h4 {
   font-size: var(--fs-lg);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--fw-semibold);
   letter-spacing: var(--tracking-snug);
 }
 
 h5, h6 {
   font-size: var(--fs-md);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--fw-semibold);
   letter-spacing: var(--tracking-normal);
 }
 
+/* ─── Paragraphs ────────────────────────────────────────── */
 p {
   color: var(--color-text);
   line-height: var(--lh-relaxed);
@@ -532,22 +477,164 @@ p + p {
   margin-top: var(--sp-4);
 }
 
-/* ─── Links in body copy ────────────────────────────────── */
+/* ─── Links in body copy ──────────────────────────────────
+   Inline links only underline on hover — cleaner reading. */
 p a,
 li a,
-dd a {
+dd a,
+blockquote a {
   color: var(--color-link);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
-  transition: color var(--dur-fast) var(--ease-out);
+  transition: color var(--dur-fast) var(--ease-out),
+              text-decoration-thickness var(--dur-fast) var(--ease-out);
 }
 
 p a:hover,
 li a:hover,
-dd a:hover {
+dd a:hover,
+blockquote a:hover {
   color: var(--color-link-hover);
   text-decoration-thickness: 2px;
+}
+
+/* ─── Lists (default, when not role="list") ─────────────── */
+ul:not([role="list"]),
+ol:not([role="list"]) {
+  padding-left: var(--sp-6);
+}
+
+li {
+  line-height: var(--lh-relaxed);
+}
+
+li + li {
+  margin-top: var(--sp-1);
+}
+
+/* ─── Definition lists ──────────────────────────────────── */
+dl {
+  display: grid;
+  gap: var(--sp-2);
+}
+
+dt {
+  font-weight: var(--fw-semibold);
+  color: var(--color-heading);
+}
+
+dd {
+  color: var(--color-text-muted);
+}
+
+/* ─── Blockquote ────────────────────────────────────────── */
+blockquote {
+  border-left: 4px solid var(--amber-500);
+  padding-left: var(--sp-5);
+  padding-block: var(--sp-2);
+  font-size: var(--fs-lg);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text);
+  font-style: normal;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+blockquote cite {
+  display: block;
+  margin-top: var(--sp-3);
+  font-size: var(--fs-sm);
+  font-family: var(--font-mono);
+  color: var(--color-text-muted);
+  font-style: normal;
+}
+
+/* ─── Code blocks (formula display) ─────────────────────── */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  padding: 0.125em 0.375em;
+  background-color: var(--surface-alt);
+  color: var(--navy-800);
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border);
+  font-weight: var(--fw-medium);
+  white-space: nowrap;
+}
+
+/* Code inside a dark surface */
+.bm-surface--navy code,
+.bm-surface--navy-800 code,
+.bm-why code,
+.bm-how code {
+  background-color: rgba(219, 234, 254, 0.08);
+  color: var(--amber-500);
+  border-color: rgba(219, 234, 254, 0.15);
+}
+
+/* ─── Pre blocks (multi-line formulas) ──────────────────── */
+pre {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-relaxed);
+  padding: var(--sp-5);
+  background-color: var(--surface-alt);
+  color: var(--ink);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--navy-800);
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+  margin: var(--sp-5) 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+pre code {
+  padding: 0;
+  background: none;
+  border: none;
+  font-size: 1em;
+  color: inherit;
+  white-space: inherit;
+}
+
+/* Pre block on dark surface */
+.bm-surface--navy pre,
+.bm-surface--navy-800 pre {
+  background-color: rgba(10, 31, 68, 0.5);
+  color: var(--navy-pale);
+  border-color: rgba(219, 234, 254, 0.15);
+  border-left-color: var(--amber-500);
+}
+
+/* ─── kbd (keyboard hints) ──────────────────────────────── */
+kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: var(--fw-medium);
+  color: var(--navy-800);
+  background-color: var(--white);
+  border: 1px solid var(--border-strong);
+  border-bottom-width: 2px;
+  border-radius: var(--radius-xs);
+  line-height: 1;
+}
+
+/* kbd on dark surface */
+.bm-surface--navy kbd,
+.bm-surface--navy-800 kbd {
+  background-color: rgba(219, 234, 254, 0.1);
+  color: var(--navy-pale);
+  border-color: rgba(219, 234, 254, 0.2);
 }
 
 /* ─── Selection ─────────────────────────────────────────── */
@@ -556,19 +643,137 @@ dd a:hover {
   color: var(--ink);
 }
 
-/* ─── Autofill styling (Chrome) ─────────────────────────── */
+/* ─── Autofill (Chrome yellow fix) ──────────────────────── */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
-textarea:-webkit-autofill {
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill {
   -webkit-text-fill-color: var(--ink);
   -webkit-box-shadow: 0 0 0 1000px var(--white) inset;
+  box-shadow: 0 0 0 1000px var(--white) inset;
   transition: background-color 5000s ease-in-out 0s;
 }
 
+/* ─── Text selection on dark surfaces ───────────────────── */
+.bm-surface--navy ::selection,
+.bm-surface--navy-800 ::selection,
+.bm-hero ::selection,
+.bm-why ::selection,
+.bm-how ::selection {
+  background-color: var(--amber-500);
+  color: var(--ink);
+}
+
+/* ─── Dark surface base text colour ───────────────────────
+   Global safety: any <p>, <li>, <span> inside a navy section
+   inherits navy-pale unless a component overrides it. */
+.bm-surface--navy,
+.bm-surface--navy-800,
+.bm-why,
+.bm-how,
+.bm-quicklinks,
+.bm-b2b,
+.bm-hero {
+  color: var(--navy-pale);
+}
+
+.bm-surface--navy p,
+.bm-surface--navy-800 p,
+.bm-why p,
+.bm-how p,
+.bm-quicklinks p,
+.bm-b2b p,
+.bm-hero p {
+  color: var(--navy-pale);
+}
+
+.bm-surface--navy a,
+.bm-surface--navy-800 a,
+.bm-why a,
+.bm-how a,
+.bm-quicklinks a,
+.bm-b2b a,
+.bm-hero a {
+  color: var(--navy-pale);
+}
+
+/* ─── Heading overrides on dark surfaces ────────────────── */
+.bm-surface--navy h1,
+.bm-surface--navy h2,
+.bm-surface--navy h3,
+.bm-surface--navy h4,
+.bm-surface--navy-800 h1,
+.bm-surface--navy-800 h2,
+.bm-surface--navy-800 h3,
+.bm-surface--navy-800 h4,
+.bm-why h1,
+.bm-why h2,
+.bm-why h3,
+.bm-why h4,
+.bm-how h1,
+.bm-how h2,
+.bm-how h3,
+.bm-how h4,
+.bm-hero h1,
+.bm-hero h2,
+.bm-hero h3,
+.bm-hero h4 {
+  color: var(--navy-pale);
+}
+
+/* ─── hr (section divider) ──────────────────────────────── */
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: var(--sp-8) 0;
+}
+
+.bm-surface--navy hr,
+.bm-surface--navy-800 hr,
+.bm-why hr,
+.bm-how hr {
+  border-top-color: rgba(219, 234, 254, 0.14);
+}
+
+/* ─── Abbr ──────────────────────────────────────────────── */
+abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
+  text-underline-offset: 3px;
+}
+
+/* ─── Mark (highlight) ──────────────────────────────────── */
+mark {
+  background-color: var(--amber-pale);
+  color: var(--ink);
+  padding: 0.125em 0.25em;
+  border-radius: var(--radius-xs);
+}
+
+/* ─── Small ─────────────────────────────────────────────── */
+small {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  line-height: var(--lh-normal);
+}
+
+/* ─── Sup / Sub (rare — used in formulas) ───────────────── */
+sup, sub {
+  font-size: 0.75em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
 
 /* ═══════════════════════════════════════════════════════════════
-   13. LAYOUT PRIMITIVES
+   04. LAYOUT PRIMITIVES
+   Containers, section heads, grids, flex. Used across every page.
    ═══════════════════════════════════════════════════════════════ */
 
 /* ─── Container ─────────────────────────────────────────── */
@@ -599,7 +804,20 @@ textarea:-webkit-autofill {
   max-width: var(--container-wide);
 }
 
-/* ─── Section head (reused across all sections) ─────────── */
+/* ─── Section wrapper (fluid vertical padding) ──────────── */
+.bm-section {
+  padding-block: var(--section-py-md);
+}
+
+.bm-section--sm {
+  padding-block: var(--section-py-sm);
+}
+
+.bm-section--lg {
+  padding-block: var(--section-py-lg);
+}
+
+/* ─── Section head (used everywhere) ────────────────────── */
 .bm-section-head {
   max-width: 720px;
   margin-bottom: var(--sp-8);
@@ -609,29 +827,37 @@ textarea:-webkit-autofill {
   color: var(--navy-pale);
 }
 
+.bm-section-head--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+/* ─── Section label (// SECTION //) ─────────────────────── */
 .bm-section-label {
   display: inline-block;
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--fw-medium);
   letter-spacing: var(--tracking-widest);
   text-transform: uppercase;
   color: var(--green-700);
   margin-bottom: var(--sp-3);
-  padding: 0;
+  line-height: 1;
 }
 
 .bm-section-label--on-dark {
   color: var(--green-500);
 }
 
+/* ─── Section title ─────────────────────────────────────── */
 .bm-section-title {
   font-size: var(--fs-2xl);
-  font-weight: var(--font-weight-black);
+  font-weight: var(--fw-black);
   line-height: var(--lh-tight);
   letter-spacing: var(--tracking-tight);
   color: var(--navy-800);
   margin-bottom: var(--sp-4);
+  text-wrap: balance;
 }
 
 .bm-section-title--on-dark {
@@ -644,11 +870,13 @@ textarea:-webkit-autofill {
   }
 }
 
+/* ─── Section subtitle ──────────────────────────────────── */
 .bm-section-sub {
   font-size: var(--fs-md);
   line-height: var(--lh-relaxed);
   color: var(--slate-med);
-  max-width: 60ch;
+  max-width: 62ch;
+  text-wrap: pretty;
 }
 
 .bm-section-sub--on-dark {
@@ -657,7 +885,118 @@ textarea:-webkit-autofill {
 }
 
 
-/* ─── Utility: visually hidden (a11y) ───────────────────── */
+/* ═══════════════════════════════════════════════════════════════
+   05. GRID HELPERS
+   Used by categories, tools, featured, standards, trust sections.
+   Mobile-first. minmax(0, 1fr) prevents overflow.
+   ═══════════════════════════════════════════════════════════════ */
+
+.bm-grid {
+  display: grid;
+  gap: var(--grid-gap-md);
+}
+
+/* ─── 2-column responsive ───────────────────────────────── */
+.bm-grid--2 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .bm-grid--2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ─── 3-column responsive ───────────────────────────────── */
+.bm-grid--3 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .bm-grid--3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .bm-grid--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ─── 4-column responsive ───────────────────────────────── */
+.bm-grid--4 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .bm-grid--4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .bm-grid--4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* ─── Auto-fit (tools listing, search results) ──────────── */
+.bm-grid--auto {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.bm-grid--auto-sm {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.bm-grid--auto-lg {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   06. FLEX HELPERS (sparingly used — grid is preferred)
+   ═══════════════════════════════════════════════════════════════ */
+
+.bm-flex {
+  display: flex;
+  gap: var(--sp-4);
+}
+
+.bm-flex--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.bm-flex--between {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bm-flex--start {
+  align-items: flex-start;
+}
+
+.bm-flex--end {
+  align-items: flex-end;
+}
+
+.bm-flex--col {
+  flex-direction: column;
+}
+
+.bm-flex--wrap {
+  flex-wrap: wrap;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   07. ACCESSIBILITY UTILITIES
+   Screen-reader-only content, skip link, focus helpers.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Visually hidden (but readable by screen readers) ──── */
 .bm-sr-only {
   position: absolute !important;
   width: 1px !important;
@@ -670,7 +1009,7 @@ textarea:-webkit-autofill {
   border: 0 !important;
 }
 
-/* ─── Utility: skip link ────────────────────────────────── */
+/* ─── Skip link (visible only on focus) ─────────────────── */
 .bm-skip-link {
   position: absolute;
   top: -100px;
@@ -679,10 +1018,11 @@ textarea:-webkit-autofill {
   background: var(--navy-800);
   color: var(--navy-pale);
   padding: var(--sp-3) var(--sp-5);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--fw-semibold);
   font-size: var(--fs-sm);
   border-radius: var(--radius-sm);
   transition: top var(--dur-base) var(--ease-out);
+  text-decoration: none;
 }
 
 .bm-skip-link:focus {
@@ -691,349 +1031,111 @@ textarea:-webkit-autofill {
   outline-offset: 2px;
 }
 
+/* ─── Focus-visible reinforcement ───────────────────────── */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--navy-600);
+  outline-offset: 2px;
+}
+
+/* On dark surfaces → amber ring */
+.bm-surface--navy a:focus-visible,
+.bm-surface--navy button:focus-visible,
+.bm-surface--navy-800 a:focus-visible,
+.bm-surface--navy-800 button:focus-visible,
+.bm-hero a:focus-visible,
+.bm-hero button:focus-visible,
+.bm-why a:focus-visible,
+.bm-how a:focus-visible,
+.bm-quicklinks a:focus-visible,
+.bm-footer a:focus-visible,
+.bm-b2b a:focus-visible,
+.bm-b2b button:focus-visible {
+  outline-color: var(--amber-500);
+}
+
+/* Inputs get soft ring instead of hard outline */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  border-color: var(--navy-600);
+  box-shadow: var(--shadow-focus);
+}
+
+
 /* ═══════════════════════════════════════════════════════════════
-   14. BLUEPRINT VISUAL LANGUAGE
-   The subtle "engineering drawing" DNA that runs through the site.
-   Grid overlays, ruler ticks, corner brackets, monospace numbers.
-   All decorative — never interferes with content or a11y.
+   08. UTILITY CLASSES
+   Small, purpose-built. Not a utility framework.
+   Only classes used across multiple files.
    ═══════════════════════════════════════════════════════════════ */
 
-/* ─── Blueprint grid overlay (navy sections) ─────────────
-   Very subtle 40px grid on dark navy backgrounds.
-   Applied via ::before so it sits BEHIND content, ABOVE bg. */
-.bm-grid-overlay {
-  position: relative;
-  isolation: isolate;
+/* ─── Text alignment ────────────────────────────────────── */
+.bm-text-center { text-align: center; }
+.bm-text-left   { text-align: left; }
+.bm-text-right  { text-align: right; }
+
+/* ─── Text transforms ───────────────────────────────────── */
+.bm-uppercase {
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
 }
 
-.bm-grid-overlay::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(to right, var(--blueprint-grid-color) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--blueprint-grid-color) 1px, transparent 1px);
-  background-size: var(--blueprint-grid-size) var(--blueprint-grid-size);
-  opacity: 1;
+/* ─── Muted text ────────────────────────────────────────── */
+.bm-muted {
+  color: var(--slate-med);
 }
 
-.bm-grid-overlay > * {
-  position: relative;
-  z-index: 1;
+/* ─── No-wrap (emails, IDs) ─────────────────────────────── */
+.bm-nowrap {
+  white-space: nowrap;
 }
 
-/* Light variant — for white/surface sections */
-.bm-grid-overlay--light::before {
-  background-image:
-    linear-gradient(to right, var(--blueprint-grid-color-light) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--blueprint-grid-color-light) 1px, transparent 1px);
+/* ─── Break long strings (URLs, emails) ─────────────────── */
+.bm-break {
+  word-break: break-all;
+  overflow-wrap: anywhere;
 }
 
+/* ─── Margin helpers (top/bottom only) ──────────────────── */
+.bm-mt-0  { margin-top: 0 !important; }
+.bm-mt-4  { margin-top: var(--sp-4); }
+.bm-mt-6  { margin-top: var(--sp-6); }
+.bm-mt-8  { margin-top: var(--sp-8); }
+.bm-mb-0  { margin-bottom: 0 !important; }
+.bm-mb-4  { margin-bottom: var(--sp-4); }
+.bm-mb-6  { margin-bottom: var(--sp-6); }
+.bm-mb-8  { margin-bottom: var(--sp-8); }
 
-/* ─── Section with ruler ticks (left + right edges) ───────
-   Subtle vertical tick marks at 8px intervals, only on the
-   outer 4px of the section. Feels like a measured drawing. */
-.bm-ruler-edges {
-  position: relative;
+/* ─── Hide/show by breakpoint ───────────────────────────── */
+.bm-hide-mobile {
+  display: none;
 }
 
-.bm-ruler-edges::before,
-.bm-ruler-edges::after {
-  content: "";
-  position: absolute;
-  top: var(--sp-8);
-  bottom: var(--sp-8);
-  width: 1px;
-  background-image:
-    repeating-linear-gradient(
-      to bottom,
-      var(--border-strong) 0,
-      var(--border-strong) 1px,
-      transparent 1px,
-      transparent 8px
-    );
-  opacity: 0.35;
-  pointer-events: none;
+@media (min-width: 768px) {
+  .bm-hide-mobile {
+    display: block;
+  }
 }
 
-.bm-ruler-edges::before {
-  left: 0;
+.bm-hide-desktop {
+  display: block;
 }
 
-.bm-ruler-edges::after {
-  right: 0;
-}
-
-/* Hide ruler edges on small screens (visual noise) */
-@media (max-width: 767px) {
-  .bm-ruler-edges::before,
-  .bm-ruler-edges::after {
+@media (min-width: 1024px) {
+  .bm-hide-desktop {
     display: none;
   }
 }
 
-/* Dark variant — ticks in navy-pale */
-.bm-ruler-edges--on-dark::before,
-.bm-ruler-edges--on-dark::after {
-  background-image:
-    repeating-linear-gradient(
-      to bottom,
-      var(--navy-pale) 0,
-      var(--navy-pale) 1px,
-      transparent 1px,
-      transparent 8px
-    );
-  opacity: 0.12;
-}
+/* ─── Reading width constraints ─────────────────────────── */
+.bm-max-40ch { max-width: 40ch; }
+.bm-max-60ch { max-width: 60ch; }
+.bm-max-72ch { max-width: 72ch; }
 
-
-/* ─── Corner brackets (L-shapes on important cards) ───────
-   Adds four small L-brackets to the corners of an element.
-   Uses CSS pseudo-elements + a wrapper to draw all four. */
-.bm-brackets {
-  position: relative;
-}
-
-.bm-brackets::before,
-.bm-brackets::after {
-  content: "";
-  position: absolute;
-  width: var(--corner-bracket-size);
-  height: var(--corner-bracket-size);
-  pointer-events: none;
-  border-color: var(--amber-500);
-  border-style: solid;
-  border-width: 0;
-}
-
-/* Top-left + bottom-right via ::before / ::after
-   Top-right + bottom-left need the element to have an inner wrapper
-   OR use a second element. We use border-image trick instead below. */
-
-.bm-brackets::before {
-  top: 0;
-  left: 0;
-  border-top-width: var(--corner-bracket-thick);
-  border-left-width: var(--corner-bracket-thick);
-}
-
-.bm-brackets::after {
-  bottom: 0;
-  right: 0;
-  border-bottom-width: var(--corner-bracket-thick);
-  border-right-width: var(--corner-bracket-thick);
-}
-
-/* Optional: bracket tone variants */
-.bm-brackets--navy::before,
-.bm-brackets--navy::after {
-  border-color: var(--navy-800);
-}
-
-.bm-brackets--green::before,
-.bm-brackets--green::after {
-  border-color: var(--green-600);
-}
-
-.bm-brackets--pale::before,
-.bm-brackets--pale::after {
-  border-color: var(--navy-pale);
-}
-
-
-/* ─── Amber underline accent (on primary CTAs / headings) ─ */
-.bm-underline-amber {
-  position: relative;
-  display: inline-block;
-  padding-bottom: var(--sp-2);
-}
-
-.bm-underline-amber::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 4px;
-  background-color: var(--amber-500);
-}
-
-
-/* ─── Monospace number display ────────────────────────────
-   Every quantity and result on the site uses these.
-   Tabular nums so columns align. Slashed zero optional. */
-.bm-num {
-  font-family: var(--font-mono);
-  font-variant-numeric: tabular-nums;
-  font-feature-settings: "tnum" 1, "zero" 1;
-  letter-spacing: -0.01em;
-  color: var(--ink);
-}
-
-.bm-num--lg {
-  font-size: var(--fs-2xl);
-  font-weight: var(--font-weight-bold);
-}
-
-.bm-num--xl {
-  font-size: var(--fs-4xl);
-  font-weight: var(--font-weight-bold);
-}
-
-.bm-num--hero {
-  font-size: var(--fs-6xl);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: var(--tracking-tight);
-  line-height: 1;
-}
-
-/* Colour variants */
-.bm-num--green {
-  color: var(--green-500);
-}
-
-.bm-num--amber {
-  color: var(--amber-500);
-}
-
-.bm-num--navy {
-  color: var(--navy-800);
-}
-
-.bm-num--pale {
-  color: var(--navy-pale);
-}
-
-.bm-num--muted {
-  color: var(--slate-med);
-}
-
-
-/* ─── Technical label (// LABEL //) ───────────────────────
-   Used for section markers, category labels, field hints. */
-.bm-tech-label {
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-size: var(--fs-xs);
-  font-weight: var(--font-weight-medium);
-  letter-spacing: var(--tracking-widest);
-  text-transform: uppercase;
-  color: var(--green-700);
-  line-height: 1;
-}
-
-.bm-tech-label--on-dark {
-  color: var(--green-500);
-}
-
-.bm-tech-label--muted {
-  color: var(--slate-med);
-}
-
-.bm-tech-label--amber {
-  color: var(--amber-700);
-}
-
-
-/* ─── Measurement tick strip (horizontal) ─────────────────
-   Small horizontal ruler strip used above/below hero stats. */
-.bm-tick-strip {
-  height: 6px;
-  background-image:
-    repeating-linear-gradient(
-      to right,
-      var(--border-strong) 0,
-      var(--border-strong) 1px,
-      transparent 1px,
-      transparent 12px
-    );
-  opacity: 0.4;
-}
-
-.bm-tick-strip--on-dark {
-  background-image:
-    repeating-linear-gradient(
-      to right,
-      var(--navy-pale) 0,
-      var(--navy-pale) 1px,
-      transparent 1px,
-      transparent 12px
-    );
-  opacity: 0.15;
-}
-
-
-/* ═══════════════════════════════════════════════════════════════
-   15. ARROW BUTTONS — text + arrow pattern
-   Used on every CTA. Arrow is a separate span so we can animate
-   only the arrow on hover.
-   ═══════════════════════════════════════════════════════════════ */
-
-.bm-arrow {
-  display: inline-block;
-  margin-left: var(--sp-2);
-  transition: transform var(--dur-base) var(--ease-out);
-  will-change: transform;
-}
-
-.bm-arrow--down {
-  /* down arrow variant for downloads */
-}
-
-/* Only animate when parent is hovered/focused */
-a:hover > .bm-arrow,
-a:focus-visible > .bm-arrow,
-button:hover > .bm-arrow,
-button:focus-visible > .bm-arrow {
-  transform: translateX(3px);
-}
-
-.bm-arrow--down {
-  display: inline-block;
-  margin-left: var(--sp-2);
-  transition: transform var(--dur-base) var(--ease-out);
-}
-
-a:hover > .bm-arrow--down,
-button:hover > .bm-arrow--down {
-  transform: translateY(3px);
-}
-
-
-/* ═══════════════════════════════════════════════════════════════
-   16. DIVIDERS
-   ═══════════════════════════════════════════════════════════════ */
-
-.bm-divider {
-  width: 100%;
-  height: 1px;
-  background-color: var(--border);
-  border: none;
-  margin: 0;
-}
-
-.bm-divider--on-dark {
-  background-color: rgba(219, 234, 254, 0.12);
-}
-
-.bm-divider--amber {
-  background-color: var(--amber-500);
-  height: 4px;
-  width: 48px;
-}
-
-.bm-divider--spaced {
-  margin-block: var(--sp-8);
-}
-
-
-/* ═══════════════════════════════════════════════════════════════
-   17. SURFACE HELPERS
-   Background variants for full-bleed sections.
-   ═══════════════════════════════════════════════════════════════ */
-
+/* ─── Surface (background) variants ─────────────────────── */
 .bm-surface {
   background-color: var(--surface);
 }
@@ -1064,89 +1166,552 @@ button:hover > .bm-arrow--down {
   background-color: var(--green-pale);
 }
 
-/* Full-bleed section padding */
-.bm-section {
-  padding-block: var(--section-py-md);
+/* ─── Divider ───────────────────────────────────────────── */
+.bm-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border);
+  border: none;
+  margin: 0;
 }
 
-.bm-section--sm {
-  padding-block: var(--section-py-sm);
+.bm-divider--on-dark {
+  background-color: rgba(219, 234, 254, 0.12);
 }
 
-.bm-section--lg {
-  padding-block: var(--section-py-lg);
+.bm-divider--amber {
+  background-color: var(--amber-500);
+  height: 4px;
+  width: 48px;
+}
+
+.bm-divider--spaced {
+  margin-block: var(--sp-8);
+}
+
+/* ─── Scroll helpers ────────────────────────────────────── */
+.bm-scroll-x {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.bm-scroll-x::-webkit-scrollbar {
+  height: 6px;
+}
+
+.bm-scroll-x::-webkit-scrollbar-thumb {
+  background-color: var(--border-strong);
+  border-radius: 3px;
+}
+
+.bm-scroll-y {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-strong) transparent;
+}
+
+.bm-scroll-y::-webkit-scrollbar {
+  width: 8px;
+}
+
+.bm-scroll-y::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.bm-scroll-y::-webkit-scrollbar-thumb {
+  background-color: var(--border-strong);
+  border-radius: 4px;
+}
+
+.bm-scroll-y::-webkit-scrollbar-thumb:hover {
+  background-color: var(--slate-light);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   09. BLUEPRINT VISUAL LANGUAGE
+   Subtle "engineering drawing" DNA. Decorative only — never
+   interferes with content or accessibility.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Blueprint grid overlay (navy sections) ────────────── */
+.bm-grid-overlay {
+  position: relative;
+  isolation: isolate;
+}
+
+.bm-grid-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, var(--blueprint-grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--blueprint-grid-color) 1px, transparent 1px);
+  background-size: var(--blueprint-grid-size) var(--blueprint-grid-size);
+}
+
+.bm-grid-overlay > * {
+  position: relative;
+  z-index: 1;
+}
+
+.bm-grid-overlay--light::before {
+  background-image:
+    linear-gradient(to right, var(--blueprint-grid-color-light) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--blueprint-grid-color-light) 1px, transparent 1px);
+}
+
+/* ─── Ruler edge ticks (left + right edges) ─────────────── */
+.bm-ruler-edges {
+  position: relative;
+}
+
+.bm-ruler-edges::before,
+.bm-ruler-edges::after {
+  content: "";
+  position: absolute;
+  top: var(--sp-8);
+  bottom: var(--sp-8);
+  width: 1px;
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      var(--border-strong) 0,
+      var(--border-strong) 1px,
+      transparent 1px,
+      transparent 8px
+    );
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.bm-ruler-edges::before { left: 0; }
+.bm-ruler-edges::after  { right: 0; }
+
+@media (max-width: 767px) {
+  .bm-ruler-edges::before,
+  .bm-ruler-edges::after {
+    display: none;
+  }
+}
+
+.bm-ruler-edges--on-dark::before,
+.bm-ruler-edges--on-dark::after {
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      var(--navy-pale) 0,
+      var(--navy-pale) 1px,
+      transparent 1px,
+      transparent 8px
+    );
+  opacity: 0.12;
+}
+
+/* ─── Corner brackets (L-shapes on important cards) ─────── */
+.bm-brackets {
+  position: relative;
+}
+
+.bm-brackets::before,
+.bm-brackets::after {
+  content: "";
+  position: absolute;
+  width: var(--corner-bracket-size);
+  height: var(--corner-bracket-size);
+  pointer-events: none;
+  border-color: var(--amber-500);
+  border-style: solid;
+  border-width: 0;
+}
+
+.bm-brackets::before {
+  top: 0;
+  left: 0;
+  border-top-width: var(--corner-bracket-thick);
+  border-left-width: var(--corner-bracket-thick);
+}
+
+.bm-brackets::after {
+  bottom: 0;
+  right: 0;
+  border-bottom-width: var(--corner-bracket-thick);
+  border-right-width: var(--corner-bracket-thick);
+}
+
+.bm-brackets--navy::before,
+.bm-brackets--navy::after {
+  border-color: var(--navy-800);
+}
+
+.bm-brackets--green::before,
+.bm-brackets--green::after {
+  border-color: var(--green-600);
+}
+
+.bm-brackets--pale::before,
+.bm-brackets--pale::after {
+  border-color: var(--navy-pale);
+}
+
+/* ─── Amber underline accent ────────────────────────────── */
+.bm-underline-amber {
+  position: relative;
+  display: inline-block;
+  padding-bottom: var(--sp-2);
+}
+
+.bm-underline-amber::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--amber-500);
+}
+
+/* ─── Horizontal tick strip ─────────────────────────────── */
+.bm-tick-strip {
+  height: 6px;
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      var(--border-strong) 0,
+      var(--border-strong) 1px,
+      transparent 1px,
+      transparent 12px
+    );
+  opacity: 0.4;
+}
+
+.bm-tick-strip--on-dark {
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      var(--navy-pale) 0,
+      var(--navy-pale) 1px,
+      transparent 1px,
+      transparent 12px
+    );
+  opacity: 0.15;
 }
 
 
 /* ═══════════════════════════════════════════════════════════════
-   18. GRID HELPERS (used by category, tools, featured sections)
+   10. MONOSPACE NUMBERS + TECHNICAL LABELS
+   Every quantity, result, and step uses these.
    ═══════════════════════════════════════════════════════════════ */
 
-.bm-grid {
-  display: grid;
-  gap: var(--grid-gap-md);
+/* ─── Base mono number ──────────────────────────────────── */
+.bm-num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "zero" 1;
+  letter-spacing: -0.01em;
+  color: var(--ink);
 }
 
-.bm-grid--2 {
-  grid-template-columns: 1fr;
+.bm-num--lg {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
 }
 
-.bm-grid--3 {
-  grid-template-columns: 1fr;
+.bm-num--xl {
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-bold);
 }
 
-.bm-grid--4 {
-  grid-template-columns: 1fr;
+.bm-num--hero {
+  font-size: var(--fs-6xl);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tracking-tight);
+  line-height: 1;
 }
 
-@media (min-width: 640px) {
-  .bm-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .bm-grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .bm-grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.bm-num--green   { color: var(--green-500); }
+.bm-num--amber   { color: var(--amber-500); }
+.bm-num--navy    { color: var(--navy-800); }
+.bm-num--pale    { color: var(--navy-pale); }
+.bm-num--muted   { color: var(--slate-med); }
+
+/* ─── Technical label (// LABEL //) ─────────────────────── */
+.bm-tech-label {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--green-700);
+  line-height: 1;
 }
 
-@media (min-width: 1024px) {
-  .bm-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .bm-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.bm-tech-label--on-dark {
+  color: var(--green-500);
 }
 
-/* Auto-fit variant: fills row automatically */
-.bm-grid--auto {
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+.bm-tech-label--muted {
+  color: var(--slate-med);
 }
 
-.bm-grid--auto-sm {
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+.bm-tech-label--amber {
+  color: var(--amber-700);
 }
 
 
 /* ═══════════════════════════════════════════════════════════════
-   19. FLEX HELPERS (sparingly used — prefer grid)
+   11. ARROW SYSTEM
+   Text + arrow pattern. Arrow animates only when parent hovered.
+   Never bounces on its own.
    ═══════════════════════════════════════════════════════════════ */
 
-.bm-flex {
-  display: flex;
-  gap: var(--sp-4);
+.bm-arrow {
+  display: inline-block;
+  margin-left: var(--sp-2);
+  transition: transform var(--dur-base) var(--ease-out);
+  will-change: transform;
 }
 
-.bm-flex--center {
+.bm-arrow--down {
+  display: inline-block;
+  margin-left: var(--sp-2);
+  transition: transform var(--dur-base) var(--ease-out);
+}
+
+a:hover > .bm-arrow,
+a:focus-visible > .bm-arrow,
+button:hover > .bm-arrow,
+button:focus-visible > .bm-arrow {
+  transform: translateX(3px);
+}
+
+a:hover > .bm-arrow--down,
+button:hover > .bm-arrow--down {
+  transform: translateY(3px);
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   12. CHIPS + PILLS + BADGES
+   Used for popular chips, category tags, trust pills, status
+   labels. All lightweight, no images.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Chip (clickable pill) ─────────────────────────────── */
+.bm-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  height: 34px;
+  padding: 0 var(--sp-4);
+  font-family: var(--font-sans);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  color: var(--navy-800);
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    border-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.bm-chip:hover {
+  border-color: var(--amber-500);
+  color: var(--amber-700);
+  background-color: var(--amber-pale);
+}
+
+.bm-chip:focus-visible {
+  outline: 2px solid var(--navy-600);
+  outline-offset: 2px;
+}
+
+/* ─── Chip on dark surface (hero) ───────────────────────── */
+.bm-chip--on-dark {
+  background-color: rgba(219, 234, 254, 0.08);
+  color: var(--navy-pale);
+  border-color: rgba(219, 234, 254, 0.2);
+}
+
+.bm-chip--on-dark:hover {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: var(--amber-500);
+  border-color: var(--amber-500);
+}
+
+/* ─── Trust pill (green-pale, static) ───────────────────── */
+.bm-trust-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-4);
+  background-color: var(--green-pale);
+  color: var(--green-700);
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.bm-trust-pill__icon {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  color: var(--green-600);
+  flex-shrink: 0;
 }
 
-.bm-flex--between {
+/* ─── Badge (status labels) ─────────────────────────────── */
+.bm-badge {
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
+  gap: var(--sp-1);
+  padding: 2px var(--sp-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  line-height: 1.4;
+  border-radius: var(--radius-xs);
+  white-space: nowrap;
 }
 
-.bm-flex--wrap {
-  flex-wrap: wrap;
+.bm-badge--green {
+  background-color: var(--green-pale);
+  color: var(--green-700);
+}
+
+.bm-badge--amber {
+  background-color: var(--amber-pale);
+  color: var(--amber-700);
+}
+
+.bm-badge--navy {
+  background-color: var(--navy-tint);
+  color: var(--navy-800);
+}
+
+.bm-badge--slate {
+  background-color: var(--surface-alt);
+  color: var(--slate-med);
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   13. FORM MESSAGE + HONEYPOT + FIELD HELPERS
+   Small helpers used by both B2B form and newsletter.
+   Full form primitives are in Phase 7.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Honeypot (invisible to humans, visible to bots) ───── */
+.bm-hp {
+  position: absolute !important;
+  left: -9999px !important;
+  top: auto !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* ─── Inline form message (success/error/info) ──────────── */
+.bm-form-msg {
+  display: block;
+  margin-top: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-normal);
+  border-radius: var(--radius-sm);
+  border-left: 4px solid transparent;
+}
+
+.bm-form-msg[data-state="success"] {
+  background-color: var(--green-pale);
+  color: var(--green-700);
+  border-left-color: var(--green-600);
+}
+
+.bm-form-msg[data-state="error"] {
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger);
+  border-left-color: var(--color-danger);
+}
+
+.bm-form-msg[data-state="info"] {
+  background-color: var(--navy-tint);
+  color: var(--navy-800);
+  border-left-color: var(--navy-600);
+}
+
+/* ─── Field-level error text ────────────────────────────── */
+.bm-field__error {
+  display: block;
+  margin-top: var(--sp-1);
+  font-size: var(--fs-xs);
+  color: var(--color-danger);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-normal);
+}
+
+/* ─── Field hint text ───────────────────────────────────── */
+.bm-field__hint {
+  display: block;
+  margin-top: var(--sp-1);
+  font-size: var(--fs-xs);
+  color: var(--slate-med);
+  line-height: var(--lh-normal);
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   14. LOADING SKELETON
+   Used sparingly — calculators never show spinners. Only for
+   content areas that are truly loading (search results).
+   ═══════════════════════════════════════════════════════════════ */
+
+.bm-skeleton {
+  display: block;
+  background: linear-gradient(
+    90deg,
+    var(--surface-alt) 0%,
+    var(--border) 50%,
+    var(--surface-alt) 100%
+  );
+  background-size: 200% 100%;
+  animation: bm-skeleton-shimmer 1.4s ease-in-out infinite;
+  border-radius: var(--radius-xs);
+}
+
+@keyframes bm-skeleton-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bm-skeleton {
+    animation: none;
+    background: var(--surface-alt);
+  }
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   20. BUTTONS
-   Three variants: primary (amber CTA), secondary (outline navy),
-   ghost (text only). All arrow-friendly. NEVER white text on amber.
+   15. BUTTONS
+   Five variants: amber (primary CTA), outline (secondary), ghost
+   (text), green (success), outline-on-dark. Three sizes.
+   NEVER white text on amber. Always ink on amber.
    ═══════════════════════════════════════════════════════════════ */
 
 .bm-btn {
@@ -1158,7 +1723,7 @@ button:hover > .bm-arrow--down {
   padding: var(--sp-3) var(--sp-6);
   font-family: var(--font-sans);
   font-size: var(--fs-md);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--fw-semibold);
   line-height: 1.2;
   letter-spacing: var(--tracking-snug);
   text-align: center;
@@ -1184,7 +1749,7 @@ button:hover > .bm-arrow--down {
   outline-offset: 2px;
 }
 
-/* ─── Primary — Amber ───────────────────────────────────── */
+/* ─── Primary — Amber (ink text, never white) ───────────── */
 .bm-btn--amber {
   background-color: var(--amber-500);
   color: var(--ink);
@@ -1214,7 +1779,7 @@ button:hover > .bm-arrow--down {
   color: var(--navy-pale);
 }
 
-/* On dark surfaces */
+/* ─── Outline on dark surface ───────────────────────────── */
 .bm-btn--outline-on-dark {
   background-color: transparent;
   color: var(--navy-pale);
@@ -1226,13 +1791,17 @@ button:hover > .bm-arrow--down {
   color: var(--navy-800);
 }
 
+.bm-btn--outline-on-dark:focus-visible {
+  outline-color: var(--amber-500);
+}
+
 /* ─── Ghost — text only ─────────────────────────────────── */
 .bm-btn--ghost {
   background-color: transparent;
   color: var(--navy-600);
   border-color: transparent;
   padding-inline: var(--sp-4);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--fw-medium);
 }
 
 .bm-btn--ghost:hover {
@@ -1240,11 +1809,13 @@ button:hover > .bm-arrow--down {
   background-color: var(--navy-tint);
 }
 
+/* ─── Ghost on dark surface ─────────────────────────────── */
 .bm-btn--ghost-on-dark {
   background-color: transparent;
   color: var(--navy-pale);
   border-color: transparent;
   padding-inline: var(--sp-4);
+  font-weight: var(--fw-medium);
 }
 
 .bm-btn--ghost-on-dark:hover {
@@ -1252,7 +1823,11 @@ button:hover > .bm-arrow--down {
   background-color: rgba(219, 234, 254, 0.06);
 }
 
-/* ─── Green variant (success/confirm) ───────────────────── */
+.bm-btn--ghost-on-dark:focus-visible {
+  outline-color: var(--amber-500);
+}
+
+/* ─── Green — success / confirm ─────────────────────────── */
 .bm-btn--green {
   background-color: var(--green-600);
   color: var(--ink);
@@ -1262,9 +1837,10 @@ button:hover > .bm-arrow--down {
 .bm-btn--green:hover {
   background-color: var(--green-700);
   border-color: var(--green-700);
+  color: var(--ink);
 }
 
-/* ─── Full width ────────────────────────────────────────── */
+/* ─── Full-width ────────────────────────────────────────── */
 .bm-btn--full {
   width: 100%;
 }
@@ -1282,7 +1858,7 @@ button:hover > .bm-arrow--down {
   font-size: var(--fs-lg);
 }
 
-/* ─── Disabled ──────────────────────────────────────────── */
+/* ─── Disabled state ────────────────────────────────────── */
 .bm-btn:disabled,
 .bm-btn[aria-disabled="true"] {
   background-color: var(--slate-lighter);
@@ -1293,10 +1869,40 @@ button:hover > .bm-arrow--down {
   pointer-events: none;
 }
 
+/* ─── Icon-only button (used in header, tool actions) ───── */
+.bm-btn--icon {
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  padding: 0;
+}
+
+.bm-btn--icon.bm-btn--sm {
+  width: 36px;
+  min-width: 36px;
+  height: 36px;
+}
+
+/* ─── Button group (row of related actions) ─────────────── */
+.bm-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  align-items: center;
+}
+
+/* ─── Reduced motion: no translate on active ────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .bm-btn:active {
+    transform: none;
+  }
+}
 
 /* ═══════════════════════════════════════════════════════════════
-   21. FORM PRIMITIVES
+   16. FORM PRIMITIVES
    Shared across B2B form, newsletter, contact page, tool inputs.
+   Every field has: label, input, hint, error. On-dark variants
+   included for B2B section.
    ═══════════════════════════════════════════════════════════════ */
 
 /* ─── Field wrapper ─────────────────────────────────────── */
@@ -1317,30 +1923,33 @@ button:hover > .bm-arrow--down {
 .bm-field__label {
   font-family: var(--font-sans);
   font-size: var(--fs-sm);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--fw-medium);
   color: var(--ink);
   letter-spacing: var(--tracking-normal);
   line-height: var(--lh-normal);
+  display: block;
 }
 
 .bm-field__label--on-dark {
   color: var(--navy-pale);
 }
 
+/* Required asterisk */
 .bm-field__req {
   color: var(--amber-700);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--fw-bold);
   margin-left: var(--sp-1);
 }
 
+/* Optional tag */
 .bm-field__opt {
   color: var(--slate-med);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--fw-regular);
   font-size: var(--fs-xs);
   margin-left: var(--sp-1);
 }
 
-/* ─── Input / Select / Textarea ─────────────────────────── */
+/* ─── Input / Select / Textarea base ────────────────────── */
 .bm-field__input {
   display: block;
   width: 100%;
@@ -1348,7 +1957,7 @@ button:hover > .bm-arrow--down {
   padding: var(--sp-3) var(--sp-4);
   font-family: var(--font-sans);
   font-size: var(--fs-md);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--fw-regular);
   line-height: var(--lh-normal);
   color: var(--ink);
   background-color: var(--white);
@@ -1381,9 +1990,33 @@ button:hover > .bm-arrow--down {
   background-color: var(--surface-alt);
   color: var(--slate-med);
   cursor: not-allowed;
+  border-color: var(--border);
 }
 
-/* Error state */
+/* ─── Textarea specific ─────────────────────────────────── */
+.bm-field__input--textarea {
+  min-height: 6rem;
+  padding-top: var(--sp-3);
+  resize: vertical;
+  font-family: var(--font-sans);
+  line-height: var(--lh-relaxed);
+}
+
+/* ─── Select with custom chevron ────────────────────────── */
+select.bm-field__input {
+  padding-right: var(--sp-10);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 L6 6.5 L11 1.5' fill='none' stroke='%23475569' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--sp-4) center;
+  background-size: 12px 8px;
+  cursor: pointer;
+}
+
+select.bm-field__input:focus {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 L6 6.5 L11 1.5' fill='none' stroke='%231E40AF' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+/* ─── Error state ───────────────────────────────────────── */
 .bm-field__input[aria-invalid="true"],
 .bm-field__input.is-invalid {
   border-color: var(--color-danger);
@@ -1394,28 +2027,18 @@ button:hover > .bm-arrow--down {
   box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.25);
 }
 
-/* Textarea specific */
-.bm-field__input--textarea {
-  min-height: 6rem;
-  padding-top: var(--sp-3);
-  resize: vertical;
-  font-family: var(--font-sans);
-  line-height: var(--lh-relaxed);
-}
-
-/* Select specific — custom chevron */
-select.bm-field__input {
-  padding-right: var(--sp-10);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 L6 6.5 L11 1.5' fill='none' stroke='%23475569' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right var(--sp-4) center;
-  background-size: 12px 8px;
-  cursor: pointer;
-}
-
-/* Dark-surface variant (B2B form on navy) */
+/* ─── Dark-surface variant (B2B form) ───────────────────── */
 .bm-field--on-dark .bm-field__label {
   color: var(--navy-pale);
+}
+
+.bm-field--on-dark .bm-field__req {
+  color: var(--amber-500);
+}
+
+.bm-field--on-dark .bm-field__opt {
+  color: var(--navy-pale);
+  opacity: 0.6;
 }
 
 .bm-field--on-dark .bm-field__input {
@@ -1433,6 +2056,19 @@ select.bm-field__input {
   box-shadow: var(--shadow-focus-amber);
 }
 
+.bm-field--on-dark .bm-field__input::placeholder {
+  color: var(--slate-light);
+}
+
+/* Select chevron on dark-variant fields keeps navy stroke */
+.bm-field--on-dark select.bm-field__input {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 L6 6.5 L11 1.5' fill='none' stroke='%23475569' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.bm-field--on-dark select.bm-field__input:focus {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 L6 6.5 L11 1.5' fill='none' stroke='%23B45309' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
 /* ─── Checkbox row ──────────────────────────────────────── */
 .bm-field__checkbox {
   margin-top: 3px;
@@ -1440,6 +2076,7 @@ select.bm-field__input {
   accent-color: var(--amber-500);
   width: 1.125rem;
   height: 1.125rem;
+  cursor: pointer;
 }
 
 .bm-field__checkbox:focus-visible {
@@ -1452,19 +2089,22 @@ select.bm-field__input {
   line-height: var(--lh-normal);
   color: var(--slate-med);
   cursor: pointer;
+  user-select: none;
 }
 
 .bm-field__check-label a {
   color: var(--navy-600);
   text-decoration: underline;
   text-underline-offset: 2px;
+  transition: color var(--dur-fast) var(--ease-out);
 }
 
 .bm-field__check-label a:hover {
   color: var(--navy-500);
+  text-decoration-thickness: 2px;
 }
 
-/* On dark surface */
+/* Checkbox label on dark surface */
 .bm-field--on-dark .bm-field__check-label {
   color: var(--navy-pale);
 }
@@ -1474,217 +2114,162 @@ select.bm-field__input {
 }
 
 .bm-field--on-dark .bm-field__check-label a:hover {
-  color: var(--amber-400, #FBBF24);
+  color: var(--amber-400);
 }
 
-/* ─── Honeypot (invisible to humans) ────────────────────── */
-.bm-hp {
-  position: absolute !important;
-  left: -9999px !important;
-  top: auto !important;
-  width: 1px !important;
-  height: 1px !important;
-  overflow: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
+/* ─── Field row (2-column grid for paired fields) ───────── */
+.bm-field-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-4);
 }
 
-/* ─── Inline form message (success/error) ───────────────── */
-.bm-form-msg {
-  display: block;
-  margin-top: var(--sp-3);
-  padding: var(--sp-3) var(--sp-4);
-  font-size: var(--fs-sm);
-  font-weight: var(--font-weight-medium);
-  line-height: var(--lh-normal);
-  border-radius: var(--radius-sm);
-  border-left: 4px solid transparent;
-}
-
-.bm-form-msg[data-state="success"] {
-  background-color: var(--green-pale);
-  color: var(--green-700);
-  border-left-color: var(--green-600);
-}
-
-.bm-form-msg[data-state="error"] {
-  background-color: var(--color-danger-bg);
-  color: var(--color-danger);
-  border-left-color: var(--color-danger);
-}
-
-.bm-form-msg[data-state="info"] {
-  background-color: var(--navy-tint);
-  color: var(--navy-800);
-  border-left-color: var(--navy-600);
-}
-
-/* ─── Field-level error text ────────────────────────────── */
-.bm-field__error {
-  display: block;
-  margin-top: var(--sp-1);
-  font-size: var(--fs-xs);
-  color: var(--color-danger);
-  font-weight: var(--font-weight-medium);
-  line-height: var(--lh-normal);
-}
-
-/* ─── Field hint text ───────────────────────────────────── */
-.bm-field__hint {
-  display: block;
-  margin-top: var(--sp-1);
-  font-size: var(--fs-xs);
-  color: var(--slate-med);
-  line-height: var(--lh-normal);
-}
-
-
-/* ═══════════════════════════════════════════════════════════════
-   22. TAG / CHIP / PILL
-   Used for popular chips, category tags, trust pills.
-   ═══════════════════════════════════════════════════════════════ */
-
-.bm-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--sp-2);
-  height: 34px;
-  padding: 0 var(--sp-4);
-  font-family: var(--font-sans);
-  font-size: var(--fs-sm);
-  font-weight: var(--font-weight-medium);
-  line-height: 1;
-  color: var(--navy-800);
-  background-color: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-pill);
-  text-decoration: none;
-  white-space: nowrap;
-  transition:
-    border-color var(--dur-fast) var(--ease-out),
-    color var(--dur-fast) var(--ease-out),
-    background-color var(--dur-fast) var(--ease-out);
-  -webkit-tap-highlight-color: transparent;
-}
-
-.bm-chip:hover {
-  border-color: var(--amber-500);
-  color: var(--amber-700);
-  background-color: var(--amber-pale);
-}
-
-/* Dark surface chip (hero) */
-.bm-chip--on-dark {
-  background-color: rgba(219, 234, 254, 0.08);
-  color: var(--navy-pale);
-  border-color: rgba(219, 234, 254, 0.2);
-}
-
-.bm-chip--on-dark:hover {
-  background-color: rgba(245, 158, 11, 0.15);
-  color: var(--amber-500);
-  border-color: var(--amber-500);
-}
-
-/* Trust pill (green-pale, static, no hover) */
-.bm-trust-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--sp-2);
-  padding: var(--sp-2) var(--sp-4);
-  background-color: var(--green-pale);
-  color: var(--green-700);
-  border-radius: var(--radius-pill);
-  font-size: var(--fs-sm);
-  font-weight: var(--font-weight-medium);
-  line-height: 1.4;
-  white-space: nowrap;
-}
-
-.bm-trust-pill__icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--green-600);
-  flex-shrink: 0;
-}
-
-
-/* ═══════════════════════════════════════════════════════════════
-   23. BADGE / STATUS
-   Small labels: "NEW", "HIGH CPC", "VERIFIED", etc.
-   ═══════════════════════════════════════════════════════════════ */
-
-.bm-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--sp-1);
-  padding: 2px var(--sp-2);
-  font-family: var(--font-mono);
-  font-size: var(--fs-xs);
-  font-weight: var(--font-weight-medium);
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
-  line-height: 1.4;
-  border-radius: var(--radius-xs);
-  white-space: nowrap;
-}
-
-.bm-badge--green {
-  background-color: var(--green-pale);
-  color: var(--green-700);
-}
-
-.bm-badge--amber {
-  background-color: var(--amber-pale);
-  color: var(--amber-700);
-}
-
-.bm-badge--navy {
-  background-color: var(--navy-tint);
-  color: var(--navy-800);
-}
-
-.bm-badge--slate {
-  background-color: var(--surface-alt);
-  color: var(--slate-med);
-}
-
-
-/* ═══════════════════════════════════════════════════════════════
-   24. LOADING SKELETON (used sparingly — calculators use no spinner)
-   ═══════════════════════════════════════════════════════════════ */
-
-.bm-skeleton {
-  display: block;
-  background: linear-gradient(
-    90deg,
-    var(--surface-alt) 0%,
-    var(--border) 50%,
-    var(--surface-alt) 100%
-  );
-  background-size: 200% 100%;
-  animation: bm-skeleton-shimmer 1.4s ease-in-out infinite;
-  border-radius: var(--radius-xs);
-}
-
-@keyframes bm-skeleton-shimmer {
-  0%   { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .bm-skeleton {
-    animation: none;
-    background: var(--surface-alt);
+@media (min-width: 640px) {
+  .bm-field-row {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
+/* ─── Form wrapper (spacing between fields) ─────────────── */
+.bm-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.bm-form__actions {
+  margin-top: var(--sp-2);
+}
+
+/* ─── Fieldset (rare, but needed for grouped radios) ────── */
+.bm-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bm-fieldset__legend {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--ink);
+  margin-bottom: var(--sp-3);
+  padding: 0;
+}
+
+/* ─── Radio group (inline) ──────────────────────────────── */
+.bm-radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-4);
+}
+
+.bm-radio-group label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: var(--fs-sm);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.bm-radio-group input[type="radio"] {
+  accent-color: var(--amber-500);
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
 
 /* ═══════════════════════════════════════════════════════════════
-   25. HEADER — Sticky navy bar
+   17. SEARCH INPUT (used in hero + search panel)
+   Standalone component. Different from form fields.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Search input (rounded, with icon space) ───────────── */
+.bm-search-input {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  width: 100%;
+  background-color: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--sp-2) var(--sp-2) var(--sp-2) var(--sp-4);
+  transition:
+    border-color var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out);
+}
+
+.bm-search-input:focus-within {
+  border-color: var(--navy-600);
+  box-shadow: var(--shadow-focus);
+}
+
+.bm-search-input input {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 40px;
+  border: none;
+  background: transparent;
+  font-size: var(--fs-md);
+  color: var(--ink);
+  outline: none;
+}
+
+.bm-search-input input::placeholder {
+  color: var(--slate-light);
+}
+
+.bm-search-input__icon {
+  display: inline-flex;
+  align-items: center;
+  color: var(--slate-med);
+  flex-shrink: 0;
+}
+
+.bm-search-input__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  height: 40px;
+  padding: 0 var(--sp-4);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--ink);
+  background-color: var(--amber-500);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color var(--dur-fast) var(--ease-out);
+  flex-shrink: 0;
+}
+
+.bm-search-input__btn:hover {
+  background-color: var(--amber-600);
+}
+
+.bm-search-input__btn:focus-visible {
+  outline: 2px solid var(--navy-800);
+  outline-offset: 2px;
+}
+
+/* ─── Search input on dark surface (hero) ───────────────── */
+.bm-search-input--on-dark {
+  background-color: var(--white);
+  border-color: var(--white);
+  box-shadow: var(--shadow-lg);
+}
+
+.bm-search-input--on-dark:focus-within {
+  border-color: var(--amber-500);
+  box-shadow: var(--shadow-focus-amber);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   18. HEADER — Sticky navy bar
    Contains: brand, desktop nav, search button, mobile toggle.
-   Sticky on scroll. Shrinks height at md breakpoint.
+   Shadow appears on scroll via .is-scrolled class.
    ═══════════════════════════════════════════════════════════════ */
 
 .bm-header {
@@ -1696,7 +2281,6 @@ select.bm-field__input {
   transition: box-shadow var(--dur-base) var(--ease-out);
 }
 
-/* Shadow appears when scrolled (toggled via JS class) */
 .bm-header.is-scrolled {
   box-shadow: 0 2px 12px rgba(10, 31, 68, 0.18);
 }
@@ -1726,8 +2310,7 @@ select.bm-field__input {
   }
 }
 
-
-/* ─── Brand mark ─────────────────────────────────────────── */
+/* ─── Brand mark ────────────────────────────────────────── */
 .bm-brand {
   display: inline-flex;
   align-items: center;
@@ -1760,7 +2343,7 @@ select.bm-field__input {
   align-items: baseline;
   font-family: var(--font-sans);
   font-size: 1.25rem;
-  font-weight: var(--font-weight-black);
+  font-weight: var(--fw-black);
   letter-spacing: var(--tracking-snug);
   line-height: 1;
 }
@@ -1773,8 +2356,7 @@ select.bm-field__input {
   color: var(--amber-500);
 }
 
-
-/* ─── Desktop navigation ─────────────────────────────────── */
+/* ─── Desktop navigation ────────────────────────────────── */
 .bm-nav {
   display: none;
   flex: 1 1 auto;
@@ -1802,7 +2384,7 @@ select.bm-field__input {
   height: 40px;
   padding: 0 var(--sp-4);
   font-size: var(--fs-sm);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--fw-medium);
   color: var(--navy-pale);
   text-decoration: none;
   border-radius: var(--radius-sm);
@@ -1822,8 +2404,7 @@ select.bm-field__input {
   outline-offset: 2px;
 }
 
-
-/* ─── Header actions ─────────────────────────────────────── */
+/* ─── Header actions ────────────────────────────────────── */
 .bm-header__actions {
   display: flex;
   align-items: center;
@@ -1858,8 +2439,7 @@ select.bm-field__input {
   outline-offset: 2px;
 }
 
-
-/* ─── Hamburger (mobile toggle) ──────────────────────────── */
+/* ─── Hamburger (mobile toggle) ─────────────────────────── */
 .bm-menu-toggle__bars {
   display: inline-flex;
   flex-direction: column;
@@ -1880,7 +2460,6 @@ select.bm-field__input {
   transform-origin: center;
 }
 
-/* When open: X shape */
 .bm-menu-toggle[aria-expanded="true"] .bm-menu-toggle__bars > span:nth-child(1) {
   transform: translateY(6px) rotate(45deg);
 }
@@ -1893,7 +2472,6 @@ select.bm-field__input {
   transform: translateY(-6px) rotate(-45deg);
 }
 
-/* Hide hamburger on desktop */
 @media (min-width: 1024px) {
   .bm-menu-toggle {
     display: none;
@@ -1902,7 +2480,7 @@ select.bm-field__input {
 
 
 /* ═══════════════════════════════════════════════════════════════
-   26. SEARCH PANEL
+   19. SEARCH PANEL
    Full-screen dialog triggered from header search icon or Ctrl+K.
    ═══════════════════════════════════════════════════════════════ */
 
@@ -1966,6 +2544,9 @@ select.bm-field__input {
   border-radius: var(--radius-sm);
   transition: color var(--dur-fast) var(--ease-out);
   flex-shrink: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .bm-search-panel__close:hover {
@@ -2010,13 +2591,22 @@ select.bm-field__input {
   color: var(--amber-500);
 }
 
-.bm-search-panel__results .bm-search-result__cat {
+.bm-search-result__cat {
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
   color: var(--navy-pale);
   opacity: 0.55;
   text-transform: uppercase;
   letter-spacing: var(--tracking-wide);
+}
+
+.bm-search-panel__empty {
+  padding: var(--sp-6);
+  text-align: center;
+  font-size: var(--fs-sm);
+  color: var(--navy-pale);
+  opacity: 0.65;
+  list-style: none;
 }
 
 .bm-search-panel__hint {
@@ -2041,7 +2631,7 @@ select.bm-field__input {
   padding: 0 6px;
   font-family: var(--font-mono);
   font-size: 11px;
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--fw-medium);
   color: var(--navy-pale);
   background-color: rgba(219, 234, 254, 0.1);
   border: 1px solid rgba(219, 234, 254, 0.2);
@@ -2050,7 +2640,8 @@ select.bm-field__input {
 
 
 /* ═══════════════════════════════════════════════════════════════
-   27. MOBILE MENU (slide-in panel under header)
+   20. MOBILE MENU
+   Slide-in panel under header. Hidden on desktop.
    ═══════════════════════════════════════════════════════════════ */
 
 .bm-mobile-menu {
@@ -2097,7 +2688,7 @@ select.bm-field__input {
   display: block;
   padding: var(--sp-4);
   font-size: var(--fs-md);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--fw-medium);
   color: var(--navy-pale);
   text-decoration: none;
   border-radius: var(--radius-sm);
@@ -2124,6 +2715,7 @@ select.bm-field__input {
 .bm-mobile-menu__meta a {
   color: var(--amber-500);
   text-decoration: none;
+  word-break: break-all;
 }
 
 .bm-mobile-menu__meta a:hover {
@@ -2132,9 +2724,8 @@ select.bm-field__input {
 
 
 /* ═══════════════════════════════════════════════════════════════
-   28. GEO BANNER
-   Single-line, dismissible region notice. Sits directly below
-   header. Blue-pale background, max 60px tall on desktop.
+   21. GEO BANNER
+   Single-line dismissible region notice.
    ═══════════════════════════════════════════════════════════════ */
 
 .bm-geo-banner {
@@ -2181,7 +2772,7 @@ select.bm-field__input {
 }
 
 .bm-geo-banner__text strong {
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--fw-semibold);
   color: var(--navy-800);
 }
 
@@ -2191,7 +2782,7 @@ select.bm-field__input {
   padding: 0;
   margin-left: var(--sp-2);
   font-size: var(--fs-sm);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--fw-medium);
   color: var(--navy-600);
   text-decoration: underline;
   text-underline-offset: 2px;
@@ -2200,6 +2791,12 @@ select.bm-field__input {
 
 .bm-geo-banner__switch:hover {
   color: var(--navy-500);
+}
+
+.bm-geo-banner__switch:focus-visible {
+  outline: 2px solid var(--navy-600);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
 }
 
 .bm-geo-banner__close {
@@ -2211,6 +2808,9 @@ select.bm-field__input {
   flex-shrink: 0;
   color: var(--slate-med);
   border-radius: var(--radius-xs);
+  background: transparent;
+  border: none;
+  cursor: pointer;
   transition: color var(--dur-fast) var(--ease-out),
               background-color var(--dur-fast) var(--ease-out);
 }
@@ -2227,83 +2827,8 @@ select.bm-field__input {
 
 
 /* ═══════════════════════════════════════════════════════════════
-   29. AD SLOTS
-   Reserved height to prevent CLS. Muted label above each slot.
-   Never between category/tool cards. Gated on cookie consent.
-   ═══════════════════════════════════════════════════════════════ */
-
-.bm-ad-slot {
-  display: block;
-  max-width: var(--container-max);
-  margin: var(--sp-8) auto;
-  padding-inline: var(--gutter-mobile);
-  text-align: center;
-}
-
-@media (min-width: 640px) {
-  .bm-ad-slot {
-    padding-inline: var(--gutter-tablet);
-  }
-}
-
-@media (min-width: 1024px) {
-  .bm-ad-slot {
-    padding-inline: var(--gutter-desktop);
-    margin-block: var(--sp-12);
-  }
-}
-
-.bm-ad-slot__label {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  font-weight: var(--font-weight-medium);
-  letter-spacing: var(--tracking-widest);
-  text-transform: uppercase;
-  color: var(--slate-light);
-  margin-bottom: var(--sp-2);
-}
-
-.bm-ad-slot__frame {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--surface-alt);
-  border: 1px dashed var(--border-strong);
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-  /* Reserved height — prevents layout shift when ad loads */
-}
-
-/* Leaderboard (728×90 desktop, responsive on mobile) */
-.bm-ad-slot--leaderboard .bm-ad-slot__frame {
-  min-height: 100px;
-}
-
-@media (min-width: 768px) {
-  .bm-ad-slot--leaderboard .bm-ad-slot__frame {
-    min-height: 90px;
-    max-width: 728px;
-    margin-inline: auto;
-  }
-}
-
-/* Rectangle (300×250) */
-.bm-ad-slot--rectangle .bm-ad-slot__frame {
-  min-height: 250px;
-  max-width: 336px;
-  margin-inline: auto;
-}
-
-/* Hide ad slot if user declines cookie consent (JS toggles class) */
-.bm-ad-slot.is-hidden {
-  display: none;
-}
-
-
-/* ═══════════════════════════════════════════════════════════════
-   30. SCROLL-TO-TOP BUTTON
-   Appears after 600px scroll. Bottom-right, above cookie banner.
+   22. SCROLL-TO-TOP BUTTON
+   Appears after 600px scroll. Amber square, ink icon.
    ═══════════════════════════════════════════════════════════════ */
 
 .bm-scroll-top {
@@ -2355,16 +2880,15 @@ select.bm-field__input {
   }
 }
 
-/* When cookie banner is visible, push the button up */
+/* When cookie banner is visible, push button up */
 .bm-scroll-top.is-raised {
   bottom: 100px;
 }
 
 
 /* ═══════════════════════════════════════════════════════════════
-   31. COOKIE BANNER
-   Single bottom bar. Max 80px on desktop. Two clear options.
-   No full-screen modal. No dark pattern.
+   23. COOKIE BANNER
+   Single bottom bar. Two clear options. No dark pattern.
    ═══════════════════════════════════════════════════════════════ */
 
 .bm-cookie {
@@ -2428,7 +2952,7 @@ select.bm-field__input {
 }
 
 .bm-cookie__text a:hover {
-  color: var(--amber-400, #FBBF24);
+  color: var(--amber-400);
 }
 
 .bm-cookie__actions {
@@ -2445,7 +2969,7 @@ select.bm-field__input {
   height: 40px;
   padding: 0 var(--sp-5);
   font-size: var(--fs-sm);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--fw-semibold);
   border-radius: var(--radius-sm);
   border: 1.5px solid transparent;
   cursor: pointer;
@@ -2485,16 +3009,88 @@ select.bm-field__input {
 
 
 /* ═══════════════════════════════════════════════════════════════
-   32. FOOTER
+   24. AD SLOTS
+   Reserved height prevents CLS. Muted label above. Never between
+   category or tool cards. Loaded only after consent.
+   ═══════════════════════════════════════════════════════════════ */
+
+.bm-ad-slot {
+  display: block;
+  max-width: var(--container-max);
+  margin: var(--sp-8) auto;
+  padding-inline: var(--gutter-mobile);
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .bm-ad-slot {
+    padding-inline: var(--gutter-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .bm-ad-slot {
+    padding-inline: var(--gutter-desktop);
+    margin-block: var(--sp-12);
+  }
+}
+
+.bm-ad-slot__label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--slate-light);
+  margin-bottom: var(--sp-2);
+}
+
+.bm-ad-slot__frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--surface-alt);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+/* ─── Leaderboard (728×90 desktop, responsive mobile) ───── */
+.bm-ad-slot--leaderboard .bm-ad-slot__frame {
+  min-height: 100px;
+}
+
+@media (min-width: 768px) {
+  .bm-ad-slot--leaderboard .bm-ad-slot__frame {
+    min-height: 90px;
+    max-width: 728px;
+    margin-inline: auto;
+  }
+}
+
+/* ─── Rectangle (300×250) ───────────────────────────────── */
+.bm-ad-slot--rectangle .bm-ad-slot__frame {
+  min-height: 250px;
+  max-width: 336px;
+  margin-inline: auto;
+}
+
+/* ─── Hide when consent declined ────────────────────────── */
+.bm-ad-slot.is-hidden {
+  display: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   25. FOOTER
    Navy-900 anchor. 4 columns on desktop, stacked on mobile.
-   Real content only — no filler, no newsletter inside footer.
+   Real content only — no newsletter inside footer, no badge farm.
    ═══════════════════════════════════════════════════════════════ */
 
 .bm-footer {
   background-color: var(--navy-900);
   color: var(--navy-pale);
   padding-block: var(--sp-12) var(--sp-6);
-  margin-top: var(--sp-16);
 }
 
 @media (min-width: 1024px) {
@@ -2531,12 +3127,6 @@ select.bm-field__input {
 
 .bm-footer__col--brand {
   grid-column: 1 / -1;
-}
-
-@media (min-width: 640px) and (max-width: 1023px) {
-  .bm-footer__col--brand {
-    grid-column: 1 / -1;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -2582,16 +3172,16 @@ select.bm-field__input {
 }
 
 .bm-footer__contact a:hover {
-  color: var(--amber-400, #FBBF24);
+  color: var(--amber-400);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
-/* ─── Headings ──────────────────────────────────────────── */
+/* ─── Column headings (mono uppercase green) ────────────── */
 .bm-footer__heading {
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--fw-medium);
   letter-spacing: var(--tracking-widest);
   text-transform: uppercase;
   color: var(--green-500);
@@ -2725,14 +3315,10 @@ select.bm-field__input {
 
 
 /* ═══════════════════════════════════════════════════════════════
-   33. FAQ ACCORDION
-   Native <details>/<summary>. No JS needed for interaction.
-   Custom icon rotates on open. Works without JS entirely.
+   26. FAQ ACCORDION
+   Native <details>/<summary> — works with JS disabled.
+   Custom +/- icon built from 2 pseudo-elements.
    ═══════════════════════════════════════════════════════════════ */
-
-.bm-faq {
-  /* Section wrapper — padding handled by .bm-section utility */
-}
 
 .bm-faq__list {
   display: flex;
@@ -2758,7 +3344,7 @@ select.bm-field__input {
   box-shadow: var(--shadow-sm);
 }
 
-/* ─── Summary (clickable question row) ──────────────────── */
+/* ─── Summary row ───────────────────────────────────────── */
 .bm-faq-item__q {
   display: flex;
   align-items: center;
@@ -2766,7 +3352,7 @@ select.bm-field__input {
   gap: var(--sp-4);
   padding: var(--sp-4) var(--sp-5);
   font-size: var(--fs-md);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--fw-semibold);
   color: var(--navy-800);
   line-height: 1.4;
   cursor: pointer;
@@ -2776,7 +3362,6 @@ select.bm-field__input {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Remove default disclosure triangle */
 .bm-faq-item__q::-webkit-details-marker {
   display: none;
 }
@@ -2801,7 +3386,7 @@ select.bm-field__input {
   min-width: 0;
 }
 
-/* ─── Icon (plus that rotates to X) ─────────────────────── */
+/* ─── Plus / minus icon ─────────────────────────────────── */
 .bm-faq-item__icon {
   position: relative;
   display: inline-flex;
@@ -2825,13 +3410,11 @@ select.bm-field__input {
               opacity var(--dur-fast) var(--ease-out);
 }
 
-/* Horizontal bar */
 .bm-faq-item__icon::before {
   width: 14px;
   height: 2px;
 }
 
-/* Vertical bar */
 .bm-faq-item__icon::after {
   width: 2px;
   height: 14px;
@@ -2841,7 +3424,6 @@ select.bm-field__input {
   color: var(--amber-600);
 }
 
-/* When open: hide vertical bar (plus becomes minus) */
 .bm-faq-item[open] .bm-faq-item__icon::after {
   transform: scaleY(0);
   opacity: 0;
@@ -2849,13 +3431,11 @@ select.bm-field__input {
 
 /* ─── Answer body ───────────────────────────────────────── */
 .bm-faq-item__a {
-  padding: 0 var(--sp-5) var(--sp-5);
+  padding: var(--sp-4) var(--sp-5) var(--sp-5);
   font-size: var(--fs-base);
   line-height: var(--lh-relaxed);
   color: var(--slate-med);
   border-top: 1px solid var(--border);
-  padding-top: var(--sp-4);
-  margin-top: 0;
 }
 
 .bm-faq-item__a p {
@@ -2880,7 +3460,7 @@ select.bm-field__input {
 
 
 /* ═══════════════════════════════════════════════════════════════
-   34. B2B SUPPLIER SECTION
+   27. B2B SUPPLIER SECTION
    Navy-800 background. 2-column layout on desktop:
    left copy + benefits, right form. Single-column on mobile.
    ═══════════════════════════════════════════════════════════════ */
@@ -2952,7 +3532,7 @@ select.bm-field__input {
   margin-top: 1px;
 }
 
-/* ─── Right: form ───────────────────────────────────────── */
+/* ─── Right: form card ──────────────────────────────────── */
 .bm-b2b__form {
   position: relative;
   background-color: rgba(255, 255, 255, 0.04);
@@ -2994,22 +3574,12 @@ select.bm-field__input {
 .bm-b2b__note strong {
   color: var(--amber-500);
   font-family: var(--font-mono);
-  font-weight: var(--font-weight-medium);
-}
-
-/* B2B form fields use the on-dark variant */
-.bm-b2b__form .bm-field__label {
-  color: var(--navy-pale);
-}
-
-.bm-b2b__form .bm-field__opt {
-  color: var(--navy-pale);
-  opacity: 0.6;
+  font-weight: var(--fw-medium);
 }
 
 
 /* ═══════════════════════════════════════════════════════════════
-   35. MEDIA SECTION (YouTube + Newsletter)
+   28. MEDIA SECTION (YouTube + Newsletter)
    Two cards side by side on desktop. Stacked on mobile.
    No autoplay, no embedded video, no popups.
    ═══════════════════════════════════════════════════════════════ */
@@ -3087,7 +3657,7 @@ select.bm-field__input {
 
 .bm-media-card__title {
   font-size: var(--fs-md);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--fw-bold);
   color: var(--navy-800);
   line-height: var(--lh-snug);
   letter-spacing: var(--tracking-snug);
@@ -3165,7 +3735,7 @@ select.bm-field__input {
   height: 44px;
   padding: 0 var(--sp-5);
   font-size: var(--fs-sm);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--fw-semibold);
   color: var(--ink);
   background-color: var(--amber-500);
   border: none;
@@ -3184,17 +3754,15 @@ select.bm-field__input {
   outline-offset: 2px;
 }
 
-/* Form message inside media card spans full width */
 .bm-media-card__form .bm-form-msg {
   flex-basis: 100%;
   margin-top: var(--sp-2);
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   36. HERO — Homepage
-   Navy gradient + blueprint grid + real job-site photo overlay.
-   Content column centered, max ~880px. Feels like a technical
-   title block on a drawing sheet.
+   29. HERO — Homepage
+   Navy gradient + blueprint grid + real job-site photo.
+   Content column centered, max ~880px.
    ═══════════════════════════════════════════════════════════════ */
 
 .bm-hero {
@@ -3212,15 +3780,11 @@ select.bm-field__input {
 }
 
 @media (min-width: 768px) {
-  .bm-hero {
-    padding-block: var(--sp-16) var(--sp-20);
-  }
+  .bm-hero { padding-block: var(--sp-16) var(--sp-20); }
 }
 
 @media (min-width: 1024px) {
-  .bm-hero {
-    padding-block: var(--sp-20) var(--sp-24);
-  }
+  .bm-hero { padding-block: var(--sp-20) var(--sp-24); }
 }
 
 /* ─── Background photo (real job site) ──────────────────── */
@@ -3237,7 +3801,7 @@ select.bm-field__input {
   pointer-events: none;
 }
 
-/* ─── Veil — ensures text contrast over photo ───────────── */
+/* ─── Veil (gradient + blueprint grid stacked) ──────────── */
 .bm-hero__veil {
   position: absolute;
   inset: 0;
@@ -3250,14 +3814,13 @@ select.bm-field__input {
       rgba(10, 31, 68, 0.82) 60%,
       rgba(10, 31, 68, 0.95) 100%
     ),
-    /* Subtle blueprint grid on top */
     linear-gradient(to right, rgba(219, 234, 254, 0.05) 1px, transparent 1px)
       0 0 / 40px 40px,
     linear-gradient(to bottom, rgba(219, 234, 254, 0.05) 1px, transparent 1px)
       0 0 / 40px 40px;
 }
 
-/* ─── Hero inner column ─────────────────────────────────── */
+/* ─── Inner column ──────────────────────────────────────── */
 .bm-hero__inner {
   position: relative;
   z-index: 2;
@@ -3268,32 +3831,28 @@ select.bm-field__input {
 }
 
 @media (min-width: 640px) {
-  .bm-hero__inner {
-    padding-inline: var(--gutter-tablet);
-  }
+  .bm-hero__inner { padding-inline: var(--gutter-tablet); }
 }
 
 @media (min-width: 1024px) {
-  .bm-hero__inner {
-    padding-inline: var(--gutter-desktop);
-  }
+  .bm-hero__inner { padding-inline: var(--gutter-desktop); }
 }
 
 .bm-hero .bm-section-label {
   display: inline-block;
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--fw-medium);
   letter-spacing: var(--tracking-widest);
   text-transform: uppercase;
   color: var(--green-500);
   margin-bottom: var(--sp-5);
 }
 
-/* ─── Hero H1 ───────────────────────────────────────────── */
+/* ─── H1 ────────────────────────────────────────────────── */
 .bm-hero__title {
   font-size: var(--fs-3xl);
-  font-weight: var(--font-weight-black);
+  font-weight: var(--fw-black);
   line-height: var(--lh-tight);
   letter-spacing: var(--tracking-tight);
   color: var(--navy-pale);
@@ -3301,26 +3860,16 @@ select.bm-field__input {
   text-wrap: balance;
 }
 
-@media (min-width: 768px) {
-  .bm-hero__title {
-    font-size: var(--fs-4xl);
-  }
-}
-
-@media (min-width: 1024px) {
-  .bm-hero__title {
-    font-size: var(--fs-5xl);
-  }
-}
+@media (min-width: 768px)  { .bm-hero__title { font-size: var(--fs-4xl); } }
+@media (min-width: 1024px) { .bm-hero__title { font-size: var(--fs-5xl); } }
 
 .bm-hero__title-accent {
   color: var(--amber-500);
-  /* 4px amber underline on the accent line */
   box-shadow: inset 0 -0.18em 0 0 rgba(245, 158, 11, 0.12);
   padding-bottom: 0.02em;
 }
 
-/* ─── Hero lede ─────────────────────────────────────────── */
+/* ─── Lede ──────────────────────────────────────────────── */
 .bm-hero__lede {
   font-size: var(--fs-md);
   line-height: var(--lh-relaxed);
@@ -3332,12 +3881,10 @@ select.bm-field__input {
 }
 
 @media (min-width: 768px) {
-  .bm-hero__lede {
-    font-size: var(--fs-lg);
-  }
+  .bm-hero__lede { font-size: var(--fs-lg); }
 }
 
-/* ─── Hero search bar ───────────────────────────────────── */
+/* ─── Search bar ────────────────────────────────────────── */
 .bm-hero__search {
   display: flex;
   align-items: center;
@@ -3370,9 +3917,7 @@ select.bm-field__input {
   outline: none;
 }
 
-.bm-hero__search input::placeholder {
-  color: var(--slate-light);
-}
+.bm-hero__search input::placeholder { color: var(--slate-light); }
 
 .bm-hero__search-btn {
   display: inline-flex;
@@ -3382,7 +3927,7 @@ select.bm-field__input {
   height: 44px;
   padding: 0 var(--sp-5);
   font-size: var(--fs-sm);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--fw-semibold);
   color: var(--ink);
   background-color: var(--amber-500);
   border: none;
@@ -3393,10 +3938,7 @@ select.bm-field__input {
   flex-shrink: 0;
 }
 
-.bm-hero__search-btn:hover {
-  background-color: var(--amber-600);
-}
-
+.bm-hero__search-btn:hover { background-color: var(--amber-600); }
 .bm-hero__search-btn:focus-visible {
   outline: 2px solid var(--navy-800);
   outline-offset: 2px;
@@ -3415,7 +3957,7 @@ select.bm-field__input {
 .bm-hero__chips-label {
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--fw-medium);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
   color: var(--navy-pale);
@@ -3452,7 +3994,7 @@ select.bm-field__input {
 .bm-stat__label {
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--fw-medium);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
   color: var(--navy-pale);
@@ -3463,7 +4005,7 @@ select.bm-field__input {
 .bm-stat__value {
   font-family: var(--font-mono);
   font-size: var(--fs-2xl);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--fw-bold);
   color: var(--green-500);
   line-height: 1;
   letter-spacing: var(--tracking-tight);
@@ -3473,8 +4015,7 @@ select.bm-field__input {
 
 
 /* ═══════════════════════════════════════════════════════════════
-   37. TRUST STRIP — 5 green-pale pills
-   Single line on desktop, wraps on mobile.
+   30. TRUST STRIP — green pills row
    ═══════════════════════════════════════════════════════════════ */
 
 .bm-trust-strip {
@@ -3495,14 +4036,10 @@ select.bm-field__input {
 }
 
 @media (min-width: 1024px) {
-  .bm-trust-strip__list {
-    gap: var(--sp-3);
-  }
+  .bm-trust-strip__list { gap: var(--sp-3); }
 }
 
-.bm-trust-strip .bm-trust-pill {
-  padding: var(--sp-2) var(--sp-4);
-}
+.bm-trust-strip .bm-trust-pill { padding: var(--sp-2) var(--sp-4); }
 
 @media (max-width: 480px) {
   .bm-trust-strip .bm-trust-pill {
@@ -3511,9 +4048,11 @@ select.bm-field__input {
   }
 }
 
+
 /* ═══════════════════════════════════════════════════════════════
-   38. CATEGORIES GRID — 12 category cards
-   Continuous grid. NO ads inside. 4 → 3 → 2 → 1 responsive.
+   31. CATEGORIES GRID — 12 cards, 3×4 on desktop
+   Mobile: 1 column. Tablet: 2 columns. Desktop: 3 columns.
+   Never 4 columns — 12 items fit perfectly as 3×4.
    ═══════════════════════════════════════════════════════════════ */
 
 .bm-categories {
@@ -3539,12 +4078,6 @@ select.bm-field__input {
 @media (min-width: 1024px) {
   .bm-categories__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 1280px) {
-  .bm-categories__grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
@@ -3580,20 +4113,18 @@ select.bm-field__input {
   outline-offset: 2px;
 }
 
-/* ─── Card index (01, 02...) ────────────────────────────── */
 .bm-cat-card__index {
   position: absolute;
   top: var(--sp-5);
   right: var(--sp-5);
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--fw-medium);
   letter-spacing: var(--tracking-wide);
   color: var(--slate-light);
   line-height: 1;
 }
 
-/* ─── Icon tile ─────────────────────────────────────────── */
 .bm-cat-card__icon {
   display: inline-flex;
   align-items: center;
@@ -3613,29 +4144,26 @@ select.bm-field__input {
   color: var(--amber-700);
 }
 
-/* ─── Name ──────────────────────────────────────────────── */
 .bm-cat-card__name {
   font-family: var(--font-sans);
   font-size: var(--fs-md);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--fw-bold);
   line-height: var(--lh-snug);
   letter-spacing: var(--tracking-snug);
   color: var(--navy-800);
   margin-top: var(--sp-2);
 }
 
-/* ─── Count (mono, small, muted) ────────────────────────── */
 .bm-cat-card__count {
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--fw-medium);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
   color: var(--green-700);
   line-height: 1;
 }
 
-/* ─── Description ───────────────────────────────────────── */
 .bm-cat-card__desc {
   font-size: var(--fs-sm);
   line-height: var(--lh-relaxed);
@@ -3643,7 +4171,6 @@ select.bm-field__input {
   flex: 1 1 auto;
 }
 
-/* ─── Arrow (bottom-right, appears on hover) ────────────── */
 .bm-cat-card__arrow {
   position: absolute;
   bottom: var(--sp-5);
@@ -3672,7 +4199,8 @@ select.bm-field__input {
 
 
 /* ═══════════════════════════════════════════════════════════════
-   39. WHY SECTION — navy, long-form, engineer voice
+   32. WHY SECTION — navy long-form (paragraphs VISIBLE)
+   Global `p { color: dark }` rule overridden here.
    ═══════════════════════════════════════════════════════════════ */
 
 .bm-why {
@@ -3688,29 +4216,29 @@ select.bm-field__input {
   opacity: 0.92;
 }
 
+/* ⬇ CRITICAL FIX: paragraphs must be visible on navy bg */
 .bm-why__body p {
+  color: var(--navy-pale);
   margin-bottom: var(--sp-5);
 }
 
-.bm-why__body p:last-child {
-  margin-bottom: 0;
-}
+.bm-why__body p:last-child { margin-bottom: 0; }
 
 .bm-why__body strong {
   color: var(--green-500);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--fw-semibold);
 }
 
 .bm-why__body em {
   color: var(--amber-500);
   font-style: normal;
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--fw-medium);
 }
 
 .bm-why__subhead {
   font-family: var(--font-sans);
   font-size: var(--fs-xl);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--fw-bold);
   letter-spacing: var(--tracking-snug);
   color: var(--navy-pale);
   margin-top: var(--sp-8);
@@ -3720,7 +4248,7 @@ select.bm-field__input {
 
 .bm-why__closer {
   font-size: var(--fs-lg) !important;
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--fw-semibold);
   color: var(--amber-500) !important;
   opacity: 1 !important;
   margin-top: var(--sp-8) !important;
@@ -3730,7 +4258,7 @@ select.bm-field__input {
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   40. TRUST CARDS — 6 green-bordered cards on surface bg
+   33. TRUST CARDS — 6 green-bordered claims
    Each card is a verifiable claim. Green left border = "verified".
    ═══════════════════════════════════════════════════════════════ */
 
@@ -3749,15 +4277,11 @@ select.bm-field__input {
 }
 
 @media (min-width: 640px) {
-  .bm-trust__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+  .bm-trust__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (min-width: 1024px) {
-  .bm-trust__grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+  .bm-trust__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 /* ─── Trust card ────────────────────────────────────────── */
@@ -3782,28 +4306,25 @@ select.bm-field__input {
   box-shadow: var(--shadow-sm);
 }
 
-/* ─── Numbered label (01 … 06) ──────────────────────────── */
 .bm-trust-card__num {
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--fw-medium);
   letter-spacing: var(--tracking-widest);
   color: var(--green-700);
   line-height: 1;
 }
 
-/* ─── Title ─────────────────────────────────────────────── */
 .bm-trust-card__title {
   font-family: var(--font-sans);
   font-size: var(--fs-md);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--fw-bold);
   line-height: var(--lh-snug);
   letter-spacing: var(--tracking-snug);
   color: var(--navy-800);
   margin: 0;
 }
 
-/* ─── Body text ─────────────────────────────────────────── */
 .bm-trust-card__text {
   font-size: var(--fs-sm);
   line-height: var(--lh-relaxed);
@@ -3817,7 +4338,6 @@ select.bm-field__input {
   text-decoration: underline;
   text-underline-offset: 2px;
   word-break: break-all;
-  transition: color var(--dur-fast) var(--ease-out);
 }
 
 .bm-trust-card__text a:hover {
@@ -3827,9 +4347,9 @@ select.bm-field__input {
 
 
 /* ═══════════════════════════════════════════════════════════════
-   41. HOW SECTION — 3 steps on navy
+   34. HOW SECTION — 3 steps on navy
    Each step has a 2px amber top border (drawing-like divider).
-   No step numbers as circles/icons. Just typographic hierarchy.
+   No icon circles — pure typographic hierarchy.
    ═══════════════════════════════════════════════════════════════ */
 
 .bm-how {
@@ -3845,7 +4365,6 @@ select.bm-field__input {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--sp-6);
-  counter-reset: bm-how-step;
 }
 
 @media (min-width: 768px) {
@@ -3862,12 +4381,11 @@ select.bm-field__input {
   border-top: 2px solid var(--amber-500);
 }
 
-/* ─── Step number (STEP 01 …) ───────────────────────────── */
 .bm-how-step__num {
   display: inline-block;
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--fw-medium);
   letter-spacing: var(--tracking-widest);
   text-transform: uppercase;
   color: var(--amber-500);
@@ -3875,18 +4393,16 @@ select.bm-field__input {
   line-height: 1;
 }
 
-/* ─── Step title ────────────────────────────────────────── */
 .bm-how-step__title {
   font-family: var(--font-sans);
   font-size: var(--fs-lg);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--fw-bold);
   letter-spacing: var(--tracking-snug);
   line-height: var(--lh-snug);
   color: var(--navy-pale);
   margin: 0 0 var(--sp-3);
 }
 
-/* ─── Step body ─────────────────────────────────────────── */
 .bm-how-step__text {
   font-size: var(--fs-sm);
   line-height: var(--lh-relaxed);
@@ -3898,22 +4414,19 @@ select.bm-field__input {
 .bm-how-step__text strong {
   color: var(--green-500);
   font-family: var(--font-mono);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--fw-medium);
   letter-spacing: -0.01em;
 }
 
-/* ─── Small breakpoint refinement ───────────────────────── */
+/* Mobile refinement */
 @media (max-width: 767px) {
-  .bm-how-step {
-    padding-top: var(--sp-5);
-  }
-  .bm-how-step__title {
-    font-size: var(--fs-md);
-  }
+  .bm-how-step { padding-top: var(--sp-5); }
+  .bm-how-step__title { font-size: var(--fs-md); }
 }
 
+
 /* ═══════════════════════════════════════════════════════════════
-   42. STANDARDS — 6 code-family cards on white
+   35. STANDARDS — 6 code-family cards on white
    Each card: region badge, standard name, explanation, link.
    Background shifts to navy-tint on hover (subtle "active" signal).
    ═══════════════════════════════════════════════════════════════ */
@@ -3933,15 +4446,11 @@ select.bm-field__input {
 }
 
 @media (min-width: 640px) {
-  .bm-standards__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+  .bm-standards__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (min-width: 1024px) {
-  .bm-standards__grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+  .bm-standards__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 /* ─── Standards card ────────────────────────────────────── */
@@ -3963,14 +4472,13 @@ select.bm-field__input {
   background-color: var(--navy-tint);
 }
 
-/* ─── Region badge ──────────────────────────────────────── */
 .bm-standards-card__badge {
   display: inline-flex;
   align-self: flex-start;
   padding: 3px var(--sp-2);
   font-family: var(--font-mono);
   font-size: 10px;
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--fw-medium);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
   line-height: 1.4;
@@ -3980,18 +4488,16 @@ select.bm-field__input {
   white-space: nowrap;
 }
 
-/* ─── Title (standard name) ─────────────────────────────── */
 .bm-standards-card__title {
   font-family: var(--font-sans);
   font-size: var(--fs-md);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--fw-bold);
   line-height: var(--lh-snug);
   letter-spacing: var(--tracking-snug);
   color: var(--navy-800);
   margin: 0;
 }
 
-/* ─── Description ───────────────────────────────────────── */
 .bm-standards-card__text {
   font-size: var(--fs-sm);
   line-height: var(--lh-relaxed);
@@ -4000,12 +4506,11 @@ select.bm-field__input {
   margin: 0;
 }
 
-/* ─── Link with animated arrow ──────────────────────────── */
 .bm-standards-card__link {
   display: inline-flex;
   align-items: center;
   font-size: var(--fs-sm);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--fw-semibold);
   color: var(--navy-600);
   text-decoration: none;
   margin-top: var(--sp-1);
@@ -4036,7 +4541,7 @@ select.bm-field__input {
 
 
 /* ═══════════════════════════════════════════════════════════════
-   43. FEATURED TOOLS — 6 tool cards on surface
+   36. FEATURED TOOLS — 6 tool cards on surface
    Card shows: category, title, description, standard, arrow.
    Hover: amber border + lift + arrow slide.
    ═══════════════════════════════════════════════════════════════ */
@@ -4056,15 +4561,11 @@ select.bm-field__input {
 }
 
 @media (min-width: 640px) {
-  .bm-featured__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+  .bm-featured__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (min-width: 1024px) {
-  .bm-featured__grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+  .bm-featured__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 .bm-featured__cta {
@@ -4104,29 +4605,26 @@ select.bm-field__input {
   outline-offset: 2px;
 }
 
-/* ─── Category label (green mono, uppercase) ────────────── */
 .bm-tool-card__cat {
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--fw-medium);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
   color: var(--green-700);
   line-height: 1;
 }
 
-/* ─── Title ─────────────────────────────────────────────── */
 .bm-tool-card__title {
   font-family: var(--font-sans);
   font-size: var(--fs-md);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--fw-bold);
   line-height: var(--lh-snug);
   letter-spacing: var(--tracking-snug);
   color: var(--navy-800);
   margin: var(--sp-1) 0 0;
 }
 
-/* ─── Description ───────────────────────────────────────── */
 .bm-tool-card__text {
   font-size: var(--fs-sm);
   line-height: var(--lh-relaxed);
@@ -4135,7 +4633,6 @@ select.bm-field__input {
   margin: 0;
 }
 
-/* ─── Meta row (standard + arrow) ───────────────────────── */
 .bm-tool-card__meta {
   display: flex;
   align-items: center;
@@ -4146,13 +4643,12 @@ select.bm-field__input {
   margin-top: var(--sp-2);
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--fw-medium);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
   color: var(--slate-med);
 }
 
-/* ─── Arrow ─────────────────────────────────────────────── */
 .bm-tool-card__arrow {
   display: inline-flex;
   align-items: center;
@@ -4170,11 +4666,8 @@ select.bm-field__input {
   transform: translateX(3px);
 }
 
-
 /* ═══════════════════════════════════════════════════════════════
-   44. QUICK LINKS — 6 shortcut cards on navy-900
-   Grid layout: title (row 1) + desc (row 2) + arrow (rowspan 2).
-   Amber hover border + amber arrow slide.
+   37. QUICK LINKS — 4 columns desktop, 1 column mobile
    ═══════════════════════════════════════════════════════════════ */
 
 .bm-quicklinks {
@@ -4185,19 +4678,13 @@ select.bm-field__input {
 
 .bm-quicklinks__grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr;               /* mobile: 1 col */
   gap: var(--sp-3);
-}
-
-@media (min-width: 640px) {
-  .bm-quicklinks__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (min-width: 1024px) {
   .bm-quicklinks__grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));  /* desktop: 4 col */
   }
 }
 
@@ -4230,10 +4717,9 @@ select.bm-field__input {
   outline-offset: 2px;
 }
 
-/* ─── Title (row 1, col 1) ──────────────────────────────── */
 .bm-quicklink__title {
   font-size: var(--fs-md);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--fw-semibold);
   color: var(--navy-pale);
   line-height: var(--lh-snug);
   letter-spacing: var(--tracking-snug);
@@ -4241,7 +4727,6 @@ select.bm-field__input {
   grid-row: 1;
 }
 
-/* ─── Description (row 2, col 1) ────────────────────────── */
 .bm-quicklink__desc {
   font-size: var(--fs-sm);
   line-height: var(--lh-relaxed);
@@ -4251,7 +4736,6 @@ select.bm-field__input {
   grid-row: 2;
 }
 
-/* ─── Arrow (rows 1-2, col 2) ───────────────────────────── */
 .bm-quicklink__arrow {
   grid-column: 2;
   grid-row: 1 / span 2;
@@ -4266,154 +4750,28 @@ select.bm-field__input {
   transform: translateX(4px);
 }
 
+
 /* ═══════════════════════════════════════════════════════════════
-   45. UTILITY CLASSES (final layer)
-   Small, purpose-built utilities. Not a utility framework.
-   Only classes that get used across multiple files.
+   38. DARK-SURFACE PARAGRAPH SAFETY NET
+   Global `p { color: dark }` rule ko neutralize karta hai jab
+   bhi paragraph kisi navy section me ho. Future-proof.
    ═══════════════════════════════════════════════════════════════ */
 
-/* ─── Text alignment ────────────────────────────────────── */
-.bm-text-center { text-align: center; }
-.bm-text-left   { text-align: left; }
-.bm-text-right  { text-align: right; }
-
-/* ─── Text transforms ───────────────────────────────────── */
-.bm-uppercase {
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-wide);
-}
-
-/* ─── Muted text (used sparingly) ───────────────────────── */
-.bm-muted {
-  color: var(--slate-med);
-}
-
-/* ─── No-wrap (for email, phone, IDs) ───────────────────── */
-.bm-nowrap {
-  white-space: nowrap;
-}
-
-/* ─── Break long strings (URLs, emails) ─────────────────── */
-.bm-break {
-  word-break: break-all;
-  overflow-wrap: anywhere;
-}
-
-/* ─── Margins (only top/bottom, used in content flow) ───── */
-.bm-mt-0  { margin-top: 0 !important; }
-.bm-mt-4  { margin-top: var(--sp-4); }
-.bm-mt-6  { margin-top: var(--sp-6); }
-.bm-mt-8  { margin-top: var(--sp-8); }
-.bm-mb-0  { margin-bottom: 0 !important; }
-.bm-mb-4  { margin-bottom: var(--sp-4); }
-.bm-mb-6  { margin-bottom: var(--sp-6); }
-.bm-mb-8  { margin-bottom: var(--sp-8); }
-
-/* ─── Hide/show by breakpoint ───────────────────────────── */
-.bm-hide-mobile {
-  display: none;
-}
-@media (min-width: 768px) {
-  .bm-hide-mobile { display: block; }
-}
-
-.bm-hide-desktop {
-  display: block;
-}
-@media (min-width: 1024px) {
-  .bm-hide-desktop { display: none; }
-}
-
-/* ─── Width constraints (reading) ───────────────────────── */
-.bm-max-40ch { max-width: 40ch; }
-.bm-max-60ch { max-width: 60ch; }
-.bm-max-72ch { max-width: 72ch; }
-
-/* ─── Full-bleed horizontal scroll (tables) ─────────────── */
-.bm-scroll-x {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
-}
-
-.bm-scroll-x::-webkit-scrollbar {
-  height: 6px;
-}
-
-.bm-scroll-x::-webkit-scrollbar-thumb {
-  background-color: var(--border-strong);
-  border-radius: 3px;
-}
-
-/* ─── Custom scrollbar for content areas ────────────────── */
-.bm-scroll-y {
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: var(--border-strong) transparent;
-}
-
-.bm-scroll-y::-webkit-scrollbar {
-  width: 8px;
-}
-
-.bm-scroll-y::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.bm-scroll-y::-webkit-scrollbar-thumb {
-  background-color: var(--border-strong);
-  border-radius: 4px;
-}
-
-.bm-scroll-y::-webkit-scrollbar-thumb:hover {
-  background-color: var(--slate-light);
+.bm-why__body p,
+.bm-how-step p,
+.bm-quicklink p,
+.bm-footer p,
+.bm-b2b p,
+.bm-hero p,
+.bm-surface--navy p,
+.bm-surface--navy-800 p {
+  color: var(--navy-pale);
 }
 
 
 /* ═══════════════════════════════════════════════════════════════
-   46. FOCUS-VISIBLE REINFORCEMENT
-   Global keyboard focus policy. Ensures every interactive element
-   has a visible ring, even when no component CSS is applied.
-   ═══════════════════════════════════════════════════════════════ */
-
-a:focus-visible,
-button:focus-visible,
-summary:focus-visible,
-[tabindex]:focus-visible {
-  outline: 2px solid var(--navy-600);
-  outline-offset: 2px;
-}
-
-/* On dark surfaces, amber ring */
-.bm-surface--navy a:focus-visible,
-.bm-surface--navy button:focus-visible,
-.bm-surface--navy-800 a:focus-visible,
-.bm-surface--navy-800 button:focus-visible,
-.bm-hero a:focus-visible,
-.bm-hero button:focus-visible,
-.bm-why a:focus-visible,
-.bm-how a:focus-visible,
-.bm-quicklinks a:focus-visible,
-.bm-footer a:focus-visible,
-.bm-b2b a:focus-visible,
-.bm-b2b button:focus-visible {
-  outline-color: var(--amber-500);
-}
-
-/* Inputs get a soft ring instead of a hard outline */
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible {
-  outline: none;
-  border-color: var(--navy-600);
-  box-shadow: var(--shadow-focus);
-}
-
-
-/* ═══════════════════════════════════════════════════════════════
-   47. FORCED-COLORS (Windows High Contrast Mode)
-   Ensures nothing disappears when the OS overrides colours.
-   Borders become visible, backgrounds become transparent.
+   39. FORCED-COLORS (Windows High Contrast Mode)
+   Ensures nothing disappears when OS overrides colours.
    ═══════════════════════════════════════════════════════════════ */
 
 @media (forced-colors: active) {
@@ -4434,12 +4792,11 @@ textarea:focus-visible {
     border: 1px solid CanvasText;
   }
 
-  /* Buttons keep a visible boundary */
   .bm-btn {
     border: 1px solid ButtonText;
   }
 
-  /* Kill background-image gradients (blueprint grid) */
+  /* Kill decorative layers (blueprint grid, ruler, veil) */
   .bm-grid-overlay::before,
   .bm-ruler-edges::before,
   .bm-ruler-edges::after,
@@ -4464,9 +4821,7 @@ textarea:focus-visible {
   }
 
   /* Hero photo falls back to a solid surface */
-  .bm-hero__bg {
-    display: none;
-  }
+  .bm-hero__bg { display: none; }
 
   .bm-hero {
     background: Canvas !important;
@@ -4482,9 +4837,44 @@ textarea:focus-visible {
 
 
 /* ═══════════════════════════════════════════════════════════════
-   48. PRINT BASELINE
-   Minimal rules here. Full print styles live in print.css.
-   These are the safety nets that apply to every page.
+   40. MOTION SAFETY NET
+   Global kill switch. Ensures no animation runs when user
+   requested reduced motion, even if a component forgot.
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Kill transform hovers (arrow slides, card lifts) */
+  .bm-cat-card:hover,
+  .bm-tool-card:hover,
+  .bm-btn:active,
+  .bm-scroll-top:active {
+    transform: none !important;
+  }
+
+  .bm-arrow,
+  .bm-arrow--down,
+  .bm-cat-card__arrow,
+  .bm-tool-card__arrow,
+  .bm-quicklink__arrow,
+  .bm-standards-card__link span {
+    transition: none !important;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   41. PRINT BASELINE
+   Full print styles in print.css. These are global safety nets
+   that apply to every page.
    ═══════════════════════════════════════════════════════════════ */
 
 @media print {
@@ -4538,21 +4928,20 @@ textarea:focus-visible {
     page-break-after: avoid;
   }
 
-  /* Links: show URL after text */
+  /* Links: show URL after text (external only) */
   a[href^="http"]::after {
     content: " (" attr(href) ")";
     font-size: 0.85em;
     color: #444444;
   }
 
-  /* But don't show URLs for internal links */
   a[href^="/"]::after,
   a[href^="#"]::after,
   a[href^="mailto:"]::after {
     content: "";
   }
 
-  /* Cards: minimal borders */
+  /* Cards: minimal borders, no shadows */
   .bm-cat-card,
   .bm-tool-card,
   .bm-trust-card,
@@ -4583,12 +4972,6 @@ textarea:focus-visible {
     widows: 3;
   }
 
-  /* Prevent section breaks in the middle of cards */
-  ul[role="list"],
-  ol[role="list"] {
-    page-break-inside: auto;
-  }
-
   li {
     page-break-inside: avoid;
   }
@@ -4596,98 +4979,34 @@ textarea:focus-visible {
 
 
 /* ═══════════════════════════════════════════════════════════════
-   49. MOTION SAFETY NETS
-   Global rules that ensure no animation runs when the user
-   has requested reduced motion, even if a component forgot.
-   ═══════════════════════════════════════════════════════════════ */
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-
-  /* Kill transform hovers (arrow slides, card lifts) */
-  .bm-cat-card:hover,
-  .bm-tool-card:hover,
-  .bm-btn:active,
-  .bm-scroll-top:active {
-    transform: none !important;
-  }
-
-  .bm-arrow,
-  .bm-arrow--down,
-  .bm-cat-card__arrow,
-  .bm-tool-card__arrow,
-  .bm-quicklink__arrow,
-  .bm-standards-card__link span {
-    transition: none !important;
-  }
-}
-
-
-/* ═══════════════════════════════════════════════════════════════
-   50. END OF BLUEPRINT.CSS
+   END OF BLUEPRINT.CSS — 10 PHASES COMPLETE
    ═══════════════════════════════════════════════════════════════
 
-   WHAT'S IN THIS FILE:
+   PHASE MAP:
    ─────────────────────────────────────────────────────────────
    01. Design tokens — colour, type, spacing, layout, motion
-   02. CSS reset — modern, opinionated, no framework
-   03. Base typography — headings, paragraphs, links, selection
-   04. Layout primitives — containers, section heads, sr-only
-   05. Blueprint visual language — grid, ticks, brackets, mono
-   06. Arrow button pattern — text + arrow animates on hover
-   07. Dividers — base, on-dark, amber accent
-   08. Surface helpers — background + section padding variants
-   09. Grid helpers — 2/3/4 col + auto-fit
-   10. Flex helpers — center, between, wrap
-   11. Buttons — amber, outline, ghost, green + sizes
-   12. Form primitives — field, input, select, textarea, checkbox
-   13. Chip / pill / badge — for tags, trust pills, labels
-   14. Loading skeleton — respects reduced-motion
-   15. Header — sticky, brand, nav, actions, hamburger
-   16. Search panel — full-screen dialog, kbd hints
-   17. Mobile menu — slide-in panel
-   18. Geo banner — dismissible region notice
-   19. Ad slots — leaderboard + rectangle, reserved height
-   20. Scroll-to-top — appears after scroll
-   21. Cookie banner — bottom bar, two clear options
-   22. Footer — 4-column grid, social, bottom bar
-   23. FAQ accordion — native <details>, +/- icon
-   24. B2B section — copy + benefits, form card
-   25. Media section — YouTube + newsletter cards
-   26. Hero — gradient, photo, search, chips, stats
-   27. Trust strip — green pills row
-   28. Categories grid — 12 cards, full hover system
-   29. Why section — long-form navy reading block
-   30. Trust cards — 6 green-bordered claims
-   31. How section — 3 numbered steps, amber top borders
-   32. Standards section — 6 code-family cards
-   33. Featured tools — 6 tool cards with amber hover
-   34. Quick links — 6 shortcut cards on navy grid
-   35. Utilities — text, spacing, hide/show, scroll
-   36. Focus-visible reinforcement — global a11y policy
-   37. Forced-colors (Windows HCM) support
-   38. Print baseline — safe defaults
-   39. Motion safety net — reduced-motion kill switch
+   02. CSS reset — modern, opinionated
+   03. Base typography — headings, paragraphs, links, code
+   04. Layout + utilities — containers, grids, sr-only, helpers
+   05. Blueprint DNA + micro-elements — grid, ticks, chips, badges
+   06. Buttons — 5 variants × 3 sizes
+   07. Form primitives — inputs, selects, textareas, checkboxes
+   08. Navigation layer — header, search, menu, geo, cookie, ads
+   09. Footer + content blocks — footer, FAQ, B2B, media
+   10A. Hero + trust strip + categories (3×4) + why visible
+   10B. Trust cards + how steps + standards + featured tools
+   10C. Quick links (4-col) + safety nets + print + close
 
    WHAT'S NOT IN THIS FILE:
    ─────────────────────────────────────────────────────────────
-   • Homepage-specific section tweaks → homepage.css
-   • Category page layout → category.css
-   • Tool page calculator UI → tool.css
+   • Page-specific tweaks → homepage.css, category.css, tool.css
    • Additional media queries → responsive.css
    • Detailed print layout → print.css
+   • Calculator UI → tool.css + calculator.js
 
    DEPENDENCIES:
    ─────────────────────────────────────────────────────────────
    • Loads BEFORE components.css, homepage.css, responsive.css
-   • Loads AFTER nothing (this is the base layer)
    • No JS dependency. Works fully without JavaScript.
 
    FILE SIZE TARGET:
@@ -4696,4 +5015,19 @@ textarea:focus-visible {
    • Gzipped: ~7 KB
    • Brotli: ~6 KB
 
-   ═══════════════════════════════════════════════════════════════
+   KEY GRID DECISIONS:
+   ─────────────────────────────────────────────────────────────
+   • Categories: 3 columns desktop (12 items = 3×4)
+   • Quick links: 4 columns desktop (as requested)
+   • Trust/Standards/Featured: 3 columns desktop
+   • B2B: 2 columns (copy + form)
+   • Media: 2 columns (YouTube + Newsletter)
+   • Footer: 4 columns (1.5fr + 1fr + 1fr + 1fr)
+
+   VISIBILITY FIX LOCKED:
+   ─────────────────────────────────────────────────────────────
+   `.bm-why__body p { color: var(--navy-pale); }` — prevents the
+   global `p { color: dark }` rule from making text invisible on
+   navy sections. Also covered by a broader safety net at § 38.
+
+   ═══════════════════════════════════════════════════════════════ */
