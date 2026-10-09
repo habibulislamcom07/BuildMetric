@@ -152,55 +152,71 @@
   }
   </script>
 
-  <!-- ═══ JSON-LD — FAQ PAGE (homepage FAQs, matches visible content) ═══ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Are BuildMetric calculators really free?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Every calculator on BuildMetric is free to use with no signup, no paywall, and no subscription. The site is supported by display advertising and optional supplier lead referrals."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Which building codes and standards do the calculators follow?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Formulas reference ACI 318-19 and ACI 211.1 for concrete, AISC and NDS for steel and timber, ASHRAE and NEC for electrical and HVAC, and regional equivalents including BS EN 1992, AS 3600, CSA A23.3, and IS 456. Every tool page lists its specific reference."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do the calculators work offline on a job site?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "After a page has loaded once, the calculation runs entirely in your browser with no network calls. You can keep a tool page open in a tab on-site and it will continue to work through intermittent signal loss."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I switch between imperial and metric units?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Every calculator has an Imperial/Metric toggle at the top of the input card. The site also auto-detects your region and sets the default system, but you can override it at any time and the choice is remembered."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are the results accurate enough for permit drawings?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The calculators produce standard engineering quantities you would use in a takeoff, estimate, or preliminary design. Final permit documents and structural sign-offs should always be verified by a licensed engineer or architect in your jurisdiction."
-        }
+  <!-- ═══ JSON-LD — FAQ PAGE (matches visible FAQ exactly) ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are BuildMetric calculators really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every calculator on BuildMetric is free to use with no signup, no paywall, and no subscription. The site is supported by display advertising and optional supplier lead referrals."
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Question",
+      "name": "Which building codes and standards do the calculators follow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Formulas reference ACI 318-19 and ACI 211.1 for concrete, AISC and NDS for steel and timber, ASHRAE and NEC for electrical and HVAC, and regional equivalents including BS EN 1992, AS 3600, CSA A23.3, and IS 456. Every tool page lists its specific reference."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do the calculators work offline on a job site?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "After a page has loaded once, the calculation runs entirely in your browser with no network calls. You can keep a tool page open in a tab on-site and it will continue to work through intermittent signal loss."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I switch between imperial and metric units?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every calculator has an Imperial/Metric toggle at the top of the input card. The site also auto-detects your region and sets the default system, but you can override it at any time and the choice is remembered."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the results accurate enough for permit drawings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculators produce standard engineering quantities you would use in a takeoff, estimate, or preliminary design. Final permit documents and structural sign-offs should always be verified by a licensed engineer or architect in your jurisdiction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need an account, and is my data saved?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No account is required, and no calculator input is sent to a server. Everything you type stays in your browser. The optional Save Result button uses local storage on your device and never leaves it. The B2B supplier form is the only place you actively submit contact details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does BuildMetric make money if everything is free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two ways, both visible on the site. First, standard display advertising in clearly labelled slots — never between calculator inputs and never as a popup. Second, optional supplier referral: if you fill the Get supplier quotes form, participating suppliers pay a small fee for the introduction. Neither requires a subscription."
+      }
+    }
+  ]
+}
+</script>
 </head>
 
 <body class="bm-home">
