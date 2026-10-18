@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 🎯 SEO Title & Description -->
+    <title>Contact Us | BuildMetric Support</title>
+    <meta name="description" content="Get in touch with the BuildMetric team. Ask questions about our construction calculators, report bugs, or inquire about advertising opportunities.">
+    
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://buildmetric.org/contact.html">
+
+    <!-- Tailwind CSS & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { 50: '#f0f9ff', 100: '#e0f2fe', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1' },
+                        dark: '#0f172a',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        /* Focus ring for form inputs */
+        .form-input:focus { outline: none; border-color: #0ea5e9; box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- 1. NAVBAR -->
+    <nav class="sticky top-0 z-50 glass-nav border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="/" class="flex items-center gap-2">
+                    <div class="w-9 h-9 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-xl">B</div>
+                    <span class="font-extrabold text-2xl tracking-tight text-dark">Build<span class="text-brand-600">Metric</span></span>
+                </a>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="/" class="text-sm font-medium text-slate-600 hover:text-brand-600">Home</a>
+                    <a href="/#tools" class="text-sm font-medium text-slate-600 hover:text-brand-600">Calculators</a>
+                    <a href="/contact.html" class="text-sm font-bold text-brand-600">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. MAIN CONTACT SECTION -->
+    <main class="flex-grow py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Header -->
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-dark tracking-tight mb-4">Get in Touch</h1>
+                <p class="text-lg text-slate-600">Have a question about a calculator, found a bug, or want to partner with us? We'd love to hear from you. Our team typically responds within 24-48 hours.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                
+                <!-- LEFT: Advanced Contact Form -->
+                <div class="lg:col-span-2 bg-white rounded-3xl p-8 md:p-10 shadow-xl border border-slate-200">
+                    <h2 class="text-2xl font-bold text-dark mb-6">Send us a Message</h2>
+                    
+                    <form id="contactForm" class="space-y-6">
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Name -->
+                            <div>
+                                <label for="name" class="block text-sm font-bold text-slate-700 mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" required placeholder="John Doe" class="form-input w-full px-4 py-3 rounded-xl border border-slate-300 bg-slate-50 transition-all text-slate-800">
+                            </div>
+                            <!-- Email -->
+                            <div>
+                                <label for="email" class="block text-sm font-bold text-slate-700 mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" required placeholder="john@example.com" class="form-input w-full px-4 py-3 rounded-xl border border-slate-300 bg-slate-50 transition-all text-slate-800">
+                            </div>
+                        </div>
+
+                        <!-- Subject -->
+                        <div>
+                            <label for="subject" class="block text-sm font-bold text-slate-700 mb-2">What is this regarding?</label>
+                            <select id="subject" name="subject" class="form-input w-full px-4 py-3 rounded-xl border border-slate-300 bg-slate-50 transition-all text-slate-800 appearance-none cursor-pointer">
+                                <option value="general">General Inquiry</option>
+                                <option value="bug">Report a Bug / Calculation Error</option>
+                                <option value="advertising">Advertising & Partnerships</option>
+                                <option value="feedback">Feedback / Feature Request</option>
+                            </select>
+                        </div>
+
+                        <!-- Message -->
+                        <div>
+                            <label for="message" class="block text-sm font-bold text-slate-700 mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Please provide as much detail as possible..." class="form-input w-full px-4 py-3 rounded-xl border border-slate-300 bg-slate-50 transition-all text-slate-800 resize-none"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" id="submitBtn" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-bold py-4 rounded-xl shadow-lg shadow-brand-500/30 transition-all text-lg flex items-center justify-center gap-2">
+                            <span id="btnText">Send Message</span>
+                            <svg id="btnIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                            <!-- Loading Spinner -->
+                            <svg id="btnSpinner" class="hidden animate-spin w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                        </button>
+
+                        <!-- Success/Error Message Container -->
+                        <div id="formMessage" class="hidden mt-4 p-4 rounded-xl text-center font-medium"></div>
+                    </form>
+                </div>
+
+                <!-- RIGHT: Contact Information -->
+                <div class="space-y-6">
+                    <!-- Direct Email Card -->
+                    <div class="bg-dark rounded-3xl p-8 text-white shadow-xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-brand-600 rounded-bl-full opacity-20 -z-10"></div>
+                        <svg class="w-10 h-10 text-brand-500 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <h3 class="text-xl font-bold mb-2">Email Us Directly</h3>
+                        <p class="text-sm text-slate-300 mb-6">Prefer using your own email client? Reach out to our support team directly.</p>
+                        <a href="mailto:contact@buildmetric.org" class="inline-block bg-white text-dark font-bold px-6 py-3 rounded-lg hover:bg-slate-100 transition-colors w-full text-center">
+                            contact@buildmetric.org
+                        </a>
+                    </div>
+
+                    <!-- Business & Ads -->
+                    <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
+                        <h3 class="text-lg font-bold text-dark mb-2">Business & Advertising</h3>
+                        <p class="text-sm text-slate-600 mb-4">Interested in placing ads, affiliate partnerships, or featuring your products on BuildMetric?</p>
+                        <a href="mailto:ads@buildmetric.org" class="text-brand-600 font-bold hover:text-brand-700">ads@buildmetric.org &rarr;</a>
+                    </div>
+
+                    <!-- Response Time -->
+                    <div class="bg-blue-50 rounded-3xl p-8 border border-blue-100">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="flex h-3 w-3 relative">
+                              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                              <span class="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+                            </span>
+                            <h3 class="text-lg font-bold text-dark">Fast Support</h3>
+                        </div>
+                        <p class="text-sm text-slate-600">We are a dedicated team and aim to respond to all inquiries within <strong>24-48 business hours</strong>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 3. PREMIUM FOOTER -->
+    <footer class="bg-dark text-slate-400 pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand Column -->
+                <div class="col-span-1 lg:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-xl">B</div>
+                        <span class="font-extrabold text-2xl tracking-tight text-white">Build<span class="text-brand-500">Metric</span></span>
+                    </div>
+                    <p class="text-sm mb-6 leading-relaxed text-slate-400">Professional-grade construction and DIY calculators designed for accuracy. Built for the US, UK, and Australian markets.</p>
+                </div>
+                <!-- Popular Tools Column -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-lg">Popular Tools</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="/tools/concrete-slab-calculator.html" class="hover:text-brand-400 transition-colors">Concrete Slab Calculator</a></li>
+                        <li><a href="#" class="hover:text-brand-400 transition-colors">Roof Pitch Calculator</a></li>
+                        <li><a href="#" class="hover:text-brand-400 transition-colors">Deck Board Calculator</a></li>
+                    </ul>
+                </div>
+                <!-- Categories Column -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-lg">Categories</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="/category/concrete.html" class="hover:text-brand-400 transition-colors">Concrete & Masonry</a></li>
+                        <li><a href="#" class="hover:text-brand-400 transition-colors">Roofing & Shingles</a></li>
+                        <li><a href="#" class="hover:text-brand-400 transition-colors">Decking & Lumber</a></li>
+                    </ul>
+                </div>
+                <!-- Legal Column -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-lg">Legal & Company</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="/about.html" class="hover:text-brand-400 transition-colors">About Us</a></li>
+                        <li><a href="/contact.html" class="text-brand-500 font-bold">Contact Support</a></li>
+                        <li><a href="/privacy.html" class="hover:text-brand-400 transition-colors">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-brand-400 transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-slate-500">&copy; 2024 BuildMetric. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 4. WORKING JAVASCRIPT FOR FORM (API KEY INCLUDED) -->
+    <script>
+        const form = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const btnIcon = document.getElementById('btnIcon');
+        const btnSpinner = document.getElementById('btnSpinner');
+        const formMessage = document.getElementById('formMessage');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Page refresh hone se rokna
+
+            // 1. Button ko Loading state mein daalein
+            btnText.textContent = "Sending...";
+            btnIcon.classList.add('hidden');
+            btnSpinner.classList.remove('hidden');
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-80', 'cursor-not-allowed');
+
+            // 2. Form Data collect karein
+            const formData = new FormData(form);
+            
+            // 🚨 AAPKI API KEY YAHAN ADD HAI
+            formData.append("access_key", "f321ac7c-5c42-45a1-a93e-2fa212a49f6f"); 
+
+            // 3. Web3Forms API par data bhejein
+            fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    // Success State
+                    formMessage.innerHTML = "✅ Success! Your message has been sent. We will reply within 24-48 hours.";
+                    formMessage.className = "mt-4 p-4 rounded-xl text-center font-medium bg-green-100 text-green-700 border border-green-200 block";
+                    form.reset(); // Form clear karein
+                } else {
+                    // Error State
+                    console.log(response);
+                    formMessage.innerHTML = "❌ Error: " + json.message;
+                    formMessage.className = "mt-4 p-4 rounded-xl text-center font-medium bg-red-100 text-red-700 border border-red-200 block";
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                formMessage.innerHTML = "❌ Something went wrong. Please try again or email us directly.";
+                formMessage.className = "mt-4 p-4 rounded-xl text-center font-medium bg-red-100 text-red-700 border border-red-200 block";
+            })
+            .finally(() => {
+                // 4. Button ko wapas Normal state mein laayein
+                btnText.textContent = "Send Message";
+                btnIcon.classList.remove('hidden');
+                btnSpinner.classList.add('hidden');
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-80', 'cursor-not-allowed');
+            });
+        });
+    </script>
+</body>
+</html>
