@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildMetric | Professional Construction & DIY Calculators</title>
+    <meta name="description" content="Accurate construction calculators for US & UK professionals. Estimate concrete, roofing, decking, and more.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Design System Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { 50: '#f0f9ff', 100: '#e0f2fe', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1' },
+                        dark: '#0f172a',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        /* Hide arrows in number inputs */
+        input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased">
+
+    <!-- HEADER -->
+    <nav class="sticky top-0 z-50 glass-nav border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="/" class="flex items-center gap-2">
+                    <div class="w-9 h-9 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-brand-500/30">B</div>
+                    <span class="font-extrabold text-2xl tracking-tight text-dark">Build<span class="text-brand-600">Metric</span></span>
+                </a>
+                
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="#" class="text-sm font-medium text-slate-600 hover:text-brand-600">Calculators</a>
+                    <a href="#" class="text-sm font-medium text-slate-600 hover:text-brand-600">Guides</a>
+                    <!-- Project Cart Button -->
+                    <a href="#" id="project-cart-btn" class="relative flex items-center gap-2 text-sm font-semibold text-brand-700 bg-brand-50 px-4 py-2 rounded-full border border-brand-200 hover:bg-brand-100 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        My Project (<span id="cart-count">0</span>)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-20 pb-24 overflow-hidden bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-sm font-medium mb-6">
+                <span class="flex h-2 w-2 rounded-full bg-green-500"></span>
+                Trusted by 10,000+ US & UK Contractors
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-dark tracking-tight mb-6 max-w-4xl mx-auto leading-tight">
+                Professional Construction <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-500">Calculators</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-10">
+                Get precise material estimates, cost breakdowns, and quantity takeoffs in seconds. Built for US & UK standards.
+            </p>
+            
+            <!-- Search Bar -->
+            <div class="max-w-2xl mx-auto relative shadow-xl shadow-slate-200/50 rounded-full mb-12">
+                <div class="absolute inset-y-0 left-0 pl-6 flex items-center pointer-events-none">
+                    <svg class="h-5 w-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                </div>
+                <input type="text" id="search-input" class="block w-full pl-14 pr-32 py-4 md:py-5 text-base md:text-lg text-dark bg-white border border-slate-200 rounded-full focus:ring-2 focus:ring-brand-500 outline-none placeholder-slate-400" placeholder="Search calculators (e.g., concrete, roof pitch)...">
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE CATEGORIES & TOOL GRID -->
+    <section class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Ad Slot: In-Feed Top -->
+            <div class="bg-slate-200/50 border border-slate-300 border-dashed rounded-lg h-24 flex items-center justify-center text-slate-400 mb-8">
+                <span class="text-sm font-medium">Advertisement Space</span>
+            </div>
+
+            <!-- Filter Chips -->
+            <div class="flex flex-wrap gap-2 mb-10" id="filter-chips">
+                <button class="filter-btn active px-4 py-2 rounded-full text-sm font-semibold bg-dark text-white transition-all" data-category="all">All Tools</button>
+                <button class="filter-btn px-4 py-2 rounded-full text-sm font-semibold bg-white border border-slate-300 text-slate-600 hover:border-brand-500 transition-all" data-category="concrete">Concrete</button>
+                <button class="filter-btn px-4 py-2 rounded-full text-sm font-semibold bg-white border border-slate-300 text-slate-600 hover:border-brand-500 transition-all" data-category="roofing">Roofing</button>
+                <button class="filter-btn px-4 py-2 rounded-full text-sm font-semibold bg-white border border-slate-300 text-slate-600 hover:border-brand-500 transition-all" data-category="framing">Framing & Lumber</button>
+                <button class="filter-btn px-4 py-2 rounded-full text-sm font-semibold bg-white border border-slate-300 text-slate-600 hover:border-brand-500 transition-all" data-category="landscaping">Landscaping</button>
+            </div>
+
+            <!-- Tool Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="tools-grid">
+                
+                <!-- Tool Card 1 (Concrete) -->
+                <a href="/tools/concrete-calculator/" class="tool-card group bg-white rounded-2xl p-6 border border-slate-200 hover:border-brand-500 hover:shadow-lg transition-all" data-category="concrete" data-title="Concrete Slab Calculator">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                        </div>
+                        <span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded">Popular</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2 group-hover:text-brand-600">Concrete Slab Calculator</h3>
+                    <p class="text-slate-500 text-sm">Calculate exact cubic yards, meters, and pre-mix bags needed for any slab.</p>
+                </a>
+
+                <!-- Tool Card 2 (Roofing) -->
+                <a href="#" class="tool-card group bg-white rounded-2xl p-6 border border-slate-200 hover:border-brand-500 hover:shadow-lg transition-all" data-category="roofing" data-title="Roof Pitch Calculator">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-12 h-12 bg-red-50 text-red-600 rounded-xl flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2 group-hover:text-brand-600">Roof Pitch Calculator</h3>
+                    <p class="text-slate-500 text-sm">Convert pitch to degrees, calculate rafter lengths, and estimate shingle area.</p>
+                </a>
+
+                <!-- Tool Card 3 (Framing) -->
+                <a href="#" class="tool-card group bg-white rounded-2xl p-6 border border-slate-200 hover:border-brand-500 hover:shadow-lg transition-all" data-category="framing" data-title="Deck Board Calculator">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2 group-hover:text-brand-600">Deck Board Calculator</h3>
+                    <p class="text-slate-500 text-sm">Estimate exact quantities of decking boards, joists, and hidden fasteners.</p>
+                </a>
+
+                <!-- Add 200+ more cards here... -->
+            </div>
+            
+            <!-- Ad Slot: In-Feed Bottom -->
+            <div class="bg-slate-200/50 border border-slate-300 border-dashed rounded-lg h-24 flex items-center justify-center text-slate-400 mt-10">
+                <span class="text-sm font-medium">Advertisement Space</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-1">
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold">B</div>
+                    <span class="font-bold text-xl text-white">BuildMetric</span>
+                </div>
+                <p class="text-sm">Professional-grade construction calculators for the modern builder.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Tools</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white">Concrete Calculators</a></li>
+                    <li><a href="#" class="hover:text-white">Roofing Estimators</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Legal (AdSense)</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+                    <li><a href="#" class="hover:text-white">Disclaimer</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Company</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white">About Us</a></li>
+                    <li><a href="#" class="hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global JS for Homepage -->
+    <script>
+        // Filtering Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const toolCards = document.querySelectorAll('.tool-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button styling
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-dark', 'text-white');
+                    b.classList.add('bg-white', 'text-slate-600', 'border', 'border-slate-300');
+                });
+                btn.classList.remove('bg-white', 'text-slate-600', 'border', 'border-slate-300');
+                btn.classList.add('bg-dark', 'text-white');
+
+                // Filter cards
+                const category = btn.dataset.category;
+                toolCards.forEach(card => {
+                    if(category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Search Logic
+        document.getElementById('search-input').addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            toolCards.forEach(card => {
+                const title = card.dataset.title.toLowerCase();
+                card.style.display = title.includes(term) ? 'block' : 'none';
+            });
+        });
+
+        // Project Cart Counter Logic
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('buildmetric_cart')) || [];
+            document.getElementById('cart-count').textContent = cart.length;
+        }
+        updateCartCount();
+    </script>
+</body>
+</html>
