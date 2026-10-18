@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Concrete Slab Calculator | Estimate Cubic Yards & Bags - BuildMetric</title>
+    <meta name="description" content="Free Concrete Slab Calculator to estimate the exact amount of concrete needed. Calculate cubic yards, cubic meters, and 60lb or 80lb pre-mix bags. US & UK standards.">
+    <link rel="canonical" href="https://buildmetric.org/tools/concrete-slab-calculator.html">
+
+    <!-- Tailwind CSS & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { 50: '#f0f9ff', 100: '#e0f2fe', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1' },
+                        dark: '#0f172a',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+    </style>
+
+    <!-- Schema: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Concrete Slab Calculator",
+      "operatingSystem": "Web",
+      "applicationCategory": "UtilitiesApplication",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+</head>
+<body class="text-slate-800 antialiased">
+
+    <!-- 1. NAVBAR -->
+    <nav class="sticky top-0 z-50 glass-nav border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="/" class="flex items-center gap-2">
+                    <div class="w-9 h-9 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-xl">B</div>
+                    <span class="font-extrabold text-2xl tracking-tight text-dark">Build<span class="text-brand-600">Metric</span></span>
+                </a>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="/" class="text-sm font-medium text-slate-600 hover:text-brand-600">Home</a>
+                    <a href="#" class="relative flex items-center gap-2 text-sm font-semibold text-brand-700 bg-brand-50 px-4 py-2 rounded-full border border-brand-200 hover:bg-brand-100 transition-colors">
+                        My Project (<span id="cart-count">0</span>)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. BREADCRUMBS -->
+    <div class="bg-slate-100 border-b border-slate-200 py-3 text-sm text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <a href="/" class="hover:text-brand-600 transition-colors">Home</a> 
+            <span class="mx-2">/</span> 
+            <a href="/category/concrete.html" class="hover:text-brand-600 transition-colors">Concrete Calculators</a> 
+            <span class="mx-2">/</span> 
+            <span class="text-dark font-medium">Slab Calculator</span>
+        </div>
+    </div>
+
+    <!-- 3. MAIN LAYOUT -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid grid-cols-1 lg:grid-cols-3 gap-10">
+        
+        <!-- LEFT COLUMN: Calculator & Content -->
+        <div class="lg:col-span-2">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-dark mb-4">Concrete Slab Calculator</h1>
+            <p class="text-slate-600 mb-8 text-lg">Calculate the exact amount of concrete needed for your slab. Enter your dimensions below to get instant results in cubic yards, cubic meters, and pre-mixed bags.</p>
+
+            <!-- CALCULATOR WIDGET -->
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-xl border border-slate-200 mb-12 relative overflow-hidden">
+                
+                <!-- Unit Toggle -->
+                <div class="flex flex-wrap gap-4 mb-8 border-b border-slate-200 pb-4">
+                    <label class="flex items-center space-x-2 cursor-pointer bg-slate-50 px-4 py-2 rounded-lg border border-slate-200 hover:border-brand-500 transition-colors">
+                        <input type="radio" name="unit" value="imperial" checked class="text-brand-600 focus:ring-brand-500 w-4 h-4">
+                        <span class="text-sm font-semibold text-slate-700">US Standard (Feet / Inches)</span>
+                    </label>
+                    <label class="flex items-center space-x-2 cursor-pointer bg-slate-50 px-4 py-2 rounded-lg border border-slate-200 hover:border-brand-500 transition-colors">
+                        <input type="radio" name="unit" value="metric" class="text-brand-600 focus:ring-brand-500 w-4 h-4">
+                        <span class="text-sm font-semibold text-slate-700">Metric (Meters / cm)</span>
+                    </label>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Length</label>
+                        <div class="relative">
+                            <input type="number" id="length" placeholder="10" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 outline-none font-medium text-lg">
+                            <span class="absolute right-4 top-3.5 text-slate-400 text-sm font-bold unit-label">ft</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Width</label>
+                        <div class="relative">
+                            <input type="number" id="width" placeholder="10" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 outline-none font-medium text-lg">
+                            <span class="absolute right-4 top-3.5 text-slate-400 text-sm font-bold unit-label">ft</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Thickness / Depth</label>
+                        <div class="relative">
+                            <input type="number" id="thickness" placeholder="4" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 outline-none font-medium text-lg">
+                            <span class="absolute right-4 top-3.5 text-slate-400 text-sm font-bold unit-label">in</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Waste Factor (%)</label>
+                        <div class="relative">
+                            <input type="number" id="waste" value="10" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 outline-none font-medium text-lg">
+                            <span class="absolute right-4 top-3.5 text-slate-400 text-sm font-bold">%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button onclick="calculateConcrete()" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-bold py-4 rounded-xl shadow-lg transition-all text-lg flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    Calculate Material
+                </button>
+
+                <!-- RESULTS BOX -->
+                <div id="result-box" class="hidden mt-8 p-6 bg-slate-50 rounded-xl border border-slate-200">
+                    <h3 class="text-xl font-bold text-dark mb-4 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Estimated Requirements:
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-white p-4 rounded-lg border border-slate-200 text-center">
+                            <div class="text-sm text-slate-500 mb-1">Total Volume</div>
+                            <div id="res-volume" class="text-2xl font-extrabold text-brand-600">0</div>
+                            <div id="res-volume-unit" class="text-xs text-slate-400 font-medium">Cubic Yards</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-slate-200 text-center">
+                            <div class="text-sm text-slate-500 mb-1">80lb Bags</div>
+                            <div id="res-bags-80" class="text-2xl font-extrabold text-dark">0</div>
+                            <div class="text-xs text-slate-400 font-medium">Pre-mix bags</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-slate-200 text-center">
+                            <div class="text-sm text-slate-500 mb-1">60lb Bags</div>
+                            <div id="res-bags-60" class="text-2xl font-extrabold text-dark">0</div>
+                            <div class="text-xs text-slate-400 font-medium">Pre-mix bags</div>
+                        </div>
+                    </div>
+                    
+                    <!-- HYBRID BUTTONS -->
+                    <div class="flex flex-wrap items-center gap-3 mt-6 pt-6 border-t border-slate-200">
+                        <button onclick="saveToProject()" class="flex items-center gap-2 px-4 py-2 bg-dark text-white rounded-lg hover:bg-slate-800 transition-all font-medium text-sm shadow-sm">
+                            💾 Save to Project
+                        </button>
+                        <button onclick="copyResult()" class="flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 hover:text-brand-600 transition-all font-medium text-sm shadow-sm">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg> Copy
+                        </button>
+                        <button onclick="shareResult()" class="flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 hover:text-brand-600 transition-all font-medium text-sm shadow-sm">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg> Share
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEO CONTENT PART 1 -->
+            <div class="prose prose-slate prose-lg max-w-none bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                <h2 class="text-2xl font-bold text-dark mt-0">How to Calculate Concrete Volume (The Formula)</h2>
+                <p class="text-slate-600 mb-4">Calculating concrete for a slab is a straightforward mathematical process, but accuracy is critical. Ordering too little concrete means you will have cold joints (weak spots where the pour stopped), which severely weakens the structure. Ordering too much means you are throwing money away on short-load fees and wasted material.</p>
+                
+                <p class="text-slate-600 mb-4">The universal formula for calculating concrete volume is: <strong>Volume = Length × Width × Thickness</strong>. However, the complexity arises when dealing with different units of measurement.</p>
+
+                <h3 class="text-xl font-bold text-dark mt-8 mb-3">US Standard (Imperial) Measurements</h3>
+                <p class="text-slate-600 mb-4">In the United States, dimensions are typically measured in feet and inches. To use the formula correctly, you must convert the thickness from inches to feet by dividing it by 12.</p>
+                <ul class="list-disc pl-5 text-slate-600 mb-4">
+                    <li><strong>Formula:</strong> Length (ft) × Width (ft) × (Thickness in inches ÷ 12) = Volume in Cubic Feet</li>
+                    <li><strong>Conversion:</strong> Since one cubic yard contains 27 cubic feet, divide your total cubic feet by 27 to get <strong>Cubic Yards</strong>.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-dark mt-8 mb-3">UK & Australian (Metric) Measurements</h3>
+                <p class="text-slate-600 mb-4">In the UK and Australia, concrete is ordered in Cubic Meters. If you measure in meters and centimeters, you must convert the thickness from centimeters to meters by dividing by 100.</p>
+                <ul class="list-disc pl-5 text-slate-600 mb-4">
+                    <li><strong>Formula:</strong> Length (m) × Width (m) × (Thickness in cm ÷ 100) = Volume in Cubic Meters.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-dark mt-8 mb-3">How to Use Our Calculator</h3>
+                <ol class="list-decimal pl-5 text-slate-600 mb-6">
+                    <li>Choose your measurement system (US Standard or Metric).</li>
+                    <li>Enter the Length and Width of your slab.</li>
+                    <li>Enter the Thickness (depth) of the slab. (Standard patios are 4 inches/10 cm, driveways are 5-6 inches/12-15 cm).</li>
+                    <li>Adjust the waste factor if needed (default is 10%).</li>
+                    <li>Click "Calculate Material" to see your results instantly in volume and pre-mix bags.</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Sidebar -->
+        <aside class="space-y-6">
+            <div class="sticky top-24">
+                <div class="bg-slate-100 border-2 border-dashed border-slate-300 rounded-2xl h-64 flex flex-col items-center justify-center text-slate-400">
+                    <span class="text-sm font-bold">Advertisement</span>
+                    <span class="text-xs">(300x250 / 300x600)</span>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // 1. Unit Toggle
+        const radios = document.querySelectorAll('input[name="unit"]');
+        const unitLbls = document.querySelectorAll('.unit-label');
+        radios.forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                if(e.target.value === 'metric') {
+                    unitLbls[0].textContent = 'm'; unitLbls[1].textContent = 'm'; unitLbls[2].textContent = 'cm';
+                } else {
+                    unitLbls[0].textContent = 'ft'; unitLbls[1].textContent = 'ft'; unitLbls[2].textContent = 'in';
+                }
+            });
+        });
+
+        let lastCalculation = {};
+
+        // 2. Calculate Logic
+        function calculateConcrete() {
+            const l = parseFloat(document.getElementById('length').value);
+            const w = parseFloat(document.getElementById('width').value);
+            const t = parseFloat(document.getElementById('thickness').value);
+            const waste = parseFloat(document.getElementById('waste').value) || 10;
+            const unit = document.querySelector('input[name="unit"]:checked').value;
+
+            if(!l || !w || !t) { alert("Please enter all dimensions."); return; }
+
+            let volYards = 0, volMeters = 0, bags80 = 0, bags60 = 0;
+
+            if(unit === 'imperial') {
+                let cuFt = l * w * (t / 12);
+                volYards = (cuFt / 27) * (1 + waste/100);
+                bags80 = Math.ceil((volYards * 27) / 0.6);
+                bags60 = Math.ceil((volYards * 27) / 0.45);
+                document.getElementById('res-volume').textContent = volYards.toFixed(2);
+                document.getElementById('res-volume-unit').textContent = "Cubic Yards";
+            } else {
+                volMeters = (l * w * (t / 100)) * (1 + waste/100);
+                bags80 = Math.ceil(volMeters / 0.017); // Approx 25kg bags equivalent
+                bags60 = Math.ceil(volMeters / 0.013); 
+                document.getElementById('res-volume').textContent = volMeters.toFixed(2);
+                document.getElementById('res-volume-unit').textContent = "Cubic Meters";
+            }
+
+            document.getElementById('res-bags-80').textContent = bags80;
+            document.getElementById('res-bags-60').textContent = bags60;
+            document.getElementById('result-box').classList.remove('hidden');
+            
+            lastCalculation = {
+                type: "Concrete Slab",
+                dims: `${l}x${w}x${t}`,
+                vol: unit === 'imperial' ? `${volYards.toFixed(2)} cu yd` : `${volMeters.toFixed(2)} cu m`,
+                bags: `${bags80} (80lb) / ${bags60} (60lb) bags`
+            };
+        }
+
+        // 3. Save to Project
+        function saveToProject() {
+            if(!lastCalculation.type) return;
+            let cart = JSON.parse(localStorage.getItem('buildmetric_cart')) || [];
+            cart.push(lastCalculation);
+            localStorage.setItem('buildmetric_cart', JSON.stringify(cart));
+            updateCartCount();
+            alert("✅ Saved to My Project! You can view it from the top menu.");
+        }
+
+        // 4. Copy
+        function copyResult() {
+            if(!lastCalculation.type) return;
+            const text = `BuildMetric - ${lastCalculation.type}\nDims: ${lastCalculation.dims}\nVolume: ${lastCalculation.vol}\nBags: ${lastCalculation.bags}`;
+            navigator.clipboard.writeText(text).then(() => alert("✅ Copied to clipboard!"));
+        }
+
+        // 5. Share
+        function shareResult() {
+            if(!lastCalculation.type) return;
+            const text = `I just estimated my concrete needs using BuildMetric! Volume: ${lastCalculation.vol}.`;
+            if (navigator.share) {
+                navigator.share({ title: 'Concrete Estimate', text: text, url: window.location.href });
+            } else {
+                copyResult();
+            }
+        }
+
+        // 6. Update Navbar Count
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('buildmetric_cart')) || [];
+            document.getElementById('cart-count').textContent = cart.length;
+        }
+        updateCartCount();
+    </script>
+</body>
+</html>
+
+            <!-- ========================================== -->
+            <!-- SEO CONTENT PART 2 (Deep Dive)             -->
+            <!-- ========================================== -->
+            <div class="prose prose-slate prose-lg max-w-none bg-white p-8 rounded-2xl border border-slate-200 shadow-sm mt-8">
+                
+                <h2 class="text-2xl font-bold text-dark mb-4 mt-0" id="types-of-concrete">Types of Concrete: Ready-Mix vs. Pre-Mixed Bags</h2>
+                <p class="text-slate-600 mb-4">Depending on the size of your project, you will need to choose a different supply method. Here is a breakdown of what professionals use:</p>
+                
+                <h3 class="text-xl font-bold text-dark mb-2 mt-6">1. Ready-Mix Concrete (Large Projects)</h3>
+                <p class="text-slate-600 mb-4">For slabs larger than 1 cubic yard (or 1 cubic meter), ready-mix is the most economical and practical choice. A large truck delivers the concrete directly to your site. You must have the site prepared before the truck arrives, as most companies only allow 10-15 minutes of pouring time before charging extra waiting fees.</p>
+
+                <h3 class="text-xl font-bold text-dark mb-2 mt-6">2. Pre-Mixed Bags (Small DIY Projects)</h3>
+                <p class="text-slate-600 mb-4">If you are pouring small footings, fence posts, or a tiny patio, pre-mixed bags (like Quikrete in the US or Blue Circle in the UK) are perfect. You just add water and mix in a wheelbarrow. <strong>Note:</strong> Mixing more than 1 cubic yard by hand is incredibly labor-intensive and usually not recommended for structural slabs.</p>
+
+                <h2 class="text-2xl font-bold text-dark mb-4 mt-10" id="cost-guide">Estimated Concrete Slab Costs (US & UK)</h2>
+                <p class="text-slate-600 mb-4">Prices fluctuate based on location and market conditions, but here are the average national rates you should expect when budgeting for your project:</p>
+                <div class="overflow-x-auto mb-6">
+                    <table class="min-w-full text-left text-sm text-slate-600 border-collapse">
+                        <thead>
+                            <tr class="bg-slate-100 text-dark font-bold">
+                                <th class="px-4 py-3 border-b">Region</th>
+                                <th class="px-4 py-3 border-b">Ready-Mix Cost</th>
+                                <th class="px-4 py-3 border-b">Pre-Mix Bag Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="px-4 py-3 border-b font-semibold">United States</td>
+                                <td class="px-4 py-3 border-b">$125 - $165 per Cubic Yard</td>
+                                <td class="px-4 py-3 border-b">$6.00 - $8.50 (80lb bag)</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 border-b font-semibold">United Kingdom</td>
+                                <td class="px-4 py-3 border-b">£100 - £140 per Cubic Meter</td>
+                                <td class="px-4 py-3 border-b">£7.00 - £9.00 (20kg bag)</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 border-b font-semibold">Australia</td>
+                                <td class="px-4 py-3 border-b">$220 - $280 per Cubic Meter</td>
+                                <td class="px-4 py-3 border-b">$9.00 - $12.00 (20kg bag)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-slate-600 mb-6 italic text-sm">*These costs do not include labor, site preparation, or reinforcement (rebar/mesh).</p>
+
+                <h2 class="text-2xl font-bold text-dark mb-4 mt-10" id="curing">The Importance of Curing and Weather</h2>
+                <p class="text-slate-600 mb-4">Pouring concrete is only half the battle; curing is where it gains its strength. Concrete does not dry; it cures through a chemical reaction called hydration. It is crucial to keep the concrete moist for the first 7 days after pouring. In hot weather (US summers or Australian outbacks), you must cover the slab with wet burlap or plastic to prevent the water from evaporating too quickly, which causes surface cracking.</p>
+                <p class="text-slate-600 mb-4">In cold weather (UK winters), concrete must be protected from freezing. If the water in the mix freezes before it cures, the concrete will be permanently weakened. Never pour concrete if the temperature is expected to drop below 40°F (5°C) within 24 hours without using specialized cold-weather blankets or accelerants.</p>
+            </div>
+
+            <!-- AUTHOR TRUST BOX (E-E-A-T) -->
+            <div class="bg-blue-50 p-6 md:p-8 rounded-2xl border border-blue-100 mt-8 flex flex-col md:flex-row items-center gap-6">
+                <div class="w-20 h-20 bg-brand-500 rounded-full flex-shrink-0 flex items-center justify-center text-white text-3xl font-bold shadow-lg">
+                    BM
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <h3 class="text-lg font-bold text-dark">Reviewed by BuildMetric Experts</h3>
+                        <span class="bg-brand-100 text-brand-700 text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wide">Construction Tech</span>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">"Our calculators are designed using standard construction formulas, verified against US IRC (International Residential Code) and UK Building Regulations. We build these tools to help both DIYers and professional contractors get their material estimates right the first time, saving time and money."</p>
+                </div>
+            </div>
+
+            <!-- 7 FAQs SECTION -->
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm mt-8 mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6">Frequently Asked Questions</h2>
+                
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <details class="group border border-slate-200 rounded-xl bg-slate-50 [&_summary::-webkit-details-marker]:hidden">
+                        <summary class="flex cursor-pointer items-center justify-between p-5 font-bold text-dark">
+                            How many 80lb bags of concrete do I need for a 10x10 slab?
+                            <span class="transition group-open:rotate-180 text-slate-400"><svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm border-t border-slate-200 mt-2">
+                            For a 10x10 slab at 4 inches thick, you will need approximately 1.23 cubic yards of concrete. This equals about <strong>56 bags of 80lb concrete</strong>. Our calculator above automatically adds a 10% waste factor, meaning you would safely need around 62 bags.
+                        </div>
+                    </details>
+
+                    <!-- FAQ 2 -->
+                    <details class="group border border-slate-200 rounded-xl bg-slate-50 [&_summary::-webkit-details-marker]:hidden">
+                        <summary class="flex cursor-pointer items-center justify-between p-5 font-bold text-dark">
+                            How thick should a concrete slab be for a driveway?
+                            <span class="transition group-open:rotate-180 text-slate-400"><svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm border-t border-slate-200 mt-2">
+                            A standard residential driveway should be at least <strong>4 to 5 inches thick</strong>. However, if heavy vehicles (like a large truck or RV) will be parked on it, a 6-inch thickness with reinforced rebar is highly recommended.
+                        </div>
+                    </details>
+
+                    <!-- FAQ 3 -->
+                    <details class="group border border-slate-200 rounded-xl bg-slate-50 [&_summary::-webkit-details-marker]:hidden">
+                        <summary class="flex cursor-pointer items-center justify-between p-5 font-bold text-dark">
+                            What is the difference between 60lb and 80lb concrete bags?
+                            <span class="transition group-open:rotate-180 text-slate-400"><svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm border-t border-slate-200 mt-2">
+                            An 80lb bag yields about 0.60 cubic feet of concrete, while a 60lb bag yields about 0.45 cubic feet. 80lb bags are heavier but require fewer bags to reach your total volume, saving you time on mixing.
+                        </div>
+                    </details>
+
+                    <!-- FAQ 4 -->
+                    <details class="group border border-slate-200 rounded-xl bg-slate-50 [&_summary::-webkit-details-marker]:hidden">
+                        <summary class="flex cursor-pointer items-center justify-between p-5 font-bold text-dark">
+                            Do I need rebar or wire mesh for my slab?
+                            <span class="transition group-open:rotate-180 text-slate-400"><svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm border-t border-slate-200 mt-2">
+                            For most residential slabs, wire mesh is recommended to prevent cracking. For driveways or structural slabs, rebar (reinforcing bar) is highly recommended. Placing the reinforcement in the middle of the slab is crucial for maximum strength.
+                        </div>
+                    </details>
+
+                    <!-- FAQ 5 -->
+                    <details class="group border border-slate-200 rounded-xl bg-slate-50 [&_summary::-webkit-details-marker]:hidden">
+                        <summary class="flex cursor-pointer items-center justify-between p-5 font-bold text-dark">
+                            How long does it take for a concrete slab to cure?
+                            <span class="transition group-open:rotate-180 text-slate-400"><svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm border-t border-slate-200 mt-2">
+                            Concrete usually sets within 24 to 48 hours, meaning you can walk on it. However, it takes about <strong>28 days to reach full structural strength</strong>. You should avoid driving heavy vehicles on a new driveway for at least 7 days.
+                        </div>
+                    </details>
+
+                    <!-- FAQ 6 -->
+                    <details class="group border border-slate-200 rounded-xl bg-slate-50 [&_summary::-webkit-details-marker]:hidden">
+                        <summary class="flex cursor-pointer items-center justify-between p-5 font-bold text-dark">
+                            Can I pour concrete in cold weather or rain?
+                            <span class="transition group-open:rotate-180 text-slate-400"><svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm border-t border-slate-200 mt-2">
+                            It is not recommended to pour concrete in heavy rain, as it will wash out the cement paste and weaken the slab. For cold weather, concrete can be poured if the temperature is above 40°F (5°C) and rising. If freezing is expected, special blankets must be used.
+                        </div>
+                    </details>
+
+                    <!-- FAQ 7 -->
+                    <details class="group border border-slate-200 rounded-xl bg-slate-50 [&_summary::-webkit-details-marker]:hidden">
+                        <summary class="flex cursor-pointer items-center justify-between p-5 font-bold text-dark">
+                            How much does a cubic yard of concrete cover?
+                            <span class="transition group-open:rotate-180 text-slate-400"><svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm border-t border-slate-200 mt-2">
+                            One cubic yard of concrete will cover an area of 81 square feet at a thickness of 4 inches. If your slab is 5 inches thick, it will cover 65 square feet, and at 6 inches thick, it will cover 54 square feet.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div> <!-- Close Left Column -->
+
+        <!-- RIGHT COLUMN: Sidebar (Ads & Affiliates) -->
+        <aside class="space-y-6">
+            <div class="sticky top-24 space-y-6">
+                <!-- Ad Slot -->
+                <div class="bg-slate-100 border-2 border-dashed border-slate-300 rounded-2xl h-64 flex flex-col items-center justify-center text-slate-400">
+                    <span class="text-sm font-bold">Advertisement</span>
+                    <span class="text-xs">(300x250 / 300x600)</span>
+                </div>
+
+                <!-- Affiliate Section -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <h3 class="text-lg font-bold text-dark mb-4">Need Concrete Bags?</h3>
+                    <p class="text-sm text-slate-600 mb-4">Based on your calculation, you can buy pre-mixed concrete from these trusted retailers:</p>
+                    <div class="space-y-3">
+                        <a href="#" class="flex items-center justify-between p-3 border border-slate-200 rounded-lg hover:border-brand-500 hover:shadow-md transition-all group">
+                            <span class="font-semibold text-slate-700 group-hover:text-brand-600 text-sm">Home Depot (US)</span>
+                            <span class="text-xs bg-orange-100 text-orange-700 px-2 py-1 rounded font-bold">Shop Now</span>
+                        </a>
+                        <a href="#" class="flex items-center justify-between p-3 border border-slate-200 rounded-lg hover:border-brand-500 hover:shadow-md transition-all group">
+                            <span class="font-semibold text-slate-700 group-hover:text-brand-600 text-sm">B&Q (UK)</span>
+                            <span class="text-xs bg-teal-100 text-teal-700 px-2 py-1 rounded font-bold">Shop Now</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+    </main>
+
+    <!-- ========================================== -->
+    <!-- SCHEMA MARKUP: FAQPage (SEO)               -->
+    <!-- ========================================== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "How many 80lb bags of concrete do I need for a 10x10 slab?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For a 10x10 slab at 4 inches thick, you will need approximately 1.23 cubic yards of concrete. This equals about 56 bags of 80lb concrete, plus a 10% waste factor." }
+      }, {
+        "@type": "Question",
+        "name": "How thick should a concrete slab be for a driveway?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A standard residential driveway should be at least 4 to 5 inches thick. For heavy vehicles, a 6-inch thickness with reinforced rebar is recommended." }
+      }, {
+        "@type": "Question",
+        "name": "What is the difference between 60lb and 80lb concrete bags?",
+        "acceptedAnswer": { "@type": "Answer", "text": "An 80lb bag yields about 0.60 cubic feet of concrete, while a 60lb bag yields about 0.45 cubic feet." }
+      }, {
+        "@type": "Question",
+        "name": "Do I need rebar or wire mesh for my slab?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For most residential slabs, wire mesh prevents cracking. For driveways or structural slabs, rebar is highly recommended." }
+      }, {
+        "@type": "Question",
+        "name": "How long does it take for a concrete slab to cure?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Concrete sets within 24 to 48 hours, but takes about 28 days to reach full structural strength." }
+      }, {
+        "@type": "Question",
+        "name": "Can I pour concrete in cold weather or rain?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Avoid pouring in heavy rain. Cold weather pouring is possible if temperatures are above 40°F, but freezing temperatures require special additives." }
+      }, {
+        "@type": "Question",
+        "name": "How much does a cubic yard of concrete cover?",
+        "acceptedAnswer": { "@type": "Answer", "text": "One cubic yard of concrete will cover 81 square feet at 4 inches thick, or 65 square feet at 5 inches thick." }
+      }]
+    }
+    </script>
+
+            <!-- ========================================== -->
+<!-- PREMIUM FOOTER (AdSense Compliant)         -->
+<!-- ========================================== -->
+<footer class="bg-dark text-slate-400 pt-16 pb-8 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Top Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            
+            <!-- 1. Brand Column -->
+            <div class="col-span-1 lg:col-span-1">
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-xl">B</div>
+                    <span class="font-extrabold text-2xl tracking-tight text-white">Build<span class="text-brand-500">Metric</span></span>
+                </div>
+                <p class="text-sm mb-6 leading-relaxed text-slate-400">
+                    Professional-grade construction and DIY calculators designed for accuracy. Built for the US, UK, and Australian markets. 100% free, no sign-up required.
+                </p>
+                
+                <!-- Social Icons -->
+                <div class="flex gap-4">
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="Twitter">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="Facebook">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="YouTube">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2. Popular Tools Column -->
+            <div>
+                <h4 class="text-white font-bold mb-6 text-lg">Popular Tools</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="/tools/concrete-slab-calculator.html" class="hover:text-brand-400 transition-colors">Concrete Slab Calculator</a></li>
+                    <li><a href="/tools/roof-pitch-calculator.html" class="hover:text-brand-400 transition-colors">Roof Pitch Calculator</a></li>
+                    <li><a href="/tools/deck-board-calculator.html" class="hover:text-brand-400 transition-colors">Deck Board Calculator</a></li>
+                    <li><a href="/tools/stair-stringer-calculator.html" class="hover:text-brand-400 transition-colors">Stair Stringer Calculator</a></li>
+                    <li><a href="/tools/paint-coverage-calculator.html" class="hover:text-brand-400 transition-colors">Paint Coverage Calculator</a></li>
+                </ul>
+            </div>
+
+            <!-- 3. Categories Column -->
+            <div>
+                <h4 class="text-white font-bold mb-6 text-lg">Categories</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="/category/concrete.html" class="hover:text-brand-400 transition-colors">Concrete & Masonry</a></li>
+                    <li><a href="/category/roofing.html" class="hover:text-brand-400 transition-colors">Roofing & Shingles</a></li>
+                    <li><a href="/category/decking.html" class="hover:text-brand-400 transition-colors">Decking & Lumber</a></li>
+                    <li><a href="/category/interior.html" class="hover:text-brand-400 transition-colors">Interior & Paint</a></li>
+                    <li><a href="/category/cost-estimators.html" class="hover:text-brand-400 transition-colors">Cost Estimators</a></li>
+                </ul>
+            </div>
+
+            <!-- 4. Legal & Company Column (AdSense Requirement) -->
+            <div>
+                <h4 class="text-white font-bold mb-6 text-lg">Legal & Company</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="/about.html" class="hover:text-brand-400 transition-colors">About Us</a></li>
+                    <li><a href="/contact.html" class="hover:text-brand-400 transition-colors">Contact Support</a></li>
+                    <li><a href="/privacy-policy.html" class="hover:text-brand-400 transition-colors">Privacy Policy</a></li>
+                    <li><a href="/terms-of-service.html" class="hover:text-brand-400 transition-colors">Terms of Service</a></li>
+                    <li><a href="/disclaimer.html" class="hover:text-brand-400 transition-colors">Disclaimer</a></li>
+                    <li><a href="/affiliate-disclosure.html" class="hover:text-brand-400 transition-colors">Affiliate Disclosure</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Copyright Bar -->
+        <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-sm text-slate-500">
+                &copy; 2024 BuildMetric. All rights reserved.
+            </p>
+            <div class="flex items-center gap-6">
+                <a href="mailto:contact@buildmetric.org" class="text-slate-400 hover:text-white transition-colors text-sm font-medium">
+                    contact@buildmetric.org
+                </a>
+                <span class="text-slate-700 hidden md:inline">|</span>
+                <span class="text-sm text-slate-500">Made for US, UK & AU Builders</span>
+            </div>
+        </div>
+    </div>
+</footer>                                                                                                                                                                                       
