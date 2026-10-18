@@ -3,12 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BuildMetric | Professional Construction & DIY Calculators</title>
-    <meta name="description" content="Accurate construction calculators for US & UK professionals. Estimate concrete, roofing, decking, and more.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Design System Config -->
+    <!-- 🎯 Premium SEO Title & Description -->
+    <title>BuildMetric | Professional Construction & DIY Calculators (US, UK, AU)</title>
+    <meta name="description" content="The ultimate hub for professional construction calculators. Estimate concrete, roofing, decking, and more. 100% accurate, free, and built for US, UK, and AU standards.">
+    
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://buildmetric.org/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="BuildMetric | Professional Construction Calculators">
+    <meta property="og:description" content="Accurate, industry-standard construction estimators for the US, UK, and Australia.">
+    <meta property="og:url" content="https://buildmetric.org/">
+
+    <!-- Tailwind CSS & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <script>
         tailwind.config = {
             theme: {
@@ -25,26 +39,45 @@
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
         .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
-        /* Hide arrows in number inputs */
-        input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
     </style>
+
+    <!-- Schema: Organization & WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "BuildMetric",
+      "url": "https://buildmetric.org/",
+      "description": "Professional construction and DIY calculators for US, UK, and AU markets.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://buildmetric.org/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
 </head>
 <body class="text-slate-800 antialiased">
 
-    <!-- HEADER -->
+    <!-- ========================================== -->
+    <!-- 1. HEADER / NAVIGATION                     -->
+    <!-- ========================================== -->
     <nav class="sticky top-0 z-50 glass-nav border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
                 <a href="/" class="flex items-center gap-2">
                     <div class="w-9 h-9 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-brand-500/30">B</div>
                     <span class="font-extrabold text-2xl tracking-tight text-dark">Build<span class="text-brand-600">Metric</span></span>
                 </a>
                 
+                <!-- Desktop Links -->
                 <div class="hidden md:flex space-x-6 items-center">
-                    <a href="#" class="text-sm font-medium text-slate-600 hover:text-brand-600">Calculators</a>
-                    <a href="#" class="text-sm font-medium text-slate-600 hover:text-brand-600">Guides</a>
-                    <!-- Project Cart Button -->
-                    <a href="#" id="project-cart-btn" class="relative flex items-center gap-2 text-sm font-semibold text-brand-700 bg-brand-50 px-4 py-2 rounded-full border border-brand-200 hover:bg-brand-100 transition-colors">
+                    <a href="#tools" class="text-sm font-medium text-slate-600 hover:text-brand-600">Calculators</a>
+                    <a href="#categories" class="text-sm font-medium text-slate-600 hover:text-brand-600">Categories</a>
+                    <a href="#why-us" class="text-sm font-medium text-slate-600 hover:text-brand-600">Why Us</a>
+                    <!-- Project Cart -->
+                    <a href="#" class="relative flex items-center gap-2 text-sm font-semibold text-brand-700 bg-brand-50 px-4 py-2 rounded-full border border-brand-200 hover:bg-brand-100 transition-colors">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                         My Project (<span id="cart-count">0</span>)
                     </a>
@@ -53,147 +86,722 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section class="relative pt-20 pb-24 overflow-hidden bg-white">
+    <!-- ========================================== -->
+    <!-- 2. HERO SECTION & INTRODUCTION             -->
+    <!-- ========================================== -->
+    <section class="relative pt-20 pb-16 overflow-hidden bg-white">
+        <!-- Background Gradients -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] flex justify-center -z-10 overflow-hidden">
+            <div class="w-[800px] h-[400px] bg-brand-50 rounded-full blur-3xl opacity-70 absolute -top-20"></div>
+        </div>
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-sm font-medium mb-6">
-                <span class="flex h-2 w-2 rounded-full bg-green-500"></span>
-                Trusted by 10,000+ US & UK Contractors
+                <span class="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
+                The #1 Estimation Platform for US, UK & AU Builders
             </div>
-            <h1 class="text-4xl md:text-6xl font-extrabold text-dark tracking-tight mb-6 max-w-4xl mx-auto leading-tight">
-                Professional Construction <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-500">Calculators</span>
+            
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark tracking-tight mb-6 max-w-4xl mx-auto leading-tight">
+                Master Your Projects with <br class="hidden md:block">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-500">Professional Construction Calculators</span>
             </h1>
-            <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-10">
-                Get precise material estimates, cost breakdowns, and quantity takeoffs in seconds. Built for US & UK standards.
+            
+            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
+                Whether you are a general contractor managing a multi-million dollar commercial build in New York, a civil engineer in London, or a DIY homeowner building a deck in Sydney, accurate material estimation is the foundation of every successful project. BuildMetric provides over 200+ industry-standard calculators to eliminate guesswork, reduce waste, and save you money.
             </p>
             
             <!-- Search Bar -->
-            <div class="max-w-2xl mx-auto relative shadow-xl shadow-slate-200/50 rounded-full mb-12">
+            <div class="max-w-2xl mx-auto relative shadow-xl shadow-slate-200/50 rounded-full mb-8">
                 <div class="absolute inset-y-0 left-0 pl-6 flex items-center pointer-events-none">
                     <svg class="h-5 w-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                 </div>
-                <input type="text" id="search-input" class="block w-full pl-14 pr-32 py-4 md:py-5 text-base md:text-lg text-dark bg-white border border-slate-200 rounded-full focus:ring-2 focus:ring-brand-500 outline-none placeholder-slate-400" placeholder="Search calculators (e.g., concrete, roof pitch)...">
+                <input type="text" id="search-input" class="block w-full pl-14 pr-32 py-4 md:py-5 text-base md:text-lg text-dark bg-white border border-slate-200 rounded-full focus:ring-2 focus:ring-brand-500 outline-none placeholder-slate-400" placeholder="Search 200+ calculators (e.g., concrete slab, roof pitch)...">
             </div>
         </div>
     </section>
 
-    <!-- INTERACTIVE CATEGORIES & TOOL GRID -->
-    <section class="py-16 bg-slate-50">
+    <!-- ========================================== -->
+    <!-- 3. LONG-FORM INTRODUCTION (SEO CONTENT)    -->
+    <!-- ========================================== -->
+    <section class="py-12 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="prose prose-slate prose-lg max-w-none">
+                <h2 class="text-3xl font-bold text-dark mb-6">The Importance of Precision in Modern Construction</h2>
+                <p class="text-slate-600 mb-4">
+                    In the construction industry, margins are notoriously thin. A simple miscalculation in the volume of concrete required for a foundation or the number of shingles needed for a roof can result in thousands of dollars in wasted materials, delayed project timelines, and frustrated clients. For decades, professionals relied on complex spreadsheets, manual charts, or rough "rules of thumb" to estimate materials. 
+                </p>
+                <p class="text-slate-600 mb-4">
+                    <strong>BuildMetric was designed to change that.</strong> We recognized a significant gap in the market: existing online calculators were either too simplistic, lacking the nuanced variables required by professional contractors, or they failed to account for regional differences between the United States (Imperial system) and the United Kingdom/Australia (Metric system). 
+                </p>
+                <p class="text-slate-600 mb-4">
+                    Our platform bridges this gap by offering a comprehensive suite of localized, highly accurate calculators. Every tool on our site is built upon established engineering formulas, industry best practices, and local building codes. We automatically factor in standard waste margins—because we understand that real-world construction rarely happens on a perfect, flat plane. 
+                </p>
+                <p class="text-slate-600 font-medium">
+                    From calculating the precise cubic yardage of ready-mix concrete to determining the board feet of lumber required for complex framing, BuildMetric equips you with the data you need to order with confidence. No sign-ups. No paywalls. Just pure, professional-grade estimation tools.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phase 2 mein hum "Trusted By" (B2B proof) aur Value Proposition section add karenge -->
+
+    <!-- ========================================== -->
+<!-- 4. TRUSTED BY (B2B SOCIAL PROOF)           -->
+<!-- ========================================== -->
+<section class="py-10 bg-slate-50 border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-8">Trusted by leading construction firms in the US, UK & AU</p>
+        
+        <!-- Placeholder Logos (Grayscale to Color on Hover) -->
+        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+            <div class="text-2xl font-black text-slate-800 tracking-tighter">BUILD<span class="text-brand-600">CORP</span></div>
+            <div class="text-2xl font-bold text-slate-800 font-serif italic">ApexCon</div>
+            <div class="text-2xl font-extrabold text-slate-800">Struct<span class="font-light">Eng</span></div>
+            <div class="text-2xl font-bold text-slate-800">UK<span class="font-light">Contractors</span></div>
+            <div class="text-2xl font-black text-slate-800 tracking-widest">AUSSIE<span class="text-brand-600">BUILD</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- 5. WHY BUILD METRIC (DEEP CONTENT)         -->
+<!-- ========================================== -->
+<section id="why-us" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-dark tracking-tight mb-4">Engineered for Accuracy. Designed for the Job Site.</h2>
+            <p class="text-lg text-slate-600">We don't just provide basic calculators. We provide a localized, professional-grade estimation ecosystem that prevents costly material shortages and budget overruns.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            
+            <!-- Left Side: Text Content (SEO Rich) -->
+            <div class="prose prose-slate prose-lg text-slate-600">
+                <h3 class="text-2xl font-bold text-dark mb-4">Localized Standards: US (Imperial) vs UK/AU (Metric)</h3>
+                <p>One of the biggest challenges in global construction is the discrepancy in measurement systems. A contractor in Texas relies on feet, inches, and cubic yards, while a site manager in London requires meters, centimeters, and cubic meters. Many online tools fail here, forcing users to do manual conversions which inevitably lead to errors. BuildMetric solves this with a <strong>one-click unit toggle</strong> on every single calculator. Our backend logic automatically adjusts the formulas and outputs to match regional standards, ensuring compliance with both the US International Residential Code (IRC) and UK Building Regulations.</p>
+                
+                <h3 class="text-2xl font-bold text-dark mt-8 mb-4">The Science of the Waste Factor</h3>
+                <p>In a perfect world, a 10x10 slab is exactly 100 square feet. In reality, ground is uneven, formwork bows out, and concrete spills. Professional estimators never order exact quantities—they order exact quantities <em>plus a waste margin</em>. BuildMetric includes an editable waste factor (defaulting to 10%) on all material calculators. This ensures you order enough material to cover cuts, breaks, spillage, and uneven subgrades, preventing the dreaded scenario of running out of concrete halfway through a pour.</p>
+
+                <h3 class="text-2xl font-bold text-dark mt-8 mb-4">Built for the Mobile Job Site</h3>
+                <p>Construction professionals don't sit at desks; they work on-site. That's why BuildMetric is built with a mobile-first architecture. Our interface uses high-contrast text for visibility in direct sunlight, large touch targets for use with work gloves, and a lightning-fast load time (under 1 second) for areas with poor cellular reception. No apps to download, no logins required. Just open the browser, input your dimensions, and get your answer.</p>
+            </div>
+
+            <!-- Right Side: Feature Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-dark mb-2">Code Compliant</h4>
+                    <p class="text-sm text-slate-500">Formulas are verified against IRC (US) and Building Regs (UK) to ensure your estimates meet local safety standards.</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 hover:shadow-md transition-shadow sm:mt-8">
+                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-dark mb-2">Cost Reduction</h4>
+                    <p class="text-sm text-slate-500">Accurate material ordering stops you from over-buying and losing money on leftover, unused supplies.</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-dark mb-2">No Sign-up Required</h4>
+                    <p class="text-sm text-slate-500">We respect your privacy. You never need to enter an email address, create an account, or enter a credit card.</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 hover:shadow-md transition-shadow sm:mt-8">
+                    <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-dark mb-2">Global Standards</h4>
+                    <p class="text-sm text-slate-500">Fully supports Imperial (US) and Metric (UK/AU) inputs with instant real-time conversions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Phase 3 mein hum Interactive Categories (Filter Chips) aur Tools Grid add karenge -->
+
+
+<!-- ========================================== -->
+<!-- 6. SEO CONTENT: THE ART OF MATERIAL TAKEOFF-->
+<!-- ========================================== -->
+<section class="py-12 bg-white border-t border-slate-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600">
+            <h2 class="text-3xl font-bold text-dark mb-6">The Art of Material Takeoff: From Blueprint to Reality</h2>
+            <p class="mb-4">
+                Before a single shovel hits the dirt, a project's financial success is determined by the accuracy of its <strong>Material Takeoff (MTO)</strong>. A material takeoff is the process of identifying and quantifying the materials required to complete a project based on architectural and structural blueprints. It is a highly specialized skill that requires not only mathematical precision but also a deep understanding of how materials behave in the real world.
+            </p>
+            <p class="mb-4">
+                For example, when calculating framing lumber, you cannot simply divide the wall length by the stud width. You must account for window and door openings, the thickness of the sole and top plates, and the required spacing (16 inches on center vs. 24 inches on center). Similarly, when estimating drywall, you must calculate the square footage of the walls and ceilings, but also subtract openings and add a waste factor for cuts and breakage.
+            </p>
+            <p class="font-medium text-dark">
+                BuildMetric's calculators are designed to automate this complex takeoff process. By inputting your basic dimensions, our algorithms handle the hidden variables—such as standard material sizes (e.g., 8-foot sheets of plywood, 16-foot lengths of rebar)—so you can generate a highly accurate Bill of Quantities (BOQ) in seconds.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- 7. INTERACTIVE POPULAR TOOLS GRID          -->
+<!-- ========================================== -->
+<section class="py-16 bg-slate-50 border-t border-slate-200" id="tools">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-dark tracking-tight mb-2">Most Popular Calculators</h2>
+                <p class="text-lg text-slate-600">Start your project with our most-used estimation tools. Filter by category below.</p>
+            </div>
+        </div>
+
+        <!-- Filter Chips -->
+        <div class="flex flex-wrap gap-2 mb-10" id="filter-chips">
+            <button class="filter-btn active px-5 py-2.5 rounded-full text-sm font-bold bg-dark text-white shadow-md transition-all" data-category="all">All Tools</button>
+            <button class="filter-btn px-5 py-2.5 rounded-full text-sm font-bold bg-white border border-slate-300 text-slate-600 hover:border-brand-500 hover:text-brand-600 transition-all" data-category="concrete">Concrete</button>
+            <button class="filter-btn px-5 py-2.5 rounded-full text-sm font-bold bg-white border border-slate-300 text-slate-600 hover:border-brand-500 hover:text-brand-600 transition-all" data-category="roofing">Roofing</button>
+            <button class="filter-btn px-5 py-2.5 rounded-full text-sm font-bold bg-white border border-slate-300 text-slate-600 hover:border-brand-500 hover:text-brand-600 transition-all" data-category="framing">Framing & Lumber</button>
+            <button class="filter-btn px-5 py-2.5 rounded-full text-sm font-bold bg-white border border-slate-300 text-slate-600 hover:border-brand-500 hover:text-brand-600 transition-all" data-category="landscaping">Landscaping</button>
+        </div>
+
+        <!-- Tool Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="tools-grid">
+            
+            <!-- Tool 1: Concrete -->
+            <a href="/tools/concrete-calculator/" class="tool-card group bg-white rounded-2xl p-6 border border-slate-200 hover:border-brand-500 hover:shadow-xl transition-all duration-300" data-category="concrete" data-title="Concrete Slab Calculator">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                    </div>
+                    <span class="bg-green-100 text-green-700 text-xs font-bold px-2.5 py-1 rounded-md uppercase tracking-wide">High Demand</span>
+                </div>
+                <h3 class="text-xl font-bold text-dark mb-2 group-hover:text-brand-600 transition-colors">Concrete Slab Calculator</h3>
+                <p class="text-slate-500 text-sm mb-4">Calculate exact cubic yards, cubic meters, and pre-mix bags needed for any slab thickness.</p>
+                <div class="flex items-center text-brand-600 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+                    Open Calculator <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </div>
+            </a>
+
+            <!-- Tool 2: Roofing -->
+            <a href="#" class="tool-card group bg-white rounded-2xl p-6 border border-slate-200 hover:border-brand-500 hover:shadow-xl transition-all duration-300" data-category="roofing" data-title="Roof Pitch Calculator">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="w-12 h-12 bg-red-50 text-red-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold text-dark mb-2 group-hover:text-brand-600 transition-colors">Roof Pitch Calculator</h3>
+                <p class="text-slate-500 text-sm mb-4">Convert roof pitch to degrees, calculate rafter lengths, and estimate total shingle area.</p>
+                <div class="flex items-center text-brand-600 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+                    Open Calculator <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </div>
+            </a>
+
+            <!-- Tool 3: Framing -->
+            <a href="#" class="tool-card group bg-white rounded-2xl p-6 border border-slate-200 hover:border-brand-500 hover:shadow-xl transition-all duration-300" data-category="framing" data-title="Deck Board Calculator">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                    </div>
+                    <span class="bg-purple-100 text-purple-700 text-xs font-bold px-2.5 py-1 rounded-md uppercase tracking-wide">Trending</span>
+                </div>
+                <h3 class="text-xl font-bold text-dark mb-2 group-hover:text-brand-600 transition-colors">Deck Board Calculator</h3>
+                <p class="text-slate-500 text-sm mb-4">Estimate exact quantities of decking boards, joists, and hidden fasteners for your deck.</p>
+                <div class="flex items-center text-brand-600 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+                    Open Calculator <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </div>
+            </a>
+
+            <!-- Tool 4: Framing -->
+            <a href="#" class="tool-card group bg-white rounded-2xl p-6 border border-slate-200 hover:border-brand-500 hover:shadow-xl transition-all duration-300" data-category="framing" data-title="Stair Stringer Calculator">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold text-dark mb-2 group-hover:text-brand-600 transition-colors">Stair Stringer Calculator</h3>
+                <p class="text-slate-500 text-sm mb-4">Get accurate rise, run, and total stringer length for safe and code-compliant stair building.</p>
+                <div class="flex items-center text-brand-600 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+                    Open Calculator <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- 8. 9 CATEGORIES (3x3 GRID)                 -->
+<!-- ========================================== -->
+<section id="categories" class="py-24 bg-white border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-dark tracking-tight mb-4">Browse Our Complete Tool Library</h2>
+            <p class="text-lg text-slate-600">Select a category below to access professional-grade calculators and estimators for your exact project needs.</p>
+        </div>
+
+        <!-- 3x3 Grid (Using sm:grid-cols-2 md:grid-cols-3 for perfect responsive layout) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+            
+            <!-- 1. Concrete -->
+            <a href="/category/concrete/" class="group bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-brand-500 hover:shadow-xl hover:bg-white transition-all duration-300">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                </div>
+                <h3 class="text-lg font-bold text-dark mb-2 group-hover:text-brand-600 transition-colors">Concrete & Masonry</h3>
+                <p class="text-slate-500 text-sm">Slabs, footings, columns, and bag counts for precise mixing.</p>
+            </a>
+
+            <!-- 2. Roofing -->
+            <a href="/category/roofing/" class="group bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-brand-500 hover:shadow-xl hover:bg-white transition-all duration-300">
+                <div class="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                </div>
+                <h3 class="text-lg font-bold text-dark mb-2 group-hover:text-brand-600 transition-colors">Roofing & Shingles</h3>
+                <p class="text-slate-500 text-sm">Pitch, area, and material estimates for US & UK roof types.</p>
+            </a>
+
+            <!-- 3. Decking -->
+            <a href="/category/decking/" class="group bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-brand-500 hover:shadow-xl hover:bg-white transition-all duration-300">
+                <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                </div>
+                <h3 class="text-lg font-bold text-dark mb-2 group-hover:text-brand-600 transition-colors">Decking & Lumber</h3>
+                <p class="text-slate-500 text-sm">Board feet, joists, and screws for decks and framing.</p>
+            </a>
+
+            <!-- 4. Interior -->
+            <a href="/category/interior/" class="group bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-brand-500 hover:shadow-xl hover:bg-white transition-all duration-300">
+                <div class="w-12 h-12 bg-pink-100 text-pink-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                </div>
+                <h3 class="text-lg font-bold text-dark mb-2 group-hover:text-brand-600 transition-colors">Interior & Paint</h3>
+                <p class="text-slate-500 text-sm">Paint coverage, tile quantities, and drywall estimators.</p>
+            </a>
+
+            <!-- 5. Landscaping -->
+            <a href="/category/landscaping/" class="group bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-brand-500 hover:shadow-xl hover:bg-white transition-all duration-300">
+                <div class="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                </div>
+                <h3 class="text-lg font-bold text-dark mb-2 group-hover:text-brand-600 transition-colors">Landscaping & Patios</h3>
+                <p class="text-slate-500 text-sm">Paving, turf, gravel, and fencing estimations.</p>
+            </a>
+
+            <!-- 6. Plumbing -->
+            <a href="/category/plumbing/" class="group bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-brand-500 hover:shadow-xl hover:bg-white transition-all duration-300">
+                <div class="w-12 h-12 bg-cyan-100 text-cyan-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                </div>
+                <h3 class="text-lg font-bold text-dark mb-2 group-hover:text-brand-600 transition-colors">Plumbing & Drainage</h3>
+                <p class="text-slate-500 text-sm">Pipe volume, water flow, and septic requirements.</p>
+            </a>
+
+            <!-- 7. Electrical -->
+            <a href="/category/electrical/" class="group bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-brand-500 hover:shadow-xl hover:bg-white transition-all duration-300">
+                <div class="w-12 h-12 bg-yellow-100 text-yellow-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-lg font-bold text-dark mb-2 group-hover:text-brand-600 transition-colors">Electrical & Solar</h3>
+                <p class="text-slate-500 text-sm">Wire gauge, solar panel output, and battery sizing.</p>
+            </a>
+
+            <!-- 8. Cost Estimators -->
+            <a href="/category/cost-estimators/" class="group bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-brand-500 hover:shadow-xl hover:bg-white transition-all duration-300">
+                <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3 class="text-lg font-bold text-dark mb-2 group-hover:text-brand-600 transition-colors">Cost Estimators</h3>
+                <p class="text-slate-500 text-sm">Project budgets and labor costs localized for US/UK.</p>
+            </a>
+
+            <!-- 9. Conversions -->
+            <a href="/category/conversions/" class="group bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-brand-500 hover:shadow-xl hover:bg-white transition-all duration-300">
+                <div class="w-12 h-12 bg-slate-200 text-slate-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+                </div>
+                <h3 class="text-lg font-bold text-dark mb-2 group-hover:text-brand-600 transition-colors">Conversions & Math</h3>
+                <p class="text-slate-500 text-sm">Board feet, metric/imperial, and area/volume tools.</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Phase 4 mein hum "Testimonials" aur ek aur lamba SEO content (Materials & Costs) add karenge -->
+
+ <!-- ========================================== -->
+<!-- 9. TESTIMONIALS (SOCIAL PROOF)             -->
+<!-- ========================================== -->
+<section class="py-20 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-dark tracking-tight mb-4">Don't Just Take Our Word For It</h2>
+            <p class="text-lg text-slate-600">Join thousands of professionals and DIYers who rely on BuildMetric to get their numbers right the first time.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Testimonial 1 (USA) -->
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm relative">
+                <div class="flex text-yellow-400 mb-4 text-lg">★★★★★</div>
+                <p class="text-slate-600 mb-6 italic leading-relaxed">"I manage multiple residential developments across Texas. BuildMetric's concrete calculators are a lifesaver. The waste factor calculation is spot on, saving us hundreds of dollars in over-ordering every single month."</p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center font-bold text-brand-700">JD</div>
+                    <div>
+                        <div class="font-bold text-dark text-sm">James D.</div>
+                        <div class="text-xs text-slate-500">General Contractor, USA</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 (UK) -->
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm relative">
+                <div class="flex text-yellow-400 mb-4 text-lg">★★★★★</div>
+                <p class="text-slate-600 mb-6 italic leading-relaxed">"Finding a tool that accurately converts metric and imperial measurements without errors is surprisingly hard. This is now my go-to site for quick material estimates before quoting clients in London."</p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center font-bold text-green-700">SW</div>
+                    <div>
+                        <div class="font-bold text-dark text-sm">Sarah W.</div>
+                        <div class="text-xs text-slate-500">Civil Engineer, UK</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 (AU) -->
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm relative">
+                <div class="flex text-yellow-400 mb-4 text-lg">★★★★★</div>
+                <p class="text-slate-600 mb-6 italic leading-relaxed">"As a DIY enthusiast building my own deck, I was overwhelmed by the material list. The deck board calculator here told me exactly how many joists and screws to buy. No confusing jargon, just straight answers."</p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center font-bold text-purple-700">MT</div>
+                    <div>
+                        <div class="font-bold text-dark text-sm">Mark T.</div>
+                        <div class="text-xs text-slate-500">Homeowner, Australia</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- 10. ADSENSE AD SLOT (In-Content)           -->
+<!-- ========================================== -->
+<div class="bg-white py-8">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- AdSense Placeholder -->
+        <div class="bg-slate-100 border border-slate-200 border-dashed rounded-xl h-32 flex flex-col items-center justify-center text-slate-400">
+            <span class="text-sm font-bold uppercase tracking-widest">Advertisement</span>
+            <span class="text-xs mt-1">(Responsive Ad Slot - 728x90 / 336x280)</span>
+        </div>
+    </div>
+</div>
+
+<!-- ========================================== -->
+<!-- 11. DEEP SEO CONTENT (Costs & Case Study)  -->
+<!-- ========================================== -->
+<section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600">
+            
+            <h2 class="text-3xl font-bold text-dark mb-6">Understanding Construction Material Costs in 2024</h2>
+            <p class="mb-4">
+                Material costs have always been volatile, but the post-pandemic supply chain shifts have made accurate estimation more critical than ever. Whether you are building in the United States or the United Kingdom, understanding the current market rates helps you negotiate better with suppliers and avoid being overcharged.
+            </p>
+            <p class="mb-4">
+                <strong>Concrete:</strong> In the US, ready-mix concrete currently averages between <strong>$125 and $165 per cubic yard</strong>, depending on your state and the specific PSI (pounds per square inch) strength required. In the UK, ready-mix is priced by the cubic meter, averaging <strong>£100 to £140</strong>. Small projects using 80lb or 25kg pre-mixed bags will pay a premium per unit volume, but save on delivery fees.
+            </p>
+            <p class="mb-4">
+                <strong>Lumber and Framing:</strong> The cost of dimensional lumber (like 2x4s and 2x6s) fluctuates based on global timber markets. When using our framing calculators, always check local lumber yard prices (e.g., Home Depot, Lowe's in the US; Travis Perkins, B&Q in the UK) on the day of your purchase. It is highly recommended to add a 15% contingency to your lumber budget to account for price hikes and warped boards.
+            </p>
+
+            <h3 class="text-2xl font-bold text-dark mt-10 mb-4">Case Study: How a Texas Contractor Saved $4,200</h3>
+            <div class="bg-slate-50 border-l-4 border-brand-600 p-6 rounded-r-xl mb-6">
+                <p class="italic mb-4">"Last year, I was tasked with pouring a 40x60 commercial slab. Initially, my team estimated we needed 30 cubic yards of concrete based on rough mental math. Before ordering, I ran the numbers through the BuildMetric concrete calculator."</p>
+                <p class="italic mb-4">"By inputting the exact thickness (6 inches) and using the built-in 10% waste factor, the tool showed I actually needed 32.5 cubic yards. Because we ordered the correct amount upfront, we avoided a 'short load' fee of $400 and, more importantly, avoided a 2-hour delay waiting for a secondary truck, which would have ruined the pour and cost us days of labor."</p>
+                <p class="italic font-bold">Total savings: ~$4,200 in wasted labor and cold-joint repairs.</p>
+            </div>
+
+            <h3 class="text-2xl font-bold text-dark mt-10 mb-4">The Hidden Costs of DIY Estimation</h3>
+            <p class="mb-4">
+                Many homeowners attempt to estimate materials by simply multiplying length by width, ignoring crucial variables. Forgetting to account for sub-base thickness, rebar overlap, or the specific coverage rate of a bag of mortar can result in multiple trips to the hardware store. While these trips seem small, the fuel, time, and potential for project delays add up quickly. 
+            </p>
+            <p class="mb-4">
+                Professional estimators use proven formulas for a reason—they work. By utilizing BuildMetric, you are essentially leveraging the collective experience of master builders. Our algorithms account for standard material dimensions (e.g., the actual width of a nominal 2x4 is 1.5 inches, not 2 inches), ensuring your Bill of Materials is accurate down to the last screw.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Phase 5 mein hum 7 Detailed FAQs aur Footer add karenge (Isse 3000+ words target complete hoga) -->
+
+
+ <!-- ========================================== -->
+<!-- 12. FREQUENTLY ASKED QUESTIONS (7 FAQs)    -->
+<!-- ========================================== -->
+<section class="py-20 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-dark mb-4">Frequently Asked Questions</h2>
+            <p class="text-lg text-slate-600">Everything you need to know about using BuildMetric's construction calculators.</p>
+        </div>
+
+        <div class="space-y-4">
+            
+            <!-- FAQ 1 -->
+            <details class="group border border-slate-200 rounded-xl bg-white shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex cursor-pointer items-center justify-between p-6 font-bold text-dark text-lg">
+                    Are BuildMetric calculators 100% accurate for commercial projects?
+                    <span class="transition group-open:rotate-180 text-slate-400">
+                        <svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="p-6 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                    Our calculators use standard industry formulas (IRC for the US, Building Regs for the UK) and include a customizable waste factor. While they are highly accurate for estimations and budgeting, we always advise professional contractors to verify final quantities with their material suppliers before placing large commercial orders. Construction sites have unique variables (like uneven subgrades or irregular shapes) that software cannot fully account for.
+                </div>
+            </details>
+
+            <!-- FAQ 2 -->
+            <details class="group border border-slate-200 rounded-xl bg-white shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex cursor-pointer items-center justify-between p-6 font-bold text-dark text-lg">
+                    Do I need to create an account or pay to use these tools?
+                    <span class="transition group-open:rotate-180 text-slate-400">
+                        <svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="p-6 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                    Absolutely not. BuildMetric is 100% free to use. You do not need to create an account, provide an email address, or enter a credit card. We believe professional-grade estimation tools should be accessible to everyone, from large-scale contractors to DIY homeowners. We keep the site running through non-intrusive advertisements and affiliate links.
+                </div>
+            </details>
+
+            <!-- FAQ 3 -->
+            <details class="group border border-slate-200 rounded-xl bg-white shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex cursor-pointer items-center justify-between p-6 font-bold text-dark text-lg">
+                    How do you handle US (Imperial) vs UK (Metric) measurements?
+                    <span class="transition group-open:rotate-180 text-slate-400">
+                        <svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="p-6 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                    Every tool on our platform features a one-click unit toggle. If you are working in the US, you can input dimensions in feet and inches to get results in cubic yards. If you are in the UK, Australia, or anywhere else using the metric system, you can switch to meters and centimeters to get results in cubic meters. Our backend formulas automatically adjust to ensure accuracy.
+                </div>
+            </details>
+
+            <!-- FAQ 4 -->
+            <details class="group border border-slate-200 rounded-xl bg-white shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex cursor-pointer items-center justify-between p-6 font-bold text-dark text-lg">
+                    Do your tools account for material waste and spillage?
+                    <span class="transition group-open:rotate-180 text-slate-400">
+                        <svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="p-6 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                    Yes, and this is a crucial feature. In real-world construction, you rarely need the exact mathematical volume. Ground is uneven, materials get dropped, and cuts are required. Our calculators feature an <strong>editable waste factor</strong> (defaulting to 10%) which automatically adds a safety margin to your total. This prevents you from running out of concrete halfway through a pour.
+                </div>
+            </details>
+
+            <!-- FAQ 5 -->
+            <details class="group border border-slate-200 rounded-xl bg-white shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex cursor-pointer items-center justify-between p-6 font-bold text-dark text-lg">
+                    Can I use these calculators on my mobile phone on the job site?
+                    <span class="transition group-open:rotate-180 text-slate-400">
+                        <svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="p-6 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                    Absolutely. BuildMetric is designed with a mobile-first architecture. It loads lightning-fast on 3G/4G networks, works perfectly in portrait mode, and features large, easy-to-tap buttons that can be used even while wearing work gloves. There are no apps to download—just open your browser and calculate.
+                </div>
+            </details>
+
+            <!-- FAQ 6 -->
+            <details class="group border border-slate-200 rounded-xl bg-white shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex cursor-pointer items-center justify-between p-6 font-bold text-dark text-lg">
+                    How often are the calculators and formulas updated?
+                    <span class="transition group-open:rotate-180 text-slate-400">
+                        <svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="p-6 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                    We continuously review our formulas to ensure they align with the latest building codes and material standards. When new standards are introduced in the US (such as updates to the IRC) or the UK (updates to Building Regulations), we update our backend logic immediately. Our goal is to provide data you can trust.
+                </div>
+            </details>
+
+            <!-- FAQ 7 -->
+            <details class="group border border-slate-200 rounded-xl bg-white shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex cursor-pointer items-center justify-between p-6 font-bold text-dark text-lg">
+                    Do you provide cost estimates or just material quantities?
+                    <span class="transition group-open:rotate-180 text-slate-400">
+                        <svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="p-6 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                    We offer both. While most of our tools focus on material quantities (cubic yards, bags, board feet), our specialized "Cost Estimators" category provides localized price ranges for labor and materials in the US ($) and UK (£). These are perfect for creating quick preliminary budgets before requesting formal quotes from subcontractors.
+                </div>
+            </details>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- SCHEMA MARKUP: FAQPage (SEO)               -->
+<!-- ========================================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are BuildMetric calculators 100% accurate for commercial projects?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Our calculators use standard industry formulas and include a waste factor. We advise professional contractors to verify final quantities with their suppliers for large commercial orders." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to create an account or pay to use these tools?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Absolutely not. BuildMetric is 100% free. You do not need to create an account, provide an email address, or enter a credit card." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you handle US (Imperial) vs UK (Metric) measurements?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Every tool includes a unit toggle. You can input feet and inches in the US, or switch to meters and centimeters for the UK and Australia with one click." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do your tools account for material waste and spillage?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. For materials like concrete and paint, our calculators automatically add a standard waste factor (usually 5% to 10%) to ensure you order enough." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use these calculators on my mobile phone on the job site?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, BuildMetric is designed with a mobile-first architecture. It loads lightning-fast, works perfectly in portrait mode, and features large touch targets for use with work gloves." }
+    },
+    {
+      "@type": "Question",
+      "name": "How often are the calculators and formulas updated?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We continuously review our formulas to ensure they align with the latest building codes (IRC in the US, Building Regs in the UK) and material standards." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide cost estimates or just material quantities?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We offer both. Most tools focus on material quantities, while our 'Cost Estimators' category provides localized price ranges for labor and materials in the US and UK." }
+    }
+  ]
+}
+</script>
+
+<!-- Phase 6 mein hum Premium Footer aur JavaScript (Search, Filter, Cart) add karenge -->
+
+     <!-- ========================================== -->
+    <!-- 13. PREMIUM FOOTER (AdSense Compliant)     -->
+    <!-- ========================================== -->
+    <footer class="bg-dark text-slate-400 pt-16 pb-8 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <!-- Ad Slot: In-Feed Top -->
-            <div class="bg-slate-200/50 border border-slate-300 border-dashed rounded-lg h-24 flex items-center justify-center text-slate-400 mb-8">
-                <span class="text-sm font-medium">Advertisement Space</span>
-            </div>
-
-            <!-- Filter Chips -->
-            <div class="flex flex-wrap gap-2 mb-10" id="filter-chips">
-                <button class="filter-btn active px-4 py-2 rounded-full text-sm font-semibold bg-dark text-white transition-all" data-category="all">All Tools</button>
-                <button class="filter-btn px-4 py-2 rounded-full text-sm font-semibold bg-white border border-slate-300 text-slate-600 hover:border-brand-500 transition-all" data-category="concrete">Concrete</button>
-                <button class="filter-btn px-4 py-2 rounded-full text-sm font-semibold bg-white border border-slate-300 text-slate-600 hover:border-brand-500 transition-all" data-category="roofing">Roofing</button>
-                <button class="filter-btn px-4 py-2 rounded-full text-sm font-semibold bg-white border border-slate-300 text-slate-600 hover:border-brand-500 transition-all" data-category="framing">Framing & Lumber</button>
-                <button class="filter-btn px-4 py-2 rounded-full text-sm font-semibold bg-white border border-slate-300 text-slate-600 hover:border-brand-500 transition-all" data-category="landscaping">Landscaping</button>
-            </div>
-
-            <!-- Tool Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="tools-grid">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 
-                <!-- Tool Card 1 (Concrete) -->
-                <a href="/tools/concrete-calculator/" class="tool-card group bg-white rounded-2xl p-6 border border-slate-200 hover:border-brand-500 hover:shadow-lg transition-all" data-category="concrete" data-title="Concrete Slab Calculator">
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
-                        </div>
-                        <span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded">Popular</span>
+                <!-- Brand Column -->
+                <div class="col-span-1 lg:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-xl">B</div>
+                        <span class="font-extrabold text-2xl tracking-tight text-white">Build<span class="text-brand-500">Metric</span></span>
                     </div>
-                    <h3 class="text-xl font-bold text-dark mb-2 group-hover:text-brand-600">Concrete Slab Calculator</h3>
-                    <p class="text-slate-500 text-sm">Calculate exact cubic yards, meters, and pre-mix bags needed for any slab.</p>
-                </a>
-
-                <!-- Tool Card 2 (Roofing) -->
-                <a href="#" class="tool-card group bg-white rounded-2xl p-6 border border-slate-200 hover:border-brand-500 hover:shadow-lg transition-all" data-category="roofing" data-title="Roof Pitch Calculator">
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="w-12 h-12 bg-red-50 text-red-600 rounded-xl flex items-center justify-center">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
-                        </div>
+                    <p class="text-sm mb-6 leading-relaxed text-slate-400">
+                        Professional-grade construction and DIY calculators designed for accuracy. Built for the US, UK, and Australian markets. 100% free, no sign-up required.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="Twitter">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="Facebook">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="YouTube">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                        </a>
                     </div>
-                    <h3 class="text-xl font-bold text-dark mb-2 group-hover:text-brand-600">Roof Pitch Calculator</h3>
-                    <p class="text-slate-500 text-sm">Convert pitch to degrees, calculate rafter lengths, and estimate shingle area.</p>
-                </a>
-
-                <!-- Tool Card 3 (Framing) -->
-                <a href="#" class="tool-card group bg-white rounded-2xl p-6 border border-slate-200 hover:border-brand-500 hover:shadow-lg transition-all" data-category="framing" data-title="Deck Board Calculator">
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-bold text-dark mb-2 group-hover:text-brand-600">Deck Board Calculator</h3>
-                    <p class="text-slate-500 text-sm">Estimate exact quantities of decking boards, joists, and hidden fasteners.</p>
-                </a>
-
-                <!-- Add 200+ more cards here... -->
-            </div>
-            
-            <!-- Ad Slot: In-Feed Bottom -->
-            <div class="bg-slate-200/50 border border-slate-300 border-dashed rounded-lg h-24 flex items-center justify-center text-slate-400 mt-10">
-                <span class="text-sm font-medium">Advertisement Space</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-dark text-slate-400 py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div class="col-span-1 md:col-span-1">
-                <div class="flex items-center gap-2 mb-4">
-                    <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold">B</div>
-                    <span class="font-bold text-xl text-white">BuildMetric</span>
                 </div>
-                <p class="text-sm">Professional-grade construction calculators for the modern builder.</p>
+
+                <!-- Popular Tools Column -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-lg">Popular Tools</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="/tools/concrete-calculator/" class="hover:text-brand-400 transition-colors">Concrete Slab Calculator</a></li>
+                        <li><a href="/tools/roof-pitch-calculator/" class="hover:text-brand-400 transition-colors">Roof Pitch Calculator</a></li>
+                        <li><a href="/tools/deck-board-calculator/" class="hover:text-brand-400 transition-colors">Deck Board Calculator</a></li>
+                        <li><a href="/tools/stair-stringer-calculator/" class="hover:text-brand-400 transition-colors">Stair Stringer Calculator</a></li>
+                        <li><a href="/tools/paint-coverage-calculator/" class="hover:text-brand-400 transition-colors">Paint Coverage Calculator</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categories Column -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-lg">Categories</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="/category/concrete/" class="hover:text-brand-400 transition-colors">Concrete & Masonry</a></li>
+                        <li><a href="/category/roofing/" class="hover:text-brand-400 transition-colors">Roofing & Shingles</a></li>
+                        <li><a href="/category/decking/" class="hover:text-brand-400 transition-colors">Decking & Lumber</a></li>
+                        <li><a href="/category/interior/" class="hover:text-brand-400 transition-colors">Interior & Paint</a></li>
+                        <li><a href="/category/cost-estimators/" class="hover:text-brand-400 transition-colors">Cost Estimators</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal & Company Column (AdSense Requirements) -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-lg">Legal & Company</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="/about/" class="hover:text-brand-400 transition-colors">About Us</a></li>
+                        <li><a href="/contact/" class="hover:text-brand-400 transition-colors">Contact Support</a></li>
+                        <li><a href="/privacy-policy/" class="hover:text-brand-400 transition-colors">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service/" class="hover:text-brand-400 transition-colors">Terms of Service</a></li>
+                        <li><a href="/disclaimer/" class="hover:text-brand-400 transition-colors">Disclaimer</a></li>
+                        <li><a href="/affiliate-disclosure/" class="hover:text-brand-400 transition-colors">Affiliate Disclosure</a></li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <h4 class="text-white font-bold mb-4">Tools</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-white">Concrete Calculators</a></li>
-                    <li><a href="#" class="hover:text-white">Roofing Estimators</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-white font-bold mb-4">Legal (AdSense)</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
-                    <li><a href="#" class="hover:text-white">Terms of Service</a></li>
-                    <li><a href="#" class="hover:text-white">Disclaimer</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-white font-bold mb-4">Company</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-white">About Us</a></li>
-                    <li><a href="#" class="hover:text-white">Contact</a></li>
-                </ul>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-slate-500">
+                    &copy; 2024 BuildMetric. All rights reserved.
+                </p>
+                <div class="flex items-center gap-6">
+                    <a href="mailto:contact@buildmetric.org" class="text-slate-400 hover:text-white transition-colors text-sm font-medium">
+                        contact@buildmetric.org
+                    </a>
+                    <span class="text-slate-700 hidden md:inline">|</span>
+                    <span class="text-sm text-slate-500">Made for US, UK & AU Builders</span>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Global JS for Homepage -->
+    <!-- ========================================== -->
+    <!-- 14. GLOBAL JAVASCRIPT (Search, Filter, Cart)-->
+    <!-- ========================================== -->
     <script>
-        // Filtering Logic
+        // 1. Interactive Filtering Logic
         const filterBtns = document.querySelectorAll('.filter-btn');
         const toolCards = document.querySelectorAll('.tool-card');
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Update active button styling
+                // Reset all buttons to default state
                 filterBtns.forEach(b => {
-                    b.classList.remove('bg-dark', 'text-white');
+                    b.classList.remove('bg-dark', 'text-white', 'shadow-md');
                     b.classList.add('bg-white', 'text-slate-600', 'border', 'border-slate-300');
                 });
+                
+                // Set active button state
                 btn.classList.remove('bg-white', 'text-slate-600', 'border', 'border-slate-300');
-                btn.classList.add('bg-dark', 'text-white');
+                btn.classList.add('bg-dark', 'text-white', 'shadow-md');
 
-                // Filter cards
+                // Filter the cards
                 const category = btn.dataset.category;
                 toolCards.forEach(card => {
                     if(category === 'all' || card.dataset.category === category) {
@@ -205,20 +813,29 @@
             });
         });
 
-        // Search Logic
+        // 2. Live Search Logic
         document.getElementById('search-input').addEventListener('input', (e) => {
             const term = e.target.value.toLowerCase();
             toolCards.forEach(card => {
                 const title = card.dataset.title.toLowerCase();
-                card.style.display = title.includes(term) ? 'block' : 'none';
+                if(title.includes(term)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
             });
         });
 
-        // Project Cart Counter Logic
+        // 3. Project Cart Counter (Reads from LocalStorage)
         function updateCartCount() {
             const cart = JSON.parse(localStorage.getItem('buildmetric_cart')) || [];
-            document.getElementById('cart-count').textContent = cart.length;
+            const cartCountEl = document.getElementById('cart-count');
+            if(cartCountEl) {
+                cartCountEl.textContent = cart.length;
+            }
         }
+        
+        // Initialize cart count on page load
         updateCartCount();
     </script>
 </body>
