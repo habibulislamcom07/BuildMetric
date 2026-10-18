@@ -1,0 +1,2456 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- ============================================================
+       PHASE 1/10 — SEO HEAD ONLY
+       File: privacy.html
+       Brand: BuildMetric | Domain: buildmetric.org
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO Meta -->
+  <title>Privacy Policy | BuildMetric Data Protection &amp; Cookie Practices</title>
+  <meta name="description" content="BuildMetric privacy policy covering data collection, cookies, analytics, third-party advertising, and your rights under GDPR, UK GDPR, CCPA/CPRA and Australian Privacy Principles." />
+  <meta name="keywords" content="buildmetric privacy policy, construction calculator data protection, GDPR compliance, CCPA compliance, cookie policy, analytics disclosure, advertising privacy" />
+  <meta name="author" content="BuildMetric Editorial & Compliance Team" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://buildmetric.org/privacy.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BuildMetric" />
+  <meta property="og:title" content="Privacy Policy | BuildMetric Data Protection &amp; Cookie Practices" />
+  <meta property="og:description" content="How BuildMetric collects, uses and protects your data — covering GDPR, UK GDPR, CCPA/CPRA and Australian Privacy Principles in plain language." />
+  <meta property="og:url" content="https://buildmetric.org/privacy.html" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://buildmetric.org/assets/og/privacy.png" />
+  <meta property="og:image:alt" content="BuildMetric privacy policy covering data protection, cookies and regional compliance" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Privacy Policy | BuildMetric" />
+  <meta name="twitter:description" content="Data collection, cookies, analytics and your rights under GDPR, UK GDPR, CCPA/CPRA and Australian Privacy Principles." />
+  <meta name="twitter:image" content="https://buildmetric.org/assets/og/privacy.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230f172a'/%3E%3Cpath d='M22 68 L50 26 L78 68' stroke='%230ea5e9' stroke-width='9' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+
+  <!-- Performance: Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e'
+            },
+            ink: {
+              700: '#334155',
+              800: '#1e293b',
+              900: '#0f172a',
+              950: '#080f1e'
+            }
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: {
+            glow: '0 0 0 1px rgba(14,165,233,0.16), 0 18px 45px -18px rgba(14,165,233,0.55)',
+            card: '0 1px 2px rgba(15,23,42,0.04), 0 12px 32px -12px rgba(15,23,42,0.16)'
+          },
+          backgroundImage: {
+            'grid-slate': "linear-gradient(to right, rgba(148,163,184,0.14) 1px, transparent 1px), linear-gradient(to bottom, rgba(148,163,184,0.14) 1px, transparent 1px)"
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom Component Styles -->
+  <style>
+    :root { --brand: #0ea5e9; --ink: #0f172a; }
+
+    body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+
+    .font-display { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+
+    .text-gradient {
+      background: linear-gradient(100deg, #0ea5e9 0%, #38bdf8 40%, #0284c7 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-mesh {
+      background:
+        radial-gradient(900px 420px at 12% -10%, rgba(14,165,233,0.22), transparent 62%),
+        radial-gradient(700px 380px at 92% 0%, rgba(56,189,248,0.16), transparent 60%),
+        linear-gradient(180deg, #0f172a 0%, #0b1222 62%, #0f172a 100%);
+    }
+
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -6px;
+      height: 2px; width: 0;
+      background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+      border-radius: 2px;
+      transition: width .3s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    .cta-shine { position: relative; overflow: hidden; }
+    .cta-shine::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -120%;
+      width: 60%; height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.42), transparent);
+      transform: skewX(-18deg);
+      transition: left .65s ease;
+    }
+    .cta-shine:hover::before { left: 130%; }
+
+    /* Legal document typography */
+    .legal-prose p { margin-top: 0; margin-bottom: 1.15rem; }
+    .legal-prose h3 { scroll-margin-top: 6rem; }
+    .legal-prose ul, .legal-prose ol { margin-top: 0.5rem; margin-bottom: 1.15rem; }
+    .legal-prose li { margin-bottom: 0.45rem; }
+    section[id^="s-"] { scroll-margin-top: 6rem; }
+
+    /* TOC active state */
+    .toc-link.is-active {
+      background: #f0f9ff;
+      color: #0284c7;
+      font-weight: 700;
+    }
+    .toc-link.is-active .toc-num { color: #0ea5e9; }
+
+    /* FAQ accordion */
+    details > summary { list-style: none; cursor: pointer; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .faq-icon { transform: rotate(45deg); }
+    .faq-icon { transition: transform .25s ease; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+    }
+  </style>
+
+  <!-- ================= JSON-LD : PrivacyPage + Breadcrumbs + Organization ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://buildmetric.org/privacy.html#webpage",
+        "url": "https://buildmetric.org/privacy.html",
+        "name": "Privacy Policy | BuildMetric Data Protection & Cookie Practices",
+        "description": "BuildMetric privacy policy covering data collection, cookies, analytics, third-party advertising, and your rights under GDPR, UK GDPR, CCPA/CPRA and Australian Privacy Principles.",
+        "isPartOf": { "@id": "https://buildmetric.org/#website" },
+        "about": { "@id": "https://buildmetric.org/#organization" },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://buildmetric.org/assets/og/privacy.png"
+        },
+        "datePublished": "2024-02-05",
+        "dateModified": "2026-01-15",
+        "inLanguage": "en",
+        "potentialAction": {
+          "@type": "ReadAction",
+          "target": ["https://buildmetric.org/privacy.html"]
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://buildmetric.org/privacy.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://buildmetric.org/" },
+          { "@type": "ListItem", "position": 2, "name": "Legal", "item": "https://buildmetric.org/legal.html" },
+          { "@type": "ListItem", "position": 3, "name": "Privacy Policy", "item": "https://buildmetric.org/privacy.html" }
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://buildmetric.org/#organization",
+        "name": "BuildMetric",
+        "url": "https://buildmetric.org",
+        "email": "contact@buildmetric.org",
+        "description": "Independent construction calculators, estimating tools and technical reference guides for building professionals across the USA, UK and Australia.",
+        "areaServed": ["US", "GB", "AU"],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "contact@buildmetric.org",
+            "availableLanguage": ["en"]
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "privacy",
+            "email": "contact@buildmetric.org",
+            "availableLanguage": ["en"]
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "advertising",
+            "email": "ads@buildmetric.org",
+            "availableLanguage": ["en"]
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- NOTE: FAQPage JSON-LD is deferred to Phase 9/10
+       so the schema matches the exact 7 on-page FAQs. -->
+</head>
+
+  <!-- ============================================================
+     PHASE 2/10 — BODY OPEN + SKIP LINK + PREMIUM NAVBAR
+     ============================================================ -->
+
+<body class="bg-slate-50 text-ink-900 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- Skip link (accessibility) -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-brand-500 focus:px-4 focus:py-2 focus:text-white focus:font-semibold">
+    Skip to main content
+  </a>
+
+  <!-- ============================================================
+       PREMIUM NAVBAR
+       ============================================================ -->
+  <header id="site-header" class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-xl supports-[backdrop-filter]:bg-white/70">
+    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+
+      <!-- Brand -->
+      <a href="/" class="group flex items-center gap-2.5" aria-label="BuildMetric home">
+        <span class="relative grid h-10 w-10 place-items-center rounded-xl bg-ink-900 shadow-card ring-1 ring-white/10 transition-transform duration-300 group-hover:scale-105">
+          <svg viewBox="0 0 100 100" class="h-6 w-6" aria-hidden="true">
+            <path d="M20 70 L50 24 L80 70" fill="none" stroke="#0ea5e9" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M38 70 L50 52 L62 70" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.75" />
+          </svg>
+        </span>
+        <span class="leading-tight">
+          <span class="block font-display text-lg font-extrabold tracking-tight text-ink-900">
+            Build<span class="text-gradient">Metric</span>
+          </span>
+          <span class="hidden text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500 sm:block">
+            Engineering Calculators
+          </span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden items-center gap-7 lg:flex" aria-label="Primary">
+        <a href="/calculators.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Calculators</a>
+        <a href="/roofing.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Roofing</a>
+        <a href="/estimating.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Estimating</a>
+        <a href="/guides.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Guides</a>
+        <a href="/about.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">About</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-2.5">
+        <a href="/contact.html" class="hidden rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100 hover:text-ink-900 md:inline-flex">
+          Contact
+        </a>
+        <a href="/calculators.html" class="cta-shine inline-flex items-center gap-2 rounded-xl bg-ink-900 px-4 py-2.5 text-sm font-bold text-white shadow-card transition-all duration-300 hover:bg-ink-800 hover:shadow-glow focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2">
+          <svg class="h-4 w-4 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <rect x="4" y="2" width="16" height="20" rx="2" />
+            <path d="M8 6h8M8 11h2M12 11h2M16 11h2M8 15h2M12 15h2M16 15h2" />
+          </svg>
+          <span class="hidden sm:inline">Open Tools</span>
+          <span class="sm:hidden">Tools</span>
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button id="navToggle" type="button"
+                class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-ink-900 transition-colors hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 lg:hidden"
+                aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg id="navIconOpen" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <svg id="navIconClose" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white lg:hidden">
+      <nav class="mx-auto max-w-7xl space-y-1 px-4 py-4 sm:px-6" aria-label="Mobile">
+        <a href="/calculators.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Calculators</a>
+        <a href="/roofing.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Roofing</a>
+        <a href="/estimating.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Estimating</a>
+        <a href="/guides.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Guides</a>
+        <a href="/about.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">About</a>
+        <a href="/contact.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Contact</a>
+
+        <!-- Legal quick links -->
+        <div class="mt-2 border-t border-slate-200 pt-2">
+          <p class="px-3 pb-1 pt-1 text-[10px] font-bold uppercase tracking-[0.14em] text-slate-400">Legal</p>
+          <a href="/privacy.html" class="block rounded-lg bg-brand-50 px-3 py-2.5 text-sm font-semibold text-brand-700" aria-current="page">Privacy Policy</a>
+          <a href="/terms.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Terms of Use</a>
+          <a href="/disclaimer.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Disclaimer</a>
+          <a href="/cookie-policy.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Cookie Policy</a>
+        </div>
+
+        <a href="mailto:contact@buildmetric.org" class="mt-2 block rounded-lg bg-ink-900 px-3 py-2.5 text-center text-sm font-bold text-white">contact@buildmetric.org</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================
+     PHASE 3/10 — MAIN OPEN + PRIVACY HERO SECTION
+     ============================================================ -->
+
+  <main id="main-content">
+
+    <!-- ============================================================
+         HERO SECTION
+         ============================================================ -->
+    <section class="hero-mesh relative overflow-hidden">
+      <!-- Decorative grid -->
+      <div class="pointer-events-none absolute inset-0 bg-grid-slate [background-size:46px_46px] opacity-[0.35]" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand-500/20 blur-3xl" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -left-28 bottom-0 h-72 w-72 rounded-full bg-brand-400/10 blur-3xl" aria-hidden="true"></div>
+
+      <div class="relative mx-auto max-w-4xl px-4 pb-16 pt-14 text-center sm:px-6 sm:pb-20 sm:pt-16 lg:pb-24 lg:pt-20">
+
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+          <ol class="flex flex-wrap items-center justify-center gap-2 text-xs font-semibold text-slate-400">
+            <li><a href="/" class="transition-colors hover:text-brand-300">Home</a></li>
+            <li aria-hidden="true" class="text-slate-600">/</li>
+            <li><a href="/legal.html" class="transition-colors hover:text-brand-300">Legal</a></li>
+            <li aria-hidden="true" class="text-slate-600">/</li>
+            <li class="text-brand-300" aria-current="page">Privacy Policy</li>
+          </ol>
+        </nav>
+
+        <!-- Badge -->
+        <span class="inline-flex items-center gap-2 rounded-full border border-brand-400/30 bg-brand-500/10 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-300">
+          <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+          GDPR · CCPA · APP Compliant · Effective 5 February 2024
+        </span>
+
+        <!-- H1 -->
+        <h1 class="mt-6 font-display text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[3.6rem]">
+          Privacy Policy
+          <span class="mt-3 block text-gradient">Your Data, Handled Honestly</span>
+        </h1>
+
+        <!-- Subtext -->
+        <p class="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+          BuildMetric is built for professionals who value clarity — and that same standard applies to how we
+          handle your data. This page explains, in plain language, what we collect, why we collect it, who we
+          share it with (spoiler: almost nobody), and how you can exercise your rights under the laws that
+          apply to you.
+        </p>
+
+        <!-- CTAs -->
+        <div class="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <a href="#introduction" class="cta-shine inline-flex items-center justify-center gap-2 rounded-xl bg-brand-500 px-6 py-3.5 text-sm font-bold text-white shadow-glow transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-300 focus-visible:ring-offset-2 focus-visible:ring-offset-ink-900">
+            Read the Full Policy
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 5v14M6 13l6 6 6-6" />
+            </svg>
+          </a>
+          <a href="mailto:contact@buildmetric.org?subject=Privacy%20Enquiry" class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-6 py-3.5 text-sm font-bold text-white backdrop-blur transition-all duration-300 hover:border-brand-400/50 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-300 focus-visible:ring-offset-2 focus-visible:ring-offset-ink-900">
+            Ask a Privacy Question
+          </a>
+        </div>
+
+        <!-- Inline meta strip -->
+        <dl class="mx-auto mt-10 flex max-w-lg flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-400">
+          <div class="flex items-center gap-1.5">
+            <dt class="text-slate-500">Version</dt>
+            <dd class="font-mono text-white">3.2</dd>
+          </div>
+          <span aria-hidden="true" class="text-slate-600">·</span>
+          <div class="flex items-center gap-1.5">
+            <dt class="text-slate-500">Updated</dt>
+            <dd class="font-mono text-white">15 Jan 2026</dd>
+          </div>
+          <span aria-hidden="true" class="text-slate-600">·</span>
+          <div class="flex items-center gap-1.5">
+            <dt class="text-slate-500">Regions</dt>
+            <dd class="font-mono text-white">US · UK · AU</dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- Bottom fade -->
+      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-b from-transparent to-slate-50" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============================================================
+     PHASE 4/10 — DEEP INTRODUCTION (400+ words)
+     ============================================================ -->
+
+<section id="introduction" class="mx-auto max-w-3xl px-4 pb-12 pt-10 sm:px-6 sm:pt-14 lg:px-8">
+  <header class="mb-6">
+    <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-600">Introduction</p>
+    <h2 class="mt-2 font-display text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">
+      Our Privacy Commitment
+    </h2>
+    <div class="mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brand-500 to-brand-300"></div>
+  </header>
+
+  <div class="legal-prose prose prose-slate max-w-none prose-headings:font-display prose-headings:font-bold prose-p:leading-relaxed prose-p:text-[15.5px] prose-strong:text-ink-900 prose-a:text-brand-600 prose-a:no-underline hover:prose-a:underline">
+    <p class="text-lg leading-relaxed text-slate-700">
+      Most privacy policies are written to protect the company that publishes them, not the person who reads
+      them. They are dense, full of hedge words, and structured to say as little as legally possible while
+      sounding thorough. We think that is backwards — especially on a site used by tradespeople and
+      professionals who do not have time to decode legal jargon between site visits. This policy is written in
+      plain language on purpose, and it is written to be understood rather than merely survived.
+    </p>
+
+    <p>
+      The short version is simple: <strong>we collect very little, we keep it for as short a time as
+      possible, and we do not sell it</strong>. BuildMetric does not require you to create an account, does not
+      ask for payment information, and does not have a login system with stored profiles. You can use every
+      calculator on this site without telling us who you are. If you email us, we receive what you chose to
+      send. If you browse, we receive aggregated technical data about the visit — the same kind of data that
+      virtually every website on the internet collects, and nothing more invasive than that.
+    </p>
+
+    <p>
+      The calculators themselves are designed to be <strong>stateless</strong>. When you enter dimensions,
+      weights or quantities into a roof pitch calculator or a concrete volume estimator, the maths happens in
+      your browser. Your inputs are not transmitted to our servers, and they are not stored, shared or
+      associated with you in any way. The only exception is if you explicitly choose to submit a message
+      through our contact form or send us an email — in which case, the contents of that message become part
+      of our support correspondence and are handled as described later in this document.
+    </p>
+
+    <p>
+      We operate in three jurisdictions — the <strong>United States</strong>, the <strong>United Kingdom</strong>
+      and <strong>Australia</strong> — and we have designed this policy to meet or exceed the requirements of
+      the laws that apply to each. That includes the EU and UK <strong>General Data Protection Regulation
+      (GDPR)</strong>, the <strong>California Consumer Privacy Act</strong> as amended by the
+      <strong>CPRA</strong>, and the <strong>Australian Privacy Principles</strong> under the Privacy Act 1988.
+      Where the laws differ, we apply the strictest standard that is compatible with local requirements, so
+      that a user in any of our three markets receives at least the minimum protection they are entitled to —
+      and often more.
+    </p>
+
+    <p>
+      We also want to be honest about what this policy cannot do. It cannot retroactively change the fact
+      that <strong>advertising networks and analytics providers process some data on our behalf</strong>. It
+      cannot guarantee that no breach will ever occur, because no honest policy can. It cannot eliminate the
+      fundamental reality that the internet is built on third-party services — CDNs, font hosts, ad exchanges
+      — some of which you will interact with indirectly every time you load a page. What it can do is tell you
+      exactly which services those are, what they process, and what controls you have. That is what the
+      remaining sections of this document do.
+    </p>
+
+    <p>
+      If you have read this far and still have questions — or if you have a request about your data that is
+      not covered — please email
+      <a href="mailto:contact@buildmetric.org?subject=Privacy%20Enquiry">contact@buildmetric.org</a>. We read
+      every message, respond within two business days, and treat privacy requests with the same seriousness
+      as reported calculator errors. Privacy is not a tick-box exercise for us; it is part of the same
+      commitment to accuracy and honesty that defines everything else on this site.
+    </p>
+  </div>
+
+  <!-- Quick summary strip -->
+  <ul class="mt-8 grid gap-3 sm:grid-cols-3">
+    <li class="rounded-xl border border-slate-200 bg-white p-4 shadow-card">
+      <div class="flex items-center gap-2">
+        <span class="grid h-7 w-7 place-items-center rounded-md bg-brand-500/10 text-brand-700">
+          <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 6L6 18M6 6l12 12" />
+            <circle cx="12" cy="12" r="10" />
+          </svg>
+        </span>
+        <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">We Don't</p>
+      </div>
+      <p class="mt-2 font-display text-base font-extrabold text-ink-900">Sell Your Data</p>
+      <p class="mt-0.5 text-[11px] text-slate-500">Ever. To anyone.</p>
+    </li>
+    <li class="rounded-xl border border-slate-200 bg-white p-4 shadow-card">
+      <div class="flex items-center gap-2">
+        <span class="grid h-7 w-7 place-items-center rounded-md bg-brand-500/10 text-brand-700">
+          <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 12l2 2 4-4" />
+            <circle cx="12" cy="12" r="10" />
+          </svg>
+        </span>
+        <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">We Don't</p>
+      </div>
+      <p class="mt-2 font-display text-base font-extrabold text-ink-900">Require Sign-Up</p>
+      <p class="mt-0.5 text-[11px] text-slate-500">All tools are free, no account.</p>
+    </li>
+    <li class="rounded-xl border border-slate-200 bg-white p-4 shadow-card">
+      <div class="flex items-center gap-2">
+        <span class="grid h-7 w-7 place-items-center rounded-md bg-brand-500/10 text-brand-700">
+          <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+        </span>
+        <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">We Do</p>
+      </div>
+      <p class="mt-2 font-display text-base font-extrabold text-ink-900">Respect Requests</p>
+      <p class="mt-0.5 text-[11px] text-slate-500">Access, deletion, portability.</p>
+    </li>
+  </ul>
+</section>
+
+   <!-- ============================================================
+     PHASE 5/10 — LEGAL CONTENT CONTAINER + STICKY TOC
+     ============================================================ -->
+
+<section id="legal-content" class="relative border-t border-slate-200 bg-white">
+  <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+    <div class="grid gap-10 lg:grid-cols-12 lg:gap-14">
+
+      <!-- ============================
+           STICKY TABLE OF CONTENTS
+           ============================ -->
+      <aside class="lg:col-span-4">
+        <div class="space-y-4 lg:sticky lg:top-24">
+
+          <nav aria-label="Table of contents" class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+            <div class="border-b border-slate-200 bg-gradient-to-br from-ink-900 to-ink-800 px-5 py-4">
+              <div class="flex items-center gap-2">
+                <svg class="h-4 w-4 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" />
+                </svg>
+                <h2 class="font-display text-sm font-bold uppercase tracking-[0.12em] text-white">On This Page</h2>
+              </div>
+              <p class="mt-1 text-[11px] font-medium text-slate-400">9 sections · approx. 12 min read</p>
+            </div>
+
+            <ol class="max-h-[calc(100vh-22rem)] overflow-y-auto px-2 py-3">
+              <li>
+                <a href="#s-what-we-collect" class="toc-link group flex items-start gap-3 rounded-lg px-3 py-2.5 text-sm transition-colors hover:bg-brand-50">
+                  <span class="toc-num mt-0.5 font-mono text-[11px] font-bold text-brand-500">01</span>
+                  <span class="font-semibold text-slate-700 group-hover:text-brand-700">Information We Collect</span>
+                </a>
+              </li>
+              <li>
+                <a href="#s-how-we-use" class="toc-link group flex items-start gap-3 rounded-lg px-3 py-2.5 text-sm transition-colors hover:bg-brand-50">
+                  <span class="toc-num mt-0.5 font-mono text-[11px] font-bold text-brand-500">02</span>
+                  <span class="font-semibold text-slate-700 group-hover:text-brand-700">How We Use Your Information</span>
+                </a>
+              </li>
+              <li>
+                <a href="#s-cookies" class="toc-link group flex items-start gap-3 rounded-lg px-3 py-2.5 text-sm transition-colors hover:bg-brand-50">
+                  <span class="toc-num mt-0.5 font-mono text-[11px] font-bold text-brand-500">03</span>
+                  <span class="font-semibold text-slate-700 group-hover:text-brand-700">Cookies &amp; Tracking</span>
+                </a>
+              </li>
+              <li>
+                <a href="#s-third-party" class="toc-link group flex items-start gap-3 rounded-lg px-3 py-2.5 text-sm transition-colors hover:bg-brand-50">
+                  <span class="toc-num mt-0.5 font-mono text-[11px] font-bold text-brand-500">04</span>
+                  <span class="font-semibold text-slate-700 group-hover:text-brand-700">Third-Party Services &amp; Analytics</span>
+                </a>
+              </li>
+              <li>
+                <a href="#s-advertising" class="toc-link group flex items-start gap-3 rounded-lg px-3 py-2.5 text-sm transition-colors hover:bg-brand-50">
+                  <span class="toc-num mt-0.5 font-mono text-[11px] font-bold text-brand-500">05</span>
+                  <span class="font-semibold text-slate-700 group-hover:text-brand-700">Advertising &amp; Affiliates</span>
+                </a>
+              </li>
+              <li>
+                <a href="#s-retention-security" class="toc-link group flex items-start gap-3 rounded-lg px-3 py-2.5 text-sm transition-colors hover:bg-brand-50">
+                  <span class="toc-num mt-0.5 font-mono text-[11px] font-bold text-brand-500">06</span>
+                  <span class="font-semibold text-slate-700 group-hover:text-brand-700">Data Retention &amp; Security</span>
+                </a>
+              </li>
+              <li>
+                <a href="#s-your-rights" class="toc-link group flex items-start gap-3 rounded-lg px-3 py-2.5 text-sm transition-colors hover:bg-brand-50">
+                  <span class="toc-num mt-0.5 font-mono text-[11px] font-bold text-brand-500">07</span>
+                  <span class="font-semibold text-slate-700 group-hover:text-brand-700">Your Privacy Rights</span>
+                </a>
+              </li>
+              <li>
+                <a href="#s-international-children" class="toc-link group flex items-start gap-3 rounded-lg px-3 py-2.5 text-sm transition-colors hover:bg-brand-50">
+                  <span class="toc-num mt-0.5 font-mono text-[11px] font-bold text-brand-500">08</span>
+                  <span class="font-semibold text-slate-700 group-hover:text-brand-700">International Transfers &amp; Children</span>
+                </a>
+              </li>
+              <li>
+                <a href="#s-contact-complaints" class="toc-link group flex items-start gap-3 rounded-lg px-3 py-2.5 text-sm transition-colors hover:bg-brand-50">
+                  <span class="toc-num mt-0.5 font-mono text-[11px] font-bold text-brand-500">09</span>
+                  <span class="font-semibold text-slate-700 group-hover:text-brand-700">Contact &amp; Complaints</span>
+                </a>
+              </li>
+            </ol>
+
+            <!-- Progress bar -->
+            <div class="border-t border-slate-200 bg-slate-50 px-4 py-3">
+              <div class="flex items-center justify-between text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">
+                <span>Reading Progress</span>
+                <span id="tocProgressLabel" class="font-mono text-brand-600">0%</span>
+              </div>
+              <div class="mt-2 h-1.5 overflow-hidden rounded-full bg-slate-200">
+                <div id="tocProgressBar" class="h-full w-0 rounded-full bg-gradient-to-r from-brand-500 to-brand-300 transition-all duration-150"></div>
+              </div>
+            </div>
+          </nav>
+
+          <!-- Contact prompt -->
+          <div class="rounded-2xl border border-brand-200 bg-gradient-to-br from-brand-50 to-white p-5 shadow-card">
+            <div class="flex items-start gap-3">
+              <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-brand-500 text-white">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </span>
+              <div>
+                <h3 class="font-display text-sm font-bold text-ink-900">Privacy Request?</h3>
+                <p class="mt-1 text-xs leading-relaxed text-slate-600">
+                  Access, correction, deletion or portability — we respond within two business days.
+                </p>
+                <a href="mailto:contact@buildmetric.org?subject=Privacy%20Request" class="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-brand-700 hover:text-brand-800">
+                  contact@buildmetric.org
+                  <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Companion doc link -->
+          <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-card">
+            <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">Related Documents</p>
+            <ul class="mt-2 space-y-1.5 text-xs font-semibold">
+              <li><a href="/cookie-policy.html" class="inline-flex items-center gap-1.5 text-slate-700 hover:text-brand-700">Cookie Policy →</a></li>
+              <li><a href="/terms.html" class="inline-flex items-center gap-1.5 text-slate-700 hover:text-brand-700">Terms of Use →</a></li>
+              <li><a href="/disclaimer.html" class="inline-flex items-center gap-1.5 text-slate-700 hover:text-brand-700">Disclaimer →</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </aside>
+
+      <!-- ============================
+           MAIN LEGAL CONTENT (Phase 6–8)
+           ============================ -->
+      <article class="lg:col-span-8">
+        <!-- Sections 01–09 will be inserted here in Phases 6, 7, 8 -->
+
+        <!-- ============================================================
+     PHASE 6/10 — SECTIONS 01, 02, 03
+     ============================================================ -->
+
+<!-- SECTION 01 — INFORMATION WE COLLECT -->
+<section id="s-what-we-collect" class="scroll-mt-24">
+  <header class="mb-6">
+    <span class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-brand-700">
+      Section 01
+    </span>
+    <h2 class="mt-3 font-display text-2xl font-extrabold tracking-tight text-ink-900 sm:text-3xl">
+      Information We Collect
+    </h2>
+    <div class="mt-3 h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 to-brand-300"></div>
+  </header>
+
+  <div class="legal-prose prose prose-slate max-w-none prose-p:text-[15.5px] prose-p:leading-relaxed prose-strong:text-ink-900 prose-a:text-brand-600 prose-a:no-underline hover:prose-a:underline">
+    <p>
+      We keep data collection to the minimum required to operate the site safely, securely and
+      reliably. We do not have an account system, we do not ask for your name or address to use a
+      calculator, and we do not use fingerprinting or invasive tracking scripts. What we do collect
+      falls into three categories: <strong>information you give us directly</strong>,
+      <strong>information collected automatically by our servers</strong>, and
+      <strong>information collected by third-party services we use</strong>.
+    </p>
+
+    <h3 class="mt-6 text-lg font-bold text-ink-900">1.1 Information you give us directly</h3>
+    <p>
+      You only provide personal information when you voluntarily contact us. That means:
+    </p>
+  </div>
+
+  <div class="mt-4 overflow-hidden rounded-xl border border-slate-200">
+    <table class="w-full text-left text-sm">
+      <thead class="bg-slate-50 text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">
+        <tr>
+          <th scope="col" class="px-4 py-3">Method</th>
+          <th scope="col" class="px-4 py-3">What We Receive</th>
+          <th scope="col" class="px-4 py-3">Why</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-200 text-[13px]">
+        <tr>
+          <td class="px-4 py-3 font-semibold text-ink-900">Contact form</td>
+          <td class="px-4 py-3 text-slate-700">Name, email, subject, reason, message, page URL (optional)</td>
+          <td class="px-4 py-3 text-slate-700">To respond to your enquiry</td>
+        </tr>
+        <tr class="bg-slate-50/50">
+          <td class="px-4 py-3 font-semibold text-ink-900">Direct email</td>
+          <td class="px-4 py-3 text-slate-700">Your email address, message body, attachments</td>
+          <td class="px-4 py-3 text-slate-700">To respond and log corrections</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-3 font-semibold text-ink-900">Calculator feedback</td>
+          <td class="px-4 py-3 text-slate-700">Whatever you type in the feedback field (if offered)</td>
+          <td class="px-4 py-3 text-slate-700">To improve the tool</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="legal-prose prose prose-slate mt-4 max-w-none prose-p:text-[15.5px] prose-p:leading-relaxed prose-strong:text-ink-900">
+    <p>
+      We do <strong>not</strong> collect your calculator inputs. Values you enter into any calculator
+      on this site are processed entirely within your browser and never transmitted to our servers.
+      If a calculator displays a "Copy result" or "Share result" feature, it only copies text to your
+      clipboard — nothing leaves your device unless you choose to send it to us or post it yourself.
+    </p>
+
+    <h3 class="mt-6 text-lg font-bold text-ink-900">1.2 Information collected automatically</h3>
+    <p>
+      Like virtually all websites, our servers and CDN record basic technical data about every page
+      request. This typically includes:
+    </p>
+    <ul class="mt-2 space-y-1.5 pl-5 text-[15px] text-slate-700">
+      <li class="marker:text-brand-500"><strong>IP address</strong> — logged by our hosting provider, retained briefly for security and abuse prevention.</li>
+      <li class="marker:text-brand-500"><strong>User agent</strong> — browser type and version, operating system.</li>
+      <li class="marker:text-brand-500"><strong>Referrer URL</strong> — the page or search engine that led you to us.</li>
+      <li class="marker:text-brand-500"><strong>Requested URL and timestamp</strong> — what was loaded and when.</li>
+      <li class="marker:text-brand-500"><strong>HTTP status and response time</strong> — for performance monitoring.</li>
+    </ul>
+    <p>
+      This data is aggregated and used for security monitoring, debugging and capacity planning. It
+      is not linked to any individual user profile.
+    </p>
+
+    <h3 class="mt-6 text-lg font-bold text-ink-900">1.3 Information we do <em>not</em> collect</h3>
+    <p>
+      To be equally clear about what is off-limits, BuildMetric does <strong>not</strong> knowingly
+      collect: payment information (we have no paid products), government identification, biometric
+      data, precise geolocation (only coarse country-level from CDN logs), health information, or any
+      special category data under GDPR Article 9. We do not have a login system, so we do not store
+      passwords. We do not run session-replay tools or heatmap software that records keystrokes.
+    </p>
+  </div>
+
+  <div class="mt-6 rounded-xl border-l-4 border-brand-500 bg-brand-50/60 p-4 sm:p-5">
+    <p class="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-700">
+      <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      </svg>
+      Key Point
+    </p>
+    <p class="mt-2 text-sm leading-relaxed text-slate-700">
+      Calculator inputs never leave your browser. Your use of the tools is between you and your device.
+    </p>
+  </div>
+</section>
+
+<hr class="my-12 border-slate-200" />
+
+<!-- SECTION 02 — HOW WE USE YOUR INFORMATION -->
+<section id="s-how-we-use" class="scroll-mt-24">
+  <header class="mb-6">
+    <span class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-brand-700">
+      Section 02
+    </span>
+    <h2 class="mt-3 font-display text-2xl font-extrabold tracking-tight text-ink-900 sm:text-3xl">
+      How We Use Your Information
+    </h2>
+    <div class="mt-3 h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 to-brand-300"></div>
+  </header>
+
+  <div class="legal-prose prose prose-slate max-w-none prose-p:text-[15.5px] prose-p:leading-relaxed prose-strong:text-ink-900 prose-a:text-brand-600 prose-a:no-underline hover:prose-a:underline">
+    <p>
+      Every category of data we collect has a specific, documented purpose. We do not collect
+      information "just in case" or retain it in the hope that it might one day become useful. The
+      table below sets out exactly what we use each category for, along with the legal basis under
+      the GDPR (which we apply as our baseline standard across all three markets).
+    </p>
+  </div>
+
+  <div class="mt-4 overflow-hidden rounded-xl border border-slate-200">
+    <table class="w-full text-left text-sm">
+      <thead class="bg-slate-50 text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">
+        <tr>
+          <th scope="col" class="px-4 py-3">Data</th>
+          <th scope="col" class="px-4 py-3">Purpose</th>
+          <th scope="col" class="px-4 py-3">Legal Basis</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-200 text-[13px]">
+        <tr>
+          <td class="px-4 py-3 font-semibold text-ink-900">Contact form submissions</td>
+          <td class="px-4 py-3 text-slate-700">Respond to enquiries, corrections, advertising requests</td>
+          <td class="px-4 py-3 text-slate-700">Legitimate interest / consent</td>
+        </tr>
+        <tr class="bg-slate-50/50">
+          <td class="px-4 py-3 font-semibold text-ink-900">Direct emails</td>
+          <td class="px-4 py-3 text-slate-700">Support correspondence, correction tracking</td>
+          <td class="px-4 py-3 text-slate-700">Legitimate interest</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-3 font-semibold text-ink-900">Server logs (IP, UA)</td>
+          <td class="px-4 py-3 text-slate-700">Security, abuse prevention, capacity planning</td>
+          <td class="px-4 py-3 text-slate-700">Legitimate interest</td>
+        </tr>
+        <tr class="bg-slate-50/50">
+          <td class="px-4 py-3 font-semibold text-ink-900">Analytics (aggregated)</td>
+          <td class="px-4 py-3 text-slate-700">Understanding which tools are used, improving content</td>
+          <td class="px-4 py-3 text-slate-700">Legitimate interest / consent</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-3 font-semibold text-ink-900">Advertising identifiers</td>
+          <td class="px-4 py-3 text-slate-700">Funding the site via display ads (see Section 05)</td>
+          <td class="px-4 py-3 text-slate-700">Consent</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="legal-prose prose prose-slate mt-4 max-w-none prose-p:text-[15.5px] prose-p:leading-relaxed prose-strong:text-ink-900">
+    <p>
+      We will <strong>never</strong> use your data for automated decision-making that has legal or
+      significant effects on you, and we do not build behavioural profiles for the purpose of
+      targeting content or products on our site. We do not sell data to data brokers, marketing
+      agencies, lead-generation networks, or any third party — for any price. This is not just a
+      policy statement; it is a structural feature of how the site is built.
+    </p>
+
+    <p>
+      We also use aggregated, non-identifying data — such as "the roof pitch calculator received
+      15,000 visits last month" — for editorial decisions and for communicating with potential
+      advertisers. This data cannot be used to identify any individual user.
+    </p>
+  </div>
+
+  <div class="mt-6 rounded-xl border-l-4 border-ink-900 bg-slate-50 p-4 sm:p-5">
+    <p class="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-ink-900">
+      <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M18 6L6 18M6 6l12 12" />
+        <circle cx="12" cy="12" r="10" />
+      </svg>
+      Never
+    </p>
+    <p class="mt-2 text-sm leading-relaxed text-slate-700">
+      We do not sell, rent, trade or share personal data with data brokers, marketing networks or
+      lead-generation companies. This applies to all three markets we serve.
+    </p>
+  </div>
+</section>
+
+<hr class="my-12 border-slate-200" />
+
+<!-- SECTION 03 — COOKIES & TRACKING -->
+<section id="s-cookies" class="scroll-mt-24">
+  <header class="mb-6">
+    <span class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-brand-700">
+      Section 03
+    </span>
+    <h2 class="mt-3 font-display text-2xl font-extrabold tracking-tight text-ink-900 sm:text-3xl">
+      Cookies &amp; Tracking
+    </h2>
+    <div class="mt-3 h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 to-brand-300"></div>
+  </header>
+
+  <div class="legal-prose prose prose-slate max-w-none prose-p:text-[15.5px] prose-p:leading-relaxed prose-strong:text-ink-900 prose-a:text-brand-600 prose-a:no-underline hover:prose-a:underline">
+    <p>
+      Cookies are small text files placed on your device by a website you visit. They are used for
+      many different purposes — remembering preferences, maintaining security, measuring traffic,
+      serving advertising — and they are not inherently good or bad. What matters is transparency:
+      knowing who sets them, why, and how you can control them.
+    </p>
+
+    <p>
+      BuildMetric uses four categories of cookies. The first two are set by us directly and are
+      essential to the site working. The last two are set by third-party services (analytics and
+      advertising) and are subject to your consent, which we collect through the cookie banner shown
+      on your first visit.
+    </p>
+  </div>
+
+  <div class="mt-4 overflow-hidden rounded-xl border border-slate-200">
+    <table class="w-full text-left text-sm">
+      <thead class="bg-slate-50 text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">
+        <tr>
+          <th scope="col" class="px-4 py-3">Category</th>
+          <th scope="col" class="px-4 py-3">Examples</th>
+          <th scope="col" class="px-4 py-3">Duration</th>
+          <th scope="col" class="px-4 py-3">Consent</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-200 text-[13px]">
+        <tr>
+          <td class="px-4 py-3 font-semibold text-ink-900">Strictly necessary</td>
+          <td class="px-4 py-3 text-slate-700">Cookie consent preferences</td>
+          <td class="px-4 py-3 text-slate-700">12 months</td>
+          <td class="px-4 py-3"><span class="rounded-md bg-brand-100 px-2 py-0.5 text-[10px] font-bold text-brand-700">Always on</span></td>
+        </tr>
+        <tr class="bg-slate-50/50">
+          <td class="px-4 py-3 font-semibold text-ink-900">Functional</td>
+          <td class="px-4 py-3 text-slate-700">Preferred unit system (imperial / metric), theme</td>
+          <td class="px-4 py-3 text-slate-700">Session</td>
+          <td class="px-4 py-3"><span class="rounded-md bg-brand-100 px-2 py-0.5 text-[10px] font-bold text-brand-700">Always on</span></td>
+        </tr>
+        <tr>
+          <td class="px-4 py-3 font-semibold text-ink-900">Analytics</td>
+          <td class="px-4 py-3 text-slate-700">Anonymised page views, session data (see Section 04)</td>
+          <td class="px-4 py-3 text-slate-700">Up to 24 months</td>
+          <td class="px-4 py-3"><span class="rounded-md bg-slate-100 px-2 py-0.5 text-[10px] font-bold text-slate-600">Optional</span></td>
+        </tr>
+        <tr class="bg-slate-50/50">
+          <td class="px-4 py-3 font-semibold text-ink-900">Advertising</td>
+          <td class="px-4 py-3 text-slate-700">Set by ad networks (see Section 05)</td>
+          <td class="px-4 py-3 text-slate-700">Up to 13 months</td>
+          <td class="px-4 py-3"><span class="rounded-md bg-slate-100 px-2 py-0.5 text-[10px] font-bold text-slate-600">Optional</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="legal-prose prose prose-slate mt-4 max-w-none prose-p:text-[15.5px] prose-p:leading-relaxed prose-strong:text-ink-900">
+    <p>
+      <strong>You control the optional categories.</strong> On your first visit, a banner asks you to
+      accept or reject non-essential cookies. If you reject, only the strictly necessary and functional
+      cookies are set, and analytics and advertising scripts are blocked entirely. You can change your
+      preference at any time from the cookie settings link in the footer, and you can also clear
+      cookies through your browser at any time.
+    </p>
+    <p>
+      In the <strong>EU, UK and California</strong>, the banner is configured to be compliant with
+      GDPR, UK GDPR and CPRA respectively — meaning no optional cookie is set before you actively
+      opt in. For more detail on the specific cookies we use and their individual lifespans, see our
+      <a href="/cookie-policy.html">Cookie Policy</a>.
+    </p>
+  </div>
+
+  <div class="mt-6 rounded-xl border-l-4 border-brand-500 bg-brand-50/60 p-4 sm:p-5">
+    <p class="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-700">
+      <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 16v-4M12 8h.01" />
+      </svg>
+      Your Choice
+    </p>
+    <p class="mt-2 text-sm leading-relaxed text-slate-700">
+      Rejecting analytics and advertising cookies has no effect on the calculators or content. All
+      tools work identically whether you accept them or not.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     PHASE 7/10 — SECTIONS 04, 05, 06
+     ============================================================ -->
+
+<hr class="my-12 border-slate-200" />
+
+<!-- SECTION 04 — THIRD-PARTY SERVICES & ANALYTICS -->
+<section id="s-third-party" class="scroll-mt-24">
+  <header class="mb-6">
+    <span class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-brand-700">
+      Section 04
+    </span>
+    <h2 class="mt-3 font-display text-2xl font-extrabold tracking-tight text-ink-900 sm:text-3xl">
+      Third-Party Services &amp; Analytics
+    </h2>
+    <div class="mt-3 h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 to-brand-300"></div>
+  </header>
+
+  <div class="legal-prose prose prose-slate max-w-none prose-p:text-[15.5px] prose-p:leading-relaxed prose-strong:text-ink-900 prose-a:text-brand-600 prose-a:no-underline hover:prose-a:underline">
+    <p>
+      No modern website runs without third-party services. The fonts, the performance layer, the
+      analytics, the advertising — each is delivered by a company other than the one you are reading.
+      We think you deserve to know exactly which providers we use, what they process and what
+      safeguards are in place. The table below covers all the third-party services that touch
+      buildmetric.org in a way that involves your data.
+    </p>
+  </div>
+
+  <div class="mt-4 overflow-hidden rounded-xl border border-slate-200">
+    <table class="w-full text-left text-sm">
+      <thead class="bg-slate-50 text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">
+        <tr>
+          <th scope="col" class="px-4 py-3">Service</th>
+          <th scope="col" class="px-4 py-3">Purpose</th>
+          <th scope="col" class="px-4 py-3">Data Processed</th>
+          <th scope="col" class="px-4 py-3">Privacy</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-200 text-[13px]">
+        <tr>
+          <td class="px-4 py-3 font-semibold text-ink-900">Google Analytics</td>
+          <td class="px-4 py-3 text-slate-700">Traffic analytics</td>
+          <td class="px-4 py-3 text-slate-700">Anonymised IP, page views, referrer, browser</td>
+          <td class="px-4 py-3"><a href="https://policies.google.com/privacy" class="font-semibold text-brand-600 hover:underline" rel="noopener noreferrer nofollow" target="_blank">google.com/privacy</a></td>
+        </tr>
+        <tr class="bg-slate-50/50">
+          <td class="px-4 py-3 font-semibold text-ink-900">Google AdSense</td>
+          <td class="px-4 py-3 text-slate-700">Display advertising</td>
+          <td class="px-4 py-3 text-slate-700">Cookies, ad identifiers, coarse geolocation</td>
+          <td class="px-4 py-3"><a href="https://policies.google.com/technologies/ads" class="font-semibold text-brand-600 hover:underline" rel="noopener noreferrer nofollow" target="_blank">google.com/ads</a></td>
+        </tr>
+        <tr>
+          <td class="px-4 py-3 font-semibold text-ink-900">Google Fonts</td>
+          <td class="px-4 py-3 text-slate-700">Typography delivery</td>
+          <td class="px-4 py-3 text-slate-700">IP, browser (font file request)</td>
+          <td class="px-4 py-3"><a href="https://policies.google.com/privacy" class="font-semibold text-brand-600 hover:underline" rel="noopener noreferrer nofollow" target="_blank">google.com/privacy</a></td>
+        </tr>
+        <tr class="bg-slate-50/50">
+          <td class="px-4 py-3 font-semibold text-ink-900">Cloudflare</td>
+          <td class="px-4 py-3 text-slate-700">CDN, DDoS protection</td>
+          <td class="px-4 py-3 text-slate-700">IP, request headers, security challenge cookies</td>
+          <td class="px-4 py-3"><a href="https://www.cloudflare.com/privacypolicy/" class="font-semibold text-brand-600 hover:underline" rel="noopener noreferrer nofollow" target="_blank">cloudflare.com</a></td>
+        </tr>
+        <tr>
+          <td class="px-4 py-3 font-semibold text-ink-900">Affiliate networks</td>
+          <td class="px-4 py-3 text-slate-700">Purchase tracking (see Section 05)</td>
+          <td class="px-4 py-3 text-slate-700">Click ID, referrer, product SKU</td>
+          <td class="px-4 py-3"><span class="text-slate-500">Varies — disclosed at link</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="legal-prose prose prose-slate mt-4 max-w-none prose-p:text-[15.5px] prose-p:leading-relaxed prose-strong:text-ink-900 prose-a:text-brand-600 prose-a:no-underline hover:prose-a:underline">
+    <p>
+      Each provider is bound by its own privacy policy and, where applicable, by a data processing
+      agreement (DPA) with us. For Google services specifically, we have enabled
+      <strong>IP anonymisation</strong> in Google Analytics so that the last octet of your IP address
+      is discarded before storage. We do <strong>not</strong> use Google Analytics 4's user-ID feature,
+      cross-device tracking or Google Signals — features that would allow Google to combine data
+      across sites.
+    </p>
+
+    <p>
+      For <strong>Cloudflare</strong>, the security layer that protects the site from DDoS attacks and
+      abuse, some request data is processed at the edge before it reaches our servers. Cloudflare's
+      security cookies are strictly necessary — they prevent attacks — and expire quickly. They do not
+      track you across sites.
+    </p>
+
+    <p>
+      You can block these services entirely with browser extensions such as uBlock Origin or
+      Privacy Badger. Doing so will not break the calculators — the only effect is that analytics
+      will not receive your visit and some ads will not appear. We do not attempt to detect or bypass
+      ad blockers.
+    </p>
+  </div>
+
+  <div class="mt-6 rounded-xl border-l-4 border-brand-500 bg-brand-50/60 p-4 sm:p-5">
+    <p class="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-700">
+      <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M9 12l2 2 4-4" />
+        <circle cx="12" cy="12" r="10" />
+      </svg>
+      Good to Know
+    </p>
+    <p class="mt-2 text-sm leading-relaxed text-slate-700">
+      Blocking analytics and advertising scripts has no effect on calculator functionality. Every tool
+      works the same whether these services are loaded or not.
+    </p>
+  </div>
+</section>
+
+<hr class="my-12 border-slate-200" />
+
+<!-- SECTION 05 — ADVERTISING & AFFILIATES -->
+<section id="s-advertising" class="scroll-mt-24">
+  <header class="mb-6">
+    <span class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-brand-700">
+      Section 05
+    </span>
+    <h2 class="mt-3 font-display text-2xl font-extrabold tracking-tight text-ink-900 sm:text-3xl">
+      Advertising &amp; Affiliates
+    </h2>
+    <div class="mt-3 h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 to-brand-300"></div>
+  </header>
+
+  <div class="legal-prose prose prose-slate max-w-none prose-p:text-[15.5px] prose-p:leading-relaxed prose-strong:text-ink-900 prose-a:text-brand-600 prose-a:no-underline hover:prose-a:underline">
+    <p>
+      BuildMetric is free to use, and it is funded primarily through advertising and, on some pages,
+      affiliate commissions. This is not a hidden fact — it is disclosed at the top of every page that
+      contains affiliate links, and our ads are always visibly marked as "Ad Space" or "Advertisement."
+      What we will not do is let advertising compromise the accuracy or honesty of our editorial
+      content. That is a structural commitment, not a marketing line.
+    </p>
+
+    <h3 class="mt-6 text-lg font-bold text-ink-900">5.1 Display advertising</h3>
+    <p>
+      Display ads on BuildMetric are served through <strong>Google AdSense</strong> and, from time to
+      time, other reputable ad networks. These networks use cookies and similar technologies to
+      select and measure ads, and they may use the data they collect — including your approximate
+      location, device type and browsing behaviour — to serve ads that are more likely to be relevant
+      to you. We do not control this data processing directly, but we choose our ad partners carefully
+      and configure their settings to minimise tracking.
+    </p>
+
+    <p>
+      We have specifically configured our AdSense settings to:
+    </p>
+    <ul class="mt-2 space-y-1.5 pl-5 text-[15px] text-slate-700">
+      <li class="marker:text-brand-500">Disable personalised advertising for users in the EEA, UK and Switzerland unless they have given consent through the Google-certified consent flow.</li>
+      <li class="marker:text-brand-500">Exclude ads from sensitive categories (gambling, alcohol, political advertising, weight loss) in line with Google's publisher policies.</li>
+      <li class="marker:text-brand-500">Block any ad that attempts to overlay calculator results, auto-play audio, or use interstitial formats on mobile.</li>
+      <li class="marker:text-brand-500">Reject ads for products or services we consider misleading or unsafe for a construction industry audience.</li>
+    </ul>
+
+    <h3 class="mt-6 text-lg font-bold text-ink-900">5.2 Affiliate links</h3>
+    <p>
+      Some of our guides reference specific products — a particular membrane, a tool, a safety
+      accessory. When we link to a retailer for one of these products, the link may be an affiliate
+      link. If you buy through that link, we receive a small commission from the retailer at no extra
+      cost to you. The commission rate varies by product and retailer.
+    </p>
+
+    <p>
+      We want to be very clear about what this <strong>does not</strong> mean:
+    </p>
+
+    <ul class="mt-2 space-y-1.5 pl-5 text-[15px] text-slate-700">
+      <li class="marker:text-brand-500">We do not recommend products <em>because</em> they have an affiliate program. We recommend products we would recommend anyway, based on field experience or published specifications.</li>
+      <li class="marker:text-brand-500">We do not reorder recommendations to favour higher-commission products. If two products are equally suitable, we may mention both.</li>
+      <li class="marker:text-brand-500">We do not accept paid placements. A retailer cannot pay to have their product featured in a guide.</li>
+      <li class="marker:text-brand-500">Affiliate relationships do not influence calculator formulas, editorial conclusions, code references or rankings — ever.</li>
+    </ul>
+
+    <p>
+      Every page that contains affiliate links displays a disclosure notice at the top, before the
+      first link. If you prefer not to use affiliate links, you can generally find the same product
+      by searching the manufacturer's name directly.
+    </p>
+  </div>
+
+  <div class="mt-6 rounded-xl border-l-4 border-ink-900 bg-slate-50 p-4 sm:p-5">
+    <p class="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-ink-900">
+      <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.5 1.5" />
+        <path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.5-1.5" />
+      </svg>
+      Affiliate Disclosure
+    </p>
+    <p class="mt-2 text-sm leading-relaxed text-slate-700">
+      Affiliate links are always disclosed before the first link on any page. Advertising partners and
+      affiliates have no editorial input, and no ability to influence calculator results, formula
+      selection or written conclusions.
+    </p>
+  </div>
+</section>
+
+<hr class="my-12 border-slate-200" />
+
+<!-- SECTION 06 — DATA RETENTION & SECURITY -->
+<section id="s-retention-security" class="scroll-mt-24">
+  <header class="mb-6">
+    <span class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-brand-700">
+      Section 06
+    </span>
+    <h2 class="mt-3 font-display text-2xl font-extrabold tracking-tight text-ink-900 sm:text-3xl">
+      Data Retention &amp; Security
+    </h2>
+    <div class="mt-3 h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 to-brand-300"></div>
+  </header>
+
+  <div class="legal-prose prose prose-slate max-w-none prose-p:text-[15.5px] prose-p:leading-relaxed prose-strong:text-ink-900 prose-a:text-brand-600 prose-a:no-underline hover:prose-a:underline">
+    <p>
+      Data we retain is retained only as long as necessary. Data we protect is protected to a
+      standard appropriate to its sensitivity. Both of these principles sound obvious when written
+      down — but they are frequently violated, and we want to be concrete about how they apply in
+      practice.
+    </p>
+
+    <h3 class="mt-6 text-lg font-bold text-ink-900">6.1 How long we keep data</h3>
+  </div>
+
+  <div class="mt-4 overflow-hidden rounded-xl border border-slate-200">
+    <table class="w-full text-left text-sm">
+      <thead class="bg-slate-50 text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">
+        <tr>
+          <th scope="col" class="px-4 py-3">Data Type</th>
+          <th scope="col" class="px-4 py-3">Retention Period</th>
+          <th scope="col" class="px-4 py-3">Reason</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-200 text-[13px]">
+        <tr>
+          <td class="px-4 py-3 font-semibold text-ink-900">Server logs (IP, UA)</td>
+          <td class="px-4 py-3 text-slate-700">Up to 30 days</td>
+          <td class="px-4 py-3 text-slate-700">Security, abuse detection</td>
+        </tr>
+        <tr class="bg-slate-50/50">
+          <td class="px-4 py-3 font-semibold text-ink-900">Analytics events</td>
+          <td class="px-4 py-3 text-slate-700">Up to 24 months</td>
+          <td class="px-4 py-3 text-slate-700">Traffic trends, editorial planning</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-3 font-semibold text-ink-900">Contact form submissions</td>
+          <td class="px-4 py-3 text-slate-700">Up to 24 months</td>
+          <td class="px-4 py-3 text-slate-700">Support history, correction log</td>
+        </tr>
+        <tr class="bg-slate-50/50">
+          <td class="px-4 py-3 font-semibold text-ink-900">Correction records</td>
+          <td class="px-4 py-3 text-slate-700">Indefinite (anonymised)</td>
+          <td class="px-4 py-3 text-slate-700">Public version history</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-3 font-semibold text-ink-900">Cookie consent preferences</td>
+          <td class="px-4 py-3 text-slate-700">12 months</td>
+          <td class="px-4 py-3 text-slate-700">Remembering your choice</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="legal-prose prose prose-slate mt-4 max-w-none prose-p:text-[15.5px] prose-p:leading-relaxed prose-strong:text-ink-900">
+    <p>
+      When a retention period expires, data is deleted or anonymised automatically. For correction
+      records, the specific bug or error is retained indefinitely in our version history — but the
+      reporter's personal information is redacted or removed after the standard 24-month period, and
+      is only kept longer with explicit consent.
+    </p>
+
+    <h3 class="mt-6 text-lg font-bold text-ink-900">6.2 How we protect data</h3>
+    <p>
+      Data in transit between your browser and our servers is encrypted using <strong>TLS 1.3</strong>
+      (HTTPS), and we enforce HSTS to prevent downgrade attacks. Where data is stored on our servers,
+      access is restricted to a small number of personnel and protected by multi-factor authentication.
+      We do not store payment information, because we have no payment system.
+    </p>
+
+    <p>
+      The most significant protection measure is architectural:
+      <strong>we collect very little in the first place</strong>. Calculators run in your browser —
+      your inputs never reach us. Contact form data is stored briefly and then deleted. There is no
+      login system that could be compromised. There is no customer database of personal information
+      to be leaked. The most reliable way to prevent a data breach is not to hold data — and we take
+      that principle seriously.
+    </p>
+
+    <p>
+      In the unlikely event of a breach that affects personal data, we will notify affected users and,
+      where required by law, the relevant supervisory authority (the ICO in the UK, the relevant state
+      AG in California, the OAIC in Australia, and the relevant EU DPA) within the timeframes required
+      by the applicable regulation.
+    </p>
+  </div>
+
+  <div class="mt-6 rounded-xl border-l-4 border-brand-500 bg-brand-50/60 p-4 sm:p-5">
+    <p class="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-700">
+      <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      </svg>
+      Design Principle
+    </p>
+    <p class="mt-2 text-sm leading-relaxed text-slate-700">
+      The safest data is data we never collect. We collect only what we need to operate the site and
+      respond to your messages — nothing more.
+    </p>
+  </div>
+</section>
+
+          <!-- ============================================================
+               PHASE 8/10 — SECTIONS 07, 08, 09 + CLOSING TAGS
+               ============================================================ -->
+
+          <hr class="my-12 border-slate-200" />
+
+          <!-- SECTION 07 — YOUR PRIVACY RIGHTS -->
+          <section id="s-your-rights" class="scroll-mt-24">
+            <header class="mb-6">
+              <span class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-brand-700">
+                Section 07
+              </span>
+              <h2 class="mt-3 font-display text-2xl font-extrabold tracking-tight text-ink-900 sm:text-3xl">
+                Your Privacy Rights
+              </h2>
+              <div class="mt-3 h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 to-brand-300"></div>
+            </header>
+
+            <div class="legal-prose prose prose-slate max-w-none prose-p:text-[15.5px] prose-p:leading-relaxed prose-strong:text-ink-900 prose-a:text-brand-600 prose-a:no-underline hover:prose-a:underline">
+              <p>
+                Depending on where you live, you have specific legal rights over the personal information we
+                hold about you. We apply the strongest of these rights across all three markets — meaning that
+                even if you are not covered by GDPR, you will still receive the same baseline protections when
+                you interact with BuildMetric. The table below summarises what you can ask us to do, and how we
+                respond.
+              </p>
+            </div>
+
+            <div class="mt-4 overflow-hidden rounded-xl border border-slate-200">
+              <table class="w-full text-left text-sm">
+                <thead class="bg-slate-50 text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">
+                  <tr>
+                    <th scope="col" class="px-4 py-3">Right</th>
+                    <th scope="col" class="px-4 py-3">What It Means</th>
+                    <th scope="col" class="px-4 py-3">Response Time</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200 text-[13px]">
+                  <tr>
+                    <td class="px-4 py-3 font-semibold text-ink-900">Access</td>
+                    <td class="px-4 py-3 text-slate-700">Confirm what personal data we hold about you and receive a copy</td>
+                    <td class="px-4 py-3 font-mono text-slate-700">≤ 30 days</td>
+                  </tr>
+                  <tr class="bg-slate-50/50">
+                    <td class="px-4 py-3 font-semibold text-ink-900">Correction</td>
+                    <td class="px-4 py-3 text-slate-700">Fix inaccurate or incomplete information</td>
+                    <td class="px-4 py-3 font-mono text-slate-700">≤ 30 days</td>
+                  </tr>
+                  <tr>
+                    <td class="px-4 py-3 font-semibold text-ink-900">Deletion</td>
+                    <td class="px-4 py-3 text-slate-700">Erase your personal data (subject to legal retention obligations)</td>
+                    <td class="px-4 py-3 font-mono text-slate-700">≤ 30 days</td>
+                  </tr>
+                  <tr class="bg-slate-50/50">
+                    <td class="px-4 py-3 font-semibold text-ink-900">Portability</td>
+                    <td class="px-4 py-3 text-slate-700">Receive your data in a structured, machine-readable format</td>
+                    <td class="px-4 py-3 font-mono text-slate-700">≤ 30 days</td>
+                  </tr>
+                  <tr>
+                    <td class="px-4 py-3 font-semibold text-ink-900">Restriction</td>
+                    <td class="px-4 py-3 text-slate-700">Ask us to pause processing while a dispute is resolved</td>
+                    <td class="px-4 py-3 font-mono text-slate-700">≤ 30 days</td>
+                  </tr>
+                  <tr class="bg-slate-50/50">
+                    <td class="px-4 py-3 font-semibold text-ink-900">Objection</td>
+                    <td class="px-4 py-3 text-slate-700">Object to processing based on legitimate interest</td>
+                    <td class="px-4 py-3 font-mono text-slate-700">≤ 30 days</td>
+                  </tr>
+                  <tr>
+                    <td class="px-4 py-3 font-semibold text-ink-900">Withdraw consent</td>
+                    <td class="px-4 py-3 text-slate-700">Withdraw any consent you previously gave (e.g., analytics cookies)</td>
+                    <td class="px-4 py-3 font-mono text-slate-700">Immediate</td>
+                  </tr>
+                  <tr class="bg-slate-50/50">
+                    <td class="px-4 py-3 font-semibold text-ink-900">Non-discrimination</td>
+                    <td class="px-4 py-3 text-slate-700">No penalty for exercising your rights (CCPA/CPRA)</td>
+                    <td class="px-4 py-3 font-mono text-slate-700">N/A</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="legal-prose prose prose-slate mt-4 max-w-none prose-p:text-[15.5px] prose-p:leading-relaxed prose-strong:text-ink-900 prose-a:text-brand-600 prose-a:no-underline hover:prose-a:underline">
+              <h3 class="mt-6 text-lg font-bold text-ink-900">7.1 How to exercise your rights</h3>
+              <p>
+                To exercise any of the rights above, email
+                <a href="mailto:contact@buildmetric.org?subject=Privacy%20Request">contact@buildmetric.org</a>
+                with the subject line <em>"Privacy Request"</em>. Please include:
+              </p>
+              <ul class="mt-2 space-y-1.5 pl-5 text-[15px] text-slate-700">
+                <li class="marker:text-brand-500">The right you wish to exercise (access, deletion, correction, etc.)</li>
+                <li class="marker:text-brand-500">The email address or other identifier associated with your request</li>
+                <li class="marker:text-brand-500">Any additional context that would help us locate the relevant records</li>
+              </ul>
+              <p>
+                We will acknowledge your request within <strong>5 business days</strong> and respond substantively
+                within <strong>30 calendar days</strong> — ahead of the 30-day statutory limit under GDPR and the
+                45-day limit under CCPA/CPRA. If your request requires more time, we will tell you why and
+                provide a new expected date.
+              </p>
+
+              <h3 class="mt-6 text-lg font-bold text-ink-900">7.2 Region-specific notes</h3>
+            </div>
+
+            <div class="mt-3 grid gap-3 sm:grid-cols-3">
+              <div class="rounded-xl border border-slate-200 bg-white p-4">
+                <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-700">US · California</p>
+                <p class="mt-1.5 text-[12px] font-semibold text-ink-900">CCPA / CPRA</p>
+                <p class="mt-1 text-[11.5px] leading-relaxed text-slate-600">
+                  Right to know, delete, correct, opt out of sale/sharing. <strong class="text-ink-900">We do not sell
+                  or share</strong> personal information.
+                </p>
+              </div>
+              <div class="rounded-xl border border-slate-200 bg-white p-4">
+                <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-700">UK · EU</p>
+                <p class="mt-1.5 text-[12px] font-semibold text-ink-900">GDPR / UK GDPR</p>
+                <p class="mt-1 text-[11.5px] leading-relaxed text-slate-600">
+                  Right to lodge a complaint with the ICO (UK) or your local EU DPA. We encourage you to contact
+                  us first.
+                </p>
+              </div>
+              <div class="rounded-xl border border-slate-200 bg-white p-4">
+                <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-700">Australia</p>
+                <p class="mt-1.5 text-[12px] font-semibold text-ink-900">Privacy Act 1988</p>
+                <p class="mt-1 text-[11.5px] leading-relaxed text-slate-600">
+                  Australian Privacy Principles (APPs). Complaints may be escalated to the OAIC after contacting
+                  us first.
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-6 rounded-xl border-l-4 border-brand-500 bg-brand-50/60 p-4 sm:p-5">
+              <p class="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-700">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 12l2 2 4-4" />
+                  <circle cx="12" cy="12" r="10" />
+                </svg>
+                No Fee
+              </p>
+              <p class="mt-2 text-sm leading-relaxed text-slate-700">
+                Exercising any privacy right is free. We do not charge fees for access, deletion or correction
+                requests, and we do not require you to use a specific form or platform to make a request.
+              </p>
+            </div>
+          </section>
+
+          <hr class="my-12 border-slate-200" />
+
+          <!-- SECTION 08 — INTERNATIONAL TRANSFERS & CHILDREN -->
+          <section id="s-international-children" class="scroll-mt-24">
+            <header class="mb-6">
+              <span class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-brand-700">
+                Section 08
+              </span>
+              <h2 class="mt-3 font-display text-2xl font-extrabold tracking-tight text-ink-900 sm:text-3xl">
+                International Transfers &amp; Children
+              </h2>
+              <div class="mt-3 h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 to-brand-300"></div>
+            </header>
+
+            <div class="legal-prose prose prose-slate max-w-none prose-p:text-[15.5px] prose-p:leading-relaxed prose-strong:text-ink-900 prose-a:text-brand-600 prose-a:no-underline hover:prose-a:underline">
+              <h3 class="mt-2 text-lg font-bold text-ink-900">8.1 International data transfers</h3>
+              <p>
+                BuildMetric is operated from and served to users in multiple countries. Because the internet is
+                global by nature, your data may be processed in jurisdictions other than the one in which you
+                live. When this happens, we apply the safeguards described below.
+              </p>
+
+              <p>
+                Our primary hosting and security layer is <strong>Cloudflare</strong>, which operates a global
+                edge network. Cloudflare processes request data at the edge node closest to you to ensure fast,
+                secure delivery — this may mean your IP and request headers are briefly processed in a country
+                other than your own. Cloudflare's data processing is governed by its own DPA, which includes the
+                EU Standard Contractual Clauses for transfers originating in the EEA.
+              </p>
+
+              <p>
+                Our analytics (Google Analytics) is operated by Google LLC, which may process data in the United
+                States. Google is certified under the EU-US Data Privacy Framework (DPF) and UK Extension, which
+                provides a lawful mechanism for EEA-to-US and UK-to-US data transfers. IP anonymisation is
+                enabled in all our Google Analytics configurations.
+              </p>
+
+              <p>
+                Where required by law, we rely on <strong>Standard Contractual Clauses (SCCs)</strong> approved
+                by the European Commission, or the equivalent UK IDTA, as the transfer mechanism for
+                personal data leaving the EEA or UK. For Australian users, we take reasonable steps consistent
+                with Australian Privacy Principle 8 to ensure overseas recipients handle your data in a manner
+                consistent with the APPs.
+              </p>
+
+              <h3 class="mt-6 text-lg font-bold text-ink-900">8.2 Children's privacy</h3>
+              <p>
+                BuildMetric is a professional tool intended for adults working in or studying the construction
+                industry. The site is <strong>not directed at children under the age of 16</strong>, and we do
+                not knowingly collect personal information from anyone under 16 — or under 13 in the United
+                States, consistent with the Children's Online Privacy Protection Act (COPPA).
+              </p>
+
+              <p>
+                Because we do not have an account system, a login process, or any interactive feature that
+                requires personal data to use, the site is structurally minimal in terms of children's data
+                risk. We do not knowingly process personal information from minors, and we do not use
+                age-gating mechanisms that would inadvertently encourage children to falsify their age.
+              </p>
+
+              <p>
+                If you are a parent or guardian and believe your child has sent us personal information — for
+                example, via the contact form — please email
+                <a href="mailto:contact@buildmetric.org?subject=Child%20Data%20Request">contact@buildmetric.org</a>
+                with the subject line <em>"Child Data Request"</em>. We will delete the relevant records within
+                five business days of verifying the request.
+              </p>
+            </div>
+
+            <div class="mt-6 rounded-xl border-l-4 border-ink-900 bg-slate-50 p-4 sm:p-5">
+              <p class="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-ink-900">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 16v-4M12 8h.01" />
+                </svg>
+                Age Notice
+              </p>
+              <p class="mt-2 text-sm leading-relaxed text-slate-700">
+                BuildMetric is intended for adults. If you are under 16 (or under 13 in the US), please do not
+                submit personal information through our contact form or by email.
+              </p>
+            </div>
+          </section>
+
+          <hr class="my-12 border-slate-200" />
+
+          <!-- SECTION 09 — CONTACT & COMPLAINTS -->
+          <section id="s-contact-complaints" class="scroll-mt-24">
+            <header class="mb-6">
+              <span class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-brand-700">
+                Section 09
+              </span>
+              <h2 class="mt-3 font-display text-2xl font-extrabold tracking-tight text-ink-900 sm:text-3xl">
+                Contact &amp; Complaints
+              </h2>
+              <div class="mt-3 h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 to-brand-300"></div>
+            </header>
+
+            <div class="legal-prose prose prose-slate max-w-none prose-p:text-[15.5px] prose-p:leading-relaxed prose-strong:text-ink-900 prose-a:text-brand-600 prose-a:no-underline hover:prose-a:underline">
+              <p>
+                If you have questions about this policy, want to exercise a privacy right, or believe we have
+                not handled your data correctly, please contact us. We would much rather hear from you directly
+                than have you escalate to a regulator — and in almost every case, we can resolve the issue
+                quickly.
+              </p>
+            </div>
+
+            <div class="mt-4 grid gap-4 sm:grid-cols-2">
+              <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-card">
+                <div class="flex items-center gap-2.5">
+                  <span class="grid h-9 w-9 place-items-center rounded-lg bg-brand-500 text-white">
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                  </span>
+                  <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">Privacy Enquiries</p>
+                </div>
+                <a href="mailto:contact@buildmetric.org?subject=Privacy%20Enquiry" class="mt-3 block break-all font-mono text-sm font-bold text-ink-900 hover:text-brand-700">
+                  contact@buildmetric.org
+                </a>
+                <p class="mt-1.5 text-[11.5px] leading-relaxed text-slate-600">
+                  For rights requests, questions about this policy, or data concerns. Reply within 2 business
+                  days.
+                </p>
+              </div>
+
+              <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-card">
+                <div class="flex items-center gap-2.5">
+                  <span class="grid h-9 w-9 place-items-center rounded-lg bg-ink-900 text-brand-400">
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M3 11l18-8-8 18-2-8-8-2z" />
+                    </svg>
+                  </span>
+                  <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">Advertising</p>
+                </div>
+                <a href="mailto:ads@buildmetric.org" class="mt-3 block break-all font-mono text-sm font-bold text-ink-900 hover:text-brand-700">
+                  ads@buildmetric.org
+                </a>
+                <p class="mt-1.5 text-[11.5px] leading-relaxed text-slate-600">
+                  For advertising and partnership enquiries. Not the right address for privacy requests.
+                </p>
+              </div>
+            </div>
+
+            <div class="legal-prose prose prose-slate mt-4 max-w-none prose-p:text-[15.5px] prose-p:leading-relaxed prose-strong:text-ink-900 prose-a:text-brand-600 prose-a:no-underline hover:prose-a:underline">
+              <h3 class="mt-6 text-lg font-bold text-ink-900">9.1 If you are not satisfied</h3>
+              <p>
+                We take privacy complaints seriously and will do our best to resolve them. If your concern is
+                not resolved to your satisfaction after contacting us, you have the right to escalate the matter
+                to the relevant supervisory authority in your jurisdiction:
+              </p>
+
+              <ul class="mt-2 space-y-1.5 pl-5 text-[15px] text-slate-700">
+                <li class="marker:text-brand-500"><strong>United Kingdom:</strong> Information Commissioner's Office (ICO) — ico.org.uk</li>
+                <li class="marker:text-brand-500"><strong>European Union:</strong> your local Data Protection Authority (DPA)</li>
+                <li class="marker:text-brand-500"><strong>Australia:</strong> Office of the Australian Information Commissioner (OAIC) — oaic.gov.au</li>
+                <li class="marker:text-brand-500"><strong>California:</strong> California Attorney General — oag.ca.gov/privacy</li>
+              </ul>
+
+                            <h3 class="mt-6 text-lg font-bold text-ink-900">9.2 Changes to this policy</h3>
+              <p>
+                This privacy policy is versioned and dated. When we make material changes — for example, adding
+                a new third-party service, altering the legal basis for a data category, or changing the
+                retention period for a class of data — we will:
+              </p>
+
+              <ul class="mt-2 space-y-1.5 pl-5 text-[15px] text-slate-700">
+                <li class="marker:text-brand-500">Update the "Last updated" date at the top of this page</li>
+                <li class="marker:text-brand-500">Increment the version number (currently <strong>3.2</strong>)</li>
+                <li class="marker:text-brand-500">Display a notice on the homepage for at least 30 days</li>
+                <li class="marker:text-brand-500">Where required by law, notify users directly by email</li>
+              </ul>
+
+              <p>
+                Minor changes — such as fixing a typo, clarifying wording, or updating a link — may be made
+                without incrementing the version, but the "Last updated" date will always reflect the most
+                recent revision. We recommend checking back periodically if you have specific privacy concerns.
+              </p>
+
+              <p>
+                This version of the policy was published on <strong>15 January 2026</strong> and supersedes all
+                previous versions. If you have a copy of an older version and want to compare, email
+                <a href="mailto:contact@buildmetric.org?subject=Privacy%20Version%20Request">contact@buildmetric.org</a>
+                and we will send you a diff.
+              </p>
+            </div>
+
+            <div class="mt-6 rounded-2xl border border-brand-200 bg-gradient-to-br from-brand-50 to-white p-5 shadow-card sm:p-6">
+              <div class="flex items-start gap-3.5">
+                <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-500 text-white shadow-glow">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4 4h16v16H4z" />
+                    <path d="M4 7l8 6 8-6" />
+                  </svg>
+                </span>
+                <div class="min-w-0">
+                  <h4 class="font-display text-sm font-bold text-ink-900">Privacy Contact Summary</h4>
+                  <p class="mt-1.5 text-[12.5px] leading-relaxed text-slate-700">
+                    One email address handles every privacy matter:
+                    <a href="mailto:contact@buildmetric.org?subject=Privacy%20Enquiry" class="font-semibold text-brand-700 underline decoration-brand-400 underline-offset-2 hover:text-brand-800">contact@buildmetric.org</a>.
+                    Rights requests, questions, complaints, version requests — all go to the same inbox, all
+                    acknowledged within 5 business days, all resolved within 30 days.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     PHASE 9/10 — FAQPage JSON-LD + 7 FAQS + TRUST/AUTHOR BOX
+     ============================================================ -->
+
+<!-- ============ FAQPage JSON-LD (matches exactly 7 on-page FAQs) ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://buildmetric.org/privacy.html#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you store the numbers I enter into your calculators?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every calculator on BuildMetric runs entirely in your browser. The values you enter — dimensions, quantities, weights — are never transmitted to our servers, never logged, and never associated with you in any way. The maths happens locally on your device. Even if you copy a result to your clipboard, that action stays on your device unless you choose to email it to us or post it elsewhere yourself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you sell my personal data to third parties?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. BuildMetric does not sell, rent, trade or share personal data with data brokers, marketing agencies, lead-generation networks or any other third party — at any price. This is a structural commitment, not a marketing line. We have no paid products, no account system and no customer database of personal information that could be monetised. The only third parties that process any data are the essential service providers listed in Section 04 of our Privacy Policy (Cloudflare, Google Analytics, Google AdSense and Google Fonts), all of which are bound by their own data processing agreements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What cookies does BuildMetric use, and can I reject them?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BuildMetric uses four categories of cookies: strictly necessary (consent preferences), functional (unit system preference), analytics (anonymised traffic measurement) and advertising (served by Google AdSense). The first two are always on because the site cannot function without them. The last two are optional and are only set if you actively opt in via the cookie banner shown on your first visit. Rejecting analytics and advertising cookies has no effect on calculator functionality — every tool works identically whether you accept them or not. You can change your preference at any time from the cookie settings link in the footer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I request a copy of my data or ask for it to be deleted?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Email contact@buildmetric.org with the subject line 'Privacy Request' and specify the right you wish to exercise (access, correction, deletion, portability, restriction, objection or withdrawal of consent). Include the email address associated with your request and any context that would help us locate the records. We acknowledge every request within 5 business days and respond substantively within 30 calendar days — ahead of the statutory limits under GDPR (30 days), CCPA/CPRA (45 days) and the Australian Privacy Act. Exercising a privacy right is completely free, and we do not require you to use a specific form or platform."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you comply with GDPR, UK GDPR, CCPA/CPRA and the Australian Privacy Principles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We have designed this policy and our internal practices to meet or exceed the requirements of all three major frameworks: the EU and UK General Data Protection Regulation (GDPR), the California Consumer Privacy Act as amended by the CPRA, and the Australian Privacy Principles under the Privacy Act 1988. Where the frameworks differ — for example, in the required timeframe for responding to a data access request — we apply the strictest standard that is compatible with local requirements, so users in any of our three markets receive at least the minimum protection they are entitled to, and often more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are children allowed to use BuildMetric?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BuildMetric is a professional tool intended for adults working in or studying the construction industry. The site is not directed at children under the age of 16, and we do not knowingly collect personal information from anyone under 16 — or under 13 in the United States, consistent with the Children's Online Privacy Protection Act (COPPA). Because we do not have an account system or any interactive feature that requires personal data to use, the site is structurally minimal in terms of children's data risk. If you are a parent or guardian and believe your child has submitted personal information, email contact@buildmetric.org with the subject 'Child Data Request' and we will delete the relevant records within five business days of verification."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How will I know if this privacy policy changes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This privacy policy is versioned and dated — the current version (3.2) was published on 15 January 2026. When we make material changes, such as adding a new third-party service, changing the legal basis for processing a data category, or altering the retention period for a class of data, we will update the 'Last updated' date at the top of the page, increment the version number, display a notice on the homepage for at least 30 days, and where required by law, notify affected users directly by email. Minor changes such as typo fixes or link updates may be made without incrementing the version, but the update date will always reflect the most recent revision. If you would like a diff between any two versions, email contact@buildmetric.org and we will send it."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- ============================================================
+     FAQ SECTION — EXACTLY 7 QUESTIONS
+     ============================================================ -->
+<section id="faqs" class="border-t border-slate-200 bg-gradient-to-b from-slate-50 to-white">
+  <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+
+    <header class="mb-10 text-center">
+      <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-600">Frequently Asked Questions</p>
+      <h2 class="mt-2 font-display text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">
+        Common Privacy Questions
+      </h2>
+      <div class="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brand-500 to-brand-300"></div>
+      <p class="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-slate-600">
+        Seven direct answers about how BuildMetric handles your data — calculator inputs, cookies, third-party
+        services, regional laws and how to exercise your rights.
+      </p>
+    </header>
+
+    <div class="space-y-3">
+
+      <!-- FAQ 1 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">01</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">
+              Do you store the numbers I enter into your calculators?
+            </span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 5v14M5 12h14" />
+          </svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            <strong class="text-ink-900">No.</strong> Every calculator on BuildMetric runs entirely in your
+            browser. The values you enter — dimensions, quantities, weights — are never transmitted to our
+            servers, never logged, and never associated with you in any way. The maths happens locally on your
+            device. Even if you copy a result to your clipboard, that action stays on your device unless you
+            choose to email it to us or post it elsewhere yourself.
+          </p>
+        </div>
+      </details>
+
+      <!-- FAQ 2 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">02</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">
+              Do you sell my personal data to third parties?
+            </span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 5v14M5 12h14" />
+          </svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            <strong class="text-ink-900">No.</strong> BuildMetric does not sell, rent, trade or share personal
+            data with data brokers, marketing agencies, lead-generation networks or any other third party — at
+            any price. This is a structural commitment, not a marketing line. We have no paid products, no
+            account system and no customer database of personal information that could be monetised. The only
+            third parties that process any data are the essential service providers listed in Section 04 of our
+            Privacy Policy (Cloudflare, Google Analytics, Google AdSense and Google Fonts), all of which are
+            bound by their own data processing agreements.
+          </p>
+        </div>
+      </details>
+
+      <!-- FAQ 3 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">03</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">
+              What cookies does BuildMetric use, and can I reject them?
+            </span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 5v14M5 12h14" />
+          </svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            BuildMetric uses four categories of cookies: <strong class="text-ink-900">strictly necessary</strong>
+            (consent preferences), <strong class="text-ink-900">functional</strong> (unit system preference),
+            <strong class="text-ink-900">analytics</strong> (anonymised traffic measurement) and
+            <strong class="text-ink-900">advertising</strong> (served by Google AdSense). The first two are
+            always on because the site cannot function without them. The last two are optional and are only set
+            if you actively opt in via the cookie banner shown on your first visit. Rejecting analytics and
+            advertising cookies has no effect on calculator functionality — every tool works identically
+            whether you accept them or not. You can change your preference at any time from the cookie settings
+            link in the footer.
+          </p>
+        </div>
+      </details>
+
+      <!-- FAQ 4 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">04</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">
+              How do I request a copy of my data or ask for it to be deleted?
+            </span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 5v14M5 12h14" />
+          </svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            Email
+            <a href="mailto:contact@buildmetric.org?subject=Privacy%20Request" class="font-semibold text-brand-600 hover:underline">contact@buildmetric.org</a>
+            with the subject line <em>"Privacy Request"</em> and specify the right you wish to exercise (access,
+            correction, deletion, portability, restriction, objection or withdrawal of consent). Include the
+            email address associated with your request and any context that would help us locate the records.
+            We acknowledge every request within <strong class="text-ink-900">5 business days</strong> and respond
+            substantively within <strong class="text-ink-900">30 calendar days</strong> — ahead of the statutory
+            limits under GDPR (30 days), CCPA/CPRA (45 days) and the Australian Privacy Act. Exercising a
+            privacy right is completely free, and we do not require you to use a specific form or platform.
+          </p>
+        </div>
+      </details>
+
+      <!-- FAQ 5 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">05</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">
+              Do you comply with GDPR, UK GDPR, CCPA/CPRA and the Australian Privacy Principles?
+            </span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 5v14M5 12h14" />
+          </svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            <strong class="text-ink-900">Yes.</strong> We have designed this policy and our internal practices
+            to meet or exceed the requirements of all three major frameworks: the EU and UK General Data
+            Protection Regulation (GDPR), the California Consumer Privacy Act as amended by the CPRA, and the
+            Australian Privacy Principles under the Privacy Act 1988. Where the frameworks differ — for example,
+            in the required timeframe for responding to a data access request — we apply the strictest standard
+            that is compatible with local requirements, so users in any of our three markets receive at least
+            the minimum protection they are entitled to, and often more.
+          </p>
+        </div>
+      </details>
+
+      <!-- FAQ 6 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">06</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">
+              Are children allowed to use BuildMetric?
+            </span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 5v14M5 12h14" />
+          </svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            BuildMetric is a professional tool intended for adults working in or studying the construction
+            industry. The site is <strong class="text-ink-900">not directed at children under the age of 16</strong>,
+            and we do not knowingly collect personal information from anyone under 16 — or under 13 in the
+            United States, consistent with the Children's Online Privacy Protection Act (COPPA). Because we do
+            not have an account system or any interactive feature that requires personal data to use, the site
+            is structurally minimal in terms of children's data risk. If you are a parent or guardian and believe
+            your child has submitted personal information, email
+            <a href="mailto:contact@buildmetric.org?subject=Child%20Data%20Request" class="font-semibold text-brand-600 hover:underline">contact@buildmetric.org</a>
+            with the subject <em>"Child Data Request"</em> and we will delete the relevant records within five
+            business days of verification.
+          </p>
+        </div>
+      </details>
+
+            <!-- FAQ 7 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">07</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">
+              How will I know if this privacy policy changes?
+            </span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 5v14M5 12h14" />
+          </svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            This privacy policy is <strong class="text-ink-900">versioned and dated</strong> — the current
+            version (3.2) was published on 15 January 2026. When we make material changes, such as adding a new
+            third-party service, changing the legal basis for processing a data category, or altering the
+            retention period for a class of data, we will update the "Last updated" date at the top of the page,
+            increment the version number, display a notice on the homepage for at least 30 days, and where
+            required by law, notify affected users directly by email. Minor changes such as typo fixes or link
+            updates may be made without incrementing the version, but the update date will always reflect the
+            most recent revision. If you would like a diff between any two versions, email
+            <a href="mailto:contact@buildmetric.org?subject=Privacy%20Version%20Request" class="font-semibold text-brand-600 hover:underline">contact@buildmetric.org</a>
+            and we will send it.
+          </p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- Continue prompt -->
+    <div class="mt-10 rounded-2xl border border-brand-200 bg-brand-50 p-5 text-center sm:p-6">
+      <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-brand-700">Still have a privacy question?</p>
+      <p class="mt-2 text-sm leading-relaxed text-slate-700">
+        Email
+        <a href="mailto:contact@buildmetric.org?subject=Privacy%20Enquiry" class="font-semibold text-brand-700 underline decoration-brand-400 underline-offset-2 hover:text-brand-800">contact@buildmetric.org</a>
+        — every message is read by a real person, and we reply within two business days.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TRUST / AUTHOR BOX (Privacy-specific variant)
+     ============================================================ -->
+<section id="author-box" class="border-t border-slate-200 bg-gradient-to-b from-white to-slate-50">
+  <div class="mx-auto max-w-4xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
+
+    <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+
+      <!-- Header strip -->
+      <div class="border-b border-slate-200 bg-gradient-to-br from-ink-900 to-ink-800 px-6 py-4 sm:px-8">
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <div class="flex items-center gap-2.5">
+            <span class="grid h-7 w-7 place-items-center rounded-md bg-brand-500 text-white">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </span>
+            <p class="font-display text-[11px] font-bold uppercase tracking-[0.16em] text-brand-300">
+              Data Protection Contact
+            </p>
+          </div>
+          <p class="font-mono text-[10px] font-bold uppercase tracking-[0.14em] text-slate-400">
+            v3.2 · 15 Jan 2026
+          </p>
+        </div>
+      </div>
+
+      <!-- Body -->
+      <div class="px-6 py-6 sm:px-8 sm:py-8">
+        <div class="grid gap-8 md:grid-cols-12">
+
+          <!-- Left: DPO-style contact -->
+          <div class="md:col-span-7">
+
+            <div class="flex items-start gap-4">
+              <span class="grid h-14 w-14 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-glow">
+                <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <path d="M9 12l2 2 4-4" />
+                </svg>
+              </span>
+              <div class="min-w-0">
+                <h3 class="font-display text-xl font-extrabold tracking-tight text-ink-900 sm:text-2xl">
+                  BuildMetric Privacy Team
+                </h3>
+                <p class="mt-0.5 text-sm font-semibold text-brand-700">Data Protection &amp; Compliance</p>
+                <p class="mt-1 text-[11px] font-medium uppercase tracking-[0.14em] text-slate-500">
+                  GDPR · CCPA/CPRA · Australian Privacy Act
+                </p>
+              </div>
+            </div>
+
+            <p class="mt-5 text-[14.5px] leading-relaxed text-slate-600">
+              Privacy matters at BuildMetric are handled by a small, dedicated compliance team within our
+              editorial group. Every rights request, privacy concern and data protection question lands in the
+              same inbox and is triaged by the same person — not routed through a support ticket system, and
+              never passed to a third-party outsourcer.
+            </p>
+
+            <p class="mt-3 text-[14.5px] leading-relaxed text-slate-600">
+              We respond to privacy requests in <strong class="text-ink-900">English</strong> and can direct you
+              to the relevant supervisory authority in your jurisdiction if you need to escalate. Our processing
+              is deliberately minimal — most requests are resolved simply because we hold very little personal
+              data in the first place.
+            </p>
+
+            <ul class="mt-5 space-y-2.5">
+              <li class="flex items-start gap-2.5 text-[13.5px] text-slate-700">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span><strong class="text-ink-900">Human-handled</strong> — every privacy request is read by a real compliance person.</span>
+              </li>
+              <li class="flex items-start gap-2.5 text-[13.5px] text-slate-700">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span><strong class="text-ink-900">5-day acknowledgment</strong> — every request, every time, no exceptions.</span>
+              </li>
+              <li class="flex items-start gap-2.5 text-[13.5px] text-slate-700">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span><strong class="text-ink-900">Free of charge</strong> — we never charge for access, deletion or correction.</span>
+              </li>
+            </ul>
+
+            <div class="mt-6 flex flex-wrap gap-2">
+              <a href="mailto:contact@buildmetric.org?subject=Privacy%20Enquiry" class="inline-flex items-center gap-1.5 rounded-lg bg-ink-900 px-3.5 py-2 text-xs font-bold text-white transition-colors hover:bg-ink-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2">
+                <svg class="h-3.5 w-3.5 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16v16H4z" />
+                  <path d="M4 7l8 6 8-6" />
+                </svg>
+                contact@buildmetric.org
+              </a>
+              <a href="/cookie-policy.html" class="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3.5 py-2 text-xs font-bold text-slate-700 transition-colors hover:border-brand-300 hover:text-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2">
+                Cookie Policy
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: meta + companion docs -->
+          <div class="md:col-span-5">
+
+            <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 sm:p-5">
+              <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">This Document</p>
+              <dl class="mt-3 space-y-3">
+                <div class="flex items-start justify-between gap-3 border-b border-slate-200 pb-3">
+                  <dt class="text-[11px] font-semibold uppercase tracking-wide text-slate-500">Document</dt>
+                  <dd class="text-right text-xs font-bold text-ink-900">Privacy Policy</dd>
+                </div>
+                <div class="flex items-start justify-between gap-3 border-b border-slate-200 pb-3">
+                  <dt class="text-[11px] font-semibold uppercase tracking-wide text-slate-500">Version</dt>
+                  <dd class="text-right font-mono text-xs font-bold text-ink-900">3.2</dd>
+                </div>
+                <div class="flex items-start justify-between gap-3 border-b border-slate-200 pb-3">
+                  <dt class="text-[11px] font-semibold uppercase tracking-wide text-slate-500">Last Updated</dt>
+                  <dd class="text-right font-mono text-xs font-bold text-ink-900">15 Jan 2026</dd>
+                </div>
+                <div class="flex items-start justify-between gap-3 border-b border-slate-200 pb-3">
+                  <dt class="text-[11px] font-semibold uppercase tracking-wide text-slate-500">Acknowledgment</dt>
+                  <dd class="text-right text-xs font-bold text-ink-900">≤ 5 business days</dd>
+                </div>
+                <div class="flex items-start justify-between gap-3">
+                  <dt class="text-[11px] font-semibold uppercase tracking-wide text-slate-500">Resolution</dt>
+                  <dd class="text-right text-xs font-bold text-ink-900">≤ 30 days</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="mt-3 rounded-xl border border-brand-200 bg-brand-50 p-4">
+              <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-700">Companion Documents</p>
+              <ul class="mt-2.5 space-y-2 text-xs font-semibold">
+                <li>
+                  <a href="/cookie-policy.html" class="inline-flex items-center gap-1.5 text-brand-700 transition-colors hover:text-brand-800 hover:underline">
+                    Cookie Policy
+                    <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="/terms.html" class="inline-flex items-center gap-1.5 text-brand-700 transition-colors hover:text-brand-800 hover:underline">
+                    Terms of Use
+                    <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="/disclaimer.html" class="inline-flex items-center gap-1.5 text-brand-700 transition-colors hover:text-brand-800 hover:underline">
+                    Disclaimer
+                    <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="/contact.html" class="inline-flex items-center gap-1.5 text-brand-700 transition-colors hover:text-brand-800 hover:underline">
+                    Contact
+                    <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-3 rounded-xl border border-slate-200 bg-white p-4">
+              <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">Escalation</p>
+              <p class="mt-1.5 text-[11.5px] leading-relaxed text-slate-600">
+                Not satisfied after contacting us? You can escalate to the ICO (UK), your local EU DPA, the
+                OAIC (Australia) or the California AG. Full details in Section 09.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- ============================================================
+       PHASE 10/10 — FINAL SCRIPTS + PREMIUM FOOTER + CLOSING TAGS
+       ============================================================ -->
+
+  <!-- ============================================================
+       FINAL JAVASCRIPT
+       ============================================================ -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ============================================================
+         1. MOBILE MENU TOGGLE
+         ============================================================ */
+      (function initMobileMenu() {
+        var toggle = document.getElementById('navToggle');
+        var menu = document.getElementById('mobileMenu');
+        var iconOpen = document.getElementById('navIconOpen');
+        var iconClose = document.getElementById('navIconClose');
+        if (!toggle || !menu) return;
+
+        toggle.addEventListener('click', function () {
+          var isOpen = !menu.classList.contains('hidden');
+          menu.classList.toggle('hidden', isOpen);
+          iconOpen.classList.toggle('hidden', !isOpen);
+          iconClose.classList.toggle('hidden', isOpen);
+          toggle.setAttribute('aria-expanded', String(!isOpen));
+        });
+
+        menu.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            menu.classList.add('hidden');
+            iconOpen.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+            menu.classList.add('hidden');
+            iconOpen.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.focus();
+          }
+        });
+      })();
+
+      /* ============================================================
+         2. SMOOTH SCROLL FOR HASH LINKS (offset for sticky navbar)
+         ============================================================ */
+      (function initSmoothScroll() {
+        var headerOffset = 88;
+        document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+          var targetId = link.getAttribute('href');
+          if (!targetId || targetId === '#') return;
+
+          link.addEventListener('click', function (e) {
+            var target = document.querySelector(targetId);
+            if (!target) return;
+            e.preventDefault();
+            var top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+            if (history.pushState) history.pushState(null, '', targetId);
+          });
+        });
+      })();
+
+      /* ============================================================
+         3. TOC ACTIVE SECTION HIGHLIGHT (IntersectionObserver)
+         ============================================================ */
+      (function initTocHighlight() {
+        var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.toc-link'));
+        if (!tocLinks.length) return;
+
+        var sections = tocLinks.map(function (link) {
+          var id = link.getAttribute('href');
+          return document.querySelector(id);
+        }).filter(Boolean);
+
+        if (!sections.length) return;
+
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              var id = '#' + entry.target.id;
+              tocLinks.forEach(function (link) {
+                link.classList.toggle('is-active', link.getAttribute('href') === id);
+              });
+            }
+          });
+        }, {
+          rootMargin: '-25% 0px -60% 0px',
+          threshold: 0
+        });
+
+        sections.forEach(function (s) { observer.observe(s); });
+      })();
+
+      /* ============================================================
+         4. READING PROGRESS BAR (driven by scroll through #legal-content)
+         ============================================================ */
+      (function initReadingProgress() {
+        var bar = document.getElementById('tocProgressBar');
+        var label = document.getElementById('tocProgressLabel');
+        var container = document.getElementById('legal-content');
+        if (!bar || !label || !container) return;
+
+        function update() {
+          var rect = container.getBoundingClientRect();
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          var viewportH = window.innerHeight;
+
+          var sectionTop = rect.top + scrollTop;
+          var sectionHeight = container.offsetHeight;
+          var scrolled = scrollTop + viewportH * 0.35 - sectionTop;
+
+          var pct = Math.max(0, Math.min(100, (scrolled / sectionHeight) * 100));
+          bar.style.width = pct.toFixed(1) + '%';
+          label.textContent = Math.round(pct) + '%';
+        }
+
+        var ticking = false;
+        window.addEventListener('scroll', function () {
+          if (!ticking) {
+            window.requestAnimationFrame(function () {
+              update();
+              ticking = false;
+            });
+            ticking = true;
+          }
+        }, { passive: true });
+
+        window.addEventListener('resize', update);
+        update();
+      })();
+
+      /* ============================================================
+         5. AUTO-EXPAND FIRST FAQ (if user lands on #faqs)
+         ============================================================ */
+      (function initFaqAutoExpand() {
+        if (window.location.hash === '#faqs') {
+          var first = document.querySelector('#faqs details');
+          if (first) first.setAttribute('open', '');
+        }
+      })();
+
+      /* ============================================================
+         6. REVEAL-ON-SCROLL (subtle entrance for bento tiles)
+         ============================================================ */
+      (function initReveal() {
+        if (!('IntersectionObserver' in window)) return;
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        var tiles = document.querySelectorAll('.bento-tile');
+        if (!tiles.length) return;
+
+        tiles.forEach(function (el) {
+          el.style.opacity = '0';
+          el.style.transform = 'translateY(12px)';
+          el.style.transition = 'opacity .5s ease, transform .5s ease';
+        });
+
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateY(0)';
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { rootMargin: '0px 0px -40px 0px', threshold: 0.05 });
+
+        tiles.forEach(function (el) { observer.observe(el); });
+      })();
+
+    })();
+  </script>
+
+  <!-- Year auto-fill -->
+  <script>
+    (function () {
+      var el = document.getElementById('yearNow');
+      if (el) el.textContent = new Date().getFullYear();
+    })();
+  </script>
+
+  <!-- ============================================================
+       PREMIUM FOOTER
+       ============================================================ -->
+  <footer class="relative overflow-hidden border-t border-ink-800 bg-ink-950 text-slate-400">
+
+    <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-500/60 to-transparent" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -right-32 -top-32 h-72 w-72 rounded-full bg-brand-500/10 blur-3xl" aria-hidden="true"></div>
+
+    <div class="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
+
+      <!-- Top grid -->
+      <div class="grid gap-10 md:grid-cols-12 md:gap-8">
+
+        <!-- Brand column -->
+        <div class="md:col-span-4">
+          <a href="/" class="group flex items-center gap-2.5" aria-label="BuildMetric home">
+            <span class="grid h-10 w-10 place-items-center rounded-xl bg-white/5 ring-1 ring-white/10 transition-transform duration-300 group-hover:scale-105">
+              <svg viewBox="0 0 100 100" class="h-6 w-6" aria-hidden="true">
+                <path d="M20 70 L50 24 L80 70" fill="none" stroke="#0ea5e9" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M38 70 L50 52 L62 70" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.75" />
+              </svg>
+            </span>
+            <span class="leading-tight">
+              <span class="block font-display text-lg font-extrabold tracking-tight text-white">
+                Build<span class="text-gradient">Metric</span>
+              </span>
+              <span class="block text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+                Engineering Calculators
+              </span>
+            </span>
+          </a>
+
+          <p class="mt-5 max-w-sm text-[13.5px] leading-relaxed text-slate-400">
+            Independent construction calculators, estimating tools and technical reference guides for building
+            professionals across the <span class="text-white">USA</span>, <span class="text-white">UK</span> and
+            <span class="text-white">Australia</span>. Engineered for accuracy. Published for transparency.
+          </p>
+
+          <div class="mt-6 space-y-2">
+            <a href="mailto:contact@buildmetric.org" class="group flex items-center gap-2.5 text-sm font-semibold text-slate-300 transition-colors hover:text-brand-300">
+              <span class="grid h-8 w-8 place-items-center rounded-lg bg-white/5 ring-1 ring-white/10 transition-colors group-hover:bg-brand-500/20 group-hover:ring-brand-400/40">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16v16H4z" />
+                  <path d="M4 7l8 6 8-6" />
+                </svg>
+              </span>
+              contact@buildmetric.org
+            </a>
+            <a href="mailto:ads@buildmetric.org" class="group flex items-center gap-2.5 text-sm font-semibold text-slate-300 transition-colors hover:text-brand-300">
+              <span class="grid h-8 w-8 place-items-center rounded-lg bg-white/5 ring-1 ring-white/10 transition-colors group-hover:bg-brand-500/20 group-hover:ring-brand-400/40">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M3 11l18-8-8 18-2-8-8-2z" />
+                </svg>
+              </span>
+              ads@buildmetric.org
+            </a>
+          </div>
+
+          <!-- Cookie preferences -->
+          <button type="button" id="cookieSettingsBtn" class="mt-4 inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-[11px] font-bold text-slate-300 transition-colors hover:border-brand-400/40 hover:bg-brand-500/10 hover:text-brand-300">
+            <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M8.5 8.5h.01M15.5 15.5h.01M12 12h.01M8.5 15.5h.01M15.5 8.5h.01" />
+            </svg>
+            Cookie Settings
+          </button>
+        </div>
+
+        <!-- Calculators column -->
+        <div class="md:col-span-2">
+          <h3 class="font-display text-[11px] font-bold uppercase tracking-[0.16em] text-white">Calculators</h3>
+          <ul class="mt-4 space-y-2.5 text-[13.5px]">
+            <li><a href="/roof-pitch-calculator.html" class="transition-colors hover:text-brand-300">Roof Pitch</a></li>
+            <li><a href="/concrete-calculator.html" class="transition-colors hover:text-brand-300">Concrete Volume</a></li>
+            <li><a href="/stud-count-calculator.html" class="transition-colors hover:text-brand-300">Stud Count</a></li>
+            <li><a href="/paint-coverage-calculator.html" class="transition-colors hover:text-brand-300">Paint Coverage</a></li>
+            <li><a href="/calculators.html" class="font-semibold text-brand-400 transition-colors hover:text-brand-300">All Tools →</a></li>
+          </ul>
+        </div>
+
+        <!-- Company column -->
+        <div class="md:col-span-2">
+          <h3 class="font-display text-[11px] font-bold uppercase tracking-[0.16em] text-white">Company</h3>
+          <ul class="mt-4 space-y-2.5 text-[13.5px]">
+            <li><a href="/about.html" class="transition-colors hover:text-brand-300">About</a></li>
+            <li><a href="/guides.html" class="transition-colors hover:text-brand-300">Guides</a></li>
+            <li><a href="/contact.html" class="transition-colors hover:text-brand-300">Contact</a></li>
+            <li><a href="/sitemap.xml" class="transition-colors hover:text-brand-300">Sitemap</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal column -->
+        <div class="md:col-span-4">
+          <h3 class="font-display text-[11px] font-bold uppercase tracking-[0.16em] text-white">Legal &amp; Compliance</h3>
+          <ul class="mt-4 space-y-2.5 text-[13.5px]">
+            <li><a href="/privacy.html" class="inline-flex items-center gap-1.5 font-semibold text-brand-400 transition-colors hover:text-brand-300" aria-current="page">Privacy Policy <svg class="h-3 w-3 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a></li>
+            <li><a href="/terms.html" class="inline-flex items-center gap-1.5 transition-colors hover:text-brand-300">Terms of Use <svg class="h-3 w-3 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a></li>
+            <li><a href="/disclaimer.html" class="inline-flex items-center gap-1.5 transition-colors hover:text-brand-300">Disclaimer <svg class="h-3 w-3 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a></li>
+            <li><a href="/cookie-policy.html" class="inline-flex items-center gap-1.5 transition-colors hover:text-brand-300">Cookie Policy <svg class="h-3 w-3 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a></li>
+            <li><a href="/contact.html" class="inline-flex items-center gap-1.5 transition-colors hover:text-brand-300">Contact <svg class="h-3 w-3 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a></li>
+          </ul>
+
+          <div class="mt-5 rounded-xl border border-white/10 bg-white/5 p-3.5">
+            <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-300">Data Protection</p>
+            <p class="mt-1.5 text-[11.5px] leading-relaxed text-slate-400">
+              We hold very little personal data. You can request access, correction or deletion at any time by
+              emailing
+              <a href="mailto:contact@buildmetric.org?subject=Privacy%20Request" class="font-semibold text-brand-300 hover:underline">contact@buildmetric.org</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ad space (footer) -->
+      <div class="mt-12 flex min-h-[90px] items-center justify-center rounded-xl border-2 border-dashed border-white/10 bg-white/[0.02] px-4 py-6 text-center">
+        <span class="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Ad Space — Footer Leaderboard</span>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="mt-10 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 md:flex-row md:items-center">
+        <p class="text-[12px] text-slate-500">
+          &copy; <span id="yearNow">2026</span> BuildMetric. All rights reserved. Operated from
+          <span class="text-slate-400">buildmetric.org</span>.
+        </p>
+        <p class="text-[11px] text-slate-500">
+          Built for professionals. General information only — see our
+          <a href="/disclaimer.html" class="font-semibold text-brand-400 underline decoration-brand-500/40 underline-offset-2 hover:text-brand-300">Disclaimer</a>.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie settings placeholder (wire to your consent manager) -->
+  <script>
+    (function () {
+      var btn = document.getElementById('cookieSettingsBtn');
+      if (!btn) return;
+      btn.addEventListener('click', function () {
+        // Replace this block with your consent manager's open function
+        // e.g. window.cookieConsent.openSettings();
+        alert('Cookie settings would open here. Connect this button to your consent manager (e.g. Osano, Cookiebot, Complianz).');
+      });
+    })();
+  </script>
+
+</body>
+</html>
