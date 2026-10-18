@@ -525,223 +525,107 @@
       </nav>
     </div>
   </header>
+  <!-- ============================================================
+       PHASE 3/10 — MAIN OPEN + HERO SECTION (REDESIGNED)
+       ============================================================ -->
 
-<!-- ============================================================
-     PHASE 3/10 — MAIN OPEN + HERO SECTION (Quality-focused)
-     ============================================================ -->
+<main id="main-content">
 
-  <main id="main-content">
+  <section class="hero-mesh relative overflow-hidden">
+    <!-- Decorative grid -->
+    <div class="pointer-events-none absolute inset-0 bg-grid-slate [background-size:46px_46px] opacity-[0.35]" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand-500/20 blur-3xl" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -left-28 bottom-0 h-72 w-72 rounded-full bg-brand-400/10 blur-3xl" aria-hidden="true"></div>
 
-    <!-- ============================================================
-         HERO SECTION
-         ============================================================ -->
-    <section class="hero-mesh relative overflow-hidden">
-      <!-- Decorative grid -->
-      <div class="pointer-events-none absolute inset-0 bg-grid-slate [background-size:46px_46px] opacity-[0.35]" aria-hidden="true"></div>
-      <div class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand-500/20 blur-3xl" aria-hidden="true"></div>
-      <div class="pointer-events-none absolute -left-28 bottom-0 h-72 w-72 rounded-full bg-brand-400/10 blur-3xl" aria-hidden="true"></div>
+    <div class="relative mx-auto max-w-4xl px-4 pb-20 pt-20 text-center sm:px-6 sm:pb-28 sm:pt-24 lg:px-8 lg:pb-32 lg:pt-28">
+      
+      <!-- Badge -->
+      <span class="inline-flex items-center gap-2 rounded-full border border-brand-400/30 bg-brand-500/10 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-300">
+        <span class="relative flex h-2 w-2">
+          <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-400 opacity-75"></span>
+          <span class="relative inline-flex h-2 w-2 rounded-full bg-brand-400"></span>
+        </span>
+        Independent · Engineer-Reviewed · Free Forever
+      </span>
 
-      <div class="relative mx-auto max-w-7xl px-4 pb-16 pt-14 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8 lg:pb-24 lg:pt-20">
-        <div class="grid items-center gap-12 lg:grid-cols-12">
+      <!-- H1 -->
+      <h1 class="mt-6 font-display text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-[4rem]">
+        Construction Calculators
+        <span class="mt-2 block text-gradient">Built for Professionals</span>
+      </h1>
 
-          <!-- Copy column -->
-          <div class="lg:col-span-7">
+      <!-- Subtext -->
+      <p class="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+        A growing library of free, engineer-reviewed calculators for
+        <strong class="font-semibold text-white">roofing, concrete, framing, masonry, finishes</strong> and
+        every other trade on site. No sign-up. No paywall. No gated results. Built by quantity surveyors,
+        structural engineers and licensed contractors across the
+        <strong class="font-semibold text-white">USA, UK and Australia</strong>.
+      </p>
 
-            <!-- Badge -->
-            <span class="inline-flex items-center gap-2 rounded-full border border-brand-400/30 bg-brand-500/10 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-300">
-              <span class="relative flex h-2 w-2">
-                <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-400 opacity-75"></span>
-                <span class="relative inline-flex h-2 w-2 rounded-full bg-brand-400"></span>
-              </span>
-              Independent · Engineer-Reviewed · Free Forever
-            </span>
-
-            <!-- H1 -->
-            <h1 class="mt-5 font-display text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[3.65rem]">
-              Construction Calculators
-              <span class="mt-2 block text-gradient">Built for Professionals</span>
-            </h1>
-
-            <!-- Subtext -->
-            <p class="mt-6 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
-              A growing library of free, engineer-reviewed calculators and estimating tools for
-              <strong class="font-semibold text-white">roofing, concrete, framing, masonry, finishes</strong> and
-              every other trade on site. No sign-up. No paywall. No gated results. Built by quantity surveyors,
-              structural engineers and licensed contractors across the
-              <strong class="font-semibold text-white">USA, UK and Australia</strong>.
-            </p>
-
-            <!-- Quick launcher (search) -->
-            <form action="/calculators.html" method="get" role="search" class="mt-8 max-w-xl">
-              <label for="tool-search" class="sr-only">Search calculators</label>
-              <div class="group relative flex items-center overflow-hidden rounded-xl border border-white/20 bg-white/10 backdrop-blur transition-all duration-300 focus-within:border-brand-400 focus-within:bg-white/15 focus-within:shadow-glow">
-                <span class="grid h-12 w-12 shrink-0 place-items-center text-brand-300">
-                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <circle cx="11" cy="11" r="7" />
-                    <path d="m21 21-4.3-4.3" />
-                  </svg>
-                </span>
-                <input
-                  id="tool-search"
-                  name="q"
-                  type="search"
-                  placeholder="Search a calculator — roof pitch, concrete, studs, paint…"
-                  class="h-12 w-full bg-transparent pr-4 text-sm text-white placeholder-slate-400 focus:outline-none"
-                  autocomplete="off"
-                />
-                <button
-                  type="submit"
-                  class="mr-1.5 hidden items-center gap-1.5 rounded-lg bg-brand-500 px-4 py-2 text-xs font-bold text-white transition-colors hover:bg-brand-400 sm:inline-flex"
-                >
-                  Search
-                  <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M5 12h14M13 6l6 6-6 6" />
-                  </svg>
-                </button>
-              </div>
-              <p class="mt-2 text-[11px] text-slate-400">
-                Try
-                <a href="/roof-pitch-calculator.html" class="font-semibold text-brand-300 hover:underline">roof pitch</a>,
-                <a href="/concrete-calculator.html" class="font-semibold text-brand-300 hover:underline">concrete</a>,
-                <a href="/stud-count-calculator.html" class="font-semibold text-brand-300 hover:underline">stud count</a>, or
-                <a href="/paint-coverage-calculator.html" class="font-semibold text-brand-300 hover:underline">paint</a>.
-              </p>
-            </form>
-
-            <!-- CTAs -->
-            <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a href="#categories" class="cta-shine inline-flex items-center justify-center gap-2 rounded-xl bg-brand-500 px-6 py-3.5 text-sm font-bold text-white shadow-glow transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-300 focus-visible:ring-offset-2 focus-visible:ring-offset-ink-900">
-                Browse by Category
-                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <rect x="3" y="3" width="7" height="7" rx="1.5" />
-                  <rect x="14" y="3" width="7" height="7" rx="1.5" />
-                  <rect x="3" y="14" width="7" height="7" rx="1.5" />
-                  <rect x="14" y="14" width="7" height="7" rx="1.5" />
-                </svg>
-              </a>
-              <a href="/calculators.html" class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-6 py-3.5 text-sm font-bold text-white backdrop-blur transition-all duration-300 hover:border-brand-400/50 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-300 focus-visible:ring-offset-2 focus-visible:ring-offset-ink-900">
-                View All Tools
-                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M5 12h14M13 6l6 6-6 6" />
-                </svg>
-              </a>
-            </div>
-
-            <!-- Quality trust strip (no numbers) -->
-            <dl class="mt-10 grid max-w-xl grid-cols-2 gap-3 sm:grid-cols-4">
-              <div class="rounded-lg border border-white/10 bg-white/5 px-3 py-2.5 text-center backdrop-blur">
-                <dt class="text-[9px] font-bold uppercase tracking-wider text-slate-400">Review</dt>
-                <dd class="mt-0.5 font-display text-xs font-extrabold text-white">Engineer-<br class="sm:hidden">Reviewed</dd>
-              </div>
-              <div class="rounded-lg border border-white/10 bg-white/5 px-3 py-2.5 text-center backdrop-blur">
-                <dt class="text-[9px] font-bold uppercase tracking-wider text-slate-400">Price</dt>
-                <dd class="mt-0.5 font-display text-xs font-extrabold text-white">Free<br class="sm:hidden">Forever</dd>
-              </div>
-              <div class="rounded-lg border border-white/10 bg-white/5 px-3 py-2.5 text-center backdrop-blur">
-                <dt class="text-[9px] font-bold uppercase tracking-wider text-slate-400">Sign-up</dt>
-                <dd class="mt-0.5 font-display text-xs font-extrabold text-white">Not<br class="sm:hidden">Required</dd>
-              </div>
-              <div class="rounded-lg border border-white/10 bg-white/5 px-3 py-2.5 text-center backdrop-blur">
-                <dt class="text-[9px] font-bold uppercase tracking-wider text-slate-400">Codes</dt>
-                <dd class="mt-0.5 font-display text-xs font-extrabold text-white">US · UK<br class="sm:hidden"> · AU</dd>
-              </div>
-            </dl>
-          </div>
-
-          <!-- Visual column: featured calculator preview -->
-          <div class="lg:col-span-5">
-            <div class="glass-card relative overflow-hidden rounded-2xl p-6 shadow-2xl sm:p-7">
-              <div class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-brand-500/25 blur-2xl" aria-hidden="true"></div>
-
-              <div class="relative flex items-center justify-between">
-                <div class="flex items-center gap-2">
-                  <span class="grid h-7 w-7 place-items-center rounded-md bg-brand-500 text-white">
-                    <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z" />
-                    </svg>
-                  </span>
-                  <p class="font-display text-sm font-bold uppercase tracking-[0.12em] text-brand-300">Most-Used Tool</p>
-                </div>
-                <span class="rounded-md bg-white/10 px-2 py-1 font-mono text-[10px] font-bold text-slate-300">v1.8</span>
-              </div>
-
-              <!-- Preview: roof pitch mini card -->
-              <div class="relative mt-5 rounded-xl border border-white/10 bg-white/5 p-4">
-                <div class="flex items-center justify-between gap-3">
-                  <div>
-                    <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-slate-400">Roof Pitch Calculator</p>
-                    <p class="mt-0.5 font-display text-base font-extrabold text-white">Rise-over-run → degrees</p>
-                  </div>
-                  <span class="rounded-full bg-brand-500/20 px-2 py-0.5 text-[10px] font-bold text-brand-200 ring-1 ring-brand-400/40">Free</span>
-                </div>
-                <div class="mt-3 grid grid-cols-3 gap-2">
-                  <div class="rounded-lg bg-ink-900/60 p-2.5 text-center ring-1 ring-white/10">
-                    <p class="text-[8.5px] font-bold uppercase tracking-wider text-slate-400">Pitch</p>
-                    <p class="mt-0.5 font-mono text-sm font-bold text-white">6:12</p>
-                  </div>
-                  <div class="rounded-lg bg-ink-900/60 p-2.5 text-center ring-1 ring-white/10">
-                    <p class="text-[8.5px] font-bold uppercase tracking-wider text-slate-400">Angle</p>
-                    <p class="mt-0.5 font-mono text-sm font-bold text-brand-300">26.57°</p>
-                  </div>
-                  <div class="rounded-lg bg-ink-900/60 p-2.5 text-center ring-1 ring-white/10">
-                    <p class="text-[8.5px] font-bold uppercase tracking-wider text-slate-400">Slope</p>
-                    <p class="mt-0.5 font-mono text-sm font-bold text-white">50%</p>
-                  </div>
-                </div>
-                <a href="/roof-pitch-calculator.html" class="mt-3 flex items-center justify-between rounded-lg bg-brand-500 px-3.5 py-2 text-xs font-bold text-white transition-colors hover:bg-brand-400">
-                  Open Calculator
-                  <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M5 12h14M13 6l6 6-6 6" />
-                  </svg>
-                </a>
-              </div>
-
-              <!-- Secondary popular links -->
-              <div class="relative mt-4">
-                <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-slate-400">Also Popular</p>
-                <ul class="mt-2 space-y-1.5">
-                  <li>
-                    <a href="/concrete-calculator.html" class="group flex items-center justify-between gap-2 rounded-lg px-2 py-1.5 text-xs text-slate-300 transition-colors hover:bg-white/5 hover:text-white">
-                      <span class="flex items-center gap-2">
-                        <span class="h-1.5 w-1.5 rounded-full bg-brand-400"></span>
-                        Concrete Volume Calculator
-                      </span>
-                      <svg class="h-3 w-3 opacity-50 group-hover:opacity-100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/stud-count-calculator.html" class="group flex items-center justify-between gap-2 rounded-lg px-2 py-1.5 text-xs text-slate-300 transition-colors hover:bg-white/5 hover:text-white">
-                      <span class="flex items-center gap-2">
-                        <span class="h-1.5 w-1.5 rounded-full bg-brand-400"></span>
-                        Stud Count Calculator
-                      </span>
-                      <svg class="h-3 w-3 opacity-50 group-hover:opacity-100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/paint-coverage-calculator.html" class="group flex items-center justify-between gap-2 rounded-lg px-2 py-1.5 text-xs text-slate-300 transition-colors hover:bg-white/5 hover:text-white">
-                      <span class="flex items-center gap-2">
-                        <span class="h-1.5 w-1.5 rounded-full bg-brand-400"></span>
-                        Paint Coverage Calculator
-                      </span>
-                      <svg class="h-3 w-3 opacity-50 group-hover:opacity-100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <p class="relative mt-5 text-[10.5px] leading-relaxed text-slate-400">
-                All tools free, all results verifiable. Always confirm critical dimensions against your drawings
-                and local codes.
-              </p>
-            </div>
-          </div>
+      <!-- Search Bar -->
+      <form action="/calculators.html" method="get" role="search" class="mx-auto mt-10 max-w-2xl">
+        <label for="tool-search" class="sr-only">Search calculators</label>
+        <div class="group relative flex items-center overflow-hidden rounded-2xl border border-white/20 bg-white/10 backdrop-blur transition-all duration-300 focus-within:border-brand-400 focus-within:bg-white/15 focus-within:shadow-glow">
+          <span class="grid h-14 w-14 shrink-0 place-items-center text-brand-300">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+          </span>
+          <input
+            id="tool-search"
+            name="q"
+            type="search"
+            placeholder="Search a calculator — roof pitch, concrete, studs, paint…"
+            class="h-14 w-full bg-transparent pr-4 text-sm text-white placeholder-slate-400 focus:outline-none sm:text-base"
+            autocomplete="off"
+          />
+          <button
+            type="submit"
+            class="mr-2 hidden items-center gap-1.5 rounded-xl bg-brand-500 px-5 py-2.5 text-xs font-bold text-white transition-colors hover:bg-brand-400 sm:inline-flex"
+          >
+            Search
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </button>
         </div>
-      </div>
+        <p class="mt-3 text-[11px] font-medium text-slate-400">
+          Popular:
+          <a href="/roof-pitch-calculator.html" class="font-semibold text-brand-300 hover:underline">Roof Pitch</a>, 
+          <a href="/concrete-calculator.html" class="font-semibold text-brand-300 hover:underline">Concrete</a>, 
+          <a href="/stud-count-calculator.html" class="font-semibold text-brand-300 hover:underline">Stud Count</a>, 
+          <a href="/paint-coverage-calculator.html" class="font-semibold text-brand-300 hover:underline">Paint</a>.
+        </p>
+      </form>
 
-      <!-- Bottom fade -->
-      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-b from-transparent to-slate-50" aria-hidden="true"></div>
-    </section>
+      <!-- Trust Strip -->
+      <dl class="mx-auto mt-12 grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4">
+        <div class="rounded-xl border border-white/10 bg-white/5 px-3 py-3 text-center backdrop-blur">
+          <dt class="text-[9px] font-bold uppercase tracking-wider text-slate-400">Review</dt>
+          <dd class="mt-1 font-display text-xs font-extrabold text-white">Engineer-Reviewed</dd>
+        </div>
+        <div class="rounded-xl border border-white/10 bg-white/5 px-3 py-3 text-center backdrop-blur">
+          <dt class="text-[9px] font-bold uppercase tracking-wider text-slate-400">Price</dt>
+          <dd class="mt-1 font-display text-xs font-extrabold text-white">Free Forever</dd>
+        </div>
+        <div class="rounded-xl border border-white/10 bg-white/5 px-3 py-3 text-center backdrop-blur">
+          <dt class="text-[9px] font-bold uppercase tracking-wider text-slate-400">Sign-up</dt>
+          <dd class="mt-1 font-display text-xs font-extrabold text-white">Not Required</dd>
+        </div>
+        <div class="rounded-xl border border-white/10 bg-white/5 px-3 py-3 text-center backdrop-blur">
+          <dt class="text-[9px] font-bold uppercase tracking-wider text-slate-400">Codes</dt>
+          <dd class="mt-1 font-display text-xs font-extrabold text-white">US · UK · AU</dd>
+        </div>
+      </dl>
+
+    </div>
+
+    <!-- Bottom fade -->
+    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-b from-transparent to-slate-50" aria-hidden="true"></div>
+  </section>
+
 
 
       <!-- ============================================================
