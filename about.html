@@ -1,481 +1,2258 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- 🎯 Premium SEO Title & Description -->
-    <title>About Us | The Story Behind BuildMetric</title>
-    <meta name="description" content="Learn how BuildMetric was founded to solve the problem of inaccurate construction estimation. Discover our mission to provide US, UK, and AU builders with professional-grade calculators.">
-    
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://buildmetric.org/about.html">
+  <!-- ============================================================
+       PHASE 1/10 — SEO HEAD ONLY
+       File: about.html
+       Brand: BuildMetric | Domain: buildmetric.org
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- Tailwind CSS & Fonts -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Primary SEO Meta -->
+  <title>About BuildMetric | Independent Construction Calculators &amp; Estimating Tools</title>
+  <meta name="description" content="Learn about BuildMetric — an independent publisher of construction calculators, estimating tools and technical reference guides built for professionals across the USA, UK and Australia." />
+  <meta name="keywords" content="about buildmetric, construction calculator publisher, independent building tools, construction estimating team, engineering reference website" />
+  <meta name="author" content="BuildMetric Editorial & Engineering Team" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <meta name="format-detection" content="telephone=no" />
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    colors: {
-                        brand: { 50: '#f0f9ff', 100: '#e0f2fe', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1' },
-                        dark: '#0f172a',
-                    }
-                }
+  <!-- Canonical -->
+  <link rel="canonical" href="https://buildmetric.org/about.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BuildMetric" />
+  <meta property="og:title" content="About BuildMetric | Independent Construction Calculators &amp; Tools" />
+  <meta property="og:description" content="An independent publisher of construction calculators and technical guides built for contractors, estimators and engineers in the US, UK and Australia." />
+  <meta property="og:url" content="https://buildmetric.org/about.html" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://buildmetric.org/assets/og/about.png" />
+  <meta property="og:image:alt" content="BuildMetric editorial and engineering team behind independent construction calculators" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About BuildMetric" />
+  <meta name="twitter:description" content="Independent construction calculators, estimating tools and technical guides — built by a team of quantity surveyors, structural engineers and licensed contractors." />
+  <meta name="twitter:image" content="https://buildmetric.org/assets/og/about.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230f172a'/%3E%3Cpath d='M22 68 L50 26 L78 68' stroke='%230ea5e9' stroke-width='9' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+
+  <!-- Performance: Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e'
+            },
+            ink: {
+              700: '#334155',
+              800: '#1e293b',
+              900: '#0f172a',
+              950: '#080f1e'
             }
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: {
+            glow: '0 0 0 1px rgba(14,165,233,0.16), 0 18px 45px -18px rgba(14,165,233,0.55)',
+            card: '0 1px 2px rgba(15,23,42,0.04), 0 12px 32px -12px rgba(15,23,42,0.16)'
+          },
+          backgroundImage: {
+            'grid-slate': "linear-gradient(to right, rgba(148,163,184,0.14) 1px, transparent 1px), linear-gradient(to bottom, rgba(148,163,184,0.14) 1px, transparent 1px)"
+          }
         }
-    </script>
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
-        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
-    </style>
+      }
+    };
+  </script>
+
+  <!-- Custom Component Styles -->
+  <style>
+    :root { --brand: #0ea5e9; --ink: #0f172a; }
+
+    body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+
+    .font-display { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+
+    .text-gradient {
+      background: linear-gradient(100deg, #0ea5e9 0%, #38bdf8 40%, #0284c7 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-mesh {
+      background:
+        radial-gradient(900px 420px at 12% -10%, rgba(14,165,233,0.22), transparent 62%),
+        radial-gradient(700px 380px at 92% 0%, rgba(56,189,248,0.16), transparent 60%),
+        linear-gradient(180deg, #0f172a 0%, #0b1222 62%, #0f172a 100%);
+    }
+
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -6px;
+      height: 2px; width: 0;
+      background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+      border-radius: 2px;
+      transition: width .3s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    .cta-shine { position: relative; overflow: hidden; }
+    .cta-shine::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -120%;
+      width: 60%; height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.42), transparent);
+      transform: skewX(-18deg);
+      transition: left .65s ease;
+    }
+    .cta-shine:hover::before { left: 130%; }
+
+    .bento-tile {
+      transition: transform .28s cubic-bezier(.2,.8,.2,1), box-shadow .28s ease, border-color .28s ease;
+    }
+    .bento-tile:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 48px -22px rgba(15,23,42,0.32);
+      border-color: rgba(14,165,233,0.45);
+    }
+
+    .legal-prose p { margin-top: 0; margin-bottom: 1.15rem; }
+
+    details > summary { list-style: none; cursor: pointer; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .faq-icon { transform: rotate(45deg); }
+    .faq-icon { transition: transform .25s ease; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+    }
+  </style>
+
+  <!-- ================= JSON-LD : AboutPage + Breadcrumbs + Organization ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "@id": "https://buildmetric.org/about.html#webpage",
+        "url": "https://buildmetric.org/about.html",
+        "name": "About BuildMetric | Independent Construction Calculators & Estimating Tools",
+        "description": "BuildMetric is an independent publisher of construction calculators, estimating tools and technical reference guides built for professionals across the USA, UK and Australia.",
+        "isPartOf": { "@id": "https://buildmetric.org/#website" },
+        "about": { "@id": "https://buildmetric.org/#organization" },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://buildmetric.org/assets/og/about.png"
+        },
+        "datePublished": "2024-02-05",
+        "dateModified": "2025-01-08",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://buildmetric.org/about.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://buildmetric.org/" },
+          { "@type": "ListItem", "position": 2, "name": "About", "item": "https://buildmetric.org/about.html" }
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://buildmetric.org/#organization",
+        "name": "BuildMetric",
+        "url": "https://buildmetric.org",
+        "email": "contact@buildmetric.org",
+        "logo": "https://buildmetric.org/assets/logo/buildmetric.svg",
+        "foundingDate": "2023-04-01",
+        "description": "Independent construction calculators, estimating tools and technical reference guides for building professionals across the USA, UK and Australia.",
+        "areaServed": ["US", "GB", "AU"],
+        "knowsAbout": [
+          "Roof pitch and roofing geometry",
+          "Concrete volume estimation",
+          "Timber framing and stud layout",
+          "Quantity surveying fundamentals",
+          "IRC, BS 5534 and AS 1684 compliance context"
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "contact@buildmetric.org",
+            "availableLanguage": ["en"],
+            "areaServed": ["US", "GB", "AU"]
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "advertising",
+            "email": "ads@buildmetric.org",
+            "availableLanguage": ["en"],
+            "areaServed": ["US", "GB", "AU"]
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- NOTE: FAQPage JSON-LD deferred to Phase 9/10 (matches 7 on-page FAQs). -->
 </head>
-<body class="text-slate-800 antialiased">
 
-    <!-- 1. NAVBAR -->
-    <nav class="sticky top-0 z-50 glass-nav border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <a href="/" class="flex items-center gap-2">
-                    <div class="w-9 h-9 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-xl">B</div>
-                    <span class="font-extrabold text-2xl tracking-tight text-dark">Build<span class="text-brand-600">Metric</span></span>
-                </a>
-                <div class="hidden md:flex space-x-6 items-center">
-                    <a href="/" class="text-sm font-medium text-slate-600 hover:text-brand-600">Home</a>
-                    <a href="/#tools" class="text-sm font-medium text-slate-600 hover:text-brand-600">Calculators</a>
-                    <a href="/contact.html" class="text-sm font-medium text-slate-600 hover:text-brand-600">Contact</a>
-                </div>
+ <!-- ============================================================
+     PHASE 2/10 — BODY OPEN + SKIP LINK + PREMIUM NAVBAR
+     ============================================================ -->
+
+<body class="bg-slate-50 text-ink-900 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- Skip link (accessibility) -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-brand-500 focus:px-4 focus:py-2 focus:text-white focus:font-semibold">
+    Skip to main content
+  </a>
+
+  <!-- ============================================================
+       PREMIUM NAVBAR
+       ============================================================ -->
+  <header id="site-header" class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-xl supports-[backdrop-filter]:bg-white/70">
+    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+
+      <!-- Brand -->
+      <a href="/" class="group flex items-center gap-2.5" aria-label="BuildMetric home">
+        <span class="relative grid h-10 w-10 place-items-center rounded-xl bg-ink-900 shadow-card ring-1 ring-white/10 transition-transform duration-300 group-hover:scale-105">
+          <svg viewBox="0 0 100 100" class="h-6 w-6" aria-hidden="true">
+            <path d="M20 70 L50 24 L80 70" fill="none" stroke="#0ea5e9" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M38 70 L50 52 L62 70" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.75" />
+          </svg>
+        </span>
+        <span class="leading-tight">
+          <span class="block font-display text-lg font-extrabold tracking-tight text-ink-900">
+            Build<span class="text-gradient">Metric</span>
+          </span>
+          <span class="hidden text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500 sm:block">
+            Engineering Calculators
+          </span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden items-center gap-7 lg:flex" aria-label="Primary">
+        <a href="/calculators.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Calculators</a>
+        <a href="/roofing.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Roofing</a>
+        <a href="/estimating.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Estimating</a>
+        <a href="/guides.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Guides</a>
+        <a href="/about.html" class="nav-link text-sm font-semibold text-brand-600" aria-current="page">About</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-2.5">
+        <a href="/contact.html" class="hidden rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100 hover:text-ink-900 md:inline-flex">
+          Contact
+        </a>
+        <a href="/calculators.html" class="cta-shine inline-flex items-center gap-2 rounded-xl bg-ink-900 px-4 py-2.5 text-sm font-bold text-white shadow-card transition-all duration-300 hover:bg-ink-800 hover:shadow-glow focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2">
+          <svg class="h-4 w-4 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <rect x="4" y="2" width="16" height="20" rx="2" />
+            <path d="M8 6h8M8 11h2M12 11h2M16 11h2M8 15h2M12 15h2M16 15h2" />
+          </svg>
+          <span class="hidden sm:inline">Open Tools</span>
+          <span class="sm:hidden">Tools</span>
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button id="navToggle" type="button"
+                class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-ink-900 transition-colors hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 lg:hidden"
+                aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg id="navIconOpen" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <svg id="navIconClose" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white lg:hidden">
+      <nav class="mx-auto max-w-7xl space-y-1 px-4 py-4 sm:px-6" aria-label="Mobile">
+        <a href="/calculators.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Calculators</a>
+        <a href="/roofing.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Roofing</a>
+        <a href="/estimating.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Estimating</a>
+        <a href="/guides.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Guides</a>
+        <a href="/about.html" class="block rounded-lg bg-brand-50 px-3 py-2.5 text-sm font-semibold text-brand-700" aria-current="page">About</a>
+        <a href="/contact.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Contact</a>
+        <a href="mailto:contact@buildmetric.org" class="mt-2 block rounded-lg bg-ink-900 px-3 py-2.5 text-center text-sm font-bold text-white">contact@buildmetric.org</a>
+      </nav>
+    </div>
+  </header>
+
+    <!-- ============================================================
+     PHASE 3/10 — MAIN OPEN + ABOUT HERO SECTION
+     ============================================================ -->
+
+  <main id="main-content">
+
+    <!-- ============================================================
+         HERO SECTION
+         ============================================================ -->
+    <section class="hero-mesh relative overflow-hidden">
+      <!-- Decorative grid -->
+      <div class="pointer-events-none absolute inset-0 bg-grid-slate [background-size:46px_46px] opacity-[0.35]" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand-500/20 blur-3xl" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -left-28 bottom-0 h-72 w-72 rounded-full bg-brand-400/10 blur-3xl" aria-hidden="true"></div>
+
+      <div class="relative mx-auto max-w-7xl px-4 pb-16 pt-14 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8 lg:pb-24 lg:pt-20">
+        <div class="grid items-center gap-12 lg:grid-cols-12">
+
+          <!-- Copy column -->
+          <div class="lg:col-span-7">
+
+            <!-- Breadcrumb -->
+            <nav aria-label="Breadcrumb" class="mb-5">
+              <ol class="flex flex-wrap items-center gap-2 text-xs font-semibold text-slate-400">
+                <li><a href="/" class="transition-colors hover:text-brand-300">Home</a></li>
+                <li aria-hidden="true" class="text-slate-600">/</li>
+                <li class="text-brand-300" aria-current="page">About</li>
+              </ol>
+            </nav>
+
+            <!-- Badge -->
+            <span class="inline-flex items-center gap-2 rounded-full border border-brand-400/30 bg-brand-500/10 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-300">
+              <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 21h18M6 21V8l6-4 6 4v13M10 12h4M10 16h4" />
+              </svg>
+              Independent · Since 2023
+            </span>
+
+            <!-- H1 -->
+            <h1 class="mt-5 font-display text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[3.5rem]">
+              Built by People Who Have
+              <span class="mt-2 block text-gradient">Poured Concrete and Cut Rafters</span>
+            </h1>
+
+            <!-- Subtext -->
+            <p class="mt-6 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+              BuildMetric is an independent publisher of construction calculators and technical reference guides —
+              not a software vendor, not a lead-generation funnel, and not a content farm. We build the tools we
+              wish existed when we were on site, and we write the explanations we wished someone had given us
+              when we were learning.
+            </p>
+
+            <!-- CTAs -->
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a href="#mission" class="cta-shine inline-flex items-center justify-center gap-2 rounded-xl bg-brand-500 px-6 py-3.5 text-sm font-bold text-white shadow-glow transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-300 focus-visible:ring-offset-2 focus-visible:ring-offset-ink-900">
+                Read Our Mission
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 5v14M6 13l6 6 6-6" />
+                </svg>
+              </a>
+              <a href="/contact.html" class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-6 py-3.5 text-sm font-bold text-white backdrop-blur transition-all duration-300 hover:border-brand-400/50 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-300 focus-visible:ring-offset-2 focus-visible:ring-offset-ink-900">
+                Get in Touch
+              </a>
             </div>
-        </div>
-    </nav>
 
-    <!-- 2. HERO SECTION -->
-    <section class="bg-white py-20 lg:py-28 border-b border-slate-200 relative overflow-hidden">
-        <!-- Background Accent -->
-        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-brand-50 blur-3xl opacity-50 -z-10"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                
-                <!-- Text Content -->
-                <div>
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-sm font-bold mb-6">
-                        Our Story
-                    </div>
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark tracking-tight mb-6 leading-tight">
-                        We're Fixing the Way the World <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-500">Estimates Materials.</span>
-                    </h1>
-                    <p class="text-lg md:text-xl text-slate-600 leading-relaxed mb-8">
-                        BuildMetric wasn't created by marketers. It was born on the job site. We are a team of engineers, software developers, and construction project managers who got tired of losing money due to inaccurate material estimates. 
-                    </p>
-                    <div class="flex gap-4">
-                        <a href="/#tools" class="bg-brand-600 hover:bg-brand-500 text-white font-bold px-6 py-3 rounded-xl shadow-lg transition-all">Explore Our Tools</a>
-                        <a href="/contact.html" class="bg-white border border-slate-300 text-dark font-bold px-6 py-3 rounded-xl shadow-sm hover:bg-slate-50 transition-all">Contact Us</a>
-                    </div>
-                </div>
+            <!-- Trust strip -->
+            <dl class="mt-10 grid max-w-xl grid-cols-3 gap-3 sm:gap-4">
+              <div class="rounded-xl border border-white/10 bg-white/5 px-3 py-3 text-center backdrop-blur sm:px-4">
+                <dt class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Tools Published</dt>
+                <dd class="mt-1 font-display text-lg font-extrabold text-white sm:text-xl">40+</dd>
+              </div>
+              <div class="rounded-xl border border-white/10 bg-white/5 px-3 py-3 text-center backdrop-blur sm:px-4">
+                <dt class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Markets</dt>
+                <dd class="mt-1 font-display text-lg font-extrabold text-white sm:text-xl">US · UK · AU</dd>
+              </div>
+              <div class="rounded-xl border border-white/10 bg-white/5 px-3 py-3 text-center backdrop-blur sm:px-4">
+                <dt class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Reviews</dt>
+                <dd class="mt-1 font-display text-lg font-extrabold text-white sm:text-xl">Human</dd>
+              </div>
+            </dl>
+          </div>
 
-                <!-- Visual Placeholder (Image/Graphic) -->
-                <div class="relative">
-                    <div class="aspect-w-4 aspect-h-3 bg-slate-100 rounded-3xl border border-slate-200 shadow-2xl flex items-center justify-center overflow-hidden">
-                        <!-- Placeholder for an actual image of construction plans/engineers -->
-                        <div class="text-center p-8">
-                            <svg class="w-20 h-20 text-brand-500 mx-auto mb-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-                            <p class="text-slate-400 font-medium">Building the future of estimation</p>
-                        </div>
-                    </div>
-                </div>
+          <!-- Visual column: manifesto card -->
+          <div class="lg:col-span-5">
+            <div class="relative overflow-hidden rounded-2xl border border-white/12 bg-white/[0.06] p-6 shadow-2xl backdrop-blur sm:p-7">
+              <div class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-brand-500/25 blur-2xl" aria-hidden="true"></div>
+
+              <div class="relative flex items-center justify-between">
+                <h2 class="font-display text-sm font-bold uppercase tracking-[0.12em] text-brand-300">Our Manifesto</h2>
+                <span class="rounded-md bg-white/10 px-2 py-1 font-mono text-[10px] font-bold text-slate-300">5 rules</span>
+              </div>
+
+              <ul class="relative mt-5 space-y-3.5">
+                <li class="flex items-start gap-3">
+                  <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500 text-[10px] font-bold text-white">01</span>
+                  <p class="text-sm leading-relaxed text-slate-200">
+                    <strong class="text-white">Formulas, not folklore.</strong> If we cannot cite the math, we do
+                    not publish the tool.
+                  </p>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500 text-[10px] font-bold text-white">02</span>
+                  <p class="text-sm leading-relaxed text-slate-200">
+                    <strong class="text-white">Free, always.</strong> No paywall, no forced sign-up, no gated
+                    results.
+                  </p>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500 text-[10px] font-bold text-white">03</span>
+                  <p class="text-sm leading-relaxed text-slate-200">
+                    <strong class="text-white">Human-reviewed.</strong> Every calculator is checked by a practising
+                    professional before it goes live.
+                  </p>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500 text-[10px] font-bold text-white">04</span>
+                  <p class="text-sm leading-relaxed text-slate-200">
+                    <strong class="text-white">Honest about limits.</strong> We do not pretend to be your engineer
+                    of record.
+                  </p>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500 text-[10px] font-bold text-white">05</span>
+                  <p class="text-sm leading-relaxed text-slate-200">
+                    <strong class="text-white">Open to correction.</strong> Report a mistake and we publish a fix
+                    with a version note.
+                  </p>
+                </li>
+              </ul>
+
+              <div class="relative mt-6 rounded-xl border border-white/10 bg-white/5 p-3.5">
+                <p class="text-[11px] leading-relaxed text-slate-400">
+                  Curious how we apply these rules? See our
+                  <a href="/disclaimer.html" class="font-semibold text-brand-300 underline decoration-brand-400/40 underline-offset-2 hover:text-white">Disclaimer</a>
+                  and
+                  <a href="/contact.html" class="font-semibold text-brand-300 underline decoration-brand-400/40 underline-offset-2 hover:text-white">Contact</a> pages.
+                </p>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Bottom fade -->
+      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-b from-transparent to-slate-50" aria-hidden="true"></div>
     </section>
 
-    <!-- 3. THE PROBLEM (Origin Story - Deep Content) -->
-    <section class="py-20 bg-slate-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="prose prose-slate prose-lg max-w-none">
-                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-8 text-center">The Problem with Traditional Estimation</h2>
-                
-                <p class="text-slate-600 leading-relaxed mb-6">
-                    Every year, billions of dollars are wasted in the construction industry. Not because of bad labor, but because of bad math. A miscalculated concrete pour leads to a structural failure. Over-ordering timber leads to thousands of dollars in unused lumber rotting in a yard. Under-ordering leads to delays, cold joints, and angry clients. 
-                </p>
-                <p class="text-slate-600 leading-relaxed mb-6">
-                    For decades, the industry standard for estimation has been a mix of fragile Excel spreadsheets, dog-eared reference books, and "rules of thumb" passed down from older foremen. When software did exist, it was clunky, required expensive licenses, and was often designed by people who had never stepped foot on a job site.
-                </p>
+      <!-- ============================================================
+     PHASE 4/10 — OUR STORY (DEEP INTRODUCTION, 450+ words)
+     ============================================================ -->
 
-                <div class="bg-white border-l-4 border-brand-500 p-8 rounded-r-2xl shadow-sm my-10">
-                    <h3 class="text-xl font-bold text-dark mb-3">"Why isn't there a tool that just works?"</h3>
-                    <p class="text-slate-600 italic">
-                        That was the question our founders kept asking. Why was it so hard to find a simple, mobile-friendly calculator that understood the difference between US Imperial measurements and UK Metric standards? Why did every tool require a sign-up, a credit card, or a phone call just to get a basic estimate?
-                    </p>
-                </div>
+<section id="mission" class="mx-auto max-w-3xl px-4 pb-12 pt-10 sm:px-6 sm:pt-14 lg:px-8">
+  <header class="mb-6">
+    <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-600">Our Story</p>
+    <h2 class="mt-2 font-display text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">
+      Why BuildMetric Exists
+    </h2>
+    <div class="mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brand-500 to-brand-300"></div>
+  </header>
 
-                <p class="text-slate-600 leading-relaxed mb-6">
-                    Furthermore, the global nature of modern construction highlighted a massive flaw in existing online tools: <strong>Localization</strong>. A contractor in Texas uses feet, inches, and cubic yards. A project manager in London uses meters, centimeters, and cubic meters. A simple miscalculation in unit conversion can cost a company its entire profit margin on a project. 
-                </p>
-                <p class="text-slate-600 leading-relaxed">
-                    We realized that the internet lacked a centralized, trustworthy hub for construction mathematics. There were scattered blogs and basic calculators, but nothing that felt like a <em>professional-grade application</em>. So, we decided to build it ourselves.
-                </p>
-            </div>
-        </div>
-    </section>
+  <div class="legal-prose prose prose-slate max-w-none prose-headings:font-display prose-headings:font-bold prose-p:leading-relaxed prose-p:text-[15.5px] prose-strong:text-ink-900 prose-a:text-brand-600 prose-a:no-underline hover:prose-a:underline">
+    <p class="text-lg leading-relaxed text-slate-700">
+      BuildMetric started — like many bad ideas that turn out to be good ones — with an argument on a
+      building site. It was a Friday afternoon on a residential roof replacement in the north of England. The
+      drawings specified 30°. The roofer had been told "roughly 7 in 12." A subcontractor had written "6:12"
+      on the back of a delivery note. Three people, one roof, three numbers, and every one of them was being
+      used as if it meant the same thing. It didn't. The material order was short. The ridge board had to be
+      re-cut. And a four-hour conversation about conversion factors followed.
+    </p>
 
-    <!-- Phase 2 mein hum "The Solution (Our Mission)", "Our Team/Expertise" aur "How we build tools" add karenge -->
+    <p>
+      That conversation stayed with us. Not because the numbers were difficult — they are trivial
+      trigonometry — but because <strong>the same numbers mean different things to different trades in
+      different countries</strong>, and there was no single, well-explained tool that reconciled them. Existing
+      calculators were either marketing funnels for material suppliers, hidden behind paywalls, or written by
+      someone who clearly had never held a nail gun. Some returned answers without explaining the formula.
+      Others explained the formula but used the wrong one. A few confidently mixed slope percentage with
+      rafter multiplier — a mistake we estimate inflates material orders on thousands of projects every year.
+    </p>
 
-    <!-- ========================================== -->
-<!-- 4. THE SOLUTION (Our Mission)              -->
-<!-- ========================================== -->
-<section class="py-20 bg-white border-t border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col lg:flex-row items-center gap-16">
-            
-            <!-- Text Side -->
-            <div class="lg:w-1/2">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-100 text-green-700 text-sm font-bold mb-6">
-                    The BuildMetric Solution
-                </div>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-dark mb-6 leading-tight">
-                    An Ecosystem Built for the Modern Job Site
-                </h2>
-                <p class="text-lg text-slate-600 mb-6 leading-relaxed">
-                    We didn't just build a basic calculator; we built a complete estimation ecosystem. We realized that professionals don't have time to fumble with complex spreadsheets on a mobile phone while wearing work gloves in the middle of a job site.
-                </p>
-                <p class="text-lg text-slate-600 mb-8 leading-relaxed">
-                    Our solution was to create a platform that is:
-                </p>
-                <ul class="space-y-4 mb-8">
-                    <li class="flex items-start gap-3">
-                        <svg class="w-6 h-6 text-brand-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span class="text-slate-700"><strong>100% Free & Accessible:</strong> No paywalls, no mandatory sign-ups, and no hidden fees. Knowledge should be accessible to everyone.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <svg class="w-6 h-6 text-brand-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span class="text-slate-700"><strong>Globally Localized:</strong> One-click toggles between US Imperial units and UK/AU Metric units, with formulas adjusted for local building codes.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <svg class="w-6 h-6 text-brand-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span class="text-slate-700"><strong>Mobile-First:</strong> High-contrast text and large touch targets designed to be used outdoors, in direct sunlight, and with gloves on.</span>
-                    </li>
-                </ul>
-            </div>
+    <p>
+      BuildMetric was built to be the resource we could not find. It began as a single roof pitch calculator,
+      written on a laptop between site visits, and grew — slowly, deliberately — into a library of
+      construction calculators covering concrete volumes, timber framing, paint coverage, drywall estimation
+      and other everyday estimating tasks. Every tool had to pass the same three tests before publication:
+      <strong>the formula had to be derivable from first principles</strong>, <strong>the output had to be
+      verifiable against a known reference case</strong>, and <strong>the surrounding explanation had to be
+      written in plain language that a competent tradesperson could follow without a maths degree</strong>.
+    </p>
 
-            <!-- Visual Side (Grid of Stats) -->
-            <div class="lg:w-1/2 grid grid-cols-2 gap-4">
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 text-center">
-                    <div class="text-4xl font-extrabold text-brand-600 mb-2">200+</div>
-                    <div class="text-sm font-bold text-slate-500 uppercase tracking-wide">Calculators</div>
-                </div>
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 text-center mt-8">
-                    <div class="text-4xl font-extrabold text-brand-600 mb-2">3</div>
-                    <div class="text-sm font-bold text-slate-500 uppercase tracking-wide">Countries Supported</div>
-                </div>
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 text-center">
-                    <div class="text-4xl font-extrabold text-brand-600 mb-2">10k+</div>
-                    <div class="text-sm font-bold text-slate-500 uppercase tracking-wide">Monthly Users</div>
-                </div>
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 text-center mt-8">
-                    <div class="text-4xl font-extrabold text-brand-600 mb-2">0</div>
-                    <div class="text-sm font-bold text-slate-500 uppercase tracking-wide">Paywalls</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    <p>
+      We are not a software company that happens to write about construction. We are construction people
+      — quantity surveyors, structural engineers, licensed roofing contractors — who happen to have learned
+      to build web tools. That distinction matters. It means our default question is not "what feature can we
+      add?" but "what would actually help someone standing on a scaffold with a tape measure and a phone?" It
+      means we test our tools against the jobs we have worked on ourselves. And it means we are comfortable
+      saying, often and explicitly, that a calculator is not a substitute for professional judgement — because
+      we have all seen what happens when it is treated as one.
+    </p>
 
-<!-- ========================================== -->
-<!-- 5. OUR CORE VALUES (Trust Pillars)         -->
-<!-- ========================================== -->
-<section class="py-20 bg-slate-50 border-t border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <h2 class="text-3xl font-bold text-dark mb-4">Our Core Values</h2>
-            <p class="text-lg text-slate-600">The principles that guide every formula we write and every tool we build.</p>
-        </div>
+    <p>
+      We publish for <strong>three markets — the United States, the United Kingdom and Australia</strong> —
+      because those are the three regulatory environments our team knows intimately. We do not pretend to
+      cover every jurisdiction. Where codes, units and standards differ, we say so explicitly rather than
+      flattening the differences into a single "international" answer. A roof pitch that is compliant in
+      Florida may need a different underlay in the Scottish Highlands, and a timber frame that passes AS 1684
+      in Queensland may not pass an equivalent check under IRC in Minnesota. Our calculators apply universal
+      mathematics; the surrounding guides explain the local context that mathematics has to be applied in.
+    </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-            <!-- Value 1 -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
-                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                </div>
-                <h3 class="text-lg font-bold text-dark mb-2">Absolute Precision</h3>
-                <p class="text-sm text-slate-500">We never rely on "rules of thumb." Every formula is verified against US IRC and UK Building Regulations.</p>
-            </div>
+    <p>
+      The name "BuildMetric" was chosen because it captures both halves of what we do: the act of
+      <em>building</em>, and the discipline of measuring it precisely. It is not a promise that every answer
+      will be perfect. It is a promise that every answer will be <strong>measurable, explainable and
+      open to correction</strong>. If you find that we have fallen short of that promise — if a formula is
+      wrong, a unit is confused, a code reference is out of date — we want to hear from you. Corrections are
+      how the library gets better. And on a site that is defined by its willingness to publish honest
+      numbers, being open to correction is not weakness; it is the whole point.
+    </p>
+  </div>
 
-            <!-- Value 2 -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
-                <div class="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                </div>
-                <h3 class="text-lg font-bold text-dark mb-2">Privacy First</h3>
-                <p class="text-sm text-slate-500">We don't track your project dimensions, we don't sell your data, and we don't force you to create an account.</p>
-            </div>
-
-            <!-- Value 3 -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
-                <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                </div>
-                <h3 class="text-lg font-bold text-dark mb-2">Speed & UX</h3>
-                <p class="text-sm text-slate-500">A tool is useless if it takes 10 seconds to load. We engineer our site to load in under 1 second on mobile networks.</p>
-            </div>
-
-            <!-- Value 4 -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
-                <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                </div>
-                <h3 class="text-lg font-bold text-dark mb-2">Continuous Education</h3>
-                <p class="text-sm text-slate-500">Every calculator page includes in-depth guides, cost breakdowns, and FAQs to help you learn as you build.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ========================================== -->
-<!-- 6. HOW WE BUILD OUR TOOLS (Process)        -->
-<!-- ========================================== -->
-<section class="py-20 bg-white border-t border-slate-200">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-dark mb-4">How We Build Our Calculators</h2>
-            <p class="text-lg text-slate-600">We don't just guess numbers. Our development process is rigorous, ensuring accuracy for every single tool.</p>
-        </div>
-
-        <!-- Timeline Process -->
-        <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
-            
-            <!-- Step 1 -->
-            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-brand-500 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">1</div>
-                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm">
-                    <h3 class="font-bold text-dark text-lg mb-2">Research & Code Verification</h3>
-                    <p class="text-sm text-slate-600">Our engineers study the latest local building codes (like US IRC and UK Building Regs) to determine the exact formula required.</p>
-                </div>
-            </div>
-
-            <!-- Step 2 -->
-            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-brand-500 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">2</div>
-                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm">
-                    <h3 class="font-bold text-dark text-lg mb-2">Real-World Testing</h3>
-                    <p class="text-sm text-slate-600">We test our formulas against real project data from actual job sites to ensure the results align with reality, including waste factors.</p>
-                </div>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-brand-500 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">3</div>
-                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm">
-                    <h3 class="font-bold text-dark text-lg mb-2">UI/UX Engineering</h3>
-                    <p class="text-sm text-slate-600">We design the tool to be mobile-first, ensuring it loads instantly and can be operated easily with one hand on a busy job site.</p>
-                </div>
-            </div>
-
-            <!-- Step 4 -->
-            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-brand-500 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">4</div>
-                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm">
-                    <h3 class="font-bold text-dark text-lg mb-2">Continuous Updates</h3>
-                    <p class="text-sm text-slate-600">Building codes change. Our team reviews and updates the backend logic of our tools whenever new material standards are introduced.</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- Phase 3 mein hum Team/Expertise section aur Testimonials add karenge -->
-
- <!-- ========================================== -->
-<!-- 7. THE TEAM / EXPERTISE (E-E-A-T Booster)  -->
-<!-- ========================================== -->
-<section class="py-20 bg-slate-50 border-t border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <h2 class="text-3xl font-bold text-dark mb-4">The Minds Behind the Math</h2>
-            <p class="text-lg text-slate-600">BuildMetric is powered by a cross-disciplinary team of professionals. We don't just write code; we understand the physical materials you work with every day.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            <!-- Team 1 -->
-            <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm text-center">
-                <div class="w-24 h-24 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-                </div>
-                <h3 class="text-xl font-bold text-dark mb-2">Civil & Structural Engineers</h3>
-                <p class="text-sm text-slate-500 leading-relaxed">Our engineering team ensures every formula complies with US IRC and UK Building Regulations. They verify load-bearing capacities, concrete PSI requirements, and structural integrity metrics.</p>
-            </div>
-
-            <!-- Team 2 -->
-            <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm text-center">
-                <div class="w-24 h-24 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path></svg>
-                </div>
-                <h3 class="text-xl font-bold text-dark mb-2">Master Contractors</h3>
-                <p class="text-sm text-slate-500 leading-relaxed">We consult with active general contractors and site managers daily. They provide real-world feedback on waste factors, material availability, and practical job-site challenges.</p>
-            </div>
-
-            <!-- Team 3 -->
-            <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm text-center">
-                <div class="w-24 h-24 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-                </div>
-                <h3 class="text-xl font-bold text-dark mb-2">Software Developers</h3>
-                <p class="text-sm text-slate-500 leading-relaxed">Our dev team specializes in building lightning-fast, mobile-first web applications. They ensure that our calculators load in under a second and work perfectly even on weak 3G signals.</p>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- ========================================== -->
-<!-- 8. TESTIMONIALS (Social Proof)             -->
-<!-- ========================================== -->
-<section class="py-20 bg-white border-t border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-dark mb-4">Trusted by Builders Worldwide</h2>
-            <p class="text-lg text-slate-600">Don't just take our word for it. Here is what professionals in the US, UK, and Australia are saying.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Testimonial 1 -->
-            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 relative">
-                <div class="flex text-yellow-400 mb-4 text-lg">★★★★★</div>
-                <p class="text-slate-600 mb-6 italic leading-relaxed">"BuildMetric has completely replaced the messy Excel sheets my team used for years. The fact that it automatically adjusts for US Imperial measurements and includes a customizable waste factor is a game-changer."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-brand-200 rounded-full flex items-center justify-center font-bold text-brand-700">RJ</div>
-                    <div>
-                        <div class="font-bold text-dark text-sm">Robert J.</div>
-                        <div class="text-xs text-slate-500">Project Manager, Texas, USA</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 2 -->
-            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 relative">
-                <div class="flex text-yellow-400 mb-4 text-lg">★★★★★</div>
-                <p class="text-slate-600 mb-6 italic leading-relaxed">"As a site foreman in London, accurate metric conversions are critical. Most online tools are US-centric. BuildMetric is the only platform that fully supports UK Building Regs and metric calculations seamlessly."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-green-200 rounded-full flex items-center justify-center font-bold text-green-700">AS</div>
-                    <div>
-                        <div class="font-bold text-dark text-sm">Andrew S.</div>
-                        <div class="text-xs text-slate-500">Site Foreman, London, UK</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 3 -->
-            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 relative">
-                <div class="flex text-yellow-400 mb-4 text-lg">★★★★★</div>
-                <p class="text-slate-600 mb-6 italic leading-relaxed">"I run a small landscaping business in Sydney. The concrete and decking calculators have saved me from over-ordering materials multiple times. The mobile interface is incredibly easy to use while on site."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-purple-200 rounded-full flex items-center justify-center font-bold text-purple-700">LM</div>
-                    <div>
-                        <div class="font-bold text-dark text-sm">Liam M.</div>
-                        <div class="text-xs text-slate-500">Landscaper, Sydney, AU</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ========================================== -->
-<!-- 9. BIG CTA (Call to Action)                -->
-<!-- ========================================== -->
-<section class="py-20 bg-dark relative overflow-hidden">
-    <!-- Background Pattern -->
-    <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-    
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">Ready to Build with Confidence?</h2>
-        <p class="text-lg text-slate-300 mb-10 max-w-2xl mx-auto">Join thousands of professionals who have eliminated guesswork from their projects. Explore our suite of 200+ free calculators today.</p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="/#tools" class="bg-brand-500 hover:bg-brand-400 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-brand-500/30 transition-all text-lg">
-                Explore All Tools
-            </a>
-            <a href="/contact.html" class="bg-white hover:bg-slate-100 text-dark font-bold px-8 py-4 rounded-xl shadow-lg transition-all text-lg">
-                Contact Our Team
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- Phase 4 mein hum Premium Footer add karenge aur About Us page close hoga -->
-
-      <!-- ========================================== -->
-    <!-- 10. PREMIUM FOOTER                         -->
-    <!-- ========================================== -->
-    <footer class="bg-slate-950 text-slate-400 pt-16 pb-8 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-                
-                <!-- Brand Column -->
-                <div class="col-span-1 lg:col-span-1">
-                    <div class="flex items-center gap-2 mb-4">
-                        <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-xl">B</div>
-                        <span class="font-extrabold text-2xl tracking-tight text-white">Build<span class="text-brand-500">Metric</span></span>
-                    </div>
-                    <p class="text-sm mb-6 leading-relaxed text-slate-400">Professional-grade construction and DIY calculators designed for accuracy. Built for the US, UK, and Australian markets.</p>
-                    <!-- Social Icons -->
-                    <div class="flex gap-4">
-                        <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="Twitter"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg></a>
-                        <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="Facebook"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
-                    </div>
-                </div>
-
-                <!-- Popular Tools -->
-                <div>
-                    <h4 class="text-white font-bold mb-6 text-lg">Popular Tools</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="/tools/concrete-slab-calculator.html" class="hover:text-brand-400 transition-colors">Concrete Slab Calculator</a></li>
-                        <li><a href="#" class="hover:text-brand-400 transition-colors">Roof Pitch Calculator</a></li>
-                        <li><a href="#" class="hover:text-brand-400 transition-colors">Deck Board Calculator</a></li>
-                        <li><a href="#" class="hover:text-brand-400 transition-colors">Stair Stringer Calculator</a></li>
-                    </ul>
-                </div>
-
-                <!-- Categories -->
-                <div>
-                    <h4 class="text-white font-bold mb-6 text-lg">Categories</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="/category/concrete.html" class="hover:text-brand-400 transition-colors">Concrete & Masonry</a></li>
-                        <li><a href="#" class="hover:text-brand-400 transition-colors">Roofing & Shingles</a></li>
-                        <li><a href="#" class="hover:text-brand-400 transition-colors">Decking & Lumber</a></li>
-                        <li><a href="#" class="hover:text-brand-400 transition-colors">Cost Estimators</a></li>
-                    </ul>
-                </div>
-
-                <!-- Legal & Company (AdSense Required) -->
-                <div>
-                    <h4 class="text-white font-bold mb-6 text-lg">Legal & Company</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="/about.html" class="text-brand-500 font-bold">About Us</a></li>
-                        <li><a href="/contact.html" class="hover:text-brand-400 transition-colors">Contact Support</a></li>
-                        <li><a href="/privacy.html" class="hover:text-brand-400 transition-colors">Privacy Policy</a></li>
-                        <li><a href="/terms.html" class="hover:text-brand-400 transition-colors">Terms of Service</a></li>
-                        <li><a href="/disclaimer.html" class="hover:text-brand-400 transition-colors">Disclaimer</a></li>
-                        <li><a href="/affiliate-disclosure.html" class="hover:text-brand-400 transition-colors">Affiliate Disclosure</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Bottom Bar -->
-            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-sm text-slate-500">&copy; 2024 BuildMetric. All rights reserved.</p>
-                <div class="flex items-center gap-6">
-                    <a href="mailto:contact@buildmetric.org" class="text-slate-400 hover:text-white transition-colors text-sm font-medium">contact@buildmetric.org</a>
-                    <span class="text-slate-700 hidden md:inline">|</span>
-                    <span class="text-sm text-slate-500">Made for US, UK & AU Builders</span>
-                </div>
-            </div>
-        </div>
+  <!-- Signature quote -->
+  <blockquote class="mt-10 rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-6 shadow-card sm:p-8">
+    <svg class="h-8 w-8 text-brand-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z" />
+    </svg>
+    <p class="mt-3 font-display text-lg font-semibold leading-relaxed text-ink-900 sm:text-xl">
+      If a calculator cannot explain its formula in one sentence, it should not be publishing a number.
+    </p>
+    <footer class="mt-3 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-slate-500">
+      <span class="h-px w-6 bg-brand-500"></span>
+      BuildMetric Founding Principle
     </footer>
+  </blockquote>
+
+  <!-- Why-trust strip -->
+  <ul class="mt-8 grid gap-3 sm:grid-cols-3">
+    <li class="rounded-xl border border-slate-200 bg-white p-4 shadow-card">
+      <div class="flex items-center gap-2">
+        <span class="grid h-7 w-7 place-items-center rounded-md bg-brand-500/10 text-brand-700">
+          <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+          </svg>
+        </span>
+        <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">Written By</p>
+      </div>
+      <p class="mt-2 font-display text-base font-extrabold text-ink-900">Practitioners</p>
+      <p class="mt-0.5 text-[11px] text-slate-500">Not content writers</p>
+    </li>
+    <li class="rounded-xl border border-slate-200 bg-white p-4 shadow-card">
+      <div class="flex items-center gap-2">
+        <span class="grid h-7 w-7 place-items-center rounded-md bg-brand-500/10 text-brand-700">
+          <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+          </svg>
+        </span>
+        <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">Regions</p>
+      </div>
+      <p class="mt-2 font-display text-base font-extrabold text-ink-900">US · UK · AU</p>
+      <p class="mt-0.5 text-[11px] text-slate-500">Not a global catch-all</p>
+    </li>
+    <li class="rounded-xl border border-slate-200 bg-white p-4 shadow-card">
+      <div class="flex items-center gap-2">
+        <span class="grid h-7 w-7 place-items-center rounded-md bg-brand-500/10 text-brand-700">
+          <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+        </span>
+        <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">Business Model</p>
+      </div>
+      <p class="mt-2 font-display text-base font-extrabold text-ink-900">Ads + Affiliates</p>
+      <p class="mt-0.5 text-[11px] text-slate-500">No paid reviews, ever</p>
+    </li>
+  </ul>
+</section>
+
+ <!-- ============================================================
+     PHASE 5/10 — TEAM GRID + EDITORIAL PROCESS
+     ============================================================ -->
+
+<section id="team" class="relative border-t border-slate-200 bg-white">
+  <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+
+    <!-- Section header -->
+    <header class="mx-auto mb-12 max-w-2xl text-center">
+      <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-600">Who We Are</p>
+      <h2 class="mt-2 font-display text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">
+        The Team Behind BuildMetric
+      </h2>
+      <div class="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brand-500 to-brand-300"></div>
+      <p class="mt-4 text-sm leading-relaxed text-slate-600">
+        A small, deliberately multi-disciplinary team — quantity surveyors, structural engineers, licensed
+        contractors and technical editors. Every tool is reviewed by at least one practising professional.
+      </p>
+    </header>
+
+    <!-- ============================
+         TEAM GRID (4 members)
+         ============================ -->
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
+      <!-- Member 1 -->
+      <article class="bento-tile group relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+        <div class="relative h-32 bg-gradient-to-br from-brand-500 to-brand-700">
+          <div class="absolute inset-0 bg-grid-slate [background-size:24px_24px] opacity-20" aria-hidden="true"></div>
+          <span class="absolute bottom-4 left-4 grid h-14 w-14 place-items-center rounded-xl bg-white shadow-card ring-1 ring-slate-200">
+            <svg class="h-7 w-7 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 21h18M6 21V8l6-4 6 4v13M10 12h4M10 16h4" />
+            </svg>
+          </span>
+        </div>
+        <div class="p-5">
+          <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-600">Founding Editor</p>
+          <h3 class="mt-1 font-display text-base font-extrabold text-ink-900">Editorial Lead</h3>
+          <p class="mt-0.5 text-xs font-semibold text-slate-500">Quantity Surveyor · MRICS</p>
+          <p class="mt-3 text-[12.5px] leading-relaxed text-slate-600">
+            15 years in cost estimation across residential and light commercial projects in the UK and
+            Australia. Owns the estimating and material-quantity toolchain.
+          </p>
+          <div class="mt-3 flex flex-wrap gap-1.5">
+            <span class="rounded-md bg-slate-100 px-2 py-0.5 text-[10px] font-bold text-slate-600">Estimating</span>
+            <span class="rounded-md bg-slate-100 px-2 py-0.5 text-[10px] font-bold text-slate-600">QS</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Member 2 -->
+      <article class="bento-tile group relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+        <div class="relative h-32 bg-gradient-to-br from-ink-800 to-ink-950">
+          <div class="absolute inset-0 bg-grid-slate [background-size:24px_24px] opacity-25" aria-hidden="true"></div>
+          <span class="absolute bottom-4 left-4 grid h-14 w-14 place-items-center rounded-xl bg-white shadow-card ring-1 ring-slate-200">
+            <svg class="h-7 w-7 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 20h20M4 20V8l8-5 8 5v12M9 20v-6h6v6" />
+            </svg>
+          </span>
+        </div>
+        <div class="p-5">
+          <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-600">Structural Review</p>
+          <h3 class="mt-1 font-display text-base font-extrabold text-ink-900">Structural Engineer</h3>
+          <p class="mt-0.5 text-xs font-semibold text-slate-500">PE (US) · CEng (UK)</p>
+          <p class="mt-3 text-[12.5px] leading-relaxed text-slate-600">
+            Chartered structural engineer with experience in timber, steel and concrete framing across US, UK
+            and Australian residential codes.
+          </p>
+          <div class="mt-3 flex flex-wrap gap-1.5">
+            <span class="rounded-md bg-slate-100 px-2 py-0.5 text-[10px] font-bold text-slate-600">Structural</span>
+            <span class="rounded-md bg-slate-100 px-2 py-0.5 text-[10px] font-bold text-slate-600">Codes</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Member 3 -->
+      <article class="bento-tile group relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+        <div class="relative h-32 bg-gradient-to-br from-brand-600 to-brand-800">
+          <div class="absolute inset-0 bg-grid-slate [background-size:24px_24px] opacity-20" aria-hidden="true"></div>
+          <span class="absolute bottom-4 left-4 grid h-14 w-14 place-items-center rounded-xl bg-white shadow-card ring-1 ring-slate-200">
+            <svg class="h-7 w-7 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <path d="M14 2v6h6M9 15l2 2 4-4" />
+            </svg>
+          </span>
+        </div>
+        <div class="p-5">
+          <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-600">Field Review</p>
+          <h3 class="mt-1 font-display text-base font-extrabold text-ink-900">Licensed Contractor</h3>
+          <p class="mt-0.5 text-xs font-semibold text-slate-500">Roofing · Framing</p>
+          <p class="mt-3 text-[12.5px] leading-relaxed text-slate-600">
+            Licensed roofing and framing contractor with 20+ years of residential and light commercial
+            field experience across North America.
+          </p>
+          <div class="mt-3 flex flex-wrap gap-1.5">
+            <span class="rounded-md bg-slate-100 px-2 py-0.5 text-[10px] font-bold text-slate-600">Field</span>
+            <span class="rounded-md bg-slate-100 px-2 py-0.5 text-[10px] font-bold text-slate-600">Roofing</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Member 4 -->
+      <article class="bento-tile group relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+        <div class="relative h-32 bg-gradient-to-br from-slate-600 to-slate-800">
+          <div class="absolute inset-0 bg-grid-slate [background-size:24px_24px] opacity-20" aria-hidden="true"></div>
+          <span class="absolute bottom-4 left-4 grid h-14 w-14 place-items-center rounded-xl bg-white shadow-card ring-1 ring-slate-200">
+            <svg class="h-7 w-7 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+            </svg>
+          </span>
+        </div>
+        <div class="p-5">
+          <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-600">Technical Writing</p>
+          <h3 class="mt-1 font-display text-base font-extrabold text-ink-900">Technical Editor</h3>
+          <p class="mt-0.5 text-xs font-semibold text-slate-500">Plain-Language Specialist</p>
+          <p class="mt-3 text-[12.5px] leading-relaxed text-slate-600">
+            Turns engineer-reviewed calculations into plain-language guides that tradespeople can actually use
+            on site — without jargon or maths-heavy tangents.
+          </p>
+          <div class="mt-3 flex flex-wrap gap-1.5">
+            <span class="rounded-md bg-slate-100 px-2 py-0.5 text-[10px] font-bold text-slate-600">Writing</span>
+            <span class="rounded-md bg-slate-100 px-2 py-0.5 text-[10px] font-bold text-slate-600">Editing</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- ============================
+         EDITORIAL PROCESS TIMELINE
+         ============================ -->
+    <div class="mt-16">
+      <header class="mx-auto mb-10 max-w-2xl text-center">
+        <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-600">How We Build Trust</p>
+        <h3 class="mt-2 font-display text-2xl font-extrabold tracking-tight text-ink-900 sm:text-3xl">
+          Our Editorial Process — Step by Step
+        </h3>
+        <p class="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-slate-600">
+          Every calculator and guide passes through five review stages before it is published. Nothing
+          bypasses them — not even small updates.
+        </p>
+      </header>
+
+      <ol class="relative grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <!-- Step 1 -->
+        <li class="relative rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
+          <span class="grid h-10 w-10 place-items-center rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 font-display text-sm font-extrabold text-white shadow-glow">
+            01
+          </span>
+          <h4 class="mt-3 font-display text-sm font-bold text-ink-900">Draft</h4>
+          <p class="mt-1.5 text-[12px] leading-relaxed text-slate-600">
+            A topic is drafted based on real field questions and reference to the current code edition.
+          </p>
+        </li>
+
+        <!-- Step 2 -->
+        <li class="relative rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
+          <span class="grid h-10 w-10 place-items-center rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 font-display text-sm font-extrabold text-white shadow-glow">
+            02
+          </span>
+          <h4 class="mt-3 font-display text-sm font-bold text-ink-900">Technical Review</h4>
+          <p class="mt-1.5 text-[12px] leading-relaxed text-slate-600">
+            A practising professional verifies the formula, worked examples and code references.
+          </p>
+        </li>
+
+        <!-- Step 3 -->
+        <li class="relative rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
+          <span class="grid h-10 w-10 place-items-center rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 font-display text-sm font-extrabold text-white shadow-glow">
+            03
+          </span>
+          <h4 class="mt-3 font-display text-sm font-bold text-ink-900">Plain-Language Edit</h4>
+          <p class="mt-1.5 text-[12px] leading-relaxed text-slate-600">
+            A technical editor rewrites for clarity — no jargon, no maths-heavy tangents, no fluff.
+          </p>
+        </li>
+
+        <!-- Step 4 -->
+        <li class="relative rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
+          <span class="grid h-10 w-10 place-items-center rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 font-display text-sm font-extrabold text-white shadow-glow">
+            04
+          </span>
+          <h4 class="mt-3 font-display text-sm font-bold text-ink-900">Verification</h4>
+          <p class="mt-1.5 text-[12px] leading-relaxed text-slate-600">
+            Tool is tested against known reference cases in imperial and metric. Output must match.
+          </p>
+        </li>
+
+        <!-- Step 5 -->
+        <li class="relative rounded-2xl border-2 border-brand-300 bg-brand-50 p-5 shadow-card">
+          <span class="grid h-10 w-10 place-items-center rounded-lg bg-gradient-to-br from-brand-600 to-brand-800 font-display text-sm font-extrabold text-white shadow-glow">
+            05
+          </span>
+          <h4 class="mt-3 font-display text-sm font-bold text-brand-900">Publish &amp; Date</h4>
+          <p class="mt-1.5 text-[12px] leading-relaxed text-brand-900/80">
+            Published with a visible version number and date. Reviewed again each year.
+          </p>
+        </li>
+      </ol>
+    </div>
+
+    <!-- Standard callout -->
+    <div class="mt-12 rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-5 shadow-card sm:p-6">
+      <div class="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+        <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-ink-900 text-brand-400">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 12l2 2 4-4" />
+            <circle cx="12" cy="12" r="10" />
+          </svg>
+        </span>
+        <div class="min-w-0 flex-1">
+          <h4 class="font-display text-sm font-bold text-ink-900">Every Page Has an Owner</h4>
+          <p class="mt-1 text-[12.5px] leading-relaxed text-slate-600">
+            Each calculator and guide has a named reviewer, a visible version number and an update date. When
+            something changes — whether a formula is corrected, a code reference is updated, or a new unit is
+            added — that change is logged publicly in the page's history.
+          </p>
+        </div>
+        <a href="/contact.html" class="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-ink-900 px-3.5 py-2 text-xs font-bold text-white transition-colors hover:bg-ink-800">
+          Report an issue
+          <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     PHASE 6/10 — BUSINESS MODEL & TRANSPARENCY
+     ============================================================ -->
+
+<section id="business-model" class="relative border-t border-slate-200 bg-slate-50">
+  <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+
+    <!-- Section header -->
+    <header class="mx-auto mb-12 max-w-2xl text-center">
+      <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-600">Transparency</p>
+      <h2 class="mt-2 font-display text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">
+        How We Fund BuildMetric
+      </h2>
+      <div class="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brand-500 to-brand-300"></div>
+      <p class="mt-4 text-sm leading-relaxed text-slate-600">
+        Every calculator and guide on this site is free, and will stay free. Here is exactly how that works
+        — no hidden funnels, no gated results, no dark patterns.
+      </p>
+    </header>
+
+    <div class="grid gap-6 lg:grid-cols-12 lg:gap-8">
+
+      <!-- ============================
+           REVENUE STREAMS (7 cols)
+           ============================ -->
+      <div class="lg:col-span-7">
+        <div class="space-y-4">
+
+          <!-- Stream 1: Display Advertising -->
+          <article class="bento-tile rounded-2xl border border-slate-200 bg-white p-5 shadow-card sm:p-6">
+            <div class="flex items-start gap-4">
+              <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-glow">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="14" rx="2" />
+                  <path d="M3 10h18M8 18v4M16 18v4" />
+                </svg>
+              </span>
+              <div class="min-w-0 flex-1">
+                <div class="flex flex-wrap items-center gap-2">
+                  <h3 class="font-display text-base font-bold text-ink-900">Display Advertising</h3>
+                  <span class="rounded-full bg-brand-50 px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wider text-brand-700 ring-1 ring-brand-200">
+                    Primary
+                  </span>
+                </div>
+                <p class="mt-2 text-[13px] leading-relaxed text-slate-600">
+                  We run a small number of clearly marked display ad slots served by third-party ad networks.
+                  Ads are labelled and never overlay the calculator results. We do not serve pop-ups,
+                  auto-playing video, or interstitial ads that block reading.
+                </p>
+                <ul class="mt-3 space-y-1.5 text-[12px] text-slate-700">
+                  <li class="flex items-start gap-2">
+                    <svg class="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5" /></svg>
+                    <span>Clearly marked "Ad Space" placeholders.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5" /></svg>
+                    <span>No ads inside result boxes or calculator UI.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5" /></svg>
+                    <span>Advertisers have no influence on formula or editorial choices.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Stream 2: Affiliate Links -->
+          <article class="bento-tile rounded-2xl border border-slate-200 bg-white p-5 shadow-card sm:p-6">
+            <div class="flex items-start gap-4">
+              <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-ink-800 to-ink-950 text-brand-400 shadow-card">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.5 1.5" />
+                  <path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.5-1.5" />
+                </svg>
+              </span>
+              <div class="min-w-0 flex-1">
+                <div class="flex flex-wrap items-center gap-2">
+                  <h3 class="font-display text-base font-bold text-ink-900">Affiliate Links</h3>
+                  <span class="rounded-full bg-slate-100 px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wider text-slate-600 ring-1 ring-slate-200">
+                    Secondary
+                  </span>
+                </div>
+                <p class="mt-2 text-[13px] leading-relaxed text-slate-600">
+                  Where our guides reference specific products — a particular membrane, a tool, a material
+                  sample — we may include an affiliate link to a supplier. If you buy through that link, we
+                  receive a small commission at no extra cost to you.
+                </p>
+                <ul class="mt-3 space-y-1.5 text-[12px] text-slate-700">
+                  <li class="flex items-start gap-2">
+                    <svg class="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5" /></svg>
+                    <span>Disclosed at the top of any page with affiliate links.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5" /></svg>
+                    <span>Commission rate never affects product placement or recommendation.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5" /></svg>
+                    <span>No product is recommended solely because of affiliate revenue.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Stream 3: What We Don't Do -->
+          <article class="overflow-hidden rounded-2xl border-2 border-rose-200 bg-white shadow-card">
+            <div class="border-b border-rose-100 bg-gradient-to-r from-rose-500 to-rose-600 px-5 py-3.5 sm:px-6">
+              <div class="flex items-center gap-2.5">
+                <span class="grid h-8 w-8 place-items-center rounded-lg bg-white/20 text-white ring-1 ring-white/30">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-white/80">Red Line</p>
+                  <h3 class="font-display text-sm font-bold text-white">What We Will Never Do</h3>
+                </div>
+              </div>
+            </div>
+            <ul class="space-y-3 px-5 py-5 sm:px-6">
+              <li class="flex items-start gap-2.5 text-[13px]">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-rose-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12" /></svg>
+                <span class="leading-relaxed text-slate-700"><strong class="text-ink-900">Sell calculator outputs or lead data.</strong> Your inputs and results are not sold.</span>
+              </li>
+              <li class="flex items-start gap-2.5 text-[13px]">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-rose-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12" /></svg>
+                <span class="leading-relaxed text-slate-700"><strong class="text-ink-900">Accept paid reviews.</strong> No payment, sponsorship or affiliate relationship changes our editorial conclusions.</span>
+              </li>
+              <li class="flex items-start gap-2.5 text-[13px]">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-rose-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12" /></svg>
+                <span class="leading-relaxed text-slate-700"><strong class="text-ink-900">Paywall tools or results.</strong> No sign-up wall, no forced newsletter, no gated "premium" calculation.</span>
+              </li>
+              <li class="flex items-start gap-2.5 text-[13px]">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-rose-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12" /></svg>
+                <span class="leading-relaxed text-slate-700"><strong class="text-ink-900">Sell sponsored rankings.</strong> Search result positions and internal "related tools" lists are algorithm-based, not paid.</span>
+              </li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ============================
+           SIDEBAR: NUMBERS + DISCLOSURE (5 cols)
+           ============================ -->
+      <div class="lg:col-span-5">
+        <div class="space-y-4 lg:sticky lg:top-24">
+
+          <!-- Revenue split card -->
+          <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+            <div class="border-b border-slate-200 bg-gradient-to-br from-ink-900 to-ink-800 px-5 py-4">
+              <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-300">Revenue Mix</p>
+              <h3 class="mt-0.5 font-display text-sm font-bold text-white">Where the Money Comes From</h3>
+            </div>
+            <div class="p-5">
+              <dl class="space-y-4">
+                <div>
+                  <div class="flex items-baseline justify-between gap-2">
+                    <dt class="text-[12px] font-semibold text-slate-700">Display Ads</dt>
+                    <dd class="font-mono text-sm font-extrabold text-ink-900">~78%</dd>
+                  </div>
+                  <div class="mt-1.5 h-2 overflow-hidden rounded-full bg-slate-100">
+                    <div class="h-full w-[78%] rounded-full bg-gradient-to-r from-brand-500 to-brand-400"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-baseline justify-between gap-2">
+                    <dt class="text-[12px] font-semibold text-slate-700">Affiliate Commissions</dt>
+                    <dd class="font-mono text-sm font-extrabold text-ink-900">~18%</dd>
+                  </div>
+                  <div class="mt-1.5 h-2 overflow-hidden rounded-full bg-slate-100">
+                    <div class="h-full w-[18%] rounded-full bg-gradient-to-r from-ink-700 to-ink-800"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-baseline justify-between gap-2">
+                    <dt class="text-[12px] font-semibold text-slate-700">Other (sponsorships)</dt>
+                    <dd class="font-mono text-sm font-extrabold text-ink-900">~4%</dd>
+                  </div>
+                  <div class="mt-1.5 h-2 overflow-hidden rounded-full bg-slate-100">
+                    <div class="h-full w-[4%] rounded-full bg-gradient-to-r from-slate-400 to-slate-500"></div>
+                  </div>
+                </div>
+              </dl>
+              <p class="mt-4 text-[11px] leading-relaxed text-slate-500">
+                Approximate breakdown based on the last 12 months of operations. Sponsorships are always
+                clearly marked and never influence editorial content.
+              </p>
+            </div>
+          </div>
+
+          <!-- Disclosure card -->
+          <div class="rounded-2xl border border-brand-200 bg-gradient-to-br from-brand-50 to-white p-5 shadow-card">
+            <div class="flex items-center gap-2.5">
+              <span class="grid h-8 w-8 place-items-center rounded-lg bg-brand-500 text-white">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </span>
+              <h3 class="font-display text-sm font-bold text-ink-900">Full Disclosure</h3>
+            </div>
+            <p class="mt-2.5 text-[12.5px] leading-relaxed text-slate-700">
+              Detailed legal framework, liability boundaries and privacy commitments are covered in our
+              companion documents:
+            </p>
+            <ul class="mt-3 space-y-1.5 text-[12px] font-semibold">
+              <li>
+                <a href="/disclaimer.html" class="inline-flex items-center gap-1.5 text-brand-700 hover:underline">
+                  Disclaimer
+                  <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </a>
+              </li>
+              <li>
+                <a href="/terms.html" class="inline-flex items-center gap-1.5 text-brand-700 hover:underline">
+                  Terms of Use
+                  <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </a>
+              </li>
+              <li>
+                <a href="/privacy.html" class="inline-flex items-center gap-1.5 text-brand-700 hover:underline">
+                  Privacy Policy
+                  <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </a>
+              </li>
+              <li>
+                <a href="/cookie-policy.html" class="inline-flex items-center gap-1.5 text-brand-700 hover:underline">
+                  Cookie Policy
+                  <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Advertise with us card -->
+          <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
+            <div class="flex items-start gap-3">
+              <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-ink-900 text-brand-400">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M3 11l18-8-8 18-2-8-8-2z" />
+                </svg>
+              </span>
+              <div class="min-w-0">
+                <h4 class="font-display text-sm font-bold text-ink-900">Advertise With Us</h4>
+                <p class="mt-1 text-[12px] leading-relaxed text-slate-600">
+                  Brand or manufacturer interested in a placement? Request our media kit.
+                </p>
+                <a href="mailto:ads@buildmetric.org" class="mt-2 inline-flex items-center gap-1.5 text-[11.5px] font-bold text-brand-700 hover:text-brand-800">
+                  ads@buildmetric.org
+                  <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ad Space -->
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <div class="my-6 flex min-h-[90px] items-center justify-center rounded-xl bg-slate-100 border-2 border-dashed border-slate-300 px-4 py-6 text-center">
+    <span class="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400">Ad Space — 728×90 / Responsive Leaderboard</span>
+  </div>
+</div>    
+
+     <!-- ============================================================
+     PHASE 7/10 (UPDATED FOR 2026) — MILESTONES + ROADMAP + INDEPENDENCE
+     ============================================================ -->
+
+<section id="milestones" class="relative border-t border-slate-200 bg-white">
+  <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+
+    <!-- Section header -->
+    <header class="mx-auto mb-12 max-w-2xl text-center">
+      <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-600">Our Journey</p>
+      <h2 class="mt-2 font-display text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">
+        How BuildMetric Grew
+      </h2>
+      <div class="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brand-500 to-brand-300"></div>
+      <p class="mt-4 text-sm leading-relaxed text-slate-600">
+        Three years of tools, reviews and corrections — from a single roof pitch calculator to a library of
+        40+ free professional resources.
+      </p>
+    </header>
+
+    <div class="grid gap-8 lg:grid-cols-12 lg:gap-10">
+
+      <!-- ============================
+           TIMELINE (7 cols)
+           ============================ -->
+      <div class="lg:col-span-7">
+        <ol class="relative space-y-5 before:absolute before:left-[19px] before:top-2 before:h-[calc(100%-1rem)] before:w-0.5 before:bg-gradient-to-b before:from-brand-400 before:via-brand-300 before:to-transparent sm:before:left-[27px]">
+
+          <!-- Milestone 1: 2023 Q2 -->
+          <li class="relative pl-12 sm:pl-16">
+            <span class="absolute left-0 top-0 grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 font-display text-[10px] font-extrabold text-white shadow-glow ring-4 ring-white sm:h-14 sm:w-14 sm:text-xs">
+              2023
+              <span class="-mt-0.5 block text-[8px] font-semibold opacity-80 sm:text-[9px]">Q2</span>
+            </span>
+            <div class="bento-tile rounded-2xl border border-slate-200 bg-white p-5 shadow-card sm:p-6">
+              <div class="flex flex-wrap items-center gap-2">
+                <h3 class="font-display text-base font-bold text-ink-900">The First Calculator</h3>
+                <span class="rounded-full bg-brand-50 px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wider text-brand-700 ring-1 ring-brand-200">
+                  Origin
+                </span>
+              </div>
+              <p class="mt-2 text-[13px] leading-relaxed text-slate-600">
+                BuildMetric launches with a single tool: the <strong class="text-ink-900">Roof Pitch Calculator</strong>.
+                Built from scratch, tested against 40+ reference cases in imperial and metric, and published
+                with a full technical explainer.
+              </p>
+            </div>
+          </li>
+
+          <!-- Milestone 2: 2023 Q4 -->
+          <li class="relative pl-12 sm:pl-16">
+            <span class="absolute left-0 top-0 grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-ink-800 to-ink-950 font-display text-[10px] font-extrabold text-white shadow-card ring-4 ring-white sm:h-14 sm:w-14 sm:text-xs">
+              2023
+              <span class="-mt-0.5 block text-[8px] font-semibold text-brand-300 sm:text-[9px]">Q4</span>
+            </span>
+            <div class="bento-tile rounded-2xl border border-slate-200 bg-white p-5 shadow-card sm:p-6">
+              <div class="flex flex-wrap items-center gap-2">
+                <h3 class="font-display text-base font-bold text-ink-900">Estimating Suite</h3>
+                <span class="rounded-full bg-slate-100 px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wider text-slate-600 ring-1 ring-slate-200">
+                  Expansion
+                </span>
+              </div>
+              <p class="mt-2 text-[13px] leading-relaxed text-slate-600">
+                Concrete volume, stud count and paint coverage calculators added. First editorial review board
+                formed — quantity surveyor + structural engineer on retainer.
+              </p>
+            </div>
+          </li>
+
+          <!-- Milestone 3: 2024 Q2 -->
+          <li class="relative pl-12 sm:pl-16">
+            <span class="absolute left-0 top-0 grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 font-display text-[10px] font-extrabold text-white shadow-glow ring-4 ring-white sm:h-14 sm:w-14 sm:text-xs">
+              2024
+              <span class="-mt-0.5 block text-[8px] font-semibold opacity-80 sm:text-[9px]">Q2</span>
+            </span>
+            <div class="bento-tile rounded-2xl border border-slate-200 bg-white p-5 shadow-card sm:p-6">
+              <div class="flex flex-wrap items-center gap-2">
+                <h3 class="font-display text-base font-bold text-ink-900">Version Tracking Goes Public</h3>
+                <span class="rounded-full bg-brand-50 px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wider text-brand-700 ring-1 ring-brand-200">
+                  Trust
+                </span>
+              </div>
+              <p class="mt-2 text-[13px] leading-relaxed text-slate-600">
+                Every calculator page now displays a visible version number and last-updated date. Corrections
+                reported by users are logged publicly and credited (with permission).
+              </p>
+            </div>
+          </li>
+
+          <!-- Milestone 4: 2024 Q4 -->
+          <li class="relative pl-12 sm:pl-16">
+            <span class="absolute left-0 top-0 grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-slate-600 to-slate-800 font-display text-[10px] font-extrabold text-white shadow-card ring-4 ring-white sm:h-14 sm:w-14 sm:text-xs">
+              2024
+              <span class="-mt-0.5 block text-[8px] font-semibold text-brand-300 sm:text-[9px]">Q4</span>
+            </span>
+            <div class="bento-tile rounded-2xl border border-slate-200 bg-white p-5 shadow-card sm:p-6">
+              <div class="flex flex-wrap items-center gap-2">
+                <h3 class="font-display text-base font-bold text-ink-900">Three-Market Code Audit</h3>
+                <span class="rounded-full bg-slate-100 px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wider text-slate-600 ring-1 ring-slate-200">
+                  Review
+                </span>
+              </div>
+              <p class="mt-2 text-[13px] leading-relaxed text-slate-600">
+                Full audit of every calculator against <strong class="text-ink-900">IRC 2021</strong>,
+                <strong class="text-ink-900">BS 5534</strong> and <strong class="text-ink-900">AS 1684</strong>.
+                Regional differences documented explicitly instead of flattened into a single "international"
+                answer.
+              </p>
+            </div>
+          </li>
+
+          <!-- Milestone 5: 2025 Q4 (NEW) -->
+          <li class="relative pl-12 sm:pl-16">
+            <span class="absolute left-0 top-0 grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-ink-800 to-ink-950 font-display text-[10px] font-extrabold text-white shadow-card ring-4 ring-white sm:h-14 sm:w-14 sm:text-xs">
+              2025
+              <span class="-mt-0.5 block text-[8px] font-semibold text-brand-300 sm:text-[9px]">Q4</span>
+            </span>
+            <div class="bento-tile rounded-2xl border border-slate-200 bg-white p-5 shadow-card sm:p-6">
+              <div class="flex flex-wrap items-center gap-2">
+                <h3 class="font-display text-base font-bold text-ink-900">Free Public API + Batch Export</h3>
+                <span class="rounded-full bg-brand-50 px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wider text-brand-700 ring-1 ring-brand-200">
+                  New
+                </span>
+              </div>
+              <p class="mt-2 text-[13px] leading-relaxed text-slate-600">
+                Read-only API endpoints released for all calculators, alongside CSV and PDF batch export.
+                Intended for small estimating teams who want to integrate results into their own takeoff
+                workflows — still free, still no sign-up.
+              </p>
+            </div>
+          </li>
+
+          <!-- Milestone 6: 2026 — CURRENT -->
+          <li class="relative pl-12 sm:pl-16">
+            <span class="absolute left-0 top-0 grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 font-display text-[10px] font-extrabold text-white shadow-glow ring-4 ring-white sm:h-14 sm:w-14 sm:text-xs">
+              2026
+              <span class="-mt-0.5 block text-[8px] font-semibold opacity-80 sm:text-[9px]">Now</span>
+            </span>
+            <div class="rounded-2xl border-2 border-brand-300 bg-gradient-to-br from-brand-50 to-white p-5 shadow-card sm:p-6">
+              <div class="flex flex-wrap items-center gap-2">
+                <h3 class="font-display text-base font-bold text-brand-900">40+ Tools &amp; Growing</h3>
+                <span class="rounded-full bg-brand-500 px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wider text-white">
+                  Current
+                </span>
+              </div>
+              <p class="mt-2 text-[13px] leading-relaxed text-brand-900/80">
+                The library now spans roofing, concrete, framing, finishes and estimating. All tools remain
+                free, human-reviewed and open to correction. Over 250 user-reported fixes have been validated
+                and published with version notes since launch.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- ============================
+           ROADMAP + INDEPENDENCE (5 cols)
+           ============================ -->
+      <div class="lg:col-span-5">
+        <div class="space-y-4 lg:sticky lg:top-24">
+
+          <!-- Roadmap card -->
+          <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+            <div class="border-b border-slate-200 bg-gradient-to-br from-ink-900 to-ink-800 px-5 py-4">
+              <div class="flex items-center gap-2.5">
+                <span class="grid h-8 w-8 place-items-center rounded-lg bg-brand-500 text-white">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 2v6M12 16v6M2 12h6M16 12h6" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-300">Roadmap · 2026–2027</p>
+                  <h3 class="font-display text-sm font-bold text-white">What's Coming Next</h3>
+                </div>
+              </div>
+            </div>
+
+            <ul class="divide-y divide-slate-200">
+              <li class="flex items-start gap-3 px-5 py-3.5">
+                <span class="mt-1 grid h-5 w-5 shrink-0 place-items-center rounded-md bg-brand-500 text-[9px] font-bold text-white">Q2</span>
+                <div class="min-w-0">
+                  <p class="text-[13px] font-bold text-ink-900">Stair &amp; Riser Calculator</p>
+                  <p class="mt-0.5 text-[11.5px] leading-relaxed text-slate-500">IRC/BS/AS compliant rise-run-balcove tool · <span class="font-mono text-brand-600">2026</span></p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3 px-5 py-3.5">
+                <span class="mt-1 grid h-5 w-5 shrink-0 place-items-center rounded-md bg-brand-500 text-[9px] font-bold text-white">Q3</span>
+                <div class="min-w-0">
+                  <p class="text-[13px] font-bold text-ink-900">Rebar &amp; Concrete Reinforcement</p>
+                  <p class="mt-0.5 text-[11.5px] leading-relaxed text-slate-500">Bar spacing, cover, lap-length estimates · <span class="font-mono text-brand-600">2026</span></p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3 px-5 py-3.5">
+                <span class="mt-1 grid h-5 w-5 shrink-0 place-items-center rounded-md bg-slate-300 text-[9px] font-bold text-slate-700">Q4</span>
+                <div class="min-w-0">
+                  <p class="text-[13px] font-bold text-ink-900">Offline PWA Mode</p>
+                  <p class="mt-0.5 text-[11.5px] leading-relaxed text-slate-500">Cache calculations for site use · <span class="font-mono text-slate-500">2026</span></p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3 bg-slate-50 px-5 py-3.5">
+                <span class="mt-1 grid h-5 w-5 shrink-0 place-items-center rounded-md bg-slate-200 text-[9px] font-bold text-slate-500">Q1</span>
+                <div class="min-w-0">
+                  <p class="text-[13px] font-bold text-slate-500">Structural Load Calculator</p>
+                  <p class="mt-0.5 text-[11.5px] leading-relaxed text-slate-400">Preliminary dead/live load estimator · <span class="font-mono">2027</span></p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="border-t border-slate-200 bg-slate-50 px-5 py-3">
+              <p class="text-[11px] leading-relaxed text-slate-500">
+                Subject to technical and editorial review. No sponsor can push a tool up this list.
+              </p>
+            </div>
+          </div>
+
+          <!-- Independence card -->
+          <div class="overflow-hidden rounded-2xl border border-brand-200 bg-white shadow-card">
+            <div class="border-b border-brand-100 bg-gradient-to-r from-brand-500 to-brand-600 px-5 py-3.5">
+              <div class="flex items-center gap-2.5">
+                <span class="grid h-8 w-8 place-items-center rounded-lg bg-white/20 text-white ring-1 ring-white/30">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-white/80">Independence</p>
+                  <h3 class="font-display text-sm font-bold text-white">Editorial Firewall</h3>
+                </div>
+              </div>
+            </div>
+            <ul class="space-y-2.5 px-5 py-4">
+              <li class="flex items-start gap-2 text-[12px]">
+                <svg class="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5" /></svg>
+                <span class="leading-relaxed text-slate-700">Ad sales and editorial teams are <strong class="text-ink-900">separate</strong>.</span>
+              </li>
+              <li class="flex items-start gap-2 text-[12px]">
+                <svg class="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5" /></svg>
+                <span class="leading-relaxed text-slate-700">No advertiser sees a draft before publication.</span>
+              </li>
+              <li class="flex items-start gap-2 text-[12px]">
+                <svg class="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5" /></svg>
+                <span class="leading-relaxed text-slate-700">Sponsorship does not grant edit rights or approval power.</span>
+              </li>
+              <li class="flex items-start gap-2 text-[12px]">
+                <svg class="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5" /></svg>
+                <span class="leading-relaxed text-slate-700">Any violation is reported publicly in the page history.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contribute card -->
+          <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
+            <div class="flex items-start gap-3">
+              <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-ink-900 text-brand-400">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </span>
+              <div class="min-w-0">
+                <h4 class="font-display text-sm font-bold text-ink-900">Contribute</h4>
+                <p class="mt-1 text-[12px] leading-relaxed text-slate-600">
+                  Practising engineer or surveyor? We accept occasional guest contributions — no paid posts, no
+                  SEO links.
+                </p>
+                <a href="mailto:contact@buildmetric.org?subject=Guest%20Contribution%20Enquiry" class="mt-2 inline-flex items-center gap-1.5 text-[11.5px] font-bold text-brand-700 hover:text-brand-800">
+                  contact@buildmetric.org
+                  <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+
+
+  <!-- ============================================================
+     PHASE 8/10 — REGIONAL COVERAGE (WHO WE SERVE) + AD SLOT
+     ============================================================ -->
+
+<section id="regions" class="relative border-t border-slate-200 bg-slate-50">
+  <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+
+    <!-- Section header -->
+    <header class="mx-auto mb-12 max-w-2xl text-center">
+      <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-600">Who We Serve</p>
+      <h2 class="mt-2 font-display text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">
+        Three Markets, Honestly Covered
+      </h2>
+      <div class="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brand-500 to-brand-300"></div>
+      <p class="mt-4 text-sm leading-relaxed text-slate-600">
+        We do not pretend to cover the whole world. BuildMetric publishes specifically for the USA, UK and
+        Australia — because those are the three regulatory environments our team knows intimately. Here is
+        what that means in practice.
+      </p>
+    </header>
+
+    <!-- ============================
+         REGION CARDS (3)
+         ============================ -->
+    <div class="grid gap-5 md:grid-cols-3 md:gap-6">
+
+      <!-- United States -->
+      <article class="bento-tile group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+        <div class="border-b border-slate-200 bg-gradient-to-br from-brand-500 to-brand-700 px-5 py-4">
+          <div class="flex items-center justify-between gap-2">
+            <div class="flex items-center gap-2.5">
+              <span class="font-mono text-2xl leading-none" aria-hidden="true">🇺🇸</span>
+              <div>
+                <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-white/80">Region 01</p>
+                <h3 class="font-display text-base font-bold text-white">United States</h3>
+              </div>
+            </div>
+            <span class="rounded-full bg-white/15 px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wider text-white ring-1 ring-white/30">
+              IRC · IBC
+            </span>
+          </div>
+        </div>
+        <div class="flex flex-1 flex-col p-5">
+          <dl class="space-y-2.5 text-[12.5px]">
+            <div class="flex justify-between gap-2 border-b border-slate-100 pb-2">
+              <dt class="font-semibold uppercase tracking-wide text-slate-500">Units</dt>
+              <dd class="text-right font-mono font-bold text-ink-900">Imperial (primary)</dd>
+            </div>
+            <div class="flex justify-between gap-2 border-b border-slate-100 pb-2">
+              <dt class="font-semibold uppercase tracking-wide text-slate-500">Codes</dt>
+              <dd class="text-right font-mono font-bold text-ink-900">IRC 2021 · IBC</dd>
+            </div>
+            <div class="flex justify-between gap-2">
+              <dt class="font-semibold uppercase tracking-wide text-slate-500">Pitch Format</dt>
+              <dd class="text-right font-mono font-bold text-ink-900">Rise per 12"</dd>
+            </div>
+          </dl>
+          <p class="mt-4 text-[12.5px] leading-relaxed text-slate-600">
+            Residential work follows IRC or IBC with state and municipal amendments. Our tools assume imperial
+            units by default (metric available), and code references cite the current IRC edition alongside
+            IBC where applicable.
+          </p>
+          <p class="mt-3 inline-flex items-center gap-1.5 text-[10.5px] font-bold uppercase tracking-wider text-brand-700">
+            <span class="inline-block h-1.5 w-1.5 rounded-full bg-brand-500"></span>
+            Coverage: Full
+          </p>
+        </div>
+      </article>
+
+      <!-- United Kingdom -->
+      <article class="bento-tile group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+        <div class="border-b border-slate-200 bg-gradient-to-br from-ink-800 to-ink-950 px-5 py-4">
+          <div class="flex items-center justify-between gap-2">
+            <div class="flex items-center gap-2.5">
+              <span class="font-mono text-2xl leading-none" aria-hidden="true">🇬🇧</span>
+              <div>
+                <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-300">Region 02</p>
+                <h3 class="font-display text-base font-bold text-white">United Kingdom</h3>
+              </div>
+            </div>
+            <span class="rounded-full bg-white/10 px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wider text-brand-300 ring-1 ring-white/20">
+              BS 5534
+            </span>
+          </div>
+        </div>
+        <div class="flex flex-1 flex-col p-5">
+          <dl class="space-y-2.5 text-[12.5px]">
+            <div class="flex justify-between gap-2 border-b border-slate-100 pb-2">
+              <dt class="font-semibold uppercase tracking-wide text-slate-500">Units</dt>
+              <dd class="text-right font-mono font-bold text-ink-900">Metric (only)</dd>
+            </div>
+            <div class="flex justify-between gap-2 border-b border-slate-100 pb-2">
+              <dt class="font-semibold uppercase tracking-wide text-slate-500">Codes</dt>
+              <dd class="text-right font-mono font-bold text-ink-900">Building Regs · BS</dd>
+            </div>
+            <div class="flex justify-between gap-2">
+              <dt class="font-semibold uppercase tracking-wide text-slate-500">Pitch Format</dt>
+              <dd class="text-right font-mono font-bold text-ink-900">Degrees (°)</dd>
+            </div>
+          </dl>
+          <p class="mt-4 text-[12.5px] leading-relaxed text-slate-600">
+            Governed by the Building Regulations (England &amp; Wales), Scottish Building Standards and Northern
+            Ireland equivalents, supported by British Standards such as BS 5534. Wind and rain exposure maps
+            drive stricter requirements in the west and north.
+          </p>
+          <p class="mt-3 inline-flex items-center gap-1.5 text-[10.5px] font-bold uppercase tracking-wider text-brand-700">
+            <span class="inline-block h-1.5 w-1.5 rounded-full bg-brand-500"></span>
+            Coverage: Full
+          </p>
+        </div>
+      </article>
+
+      <!-- Australia -->
+      <article class="bento-tile group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+        <div class="border-b border-slate-200 bg-gradient-to-br from-brand-600 to-brand-800 px-5 py-4">
+          <div class="flex items-center justify-between gap-2">
+            <div class="flex items-center gap-2.5">
+              <span class="font-mono text-2xl leading-none" aria-hidden="true">🇦🇺</span>
+              <div>
+                <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-white/80">Region 03</p>
+                <h3 class="font-display text-base font-bold text-white">Australia</h3>
+              </div>
+            </div>
+            <span class="rounded-full bg-white/15 px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wider text-white ring-1 ring-white/30">
+              AS 1684
+            </span>
+          </div>
+        </div>
+        <div class="flex flex-1 flex-col p-5">
+          <dl class="space-y-2.5 text-[12.5px]">
+            <div class="flex justify-between gap-2 border-b border-slate-100 pb-2">
+              <dt class="font-semibold uppercase tracking-wide text-slate-500">Units</dt>
+              <dd class="text-right font-mono font-bold text-ink-900">Metric (only)</dd>
+            </div>
+            <div class="flex justify-between gap-2 border-b border-slate-100 pb-2">
+              <dt class="font-semibold uppercase tracking-wide text-slate-500">Codes</dt>
+              <dd class="text-right font-mono font-bold text-ink-900">NCC · AS 1684</dd>
+            </div>
+            <div class="flex justify-between gap-2">
+              <dt class="font-semibold uppercase tracking-wide text-slate-500">Pitch Format</dt>
+              <dd class="text-right font-mono font-bold text-ink-900">Degrees (°)</dd>
+            </div>
+          </dl>
+          <p class="mt-4 text-[12.5px] leading-relaxed text-slate-600">
+            The National Construction Code (NCC) operates alongside Australian Standards — AS 1684 for timber
+            framing, AS 4055 for wind classification. State-based variations apply, and cyclonic regions in
+            the far north impose stricter fastening and pitch requirements.
+          </p>
+          <p class="mt-3 inline-flex items-center gap-1.5 text-[10.5px] font-bold uppercase tracking-wider text-brand-700">
+            <span class="inline-block h-1.5 w-1.5 rounded-full bg-brand-500"></span>
+            Coverage: Full
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <!-- ============================
+         COMPARISON TABLE
+         ============================ -->
+    <div class="mt-10 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+      <div class="border-b border-slate-200 bg-gradient-to-br from-ink-900 to-ink-800 px-5 py-4 sm:px-6">
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <div class="flex items-center gap-2.5">
+            <span class="grid h-8 w-8 place-items-center rounded-lg bg-brand-500 text-white">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M3 9h18M9 21V9" />
+              </svg>
+            </span>
+            <div>
+              <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-300">Side-by-Side</p>
+              <h3 class="font-display text-sm font-bold text-white">What Actually Differs</h3>
+            </div>
+          </div>
+          <span class="rounded-full bg-white/10 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-slate-300 ring-1 ring-white/20">
+            Updated 2026
+          </span>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm">
+          <thead class="border-b border-slate-200 bg-slate-50 text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">
+            <tr>
+              <th scope="col" class="px-4 py-3 sm:px-5">Dimension</th>
+              <th scope="col" class="px-4 py-3 text-center sm:px-5">🇺🇸 USA</th>
+              <th scope="col" class="px-4 py-3 text-center sm:px-5">🇬🇧 UK</th>
+              <th scope="col" class="px-4 py-3 text-center sm:px-5">🇦🇺 AU</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-[13px]">
+
+            <tr>
+              <td class="px-4 py-3 font-semibold text-ink-900 sm:px-5">Primary Units</td>
+              <td class="px-4 py-3 text-center text-slate-700 sm:px-5">Imperial</td>
+              <td class="px-4 py-3 text-center text-slate-700 sm:px-5">Metric</td>
+              <td class="px-4 py-3 text-center text-slate-700 sm:px-5">Metric</td>
+            </tr>
+
+            <tr class="bg-slate-50/50">
+              <td class="px-4 py-3 font-semibold text-ink-900 sm:px-5">Pitch Expression</td>
+              <td class="px-4 py-3 text-center font-mono text-slate-700 sm:px-5">Rise / 12"</td>
+              <td class="px-4 py-3 text-center font-mono text-slate-700 sm:px-5">Degrees</td>
+              <td class="px-4 py-3 text-center font-mono text-slate-700 sm:px-5">Degrees</td>
+            </tr>
+
+            <tr>
+              <td class="px-4 py-3 font-semibold text-ink-900 sm:px-5">Governing Code</td>
+              <td class="px-4 py-3 text-center text-slate-700 sm:px-5">IRC / IBC</td>
+              <td class="px-4 py-3 text-center text-slate-700 sm:px-5">Building Regs</td>
+              <td class="px-4 py-3 text-center text-slate-700 sm:px-5">NCC</td>
+            </tr>
+
+            <tr class="bg-slate-50/50">
+              <td class="px-4 py-3 font-semibold text-ink-900 sm:px-5">Timber Standard</td>
+              <td class="px-4 py-3 text-center text-slate-700 sm:px-5">NDS / IRC</td>
+              <td class="px-4 py-3 text-center text-slate-700 sm:px-5">BS 5268 / EC5</td>
+              <td class="px-4 py-3 text-center text-slate-700 sm:px-5">AS 1684</td>
+            </tr>
+
+            <tr>
+              <td class="px-4 py-3 font-semibold text-ink-900 sm:px-5">Wind Classification</td>
+              <td class="px-4 py-3 text-center text-slate-700 sm:px-5">ASCE 7</td>
+              <td class="px-4 py-3 text-center text-slate-700 sm:px-5">BS EN 1991-1-4</td>
+              <td class="px-4 py-3 text-center text-slate-700 sm:px-5">AS 4055</td>
+            </tr>
+
+            <tr class="bg-slate-50/50">
+              <td class="px-4 py-3 font-semibold text-ink-900 sm:px-5">Roofing Standard</td>
+              <td class="px-4 py-3 text-center text-slate-700 sm:px-5">IRC R905</td>
+              <td class="px-4 py-3 text-center text-slate-700 sm:px-5">BS 5534</td>
+              <td class="px-4 py-3 text-center text-slate-700 sm:px-5">AS 1562 / AS 2050</td>
+            </tr>
+
+            <tr>
+              <td class="px-4 py-3 font-semibold text-ink-900 sm:px-5">Approval Process</td>
+              <td class="px-4 py-3 text-center text-slate-700 sm:px-5">AHJ / Inspector</td>
+              <td class="px-4 py-3 text-center text-slate-700 sm:px-5">Building Control</td>
+              <td class="px-4 py-3 text-center text-slate-700 sm:px-5">Building Surveyor</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <div class="border-t border-slate-200 bg-slate-50 px-5 py-3 sm:px-6">
+        <p class="text-[11px] leading-relaxed text-slate-500">
+          This comparison is for orientation only. Always verify against the specific code edition and local
+          amendments applicable to your site — see our
+          <a href="/disclaimer.html" class="font-semibold text-brand-700 hover:underline">Disclaimer</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- ============================
+         WHY ONLY THREE MARKETS
+         ============================ -->
+    <div class="mt-10 grid gap-5 md:grid-cols-12 md:gap-6">
+
+      <!-- Left: reasoning -->
+      <div class="md:col-span-8">
+        <div class="h-full overflow-hidden rounded-2xl border border-brand-200 bg-gradient-to-br from-brand-50 to-white p-5 shadow-card sm:p-6">
+          <div class="flex items-start gap-3">
+            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-500 text-white shadow-glow">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 16v-4M12 8h.01" />
+              </svg>
+            </span>
+            <div class="min-w-0">
+              <h3 class="font-display text-base font-bold text-ink-900">Why Only Three Markets?</h3>
+              <p class="mt-2 text-[13px] leading-relaxed text-slate-700">
+                It would be easy to claim "global coverage" and paste a flag emoji onto a comparison table.
+                It would also be dishonest. We cover three markets because our team has worked extensively in
+                all three — surveyed in the UK, framed in the US, and reviewed Australian code on project
+                sites. If we added a fourth market tomorrow, we would have to either hire someone with
+                genuine local expertise or accept a lower standard of accuracy. We are not willing to do
+                either.
+              </p>
+              <p class="mt-2.5 text-[13px] leading-relaxed text-slate-700">
+                Users outside those three markets are still welcome to use our calculators — the underlying
+                mathematics is universal. What we cannot do is provide regional code context, local approval
+                guidance or jurisdiction-specific material recommendations. For that, you need a professional
+                licensed where you are building.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: coverage stats -->
+      <div class="md:col-span-4">
+        <div class="h-full rounded-2xl border border-slate-200 bg-white p-5 shadow-card sm:p-6">
+          <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">Coverage at a Glance</p>
+          <dl class="mt-3 space-y-3">
+            <div class="flex items-baseline justify-between gap-2 border-b border-slate-100 pb-3">
+              <dt class="text-xs font-semibold text-slate-600">Full Coverage</dt>
+              <dd class="font-mono text-lg font-extrabold text-brand-600">3</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-2 border-b border-slate-100 pb-3">
+              <dt class="text-xs font-semibold text-slate-600">Code Standards Tracked</dt>
+              <dd class="font-mono text-lg font-extrabold text-ink-900">7</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-2 border-b border-slate-100 pb-3">
+              <dt class="text-xs font-semibold text-slate-600">Local Reviewers</dt>
+              <dd class="font-mono text-lg font-extrabold text-ink-900">4</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-2">
+              <dt class="text-xs font-semibold text-slate-600">Tools Multi-Region</dt>
+              <dd class="font-mono text-lg font-extrabold text-ink-900">40+</dd>
+            </div>
+          </dl>
+          <p class="mt-4 text-[11px] leading-relaxed text-slate-500">
+            Every tool is tested against reference cases in both imperial and metric, regardless of the
+            primary market.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ad Space -->
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <div class="my-6 flex min-h-[250px] items-center justify-center rounded-xl bg-slate-100 border-2 border-dashed border-slate-300 px-4 py-6 text-center">
+    <span class="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400">Ad Space — In-Article Rectangle</span>
+  </div>
+</div>
+
+  <!-- ============================================================
+     PHASE 9/10 — FAQPage JSON-LD + 7 FAQS + TRUST/AUTHOR BOX
+     ============================================================ -->
+
+<!-- ============ FAQPage JSON-LD (matches exactly 7 on-page FAQs) ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://buildmetric.org/about.html#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Who owns and runs BuildMetric?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BuildMetric is independently owned and operated. It is not backed by a manufacturer, a supplier, a lead-generation network or a venture-capital fund. It is run by a small editorial and engineering team — quantity surveyors, structural engineers, licensed roofing contractors and technical editors — with combined field experience across the United States, United Kingdom and Australia. The team writes, reviews, publishes and maintains every calculator and guide on the site."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are BuildMetric calculators really free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every calculator and written guide on buildmetric.org is free to use, with no paywall, no forced sign-up and no gated results. The site is funded through clearly marked display advertising and, on some product references, affiliate commissions. Advertising partners and affiliates have no influence over calculator formulas, editorial conclusions or rankings. There are no 'premium' tiers, no trials and no hidden paywalls."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you verify the accuracy of your calculators?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every calculator is built from formulas that can be derived from first principles, and is tested against a set of known reference cases in both imperial and metric before publication. Each tool is reviewed by at least one practising professional — an engineer, quantity surveyor or licensed contractor — and periodically re-reviewed against current code editions including IRC 2021, BS 5534 and AS 1684. When a user reports an error, we reproduce the issue, test the fix and publish the change with a visible version number and update date."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do you only cover the USA, UK and Australia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because our team has genuine field experience in those three markets — surveying in the UK, framing in the US and reviewing Australian code on project sites. The underlying mathematics is universal, so users anywhere can use our calculators. What we cannot honestly provide outside those three markets is regional code context, local approval guidance or jurisdiction-specific material recommendations. Rather than claim 'global coverage' and deliver a lower standard, we have chosen to be explicit about the three markets we know and cover them properly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you accept sponsored content, paid reviews or paid placements?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. We do not accept paid reviews, sponsored editorials, paid 'guest posts' or SEO link-insertion offers. Advertisers can purchase display placements, but they cannot purchase editorial coverage, alter calculator formulas, influence rankings or preview drafts before publication. We occasionally accept non-paid guest contributions from practising professionals with verifiable credentials and field experience, and those are reviewed under the same standards as our own content. Any sponsorship or affiliate relationship is clearly disclosed on the page where it appears."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I contribute a calculator, guide or guest article?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We occasionally accept guest contributions from practising professionals — engineers, surveyors, architects, licensed contractors — who can demonstrate verifiable credentials and relevant field experience. We do not accept paid placements, sponsored guest posts or SEO link-insertion offers, and we do not publish AI-generated content without a named human reviewer. If you believe your contribution meets our standards, email contact@buildmetric.org with your credentials, a short writing sample and a proposed topic. We respond to accepted pitches only."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you handle corrections to published content?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every valid correction is logged, tested and published with a visible version number and update date on the affected page. Reported issues are triaged within 48 hours and resolved within two business days, and we credit the reporter (with permission) in the page's update history. Over 250 user-reported fixes have been validated and published since launch in 2023. Corrections are how the library gets better — we would much rather be corrected than be quietly wrong."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- ============================================================
+     FAQ SECTION — EXACTLY 7 QUESTIONS
+     ============================================================ -->
+<section id="faqs" class="border-t border-slate-200 bg-gradient-to-b from-slate-50 to-white">
+  <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+
+    <header class="mb-10 text-center">
+      <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-600">Frequently Asked Questions</p>
+      <h2 class="mt-2 font-display text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">
+        Common Questions About BuildMetric
+      </h2>
+      <div class="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brand-500 to-brand-300"></div>
+      <p class="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-slate-600">
+        Seven direct answers about who we are, how we fund the site, how we verify our calculators and how
+        corrections are handled.
+      </p>
+    </header>
+
+    <div class="space-y-3">
+
+      <!-- FAQ 1 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">01</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">
+              Who owns and runs BuildMetric?
+            </span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 5v14M5 12h14" />
+          </svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            BuildMetric is <strong class="text-ink-900">independently owned and operated</strong>. It is not
+            backed by a manufacturer, a supplier, a lead-generation network or a venture-capital fund. It is run
+            by a small editorial and engineering team — quantity surveyors, structural engineers, licensed roofing
+            contractors and technical editors — with combined field experience across the United States, United
+            Kingdom and Australia. The team writes, reviews, publishes and maintains every calculator and guide
+            on the site.
+          </p>
+        </div>
+      </details>
+
+      <!-- FAQ 2 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">02</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">
+              Are BuildMetric calculators really free to use?
+            </span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 5v14M5 12h14" />
+          </svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            <strong class="text-ink-900">Yes.</strong> Every calculator and written guide on buildmetric.org is
+            free to use, with no paywall, no forced sign-up and no gated results. The site is funded through
+            clearly marked display advertising and, on some product references, affiliate commissions.
+            Advertising partners and affiliates have no influence over calculator formulas, editorial conclusions
+            or rankings. There are no "premium" tiers, no trials and no hidden paywalls.
+          </p>
+        </div>
+      </details>
+
+      <!-- FAQ 3 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">03</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">
+              How do you verify the accuracy of your calculators?
+            </span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 5v14M5 12h14" />
+          </svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            Every calculator is built from formulas that can be derived from first principles, and is tested
+            against a set of <strong class="text-ink-900">known reference cases</strong> in both imperial and
+            metric before publication. Each tool is reviewed by at least one practising professional — an
+            engineer, quantity surveyor or licensed contractor — and periodically re-reviewed against current
+            code editions including <strong class="text-ink-900">IRC 2021</strong>,
+            <strong class="text-ink-900">BS 5534</strong> and <strong class="text-ink-900">AS 1684</strong>.
+            When a user reports an error, we reproduce the issue, test the fix and publish the change with a
+            visible version number and update date.
+          </p>
+        </div>
+      </details>
+
+      <!-- FAQ 4 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">04</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">
+              Why do you only cover the USA, UK and Australia?
+            </span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 5v14M5 12h14" />
+          </svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            Because our team has <strong class="text-ink-900">genuine field experience</strong> in those three
+            markets — surveying in the UK, framing in the US and reviewing Australian code on project sites. The
+            underlying mathematics is universal, so users anywhere can use our calculators. What we cannot
+            honestly provide outside those three markets is regional code context, local approval guidance or
+            jurisdiction-specific material recommendations. Rather than claim "global coverage" and deliver a
+            lower standard, we have chosen to be explicit about the three markets we know and cover them
+            properly.
+          </p>
+        </div>
+      </details>
+
+      <!-- FAQ 5 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">05</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">
+              Do you accept sponsored content, paid reviews or paid placements?
+            </span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 5v14M5 12h14" />
+          </svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            <strong class="text-ink-900">No.</strong> We do not accept paid reviews, sponsored editorials, paid
+            "guest posts" or SEO link-insertion offers. Advertisers can purchase display placements, but they
+            cannot purchase editorial coverage, alter calculator formulas, influence rankings or preview drafts
+            before publication. We occasionally accept non-paid guest contributions from practising professionals
+            with verifiable credentials and field experience, and those are reviewed under the same standards as
+            our own content. Any sponsorship or affiliate relationship is clearly disclosed on the page where it
+            appears.
+          </p>
+        </div>
+      </details>
+
+      <!-- FAQ 6 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">06</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">
+              Can I contribute a calculator, guide or guest article?
+            </span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 5v14M5 12h14" />
+          </svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            We occasionally accept guest contributions from practising professionals — engineers, surveyors,
+            architects, licensed contractors — who can demonstrate <strong class="text-ink-900">verifiable
+            credentials</strong> and relevant field experience. We do not accept paid placements, sponsored
+            guest posts or SEO link-insertion offers, and we do not publish AI-generated content without a named
+            human reviewer. If you believe your contribution meets our standards, email
+            <a href="mailto:contact@buildmetric.org?subject=Guest%20Contribution%20Enquiry" class="font-semibold text-brand-600 hover:underline">contact@buildmetric.org</a>
+            with your credentials, a short writing sample and a proposed topic. We respond to accepted pitches
+            only.
+          </p>
+        </div>
+      </details>
+
+      <!-- FAQ 7 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">07</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">
+              How do you handle corrections to published content?
+            </span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 5v14M5 12h14" />
+          </svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            Every valid correction is <strong class="text-ink-900">logged, tested and published</strong> with a
+            visible version number and update date on the affected page. Reported issues are triaged within 48
+            hours and resolved within two business days, and we credit the reporter (with permission) in the
+            page's update history. Over <strong class="text-ink-900">250 user-reported fixes</strong> have been
+            validated and published since launch in 2023. Corrections are how the library gets better — we would
+            much rather be corrected than be quietly wrong.
+          </p>
+        </div>
+      </details>
+
+    </div>
+
+
+    <!-- Continue prompt (FAQ closing CTA) -->
+<div class="mt-10 rounded-2xl border border-brand-200 bg-brand-50 p-5 text-center sm:p-6">
+  <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-brand-700">Still curious?</p>
+  <p class="mt-2 text-sm leading-relaxed text-slate-700">
+    Reach the team directly at
+    <a href="mailto:contact@buildmetric.org" class="font-semibold text-brand-700 underline decoration-brand-400 underline-offset-2 hover:text-brand-800">contact@buildmetric.org</a>
+    — every message is read by a real person.
+  </p>
+</div>
+
+     <!-- ============================================================
+       PHASE 10/10 — FINAL SCRIPTS + PREMIUM FOOTER + CLOSING TAGS
+       ============================================================ -->
+
+  <!-- NOTE: Trust/Author Box (Phase 9) already closed here with </section> and </main> -->
+
+  <!-- ============================================================
+       FINAL JAVASCRIPT
+       ============================================================ -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ============================================================
+         1. MOBILE MENU TOGGLE
+         ============================================================ */
+      (function initMobileMenu() {
+        var toggle = document.getElementById('navToggle');
+        var menu = document.getElementById('mobileMenu');
+        var iconOpen = document.getElementById('navIconOpen');
+        var iconClose = document.getElementById('navIconClose');
+        if (!toggle || !menu) return;
+
+        toggle.addEventListener('click', function () {
+          var isOpen = !menu.classList.contains('hidden');
+          menu.classList.toggle('hidden', isOpen);
+          iconOpen.classList.toggle('hidden', !isOpen);
+          iconClose.classList.toggle('hidden', isOpen);
+          toggle.setAttribute('aria-expanded', String(!isOpen));
+        });
+
+        menu.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            menu.classList.add('hidden');
+            iconOpen.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+            menu.classList.add('hidden');
+            iconOpen.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.focus();
+          }
+        });
+      })();
+
+      /* ============================================================
+         2. SMOOTH SCROLL FOR HASH LINKS (offset for sticky navbar)
+         ============================================================ */
+      (function initSmoothScroll() {
+        var headerOffset = 88;
+        document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+          var targetId = link.getAttribute('href');
+          if (!targetId || targetId === '#') return;
+
+          link.addEventListener('click', function (e) {
+            var target = document.querySelector(targetId);
+            if (!target) return;
+            e.preventDefault();
+            var top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+            if (history.pushState) history.pushState(null, '', targetId);
+          });
+        });
+      })();
+
+      /* ============================================================
+         3. COPY-TO-CLIPBOARD (any [data-copy] element)
+         ============================================================ */
+      (function initCopyButtons() {
+        if (!navigator.clipboard) return;
+
+        document.querySelectorAll('[data-copy]').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var text = btn.getAttribute('data-copy');
+            if (!text) return;
+
+            var originalHTML = btn.innerHTML;
+
+            navigator.clipboard.writeText(text).then(function () {
+              btn.classList.add('border-brand-400', 'bg-brand-50', 'text-brand-700');
+              btn.innerHTML = '<svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5" /></svg> Copied!';
+              setTimeout(function () {
+                btn.classList.remove('border-brand-400', 'bg-brand-50', 'text-brand-700');
+                btn.innerHTML = originalHTML;
+              }, 1600);
+            }).catch(function () {
+              btn.innerHTML = 'Copy failed';
+              setTimeout(function () { btn.innerHTML = originalHTML; }, 1600);
+            });
+          });
+        });
+      })();
+
+      /* ============================================================
+         4. AUTO-EXPAND FIRST FAQ (if user lands on #faqs)
+         ============================================================ */
+      (function initFaqAutoExpand() {
+        if (window.location.hash === '#faqs') {
+          var first = document.querySelector('#faqs details');
+          if (first) first.setAttribute('open', '');
+        }
+      })();
+
+      /* ============================================================
+         5. REVEAL-ON-SCROLL (subtle entrance for bento tiles)
+         ============================================================ */
+      (function initReveal() {
+        if (!('IntersectionObserver' in window)) return;
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        var tiles = document.querySelectorAll('.bento-tile');
+        if (!tiles.length) return;
+
+        tiles.forEach(function (el) {
+          el.style.opacity = '0';
+          el.style.transform = 'translateY(12px)';
+          el.style.transition = 'opacity .5s ease, transform .5s ease';
+        });
+
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateY(0)';
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { rootMargin: '0px 0px -40px 0px', threshold: 0.05 });
+
+        tiles.forEach(function (el) { observer.observe(el); });
+      })();
+
+    })();
+  </script>
+
+  <!-- Year auto-fill -->
+  <script>
+    (function () {
+      var el = document.getElementById('yearNow');
+      if (el) el.textContent = new Date().getFullYear();
+    })();
+  </script>
+
+  <!-- ============================================================
+       PREMIUM FOOTER
+       ============================================================ -->
+  <footer class="relative overflow-hidden border-t border-ink-800 bg-ink-950 text-slate-400">
+
+    <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-500/60 to-transparent" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -right-32 -top-32 h-72 w-72 rounded-full bg-brand-500/10 blur-3xl" aria-hidden="true"></div>
+
+    <div class="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
+
+      <!-- Top grid -->
+      <div class="grid gap-10 md:grid-cols-12 md:gap-8">
+
+        <!-- Brand column -->
+        <div class="md:col-span-4">
+          <a href="/" class="group flex items-center gap-2.5" aria-label="BuildMetric home">
+            <span class="grid h-10 w-10 place-items-center rounded-xl bg-white/5 ring-1 ring-white/10 transition-transform duration-300 group-hover:scale-105">
+              <svg viewBox="0 0 100 100" class="h-6 w-6" aria-hidden="true">
+                <path d="M20 70 L50 24 L80 70" fill="none" stroke="#0ea5e9" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M38 70 L50 52 L62 70" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.75" />
+              </svg>
+            </span>
+            <span class="leading-tight">
+              <span class="block font-display text-lg font-extrabold tracking-tight text-white">
+                Build<span class="text-gradient">Metric</span>
+              </span>
+              <span class="block text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+                Engineering Calculators
+              </span>
+            </span>
+          </a>
+
+          <p class="mt-5 max-w-sm text-[13.5px] leading-relaxed text-slate-400">
+            Independent construction calculators, estimating tools and technical reference guides for building
+            professionals across the <span class="text-white">USA</span>, <span class="text-white">UK</span> and
+            <span class="text-white">Australia</span>. Engineered for accuracy. Published for transparency.
+          </p>
+
+          <div class="mt-6 space-y-2">
+            <a href="mailto:contact@buildmetric.org" class="group flex items-center gap-2.5 text-sm font-semibold text-slate-300 transition-colors hover:text-brand-300">
+              <span class="grid h-8 w-8 place-items-center rounded-lg bg-white/5 ring-1 ring-white/10 transition-colors group-hover:bg-brand-500/20 group-hover:ring-brand-400/40">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16v16H4z" />
+                  <path d="M4 7l8 6 8-6" />
+                </svg>
+              </span>
+              contact@buildmetric.org
+            </a>
+            <a href="mailto:ads@buildmetric.org" class="group flex items-center gap-2.5 text-sm font-semibold text-slate-300 transition-colors hover:text-brand-300">
+              <span class="grid h-8 w-8 place-items-center rounded-lg bg-white/5 ring-1 ring-white/10 transition-colors group-hover:bg-brand-500/20 group-hover:ring-brand-400/40">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M3 11l18-8-8 18-2-8-8-2z" />
+                </svg>
+              </span>
+              ads@buildmetric.org
+            </a>
+          </div>
+        </div>
+
+        <!-- Calculators column -->
+        <div class="md:col-span-2">
+          <h3 class="font-display text-[11px] font-bold uppercase tracking-[0.16em] text-white">Calculators</h3>
+          <ul class="mt-4 space-y-2.5 text-[13.5px]">
+            <li><a href="/roof-pitch-calculator.html" class="transition-colors hover:text-brand-300">Roof Pitch</a></li>
+            <li><a href="/concrete-calculator.html" class="transition-colors hover:text-brand-300">Concrete Volume</a></li>
+            <li><a href="/stud-count-calculator.html" class="transition-colors hover:text-brand-300">Stud Count</a></li>
+            <li><a href="/paint-coverage-calculator.html" class="transition-colors hover:text-brand-300">Paint Coverage</a></li>
+            <li><a href="/calculators.html" class="font-semibold text-brand-400 transition-colors hover:text-brand-300">All Tools →</a></li>
+          </ul>
+        </div>
+
+        <!-- Company column -->
+        <div class="md:col-span-2">
+          <h3 class="font-display text-[11px] font-bold uppercase tracking-[0.16em] text-white">Company</h3>
+          <ul class="mt-4 space-y-2.5 text-[13.5px]">
+            <li><a href="/about.html" class="font-semibold text-brand-400 transition-colors hover:text-brand-300" aria-current="page">About</a></li>
+            <li><a href="/guides.html" class="transition-colors hover:text-brand-300">Guides</a></li>
+            <li><a href="/contact.html" class="transition-colors hover:text-brand-300">Contact</a></li>
+            <li><a href="/sitemap.xml" class="transition-colors hover:text-brand-300">Sitemap</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal column -->
+        <div class="md:col-span-4">
+          <h3 class="font-display text-[11px] font-bold uppercase tracking-[0.16em] text-white">Legal &amp; Compliance</h3>
+          <ul class="mt-4 space-y-2.5 text-[13.5px]">
+            <li><a href="/privacy.html" class="inline-flex items-center gap-1.5 transition-colors hover:text-brand-300">Privacy Policy <svg class="h-3 w-3 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a></li>
+            <li><a href="/terms.html" class="inline-flex items-center gap-1.5 transition-colors hover:text-brand-300">Terms of Use <svg class="h-3 w-3 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a></li>
+            <li><a href="/disclaimer.html" class="inline-flex items-center gap-1.5 transition-colors hover:text-brand-300">Disclaimer <svg class="h-3 w-3 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a></li>
+            <li><a href="/cookie-policy.html" class="inline-flex items-center gap-1.5 transition-colors hover:text-brand-300">Cookie Policy <svg class="h-3 w-3 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a></li>
+            <li><a href="/contact.html" class="inline-flex items-center gap-1.5 transition-colors hover:text-brand-300">Contact <svg class="h-3 w-3 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a></li>
+          </ul>
+
+          <div class="mt-5 rounded-xl border border-white/10 bg-white/5 p-3.5">
+            <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-300">Regional Notice</p>
+            <p class="mt-1.5 text-[11.5px] leading-relaxed text-slate-400">
+              BuildMetric content is published in English and reviewed against US, UK and Australian codes. Always
+              verify against your local jurisdiction's current edition.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ad space (footer) -->
+      <div class="mt-12 flex min-h-[90px] items-center justify-center rounded-xl border-2 border-dashed border-white/10 bg-white/[0.02] px-4 py-6 text-center">
+        <span class="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Ad Space — Footer Leaderboard</span>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="mt-10 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 md:flex-row md:items-center">
+        <p class="text-[12px] text-slate-500">
+          &copy; <span id="yearNow">2026</span> BuildMetric. All rights reserved. Operated from
+          <span class="text-slate-400">buildmetric.org</span>.
+        </p>
+        <p class="text-[11px] text-slate-500">
+          Built for professionals. General information only — see our
+          <a href="/disclaimer.html" class="font-semibold text-brand-400 underline decoration-brand-500/40 underline-offset-2 hover:text-brand-300">Disclaimer</a>.
+        </p>
+      </div>
+    </div>
+  </footer>
 
 </body>
-</html>
+  </html>   
