@@ -216,6 +216,7 @@
       </nav>
     </div>
   </header>
+
   <!-- ============================================================
      PHASE 3/10 — MAIN OPEN + DIRECTORY HERO SECTION
      ============================================================ -->
@@ -307,7 +308,7 @@
     </section>
 
     <!-- ============================================================
-     PHASE 4/10 — FILTER BAR & TOOL DIRECTORY GRID
+     PHASE 4/10 — STICKY FILTER BAR & TOOLS DIRECTORY GRID
      ============================================================ -->
 
 <section id="directory" class="relative bg-slate-50 pb-20 pt-4">
@@ -317,17 +318,17 @@
     <div class="sticky top-16 z-40 -mx-4 border-b border-slate-200 bg-slate-50/95 px-4 py-4 backdrop-blur-md sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 mb-8 shadow-sm">
       <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         
-        <!-- Category Pills -->
+        <!-- Category Filter Pills -->
         <div class="flex items-center gap-2 overflow-x-auto pb-2 -mb-2 hide-scrollbar sm:pb-0 sm:mb-0">
           <button type="button" class="filter-btn whitespace-nowrap rounded-full bg-ink-900 px-4 py-2 text-xs font-bold text-white transition-colors">All Tools</button>
           <button type="button" class="filter-btn whitespace-nowrap rounded-full bg-white px-4 py-2 text-xs font-bold text-slate-600 ring-1 ring-slate-200 transition-colors hover:bg-slate-100 hover:text-brand-700">Roofing</button>
           <button type="button" class="filter-btn whitespace-nowrap rounded-full bg-white px-4 py-2 text-xs font-bold text-slate-600 ring-1 ring-slate-200 transition-colors hover:bg-slate-100 hover:text-brand-700">Concrete</button>
           <button type="button" class="filter-btn whitespace-nowrap rounded-full bg-white px-4 py-2 text-xs font-bold text-slate-600 ring-1 ring-slate-200 transition-colors hover:bg-slate-100 hover:text-brand-700">Framing</button>
           <button type="button" class="filter-btn whitespace-nowrap rounded-full bg-white px-4 py-2 text-xs font-bold text-slate-600 ring-1 ring-slate-200 transition-colors hover:bg-slate-100 hover:text-brand-700">Masonry</button>
-          <button type="button" class="filter-btn whitespace-nowrap rounded-full bg-white px-4 py-2 text-xs font-bold text-slate-600 ring-1 ring-slate-200 transition-colors hover:bg-slate-100 hover:text-brand-700">Estimating</button>
+          <button type="button" class="filter-btn whitespace-nowrap rounded-full bg-white px-4 py-2 text-xs font-bold text-slate-600 ring-1 ring-slate-200 transition-colors hover:bg-slate-100 hover:text-brand-700">Finishes</button>
         </div>
 
-        <!-- Sort Dropdown (Mockup) -->
+        <!-- Sort Dropdown -->
         <div class="flex items-center gap-2 shrink-0">
           <label for="sort" class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Sort by:</label>
           <select id="sort" class="rounded-lg border-slate-200 py-1.5 pl-3 pr-8 text-xs font-semibold text-slate-700 focus:border-brand-500 focus:ring-brand-500">
@@ -345,12 +346,12 @@
     <div class="mb-6 flex items-end justify-between">
       <div>
         <h2 class="font-display text-2xl font-extrabold tracking-tight text-ink-900 sm:text-3xl">All Construction Calculators</h2>
-        <p class="mt-1 text-sm text-slate-500">Showing 6 tools (Mockup)</p>
+        <p class="mt-1 text-sm text-slate-500">Showing 6 of 12 tools</p>
       </div>
     </div>
 
-    <!-- Tools Grid -->
-    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <!-- Tools Grid (Strict 3 Columns on Desktop) -->
+    <div id="toolsGrid" class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       
       <!-- Tool 1 (Featured) -->
       <a href="/roof-pitch-calculator.html" class="bento-tile group relative flex flex-col overflow-hidden rounded-2xl border border-brand-200 bg-white p-6 shadow-card ring-1 ring-brand-500/10">
@@ -455,27 +456,130 @@
         </div>
       </a>
 
+      <!-- TOOLS 7 to 12 (HIDDEN INITIALLY - Revealed via Load More) -->
+      
+      <!-- Tool 7 -->
+      <a href="/stair-calculator.html" class="hidden load-more-item bento-tile group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+        <div class="flex items-start justify-between gap-3 mb-4">
+          <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-red-50 text-red-600">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4v-4h4v-4h4V8h4V4M4 20v-4M8 16v-4M12 12V8M16 8V4"/></svg>
+          </span>
+        </div>
+        <h3 class="font-display text-lg font-bold text-ink-900 group-hover:text-brand-700 transition-colors">Stair &amp; Riser Calculator</h3>
+        <p class="mt-2 flex-1 text-[13px] leading-relaxed text-slate-600">
+          Calculate compliant rise, run, stringer length, and baluster spacing for safe staircases.
+        </p>
+        <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+          <span class="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-500">Stairs</span>
+          <span class="flex items-center gap-1 text-[11px] font-bold text-brand-600">Open Tool <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <!-- Tool 8 -->
+      <a href="/insulation-calculator.html" class="hidden load-more-item bento-tile group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+        <div class="flex items-start justify-between gap-3 mb-4">
+          <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-violet-50 text-violet-600">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3zM3 8h18M3 13h18M3 18h18"/></svg>
+          </span>
+        </div>
+        <h3 class="font-display text-lg font-bold text-ink-900 group-hover:text-brand-700 transition-colors">Insulation R-Value Calculator</h3>
+        <p class="mt-2 flex-1 text-[13px] leading-relaxed text-slate-600">
+          Determine the required thickness of various insulation materials to achieve target R-values.
+        </p>
+        <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+          <span class="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-500">Insulation</span>
+          <span class="flex items-center gap-1 text-[11px] font-bold text-brand-600">Open Tool <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <!-- Tool 9 -->
+      <a href="/drywall-calculator.html" class="hidden load-more-item bento-tile group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+        <div class="flex items-start justify-between gap-3 mb-4">
+          <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-sky-50 text-sky-600">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 12h18M12 4v16"/></svg>
+          </span>
+        </div>
+        <h3 class="font-display text-lg font-bold text-ink-900 group-hover:text-brand-700 transition-colors">Drywall Sheet Calculator</h3>
+        <p class="mt-2 flex-1 text-[13px] leading-relaxed text-slate-600">
+          Estimate the number of 8ft, 10ft, or 12ft drywall sheets needed for a room's walls and ceiling.
+        </p>
+        <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+          <span class="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-500">Drywall</span>
+          <span class="flex items-center gap-1 text-[11px] font-bold text-brand-600">Open Tool <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <!-- Tool 10 -->
+      <a href="/gravel-calculator.html" class="hidden load-more-item bento-tile group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+        <div class="flex items-start justify-between gap-3 mb-4">
+          <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-lime-50 text-lime-600">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12M12 12c0-4 3-8 8-8-1 5-4 8-8 8zM12 12c0-4-3-8-8-8 1 5 4 8 8 8z"/></svg>
+          </span>
+        </div>
+        <h3 class="font-display text-lg font-bold text-ink-900 group-hover:text-brand-700 transition-colors">Gravel &amp; Aggregates Calculator</h3>
+        <p class="mt-2 flex-1 text-[13px] leading-relaxed text-slate-600">
+          Calculate the volume and weight of gravel, sand, or topsoil needed for landscaping projects.
+        </p>
+        <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+          <span class="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-500">Landscaping</span>
+          <span class="flex items-center gap-1 text-[11px] font-bold text-brand-600">Open Tool <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <!-- Tool 11 -->
+      <a href="/rafter-calculator.html" class="hidden load-more-item bento-tile group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+        <div class="flex items-start justify-between gap-3 mb-4">
+          <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-orange-50 text-orange-600">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V8l6-4 6 4v13M10 12h4M10 16h4"/></svg>
+          </span>
+        </div>
+        <h3 class="font-display text-lg font-bold text-ink-900 group-hover:text-brand-700 transition-colors">Rafter Length Calculator</h3>
+        <p class="mt-2 flex-1 text-[13px] leading-relaxed text-slate-600">
+          Calculate rafter length, plumb cut, and birdsmouth cut based on span, pitch, and overhang.
+        </p>
+        <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+          <span class="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-500">Roofing</span>
+          <span class="flex items-center gap-1 text-[11px] font-bold text-brand-600">Open Tool <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <!-- Tool 12 -->
+      <a href="/tile-calculator.html" class="hidden load-more-item bento-tile group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+        <div class="flex items-start justify-between gap-3 mb-4">
+          <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-teal-50 text-teal-600">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          </span>
+        </div>
+        <h3 class="font-display text-lg font-bold text-ink-900 group-hover:text-brand-700 transition-colors">Tile &amp; Adhesive Calculator</h3>
+        <p class="mt-2 flex-1 text-[13px] leading-relaxed text-slate-600">
+          Estimate the number of tiles, boxes required, and adhesive weight for floors and walls.
+        </p>
+        <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+          <span class="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-500">Finishes</span>
+          <span class="flex items-center gap-1 text-[11px] font-bold text-brand-600">Open Tool <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
     </div>
     
-    <!-- Load More Button -->
-    <div class="mt-12 text-center">
-      <button type="button" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-6 py-3 text-sm font-bold text-slate-700 shadow-sm transition-all hover:border-brand-300 hover:text-brand-700">
-        Load More Tools
-        <svg class="h-4 w-4 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9l-7 7-7-7" /></svg>
+    <!-- Load More Container -->
+    <div class="mt-12 text-center" id="loadMoreContainer">
+      <button type="button" id="loadMoreBtn" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-6 py-3 text-sm font-bold text-slate-700 shadow-sm transition-all hover:border-brand-300 hover:text-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2">
+        <span id="loadMoreText">Load More Tools</span>
+        <svg id="loadMoreIcon" class="h-4 w-4 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9l-7 7-7-7" /></svg>
       </button>
     </div>
 
   </div>
 </section>
 
-  <!-- ============================================================
+<!-- ============================================================
      PHASE 5/10 — SUGGEST A TOOL CTA + TRUST BAR
      ============================================================ -->
 
 <section id="suggest-tool" class="relative border-t border-slate-200 bg-white py-16 sm:py-24">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     
-    <!-- Top CTA Box -->
+    <!-- CTA Box -->
     <div class="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-sm relative">
       <div class="grid lg:grid-cols-2">
         
@@ -564,7 +668,7 @@
 </section>
 
   <!-- ============================================================
-     PHASE 6/10 — AD SLOT + EXPLORE CATEGORIES
+     PHASE 6/10 — AD SLOT + EXPLORE CATEGORIES (INTERNAL LINKS)
      ============================================================ -->
 
 <!-- Ad Space (Leaderboard) -->
@@ -575,52 +679,120 @@
 </div>
 
 <!-- Explore Categories (Internal Links) -->
-<section id="explore-categories" class="relative border-t border-slate-200 bg-white py-16">
+<section id="explore-categories" class="relative border-t border-slate-200 bg-white py-16 sm:py-20">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     
-    <div class="mb-8 flex items-center justify-between border-b border-slate-200 pb-4">
-      <h2 class="font-display text-xl font-extrabold tracking-tight text-ink-900">Explore by Trade</h2>
-      <a href="/" class="text-xs font-bold text-brand-600 hover:text-brand-700">View all categories &rarr;</a>
+    <div class="mb-8 flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200 pb-4 gap-4">
+      <div>
+        <h2 class="font-display text-2xl font-extrabold tracking-tight text-ink-900">Explore by Trade</h2>
+        <p class="mt-1 text-sm text-slate-500">Jump directly to a specific category of construction calculators.</p>
+      </div>
+      <a href="/" class="text-sm font-bold text-brand-600 hover:text-brand-700 flex items-center gap-1.5 shrink-0">
+        View all categories
+        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
     </div>
 
+    <!-- 12 Categories Grid -->
     <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-      <!-- Roofing -->
-      <a href="/roofing.html" class="group flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 p-3 transition-colors hover:border-brand-300 hover:bg-brand-50">
-        <svg class="h-4 w-4 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M2 20h20M4 20V9l8-5 8 5v11M9 20v-6h6v6"/></svg>
-        <span class="text-sm font-semibold text-slate-700 group-hover:text-brand-700">Roofing</span>
+      
+      <!-- 1. Roofing -->
+      <a href="/roofing.html" class="group flex flex-col items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 p-4 text-center transition-all hover:border-brand-300 hover:bg-brand-50 hover:shadow-sm">
+        <span class="grid h-10 w-10 place-items-center rounded-lg bg-white shadow-sm ring-1 ring-slate-200 group-hover:ring-brand-200 transition-colors">
+          <svg class="h-5 w-5 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 20h20M4 20V9l8-5 8 5v11M9 20v-6h6v6"/></svg>
+        </span>
+        <span class="text-sm font-bold text-slate-700 group-hover:text-brand-700">Roofing</span>
       </a>
       
-      <!-- Concrete -->
-      <a href="/concrete.html" class="group flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 p-3 transition-colors hover:border-brand-300 hover:bg-brand-50">
-        <svg class="h-4 w-4 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M3 20h18M5 20V9l7-5 7 5v11M9 20v-4h6v4"/></svg>
-        <span class="text-sm font-semibold text-slate-700 group-hover:text-brand-700">Concrete</span>
+      <!-- 2. Concrete -->
+      <a href="/concrete.html" class="group flex flex-col items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 p-4 text-center transition-all hover:border-brand-300 hover:bg-brand-50 hover:shadow-sm">
+        <span class="grid h-10 w-10 place-items-center rounded-lg bg-white shadow-sm ring-1 ring-slate-200 group-hover:ring-brand-200 transition-colors">
+          <svg class="h-5 w-5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 20h18M5 20V9l7-5 7 5v11M9 20v-4h6v4"/></svg>
+        </span>
+        <span class="text-sm font-bold text-slate-700 group-hover:text-brand-700">Concrete</span>
       </a>
 
-      <!-- Framing -->
-      <a href="/framing.html" class="group flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 p-3 transition-colors hover:border-brand-300 hover:bg-brand-50">
-        <svg class="h-4 w-4 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M3 21h18M6 21V8l6-4 6 4v13M10 12h4M10 16h4"/></svg>
-        <span class="text-sm font-semibold text-slate-700 group-hover:text-brand-700">Framing</span>
+      <!-- 3. Framing -->
+      <a href="/framing.html" class="group flex flex-col items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 p-4 text-center transition-all hover:border-brand-300 hover:bg-brand-50 hover:shadow-sm">
+        <span class="grid h-10 w-10 place-items-center rounded-lg bg-white shadow-sm ring-1 ring-slate-200 group-hover:ring-brand-200 transition-colors">
+          <svg class="h-5 w-5 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 21h18M6 21V8l6-4 6 4v13M10 12h4M10 16h4"/></svg>
+        </span>
+        <span class="text-sm font-bold text-slate-700 group-hover:text-brand-700">Framing</span>
       </a>
 
-      <!-- Masonry -->
-      <a href="/masonry.html" class="group flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 p-3 transition-colors hover:border-brand-300 hover:bg-brand-50">
-        <svg class="h-4 w-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="3" y="6" width="8" height="5" rx="0.5"/><rect x="13" y="6" width="8" height="5" rx="0.5"/><rect x="3" y="13" width="8" height="5" rx="0.5"/><rect x="13" y="13" width="8" height="5" rx="0.5"/></svg>
-        <span class="text-sm font-semibold text-slate-700 group-hover:text-brand-700">Masonry</span>
+      <!-- 4. Masonry -->
+      <a href="/masonry.html" class="group flex flex-col items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 p-4 text-center transition-all hover:border-brand-300 hover:bg-brand-50 hover:shadow-sm">
+        <span class="grid h-10 w-10 place-items-center rounded-lg bg-white shadow-sm ring-1 ring-slate-200 group-hover:ring-brand-200 transition-colors">
+          <svg class="h-5 w-5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="6" width="8" height="5" rx="0.5"/><rect x="13" y="6" width="8" height="5" rx="0.5"/><rect x="3" y="13" width="8" height="5" rx="0.5"/><rect x="13" y="13" width="8" height="5" rx="0.5"/></svg>
+        </span>
+        <span class="text-sm font-bold text-slate-700 group-hover:text-brand-700">Masonry</span>
       </a>
 
-      <!-- Drywall -->
-      <a href="/drywall.html" class="group flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 p-3 transition-colors hover:border-brand-300 hover:bg-brand-50">
-        <svg class="h-4 w-4 text-sky-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 12h18M12 4v16"/></svg>
-        <span class="text-sm font-semibold text-slate-700 group-hover:text-brand-700">Drywall</span>
+      <!-- 5. Drywall -->
+      <a href="/drywall.html" class="group flex flex-col items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 p-4 text-center transition-all hover:border-brand-300 hover:bg-brand-50 hover:shadow-sm">
+        <span class="grid h-10 w-10 place-items-center rounded-lg bg-white shadow-sm ring-1 ring-slate-200 group-hover:ring-brand-200 transition-colors">
+          <svg class="h-5 w-5 text-sky-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 12h18M12 4v16"/></svg>
+        </span>
+        <span class="text-sm font-bold text-slate-700 group-hover:text-brand-700">Drywall</span>
       </a>
 
-      <!-- Paint -->
-      <a href="/paint.html" class="group flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 p-3 transition-colors hover:border-brand-300 hover:bg-brand-50">
-        <svg class="h-4 w-4 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M19 3H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h7v3a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2V8H19z"/><path d="M12 15v6"/></svg>
-        <span class="text-sm font-semibold text-slate-700 group-hover:text-brand-700">Paint</span>
+      <!-- 6. Paint -->
+      <a href="/paint.html" class="group flex flex-col items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 p-4 text-center transition-all hover:border-brand-300 hover:bg-brand-50 hover:shadow-sm">
+        <span class="grid h-10 w-10 place-items-center rounded-lg bg-white shadow-sm ring-1 ring-slate-200 group-hover:ring-brand-200 transition-colors">
+          <svg class="h-5 w-5 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 3H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h7v3a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2V8H19z"/><path d="M12 15v6"/></svg>
+        </span>
+        <span class="text-sm font-bold text-slate-700 group-hover:text-brand-700">Paint</span>
       </a>
+
+      <!-- 7. Insulation -->
+      <a href="/insulation.html" class="group flex flex-col items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 p-4 text-center transition-all hover:border-brand-300 hover:bg-brand-50 hover:shadow-sm">
+        <span class="grid h-10 w-10 place-items-center rounded-lg bg-white shadow-sm ring-1 ring-slate-200 group-hover:ring-brand-200 transition-colors">
+          <svg class="h-5 w-5 text-violet-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 3h18v18H3zM3 8h18M3 13h18M3 18h18"/></svg>
+        </span>
+        <span class="text-sm font-bold text-slate-700 group-hover:text-brand-700">Insulation</span>
+      </a>
+
+      <!-- 8. Foundations -->
+      <a href="/foundations.html" class="group flex flex-col items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 p-4 text-center transition-all hover:border-brand-300 hover:bg-brand-50 hover:shadow-sm">
+        <span class="grid h-10 w-10 place-items-center rounded-lg bg-white shadow-sm ring-1 ring-slate-200 group-hover:ring-brand-200 transition-colors">
+          <svg class="h-5 w-5 text-stone-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 22h18M6 22v-6h12v6M8 16v-4h8v4M10 12v-4h4v4"/></svg>
+        </span>
+        <span class="text-sm font-bold text-slate-700 group-hover:text-brand-700">Foundations</span>
+      </a>
+
+      <!-- 9. Landscaping -->
+      <a href="/landscaping.html" class="group flex flex-col items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 p-4 text-center transition-all hover:border-brand-300 hover:bg-brand-50 hover:shadow-sm">
+        <span class="grid h-10 w-10 place-items-center rounded-lg bg-white shadow-sm ring-1 ring-slate-200 group-hover:ring-brand-200 transition-colors">
+          <svg class="h-5 w-5 text-lime-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22V12M12 12c0-4 3-8 8-8-1 5-4 8-8 8zM12 12c0-4-3-8-8-8 1 5 4 8 8 8z"/></svg>
+        </span>
+        <span class="text-sm font-bold text-slate-700 group-hover:text-brand-700">Landscaping</span>
+      </a>
+
+      <!-- 10. Estimating -->
+      <a href="/estimating.html" class="group flex flex-col items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 p-4 text-center transition-all hover:border-brand-300 hover:bg-brand-50 hover:shadow-sm">
+        <span class="grid h-10 w-10 place-items-center rounded-lg bg-white shadow-sm ring-1 ring-slate-200 group-hover:ring-brand-200 transition-colors">
+          <svg class="h-5 w-5 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 11h2M12 11h2M16 11h2M8 15h2M12 15h2M16 15h2"/></svg>
+        </span>
+        <span class="text-sm font-bold text-slate-700 group-hover:text-brand-700">Estimating</span>
+      </a>
+
+      <!-- 11. Stairs -->
+      <a href="/stairs.html" class="group flex flex-col items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 p-4 text-center transition-all hover:border-brand-300 hover:bg-brand-50 hover:shadow-sm">
+        <span class="grid h-10 w-10 place-items-center rounded-lg bg-white shadow-sm ring-1 ring-slate-200 group-hover:ring-brand-200 transition-colors">
+          <svg class="h-5 w-5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 20h4v-4h4v-4h4V8h4V4M4 20v-4M8 16v-4M12 12V8M16 8V4"/></svg>
+        </span>
+        <span class="text-sm font-bold text-slate-700 group-hover:text-brand-700">Stairs</span>
+      </a>
+
+      <!-- 12. Conversions -->
+      <a href="/conversions.html" class="group flex flex-col items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 p-4 text-center transition-all hover:border-brand-300 hover:bg-brand-50 hover:shadow-sm">
+        <span class="grid h-10 w-10 place-items-center rounded-lg bg-white shadow-sm ring-1 ring-slate-200 group-hover:ring-brand-200 transition-colors">
+          <svg class="h-5 w-5 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 3l4 4-4 4M21 7H7M7 21l-4-4 4-4M3 17h14"/></svg>
+        </span>
+        <span class="text-sm font-bold text-slate-700 group-hover:text-brand-700">Conversions</span>
+      </a>
+
     </div>
-
   </div>
 </section>
 
@@ -857,7 +1029,7 @@
         <div class="px-6 py-6 sm:px-8 sm:py-8">
           <div class="grid gap-8 md:grid-cols-12">
             
-            <!-- Left: Org Details -->
+            <!-- Left: Details -->
             <div class="md:col-span-7">
               <div class="flex items-start gap-4">
                 <span class="grid h-14 w-14 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-glow">
@@ -1000,13 +1172,13 @@
     })();
 
     /* ============================================================
-       3. REVEAL-ON-SCROLL (Subtle entrance for bento tiles)
+       3. REVEAL-ON-SCROLL (Subtle entrance for visible bento tiles)
        ============================================================ */
     (function initReveal() {
       if (!('IntersectionObserver' in window)) return;
       if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-      var tiles = document.querySelectorAll('.bento-tile');
+      var tiles = document.querySelectorAll('.bento-tile:not(.hidden)');
       if (!tiles.length) return;
 
       tiles.forEach(function (el) {
@@ -1029,8 +1201,50 @@
     })();
 
     /* ============================================================
-       4. MOCK FILTER BUTTONS (UI Interaction)
-       This is a visual mockup. Actual filtering requires backend/JS data array.
+       4. LOAD MORE LOGIC (Fixes the button bug)
+       ============================================================ */
+    (function initLoadMore() {
+      var loadMoreBtn = document.getElementById('loadMoreBtn');
+      var loadMoreText = document.getElementById('loadMoreText');
+      var loadMoreIcon = document.getElementById('loadMoreIcon');
+      var loadMoreContainer = document.getElementById('loadMoreContainer');
+      var hiddenItems = document.querySelectorAll('.load-more-item');
+
+      if (!loadMoreBtn || hiddenItems.length === 0) return;
+
+      loadMoreBtn.addEventListener('click', function () {
+        // 1. Set loading state
+        loadMoreText.textContent = 'Loading...';
+        loadMoreIcon.classList.add('animate-spin');
+        loadMoreIcon.innerHTML = '<path d="M21 12a9 9 0 1 1-6.219-8.56" />';
+
+        // 2. Simulate network delay for smooth UX
+        setTimeout(function () {
+          
+          // 3. Reveal hidden items
+          hiddenItems.forEach(function (item, index) {
+            item.classList.remove('hidden');
+            
+            // Add slight stagger animation
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(12px)';
+            item.style.transition = 'opacity .5s ease, transform .5s ease';
+            
+            setTimeout(function() {
+              item.style.opacity = '1';
+              item.style.transform = 'translateY(0)';
+            }, index * 50); // 50ms stagger between each card
+          });
+
+          // 4. Hide the button permanently since all items are loaded
+          loadMoreContainer.style.display = 'none';
+
+        }, 600); // 600ms delay
+      });
+    })();
+
+    /* ============================================================
+       5. MOCK FILTER BUTTONS (UI Interaction)
        ============================================================ */
     (function initFilters() {
       var filterBtns = document.querySelectorAll('.filter-btn');
@@ -1051,7 +1265,7 @@
     })();
 
     /* ============================================================
-       5. COOKIE SETTINGS BUTTON (Footer CMP Integration)
+       6. COOKIE SETTINGS BUTTON (Footer CMP Integration)
        ============================================================ */
     (function initCookieSettings() {
       var btn = document.getElementById('footerCookieSettings');
@@ -1159,7 +1373,7 @@
             <li><a href="/concrete-calculator.html" class="transition-colors hover:text-brand-300">Concrete Volume</a></li>
             <li><a href="/stud-count-calculator.html" class="transition-colors hover:text-brand-300">Stud Count</a></li>
             <li><a href="/paint-coverage-calculator.html" class="transition-colors hover:text-brand-300">Paint Coverage</a></li>
-            <li><a href="/calculators.html" class="font-semibold text-brand-400 transition-colors hover:text-brand-300">All Tools →</a></li>
+            <li><a href="/calculators.html" class="font-semibold text-brand-400 transition-colors hover:text-brand-300" aria-current="page">All Tools →</a></li>
           </ul>
         </div>
 
@@ -1215,85 +1429,7 @@
     </div>
   </footer>
 
-  <!-- Script to handle Load More -->
-<script>
-  (function() {
-    var loadMoreBtn = document.getElementById('loadMoreBtn');
-    var toolsGrid = document.querySelector('#directory .grid'); // Grid container selector
-    var loadMoreContainer = document.getElementById('loadMoreContainer');
-    var loadMoreText = document.getElementById('loadMoreText');
-    var loadMoreIcon = document.getElementById('loadMoreIcon');
-
-    if (!loadMoreBtn || !toolsGrid) return;
-
-    // Data for new tools to load
-    var newToolsHTML = `
-      <!-- Tool 7 (New Load) -->
-      <a href="/stair-calculator.html" class="bento-tile group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-card" style="opacity: 0; transform: translateY(12px); transition: all 0.5s ease;">
-        <div class="flex items-start justify-between gap-3 mb-4">
-          <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-red-50 text-red-600">
-            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4v-4h4v-4h4V8h4V4M4 20v-4M8 16v-4M12 12V8M16 8V4"/></svg>
-          </span>
-        </div>
-        <h3 class="font-display text-lg font-bold text-ink-900 group-hover:text-brand-700 transition-colors">Stair & Riser Calculator</h3>
-        <p class="mt-2 flex-1 text-[13px] leading-relaxed text-slate-600">
-          Calculate compliant rise, run, stringer length, and baluster spacing for safe staircases.
-        </p>
-        <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-          <span class="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-500">Stairs</span>
-          <span class="flex items-center gap-1 text-[11px] font-bold text-brand-600">Open Tool <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </div>
-      </a>
-
-      <!-- Tool 8 (New Load) -->
-      <a href="/insulation-calculator.html" class="bento-tile group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-card" style="opacity: 0; transform: translateY(12px); transition: all 0.5s ease;">
-        <div class="flex items-start justify-between gap-3 mb-4">
-          <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-violet-50 text-violet-600">
-            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3zM3 8h18M3 13h18M3 18h18"/></svg>
-          </span>
-        </div>
-        <h3 class="font-display text-lg font-bold text-ink-900 group-hover:text-brand-700 transition-colors">Insulation R-Value Calculator</h3>
-        <p class="mt-2 flex-1 text-[13px] leading-relaxed text-slate-600">
-          Determine the required thickness of various insulation materials to achieve target R-values.
-        </p>
-        <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-          <span class="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-500">Insulation</span>
-          <span class="flex items-center gap-1 text-[11px] font-bold text-brand-600">Open Tool <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </div>
-      </a>
-    `;
-
-    var clicked = false;
-
-    loadMoreBtn.addEventListener('click', function() {
-      if (clicked) return; // Prevent multiple clicks
-      
-      // 1. Show loading state
-      loadMoreText.textContent = 'Loading...';
-      loadMoreIcon.classList.add('animate-spin');
-      loadMoreIcon.innerHTML = '<path d="M21 12a9 9 0 1 1-6.219-8.56" />'; // Spinner icon
-
-      // 2. Simulate network request delay
-      setTimeout(function() {
-        // 3. Append new tools to grid
-        toolsGrid.insertAdjacentHTML('beforeend', newToolsHTML);
-        
-        // 4. Animate new tools in (Reveal effect)
-        var newElements = toolsGrid.querySelectorAll('a[style*="opacity: 0"]');
-        setTimeout(function() {
-           newElements.forEach(function(el) {
-             el.style.opacity = '1';
-             el.style.transform = 'translateY(0)';
-           });
-        }, 50);
-
-        // 5. Hide the button since all tools are loaded
-        loadMoreContainer.style.display = 'none'; 
-        
-      }, 800); // 800ms fake delay
-    });
-  })();
-</script>
-  
 </body>
 </html>
+
+  
