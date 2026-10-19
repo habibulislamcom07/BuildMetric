@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- ============================================================
+       PHASE 1/10 — SEO HEAD & COLLECTION PAGE SCHEMA
+       File: guides.html
+       Brand: BuildMetric | Domain: buildmetric.org
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO Meta -->
+  <title>Construction Guides &amp; Technical Articles | BuildMetric</title>
+  <meta name="description" content="Expert-written, code-aware construction guides for roofing, concrete, framing and estimating. Written in plain language for professionals in the USA, UK and Australia." />
+  <meta name="keywords" content="construction estimating guides, roofing technical guides, concrete calculation tutorials, building code explanations, contractor resources" />
+  <meta name="author" content="BuildMetric Editorial &amp; Engineering Team" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="theme-color" content="#0ea5e9" />
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://buildmetric.org/guides.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BuildMetric" />
+  <meta property="og:title" content="Construction Guides &amp; Technical Articles | BuildMetric" />
+  <meta property="og:description" content="Expert-written, code-aware construction guides for roofing, concrete, framing and estimating. Written for professionals in the US, UK and Australia." />
+  <meta property="og:url" content="https://buildmetric.org/guides.html" />
+  <meta property="og:image" content="https://buildmetric.org/assets/og/guides.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Construction Guides | BuildMetric" />
+  <meta name="twitter:description" content="Code-aware construction guides written in plain language for professionals." />
+  <meta name="twitter:image" content="https://buildmetric.org/assets/og/guides.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230f172a'/%3E%3Cpath d='M22 68 L50 26 L78 68' stroke='%230ea5e9' stroke-width='9' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+
+  <!-- Fonts & Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e' },
+            ink: { 700: '#334155', 800: '#1e293b', 900: '#0f172a', 950: '#080f1e' }
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: {
+            glow: '0 0 0 1px rgba(14,165,233,0.16), 0 18px 45px -18px rgba(14,165,233,0.55)',
+            card: '0 1px 2px rgba(15,23,42,0.04), 0 12px 32px -12px rgba(15,23,42,0.16)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+    .text-gradient { background: linear-gradient(100deg, #0ea5e9 0%, #38bdf8 40%, #0284c7 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .hero-mesh { background: radial-gradient(900px 420px at 12% -10%, rgba(14,165,233,0.22), transparent 62%), radial-gradient(700px 380px at 92% 0%, rgba(56,189,248,0.16), transparent 60%), linear-gradient(180deg, #0f172a 0%, #0b1222 62%, #0f172a 100%); }
+    
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; left: 0; bottom: -6px; height: 2px; width: 0; background: linear-gradient(90deg, #0ea5e9, #38bdf8); border-radius: 2px; transition: width .3s ease; }
+    .nav-link:hover::after { width: 100%; }
+    
+    .bento-tile { transition: transform .28s cubic-bezier(.2,.8,.2,1), box-shadow .28s ease, border-color .28s ease; }
+    .bento-tile:hover { transform: translateY(-4px); box-shadow: 0 22px 48px -22px rgba(15,23,42,0.32); border-color: rgba(14,165,233,0.45); }
+  </style>
+
+  <!-- ================= JSON-LD Schema ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://buildmetric.org/guides.html#webpage",
+        "url": "https://buildmetric.org/guides.html",
+        "name": "Construction Guides & Technical Articles",
+        "description": "Expert-written, code-aware construction guides for roofing, concrete, framing and estimating.",
+        "isPartOf": { "@id": "https://buildmetric.org/#website" },
+        "about": { "@id": "https://buildmetric.org/#organization" },
+        "primaryImageOfPage": { "@type": "ImageObject", "url": "https://buildmetric.org/assets/og/guides.png" },
+        "datePublished": "2024-02-05",
+        "dateModified": "2026-10-19",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://buildmetric.org/guides.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://buildmetric.org/" },
+          { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://buildmetric.org/guides.html" }
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://buildmetric.org/#organization",
+        "name": "BuildMetric",
+        "url": "https://buildmetric.org",
+        "email": "contact@buildmetric.org"
+      }
+    ]
+  }
+  </script>
+</head>
+
+<!-- ============================================================
+     PHASE 2/10 — BODY OPEN + SKIP LINK + PREMIUM NAVBAR
+     ============================================================ -->
+
+<body class="bg-slate-50 text-ink-900 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- Skip link (Accessibility) -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-brand-500 focus:px-4 focus:py-2 focus:text-white focus:font-semibold">
+    Skip to main content
+  </a>
+
+  <!-- ============================================================
+       PREMIUM NAVBAR
+       ============================================================ -->
+  <header id="site-header" class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-xl supports-[backdrop-filter]:bg-white/70">
+    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+
+      <!-- Brand Logo -->
+      <a href="/" class="group flex items-center gap-2.5" aria-label="BuildMetric home">
+        <span class="relative grid h-10 w-10 place-items-center rounded-xl bg-ink-900 shadow-card ring-1 ring-white/10 transition-transform duration-300 group-hover:scale-105">
+          <svg viewBox="0 0 100 100" class="h-6 w-6" aria-hidden="true">
+            <path d="M20 70 L50 24 L80 70" fill="none" stroke="#0ea5e9" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M38 70 L50 52 L62 70" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.75" />
+          </svg>
+        </span>
+        <span class="leading-tight">
+          <span class="block font-display text-lg font-extrabold tracking-tight text-ink-900">
+            Build<span class="text-gradient">Metric</span>
+          </span>
+          <span class="hidden text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500 sm:block">
+            Engineering Calculators
+          </span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden items-center gap-7 lg:flex" aria-label="Primary">
+        <a href="/" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Home</a>
+        <a href="/calculators.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Calculators</a>
+        <a href="/roofing.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Roofing</a>
+        <a href="/estimating.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Estimating</a>
+        <a href="/guides.html" class="nav-link text-sm font-semibold text-brand-600" aria-current="page">Guides</a>
+        <a href="/about.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">About</a>
+      </nav>
+
+      <!-- Right Actions -->
+      <div class="flex items-center gap-2.5">
+        <a href="/contact.html" class="hidden rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100 hover:text-ink-900 md:inline-flex">
+          Contact
+        </a>
+        
+        <!-- CTA Button -->
+        <a href="/calculators.html" class="cta-shine inline-flex items-center gap-2 rounded-xl bg-ink-900 px-4 py-2.5 text-sm font-bold text-white shadow-card transition-all duration-300 hover:bg-ink-800 hover:shadow-glow focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2">
+          <svg class="h-4 w-4 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <rect x="4" y="2" width="16" height="20" rx="2" />
+            <path d="M8 6h8M8 11h2M12 11h2M16 11h2M8 15h2M12 15h2M16 15h2" />
+          </svg>
+          <span class="hidden sm:inline">Open Tools</span>
+          <span class="sm:hidden">Tools</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="navToggle" type="button"
+                class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-ink-900 transition-colors hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 lg:hidden"
+                aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg id="navIconOpen" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <svg id="navIconClose" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white lg:hidden">
+      <nav class="mx-auto max-w-7xl space-y-1 px-4 py-4 sm:px-6" aria-label="Mobile">
+        <a href="/" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Home</a>
+        <a href="/calculators.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Calculators</a>
+        <a href="/roofing.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Roofing</a>
+        <a href="/estimating.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Estimating</a>
+        <a href="/guides.html" class="block rounded-lg bg-brand-50 px-3 py-2.5 text-sm font-semibold text-brand-700" aria-current="page">Guides</a>
+        <a href="/about.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">About</a>
+        <a href="/contact.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Contact</a>
+
+        <!-- Legal Links (Mobile only) -->
+        <div class="mt-2 border-t border-slate-200 pt-2">
+          <p class="px-3 pb-1 pt-1 text-[10px] font-bold uppercase tracking-[0.14em] text-slate-400">Legal</p>
+          <a href="/privacy.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Privacy Policy</a>
+          <a href="/terms.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Terms of Service</a>
+          <a href="/disclaimer.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Disclaimer</a>
+          <a href="/cookie-policy.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Cookie Policy</a>
+        </div>
+
+        <a href="mailto:contact@buildmetric.org" class="mt-3 block rounded-lg bg-ink-900 px-3 py-2.5 text-center text-sm font-bold text-white">contact@buildmetric.org</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================
+     PHASE 3/10 — MAIN OPEN + GUIDES HERO SECTION
+     ============================================================ -->
+
+  <main id="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero-mesh relative overflow-hidden">
+      <!-- Decorative Background Elements -->
+      <div class="pointer-events-none absolute inset-0 bg-grid-slate [background-size:46px_46px] opacity-[0.35]" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand-500/20 blur-3xl" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -left-28 bottom-0 h-72 w-72 rounded-full bg-brand-400/10 blur-3xl" aria-hidden="true"></div>
+
+      <div class="relative mx-auto max-w-5xl px-4 pb-20 pt-16 text-center sm:px-6 sm:pb-28 sm:pt-24 lg:px-8">
+        
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="mb-6 flex justify-center">
+          <ol class="flex flex-wrap items-center gap-2 text-xs font-semibold text-slate-400">
+            <li><a href="/" class="transition-colors hover:text-brand-300">Home</a></li>
+            <li aria-hidden="true" class="text-slate-600">/</li>
+            <li class="text-brand-300" aria-current="page">Guides</li>
+          </ol>
+        </nav>
+
+        <!-- Trust Badge -->
+        <span class="inline-flex items-center gap-2 rounded-full border border-brand-400/30 bg-brand-500/10 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-300">
+          <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" /><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" /></svg>
+          Technical Library
+        </span>
+
+        <!-- Main Headline -->
+        <h1 class="mt-6 font-display text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-[3.5rem]">
+          Read Before You Build.
+          <span class="mt-2 block text-gradient">Code-Aware Construction Guides</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+          Expert-written, plain-language guides covering roofing, concrete, framing, and estimating. Every article is reviewed by a practising professional and references current US, UK, or Australian codes where applicable.
+        </p>
+
+        <!-- Search Bar for Guides -->
+        <form action="/guides.html" method="get" role="search" class="mx-auto mt-10 max-w-2xl">
+          <label for="guide-search" class="sr-only">Search guides</label>
+          <div class="group relative flex items-center overflow-hidden rounded-2xl border border-white/20 bg-white/10 backdrop-blur transition-all duration-300 focus-within:border-brand-400 focus-within:bg-white/15 focus-within:shadow-glow">
+            <span class="grid h-14 w-14 shrink-0 place-items-center text-brand-300">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="7" />
+                <path d="m21 21-4.3-4.3" />
+              </svg>
+            </span>
+            <input
+              id="guide-search"
+              name="q"
+              type="search"
+              placeholder="Search guides — roof pitch, waste allowance, stud spacing…"
+              class="h-14 w-full bg-transparent pr-4 text-sm text-white placeholder-slate-400 focus:outline-none sm:text-base"
+              autocomplete="off"
+            />
+            <button
+              type="submit"
+              class="mr-2 hidden items-center gap-1.5 rounded-xl bg-brand-500 px-5 py-2.5 text-xs font-bold text-white transition-colors hover:bg-brand-400 sm:inline-flex"
+            >
+              Search
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </button>
+          </div>
+        </form>
+
+        <!-- Quick Topic Filters -->
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-2">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500 mr-2">Popular topics:</span>
+          <a href="#roofing" class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold text-slate-300 transition-colors hover:bg-brand-500/20 hover:text-brand-300">Roofing</a>
+          <a href="#concrete" class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold text-slate-300 transition-colors hover:bg-brand-500/20 hover:text-brand-300">Concrete</a>
+          <a href="#framing" class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold text-slate-300 transition-colors hover:bg-brand-500/20 hover:text-brand-300">Framing</a>
+          <a href="#estimating" class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold text-slate-300 transition-colors hover:bg-brand-500/20 hover:text-brand-300">Estimating</a>
+          <a href="#paint" class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold text-slate-300 transition-colors hover:bg-brand-500/20 hover:text-brand-300">Paint</a>
+        </div>
+
+      </div>
+
+      <!-- Bottom Fade -->
+      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-b from-transparent to-slate-50" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============================================================
+     PHASE 4/10 — FEATURED GUIDE SPOTLIGHT
+     ============================================================ -->
+
+<section id="featured-guide" class="relative bg-slate-50 py-12 sm:py-16">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    
+    <div class="mb-6 flex items-center justify-between">
+      <h2 class="font-display text-2xl font-extrabold tracking-tight text-ink-900 sm:text-3xl">Editor's Pick</h2>
+      <div class="hidden h-px flex-1 bg-slate-200 ml-6 sm:block"></div>
+    </div>
+
+    <article class="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:shadow-xl hover:border-brand-300">
+      <div class="grid lg:grid-cols-2">
+        
+        <!-- Left: Visual/Graphic -->
+        <div class="relative min-h-[300px] overflow-hidden bg-gradient-to-br from-brand-600 to-brand-900 lg:min-h-[400px]">
+          <div class="absolute inset-0 bg-grid-slate [background-size:32px_32px] opacity-20" aria-hidden="true"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" aria-hidden="true"></div>
+          
+          <!-- Badge -->
+          <div class="absolute left-6 top-6 flex items-center gap-2 rounded-full bg-white/15 px-3 py-1.5 backdrop-blur ring-1 ring-white/30">
+            <svg class="h-4 w-4 text-brand-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z" /></svg>
+            <span class="font-mono text-[10px] font-bold uppercase tracking-wider text-white">Must Read</span>
+          </div>
+
+          <!-- Large SVG Graphic -->
+          <div class="absolute inset-0 flex items-center justify-center">
+            <svg class="h-48 w-48 text-white/90 drop-shadow-2xl transition-transform duration-500 group-hover:scale-105" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 20h20M4 20V9l8-5 8 5v11" />
+              <path d="M10 20v-5h4v5" />
+              <path d="M4 9l8-5 8 5" />
+              <circle cx="12" cy="9" r="1.5" fill="currentColor" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Right: Content -->
+        <div class="flex flex-col justify-center p-8 sm:p-10 lg:p-12">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="rounded-md bg-brand-50 px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-brand-700 ring-1 ring-brand-200">Roofing</span>
+            <span class="text-[11px] font-medium text-slate-400">·</span>
+            <span class="font-mono text-[11px] text-slate-500">Updated Oct 2026</span>
+            <span class="text-[11px] font-medium text-slate-400">·</span>
+            <span class="font-mono text-[11px] text-slate-500 text-brand-600 font-bold flex items-center gap-1">
+              <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              12 min read
+            </span>
+          </div>
+
+          <h3 class="font-display text-2xl font-extrabold leading-tight text-ink-900 sm:text-3xl lg:text-4xl group-hover:text-brand-700 transition-colors">
+            The Complete Guide to Roof Pitch: Conversions, Codes &amp; Calculations
+          </h3>
+          
+          <p class="mt-4 text-[15px] leading-relaxed text-slate-600">
+            Why does the UK specify degrees, the US specify rise-over-run, and how do you convert between them without losing material? We break down the trigonometry, the IRC/BS 5534 code requirements, and the exact math behind our calculator.
+          </p>
+
+          <!-- Author / Reviewer -->
+          <div class="mt-6 flex items-center gap-3">
+            <span class="grid h-10 w-10 place-items-center rounded-full bg-slate-100 text-slate-600 ring-1 ring-slate-200">
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </span>
+            <div>
+              <p class="text-sm font-bold text-ink-900">BuildMetric Engineering Team</p>
+              <p class="text-[11px] font-medium text-slate-500">Reviewed by a Chartered Structural Engineer</p>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="mt-8">
+            <a href="/guides/roof-pitch-explained.html" class="inline-flex items-center gap-2 rounded-xl bg-ink-900 px-6 py-3.5 text-sm font-bold text-white shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:bg-ink-800 hover:shadow-glow">
+              Read the Full Guide
+              <svg class="h-4 w-4 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </article>
+  </div>
+</section>
+
+  <!-- ============================================================
+     PHASE 5/10 — ALL GUIDES GRID + FILTER BAR
+     ============================================================ -->
+
+<section id="all-guides" class="relative border-t border-slate-200 bg-white py-16 sm:py-24">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+      <div>
+        <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-600">The Library</p>
+        <h2 class="mt-2 font-display text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">
+          Browse All Guides
+        </h2>
+        <div class="mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brand-500 to-brand-300"></div>
+      </div>
+      
+      <!-- Category Filter Chips (JS wired in Phase 10) -->
+      <div class="flex overflow-x-auto pb-2 -mb-2 gap-2 hide-scrollbar md:flex-wrap md:pb-0 md:mb-0">
+        <button type="button" class="filter-btn whitespace-nowrap rounded-full bg-ink-900 px-4 py-2 text-xs font-bold text-white transition-colors">All Guides</button>
+        <button type="button" class="filter-btn whitespace-nowrap rounded-full bg-slate-100 px-4 py-2 text-xs font-bold text-slate-600 transition-colors hover:bg-slate-200">Roofing</button>
+        <button type="button" class="filter-btn whitespace-nowrap rounded-full bg-slate-100 px-4 py-2 text-xs font-bold text-slate-600 transition-colors hover:bg-slate-200">Concrete</button>
+        <button type="button" class="filter-btn whitespace-nowrap rounded-full bg-slate-100 px-4 py-2 text-xs font-bold text-slate-600 transition-colors hover:bg-slate-200">Framing</button>
+        <button type="button" class="filter-btn whitespace-nowrap rounded-full bg-slate-100 px-4 py-2 text-xs font-bold text-slate-600 transition-colors hover:bg-slate-200">Estimating</button>
+        <button type="button" class="filter-btn whitespace-nowrap rounded-full bg-slate-100 px-4 py-2 text-xs font-bold text-slate-600 transition-colors hover:bg-slate-200">Finishes</button>
+      </div>
+    </div>
+
+    <!-- Guides Grid -->
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Guide 1 -->
+      <a href="/guides/roof-pitch-explained.html" class="bento-tile group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+        <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-brand-500 to-brand-700">
+          <div class="absolute inset-0 bg-grid-slate [background-size:22px_22px] opacity-20" aria-hidden="true"></div>
+          <div class="absolute right-3 top-3 flex items-center gap-1 rounded-full bg-white/15 px-2 py-0.5 backdrop-blur ring-1 ring-white/30">
+            <span class="font-mono text-[9px] font-bold uppercase tracking-wider text-white">12 min</span>
+          </div>
+          <svg class="absolute inset-x-0 bottom-3 mx-auto h-16 w-16 text-white/90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M4 20V9l8-5 8 5v11" /><path d="M10 20v-5h4v5" /></svg>
+        </div>
+        <div class="flex flex-1 flex-col p-5">
+          <div class="flex flex-wrap items-center gap-1.5">
+            <span class="rounded-md bg-brand-50 px-1.5 py-0.5 text-[9.5px] font-bold uppercase tracking-wider text-brand-700 ring-1 ring-brand-200">Roofing</span>
+            <span class="text-[10px] font-medium text-slate-400">·</span>
+            <span class="font-mono text-[10px] text-slate-500">Updated 2026</span>
+          </div>
+          <h3 class="mt-3 font-display text-lg font-bold leading-snug text-ink-900 group-hover:text-brand-700">
+            Roof Pitch Explained: Why 6:12 and 26.57° Are the Same Roof
+          </h3>
+          <p class="mt-2 flex-1 text-[13px] leading-relaxed text-slate-600">
+            The three ways to describe a roof, why conversion errors cost material, and how to check your own numbers against IRC and BS 5534.
+          </p>
+          <div class="mt-4 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-500">Read Guide</span>
+            <svg class="h-4 w-4 text-brand-500 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Guide 2 -->
+      <a href="/guides/concrete-waste-allowance.html" class="bento-tile group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+        <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-slate-600 to-slate-800">
+          <div class="absolute inset-0 bg-grid-slate [background-size:22px_22px] opacity-25" aria-hidden="true"></div>
+          <div class="absolute right-3 top-3 flex items-center gap-1 rounded-full bg-white/15 px-2 py-0.5 backdrop-blur ring-1 ring-white/30">
+            <span class="font-mono text-[9px] font-bold uppercase tracking-wider text-white">6 min</span>
+          </div>
+          <svg class="absolute inset-x-0 bottom-3 mx-auto h-16 w-16 text-white/90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M5 20V9l7-5 7 5v11M9 20v-4h6v4" /></svg>
+        </div>
+        <div class="flex flex-1 flex-col p-5">
+          <div class="flex flex-wrap items-center gap-1.5">
+            <span class="rounded-md bg-slate-100 px-1.5 py-0.5 text-[9.5px] font-bold uppercase tracking-wider text-slate-700 ring-1 ring-slate-200">Concrete</span>
+            <span class="text-[10px] font-medium text-slate-400">·</span>
+            <span class="font-mono text-[10px] text-slate-500">Updated 2026</span>
+          </div>
+          <h3 class="mt-3 font-display text-lg font-bold leading-snug text-ink-900 group-hover:text-brand-700">
+            How Much Waste Should You Add to a Concrete Order?
+          </h3>
+          <p class="mt-2 flex-1 text-[13px] leading-relaxed text-slate-600">
+            Realistic waste factors for slabs, footings, columns and pump deliveries — and when the calculator answer is not enough.
+          </p>
+          <div class="mt-4 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-500">Read Guide</span>
+            <svg class="h-4 w-4 text-brand-500 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Guide 3 -->
+      <a href="/guides/stud-spacing-by-code.html" class="bento-tile group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+        <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-brand-600 to-brand-800">
+          <div class="absolute inset-0 bg-grid-slate [background-size:22px_22px] opacity-20" aria-hidden="true"></div>
+          <div class="absolute right-3 top-3 flex items-center gap-1 rounded-full bg-white/15 px-2 py-0.5 backdrop-blur ring-1 ring-white/30">
+            <span class="font-mono text-[9px] font-bold uppercase tracking-wider text-white">7 min</span>
+          </div>
+          <svg class="absolute inset-x-0 bottom-3 mx-auto h-16 w-16 text-white/90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V8l6-4 6 4v13M10 12h4M10 16h4" /></svg>
+        </div>
+        <div class="flex flex-1 flex-col p-5">
+          <div class="flex flex-wrap items-center gap-1.5">
+            <span class="rounded-md bg-brand-50 px-1.5 py-0.5 text-[9.5px] font-bold uppercase tracking-wider text-brand-700 ring-1 ring-brand-200">Framing</span>
+            <span class="text-[10px] font-medium text-slate-400">·</span>
+            <span class="font-mono text-[10px] text-slate-500">Updated 2026</span>
+          </div>
+          <h3 class="mt-3 font-display text-lg font-bold leading-snug text-ink-900 group-hover:text-brand-700">
+            Stud Spacing: IRC 2021 vs BS 5268 vs AS 1684 Compared
+          </h3>
+          <p class="mt-2 flex-1 text-[13px] leading-relaxed text-slate-600">
+            The same wall, three different code editions — where the numbers match, where they diverge, and why it matters.
+          </p>
+          <div class="mt-4 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-500">Read Guide</span>
+            <svg class="h-4 w-4 text-brand-500 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Guide 4 -->
+      <a href="/guides/paint-coverage-myths.html" class="bento-tile group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+        <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-emerald-600 to-emerald-800">
+          <div class="absolute inset-0 bg-grid-slate [background-size:22px_22px] opacity-20" aria-hidden="true"></div>
+          <div class="absolute right-3 top-3 flex items-center gap-1 rounded-full bg-white/15 px-2 py-0.5 backdrop-blur ring-1 ring-white/30">
+            <span class="font-mono text-[9px] font-bold uppercase tracking-wider text-white">5 min</span>
+          </div>
+          <svg class="absolute inset-x-0 bottom-3 mx-auto h-16 w-16 text-white/90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 3H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h7v3a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2V8H19z" /><path d="M12 15v6" /></svg>
+        </div>
+        <div class="flex flex-1 flex-col p-5">
+          <div class="flex flex-wrap items-center gap-1.5">
+            <span class="rounded-md bg-emerald-50 px-1.5 py-0.5 text-[9.5px] font-bold uppercase tracking-wider text-emerald-700 ring-1 ring-emerald-200">Finishes</span>
+            <span class="text-[10px] font-medium text-slate-400">·</span>
+            <span class="font-mono text-[10px] text-slate-500">Updated 2026</span>
+          </div>
+          <h3 class="mt-3 font-display text-lg font-bold leading-snug text-ink-900 group-hover:text-brand-700">
+            Why Paint Coverage Numbers on the Tin Are Often Wrong
+          </h3>
+          <p class="mt-2 flex-1 text-[13px] leading-relaxed text-slate-600">
+            What manufacturers mean by "coverage", how surface porosity and colour affect it, and how to calculate a realistic order.
+          </p>
+          <div class="mt-4 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-500">Read Guide</span>
+            <svg class="h-4 w-4 text-brand-500 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Guide 5 (New) -->
+      <a href="/guides/how-to-calculate-rafters.html" class="bento-tile group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+        <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-orange-500 to-orange-700">
+          <div class="absolute inset-0 bg-grid-slate [background-size:22px_22px] opacity-20" aria-hidden="true"></div>
+          <div class="absolute right-3 top-3 flex items-center gap-1 rounded-full bg-white/15 px-2 py-0.5 backdrop-blur ring-1 ring-white/30">
+            <span class="font-mono text-[9px] font-bold uppercase tracking-wider text-white">9 min</span>
+          </div>
+          <svg class="absolute inset-x-0 bottom-3 mx-auto h-16 w-16 text-white/90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V8l6-4 6 4v13" /></svg>
+        </div>
+        <div class="flex flex-1 flex-col p-5">
+          <div class="flex flex-wrap items-center gap-1.5">
+            <span class="rounded-md bg-orange-50 px-1.5 py-0.5 text-[9.5px] font-bold uppercase tracking-wider text-orange-700 ring-1 ring-orange-200">Estimating</span>
+            <span class="text-[10px] font-medium text-slate-400">·</span>
+            <span class="font-mono text-[10px] text-slate-500">Updated 2026</span>
+          </div>
+          <h3 class="mt-3 font-display text-lg font-bold leading-snug text-ink-900 group-hover:text-brand-700">
+            How to Calculate Rafter Lengths (With Overhang)
+          </h3>
+          <p class="mt-2 flex-1 text-[13px] leading-relaxed text-slate-600">
+            A step-by-step guide to using the Pythagorean theorem and pitch multipliers to cut rafters that actually fit.
+          </p>
+          <div class="mt-4 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-500">Read Guide</span>
+            <svg class="h-4 w-4 text-brand-500 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Guide 6 (New) -->
+      <a href="/guides/reading-architectural-drawings.html" class="bento-tile group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+        <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-indigo-500 to-indigo-700">
+          <div class="absolute inset-0 bg-grid-slate [background-size:22px_22px] opacity-20" aria-hidden="true"></div>
+          <div class="absolute right-3 top-3 flex items-center gap-1 rounded-full bg-white/15 px-2 py-0.5 backdrop-blur ring-1 ring-white/30">
+            <span class="font-mono text-[9px] font-bold uppercase tracking-wider text-white">15 min</span>
+          </div>
+          <svg class="absolute inset-x-0 bottom-3 mx-auto h-16 w-16 text-white/90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" /><path d="M4 8h16M8 4v16" /></svg>
+        </div>
+        <div class="flex flex-1 flex-col p-5">
+          <div class="flex flex-wrap items-center gap-1.5">
+            <span class="rounded-md bg-indigo-50 px-1.5 py-0.5 text-[9.5px] font-bold uppercase tracking-wider text-indigo-700 ring-1 ring-indigo-200">General</span>
+            <span class="text-[10px] font-medium text-slate-400">·</span>
+            <span class="font-mono text-[10px] text-slate-500">Updated 2026</span>
+          </div>
+          <h3 class="mt-3 font-display text-lg font-bold leading-snug text-ink-900 group-hover:text-brand-700">
+            How to Read Architectural Drawings (For Tradespeople)
+          </h3>
+          <p class="mt-2 flex-1 text-[13px] leading-relaxed text-slate-600">
+            Stop guessing what the architect meant. A guide to scales, line weights, abbreviations, and finding the dimensions you need.
+          </p>
+          <div class="mt-4 flex items-center justify-between border-t border-slate-100 pt-4">
+            <span class="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-500">Read Guide</span>
+            <svg class="h-4 w-4 text-brand-500 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Load More Button -->
+    <div class="mt-12 text-center">
+      <button type="button" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-6 py-3 text-sm font-bold text-slate-700 shadow-sm transition-all hover:border-brand-300 hover:text-brand-700">
+        Load More Guides
+        <svg class="h-4 w-4 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9l-7 7-7-7" /></svg>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+ <!-- ============================================================
+     PHASE 6/10 — CTA & NEWSLETTER (SUGGEST TOPIC / SUBSCRIBE)
+     ============================================================ -->
+
+<section id="newsletter" class="relative border-t border-slate-200 bg-slate-50 py-16 sm:py-24">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    
+    <!-- Outer Container (Dark Theme) -->
+    <div class="overflow-hidden rounded-3xl border border-slate-800 bg-ink-950 shadow-2xl relative">
+      
+      <!-- Decorative Background -->
+      <div class="pointer-events-none absolute inset-0 bg-grid-slate [background-size:32px_32px] opacity-10" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-brand-500/20 blur-3xl" aria-hidden="true"></div>
+      
+      <div class="relative grid lg:grid-cols-2">
+        
+        <!-- Left Side: Suggest a Topic -->
+        <div class="p-8 sm:p-12 lg:p-16 border-b lg:border-b-0 lg:border-r border-slate-800 flex flex-col justify-center">
+          <span class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-500/20 text-brand-400 ring-1 ring-brand-500/30 mb-6">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+              <path d="M8 10h.01M12 10h.01M16 10h.01" />
+            </svg>
+          </span>
+          <h3 class="font-display text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
+            Can't find the guide you need?
+          </h3>
+          <p class="mt-4 text-[14.5px] leading-relaxed text-slate-400">
+            Our library is driven by what our readers are actually building. If you are stuck on a specific calculation, code requirement, or material question, tell us. We prioritise new guides based on real project scenarios.
+          </p>
+          
+          <div class="mt-8">
+            <a href="mailto:contact@buildmetric.org?subject=Guide%20Suggestion" class="inline-flex items-center gap-2 rounded-xl bg-white/10 px-5 py-3 text-sm font-bold text-white ring-1 ring-white/20 transition-all hover:bg-white/20 hover:ring-white/30">
+              Suggest a Topic
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Side: Newsletter -->
+        <div class="p-8 sm:p-12 lg:p-16 flex flex-col justify-center bg-ink-900/50">
+          <h3 class="font-display text-xl font-bold text-white">
+            Get the latest guides by email.
+          </h3>
+          <p class="mt-2 text-[13.5px] leading-relaxed text-slate-400">
+            We publish 1–2 in-depth technical guides a month. No spam, no daily blasts, and you can unsubscribe with one click.
+          </p>
+
+          <form id="newsletterForm" class="mt-6" novalidate>
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <div class="flex flex-col gap-3 sm:flex-row">
+              <input 
+                type="email" 
+                id="newsletter-email" 
+                name="email" 
+                required 
+                placeholder="you@company.com" 
+                class="w-full rounded-xl border border-slate-700 bg-slate-800/50 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500 transition-colors"
+              />
+              <button 
+                type="submit" 
+                class="shrink-0 rounded-xl bg-brand-500 px-6 py-3 text-sm font-bold text-white shadow-glow transition-all hover:bg-brand-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-300"
+              >
+                Subscribe
+              </button>
+            </div>
+            <p class="mt-3 text-[11px] text-slate-500">
+              By subscribing, you agree to our <a href="/privacy.html" class="text-slate-400 underline hover:text-brand-300 transition-colors">Privacy Policy</a>. We use double opt-in.
+            </p>
+            <!-- Success Message (Hidden by default, shown by JS) -->
+            <div id="newsletterMsg" class="mt-3 hidden rounded-lg bg-emerald-500/10 p-3 text-[12px] font-medium text-emerald-400 border border-emerald-500/20"></div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     PHASE 7/10 — EDITORIAL STANDARDS (TRUST & AUTHORITY)
+     ============================================================ -->
+
+<section id="editorial-standards" class="relative border-t border-slate-200 bg-white py-16 sm:py-20">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+    <header class="mx-auto mb-12 max-w-2xl text-center">
+      <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-600">Editorial Standards</p>
+      <h2 class="mt-2 font-display text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">
+        Why You Can Trust These Guides
+      </h2>
+      <div class="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brand-500 to-brand-300"></div>
+      <p class="mt-4 text-sm leading-relaxed text-slate-600">
+        Construction is a high-stakes industry. Bad information costs money and compromises safety. We hold our guides to the same standard as our calculators.
+      </p>
+    </header>
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      
+      <!-- Standard 1 -->
+      <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-brand-500/10 text-brand-700 mb-4">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </span>
+        <h3 class="font-display text-base font-bold text-ink-900">Human-Written</h3>
+        <p class="mt-2 text-[13px] leading-relaxed text-slate-600">
+          No AI-generated fluff. Every article is written by a member of our editorial team and reviewed by a practising professional before publication.
+        </p>
+      </div>
+
+      <!-- Standard 2 -->
+      <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-emerald-500/10 text-emerald-700 mb-4">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </span>
+        <h3 class="font-display text-base font-bold text-ink-900">Code-Aware</h3>
+        <p class="mt-2 text-[13px] leading-relaxed text-slate-600">
+          We don't just guess. Where relevant, our guides cite the current published standards (IRC 2021, BS 5534, AS 1684) so you can verify the math.
+        </p>
+      </div>
+
+      <!-- Standard 3 -->
+      <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-indigo-500/10 text-indigo-700 mb-4">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </span>
+        <h3 class="font-display text-base font-bold text-ink-900">Dated &amp; Versioned</h3>
+        <p class="mt-2 text-[13px] leading-relaxed text-slate-600">
+          Building codes change. Every guide displays a clear "Last Updated" date so you know exactly when the information was last verified against current codes.
+        </p>
+      </div>
+
+      <!-- Standard 4 -->
+      <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-amber-500/10 text-amber-700 mb-4">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </span>
+        <h3 class="font-display text-base font-bold text-ink-900">Open to Corrections</h3>
+        <p class="mt-2 text-[13px] leading-relaxed text-slate-600">
+          If you spot an error, we want to know. Valid corrections are logged in the page's version history and credited to the reader (with permission).
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+ <!-- ============================================================
+     PHASE 8/10 — FAQS + JSON-LD SCHEMA
+     ============================================================ -->
+
+<!-- FAQ Schema for Google Rich Snippets -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://buildmetric.org/guides.html#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are these guides written by AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every article in our library is written by a member of the BuildMetric editorial team and reviewed by a practising professional (quantity surveyor, structural engineer, or licensed contractor). We do not publish AI-generated content without a named human reviewer, and we do not use AI to produce the core technical explanations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often are the guides updated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Guides are reviewed periodically against current code editions, and the 'Last Updated' date is displayed on every article. When a standard changes (for example, a new IRC or BS edition), we update the affected guides and note the change in the page's version history."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I republish or use these guides on my own website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Short quotes with clear attribution and a working link back to the original page are welcome. You may not, however, reproduce substantial portions of our content, republish the full text of a guide on another site, or use our content for commercial purposes without prior written permission. For licensing requests, email contact@buildmetric.org."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do your guides reference local building codes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Because we write for three distinct markets, our guides reference the appropriate regional standards: IRC 2021 and IBC for the United States, BS 5534 and Building Regulations for the UK, and the NCC and AS 1684 for Australia. Where codes differ between these markets, we say so explicitly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I suggest a topic for a new guide?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. We add new guides every month based on what our readers are building. If you are stuck on a specific calculation or code question, email contact@buildmetric.org with the subject 'Guide Suggestion'. A working scenario from your site is the fastest way to get it prioritised."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the guides free to read?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every guide and article on BuildMetric is completely free to read. There is no paywall, no forced sign-up, and no gated content. The site is funded through transparent display advertising."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who exactly reviews the technical guides?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our reviewer group consists of quantity surveyors, structural engineers, and licensed roofing and framing contractors with field experience in the US, UK, and Australian construction industries. Depending on the topic, the article is routed to the relevant specialist."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- FAQ Section -->
+<section id="faqs" class="border-t border-slate-200 bg-slate-50 py-16 sm:py-24">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+
+    <header class="mb-10 text-center">
+      <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-600">Frequently Asked Questions</p>
+      <h2 class="mt-2 font-display text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">
+        Common Questions About Our Guides
+      </h2>
+      <div class="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brand-500 to-brand-300"></div>
+    </header>
+
+    <div class="space-y-3">
+      <!-- FAQ 1 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">01</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">Are these guides written by AI?</span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14" /></svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            <strong class="text-ink-900">No.</strong> Every article in our library is written by a member of the BuildMetric editorial team and reviewed by a practising professional (quantity surveyor, structural engineer, or licensed contractor). We do not publish AI-generated content without a named human reviewer, and we do not use AI to produce the core technical explanations.
+          </p>
+        </div>
+      </details>
+
+      <!-- FAQ 2 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">02</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">How often are the guides updated?</span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14" /></svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            Guides are reviewed periodically against current code editions, and the "Last Updated" date is displayed on every article. When a standard changes (for example, a new IRC or BS edition), we update the affected guides and note the change in the page's version history.
+          </p>
+        </div>
+      </details>
+
+      <!-- FAQ 3 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">03</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">Can I republish or use these guides on my own website?</span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14" /></svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            Short quotes with clear attribution and a working link back to the original page are welcome. You may not, however, reproduce substantial portions of our content, republish the full text of a guide on another site, or use our content for commercial purposes without prior written permission. For licensing requests, email <a href="mailto:contact@buildmetric.org" class="font-semibold text-brand-600 hover:underline">contact@buildmetric.org</a>.
+          </p>
+        </div>
+      </details>
+
+      <!-- FAQ 4 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">04</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">Do your guides reference local building codes?</span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14" /></svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            Yes. Because we write for three distinct markets, our guides reference the appropriate regional standards: <strong class="text-ink-900">IRC 2021 and IBC</strong> for the United States, <strong class="text-ink-900">BS 5534 and Building Regulations</strong> for the UK, and the <strong class="text-ink-900">NCC and AS 1684</strong> for Australia. Where codes differ between these markets, we say so explicitly.
+          </p>
+        </div>
+      </details>
+
+      <!-- FAQ 5 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">05</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">Can I suggest a topic for a new guide?</span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14" /></svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            Absolutely. We add new guides every month based on what our readers are building. If you are stuck on a specific calculation or code question, email <a href="mailto:contact@buildmetric.org?subject=Guide%20Suggestion" class="font-semibold text-brand-600 hover:underline">contact@buildmetric.org</a> with the subject "Guide Suggestion". A working scenario from your site is the fastest way to get it prioritised.
+          </p>
+        </div>
+      </details>
+
+      <!-- FAQ 6 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">06</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">Are the guides free to read?</span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14" /></svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            <strong class="text-ink-900">Yes.</strong> Every guide and article on BuildMetric is completely free to read. There is no paywall, no forced sign-up, and no gated content. The site is funded through transparent display advertising.
+          </p>
+        </div>
+      </details>
+
+      <!-- FAQ 7 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">07</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">Who exactly reviews the technical guides?</span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14" /></svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            Our reviewer group consists of quantity surveyors, structural engineers, and licensed roofing and framing contractors with field experience in the US, UK, and Australian construction industries. Depending on the topic, the article is routed to the relevant specialist.
+          </p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Continue Prompt -->
+    <div class="mt-10 rounded-2xl border border-brand-200 bg-brand-50 p-5 text-center sm:p-6">
+      <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-brand-700">Still have a question?</p>
+      <p class="mt-2 text-sm leading-relaxed text-slate-700">
+        Email <a href="mailto:contact@buildmetric.org" class="font-semibold text-brand-700 underline underline-offset-2 hover:text-brand-800">contact@buildmetric.org</a> — every message is read by a real person, and we reply within two business days.
+      </p>
+    </div>
+  </div>
+</section>
+
+   <!-- ============================================================
+       PHASE 9/10 — TRUST/AUTHOR BOX + CLOSING MAIN
+       ============================================================ -->
+
+  <!-- Trust / Author Box -->
+  <section id="author-box" class="border-t border-slate-200 bg-white py-16 sm:py-20">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+        
+        <!-- Header Strip -->
+        <div class="border-b border-slate-200 bg-gradient-to-br from-ink-900 to-ink-800 px-6 py-4 sm:px-8">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center gap-2.5">
+              <span class="grid h-7 w-7 place-items-center rounded-md bg-brand-500 text-white">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              </span>
+              <p class="font-display text-[11px] font-bold uppercase tracking-[0.16em] text-brand-300">About The Guides</p>
+            </div>
+            <p class="font-mono text-[10px] font-bold uppercase tracking-[0.14em] text-slate-400">Independent · Since 2023</p>
+          </div>
+        </div>
+
+        <!-- Body -->
+        <div class="px-6 py-6 sm:px-8 sm:py-8">
+          <div class="grid gap-8 md:grid-cols-12">
+            
+            <!-- Left: Org Details -->
+            <div class="md:col-span-7">
+              <div class="flex items-start gap-4">
+                <span class="grid h-14 w-14 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-glow">
+                  <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                </span>
+                <div class="min-w-0">
+                  <h3 class="font-display text-xl font-extrabold tracking-tight text-ink-900 sm:text-2xl">BuildMetric Editorial Team</h3>
+                  <p class="mt-0.5 text-sm font-semibold text-brand-700">Technical Writing &amp; Code Review</p>
+                  <p class="mt-1 text-[11px] font-medium uppercase tracking-[0.14em] text-slate-500">Surveyors · Engineers · Licensed Contractors</p>
+                </div>
+              </div>
+
+              <p class="mt-5 text-[14.5px] leading-relaxed text-slate-600">
+                The BuildMetric library is built by people who have actually worked on site. Our editorial team consists of quantity surveyors, structural engineers, and licensed contractors who translate complex engineering and building codes into plain-English guides.
+              </p>
+              <p class="mt-3 text-[14.5px] leading-relaxed text-slate-600">
+                We do not use AI to generate technical content. Every article is written by a human, reviewed by a practising professional, and updated when the codes change.
+              </p>
+
+              <ul class="mt-5 space-y-2.5">
+                <li class="flex items-start gap-2.5 text-[13.5px] text-slate-700">
+                  <svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5" /></svg>
+                  <span><strong class="text-ink-900">Human-written.</strong> No AI-generated fluff. Real world experience.</span>
+                </li>
+                <li class="flex items-start gap-2.5 text-[13.5px] text-slate-700">
+                  <svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5" /></svg>
+                  <span><strong class="text-ink-900">Code-aware.</strong> References IRC, BS, and AS standards where applicable.</span>
+                </li>
+                <li class="flex items-start gap-2.5 text-[13.5px] text-slate-700">
+                  <svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5" /></svg>
+                  <span><strong class="text-ink-900">Open to corrections.</strong> Spotted a mistake? We log and publish the fix.</span>
+                </li>
+              </ul>
+
+              <div class="mt-6 flex flex-wrap gap-2">
+                <a href="mailto:contact@buildmetric.org" class="inline-flex items-center gap-1.5 rounded-lg bg-ink-900 px-3.5 py-2 text-xs font-bold text-white transition-colors hover:bg-ink-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2">
+                  <svg class="h-3.5 w-3.5 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" /><path d="M4 7l8 6 8-6" /></svg>
+                  contact@buildmetric.org
+                </a>
+                <a href="/about.html" class="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3.5 py-2 text-xs font-bold text-slate-700 transition-colors hover:border-brand-300 hover:text-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2">
+                  Meet the Team
+                  <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right: Meta & Links -->
+            <div class="md:col-span-5">
+              <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 sm:p-5">
+                <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">This Library</p>
+                <dl class="mt-3 space-y-3">
+                  <div class="flex items-start justify-between gap-3 border-b border-slate-200 pb-3">
+                    <dt class="text-[11px] font-semibold uppercase tracking-wide text-slate-500">Content Type</dt>
+                    <dd class="text-right text-xs font-bold text-ink-900">Technical Guides</dd>
+                  </div>
+                  <div class="flex items-start justify-between gap-3 border-b border-slate-200 pb-3">
+                    <dt class="text-[11px] font-semibold uppercase tracking-wide text-slate-500">Reviewed By</dt>
+                    <dd class="text-right text-xs font-bold text-ink-900">Practising Professionals</dd>
+                  </div>
+                  <div class="flex items-start justify-between gap-3 border-b border-slate-200 pb-3">
+                    <dt class="text-[11px] font-semibold uppercase tracking-wide text-slate-500">Regions</dt>
+                    <dd class="text-right text-xs font-bold text-ink-900">US · UK · AU</dd>
+                  </div>
+                  <div class="flex items-start justify-between gap-3">
+                    <dt class="text-[11px] font-semibold uppercase tracking-wide text-slate-500">Cost</dt>
+                    <dd class="text-right text-xs font-bold text-ink-900">Free Forever</dd>
+                  </div>
+                </dl>
+              </div>
+
+              <div class="mt-3 rounded-xl border border-slate-200 bg-white p-4">
+                <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">Editorial Policy</p>
+                <p class="mt-1.5 text-[11.5px] leading-relaxed text-slate-600">
+                  No paid reviews, no sponsored rankings, no AI-generated fluff. Full details in our <a href="/about.html" class="font-semibold text-brand-700 hover:underline">About</a> and <a href="/disclaimer.html" class="font-semibold text-brand-700 hover:underline">Disclaimer</a> pages.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+  
+     <!-- ============================================================
+       PHASE 10/10 — FINAL SCRIPTS + PREMIUM FOOTER + CLOSING TAGS
+       ============================================================ -->
+
+  <!-- ============================================================
+       FINAL JAVASCRIPT
+       ============================================================ -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ============================================================
+         1. MOBILE MENU TOGGLE
+         ============================================================ */
+      (function initMobileMenu() {
+        var toggle = document.getElementById('navToggle');
+        var menu = document.getElementById('mobileMenu');
+        var iconOpen = document.getElementById('navIconOpen');
+        var iconClose = document.getElementById('navIconClose');
+        if (!toggle || !menu) return;
+
+        toggle.addEventListener('click', function () {
+          var isOpen = !menu.classList.contains('hidden');
+          menu.classList.toggle('hidden', isOpen);
+          iconOpen.classList.toggle('hidden', !isOpen);
+          iconClose.classList.toggle('hidden', isOpen);
+          toggle.setAttribute('aria-expanded', String(!isOpen));
+        });
+
+        menu.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            menu.classList.add('hidden');
+            iconOpen.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+            menu.classList.add('hidden');
+            iconOpen.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.focus();
+          }
+        });
+      })();
+
+      /* ============================================================
+         2. AUTO-EXPAND FIRST FAQ (If URL ends with #faqs)
+         ============================================================ */
+      (function initFaqAutoExpand() {
+        if (window.location.hash === '#faqs') {
+          var first = document.querySelector('#faqs details');
+          if (first) first.setAttribute('open', '');
+        }
+      })();
+
+      /* ============================================================
+         3. REVEAL-ON-SCROLL (Subtle entrance for bento tiles)
+         ============================================================ */
+      (function initReveal() {
+        if (!('IntersectionObserver' in window)) return;
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        var tiles = document.querySelectorAll('.bento-tile');
+        if (!tiles.length) return;
+
+        tiles.forEach(function (el) {
+          el.style.opacity = '0';
+          el.style.transform = 'translateY(12px)';
+          el.style.transition = 'opacity .5s ease, transform .5s ease';
+        });
+
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateY(0)';
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { rootMargin: '0px 0px -40px 0px', threshold: 0.05 });
+
+        tiles.forEach(function (el) { observer.observe(el); });
+      })();
+
+      /* ============================================================
+         4. NEWSLETTER FORM HANDLING (Mockup)
+         ============================================================ */
+      (function initNewsletter() {
+        var form = document.getElementById('newsletterForm');
+        var msg = document.getElementById('newsletterMsg');
+        if (!form || !msg) return;
+
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var email = document.getElementById('newsletter-email').value;
+          if (!email) return;
+
+          // Simulate API call
+          msg.classList.remove('hidden');
+          msg.textContent = 'Thanks! Please check your inbox to confirm your subscription.';
+          form.reset();
+          setTimeout(function() { msg.classList.add('hidden'); }, 5000);
+        });
+      })();
+
+      /* ============================================================
+         5. COOKIE SETTINGS BUTTON (Footer CMP Integration)
+         ============================================================ */
+      (function initCookieSettings() {
+        var btn = document.getElementById('footerCookieSettings');
+        if (!btn) return;
+
+        btn.addEventListener('click', function () {
+          if (window.myCMP && typeof window.myCMP.open === 'function') {
+            window.myCMP.open();
+          } else if (window.Cookiebot && window.Cookiebot.dialog) {
+            window.Cookiebot.dialog.show();
+          } else {
+            alert('Cookie settings would open here. Connect this button to your consent manager.');
+          }
+        });
+      })();
+
+    })();
+  </script>
+
+  <!-- Year auto-fill for footer -->
+  <script>
+    (function () {
+      var el = document.getElementById('yearNow');
+      if (el) el.textContent = new Date().getFullYear();
+    })();
+  </script>
+
+  <!-- ============================================================
+       PREMIUM FOOTER
+       ============================================================ -->
+  <footer class="relative overflow-hidden border-t border-ink-800 bg-ink-950 text-slate-400">
+
+    <!-- Top Gradient Border Line -->
+    <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-500/60 to-transparent" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -right-32 -top-32 h-72 w-72 rounded-full bg-brand-500/10 blur-3xl" aria-hidden="true"></div>
+
+    <div class="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
+
+      <!-- Top Grid -->
+      <div class="grid gap-10 md:grid-cols-12 md:gap-8">
+
+        <!-- Column 1: Brand & Contact -->
+        <div class="md:col-span-4">
+          <a href="/" class="group flex items-center gap-2.5" aria-label="BuildMetric home">
+            <span class="grid h-10 w-10 place-items-center rounded-xl bg-white/5 ring-1 ring-white/10 transition-transform duration-300 group-hover:scale-105">
+              <svg viewBox="0 0 100 100" class="h-6 w-6" aria-hidden="true">
+                <path d="M20 70 L50 24 L80 70" fill="none" stroke="#0ea5e9" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M38 70 L50 52 L62 70" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.75" />
+              </svg>
+            </span>
+            <span class="leading-tight">
+              <span class="block font-display text-lg font-extrabold tracking-tight text-white">
+                Build<span class="text-gradient">Metric</span>
+              </span>
+              <span class="block text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+                Engineering Calculators
+              </span>
+            </span>
+          </a>
+
+          <p class="mt-5 max-w-sm text-[13.5px] leading-relaxed text-slate-400">
+            Independent construction calculators, estimating tools and technical reference guides for building professionals across the <span class="text-white">USA</span>, <span class="text-white">UK</span> and <span class="text-white">Australia</span>. Engineered for accuracy. Published for transparency.
+          </p>
+
+          <div class="mt-6 space-y-2">
+            <a href="mailto:contact@buildmetric.org" class="group flex items-center gap-2.5 text-sm font-semibold text-slate-300 transition-colors hover:text-brand-300">
+              <span class="grid h-8 w-8 place-items-center rounded-lg bg-white/5 ring-1 ring-white/10 transition-colors group-hover:bg-brand-500/20 group-hover:ring-brand-400/40">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" /><path d="M4 7l8 6 8-6" /></svg>
+              </span>
+              contact@buildmetric.org
+            </a>
+            <a href="mailto:ads@buildmetric.org" class="group flex items-center gap-2.5 text-sm font-semibold text-slate-300 transition-colors hover:text-brand-300">
+              <span class="grid h-8 w-8 place-items-center rounded-lg bg-white/5 ring-1 ring-white/10 transition-colors group-hover:bg-brand-500/20 group-hover:ring-brand-400/40">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8-8-2z" /></svg>
+              </span>
+              ads@buildmetric.org
+            </a>
+          </div>
+
+          <button type="button" id="footerCookieSettings" class="mt-4 inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-[11px] font-bold text-slate-300 transition-colors hover:border-brand-400/40 hover:bg-brand-500/10 hover:text-brand-300">
+            <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M8.5 8.5h.01M15.5 15.5h.01M12 12h.01M8.5 15.5h.01M15.5 8.5h.01" /></svg>
+            Cookie Settings
+          </button>
+        </div>
+
+        <!-- Column 2: Categories -->
+        <div class="md:col-span-2">
+          <h3 class="font-display text-[11px] font-bold uppercase tracking-[0.16em] text-white">Categories</h3>
+          <ul class="mt-4 space-y-2.5 text-[13.5px]">
+            <li><a href="/roofing.html" class="transition-colors hover:text-brand-300">Roofing</a></li>
+            <li><a href="/concrete.html" class="transition-colors hover:text-brand-300">Concrete</a></li>
+            <li><a href="/framing.html" class="transition-colors hover:text-brand-300">Framing</a></li>
+            <li><a href="/masonry.html" class="transition-colors hover:text-brand-300">Masonry</a></li>
+            <li><a href="/drywall.html" class="transition-colors hover:text-brand-300">Drywall</a></li>
+            <li><a href="/paint.html" class="transition-colors hover:text-brand-300">Paint</a></li>
+            <li><a href="/calculators.html" class="font-semibold text-brand-400 transition-colors hover:text-brand-300">All Categories →</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Popular Tools -->
+        <div class="md:col-span-2">
+          <h3 class="font-display text-[11px] font-bold uppercase tracking-[0.16em] text-white">Popular Tools</h3>
+          <ul class="mt-4 space-y-2.5 text-[13.5px]">
+            <li><a href="/roof-pitch-calculator.html" class="transition-colors hover:text-brand-300">Roof Pitch</a></li>
+            <li><a href="/concrete-calculator.html" class="transition-colors hover:text-brand-300">Concrete Volume</a></li>
+            <li><a href="/stud-count-calculator.html" class="transition-colors hover:text-brand-300">Stud Count</a></li>
+            <li><a href="/paint-coverage-calculator.html" class="transition-colors hover:text-brand-300">Paint Coverage</a></li>
+            <li><a href="/calculators.html" class="font-semibold text-brand-400 transition-colors hover:text-brand-300">All Tools →</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Company & Legal -->
+        <div class="md:col-span-4">
+          <div class="grid grid-cols-2 gap-6">
+            <div>
+              <h3 class="font-display text-[11px] font-bold uppercase tracking-[0.16em] text-white">Company</h3>
+              <ul class="mt-4 space-y-2.5 text-[13.5px]">
+                <li><a href="/about.html" class="transition-colors hover:text-brand-300">About</a></li>
+                <li><a href="/guides.html" class="font-semibold text-brand-400 transition-colors hover:text-brand-300" aria-current="page">Guides</a></li>
+                <li><a href="/estimating.html" class="transition-colors hover:text-brand-300">Estimating</a></li>
+                <li><a href="/contact.html" class="transition-colors hover:text-brand-300">Contact</a></li>
+                <li><a href="/sitemap.xml" class="transition-colors hover:text-brand-300">Sitemap</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-display text-[11px] font-bold uppercase tracking-[0.16em] text-white">Legal</h3>
+              <ul class="mt-4 space-y-2.5 text-[13.5px]">
+                <li><a href="/privacy.html" class="transition-colors hover:text-brand-300">Privacy Policy</a></li>
+                <li><a href="/terms.html" class="transition-colors hover:text-brand-300">Terms of Service</a></li>
+                <li><a href="/disclaimer.html" class="transition-colors hover:text-brand-300">Disclaimer</a></li>
+                <li><a href="/cookie-policy.html" class="transition-colors hover:text-brand-300">Cookie Policy</a></li>
+                <li><a href="/contact.html" class="transition-colors hover:text-brand-300">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Regional Notice Box -->
+          <div class="mt-5 rounded-xl border border-white/10 bg-white/5 p-3.5">
+            <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-300">Regional Notice</p>
+            <p class="mt-1.5 text-[11.5px] leading-relaxed text-slate-400">
+              BuildMetric content is published in English and reviewed against US, UK and Australian codes. Always verify against your local jurisdiction's current edition.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ad Space (Footer Leaderboard) -->
+      <div class="mt-12 flex min-h-[90px] items-center justify-center rounded-xl border-2 border-dashed border-white/10 bg-white/[0.02] px-4 py-6 text-center">
+        <span class="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Ad Space — Footer Leaderboard</span>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="mt-10 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 md:flex-row md:items-center">
+        <p class="text-[12px] text-slate-500">
+          &copy; <span id="yearNow">2026</span> BuildMetric. All rights reserved. Operated from <span class="text-slate-400">buildmetric.org</span>.
+        </p>
+        <p class="text-[11px] text-slate-500">
+          Built for professionals. General information only — see our <a href="/disclaimer.html" class="font-semibold text-brand-400 underline decoration-brand-500/40 underline-offset-2 hover:text-brand-300">Disclaimer</a>.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>                                                                                                                                                                                                                                                                     </section>
