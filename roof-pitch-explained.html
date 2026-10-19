@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- ============================================================
+       PHASE 1/10 — SEO HEAD & ARTICLE SCHEMA
+       File: guides/roof-pitch-explained.html
+       Brand: BuildMetric | Domain: buildmetric.org
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO Meta -->
+  <title>Roof Pitch Explained: Why 6:12 and 26.57° Are the Same | BuildMetric</title>
+  <meta name="description" content="Confused by rise-over-run vs degrees? Learn exactly how to convert roof pitch to degrees, calculate slope percentage, and avoid costly material errors. Includes IRC & BS 5534 code references." />
+  <meta name="keywords" content="roof pitch to degrees, convert 6/12 pitch, rise over run calculator, roof slope percentage, roof pitch explained" />
+  <meta name="author" content="BuildMetric Engineering Team" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="theme-color" content="#0ea5e9" />
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://buildmetric.org/guides/roof-pitch-explained.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="BuildMetric" />
+  <meta property="og:title" content="Roof Pitch Explained: Why 6:12 and 26.57° Are the Same" />
+  <meta property="og:description" content="Learn exactly how to convert roof pitch to degrees, calculate slope percentage, and avoid costly material errors." />
+  <meta property="og:url" content="https://buildmetric.org/guides/roof-pitch-explained.html" />
+  <meta property="og:image" content="https://buildmetric.org/assets/og/roof-pitch-guide.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Roof Pitch Explained | BuildMetric" />
+  <meta name="twitter:description" content="The definitive guide to converting roof pitch to degrees and slope percentage." />
+  <meta name="twitter:image" content="https://buildmetric.org/assets/og/roof-pitch-guide.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230f172a'/%3E%3Cpath d='M22 68 L50 26 L78 68' stroke='%230ea5e9' stroke-width='9' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+
+  <!-- Fonts & Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e' },
+            ink: { 700: '#334155', 800: '#1e293b', 900: '#0f172a', 950: '#080f1e' }
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: {
+            glow: '0 0 0 1px rgba(14,165,233,0.16), 0 18px 45px -18px rgba(14,165,233,0.55)',
+            card: '0 1px 2px rgba(15,23,42,0.04), 0 12px 32px -12px rgba(15,23,42,0.16)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+    .text-gradient { background: linear-gradient(100deg, #0ea5e9 0%, #38bdf8 40%, #0284c7 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .hero-mesh { background: radial-gradient(900px 420px at 12% -10%, rgba(14,165,233,0.22), transparent 62%), radial-gradient(700px 380px at 92% 0%, rgba(56,189,248,0.16), transparent 60%), linear-gradient(180deg, #0f172a 0%, #0b1222 62%, #0f172a 100%); }
+    
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; left: 0; bottom: -6px; height: 2px; width: 0; background: linear-gradient(90deg, #0ea5e9, #38bdf8); border-radius: 2px; transition: width .3s ease; }
+    .nav-link:hover::after { width: 100%; }
+    
+    .article-prose h2 { scroll-margin-top: 6rem; }
+    .article-prose h3 { scroll-margin-top: 6rem; }
+    .toc-link.is-active { color: #0284c7; font-weight: 700; background-color: #f0f9ff; }
+  </style>
+
+  <!-- ================= JSON-LD Schema (Article + Breadcrumb) ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://buildmetric.org/guides/roof-pitch-explained.html#article",
+        "isPartOf": { "@id": "https://buildmetric.org/guides/roof-pitch-explained.html#webpage" },
+        "author": {
+          "@type": "Organization",
+          "name": "BuildMetric Engineering Team",
+          "url": "https://buildmetric.org/about.html"
+        },
+        "headline": "Roof Pitch Explained: Why 6:12 and 26.57° Are the Same Roof",
+        "description": "Learn exactly how to convert roof pitch to degrees, calculate slope percentage, and avoid costly material errors.",
+        "image": "https://buildmetric.org/assets/og/roof-pitch-guide.png",
+        "datePublished": "2026-01-15",
+        "dateModified": "2026-10-19",
+        "publisher": { "@id": "https://buildmetric.org/#organization" },
+        "keywords": "roof pitch, roof slope, rise over run, convert pitch to degrees"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://buildmetric.org/guides/roof-pitch-explained.html#webpage",
+        "url": "https://buildmetric.org/guides/roof-pitch-explained.html",
+        "name": "Roof Pitch Explained: Why 6:12 and 26.57° Are the Same",
+        "isPartOf": { "@id": "https://buildmetric.org/#website" },
+        "breadcrumb": { "@id": "https://buildmetric.org/guides/roof-pitch-explained.html#breadcrumb" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://buildmetric.org/guides/roof-pitch-explained.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://buildmetric.org/" },
+          { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://buildmetric.org/guides.html" },
+          { "@type": "ListItem", "position": 3, "name": "Roof Pitch Explained", "item": "https://buildmetric.org/guides/roof-pitch-explained.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+  <!-- ============================================================
+     PHASE 2/10 — BODY OPEN + SKIP LINK + PREMIUM NAVBAR
+     ============================================================ -->
+
+<body class="bg-slate-50 text-ink-900 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- Skip link (Accessibility) -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-brand-500 focus:px-4 focus:py-2 focus:text-white focus:font-semibold">
+    Skip to main content
+  </a>
+
+  <!-- ============================================================
+       PREMIUM NAVBAR
+       ============================================================ -->
+  <header id="site-header" class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-xl supports-[backdrop-filter]:bg-white/70">
+    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+
+      <!-- Brand Logo -->
+      <a href="/" class="group flex items-center gap-2.5" aria-label="BuildMetric home">
+        <span class="relative grid h-10 w-10 place-items-center rounded-xl bg-ink-900 shadow-card ring-1 ring-white/10 transition-transform duration-300 group-hover:scale-105">
+          <svg viewBox="0 0 100 100" class="h-6 w-6" aria-hidden="true">
+            <path d="M20 70 L50 24 L80 70" fill="none" stroke="#0ea5e9" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M38 70 L50 52 L62 70" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.75" />
+          </svg>
+        </span>
+        <span class="leading-tight">
+          <span class="block font-display text-lg font-extrabold tracking-tight text-ink-900">
+            Build<span class="text-gradient">Metric</span>
+          </span>
+          <span class="hidden text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500 sm:block">
+            Engineering Calculators
+          </span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden items-center gap-7 lg:flex" aria-label="Primary">
+        <a href="/" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Home</a>
+        <a href="/calculators.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Calculators</a>
+        <a href="/roofing.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Roofing</a>
+        <a href="/estimating.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Estimating</a>
+        <a href="/guides.html" class="nav-link text-sm font-semibold text-brand-600" aria-current="page">Guides</a>
+        <a href="/about.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">About</a>
+      </nav>
+
+      <!-- Right Actions -->
+      <div class="flex items-center gap-2.5">
+        <a href="/contact.html" class="hidden rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100 hover:text-ink-900 md:inline-flex">
+          Contact
+        </a>
+        
+        <!-- CTA Button -->
+        <a href="/calculators.html" class="cta-shine inline-flex items-center gap-2 rounded-xl bg-ink-900 px-4 py-2.5 text-sm font-bold text-white shadow-card transition-all duration-300 hover:bg-ink-800 hover:shadow-glow focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2">
+          <svg class="h-4 w-4 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <rect x="4" y="2" width="16" height="20" rx="2" />
+            <path d="M8 6h8M8 11h2M12 11h2M16 11h2M8 15h2M12 15h2M16 15h2" />
+          </svg>
+          <span class="hidden sm:inline">Open Tools</span>
+          <span class="sm:hidden">Tools</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="navToggle" type="button"
+                class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-ink-900 transition-colors hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 lg:hidden"
+                aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg id="navIconOpen" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <svg id="navIconClose" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white lg:hidden">
+      <nav class="mx-auto max-w-7xl space-y-1 px-4 py-4 sm:px-6" aria-label="Mobile">
+        <a href="/" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Home</a>
+        <a href="/calculators.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Calculators</a>
+        <a href="/roofing.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Roofing</a>
+        <a href="/estimating.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Estimating</a>
+        <a href="/guides.html" class="block rounded-lg bg-brand-50 px-3 py-2.5 text-sm font-semibold text-brand-700" aria-current="page">Guides</a>
+        <a href="/about.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">About</a>
+        <a href="/contact.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Contact</a>
+
+        <!-- Legal Links (Mobile only) -->
+        <div class="mt-2 border-t border-slate-200 pt-2">
+          <p class="px-3 pb-1 pt-1 text-[10px] font-bold uppercase tracking-[0.14em] text-slate-400">Legal</p>
+          <a href="/privacy.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Privacy Policy</a>
+          <a href="/terms.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Terms of Service</a>
+          <a href="/disclaimer.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Disclaimer</a>
+          <a href="/cookie-policy.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Cookie Policy</a>
+        </div>
+
+        <a href="mailto:contact@buildmetric.org" class="mt-3 block rounded-lg bg-ink-900 px-3 py-2.5 text-center text-sm font-bold text-white">contact@buildmetric.org</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================
+     PHASE 3/10 — MAIN OPEN + ARTICLE HERO SECTION
+     ============================================================ -->
+
+  <main id="main-content">
+
+    <!-- Article Hero Section -->
+    <section class="relative overflow-hidden bg-ink-950 pb-16 pt-12 sm:pb-24 sm:pt-16 lg:pb-32 lg:pt-20">
+      <!-- Decorative Background -->
+      <div class="pointer-events-none absolute inset-0 bg-grid-slate [background-size:46px_46px] opacity-[0.15]" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand-500/10 blur-3xl" aria-hidden="true"></div>
+
+      <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="mb-8 flex justify-center">
+          <ol class="flex flex-wrap items-center gap-2 text-xs font-semibold text-slate-400">
+            <li><a href="/" class="transition-colors hover:text-brand-300">Home</a></li>
+            <li aria-hidden="true" class="text-slate-600">/</li>
+            <li><a href="/guides.html" class="transition-colors hover:text-brand-300">Guides</a></li>
+            <li aria-hidden="true" class="text-slate-600">/</li>
+            <li class="text-brand-300" aria-current="page">Roof Pitch Explained</li>
+          </ol>
+        </nav>
+
+        <!-- Article Meta (Category & Read Time) -->
+        <div class="flex flex-wrap items-center justify-center gap-3 mb-6">
+          <span class="rounded-md bg-brand-500/20 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-brand-300 ring-1 ring-brand-500/30">
+            Roofing
+          </span>
+          <span class="text-slate-600">·</span>
+          <span class="flex items-center gap-1 text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+            <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            12 min read
+          </span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="text-center font-display text-3xl font-extrabold leading-[1.15] tracking-tight text-white sm:text-4xl lg:text-5xl">
+          Roof Pitch Explained: Why 6:12 and 26.57° Are the Same Roof
+        </h1>
+
+        <!-- Excerpt -->
+        <p class="mx-auto mt-6 max-w-2xl text-center text-base leading-relaxed text-slate-400 sm:text-lg">
+          Confused by rise-over-run versus degrees? Learn exactly how to convert roof pitch, calculate slope percentage, and avoid the costly material errors that happen on site every day.
+        </p>
+
+        <!-- Author / Trust Box -->
+        <div class="mx-auto mt-10 flex max-w-lg flex-col items-center justify-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur sm:flex-row sm:p-5">
+          <div class="flex items-center gap-3 w-full sm:w-auto">
+            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-brand-500 text-white">
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </span>
+            <div class="text-left">
+              <p class="text-[13px] font-bold text-white">BuildMetric Engineering</p>
+              <p class="text-[11px] text-slate-400">Written &amp; Reviewed</p>
+            </div>
+          </div>
+          <div class="hidden h-8 w-px bg-white/10 sm:block"></div>
+          <div class="text-center sm:text-left w-full sm:w-auto">
+            <p class="text-[12px] font-medium text-slate-400">Updated <time datetime="2026-10-19">19 Oct 2026</time></p>
+            <p class="text-[11px] font-bold text-brand-300 flex items-center justify-center sm:justify-start gap-1 mt-0.5">
+              <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+              Human-Reviewed
+            </p>
+          </div>
+        </div>
+
+        <!-- Featured Graphic / Illustration -->
+        <div class="mx-auto mt-12 max-w-3xl">
+          <div class="relative aspect-[21/9] w-full overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-ink-800 to-ink-900 shadow-2xl flex items-center justify-center">
+            <!-- Grid pattern background -->
+            <div class="absolute inset-0 bg-grid-slate [background-size:24px_24px] opacity-20" aria-hidden="true"></div>
+            
+            <!-- SVG Diagram (Rafter Triangle) -->
+            <svg viewBox="0 0 420 180" class="relative w-4/5 max-w-md" aria-hidden="true">
+              <defs>
+                <linearGradient id="heroRoofFill" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.3" />
+                  <stop offset="100%" stop-color="#0284c7" stop-opacity="0.05" />
+                </linearGradient>
+              </defs>
+              <polygon points="60,160 360,160 360,40" fill="url(#heroRoofFill)" stroke="#38bdf8" stroke-width="3" stroke-linejoin="round" />
+              <!-- Right angle mark -->
+              <path d="M340 160 L340 140 L360 140" fill="none" stroke="#7dd3fc" stroke-width="2" opacity="0.8" />
+              <!-- Angle arc -->
+              <path d="M60,160 A 50,50 0 0 0 90,125" fill="none" stroke="#0ea5e9" stroke-width="3" />
+              <text x="90" y="150" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">θ</text>
+              <!-- Labels -->
+              <text x="350" y="105" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="14" font-weight="700" text-anchor="end">Rise</text>
+              <text x="210" y="180" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Run</text>
+              <text x="200" y="90" fill="#38bdf8" font-family="Inter, sans-serif" font-size="14" font-weight="700" text-anchor="middle" transform="rotate(-28 200 90)">Rafter</text>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    
