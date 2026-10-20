@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- ============================================================
+       PHASE 1/10 — SEO HEAD & SOFTWARE APPLICATION SCHEMA
+       File: tools/roof-pitch-calculator.html
+       Brand: BuildMetric | Domain: buildmetric.org
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO Meta -->
+  <title>Roof Pitch Calculator | Convert Rise/Run to Degrees, Slope &amp; Multiplier</title>
+  <meta name="description" content="Free professional roof pitch calculator. Convert rise-over-run to degrees, slope percentage and rafter multiplier instantly. Built for contractors in the USA, UK and Australia." />
+  <meta name="keywords" content="roof pitch calculator, convert roof pitch to degrees, rise over run calculator, roof slope percentage, rafter multiplier, roof angle calculator" />
+  <meta name="author" content="BuildMetric Engineering Team" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="theme-color" content="#0ea5e9" />
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://buildmetric.org/tools/roof-pitch-calculator.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BuildMetric" />
+  <meta property="og:title" content="Roof Pitch Calculator | Convert Rise/Run to Degrees &amp; Slope" />
+  <meta property="og:description" content="Instantly convert roof pitch to degrees, slope percentage and rafter multiplier. Engineer-reviewed and free to use." />
+  <meta property="og:url" content="https://buildmetric.org/tools/roof-pitch-calculator.html" />
+  <meta property="og:image" content="https://buildmetric.org/assets/og/roof-pitch-tool.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Roof Pitch Calculator | BuildMetric" />
+  <meta name="twitter:description" content="Convert rise-over-run to degrees, slope percentage and rafter multiplier instantly." />
+  <meta name="twitter:image" content="https://buildmetric.org/assets/og/roof-pitch-tool.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230f172a'/%3E%3Cpath d='M22 68 L50 26 L78 68' stroke='%230ea5e9' stroke-width='9' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+
+  <!-- Fonts & Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e' },
+            ink: { 700: '#334155', 800: '#1e293b', 900: '#0f172a', 950: '#080f1e' }
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: {
+            glow: '0 0 0 1px rgba(14,165,233,0.16), 0 18px 45px -18px rgba(14,165,233,0.55)',
+            card: '0 1px 2px rgba(15,23,42,0.04), 0 12px 32px -12px rgba(15,23,42,0.16)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+    .text-gradient { background: linear-gradient(100deg, #0ea5e9 0%, #38bdf8 40%, #0284c7 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; left: 0; bottom: -6px; height: 2px; width: 0; background: linear-gradient(90deg, #0ea5e9, #38bdf8); border-radius: 2px; transition: width .3s ease; }
+    .nav-link:hover::after { width: 100%; }
+    
+    .input-focus:focus { border-color: #0ea5e9; box-shadow: 0 0 0 4px rgba(14,165,233,0.15); outline: none; }
+  </style>
+
+  <!-- ================= JSON-LD Schema (SoftwareApplication + Breadcrumb) ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://buildmetric.org/tools/roof-pitch-calculator.html#app",
+        "name": "BuildMetric Roof Pitch Calculator",
+        "url": "https://buildmetric.org/tools/roof-pitch-calculator.html",
+        "description": "Professional roof pitch calculator that converts rise-over-run into roof angle in degrees, slope percentage and rafter length multiplier.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any (Web-based)",
+        "browserRequirements": "Requires JavaScript",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "publisher": { "@id": "https://buildmetric.org/#organization" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://buildmetric.org/tools/roof-pitch-calculator.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://buildmetric.org/" },
+          { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://buildmetric.org/calculators.html" },
+          { "@type": "ListItem", "position": 3, "name": "Roofing", "item": "https://buildmetric.org/roofing.html" },
+          { "@type": "ListItem", "position": 4, "name": "Roof Pitch Calculator", "item": "https://buildmetric.org/tools/roof-pitch-calculator.html" }
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://buildmetric.org/#organization",
+        "name": "BuildMetric",
+        "url": "https://buildmetric.org"
+      }
+    ]
+  }
+  </script>
+</head>
+
+  <!-- ============================================================
+     PHASE 2/10 — BODY OPEN + SKIP LINK + PREMIUM NAVBAR
+     ============================================================ -->
+
+<body class="bg-slate-50 text-ink-900 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- Skip link (Accessibility) -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-brand-500 focus:px-4 focus:py-2 focus:text-white focus:font-semibold">
+    Skip to main content
+  </a>
+
+  <!-- ============================================================
+       PREMIUM NAVBAR
+       ============================================================ -->
+  <header id="site-header" class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-xl supports-[backdrop-filter]:bg-white/70">
+    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+
+      <!-- Brand Logo -->
+      <a href="/" class="group flex items-center gap-2.5" aria-label="BuildMetric home">
+        <span class="relative grid h-10 w-10 place-items-center rounded-xl bg-ink-900 shadow-card ring-1 ring-white/10 transition-transform duration-300 group-hover:scale-105">
+          <svg viewBox="0 0 100 100" class="h-6 w-6" aria-hidden="true">
+            <path d="M20 70 L50 24 L80 70" fill="none" stroke="#0ea5e9" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M38 70 L50 52 L62 70" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.75" />
+          </svg>
+        </span>
+        <span class="leading-tight">
+          <span class="block font-display text-lg font-extrabold tracking-tight text-ink-900">
+            Build<span class="text-gradient">Metric</span>
+          </span>
+          <span class="hidden text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500 sm:block">
+            Engineering Calculators
+          </span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden items-center gap-7 lg:flex" aria-label="Primary">
+        <a href="/" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Home</a>
+        <a href="/calculators.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Calculators</a>
+        <a href="/roofing.html" class="nav-link text-sm font-semibold text-brand-600" aria-current="page">Roofing</a>
+        <a href="/estimating.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Estimating</a>
+        <a href="/guides.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Guides</a>
+        <a href="/about.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">About</a>
+      </nav>
+
+      <!-- Right Actions -->
+      <div class="flex items-center gap-2.5">
+        <a href="/contact.html" class="hidden rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100 hover:text-ink-900 md:inline-flex">
+          Contact
+        </a>
+        
+        <!-- CTA Button -->
+        <a href="/calculators.html" class="cta-shine inline-flex items-center gap-2 rounded-xl bg-ink-900 px-4 py-2.5 text-sm font-bold text-white shadow-card transition-all duration-300 hover:bg-ink-800 hover:shadow-glow focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2">
+          <svg class="h-4 w-4 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <rect x="4" y="2" width="16" height="20" rx="2" />
+            <path d="M8 6h8M8 11h2M12 11h2M16 11h2M8 15h2M12 15h2M16 15h2" />
+          </svg>
+          <span class="hidden sm:inline">Open Tools</span>
+          <span class="sm:hidden">Tools</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="navToggle" type="button"
+                class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-ink-900 transition-colors hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 lg:hidden"
+                aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg id="navIconOpen" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <svg id="navIconClose" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white lg:hidden">
+      <nav class="mx-auto max-w-7xl space-y-1 px-4 py-4 sm:px-6" aria-label="Mobile">
+        <a href="/" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Home</a>
+        <a href="/calculators.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Calculators</a>
+        <a href="/roofing.html" class="block rounded-lg bg-brand-50 px-3 py-2.5 text-sm font-semibold text-brand-700" aria-current="page">Roofing</a>
+        <a href="/estimating.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Estimating</a>
+        <a href="/guides.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Guides</a>
+        <a href="/about.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">About</a>
+        <a href="/contact.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Contact</a>
+
+        <!-- Legal Links (Mobile only) -->
+        <div class="mt-2 border-t border-slate-200 pt-2">
+          <p class="px-3 pb-1 pt-1 text-[10px] font-bold uppercase tracking-[0.14em] text-slate-400">Legal</p>
+          <a href="/privacy.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Privacy Policy</a>
+          <a href="/terms.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Terms of Service</a>
+          <a href="/disclaimer.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Disclaimer</a>
+          <a href="/cookie-policy.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Cookie Policy</a>
+        </div>
+
+        <a href="mailto:contact@buildmetric.org" class="mt-3 block rounded-lg bg-ink-900 px-3 py-2.5 text-center text-sm font-bold text-white">contact@buildmetric.org</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================
+     PHASE 3/10 — MAIN OPEN + TOOL HERO + CALCULATOR INTERFACE
+     ============================================================ -->
+
+  <main id="main-content">
+
+    <!-- Hero Section (Dark) -->
+    <section class="relative overflow-hidden bg-ink-950 pb-32 pt-16 sm:pb-40 sm:pt-24">
+      <!-- Decorative Background -->
+      <div class="pointer-events-none absolute inset-0 bg-grid-slate [background-size:46px_46px] opacity-[0.15]" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand-500/10 blur-3xl" aria-hidden="true"></div>
+
+      <div class="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+        
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="mb-6 flex justify-center">
+          <ol class="flex flex-wrap items-center gap-2 text-xs font-semibold text-slate-400">
+            <li><a href="/" class="transition-colors hover:text-brand-300">Home</a></li>
+            <li aria-hidden="true" class="text-slate-600">/</li>
+            <li><a href="/calculators.html" class="transition-colors hover:text-brand-300">Calculators</a></li>
+            <li aria-hidden="true" class="text-slate-600">/</li>
+            <li><a href="/roofing.html" class="transition-colors hover:text-brand-300">Roofing</a></li>
+            <li aria-hidden="true" class="text-slate-600">/</li>
+            <li class="text-brand-300" aria-current="page">Roof Pitch</li>
+          </ol>
+        </nav>
+
+        <!-- Badge -->
+        <span class="inline-flex items-center gap-2 rounded-full border border-brand-400/30 bg-brand-500/10 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-300">
+          <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4" /><circle cx="12" cy="12" r="10" /></svg>
+          Engineer-Reviewed Tool
+        </span>
+
+        <!-- H1 -->
+        <h1 class="mt-5 font-display text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-[3.5rem]">
+          Roof Pitch Calculator
+        </h1>
+
+        <!-- Subtext -->
+        <p class="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+          Convert roof rise-over-run to degrees, slope percentage, and rafter multiplier instantly. Built for contractors in the US, UK, and Australia.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Calculator Interface (Overlapping the Hero) -->
+    <section class="relative z-10 mx-auto -mt-24 max-w-4xl px-4 sm:-mt-32 sm:px-6 lg:px-8">
+      
+      <div class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl">
+        
+        <div class="grid lg:grid-cols-2">
+          
+          <!-- Left Side: Inputs -->
+          <div class="p-6 sm:p-10 border-b border-slate-200 lg:border-b-0 lg:border-r">
+            <h2 class="font-display text-xl font-bold text-ink-900 mb-6">Enter Roof Dimensions</h2>
+            
+            <form id="roofPitchForm" class="space-y-6">
+              
+              <!-- Unit Toggle -->
+              <div>
+                <label class="block text-[11px] font-bold uppercase tracking-[0.14em] text-slate-500 mb-2">Measurement Unit</label>
+                <div class="flex rounded-lg bg-slate-100 p-1">
+                  <button type="button" id="unitImperialBtn" class="flex-1 rounded-md bg-white px-3 py-1.5 text-sm font-bold text-ink-900 shadow-sm transition-all">
+                    Imperial (Inches)
+                  </button>
+                  <button type="button" id="unitMetricBtn" class="flex-1 rounded-md px-3 py-1.5 text-sm font-bold text-slate-500 transition-all hover:text-ink-900">
+                    Metric (mm)
+                  </button>
+                </div>
+                <!-- Hidden input to track unit state -->
+                <input type="hidden" id="unitSystem" value="imperial">
+              </div>
+
+              <!-- Input Fields -->
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label for="riseInput" class="block text-[11px] font-bold uppercase tracking-[0.14em] text-slate-500 mb-2">Rise <span id="riseUnitLabel">(in)</span></label>
+                  <div class="relative">
+                    <input type="number" id="riseInput" step="any" min="0" placeholder="e.g. 6" required
+                           class="input-focus block w-full rounded-xl border border-slate-300 bg-slate-50 px-4 py-3 text-lg font-mono font-bold text-ink-900 placeholder-slate-400 transition-colors">
+                  </div>
+                </div>
+                <div>
+                  <label for="runInput" class="block text-[11px] font-bold uppercase tracking-[0.14em] text-slate-500 mb-2">Run <span id="runUnitLabel">(in)</span></label>
+                  <div class="relative">
+                    <input type="number" id="runInput" step="any" min="0" value="12" required
+                           class="input-focus block w-full rounded-xl border border-slate-300 bg-slate-50 px-4 py-3 text-lg font-mono font-bold text-ink-900 placeholder-slate-400 transition-colors">
+                  </div>
+                </div>
+              </div>
+              
+              <p class="text-[11px] text-slate-500 leading-relaxed">
+                Note: Standard US pitch uses a run of 12 inches. For metric, a run of 100 or 1000 is often used.
+              </p>
+
+              <!-- Calculate Button -->
+              <button type="submit" class="w-full rounded-xl bg-brand-500 px-6 py-4 text-base font-bold text-white shadow-glow transition-all hover:bg-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2">
+                Calculate Pitch
+              </button>
+
+            </form>
+          </div>
+
+          <!-- Right Side: Results (Dark Theme for Contrast) -->
+          <div class="bg-ink-900 p-6 sm:p-10 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <h2 class="font-display text-xl font-bold text-white">Results</h2>
+                <span class="rounded bg-white/10 px-2 py-1 font-mono text-[10px] font-bold text-slate-300">Live</span>
+              </div>
+
+              <!-- Primary Results Grid -->
+              <div class="grid grid-cols-2 gap-4">
+                
+                <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
+                  <p class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Pitch Ratio</p>
+                  <p id="outRatio" class="mt-1 font-mono text-2xl font-bold text-white">-- : 12</p>
+                </div>
+
+                <div class="rounded-2xl bg-brand-500/10 p-4 ring-1 ring-brand-500/30">
+                  <p class="text-[10px] font-bold uppercase tracking-wider text-brand-300">Angle</p>
+                  <p id="outAngle" class="mt-1 font-mono text-2xl font-bold text-brand-300">-- °</p>
+                </div>
+
+                <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
+                  <p class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Slope</p>
+                  <p id="outSlope" class="mt-1 font-mono text-xl font-bold text-white">-- %</p>
+                </div>
+
+                <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
+                  <p class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Rafter Multiplier</p>
+                  <p id="outMultiplier" class="mt-1 font-mono text-xl font-bold text-white">--</p>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Action Buttons (Save / Share / Copy) -->
+            <div class="mt-8 border-t border-white/10 pt-6">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-3 text-center sm:text-left">Save or Share Result</p>
+              <div class="flex gap-2">
+                
+                <!-- Copy -->
+                <button type="button" id="copyBtn" class="flex flex-1 items-center justify-center gap-2 rounded-xl bg-white/10 px-3 py-2.5 text-xs font-bold text-white transition-colors hover:bg-white/20">
+                  <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                  Copy
+                </button>
+                
+                <!-- Share -->
+                <button type="button" id="shareBtn" class="flex flex-1 items-center justify-center gap-2 rounded-xl bg-white/10 px-3 py-2.5 text-xs font-bold text-white transition-colors hover:bg-white/20">
+                  <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+                  Share
+                </button>
+                
+                <!-- Save -->
+                <button type="button" id="saveBtn" class="flex flex-1 items-center justify-center gap-2 rounded-xl bg-white/10 px-3 py-2.5 text-xs font-bold text-white transition-colors hover:bg-white/20">
+                  <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+                  Save
+                </button>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+     PHASE 4/10 — DEEP CONTENT (PART 1: UNDERSTANDING PITCH)
+     ============================================================ -->
+
+<section class="relative border-t border-slate-200 bg-white py-16 sm:py-24">
+  <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+    
+    <header class="mb-10 text-center">
+      <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-600">Technical Guide</p>
+      <h2 class="mt-2 font-display text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">
+        Understanding Roof Pitch &amp; Geometry
+      </h2>
+      <div class="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brand-500 to-brand-300"></div>
+    </header>
+
+    <article class="article-prose prose prose-slate max-w-none prose-p:text-[16px] prose-p:leading-[1.8] prose-p:text-slate-700 prose-strong:text-ink-900 prose-headings:font-display prose-headings:font-bold">
+      
+      <p class="text-lg leading-relaxed text-slate-700 font-medium">
+        Roof pitch is the most fundamental measurement on any roofing project. It dictates the materials you can use, the amount of material you must order, and how well the roof will shed water and resist wind uplift. 
+      </p>
+      <p>
+        However, communicating pitch across different regions can be confusing. In the United States, roofers speak in ratios (e.g., "6:12"). In the UK and Australia, architects and builders speak in degrees (e.g., "26.57°"). This calculator is designed to bridge that gap, providing instant conversions between all standard formats.
+      </p>
+
+      <h3 class="text-xl font-bold text-ink-900 mt-8">The Holy Trinity: Rise, Run, and Pitch</h3>
+      <p>
+        Every pitched roof is a right-angled triangle. To calculate the pitch, you need two dimensions:
+      </p>
+      <ul>
+        <li><strong>Rise:</strong> The vertical distance from the top of the wall plate to the highest point of the roof (the ridge).</li>
+        <li><strong>Run:</strong> The horizontal distance from the outside of the wall plate to the center of the ridge.</li>
+      </ul>
+      <p>
+        Once you have these two numbers, the geometry is fixed. In the US, we standardise the run to 12 inches. So, a roof that rises 6 inches over a 12-inch run has a <strong>6:12 pitch</strong>. 
+      </p>
+
+      <h3 class="text-xl font-bold text-ink-900 mt-8">The Danger of Confusing Slope % and Angle</h3>
+      <p>
+        A common and expensive mistake in roofing estimation is confusing the <strong>Slope Percentage</strong> with the <strong>Angle in Degrees</strong>, or using the Slope Percentage when you should be using the <strong>Rafter Multiplier</strong>.
+      </p>
+      <p>
+        Let's take a 6:12 pitch as an example:
+      </p>
+      <ul>
+        <li>The <strong>Angle</strong> is 26.57°. (This is the arctangent of 6/12).</li>
+        <li>The <strong>Slope Percentage</strong> is 50%. (Rise divided by Run, multiplied by 100).</li>
+        <li>The <strong>Rafter Multiplier</strong> is 1.118. (The secant of the angle).</li>
+      </ul>
+      <p>
+        If you have a 1,000 sq ft footprint and you use the slope percentage (50%) to estimate roof area, you will order 1,500 sq ft of shingles. But the true surface area is only 1,118 sq ft. You would over-order by nearly 400 sq ft — which is hundreds of dollars wasted on material that will likely be thrown away.
+      </p>
+    </article>
+
+    <!-- Ad Slot 1 (Fixed mobile padding) -->
+    <div class="my-10 not-prose px-4 sm:px-6 lg:px-0">
+      <div class="flex min-h-[250px] items-center justify-center rounded-xl bg-slate-100 border-2 border-dashed border-slate-300 px-4 py-6 text-center">
+        <span class="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400">Ad Space — In-Article Rectangle</span>
+      </div>
+    </div>
+
+    <article class="article-prose prose prose-slate max-w-none prose-p:text-[16px] prose-p:leading-[1.8] prose-p:text-slate-700 prose-strong:text-ink-900 prose-headings:font-display prose-headings:font-bold">
+      <h3 class="text-xl font-bold text-ink-900 mt-2">Global Code Differences: IRC vs BS 5534</h3>
+      <p>
+        The pitch of your roof is not just a design choice; it is a regulated safety and performance requirement.
+      </p>
+      <p>
+        In the <strong>United States</strong>, the International Residential Code (IRC 2021) dictates that asphalt shingles cannot be installed on a slope lower than 2:12 (about 9.46°). Between 2:12 and 4:12, a double layer of underlayment is required. 
+      </p>
+      <p>
+        In the <strong>United Kingdom</strong>, BS 5534 and the manufacturer's instructions for the specific tiles dictate the minimum pitch. Standard clay plain tiles typically require a minimum pitch of 35°. However, wind-driven rain exposure can force even steeper pitches or the use of specialized breathable underlays.
+      </p>
+      <p>
+        In <strong>Australia</strong>, while the National Construction Code (NCC) governs drainage, the most critical factor is often wind classification (AS 4055). Roofs in cyclonic regions require vastly different tie-downs and fasteners, regardless of the pitch.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+    <!-- ============================================================
+     PHASE 5/10 — DEEP CONTENT (PART 2: MATERIALS & CONCLUSION)
+     ============================================================ -->
+
+<section class="relative bg-white pb-16 sm:pb-24">
+  <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+    
+    <article class="article-prose prose prose-slate max-w-none prose-p:text-[16px] prose-p:leading-[1.8] prose-p:text-slate-700 prose-strong:text-ink-900 prose-headings:font-display prose-headings:font-bold">
+      
+      <h3 class="text-xl font-bold text-ink-900 mt-2">Choosing the Right Roofing Material</h3>
+      <p>
+        Once the geometry is set, the choice of material dictates the longevity, maintenance, and structural load of the roof. Your pitch will directly determine which of these you can use:
+      </p>
+      <ul>
+        <li><strong>Asphalt Shingles:</strong> The dominant choice in the US due to low cost and ease of installation. They require a minimum pitch of 2:12 and typically last 15–30 years.</li>
+        <li><strong>Metal Roofing (Standing Seam or Corrugated):</strong> Highly durable (40–70 years) and excellent at shedding snow and rain. Metal can handle lower pitches (as low as 1:12 for some profiles) but requires specific fastening systems.</li>
+        <li><strong>Clay and Concrete Tiles:</strong> Extremely common in the UK and Australia. They offer excellent thermal mass and longevity but are incredibly heavy. They usually require a steeper pitch (often 30° or 35° minimum) and a structure specifically engineered to bear the dead load.</li>
+        <li><strong>Slate:</strong> A premium natural stone that can last over 100 years. It requires specialist installation and a very steep pitch (usually 35° or more) to shed water effectively.</li>
+      </ul>
+
+      <h3 class="text-xl font-bold text-ink-900 mt-8">Wind Uplift and Fastening</h3>
+      <p>
+        Water is not the only enemy of a roof; wind is equally destructive. When wind blows over a pitched roof, it creates negative pressure (suction) on the leeward side, attempting to lift the roof off the building.
+      </p>
+      <p>
+        In the <strong>United States</strong>, ASCE 7 dictates wind exposure categories, which in turn dictate the nailing schedule for shingles. In <strong>Australia</strong>, wind classification is governed by AS 4055, and in cyclonic regions (like Far North Queensland), the tie-down requirements connecting the roof to the walls are incredibly strict. In the <strong>UK</strong>, BS EN 1991-1-4 dictates wind actions, and areas of high exposure require mechanical fixings for tiles rather than traditional mortar.
+      </p>
+      <p>
+        A failure to match the fastener type, length, and spacing to the local wind zone is a leading cause of roof failure during storms. Never rely solely on a generic pitch calculation without consulting the local wind loading requirements.
+      </p>
+
+    </article>
+
+    <!-- Ad Slot 2 (Fixed mobile padding) -->
+    <div class="my-10 not-prose px-4 sm:px-6 lg:px-0">
+      <div class="flex min-h-[250px] items-center justify-center rounded-xl bg-slate-100 border-2 border-dashed border-slate-300 px-4 py-6 text-center">
+        <span class="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400">Ad Space — In-Article Rectangle</span>
+      </div>
+    </div>
+
+    <!-- Conclusion Box (Fixed mobile padding) -->
+    <div class="rounded-2xl bg-slate-50 p-6 sm:p-8 border border-slate-200 mx-4 sm:mx-0 not-prose">
+      <h3 class="font-display text-xl font-bold text-ink-900">The Bottom Line</h3>
+      <p class="mt-3 text-[15px] leading-relaxed text-slate-600">
+        Roof pitch is a simple triangle, but it governs complex real-world decisions—from the materials you can legally buy to how much wind your roof can survive. By verifying your rise and run, and using the correct multiplier for area calculations, you ensure your material orders are accurate and your structure is compliant.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="/roofing.html" class="inline-flex items-center gap-2 rounded-xl bg-ink-900 px-5 py-3 text-sm font-bold text-white shadow-card transition-all hover:bg-ink-800 hover:shadow-glow">
+          Explore More Roofing Tools
+          <svg class="h-4 w-4 text-brand-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="/guides/roof-pitch-explained.html" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-bold text-slate-700 transition-colors hover:border-brand-300 hover:text-brand-700">
+          Read the Full Guide
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+   <!-- ============================================================
+     PHASE 6/10 — FAQS + JSON-LD SCHEMA
+     ============================================================ -->
+
+<!-- FAQ Schema for Google Rich Snippets -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://buildmetric.org/tools/roof-pitch-calculator.html#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you convert a 6:12 pitch to degrees?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To convert a 6:12 pitch to degrees, divide the rise by the run (6 ÷ 12 = 0.5). Then, calculate the inverse tangent (arctan) of 0.5, which equals 26.565°. This means a roof that rises 6 inches for every 12 inches of run has an angle of approximately 26.57 degrees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between roof pitch and roof slope?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Roof pitch is typically expressed as a ratio of rise-over-run (e.g., 6:12), primarily used in the US. Roof slope is often expressed as a percentage (e.g., 50%) or an angle in degrees (e.g., 26.57°), used in the UK, Australia, and civil engineering. They describe the same geometry but are not interchangeable mathematically; a 50% slope is not the same as a 50° angle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum roof pitch for asphalt shingles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under the International Residential Code (IRC 2021), the minimum pitch for standard asphalt shingles is 2:12 (about 9.46°). However, roofs between 2:12 and 4:12 require a double layer of underlayment to prevent water infiltration. Below 2:12, standard shingles cannot be used, and a flat-roof membrane is required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the roof pitch multiplier?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The roof pitch multiplier (or rafter multiplier) is a number used to calculate the true surface area of a pitched roof. It is equal to the secant of the roof angle (1 / cos θ). To find your actual roof area, multiply the flat footprint area by this multiplier. For example, a 6:12 pitch has a multiplier of 1.118."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate rafter length from pitch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To calculate rafter length, you can use the Pythagorean theorem (a² + b² = c²) where 'a' is the rise and 'b' is the run. Alternatively, divide the run by the cosine of the pitch angle. For a 6:12 pitch, the multiplier is 1.118, so a 12-foot run would require a rafter length of 12 × 1.118 = 13.416 feet (before adding for overhang)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a steeper roof pitch cost more?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, generally a steeper pitch costs more. There are two main reasons: First, the actual surface area of the roof increases, requiring more materials (shingles, underlayment, etc.). Second, steeper roofs are more difficult and dangerous to walk on, increasing labor costs and often requiring additional safety equipment like roof jacks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a walkable roof pitch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A standard roof is generally considered walkable without special fall protection up to a 6:12 pitch (26.57°). Pitches steeper than 6:12 are typically considered too dangerous to walk on without roof jacks, harnesses, or scaffolding. A 4:12 pitch is generally comfortable to walk on."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- FAQ Section -->
+<section id="faqs" class="border-t border-slate-200 bg-slate-50 py-16 sm:py-24">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+
+    <header class="mb-10 text-center">
+      <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-600">Frequently Asked Questions</p>
+      <h2 class="mt-2 font-display text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">
+        Roof Pitch FAQs
+      </h2>
+      <div class="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brand-500 to-brand-300"></div>
+    </header>
+
+    <div class="space-y-3">
+      <!-- FAQ 1 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">01</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">How do you convert a 6:12 pitch to degrees?</span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14" /></svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            Divide the rise by the run (6 ÷ 12 = 0.5). Then, calculate the inverse tangent (arctan) of 0.5, which equals <strong class="text-ink-900">26.565°</strong>. This means a roof that rises 6 inches for every 12 inches of run has an angle of approximately 26.57 degrees.
+          </p>
+        </div>
+      </details>
+
+      <!-- FAQ 2 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">02</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">What is the difference between roof pitch and roof slope?</span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14" /></svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            <strong class="text-ink-900">Roof pitch</strong> is typically expressed as a ratio of rise-over-run (e.g., 6:12), primarily used in the US. <strong class="text-ink-900">Roof slope</strong> is often expressed as a percentage (e.g., 50%) or an angle in degrees (e.g., 26.57°), used in the UK, Australia, and civil engineering. They describe the same geometry but are not interchangeable mathematically; a 50% slope is not the same as a 50° angle.
+          </p>
+        </div>
+      </details>
+
+      <!-- FAQ 3 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">03</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">What is the minimum roof pitch for asphalt shingles?</span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14" /></svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            Under the International Residential Code (IRC 2021), the minimum pitch for standard asphalt shingles is <strong class="text-ink-900">2:12</strong> (about 9.46°). However, roofs between 2:12 and 4:12 require a double layer of underlayment to prevent water infiltration. Below 2:12, standard shingles cannot be used, and a flat-roof membrane is required.
+          </p>
+        </div>
+      </details>
+
+      <!-- FAQ 4 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">04</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">What is the roof pitch multiplier?</span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14" /></svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            The roof pitch multiplier (or rafter multiplier) is a number used to calculate the true surface area of a pitched roof. It is equal to the secant of the roof angle (1 / cos θ). To find your actual roof area, multiply the flat footprint area by this multiplier. For example, a 6:12 pitch has a multiplier of <strong class="text-ink-900">1.118</strong>.
+          </p>
+        </div>
+      </details>
+
+      <!-- FAQ 5 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">05</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">How do I calculate rafter length from pitch?</span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14" /></svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            To calculate rafter length, you can use the Pythagorean theorem (a² + b² = c²) where 'a' is the rise and 'b' is the run. Alternatively, divide the run by the cosine of the pitch angle. For a 6:12 pitch, the multiplier is 1.118, so a 12-foot run would require a rafter length of 12 × 1.118 = <strong class="text-ink-900">13.416 feet</strong> (before adding for overhang).
+          </p>
+        </div>
+      </details>
+
+      <!-- FAQ 6 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">06</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">Does a steeper roof pitch cost more?</span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14" /></svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            <strong class="text-ink-900">Yes, generally.</strong> First, the actual surface area of the roof increases, requiring more materials. Second, steeper roofs are more difficult and dangerous to walk on, increasing labor costs and often requiring additional safety equipment like roof jacks or harnesses.
+          </p>
+        </div>
+      </details>
+
+      <!-- FAQ 7 -->
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">07</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">What is a walkable roof pitch?</span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14" /></svg>
+        </summary>
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            A standard roof is generally considered walkable without special fall protection up to a <strong class="text-ink-900">6:12 pitch (26.57°)</strong>. Pitches steeper than 6:12 are typically considered too dangerous to walk on without roof jacks, harnesses, or scaffolding. A 4:12 pitch is generally comfortable to walk on.
+          </p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Continue Prompt -->
+    <div class="mt-10 rounded-2xl border border-brand-200 bg-brand-50 p-5 text-center sm:p-6">
+      <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-brand-700">Still have a question?</p>
+      <p class="mt-2 text-sm leading-relaxed text-slate-700">
+        Email <a href="mailto:contact@buildmetric.org" class="font-semibold text-brand-700 underline underline-offset-2 hover:text-brand-800">contact@buildmetric.org</a> — every message is read by a real person, and we reply within two business days.
+      </p>
+    </div>
+  </div>
+</section>
+
+    <!-- ============================================================
+     PHASE 7/10 — AUTHOR BOX + RELATED TOOLS
+     ============================================================ -->
+
+<!-- Author / Reviewer Box -->
+<section class="border-t border-slate-200 bg-white py-12 sm:py-16">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+      <div class="border-b border-slate-200 bg-gradient-to-br from-ink-900 to-ink-800 px-6 py-4 sm:px-8">
+        <div class="flex items-center gap-2.5">
+          <span class="grid h-7 w-7 place-items-center rounded-md bg-brand-500 text-white">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4" /><circle cx="12" cy="12" r="10" /></svg>
+          </span>
+          <p class="font-display text-[11px] font-bold uppercase tracking-[0.16em] text-brand-300">About This Tool</p>
+        </div>
+      </div>
+      <div class="px-6 py-6 sm:px-8 sm:py-8">
+        <div class="flex flex-col sm:flex-row items-start gap-6">
+          <span class="grid h-16 w-16 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-glow sm:h-20 sm:w-20">
+            <svg class="h-8 w-8 sm:h-10 sm:w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20M4 20V9l8-5 8 5v11M9 20v-6h6v6"/></svg>
+          </span>
+          <div>
+            <h3 class="font-display text-xl font-extrabold text-ink-900">BuildMetric Roofing Engineering</h3>
+            <p class="mt-1 text-sm font-semibold text-brand-700">Calculators &amp; Estimating Tools</p>
+            <p class="mt-3 text-[14px] leading-relaxed text-slate-600">
+              This calculator uses standard trigonometric formulas (arctangent) to convert rise-over-run into degrees and slope. It has been reviewed by our structural engineering team to ensure accuracy across US (IRC), UK (BS 5534), and Australian (AS 1684) standards.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <a href="/about.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-700 hover:underline">Read our methodology &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Related Tools -->
+<section class="border-t border-slate-200 bg-slate-50 py-16 sm:py-20">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    
+    <div class="mb-10 flex items-end justify-between">
+      <div>
+        <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-600">More Tools</p>
+        <h2 class="mt-2 font-display text-2xl font-extrabold tracking-tight text-ink-900 sm:text-3xl">Related Roofing Calculators</h2>
+      </div>
+      <a href="/roofing.html" class="hidden sm:inline-flex items-center gap-1.5 text-sm font-bold text-brand-600 hover:text-brand-700">
+        View all roofing tools
+        <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- Related Tool 1: Rafter Length -->
+      <a href="/tools/rafter-calculator.html" class="bento-tile group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+        <div class="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-orange-500 to-orange-700">
+          <div class="absolute inset-0 bg-grid-slate [background-size:22px_22px] opacity-20" aria-hidden="true"></div>
+          <svg class="absolute inset-x-0 bottom-3 mx-auto h-12 w-12 text-white/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V8l6-4 6 4v13" /></svg>
+        </div>
+        <div class="flex flex-1 flex-col p-5">
+          <span class="text-[10px] font-bold uppercase tracking-wider text-orange-600">Geometry</span>
+          <h3 class="mt-1.5 font-display text-base font-bold leading-snug text-ink-900 group-hover:text-brand-700">Rafter Length Calculator</h3>
+          <div class="mt-4 flex items-center justify-between border-t border-slate-100 pt-3 mt-auto">
+            <span class="text-[10px] font-bold uppercase tracking-[0.12em] text-slate-500">Open Tool</span>
+            <svg class="h-3.5 w-3.5 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Related Tool 2: Shingle Estimator -->
+      <a href="/tools/shingle-calculator.html" class="bento-tile group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+        <div class="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-slate-600 to-slate-800">
+          <div class="absolute inset-0 bg-grid-slate [background-size:22px_22px] opacity-20" aria-hidden="true"></div>
+          <svg class="absolute inset-x-0 bottom-3 mx-auto h-12 w-12 text-white/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4zM4 12h16M12 4v16" /></svg>
+        </div>
+        <div class="flex flex-1 flex-col p-5">
+          <span class="text-[10px] font-bold uppercase tracking-wider text-slate-600">Materials</span>
+          <h3 class="mt-1.5 font-display text-base font-bold leading-snug text-ink-900 group-hover:text-brand-700">Shingle Estimator</h3>
+          <div class="mt-4 flex items-center justify-between border-t border-slate-100 pt-3 mt-auto">
+            <span class="text-[10px] font-bold uppercase tracking-[0.12em] text-slate-500">Open Tool</span>
+            <svg class="h-3.5 w-3.5 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Related Tool 3: Roof Area -->
+      <a href="/tools/roof-area-calculator.html" class="bento-tile group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+        <div class="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-brand-600 to-brand-800">
+          <div class="absolute inset-0 bg-grid-slate [background-size:22px_22px] opacity-20" aria-hidden="true"></div>
+          <svg class="absolute inset-x-0 bottom-3 mx-auto h-12 w-12 text-white/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18M9 21V9" /></svg>
+        </div>
+        <div class="flex flex-1 flex-col p-5">
+          <span class="text-[10px] font-bold uppercase tracking-wider text-brand-600">Materials</span>
+          <h3 class="mt-1.5 font-display text-base font-bold leading-snug text-ink-900 group-hover:text-brand-700">Roof Surface Area</h3>
+          <div class="mt-4 flex items-center justify-between border-t border-slate-100 pt-3 mt-auto">
+            <span class="text-[10px] font-bold uppercase tracking-[0.12em] text-slate-500">Open Tool</span>
+            <svg class="h-3.5 w-3.5 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ============================================================
+     PHASE 8/10 — FINAL JAVASCRIPT (CALCULATOR & UI LOGIC)
+     ============================================================ -->
+<script>
+  (function () {
+    'use strict';
+
+    /* ============================================================
+       1. MOBILE MENU TOGGLE
+       ============================================================ */
+    (function initMobileMenu() {
+      var toggle = document.getElementById('navToggle');
+      var menu = document.getElementById('mobileMenu');
+      var iconOpen = document.getElementById('navIconOpen');
+      var iconClose = document.getElementById('navIconClose');
+      if (!toggle || !menu) return;
+
+      toggle.addEventListener('click', function () {
+        var isOpen = !menu.classList.contains('hidden');
+        menu.classList.toggle('hidden', isOpen);
+        iconOpen.classList.toggle('hidden', !isOpen);
+        iconClose.classList.toggle('hidden', isOpen);
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          menu.classList.add('hidden');
+          iconOpen.classList.remove('hidden');
+          iconClose.classList.add('hidden');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+
+    /* ============================================================
+       2. CALCULATOR LOGIC
+       ============================================================ */
+    (function initCalculator() {
+      var form = document.getElementById('roofPitchForm');
+      if (!form) return;
+
+      // Inputs
+      var riseInput = document.getElementById('riseInput');
+      var runInput = document.getElementById('runInput');
+      var unitSystem = document.getElementById('unitSystem');
+      
+      // Buttons & Labels
+      var btnImperial = document.getElementById('unitImperialBtn');
+      var btnMetric = document.getElementById('unitMetricBtn');
+      var riseUnitLabel = document.getElementById('riseUnitLabel');
+      var runUnitLabel = document.getElementById('runUnitLabel');
+
+      // Outputs
+      var outRatio = document.getElementById('outRatio');
+      var outAngle = document.getElementById('outAngle');
+      var outSlope = document.getElementById('outSlope');
+      var outMultiplier = document.getElementById('outMultiplier');
+
+      // Action Buttons
+      var copyBtn = document.getElementById('copyBtn');
+      var shareBtn = document.getElementById('shareBtn');
+      var saveBtn = document.getElementById('saveBtn');
+
+      // Unit Toggle Logic
+      btnImperial.addEventListener('click', function() {
+        unitSystem.value = 'imperial';
+        btnImperial.classList.add('bg-white', 'text-ink-900', 'shadow-sm');
+        btnImperial.classList.remove('text-slate-500');
+        btnMetric.classList.remove('bg-white', 'text-ink-900', 'shadow-sm');
+        btnMetric.classList.add('text-slate-500');
+        
+        riseUnitLabel.textContent = '(in)';
+        runUnitLabel.textContent = '(in)';
+        if(runInput.value === '100') runInput.value = '12'; // Default to 12 for imperial
+      });
+
+      btnMetric.addEventListener('click', function() {
+        unitSystem.value = 'metric';
+        btnMetric.classList.add('bg-white', 'text-ink-900', 'shadow-sm');
+        btnMetric.classList.remove('text-slate-500');
+        btnImperial.classList.remove('bg-white', 'text-ink-900', 'shadow-sm');
+        btnImperial.classList.add('text-slate-500');
+        
+        riseUnitLabel.textContent = '(mm)';
+        runUnitLabel.textContent = '(mm)';
+        if(runInput.value === '12') runInput.value = '100'; // Default to 100 for metric
+      });
+
+      // Calculation Function
+      function calculatePitch(e) {
+        if(e) e.preventDefault();
+
+        var rise = parseFloat(riseInput.value);
+        var run = parseFloat(runInput.value);
+
+        if (isNaN(rise) || isNaN(run) || run === 0) {
+          outRatio.textContent = '--';
+          outAngle.textContent = '--';
+          outSlope.textContent = '--';
+          outMultiplier.textContent = '--';
+          return;
+        }
+
+        // Math
+        var ratio = rise / run;
+        var angleRad = Math.atan(ratio);
+        var angleDeg = angleRad * (180 / Math.PI);
+        var slopePct = ratio * 100;
+        var multiplier = 1 / Math.cos(angleRad); // secant
+
+        // Format Ratio (e.g., 6:12)
+        var ratioFormatted = ratio * 12;
+        var finalRatioStr = (Math.round(ratioFormatted * 100) / 100) + " : 12";
+
+        // Update UI
+        outRatio.textContent = finalRatioStr;
+        outAngle.textContent = angleDeg.toFixed(2) + ' °';
+        outSlope.textContent = slopePct.toFixed(1) + ' %';
+        outMultiplier.textContent = multiplier.toFixed(3);
+
+        // Attach data to buttons for Save/Share/Copy
+        var resultText = "Roof Pitch: " + finalRatioStr + " | Angle: " + angleDeg.toFixed(2) + "° | Slope: " + slopePct.toFixed(1) + "%";
+        copyBtn.setAttribute('data-result', resultText);
+        shareBtn.setAttribute('data-result', resultText);
+        saveBtn.setAttribute('data-result', resultText);
+      }
+
+      // Run calculation on submit and input change
+      form.addEventListener('submit', calculatePitch);
+      riseInput.addEventListener('input', calculatePitch);
+      runInput.addEventListener('input', calculatePitch);
+
+      // Run once on load (for default values)
+      calculatePitch();
+
+      /* ============================================================
+         3. ACTION BUTTONS (Copy / Share / Save)
+         ============================================================ */
+      
+      // Copy to Clipboard
+      copyBtn.addEventListener('click', function() {
+        var text = this.getAttribute('data-result');
+        if(!text) return;
+        
+        navigator.clipboard.writeText(text).then(function() {
+          var originalHTML = copyBtn.innerHTML;
+          copyBtn.innerHTML = '<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Copied!';
+          setTimeout(function() { copyBtn.innerHTML = originalHTML; }, 2000);
+        }).catch(function() {
+          alert('Failed to copy to clipboard.');
+        });
+      });
+
+      // Native Share (Mobile/Desktop)
+      shareBtn.addEventListener('click', function() {
+        var text = this.getAttribute('data-result');
+        if(!text) return;
+
+        if (navigator.share) {
+          navigator.share({
+            title: 'Roof Pitch Calculation',
+            text: text,
+            url: window.location.href
+          }).catch(console.error);
+        } else {
+          // Fallback for older browsers
+          navigator.clipboard.writeText(text);
+          alert('Result copied to clipboard! (Native share not supported on this browser)');
+        }
+      });
+
+      // Save to LocalStorage
+      saveBtn.addEventListener('click', function() {
+        var text = this.getAttribute('data-result');
+        if(!text) return;
+
+        var savedData = {
+          rise: riseInput.value,
+          run: runInput.value,
+          unit: unitSystem.value,
+          result: text,
+          timestamp: new Date().toISOString()
+        };
+
+        try {
+          localStorage.setItem('bm_saved_roof_pitch', JSON.stringify(savedData));
+          var originalHTML = saveBtn.innerHTML;
+          saveBtn.innerHTML = '<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Saved!';
+          setTimeout(function() { saveBtn.innerHTML = originalHTML; }, 2000);
+        } catch (e) {
+          alert('Could not save to browser storage.');
+        }
+      });
+
+    })();
+
+    /* ============================================================
+       4. SMOOTH SCROLL FOR HASH LINKS
+       ============================================================ */
+    (function initSmoothScroll() {
+      var headerOffset = 88;
+      document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        var targetId = link.getAttribute('href');
+        if (!targetId || targetId === '#') return;
+        link.addEventListener('click', function (e) {
+          var target = document.querySelector(targetId);
+          if (!target) return;
+          e.preventDefault();
+          var top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+          if (history.pushState) history.pushState(null, '', targetId);
+        });
+      });
+    })();
+
+    /* ============================================================
+       5. COOKIE SETTINGS BUTTON (CMP Integration)
+       ============================================================ */
+    (function initCookieSettings() {
+      var btn = document.getElementById('footerCookieSettings');
+      if (!btn) return;
+      btn.addEventListener('click', function () {
+        if (window.myCMP && typeof window.myCMP.open === 'function') {
+          window.myCMP.open();
+        } else if (window.Cookiebot && window.Cookiebot.dialog) {
+          window.Cookiebot.dialog.show();
+        } else {
+          alert('Cookie settings would open here.');
+        }
+      });
+    })();
+
+  })();
+</script>
+
+<!-- Year auto-fill for footer -->
+<script>
+  (function () {
+    var el = document.getElementById('yearNow');
+    if (el) el.textContent = new Date().getFullYear();
+  })();
+</script>
+
+    <!-- ============================================================
+       PHASE 9/10 — PREMIUM FOOTER + CLOSING TAGS
+       ============================================================ -->
+  <footer class="relative overflow-hidden border-t border-ink-800 bg-ink-950 text-slate-400">
+
+    <!-- Top Gradient Border Line -->
+    <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-500/60 to-transparent" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -right-32 -top-32 h-72 w-72 rounded-full bg-brand-500/10 blur-3xl" aria-hidden="true"></div>
+
+    <div class="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
+
+      <!-- Top Grid -->
+      <div class="grid gap-10 md:grid-cols-12 md:gap-8">
+
+        <!-- Column 1: Brand & Contact -->
+        <div class="md:col-span-4">
+          <a href="/" class="group flex items-center gap-2.5" aria-label="BuildMetric home">
+            <span class="grid h-10 w-10 place-items-center rounded-xl bg-white/5 ring-1 ring-white/10 transition-transform duration-300 group-hover:scale-105">
+              <svg viewBox="0 0 100 100" class="h-6 w-6" aria-hidden="true">
+                <path d="M20 70 L50 24 L80 70" fill="none" stroke="#0ea5e9" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M38 70 L50 52 L62 70" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.75" />
+              </svg>
+            </span>
+            <span class="leading-tight">
+              <span class="block font-display text-lg font-extrabold tracking-tight text-white">
+                Build<span class="text-gradient">Metric</span>
+              </span>
+              <span class="block text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+                Engineering Calculators
+              </span>
+            </span>
+          </a>
+
+          <p class="mt-5 max-w-sm text-[13.5px] leading-relaxed text-slate-400">
+            Independent construction calculators, estimating tools and technical reference guides for building professionals across the <span class="text-white">USA</span>, <span class="text-white">UK</span> and <span class="text-white">Australia</span>. Engineered for accuracy. Published for transparency.
+          </p>
+
+          <div class="mt-6 space-y-2">
+            <a href="mailto:contact@buildmetric.org" class="group flex items-center gap-2.5 text-sm font-semibold text-slate-300 transition-colors hover:text-brand-300">
+              <span class="grid h-8 w-8 place-items-center rounded-lg bg-white/5 ring-1 ring-white/10 transition-colors group-hover:bg-brand-500/20 group-hover:ring-brand-400/40">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" /><path d="M4 7l8 6 8-6" /></svg>
+              </span>
+              contact@buildmetric.org
+            </a>
+            <a href="mailto:ads@buildmetric.org" class="group flex items-center gap-2.5 text-sm font-semibold text-slate-300 transition-colors hover:text-brand-300">
+              <span class="grid h-8 w-8 place-items-center rounded-lg bg-white/5 ring-1 ring-white/10 transition-colors group-hover:bg-brand-500/20 group-hover:ring-brand-400/40">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8-8-2z" /></svg>
+              </span>
+              ads@buildmetric.org
+            </a>
+          </div>
+
+          <button type="button" id="footerCookieSettings" class="mt-4 inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-[11px] font-bold text-slate-300 transition-colors hover:border-brand-400/40 hover:bg-brand-500/10 hover:text-brand-300">
+            <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M8.5 8.5h.01M15.5 15.5h.01M12 12h.01M8.5 15.5h.01M15.5 8.5h.01" /></svg>
+            Cookie Settings
+          </button>
+        </div>
+
+        <!-- Column 2: Categories -->
+        <div class="md:col-span-2">
+          <h3 class="font-display text-[11px] font-bold uppercase tracking-[0.16em] text-white">Categories</h3>
+          <ul class="mt-4 space-y-2.5 text-[13.5px]">
+            <li><a href="/roofing.html" class="font-semibold text-brand-400 transition-colors hover:text-brand-300" aria-current="page">Roofing</a></li>
+            <li><a href="/concrete.html" class="transition-colors hover:text-brand-300">Concrete</a></li>
+            <li><a href="/framing.html" class="transition-colors hover:text-brand-300">Framing</a></li>
+            <li><a href="/masonry.html" class="transition-colors hover:text-brand-300">Masonry</a></li>
+            <li><a href="/drywall.html" class="transition-colors hover:text-brand-300">Drywall</a></li>
+            <li><a href="/paint.html" class="transition-colors hover:text-brand-300">Paint</a></li>
+            <li><a href="/calculators.html" class="font-semibold text-brand-400 transition-colors hover:text-brand-300">All Categories →</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Popular Tools -->
+        <div class="md:col-span-2">
+          <h3 class="font-display text-[11px] font-bold uppercase tracking-[0.16em] text-white">Popular Tools</h3>
+          <ul class="mt-4 space-y-2.5 text-[13.5px]">
+            <li><a href="/tools/roof-pitch-calculator.html" class="font-semibold text-brand-400 transition-colors hover:text-brand-300" aria-current="page">Roof Pitch</a></li>
+            <li><a href="/tools/concrete-calculator.html" class="transition-colors hover:text-brand-300">Concrete Volume</a></li>
+            <li><a href="/tools/stud-count-calculator.html" class="transition-colors hover:text-brand-300">Stud Count</a></li>
+            <li><a href="/tools/paint-coverage-calculator.html" class="transition-colors hover:text-brand-300">Paint Coverage</a></li>
+            <li><a href="/calculators.html" class="font-semibold text-brand-400 transition-colors hover:text-brand-300">All Tools →</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Company & Legal -->
+        <div class="md:col-span-4">
+          <div class="grid grid-cols-2 gap-6">
+            <div>
+              <h3 class="font-display text-[11px] font-bold uppercase tracking-[0.16em] text-white">Company</h3>
+              <ul class="mt-4 space-y-2.5 text-[13.5px]">
+                <li><a href="/about.html" class="transition-colors hover:text-brand-300">About</a></li>
+                <li><a href="/guides.html" class="transition-colors hover:text-brand-300">Guides</a></li>
+                <li><a href="/estimating.html" class="transition-colors hover:text-brand-300">Estimating</a></li>
+                <li><a href="/contact.html" class="transition-colors hover:text-brand-300">Contact</a></li>
+                <li><a href="/sitemap.xml" class="transition-colors hover:text-brand-300">Sitemap</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-display text-[11px] font-bold uppercase tracking-[0.16em] text-white">Legal</h3>
+              <ul class="mt-4 space-y-2.5 text-[13.5px]">
+                <li><a href="/privacy.html" class="transition-colors hover:text-brand-300">Privacy Policy</a></li>
+                <li><a href="/terms.html" class="transition-colors hover:text-brand-300">Terms of Service</a></li>
+                <li><a href="/disclaimer.html" class="transition-colors hover:text-brand-300">Disclaimer</a></li>
+                <li><a href="/cookie-policy.html" class="transition-colors hover:text-brand-300">Cookie Policy</a></li>
+                <li><a href="/contact.html" class="transition-colors hover:text-brand-300">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Regional Notice Box -->
+          <div class="mt-5 rounded-xl border border-white/10 bg-white/5 p-3.5">
+            <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-300">Regional Notice</p>
+            <p class="mt-1.5 text-[11.5px] leading-relaxed text-slate-400">
+              BuildMetric content is published in English and reviewed against US, UK and Australian codes. Always verify against your local jurisdiction's current edition.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ad Space (Footer Leaderboard) -->
+      <div class="mt-12 flex min-h-[90px] items-center justify-center rounded-xl border-2 border-dashed border-white/10 bg-white/[0.02] px-4 py-6 text-center">
+        <span class="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Ad Space — Footer Leaderboard</span>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="mt-10 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 md:flex-row md:items-center">
+        <p class="text-[12px] text-slate-500">
+          &copy; <span id="yearNow">2026</span> BuildMetric. All rights reserved. Operated from <span class="text-slate-400">buildmetric.org</span>.
+        </p>
+        <p class="text-[11px] text-slate-500">
+          Built for professionals. General information only — see our <a href="/disclaimer.html" class="font-semibold text-brand-400 underline decoration-brand-500/40 underline-offset-2 hover:text-brand-300">Disclaimer</a>.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+  
