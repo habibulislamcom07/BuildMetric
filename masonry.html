@@ -2,1261 +2,1149 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <!-- ============================================================
-       PHASE 1/9 — SEO HEAD, FONTS, TAILWIND CONFIG, CUSTOM CSS
-       File: masonry.html — BuildMetric Masonry Category Hub
+       PHASE 1/9 — SEO HEAD & COLLECTION PAGE SCHEMA
+       File: masonry.html
+       Brand: BuildMetric | Domain: buildmetric.org
        ============================================================ -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0ea5e9" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <!-- ============ PRIMARY SEO ============ -->
-  <title>Masonry Guide &amp; Calculators (2025) — Brick, Block &amp; Mortar | BuildMetric</title>
-  <meta name="description" content="Master masonry construction with our engineer-written guide. Learn brick calculation, mortar mix ratios, CMU block sizing, and ASTM/BS code standards. Free masonry calculators." />
-  <meta name="keywords" content="masonry calculator, brick calculator, concrete block calculator, mortar mix ratio, masonry wall, ASTM C270, brick cost estimator" />
-  <meta name="author" content="BuildMetric Editorial Team" />
+  <!-- Primary SEO Meta -->
+  <title>Masonry Calculators &amp; Estimating Guides | BuildMetric</title>
+  <meta name="description" content="Professional masonry calculators for bricks, blocks, mortar, and stone. Estimate exact material quantities, waste allowances, and costs for US, UK &amp; AU projects." />
+  <meta name="keywords" content="masonry calculator, brick calculator, block calculator, mortar calculator, masonry estimating, how many bricks do i need, concrete block calculator" />
+  <meta name="author" content="BuildMetric Engineering Team" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <meta name="googlebot" content="index, follow" />
+  <meta name="theme-color" content="#0ea5e9" />
+  
+  <!-- Canonical -->
   <link rel="canonical" href="https://buildmetric.org/masonry.html" />
 
-  <!-- ============ OPEN GRAPH ============ -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="BuildMetric" />
+  <meta property="og:title" content="Masonry Calculators &amp; Estimating Guides" />
+  <meta property="og:description" content="Estimate bricks, blocks, mortar and stone with our professional masonry tools." />
   <meta property="og:url" content="https://buildmetric.org/masonry.html" />
-  <meta property="og:title" content="Masonry Guide &amp; Calculators — Brick, Block &amp; Mortar | BuildMetric" />
-  <meta property="og:description" content="Expert masonry guide + free calculators. Brick counts, mortar mixes, CMU blocks, and ASTM code references." />
-  <meta property="og:image" content="https://buildmetric.org/assets/og/masonry-hub-og.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="BuildMetric Masonry Category Hub — brick and block calculators" />
-  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://buildmetric.org/assets/og/masonry-hub.png" />
 
-  <!-- ============ TWITTER CARD ============ -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@buildmetric" />
-  <meta name="twitter:creator" content="@buildmetric" />
-  <meta name="twitter:title" content="Masonry Guide &amp; Calculators (2025) | BuildMetric" />
-  <meta name="twitter:description" content="Expert masonry guide with ASTM code references and free brick, block &amp; mortar calculators." />
-  <meta name="twitter:image" content="https://buildmetric.org/assets/og/masonry-hub-og.jpg" />
+  <meta name="twitter:title" content="Masonry Calculators | BuildMetric" />
+  <meta name="twitter:description" content="Professional brick, block and mortar calculators." />
+  <meta name="twitter:image" content="https://buildmetric.org/assets/og/masonry-hub.png" />
 
-  <!-- ============ FAVICONS ============ -->
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
-  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230f172a'/%3E%3Cpath d='M22 68 L50 26 L78 68' stroke='%230ea5e9' stroke-width='9' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
 
-  <!-- ============ PRECONNECT & FONTS ============ -->
+  <!-- Fonts & Tailwind -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://cdn.tailwindcss.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- ============ TAILWIND CDN + CONFIG ============ -->
-  <script src="https://cdn.tailwindcss.com?plugins=typography,forms"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: {
-            sans:    ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-            display: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-            mono:    ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
-          },
           colors: {
-            primary: {
-              DEFAULT: '#0ea5e9',
-              50:  '#f0f9ff',
-              100: '#e0f2fe',
-              200: '#bae6fd',
-              300: '#7dd3fc',
-              400: '#38bdf8',
-              500: '#0ea5e9',
-              600: '#0284c7',
-              700: '#0369a1',
-              800: '#075985',
-              900: '#0c4a6e',
-            },
-            slate: {
-              950: '#020617',
-              DEFAULT: '#0f172a',
-            },
+            brand: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e' },
+            ink: { 700: '#334155', 800: '#1e293b', 900: '#0f172a', 950: '#080f1e' }
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
           },
           boxShadow: {
-            'soft':    '0 4px 24px -8px rgba(15, 23, 42, 0.08), 0 2px 8px -4px rgba(15, 23, 42, 0.04)',
-            'premium': '0 20px 60px -20px rgba(14, 165, 233, 0.25), 0 8px 24px -12px rgba(15, 23, 42, 0.1)',
-            'inset-dark': 'inset 0 1px 0 0 rgba(255,255,255,0.06)',
-          },
-          backgroundImage: {
-            'grid-slate': "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M0 40L40 0M0 0h40v40H0z' fill='none' stroke='%230f172a' stroke-opacity='0.05'/%3E%3C/svg%3E\")",
-            'hero-glow':  'radial-gradient(ellipse 80% 60% at 50% 0%, rgba(14,165,233,0.18), transparent 70%)',
-          },
-          animation: {
-            'fade-in-up': 'fadeInUp 0.6s ease-out both',
-            'float':      'float 6s ease-in-out infinite',
-          },
-          keyframes: {
-            fadeInUp: {
-              '0%':   { opacity: '0', transform: 'translateY(12px)' },
-              '100%': { opacity: '1', transform: 'translateY(0)' },
-            },
-            float: {
-              '0%, 100%': { transform: 'translateY(0)' },
-              '50%':      { transform: 'translateY(-8px)' },
-            },
-          },
-        },
-      },
+            glow: '0 0 0 1px rgba(14,165,233,0.16), 0 18px 45px -18px rgba(14,165,233,0.55)',
+            card: '0 1px 2px rgba(15,23,42,0.04), 0 12px 32px -12px rgba(15,23,42,0.16)'
+          }
+        }
+      }
     };
   </script>
 
-  <!-- ============ CUSTOM CSS ============ -->
   <style>
-    /* Smooth typography rendering */
-    html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
-    body { font-family: 'Inter', sans-serif; }
-
-    /* Glassmorphism utility */
-    .glass {
-      background: rgba(255, 255, 255, 0.72);
-      backdrop-filter: blur(16px) saturate(180%);
-      -webkit-backdrop-filter: blur(16px) saturate(180%);
-      border: 1px solid rgba(255, 255, 255, 0.6);
-    }
+    body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+    .text-gradient { background: linear-gradient(100deg, #0ea5e9 0%, #38bdf8 40%, #0284c7 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .hero-mesh { background: radial-gradient(900px 420px at 12% -10%, rgba(14,165,233,0.22), transparent 62%), radial-gradient(700px 380px at 92% 0%, rgba(56,189,248,0.16), transparent 60%), linear-gradient(180deg, #0f172a 0%, #0b1222 62%, #0f172a 100%); }
     
-    /* Gradient text */
-    .gradient-text {
-      background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 55%, #0f172a 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    /* Custom scrollbar */
-    ::-webkit-scrollbar { width: 10px; height: 10px; }
-    ::-webkit-scrollbar-track { background: #f0f9ff; }
-    ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #38bdf8, #0284c7); border-radius: 8px; border: 2px solid #f0f9ff; }
-    ::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #0ea5e9, #075985); }
-
-    /* Focus ring for accessibility */
-    :focus-visible { outline: 2px solid #0ea5e9; outline-offset: 2px; border-radius: 4px; }
-
-    /* Details/summary custom marker */
-    details > summary { list-style: none; cursor: pointer; }
-    details > summary::-webkit-details-marker { display: none; }
-    details[open] .faq-icon { transform: rotate(45deg); }
-    .faq-icon { transition: transform 0.3s ease; }
-
-    /* Table polish */
-    .prose table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
-    .prose table th { background: #0f172a; color: #fff; text-align: left; padding: 0.75rem 1rem; font-weight: 600; font-family: 'Plus Jakarta Sans', sans-serif; }
-    .prose table td { padding: 0.75rem 1rem; border-bottom: 1px solid #e2e8f0; }
-    .prose table tr:nth-child(even) td { background: #f8fafc; }
-
-    /* Prevent horizontal scroll on mobile */
-    body, html { overflow-x: hidden; }
-
-    /* Ad placeholder pattern */
-    .ad-placeholder {
-      background-image: repeating-linear-gradient(45deg, #f1f5f9 0, #f1f5f9 10px, #e2e8f0 10px, #e2e8f0 20px);
-    }
-
-    /* Reduced motion */
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
-    }
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; left: 0; bottom: -6px; height: 2px; width: 0; background: linear-gradient(90deg, #0ea5e9, #38bdf8); border-radius: 2px; transition: width .3s ease; }
+    .nav-link:hover::after { width: 100%; }
+    
+    .bento-tile { transition: transform .28s cubic-bezier(.2,.8,.2,1), box-shadow .28s ease, border-color .28s ease; }
+    .bento-tile:hover { transform: translateY(-4px); box-shadow: 0 22px 48px -22px rgba(15,23,42,0.32); border-color: rgba(14,165,233,0.45); }
   </style>
 
-  <!-- ============================================================
-       JSON-LD SCHEMA #1 — WEBPAGE
-       ============================================================ -->
+  <!-- ================= JSON-LD Schema ================= -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://buildmetric.org/masonry.html#webpage",
-    "url": "https://buildmetric.org/masonry.html",
-    "name": "Masonry Guide & Calculators (2025) — Brick, Block & Mortar",
-    "description": "Engineer-written guide to masonry: brick calculation, mortar mixes, ASTM code rules, and free masonry calculators.",
-    "inLanguage": "en-US",
-    "isPartOf": { "@id": "https://buildmetric.org/#website" },
-    "about": {
-      "@type": "Thing",
-      "name": "Masonry Construction",
-      "sameAs": "https://en.wikipedia.org/wiki/Masonry"
-    },
-    "datePublished": "2024-04-01T08:00:00+00:00",
-    "dateModified": "2026-10-20T09:30:00+00:00",
-    "breadcrumb": { "@id": "https://buildmetric.org/masonry.html#breadcrumb" }
-  }
-  </script>
-
-  <!-- ============================================================
-       JSON-LD SCHEMA #2 — BREADCRUMBLIST
-       ============================================================ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "@id": "https://buildmetric.org/masonry.html#breadcrumb",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home",        "item": "https://buildmetric.org/" },
-      { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://buildmetric.org/calculators.html" },
-      { "@type": "ListItem", "position": 3, "name": "Masonry",     "item": "https://buildmetric.org/masonry.html" }
-    ]
-  }
-  </script>
-
-  <!-- ============================================================
-       JSON-LD SCHEMA #3 — ORGANIZATION
-       ============================================================ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "https://buildmetric.org/#organization",
-    "name": "BuildMetric",
-    "url": "https://buildmetric.org/",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://buildmetric.org/assets/logo-square.png",
-      "width": 512,
-      "height": 512
-    },
-    "email": "contact@buildmetric.org",
-    "sameAs": [
-      "https://twitter.com/buildmetric",
-      "https://www.linkedin.com/company/buildmetric"
-    ]
-  }
-  </script>
-
-  <!-- ============================================================
-       JSON-LD SCHEMA #4 — FAQPAGE
-       (Matches the exact 7 <details> FAQs rendered in Phase 6)
-       ============================================================ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "@id": "https://buildmetric.org/masonry.html#faq",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "What is masonry in construction?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Masonry is the building of structures from individual units, typically laid in courses and bound together by mortar. Common materials include clay bricks, concrete blocks (CMU), stone, and glass blocks. Masonry is known for its durability, fire resistance, and thermal mass, and is governed by codes like TMS 402/602 in the US and BS EN 1996 (Eurocode 6)."
-        }
+        "@type": "CollectionPage",
+        "@id": "https://buildmetric.org/masonry.html#webpage",
+        "url": "https://buildmetric.org/masonry.html",
+        "name": "Masonry Calculators & Estimating Guides | BuildMetric",
+        "description": "Professional masonry calculators for bricks, blocks, mortar, and stone.",
+        "isPartOf": { "@id": "https://buildmetric.org/#website" },
+        "about": { "@id": "https://buildmetric.org/#organization" },
+        "primaryImageOfPage": { "@type": "ImageObject", "url": "https://buildmetric.org/assets/og/masonry-hub.png" },
+        "datePublished": "2024-02-05",
+        "dateModified": "2026-10-20",
+        "inLanguage": "en"
       },
       {
-        "@type": "Question",
-        "name": "What is the standard mortar mix ratio for bricks?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The most common mortar for brick is Type N, which is a 1:1:6 mix of Portland cement, hydrated lime, and sand. Type N is recommended for general-purpose exterior and interior load-bearing walls. For softer historic bricks, Type O (1:2:9) is preferred to allow flexibility. Always refer to ASTM C270 for mortar specifications."
-        }
+        "@type": "BreadcrumbList",
+        "@id": "https://buildmetric.org/masonry.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://buildmetric.org/" },
+          { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://buildmetric.org/calculators.html" },
+          { "@type": "ListItem", "position": 3, "name": "Masonry", "item": "https://buildmetric.org/masonry.html" }
+        ]
       },
       {
-        "@type": "Question",
-        "name": "How do I calculate the number of bricks per square foot?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "For a standard modular brick (7 5/8 x 3 5/8 x 2 1/4 inches) laid in a running bond with 3/8-inch mortar joints, you need approximately 6.86 bricks per square foot of wall area. For a queen size brick, it's about 5.7 bricks per square foot, and for a king size, about 4.5. Always add a 5-10% waste factor."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the difference between brick and CMU block?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Bricks are typically smaller, clay-fired units used for veneer, facades, or solid walls. CMU (Concrete Masonry Unit) blocks are much larger, hollow concrete blocks (usually 8x8x16 inches) used primarily for structural walls, foundations, and partitions. CMUs are faster to lay due to their size and are often reinforced with rebar and grout."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do you calculate mortar for a brick wall?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Mortar is calculated by volume. For a standard modular brick wall, the mortar volume is roughly 0.20 cubic feet per square foot of wall. A typical 80lb bag of premixed mortar yields about 0.7 cubic feet. Alternatively, for a 1:1:6 mix, you will need approximately 1 part cement, 1 part lime, and 6 parts sand by volume, plus water."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What are the common masonry building codes?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In the US, masonry is governed by the International Building Code (IBC) which references TMS 402 (Building Code Requirements for Masonry Structures) and TMS 602 (Specification for Masonry Structures). In the UK and Europe, Eurocode 6 (BS EN 1996) applies. In Australia, AS 3700 covers masonry structures. Local codes may impose additional seismic or wind requirements."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does a masonry wall cost per square foot?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Cost varies widely by material and region. In the US, a brick veneer wall costs roughly $10 to $20 per square foot installed, while a structural CMU block wall costs about $8 to $15 per square foot. Stone veneer can run $20 to $40+ per square foot. Labor typically accounts for 50-60% of the total cost."
-        }
+        "@type": "Organization",
+        "@id": "https://buildmetric.org/#organization",
+        "name": "BuildMetric",
+        "url": "https://buildmetric.org"
       }
     ]
   }
   </script>
 </head>
 
-<body class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+  <!-- ============================================================
+     PHASE 2/9 — BODY OPEN + SKIP LINK + PREMIUM NAVBAR
+     ============================================================ -->
 
-  <!-- ============ ACCESSIBILITY SKIP-LINK ============ -->
-  <a href="#main-content" 
-     class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-6 focus:py-3 focus:bg-primary focus:text-white focus:font-bold focus:rounded-lg focus:shadow-premium focus:outline-none focus:ring-2 focus:ring-primary-300 transition-all duration-200">
+<body class="bg-slate-50 text-ink-900 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- Skip link (Accessibility) -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-brand-500 focus:px-4 focus:py-2 focus:text-white focus:font-semibold">
     Skip to main content
   </a>
 
-  <!-- ============ PREMIUM STICKY NAVBAR ============ -->
-  <header class="sticky top-0 z-50 w-full glass border-b border-slate-200/60 shadow-soft transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <nav class="flex justify-between items-center h-20" aria-label="Main navigation">
+  <!-- ============================================================
+       PREMIUM NAVBAR
+       ============================================================ -->
+  <header id="site-header" class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-xl supports-[backdrop-filter]:bg-white/70">
+    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+
+      <!-- Brand Logo -->
+      <a href="/" class="group flex items-center gap-2.5" aria-label="BuildMetric home">
+        <span class="relative grid h-10 w-10 place-items-center rounded-xl bg-ink-900 shadow-card ring-1 ring-white/10 transition-transform duration-300 group-hover:scale-105">
+          <svg viewBox="0 0 100 100" class="h-6 w-6" aria-hidden="true">
+            <path d="M20 70 L50 24 L80 70" fill="none" stroke="#0ea5e9" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M38 70 L50 52 L62 70" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.75" />
+          </svg>
+        </span>
+        <span class="leading-tight">
+          <span class="block font-display text-lg font-extrabold tracking-tight text-ink-900">
+            Build<span class="text-gradient">Metric</span>
+          </span>
+          <span class="hidden text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500 sm:block">
+            Engineering Calculators
+          </span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden items-center gap-6 lg:flex" aria-label="Primary">
+        <a href="/" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Home</a>
+        <a href="/calculators.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Calculators</a>
+        <a href="/roofing.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Roofing</a>
+        <a href="/concrete.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Concrete</a>
+        <a href="/masonry.html" class="nav-link text-sm font-semibold text-brand-600" aria-current="page">Masonry</a>
+        <a href="/estimating.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Estimating</a>
+        <a href="/guides.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">Guides</a>
+        <a href="/about.html" class="nav-link text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600">About</a>
+      </nav>
+
+      <!-- Right Actions -->
+      <div class="flex items-center gap-2.5">
+        <a href="/contact.html" class="hidden rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100 hover:text-ink-900 md:inline-flex">
+          Contact
+        </a>
         
-        <!-- Logo -->
-        <a href="/index.html" class="flex items-center gap-2.5 group" aria-label="BuildMetric Home">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-white shadow-premium group-hover:scale-105 transition-transform duration-300">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-            </svg>
-          </div>
-          <span class="font-display font-bold text-2xl tracking-tight text-slate-900 group-hover:text-primary-600 transition-colors">Build<span class="text-primary-500">Metric</span></span>
+        <!-- CTA Button -->
+        <a href="/calculators.html" class="cta-shine inline-flex items-center gap-2 rounded-xl bg-ink-900 px-4 py-2.5 text-sm font-bold text-white shadow-card transition-all duration-300 hover:bg-ink-800 hover:shadow-glow focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2">
+          <svg class="h-4 w-4 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <rect x="4" y="2" width="16" height="20" rx="2" />
+            <path d="M8 6h8M8 11h2M12 11h2M16 11h2M8 15h2M12 15h2M16 15h2" />
+          </svg>
+          <span class="hidden sm:inline">Open Tools</span>
+          <span class="sm:hidden">Tools</span>
         </a>
 
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex items-center space-x-8">
-          <a href="/index.html" class="text-sm font-semibold text-slate-600 hover:text-primary-600 transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 after:rounded-full hover:after:w-full after:transition-all after:duration-300">Home</a>
-          
-          <!-- Active State for Calculators (since this is a category page) -->
-          <a href="/calculators.html" class="text-sm font-semibold text-primary-600 transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary-500 after:rounded-full">Calculators</a>
-          
-          <a href="/guides.html" class="text-sm font-semibold text-slate-600 hover:text-primary-600 transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 after:rounded-full hover:after:w-full after:transition-all after:duration-300">Guides</a>
-          <a href="/about.html" class="text-sm font-semibold text-slate-600 hover:text-primary-600 transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 after:rounded-full hover:after:w-full after:transition-all after:duration-300">About</a>
-        </div>
-
-        <!-- Desktop CTA -->
-        <div class="hidden md:flex items-center">
-          <a href="/calculators.html" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold text-white transition-all duration-200 bg-slate-900 rounded-xl hover:bg-slate-800 hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900">
-            Explore Tools
-            <svg class="w-4 h-4 ml-2 -mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-          </a>
-        </div>
-
-        <!-- Mobile Menu Button -->
-        <div class="flex md:hidden">
-          <button type="button" id="mobile-menu-btn" class="inline-flex items-center justify-center p-2.5 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-colors" aria-controls="mobile-menu" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <!-- Hamburger Icon -->
-            <svg class="block h-6 w-6" id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-            <!-- Close (X) Icon -->
-            <svg class="hidden h-6 w-6" id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-
-      </nav>
+        <!-- Mobile Menu Toggle Button -->
+        <button id="navToggle" type="button"
+                class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-ink-900 transition-colors hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 lg:hidden"
+                aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg id="navIconOpen" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <svg id="navIconClose" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+      </div>
     </div>
 
-    <!-- Mobile Menu Dropdown -->
-    <div class="md:hidden hidden bg-white border-t border-slate-100 shadow-xl absolute w-full left-0 top-20" id="mobile-menu">
-      <div class="px-4 pt-2 pb-6 space-y-1 sm:px-6">
-        <a href="/index.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary-600 hover:bg-slate-50 transition-colors">Home</a>
-        <a href="/calculators.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-primary-600 bg-primary-50 transition-colors">Calculators</a>
-        <a href="/guides.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary-600 hover:bg-slate-50 transition-colors">Guides</a>
-        <a href="/about.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary-600 hover:bg-slate-50 transition-colors">About</a>
-        
-        <div class="pt-4 mt-2 border-t border-slate-100">
-          <a href="/calculators.html" class="w-full flex items-center justify-center px-5 py-3 text-base font-bold text-white bg-slate-900 rounded-xl hover:bg-slate-800 transition-colors">
-            Explore All Tools
-          </a>
+    <!-- Mobile Menu Panel -->
+    <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white lg:hidden">
+      <nav class="mx-auto max-w-7xl space-y-1 px-4 py-4 sm:px-6" aria-label="Mobile">
+        <a href="/" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Home</a>
+        <a href="/calculators.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Calculators</a>
+        <a href="/roofing.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Roofing</a>
+        <a href="/concrete.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Concrete</a>
+        <a href="/masonry.html" class="block rounded-lg bg-brand-50 px-3 py-2.5 text-sm font-semibold text-brand-700" aria-current="page">Masonry</a>
+        <a href="/estimating.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Estimating</a>
+        <a href="/guides.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Guides</a>
+        <a href="/about.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">About</a>
+        <a href="/contact.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Contact</a>
+
+        <!-- Legal Links (Mobile only) -->
+        <div class="mt-2 border-t border-slate-200 pt-2">
+          <p class="px-3 pb-1 pt-1 text-[10px] font-bold uppercase tracking-[0.14em] text-slate-400">Legal</p>
+          <a href="/privacy.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Privacy Policy</a>
+          <a href="/terms.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Terms of Service</a>
+          <a href="/disclaimer.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Disclaimer</a>
+          <a href="/cookie-policy.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-brand-600">Cookie Policy</a>
         </div>
-      </div>
+
+        <a href="mailto:contact@buildmetric.org" class="mt-3 block rounded-lg bg-ink-900 px-3 py-2.5 text-center text-sm font-bold text-white">contact@buildmetric.org</a>
+      </nav>
     </div>
   </header>
 
-  <!-- ============ MAIN CONTENT WRAPPER STARTS ============ -->
-  <main id="main-content" class="flex-grow">
+  <!-- ============================================================
+     PHASE 3/9 — MAIN OPEN + CLEAN HERO + FILTERS
+     ============================================================ -->
+
+  <main id="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero-mesh relative overflow-hidden">
+      <!-- Decorative Grid -->
+      <div class="pointer-events-none absolute inset-0 bg-grid-slate [background-size:46px_46px] opacity-[0.35]" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand-500/20 blur-3xl" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -left-28 bottom-0 h-72 w-72 rounded-full bg-brand-400/10 blur-3xl" aria-hidden="true"></div>
+
+      <div class="relative mx-auto max-w-5xl px-4 pb-20 pt-16 text-center sm:px-6 sm:pb-28 sm:pt-24 lg:px-8">
+        
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="mb-6 flex justify-center">
+          <ol class="flex flex-wrap items-center gap-2 text-xs font-semibold text-slate-400">
+            <li><a href="/" class="transition-colors hover:text-brand-300">Home</a></li>
+            <li aria-hidden="true" class="text-slate-600">/</li>
+            <li><a href="/calculators.html" class="transition-colors hover:text-brand-300">Calculators</a></li>
+            <li aria-hidden="true" class="text-slate-600">/</li>
+            <li class="text-brand-300" aria-current="page">Masonry</li>
+          </ol>
+        </nav>
+
+        <!-- Trust Badge -->
+        <span class="inline-flex items-center gap-2 rounded-full border border-brand-400/30 bg-brand-500/10 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-300">
+          <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="8" height="5" rx="0.5"/><rect x="13" y="6" width="8" height="5" rx="0.5"/><rect x="3" y="13" width="8" height="5" rx="0.5"/><rect x="13" y="13" width="8" height="5" rx="0.5"/></svg>
+          Masonry Hub
+        </span>
+
+        <!-- H1 -->
+        <h1 class="mt-5 font-display text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-[3.5rem]">
+          Master Your Masonry Projects
+          <span class="mt-2 block text-gradient">Bricks, Blocks &amp; Mortar</span>
+        </h1>
+
+        <!-- Subtext -->
+        <p class="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+          Professional calculators for bricklayers, blocklayers and stonemasons. Estimate exact material quantities, waste allowances, and costs for walls, pillars and foundations across US, UK &amp; AU codes.
+        </p>
+
+        <!-- Search / Jump to Tool -->
+        <form action="/calculators.html" method="get" role="search" class="mx-auto mt-10 max-w-2xl">
+          <label for="masonry-tool-search" class="sr-only">Search masonry tools</label>
+          <div class="group relative flex items-center overflow-hidden rounded-2xl border border-white/20 bg-white/10 backdrop-blur transition-all duration-300 focus-within:border-brand-400 focus-within:bg-white/15 focus-within:shadow-glow">
+            <span class="grid h-14 w-14 shrink-0 place-items-center text-brand-300">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /></svg>
+            </span>
+            <input
+              id="masonry-tool-search"
+              name="q"
+              type="search"
+              placeholder="Search masonry tools — bricks, blocks, mortar…"
+              class="h-14 w-full bg-transparent pr-4 text-sm text-white placeholder-slate-400 focus:outline-none sm:text-base"
+              autocomplete="off"
+            />
+            <button type="submit" class="mr-2 hidden items-center gap-1.5 rounded-xl bg-brand-500 px-5 py-2.5 text-xs font-bold text-white transition-colors hover:bg-brand-400 sm:inline-flex">
+              Search
+            </button>
+          </div>
+        </form>
+
+        <!-- Quick Filters (Pills) -->
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-2">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500 mr-2">Filter by:</span>
+          <button type="button" class="filter-btn rounded-full bg-brand-500 px-4 py-1.5 text-xs font-bold text-white transition-colors">All Tools</button>
+          <button type="button" class="filter-btn rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold text-slate-300 transition-colors hover:bg-brand-500/20 hover:text-brand-300">Bricks</button>
+          <button type="button" class="filter-btn rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold text-slate-300 transition-colors hover:bg-brand-500/20 hover:text-brand-300">Blocks</button>
+          <button type="button" class="filter-btn rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold text-slate-300 transition-colors hover:bg-brand-500/20 hover:text-brand-300">Mortar</button>
+          <button type="button" class="filter-btn rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold text-slate-300 transition-colors hover:bg-brand-500/20 hover:text-brand-300">Estimating</button>
+        </div>
+
+      </div>
+
+      <!-- Bottom Fade -->
+      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-b from-transparent to-slate-50" aria-hidden="true"></div>
+    </section>
 
     <!-- ============================================================
-     PHASE 3/9 — HERO SECTION, BREADCRUMB, SEARCH/FILTER BAR
-     File: masonry.html
+     PHASE 4/9 — TOOLS GRID + DEEP CONTENT (PART 1)
      ============================================================ -->
-<section class="relative bg-white overflow-hidden pt-12 pb-16 lg:pt-20 lg:pb-24 border-b border-slate-100">
-  <!-- Background Elements -->
-  <div class="absolute inset-0 bg-hero-glow pointer-events-none"></div>
-  <div class="absolute inset-0 bg-grid-slate pointer-events-none opacity-40"></div>
-  
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+<!-- Tools Grid Section -->
+<section id="masonry-tools" class="relative bg-slate-50 py-16 sm:py-24">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     
-    <!-- Breadcrumb -->
-    <nav class="flex mb-8 lg:mb-10" aria-label="Breadcrumb">
-      <ol class="inline-flex items-center space-x-1 md:space-x-3 text-sm font-medium text-slate-500">
-        <li class="inline-flex items-center">
-          <a href="/index.html" class="inline-flex items-center hover:text-primary-600 transition-colors">
-            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
-            Home
-          </a>
-        </li>
-        <li>
-          <div class="flex items-center">
-            <svg class="w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-            <a href="/calculators.html" class="ml-1 md:ml-3 hover:text-primary-600 transition-colors">Calculators</a>
-          </div>
-        </li>
-        <li aria-current="page">
-          <div class="flex items-center">
-            <svg class="w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-            <span class="ml-1 md:ml-3 text-slate-800 font-semibold">Masonry</span>
-          </div>
-        </li>
-      </ol>
-    </nav>
-
-    <!-- Hero Text -->
-    <div class="max-w-4xl">
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
-        Masonry Guides &amp; <span class="gradient-text">Calculators</span>
-      </h1>
-      <p class="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-3xl">
-        Everything you need to estimate brick, block, and mortar with precision. Explore engineer-reviewed tools designed for accurate material takeoffs and code compliance.
-      </p>
-    </div>
-
-    <!-- Search & Filter Bar -->
-    <div class="max-w-5xl mt-10">
-      <div class="bg-white rounded-2xl shadow-soft p-2 sm:p-3 border border-slate-200/60 flex flex-col sm:flex-row gap-3">
-        
-        <!-- Search Input -->
-        <div class="relative flex-grow">
-          <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-            <svg class="h-5 w-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-          </div>
-          <input 
-            type="text" 
-            id="tool-search" 
-            class="block w-full pl-11 pr-4 py-3.5 bg-slate-50 border-0 text-slate-900 rounded-xl ring-1 ring-inset ring-slate-200 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-primary-500 sm:text-sm transition-all" 
-            placeholder="Search masonry tools (e.g., bricks, blocks, mortar)..."
-          />
-        </div>
-
-        <!-- Filter Buttons -->
-        <div class="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 hide-scrollbar">
-          <button data-filter="all" class="filter-btn whitespace-nowrap px-5 py-3.5 text-sm font-semibold rounded-xl bg-slate-900 text-white transition-all shadow-md">
-            All Tools
-          </button>
-          <button data-filter="brick" class="filter-btn whitespace-nowrap px-5 py-3.5 text-sm font-semibold rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">
-            Brick
-          </button>
-          <button data-filter="block" class="filter-btn whitespace-nowrap px-5 py-3.5 text-sm font-semibold rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">
-            Block (CMU)
-          </button>
-          <button data-filter="mortar" class="filter-btn whitespace-nowrap px-5 py-3.5 text-sm font-semibold rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">
-            Mortar &amp; Grout
-          </button>
-        </div>
-
-      </div>
-      
-      <!-- Helper Text -->
-      <p class="mt-3 text-sm text-slate-500 flex items-center gap-1.5 px-1">
-        <svg class="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-        Filter by material type to find the exact estimator for your project.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-  <!-- ============================================================
-     PHASE 4/9 — TOOLS GRID, AD SLOT & ARTICLE SECTION 1
-     File: masonry.html
-     ============================================================ -->
-<section class="py-16 lg:py-24 bg-slate-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <!-- Section Header -->
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+    <div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-4">
       <div>
-        <h2 class="text-3xl md:text-4xl font-display font-bold text-slate-900 tracking-tight">Masonry Calculators</h2>
-        <p class="mt-2 text-lg text-slate-600">Free, engineer-reviewed tools to streamline your material takeoffs.</p>
+        <h2 class="font-display text-3xl font-extrabold tracking-tight text-ink-900">Masonry Calculators</h2>
+        <p class="mt-2 text-sm text-slate-600">Select a tool to estimate your brick, block, or stone project.</p>
       </div>
-      <a href="/calculators.html" class="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors group">
-        View All Tools 
-        <svg class="w-4 h-4 ml-1.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+      <a href="/calculators.html" class="inline-flex items-center gap-1.5 text-sm font-bold text-brand-600 hover:text-brand-700">
+        View all categories
+        <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
     </div>
 
-    <!-- Tools Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="tools-grid">
+    <!-- 6 Tools Grid -->
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       
-      <!-- Tool Card 1: Brick Calculator -->
-      <a href="/brick-calculator.html" class="tool-card group relative bg-white rounded-3xl p-8 shadow-soft hover:shadow-premium transition-all duration-300 hover:-translate-y-1 border border-slate-200/60 overflow-hidden flex flex-col justify-between" data-category="brick" data-name="Brick Calculator">
-        <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-gradient-to-br from-red-100 to-transparent rounded-bl-full opacity-50 group-hover:scale-110 transition-transform"></div>
-        <div>
-          <div class="w-12 h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
-            <!-- Brick Icon -->
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-          </div>
-          <h3 class="text-xl font-display font-bold text-slate-900 mb-2 group-hover:text-primary-600 transition-colors">Brick Calculator</h3>
-          <p class="text-slate-600 text-sm leading-relaxed mb-6">Calculate the exact number of bricks needed for your wall, including mortar joint allowances and waste factors.</p>
+      <!-- Tool 1: Brick Calculator -->
+      <a href="/brick-calculator.html" class="bento-tile group relative flex flex-col overflow-hidden rounded-2xl border border-brand-200 bg-white p-6 shadow-card ring-1 ring-brand-500/10">
+        <div class="flex items-start justify-between gap-3 mb-4">
+          <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 text-white shadow-glow">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="8" height="5" rx="0.5"/><rect x="13" y="6" width="8" height="5" rx="0.5"/><rect x="3" y="13" width="8" height="5" rx="0.5"/><rect x="13" y="13" width="8" height="5" rx="0.5"/></svg>
+          </span>
+          <span class="rounded-full bg-brand-50 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-brand-700 ring-1 ring-brand-200">Most Used</span>
         </div>
-        <div class="flex items-center text-sm font-bold text-primary-600">Open Tool <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></div>
+        <h3 class="font-display text-lg font-bold text-ink-900 group-hover:text-brand-700 transition-colors">Brick Calculator</h3>
+        <p class="mt-2 flex-1 text-[13px] leading-relaxed text-slate-600">
+          Calculate the exact number of bricks, blocks and bags of mortar required for a wall.
+        </p>
+        <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+          <span class="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-500">Bricks</span>
+          <span class="flex items-center gap-1 text-[11px] font-bold text-brand-600">Open Tool <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
       </a>
 
-      <!-- Tool Card 2: Concrete Block (CMU) -->
-      <a href="/calculators.html" class="tool-card group relative bg-white rounded-3xl p-8 shadow-soft hover:shadow-premium transition-all duration-300 hover:-translate-y-1 border border-slate-200/60 overflow-hidden flex flex-col justify-between" data-category="block" data-name="Concrete Block Calculator">
-        <div>
-          <div class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-700 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
-            <!-- Block Icon -->
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM4 12h16"></path></svg>
-          </div>
-          <h3 class="text-xl font-display font-bold text-slate-900 mb-2 group-hover:text-primary-600 transition-colors">Concrete Block Calculator</h3>
-          <p class="text-slate-600 text-sm leading-relaxed mb-6">Estimate CMU blocks, grout volume, and rebar requirements for structural block walls and foundations.</p>
+      <!-- Tool 2: Concrete Block Calculator -->
+      <a href="/block-calculator.html" class="bento-tile group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+        <div class="flex items-start justify-between gap-3 mb-4">
+          <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-slate-100 text-slate-600">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="1.5" /><path d="M3 12h18M12 4v16" /></svg>
+          </span>
         </div>
-        <div class="flex items-center text-sm font-bold text-primary-600">Open Tool <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></div>
+        <h3 class="font-display text-lg font-bold text-ink-900 group-hover:text-brand-700 transition-colors">Concrete Block Calculator</h3>
+        <p class="mt-2 flex-1 text-[13px] leading-relaxed text-slate-600">
+          Estimate the number of CMU blocks required for your wall, accounting for mortar joints.
+        </p>
+        <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+          <span class="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-500">Blocks</span>
+          <span class="flex items-center gap-1 text-[11px] font-bold text-brand-600">Open Tool <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
       </a>
 
-      <!-- Tool Card 3: Mortar Mix Calculator -->
-      <a href="/calculators.html" class="tool-card group relative bg-white rounded-3xl p-8 shadow-soft hover:shadow-premium transition-all duration-300 hover:-translate-y-1 border border-slate-200/60 overflow-hidden flex flex-col justify-between" data-category="mortar" data-name="Mortar Mix Calculator">
-        <div>
-          <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
-            <!-- Mortar Icon -->
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
-          </div>
-          <h3 class="text-xl font-display font-bold text-slate-900 mb-2 group-hover:text-primary-600 transition-colors">Mortar Mix Calculator</h3>
-          <p class="text-slate-600 text-sm leading-relaxed mb-6">Determine the exact ratio of cement, lime, and sand required for Type N, S, or M mortar based on your wall area.</p>
+      <!-- Tool 3: Mortar Calculator -->
+      <a href="/mortar-calculator.html" class="bento-tile group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+        <div class="flex items-start justify-between gap-3 mb-4">
+          <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-orange-50 text-orange-600">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14h16M4 14v4a2 2 0 002 2h12a2 2 0 002-2v-4M4 14l2-8h12l2 8" /></svg>
+          </span>
         </div>
-        <div class="flex items-center text-sm font-bold text-primary-600">Open Tool <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></div>
+        <h3 class="font-display text-lg font-bold text-ink-900 group-hover:text-brand-700 transition-colors">Mortar Calculator</h3>
+        <p class="mt-2 flex-1 text-[13px] leading-relaxed text-slate-600">
+          Calculate the bags of cement and sand required to mix enough mortar for your masonry work.
+        </p>
+        <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+          <span class="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-500">Mortar</span>
+          <span class="flex items-center gap-1 text-[11px] font-bold text-brand-600">Open Tool <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
       </a>
 
-      <!-- Tool Card 4: Stone Veneer Calculator -->
-      <a href="/calculators.html" class="tool-card group relative bg-white rounded-3xl p-8 shadow-soft hover:shadow-premium transition-all duration-300 hover:-translate-y-1 border border-slate-200/60 overflow-hidden flex flex-col justify-between" data-category="stone brick" data-name="Stone Veneer Calculator">
-        <div>
-          <div class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-700 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
-            <!-- Stone Icon -->
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-          </div>
-          <h3 class="text-xl font-display font-bold text-slate-900 mb-2 group-hover:text-primary-600 transition-colors">Stone Veneer Calculator</h3>
-          <p class="text-slate-600 text-sm leading-relaxed mb-6">Calculate flat stone, corner pieces, and scratch coat materials for interior and exterior stone veneer.</p>
+      <!-- Tool 4: Brick Pillar Calculator -->
+      <a href="/brick-pillar-calculator.html" class="bento-tile group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+        <div class="flex items-start justify-between gap-3 mb-4">
+          <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-stone-50 text-stone-600">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="4" width="10" height="16" rx="1" /><path d="M4 20h16M4 4h16" /></svg>
+          </span>
         </div>
-        <div class="flex items-center text-sm font-bold text-primary-600">Open Tool <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></div>
+        <h3 class="font-display text-lg font-bold text-ink-900 group-hover:text-brand-700 transition-colors">Brick Pillar Calculator</h3>
+        <p class="mt-2 flex-1 text-[13px] leading-relaxed text-slate-600">
+          Estimate bricks and mortar required for square or rectangular brick pillars and piers.
+        </p>
+        <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+          <span class="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-500">Bricks</span>
+          <span class="flex items-center gap-1 text-[11px] font-bold text-brand-600">Open Tool <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
       </a>
 
-      <!-- Tool Card 5: Rebar Calculator -->
-      <a href="/calculators.html" class="tool-card group relative bg-white rounded-3xl p-8 shadow-soft hover:shadow-premium transition-all duration-300 hover:-translate-y-1 border border-slate-200/60 overflow-hidden flex flex-col justify-between" data-category="block" data-name="Rebar Calculator">
-        <div>
-          <div class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-700 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
-            <!-- Rebar Icon -->
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-          </div>
-          <h3 class="text-xl font-display font-bold text-slate-900 mb-2 group-hover:text-primary-600 transition-colors">Rebar Calculator</h3>
-          <p class="text-slate-600 text-sm leading-relaxed mb-6">Estimate the number of rebar sticks, tie wire, and chairs needed for reinforced masonry walls.</p>
+      <!-- Tool 5: Stone Veneer Calculator -->
+      <a href="/stone-veneer-calculator.html" class="bento-tile group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+        <div class="flex items-start justify-between gap-3 mb-4">
+          <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-600">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3z" /><path d="M3 9h18M9 21V9" /></svg>
+          </span>
         </div>
-        <div class="flex items-center text-sm font-bold text-primary-600">Open Tool <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></div>
+        <h3 class="font-display text-lg font-bold text-ink-900 group-hover:text-brand-700 transition-colors">Stone Veneer Calculator</h3>
+        <p class="mt-2 flex-1 text-[13px] leading-relaxed text-slate-600">
+          Calculate the square footage and corner pieces needed for natural or manufactured stone veneer.
+        </p>
+        <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+          <span class="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-500">Coverage</span>
+          <span class="flex items-center gap-1 text-[11px] font-bold text-brand-600">Open Tool <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
       </a>
 
-      <!-- Tool Card 6: Wall Tie Estimator -->
-      <a href="/calculators.html" class="tool-card group relative bg-white rounded-3xl p-8 shadow-soft hover:shadow-premium transition-all duration-300 hover:-translate-y-1 border border-slate-200/60 overflow-hidden flex flex-col justify-between" data-category="brick block" data-name="Wall Tie Estimator">
-        <div>
-          <div class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-700 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
-            <!-- Tie Icon -->
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
-          </div>
-          <h3 class="text-xl font-display font-bold text-slate-900 mb-2 group-hover:text-primary-600 transition-colors">Wall Tie Estimator</h3>
-          <p class="text-slate-600 text-sm leading-relaxed mb-6">Calculate the correct quantity of masonry ties required for cavity walls and veneer installations.</p>
+      <!-- Tool 6: Wall Tie Calculator -->
+      <a href="/wall-tie-calculator.html" class="bento-tile group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+        <div class="flex items-start justify-between gap-3 mb-4">
+          <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-indigo-50 text-indigo-600">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v18M16 3v18M3 8h18M3 16h18" /></svg>
+          </span>
         </div>
-        <div class="flex items-center text-sm font-bold text-primary-600">Open Tool <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></div>
+        <h3 class="font-display text-lg font-bold text-ink-900 group-hover:text-brand-700 transition-colors">Wall Tie Calculator</h3>
+        <p class="mt-2 flex-1 text-[13px] leading-relaxed text-slate-600">
+          Determine the number of cavity wall ties required based on wall area and tie spacing.
+        </p>
+        <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+          <span class="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-500">Fixings</span>
+          <span class="flex items-center gap-1 text-[11px] font-bold text-brand-600">Open Tool <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
       </a>
 
     </div>
-    
-    <!-- No Results Message -->
-    <div id="no-results" class="hidden text-center py-16">
-      <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-slate-100 mb-4">
-        <svg class="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-      </div>
-      <h3 class="text-xl font-bold text-slate-900 mb-2">No tools found</h3>
-      <p class="text-slate-500">Try adjusting your search terms or filter selection.</p>
-      <button onclick="document.getElementById('tool-search').value = ''; document.querySelectorAll('.filter-btn').forEach(b => b.click()); document.querySelector('[data-filter=all]').click();" class="mt-6 text-primary-600 font-semibold hover:underline">Clear all filters</button>
-    </div>
-
   </div>
 </section>
 
-<!-- ============ IN-ARTICLE AD SLOT ============ -->
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-  <div class="bg-slate-100 border-dashed border-2 border-slate-300 flex items-center justify-center min-h-[250px] w-full rounded-2xl">
-    <span class="text-slate-400 font-medium text-sm tracking-widest uppercase">Ad Space — In-Article Rectangle</span>
+<!-- Ad Space (Leaderboard) -->
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <div class="my-8 flex min-h-[90px] items-center justify-center rounded-xl bg-slate-100 border-2 border-dashed border-slate-300 px-4 py-6 text-center">
+    <span class="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400">Ad Space — 728×90 / Responsive Leaderboard</span>
   </div>
 </div>
 
-<!-- ============================================================
-     DEEP CONTENT PART 1 (Article Section)
-     ============================================================ -->
-<section class="py-12 lg:py-16 bg-white">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Deep Content Section (Part 1) -->
+<section class="relative bg-white py-16 sm:py-24">
+  <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
     
-    <article class="prose prose-lg prose-slate max-w-none">
-      
-      <h2 class="text-3xl font-display font-bold text-slate-900 mb-6">The Fundamentals of Masonry Estimation</h2>
-      
-      <p class="text-slate-600 leading-relaxed mb-6">
-        Masonry is one of the oldest and most durable building methods known to mankind. It involves laying individual units—such as clay bricks, concrete blocks, or natural stone—in a bed of mortar. Because each unit is relatively small, a masonry wall is made up of thousands of components. This makes precise estimation critical. Ordering too few materials will halt your project, while over-ordering leads to thousands of dollars wasted on unused materials.
-      </p>
-      <p class="text-slate-600 leading-relaxed mb-6">
-        To accurately use a <strong>masonry calculator</strong>, you must understand the dimensions of the units, the thickness of the mortar joints, and the bond pattern being used.
-      </p>
+    <header class="mb-10 text-center">
+      <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-600">Technical Guide</p>
+      <h2 class="mt-2 font-display text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">
+        The Fundamentals of Masonry
+      </h2>
+      <div class="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brand-500 to-brand-300"></div>
+    </header>
 
-      <h3 class="text-2xl font-display font-bold text-slate-900 mt-10 mb-4">Types of Bricks and Their Coverage</h3>
-      
-      <p class="text-slate-600 leading-relaxed mb-6">
-        Bricks come in various standard sizes depending on the region. In the US, the American Society for Testing and Materials (ASTM) establishes standard dimensions. The most common brick types are:
+    <div class="article-prose prose prose-slate max-w-none prose-p:text-[16px] prose-p:leading-[1.8] prose-p:text-slate-700 prose-strong:text-ink-900 prose-headings:font-display prose-headings:font-bold">
+      <p class="text-lg leading-relaxed text-slate-700 font-medium">
+        Masonry is one of the oldest and most durable forms of construction. But unlike timber framing or drywall, masonry requires a deep understanding of material quantities and joint dimensions. Small errors in estimating can lead to massive problems on site.
       </p>
 
-      <!-- Technical Table -->
-      <div class="overflow-x-auto my-8 rounded-xl shadow-sm border border-slate-200">
-        <table class="min-w-full text-left">
-          <thead class="bg-slate-900 text-white">
-            <tr>
-              <th class="py-4 px-6 font-semibold">Brick Type</th>
-              <th class="py-4 px-6 font-semibold">Nominal Dimensions (L x H x W)</th>
-              <th class="py-4 px-6 font-semibold">Bricks per Sq. Ft.</th>
-              <th class="py-4 px-6 font-semibold">Bricks per Sq. M.</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-200 bg-white">
-            <tr class="hover:bg-slate-50 transition-colors">
-              <td class="py-4 px-6 font-medium text-slate-900">Modular</td>
-              <td class="py-4 px-6 text-slate-600">7 5/8" x 2 1/4" x 3 5/8"</td>
-              <td class="py-4 px-6 text-slate-600">6.86</td>
-              <td class="py-4 px-6 text-slate-600">73.8</td>
-            </tr>
-            <tr class="hover:bg-slate-50 transition-colors">
-              <td class="py-4 px-6 font-medium text-slate-900">Queen</td>
-              <td class="py-4 px-6 text-slate-600">7 5/8" x 2 3/4" x 3 1/8"</td>
-              <td class="py-4 px-6 text-slate-600">5.76</td>
-              <td class="py-4 px-6 text-slate-600">62.0</td>
-            </tr>
-            <tr class="hover:bg-slate-50 transition-colors">
-              <td class="py-4 px-6 font-medium text-slate-900">King</td>
-              <td class="py-4 px-6 text-slate-600">9 5/8" x 2 3/4" x 3"</td>
-              <td class="py-4 px-6 text-slate-600">4.5</td>
-              <td class="py-4 px-6 text-slate-600">48.4</td>
-            </tr>
-            <tr class="hover:bg-slate-50 transition-colors">
-              <td class="py-4 px-6 font-medium text-slate-900">Roman</td>
-              <td class="py-4 px-6 text-slate-600">11 5/8" x 1 5/8" x 3 5/8"</td>
-              <td class="py-4 px-6 text-slate-600">6.0</td>
-              <td class="py-4 px-6 text-slate-600">64.6</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      
-      <p class="text-sm text-slate-500 italic mb-6">Note: These calculations assume a standard 3/8-inch mortar joint. Always add a 5-10% waste factor for breakage and cuts.</p>
-
-      <h3 class="text-2xl font-display font-bold text-slate-900 mt-10 mb-4">Understanding Concrete Masonry Units (CMU)</h3>
-
-      <p class="text-slate-600 leading-relaxed mb-6">
-        Concrete Masonry Units (CMUs), commonly called cinder blocks or concrete blocks, are the backbone of commercial and foundation construction. Unlike bricks, CMUs are large and hollow. The most common nominal size is <strong>8" x 8" x 16"</strong>. 
+      <h3 class="text-xl font-bold text-ink-900 mt-8">Nominal vs. Actual Dimensions</h3>
+      <p>
+        The biggest mistake beginners make is failing to understand the difference between "nominal" and "actual" dimensions.
       </p>
-      <p class="text-slate-600 leading-relaxed mb-6">
-        Because of their size, a standard CMU block covers 8" x 16" of wall area, which is 128 square inches or <strong>1.125 blocks per square foot</strong>. The hollow cores (usually two per block) are designed to allow the insertion of vertical rebar and to be filled with concrete grout, creating a reinforced, load-bearing wall. 
+      <p>
+        When you buy a standard concrete block (CMU) in the US, it is called an <strong>8x8x16 block</strong>. These are its <em>nominal</em> dimensions. However, if you measure the block with a tape measure, you will find it is actually 7 5/8" x 7 5/8" x 15 5/8". Why? Because the nominal size includes the standard 3/8-inch mortar joint that will be placed between the blocks.
+      </p>
+      <p>
+        When calculating how many blocks fit into a wall, you must use the nominal dimensions (including the mortar joint), not the actual physical size of the block. Our calculators do this automatically.
       </p>
 
-      <h3 class="text-2xl font-display font-bold text-slate-900 mt-10 mb-4">Mortar Joints and ASTM C270</h3>
-
-      <p class="text-slate-600 leading-relaxed mb-6">
-        The mortar is the glue that holds the masonry together, but it also serves to accommodate slight movements and seal the wall against weather. The standard mortar joint thickness is <strong>3/8 inch</strong>. 
+      <h3 class="text-xl font-bold text-ink-900 mt-8">The Importance of the Mortar Joint</h3>
+      <p>
+        Mortar is the glue that holds masonry together, but it is also a structural component. In the UK and Australia, a standard mortar joint is <strong>10mm</strong>. In the US, it is typically <strong>3/8 inch</strong>.
       </p>
-      <p class="text-slate-600 leading-relaxed mb-6">
-        Mortar mix designs are strictly governed by <strong>ASTM C270</strong>. The two most common mixes used in residential and light commercial construction are:
+      <p>
+        If the mortar joint is too thick, the compressive strength of the wall decreases significantly. If it is too thin, the bricks or blocks will not bond properly and the wall may be uneven. A consistent mortar joint is the hallmark of a professional mason.
       </p>
-      <ul class="list-disc pl-6 mb-6 text-slate-600 space-y-3">
-        <li><strong>Type N Mortar (1:1:6):</strong> A mix of 1 part Portland cement, 1 part hydrated lime, and 6 parts sand. It has a compressive strength of 750 psi. It is highly recommended for exterior, above-grade load-bearing walls due to its excellent workability and moderate strength.</li>
-        <li><strong>Type S Mortar (1:1/2:4.5):</strong> A mix of 1 part cement, 1/2 part lime, and 4.5 parts sand. It has a compressive strength of 1,800 psi. It is used for structural walls, foundation walls, and areas subject to high wind or seismic loads.</li>
-      </ul>
-      <p class="text-slate-600 leading-relaxed mb-6">
-        Choosing the wrong mortar can be disastrous. Using a mortar that is stronger than the brick can cause the brick to crack under thermal movement, rather than the mortar failing gracefully.
-      </p>
-
-    </article>
-   </div>
-  </section>
-
-      <!-- Continue Article from Phase 4 -->
-    <article class="prose prose-lg prose-slate max-w-none">
-      
-      <h3 class="text-2xl font-display font-bold text-slate-900 mt-10 mb-4">Masonry Bond Patterns and Structural Integrity</h3>
-      
-      <p class="text-slate-600 leading-relaxed mb-6">
-        The way bricks or blocks are arranged is called the "bond pattern." The bond pattern is not just for aesthetics; it directly affects the structural integrity, load distribution, and weather resistance of the wall. When estimating material, the bond pattern determines the number of cut bricks required at corners and edges.
-      </p>
-      
-      <ul class="list-disc pl-6 mb-6 text-slate-600 space-y-3">
-        <li><strong>Running Bond:</strong> The most common pattern, where each course is offset by half a brick from the course below. It provides excellent strength, distributes loads evenly, and requires very few cuts.</li>
-        <li><strong>Stack Bond:</strong> Bricks are stacked directly on top of each other with continuous vertical joints. This is aesthetically striking but structurally weak because it lacks the overlapping (interlocking) of units. Stack bond requires horizontal joint reinforcement (truss-type wires) to prevent cracking.</li>
-        <li><strong>Flemish Bond:</strong> Alternating headers (short ends) and stretchers (long ends) in the same course. It is highly decorative and historically popular but requires more labor and complex corner detailing.</li>
-      </ul>
-
-      <h3 class="text-2xl font-display font-bold text-slate-900 mt-10 mb-4">Wall Bracing and Code Requirements (TMS 402)</h3>
-
-      <p class="text-slate-600 leading-relaxed mb-6">
-        Masonry walls are heavy, but they are also brittle. They must be designed to resist lateral loads from wind and seismic activity. In the US, the International Building Code (IBC) references <strong>TMS 402 (Building Code Requirements for Masonry Structures)</strong> for these design criteria.
-      </p>
-
-      <p class="text-slate-600 leading-relaxed mb-6">
-        A critical concept in masonry is <strong>slenderness ratio</strong>. A tall, thin wall can buckle under wind loads if it is not properly braced. To prevent this:
-      </p>
-      
-      <ul class="list-disc pl-6 mb-6 text-slate-600 space-y-2">
-        <li>Walls must be laterally supported by intersecting walls, floors, or roofs at specific intervals.</li>
-        <li>For cavity walls (two wythes of brick with a gap between them), <strong>wall ties</strong> must be used to connect the outer and inner leaves. Ties are typically spaced at a maximum of 24 inches horizontally and 16 inches vertically.</li>
-        <li>Structural reinforcement (rebar) inside grouted CMU cores is mandatory for load-bearing walls in high-wind or seismic zones.</li>
-      </ul>
-
-      <blockquote class="border-l-4 border-primary-500 pl-4 my-8 italic text-slate-700 bg-slate-50 p-4 rounded-r-lg">
-        <strong>Pro Tip:</strong> Always use a weep hole at the base of the wall (above the flashing) in brick veneer walls. This allows trapped moisture to escape and prevents efflorescence and spalling (freeze-thaw damage) in cold climates.
-      </blockquote>
-
-      <h3 class="text-2xl font-display font-bold text-slate-900 mt-10 mb-4">Calculating Waste Allowance for Masonry</h3>
-
-      <p class="text-slate-600 leading-relaxed mb-6">
-        Masonry units are heavy and brittle. Dropping a pallet of bricks or cutting corners incorrectly means you will break a percentage of them. Standard industry practice dictates adding a <strong>5% to 10% waste factor</strong> to your total material order.
-      </p>
-      <p class="text-slate-600 leading-relaxed mb-6">
-        For standard running bond walls with minimal corners, a 5% allowance is usually sufficient. However, if your wall includes:
-      </p>
-      <ul class="list-disc pl-6 mb-6 text-slate-600 space-y-2">
-        <li>Complex architectural features (curved walls, arches).</li>
-        <li>Numerous window and door openings requiring lintels and cut bricks.</li>
-        <li>Stack bond patterns requiring precise cuts.</li>
-      </ul>
-      <p class="text-slate-600 leading-relaxed mb-6">
-        ...then increase your waste allowance to <strong>10%</strong>. Using our masonry calculators automatically applies an adjustable waste slider, ensuring you never under-order.
-      </p>
-
-      <h3 class="text-2xl font-display font-bold text-slate-900 mt-10 mb-4">International Masonry Standards (UK & AU)</h3>
-      <p class="text-slate-600 leading-relaxed mb-6">
-        Just like framing, masonry codes vary globally. In the UK and Europe, masonry is governed by <strong>Eurocode 6 (BS EN 1996)</strong>. UK bricks are often metric (e.g., 215mm x 65mm x 102.5mm) and mortar joints are typically 10mm. In Australia, the standard is <strong>AS 3700 (Masonry Structures)</strong>, with clay bricks commonly measuring 230mm x 76mm x 110mm. Always verify your calculator settings match your region's metric or imperial standards.
-      </p>
-
-    </article>
-  </div>
-</section>
-
-<!-- ============ IN-ARTICLE AD SLOT (Bottom) ============ -->
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 mb-12">
-  <div class="bg-slate-100 border-dashed border-2 border-slate-300 flex items-center justify-center min-h-[250px] w-full rounded-2xl">
-    <span class="text-slate-400 font-medium text-sm tracking-widest uppercase">Ad Space — In-Article Rectangle</span>
-  </div>
-</div>
-
-<!-- ============================================================
-     CONCLUSION BOX (PREMIUM DESIGN)
-     ============================================================ -->
-<section class="py-12 bg-white">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="relative overflow-hidden rounded-3xl bg-slate-900 p-8 sm:p-12 shadow-premium">
-      <!-- Background Effects -->
-      <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-primary-500/20 blur-3xl pointer-events-none"></div>
-      <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 rounded-full bg-primary-600/20 blur-3xl pointer-events-none"></div>
-      
-      <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-        <div class="md:w-2/3">
-          <h3 class="text-2xl md:text-3xl font-display font-bold text-white mb-3">Ready to calculate your masonry?</h3>
-          <p class="text-slate-300 text-lg leading-relaxed">
-            Don't guess your brick, block, or mortar order. Use our free, engineer-reviewed tools to get precise material takeoffs and avoid costly overages.
-          </p>
-        </div>
-        <div class="md:w-1/3 flex justify-end w-full">
-          <a href="#tools-grid" class="w-full md:w-auto inline-flex justify-center items-center px-8 py-4 bg-primary-500 hover:bg-primary-400 text-white font-bold rounded-xl transition-all shadow-[0_0_20px_rgba(14,165,233,0.4)] hover:shadow-[0_0_30px_rgba(14,165,233,0.6)] hover:-translate-y-0.5">
-            Use the Calculators
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-          </a>
-        </div>
-      </div>
     </div>
+
   </div>
-</section>
+ </section>
 
   <!-- ============================================================
-     PHASE 6/9 — 7 FAQs (ACCORDION STYLE)
-     File: masonry.html
+     PHASE 5/9 — DEEP CONTENT (PART 2) + AD SLOT + CONCLUSION
      ============================================================ -->
-<section class="py-16 lg:py-24 bg-slate-50 border-t border-slate-200">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+<section class="relative bg-white pb-16 sm:pb-24">
+  <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
     
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-display font-bold text-slate-900 tracking-tight">Frequently Asked Questions</h2>
-      <p class="mt-4 text-lg text-slate-600">Expert answers to the most common masonry and material estimation questions.</p>
+    <!-- Article Content Continuation -->
+    <article class="article-prose prose prose-slate max-w-none prose-p:text-[16px] prose-p:leading-[1.8] prose-p:text-slate-700 prose-strong:text-ink-900 prose-headings:font-display prose-headings:font-bold">
+      
+      <h3 class="text-xl font-bold text-ink-900 mt-2">Why You Must Add a Waste Allowance</h3>
+      <p>
+        Just like concrete, masonry requires a waste allowance. Bricks and blocks are heavy, brittle, and prone to breakage during transport and handling. Furthermore, masons have to cut bricks to fit corners, openings, and bond patterns.
+      </p>
+      <ul>
+        <li><strong>Breakage:</strong> Expect 2% to 5% breakage on standard bricks and blocks.</li>
+        <li><strong>Cutting Losses:</strong> Complex walls with many windows or decorative patterns require more cuts, increasing waste.</li>
+        <li><strong>Mortar Waste:</strong> A significant amount of mortar is lost from the trowel or falls into the cavity/ground.</li>
+      </ul>
+      <p>
+        As a general rule, add a <strong>5% waste allowance</strong> for simple straight walls, and <strong>10% to 15%</strong> for walls with complex features or highly textured stone veneer. Our <a href="/brick-calculator.html" class="text-brand-600 font-semibold hover:underline">Brick Calculator</a> includes a customizable waste slider.
+      </p>
+
+      <h3 class="text-xl font-bold text-ink-900 mt-8">Global Code Differences: US vs UK vs AU</h3>
+      <p>
+        Masonry is heavily regulated because it carries structural loads and resists wind and seismic forces.
+      </p>
+      <p>
+        In the <strong>United States</strong>, masonry design is governed by <strong>TMS 402</strong> (Building Code Requirements for Masonry Structures). It dictates specific mortar types (Type N, Type S) for different applications. Type S is used for high-strength structural walls, while Type N is for general above-grade exterior walls.
+      </p>
+      <p>
+        In the <strong>United Kingdom</strong>, the standard is <strong>BS 5628</strong> and <strong>Eurocode 6</strong>. The UK is dominated by <em>cavity wall</em> construction, where an inner leaf (load-bearing) and an outer leaf (weatherproofing) are tied together with wall ties. The design must account for wind loading on the outer leaf.
+      </p>
+      <p>
+        In <strong>Australia</strong>, the standard is <strong>AS 3700</strong>. Australian masonry often uses single-skin construction (often with a rendered finish) and must account for extreme wind classifications and potential seismic activity, especially in the western and northern regions.
+      </p>
+
+      <h3 class="text-xl font-bold text-ink-900 mt-8">The Role of Wall Ties</h3>
+      <p>
+        If you are building a cavity wall (common in the UK), wall ties are critical. They connect the two leaves of masonry together and transfer lateral wind loads to the inner structure.
+      </p>
+      <p>
+        The spacing of wall ties is strictly regulated. Standard practice requires ties at a maximum spacing of 900mm horizontally and 450mm vertically. However, around openings (like windows and doors), ties must be placed closer together to prevent cracking. Use our <a href="/wall-tie-calculator.html" class="text-brand-600 font-semibold hover:underline">Wall Tie Calculator</a> to ensure you order the correct quantity.
+      </p>
+    </article>
+
+    <!-- Ad Slot 2 (Fixed mobile padding) -->
+    <div class="my-10 not-prose px-4 sm:px-6 lg:px-0">
+      <div class="flex min-h-[250px] items-center justify-center rounded-xl bg-slate-100 border-2 border-dashed border-slate-300 px-4 py-6 text-center">
+        <span class="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400">Ad Space — In-Article Rectangle</span>
+      </div>
     </div>
 
-    <div class="space-y-4">
-      
+    <!-- Conclusion Box (Fixed mobile padding) -->
+    <div class="rounded-2xl bg-slate-50 p-6 sm:p-8 border border-slate-200 mx-4 sm:mx-0 not-prose">
+      <h3 class="font-display text-xl font-bold text-ink-900">The Bottom Line</h3>
+      <p class="mt-3 text-[15px] leading-relaxed text-slate-600">
+        Masonry estimating is about understanding the relationship between the block and the joint. By calculating quantities using nominal dimensions, factoring in a realistic waste allowance for breakage and cuts, and ensuring your design complies with local structural codes, you guarantee a strong and beautiful finish. 
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="/brick-calculator.html" class="inline-flex items-center gap-2 rounded-xl bg-ink-900 px-5 py-3 text-sm font-bold text-white shadow-card transition-all hover:bg-ink-800 hover:shadow-glow">
+          Try the Brick Calculator
+          <svg class="h-4 w-4 text-brand-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="/guides.html" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-bold text-slate-700 transition-colors hover:border-brand-300 hover:text-brand-700">
+          Read Masonry Guides
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section> 
+
+<!-- ============================================================
+     PHASE 6/9 — FAQS + JSON-LD SCHEMA
+     ============================================================ -->
+
+<!-- FAQ Schema for Google Rich Snippets -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://buildmetric.org/masonry.html#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many bricks do I need per square meter or square foot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a standard UK metric brick (215mm x 65mm) with a 10mm mortar joint, you need approximately 60 bricks per square meter for a half-brick wall. For a standard US modular brick (3 5/8\" x 2 1/4\") with a 3/8\" mortar joint, you need about 6.86 bricks per square foot."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between nominal and actual brick size?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Actual size is the physical dimension of the brick itself. Nominal size is the actual size plus the intended mortar joint. For example, a US modular brick is actually 3 5/8\" wide, but its nominal size is 4\" because it includes the 3/8\" mortar joint. Always use nominal dimensions when calculating brick quantities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the standard thickness of a mortar joint?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the UK and Australia, the standard mortar joint is 10mm. In the United States, the standard joint thickness is 3/8 inch. Mortar joints that are too thick reduce the compressive strength of the wall, while joints that are too thin prevent the bricks from bonding correctly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much mortar do I need for a brick wall?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As a general rule, a 1:4 or 1:5 cement-to-sand mix by volume is standard for bricklaying. For every 1000 bricks, you will typically need about 0.3 cubic meters (or roughly 10 cubic feet) of damp mortar mix, depending on the joint thickness and brick type."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do I need wall ties for a brick wall?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wall ties are used in cavity wall construction to connect the outer leaf of brickwork to the inner structural wall. They transfer lateral wind loads to the inner structure and prevent the outer wall from bowing or collapsing. They are typically spaced at 900mm horizontally and 450mm vertically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much waste allowance should I add for bricks and blocks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You should add a 5% waste allowance for simple, straight walls to account for breakage and minor cuts. For complex walls with many windows, doors, or decorative patterns, add 10% to 15% because more bricks will need to be cut to fit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the strongest bond pattern for a brick wall?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "English Bond (alternating courses of stretchers and headers) is generally considered the strongest structural bond because no vertical joints align. However, Stretcher Bond (all bricks laid lengthways) is the most common for modern cavity walls because it is the most economical."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- FAQ Section -->
+<section id="faqs" class="border-t border-slate-200 bg-slate-50 py-16 sm:py-24">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+
+    <header class="mb-10 text-center">
+      <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-600">Frequently Asked Questions</p>
+      <h2 class="mt-2 font-display text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">
+        Masonry FAQs
+      </h2>
+      <div class="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brand-500 to-brand-300"></div>
+    </header>
+
+    <div class="space-y-3">
       <!-- FAQ 1 -->
-      <details class="group bg-white rounded-2xl shadow-soft border border-slate-200 overflow-hidden open:ring-1 open:ring-primary-500 transition-all duration-300">
-        <summary class="flex items-center justify-between p-6 font-display font-semibold text-lg text-slate-900 cursor-pointer hover:bg-slate-50 transition-colors">
-          What is masonry in construction?
-          <div class="ml-4 flex-shrink-0 w-8 h-8 rounded-full bg-slate-100 group-hover:bg-primary-50 flex items-center justify-center transition-colors">
-            <svg class="faq-icon w-5 h-5 text-slate-500 group-hover:text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
-          </div>
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">01</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">How many bricks do I need per square meter or square foot?</span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14" /></svg>
         </summary>
-        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
-          Masonry is the building of structures from individual units, typically laid in courses and bound together by mortar. Common materials include clay bricks, concrete blocks (CMU), stone, and glass blocks. Masonry is known for its durability, fire resistance, and thermal mass, and is governed by codes like TMS 402/602 in the US and BS EN 1996 (Eurocode 6).
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            For a standard UK metric brick (215mm x 65mm) with a 10mm mortar joint, you need approximately <strong class="text-ink-900">60 bricks per square meter</strong> for a half-brick wall. For a standard US modular brick (3 5/8" x 2 1/4") with a 3/8" mortar joint, you need about <strong class="text-ink-900">6.86 bricks per square foot</strong>.
+          </p>
         </div>
       </details>
 
       <!-- FAQ 2 -->
-      <details class="group bg-white rounded-2xl shadow-soft border border-slate-200 overflow-hidden open:ring-1 open:ring-primary-500 transition-all duration-300">
-        <summary class="flex items-center justify-between p-6 font-display font-semibold text-lg text-slate-900 cursor-pointer hover:bg-slate-50 transition-colors">
-          What is the standard mortar mix ratio for bricks?
-          <div class="ml-4 flex-shrink-0 w-8 h-8 rounded-full bg-slate-100 group-hover:bg-primary-50 flex items-center justify-center transition-colors">
-            <svg class="faq-icon w-5 h-5 text-slate-500 group-hover:text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
-          </div>
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">02</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">What is the difference between nominal and actual brick size?</span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14" /></svg>
         </summary>
-        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
-          The most common mortar for brick is Type N, which is a 1:1:6 mix of Portland cement, hydrated lime, and sand. Type N is recommended for general-purpose exterior and interior load-bearing walls. For softer historic bricks, Type O (1:2:9) is preferred to allow flexibility. Always refer to ASTM C270 for mortar specifications.
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            <strong class="text-ink-900">Actual size</strong> is the physical dimension of the brick itself. <strong class="text-ink-900">Nominal size</strong> is the actual size plus the intended mortar joint. For example, a US modular brick is actually 3 5/8" wide, but its nominal size is 4" because it includes the 3/8" mortar joint. Always use nominal dimensions when calculating brick quantities.
+          </p>
         </div>
       </details>
 
       <!-- FAQ 3 -->
-      <details class="group bg-white rounded-2xl shadow-soft border border-slate-200 overflow-hidden open:ring-1 open:ring-primary-500 transition-all duration-300">
-        <summary class="flex items-center justify-between p-6 font-display font-semibold text-lg text-slate-900 cursor-pointer hover:bg-slate-50 transition-colors">
-          How do I calculate the number of bricks per square foot?
-          <div class="ml-4 flex-shrink-0 w-8 h-8 rounded-full bg-slate-100 group-hover:bg-primary-50 flex items-center justify-center transition-colors">
-            <svg class="faq-icon w-5 h-5 text-slate-500 group-hover:text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
-          </div>
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">03</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">What is the standard thickness of a mortar joint?</span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14" /></svg>
         </summary>
-        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
-          For a standard modular brick (7 5/8 x 3 5/8 x 2 1/4 inches) laid in a running bond with 3/8-inch mortar joints, you need approximately 6.86 bricks per square foot of wall area. For a queen size brick, it's about 5.7 bricks per square foot, and for a king size, about 4.5. Always add a 5-10% waste factor.
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            In the UK and Australia, the standard mortar joint is <strong class="text-ink-900">10mm</strong>. In the United States, the standard joint thickness is <strong class="text-ink-900">3/8 inch</strong>. Mortar joints that are too thick reduce the compressive strength of the wall, while joints that are too thin prevent the bricks from bonding correctly.
+          </p>
         </div>
       </details>
 
       <!-- FAQ 4 -->
-      <details class="group bg-white rounded-2xl shadow-soft border border-slate-200 overflow-hidden open:ring-1 open:ring-primary-500 transition-all duration-300">
-        <summary class="flex items-center justify-between p-6 font-display font-semibold text-lg text-slate-900 cursor-pointer hover:bg-slate-50 transition-colors">
-          What is the difference between brick and CMU block?
-          <div class="ml-4 flex-shrink-0 w-8 h-8 rounded-full bg-slate-100 group-hover:bg-primary-50 flex items-center justify-center transition-colors">
-            <svg class="faq-icon w-5 h-5 text-slate-500 group-hover:text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
-          </div>
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">04</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">How much mortar do I need for a brick wall?</span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14" /></svg>
         </summary>
-        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
-          Bricks are typically smaller, clay-fired units used for veneer, facades, or solid walls. CMU (Concrete Masonry Unit) blocks are much larger, hollow concrete blocks (usually 8x8x16 inches) used primarily for structural walls, foundations, and partitions. CMUs are faster to lay due to their size and are often reinforced with rebar and grout.
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            As a general rule, a 1:4 or 1:5 cement-to-sand mix by volume is standard for bricklaying. For every <strong class="text-ink-900">1000 bricks</strong>, you will typically need about <strong class="text-ink-900">0.3 cubic meters</strong> (or roughly 10 cubic feet) of damp mortar mix, depending on the joint thickness and brick type.
+          </p>
         </div>
       </details>
 
       <!-- FAQ 5 -->
-      <details class="group bg-white rounded-2xl shadow-soft border border-slate-200 overflow-hidden open:ring-1 open:ring-primary-500 transition-all duration-300">
-        <summary class="flex items-center justify-between p-6 font-display font-semibold text-lg text-slate-900 cursor-pointer hover:bg-slate-50 transition-colors">
-          How do you calculate mortar for a brick wall?
-          <div class="ml-4 flex-shrink-0 w-8 h-8 rounded-full bg-slate-100 group-hover:bg-primary-50 flex items-center justify-center transition-colors">
-            <svg class="faq-icon w-5 h-5 text-slate-500 group-hover:text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
-          </div>
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">05</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">Why do I need wall ties for a brick wall?</span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14" /></svg>
         </summary>
-        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
-          Mortar is calculated by volume. For a standard modular brick wall, the mortar volume is roughly 0.20 cubic feet per square foot of wall. A typical 80lb bag of premixed mortar yields about 0.7 cubic feet. Alternatively, for a 1:1:6 mix, you will need approximately 1 part cement, 1 part lime, and 6 parts sand by volume, plus water.
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            Wall ties are used in cavity wall construction to connect the outer leaf of brickwork to the inner structural wall. They transfer lateral wind loads to the inner structure and prevent the outer wall from bowing or collapsing. They are typically spaced at <strong class="text-ink-900">900mm horizontally and 450mm vertically</strong>.
+          </p>
         </div>
       </details>
 
       <!-- FAQ 6 -->
-      <details class="group bg-white rounded-2xl shadow-soft border border-slate-200 overflow-hidden open:ring-1 open:ring-primary-500 transition-all duration-300">
-        <summary class="flex items-center justify-between p-6 font-display font-semibold text-lg text-slate-900 cursor-pointer hover:bg-slate-50 transition-colors">
-          What are the common masonry building codes?
-          <div class="ml-4 flex-shrink-0 w-8 h-8 rounded-full bg-slate-100 group-hover:bg-primary-50 flex items-center justify-center transition-colors">
-            <svg class="faq-icon w-5 h-5 text-slate-500 group-hover:text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
-          </div>
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">06</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">How much waste allowance should I add for bricks and blocks?</span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14" /></svg>
         </summary>
-        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
-          In the US, masonry is governed by the International Building Code (IBC) which references TMS 402 (Building Code Requirements for Masonry Structures) and TMS 602 (Specification for Masonry Structures). In the UK and Europe, Eurocode 6 (BS EN 1996) applies. In Australia, AS 3700 covers masonry structures. Local codes may impose additional seismic or wind requirements.
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            You should add a <strong class="text-ink-900">5% waste allowance</strong> for simple, straight walls to account for breakage and minor cuts. For complex walls with many windows, doors, or decorative patterns, add <strong class="text-ink-900">10% to 15%</strong> because more bricks will need to be cut to fit.
+          </p>
         </div>
       </details>
 
       <!-- FAQ 7 -->
-      <details class="group bg-white rounded-2xl shadow-soft border border-slate-200 overflow-hidden open:ring-1 open:ring-primary-500 transition-all duration-300">
-        <summary class="flex items-center justify-between p-6 font-display font-semibold text-lg text-slate-900 cursor-pointer hover:bg-slate-50 transition-colors">
-          How much does a masonry wall cost per square foot?
-          <div class="ml-4 flex-shrink-0 w-8 h-8 rounded-full bg-slate-100 group-hover:bg-primary-50 flex items-center justify-center transition-colors">
-            <svg class="faq-icon w-5 h-5 text-slate-500 group-hover:text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
-          </div>
+      <details class="group rounded-xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:border-brand-300 open:border-brand-400 open:shadow-glow">
+        <summary class="flex items-start justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5">
+          <span class="flex items-start gap-3.5">
+            <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-brand-500/10 font-mono text-[10px] font-bold text-brand-700">07</span>
+            <span class="font-display text-[15px] font-bold leading-snug text-ink-900 sm:text-base">What is the strongest bond pattern for a brick wall?</span>
+          </span>
+          <svg class="faq-icon mt-0.5 h-5 w-5 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14" /></svg>
         </summary>
-        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
-          Cost varies widely by material and region. In the US, a brick veneer wall costs roughly $10 to $20 per square foot installed, while a structural CMU block wall costs about $8 to $15 per square foot. Stone veneer can run $20 to $40+ per square foot. Labor typically accounts for 50-60% of the total cost.
+        <div class="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+          <p class="text-[14.5px] leading-relaxed text-slate-600">
+            <strong class="text-ink-900">English Bond</strong> (alternating courses of stretchers and headers) is generally considered the strongest structural bond because no vertical joints align. However, <strong class="text-ink-900">Stretcher Bond</strong> (all bricks laid lengthways) is the most common for modern cavity walls because it is the most economical.
+          </p>
         </div>
       </details>
+    </div>
 
+    <!-- Continue Prompt -->
+    <div class="mt-10 rounded-2xl border border-brand-200 bg-brand-50 p-5 text-center sm:p-6">
+      <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-brand-700">Still have a question?</p>
+      <p class="mt-2 text-sm leading-relaxed text-slate-700">
+        Email <a href="mailto:contact@buildmetric.org" class="font-semibold text-brand-700 underline underline-offset-2 hover:text-brand-800">contact@buildmetric.org</a> — every message is read by a real person, and we reply within two business days.
+      </p>
     </div>
   </div>
-</section>
+</section> 
 
-<!-- ============================================================
-     PHASE 7/9 — AUTHOR/REVIEWER TRUST BOX & RELATED GRID
-     File: masonry.html
-     ============================================================ -->
-<section class="py-16 bg-white border-t border-slate-100">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-      
-      <!-- LEFT: Author/Reviewer Trust Box (E-E-A-T) -->
-      <div class="lg:col-span-4">
-        <div class="sticky top-28 bg-slate-50 rounded-3xl p-8 border border-slate-200/60 shadow-soft relative overflow-hidden">
-          <!-- Accent Line -->
-          <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary-400 to-primary-600"></div>
-          
-          <div class="flex items-center gap-4 mb-6">
-            <!-- Avatar Placeholder -->
-            <div class="relative">
-              <div class="w-16 h-16 rounded-full bg-slate-200 border-4 border-white shadow-sm flex items-center justify-center overflow-hidden">
-                <!-- SVG avatar to ensure it loads without external dependencies -->
-                <svg class="w-10 h-10 text-slate-400" fill="currentColor" viewBox="0 0 24 24"><path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
-              </div>
-              <!-- Verified Badge -->
-              <div class="absolute bottom-0 right-0 bg-primary-500 rounded-full p-1 border-2 border-white" title="Verified Professional">
-                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-              </div>
-            </div>
+    <!-- ============================================================
+       PHASE 7/9 — AUTHOR BOX + RELATED GUIDES + </main>
+       ============================================================ -->
+
+  <!-- Author / Reviewer Box -->
+  <section class="border-t border-slate-200 bg-white py-12 sm:py-16">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+        <div class="border-b border-slate-200 bg-gradient-to-br from-ink-900 to-ink-800 px-6 py-4 sm:px-8">
+          <div class="flex items-center gap-2.5">
+            <span class="grid h-7 w-7 place-items-center rounded-md bg-brand-500 text-white">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4" /><circle cx="12" cy="12" r="10" /></svg>
+            </span>
+            <p class="font-display text-[11px] font-bold uppercase tracking-[0.16em] text-brand-300">About These Tools</p>
+          </div>
+        </div>
+        <div class="px-6 py-6 sm:px-8 sm:py-8">
+          <div class="flex flex-col sm:flex-row items-start gap-6">
+            <span class="grid h-16 w-16 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-amber-500 to-amber-700 text-white shadow-glow sm:h-20 sm:w-20">
+              <svg class="h-8 w-8 sm:h-10 sm:w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="8" height="5" rx="0.5"/><rect x="13" y="6" width="8" height="5" rx="0.5"/><rect x="3" y="13" width="8" height="5" rx="0.5"/><rect x="13" y="13" width="8" height="5" rx="0.5"/></svg>
+            </span>
             <div>
-              <h3 class="font-display font-bold text-lg text-slate-900">Thomas J. Harrison, P.E.</h3>
-              <p class="text-sm font-medium text-primary-600">Masonry &amp; Structural Engineer</p>
+              <h3 class="font-display text-xl font-extrabold text-ink-900">BuildMetric Masonry Engineering</h3>
+              <p class="mt-1 text-sm font-semibold text-brand-700">Calculators &amp; Estimating Tools</p>
+              <p class="mt-3 text-[14px] leading-relaxed text-slate-600">
+                Every masonry calculator in this section accounts for the subtle but critical differences between nominal and actual dimensions, mortar joint thickness, and waste allowances. They are reviewed by structural engineers and experienced bricklayers to ensure compliance with <strong>TMS 402 (US)</strong>, <strong>BS 5628 (UK)</strong>, and <strong>AS 3700 (AU)</strong>.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <a href="/about.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-700 hover:underline">Read our methodology &rarr;</a>
+              </div>
             </div>
           </div>
-          
-          <p class="text-slate-600 text-sm leading-relaxed mb-6">
-            Thomas is a licensed Professional Engineer specializing in masonry design and structural forensics. With over 18 years in the field, he has consulted on large-scale commercial blockwork and historic brick restoration. He reviewed all TMS 402 code references and material calculations on this page.
-          </p>
-          
-          <div class="flex flex-col gap-3 text-sm">
-            <div class="flex items-center text-slate-500">
-              <svg class="w-4 h-4 mr-2 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-              Fact-checked &amp; Peer-reviewed
-            </div>
-            <div class="flex items-center text-slate-500">
-              <svg class="w-4 h-4 mr-2 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-              Last updated: October 2026
-            </div>
-          </div>
-          
-          <div class="mt-6 pt-6 border-t border-slate-200">
-            <a href="/about.html#editorial-policy" class="text-sm font-bold text-slate-900 hover:text-primary-600 flex items-center transition-colors">
-              Read our Editorial Policy 
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-            </a>
-          </div>
         </div>
-      </div>
-
-      <!-- RIGHT: Related Guides & Tools -->
-      <div class="lg:col-span-8">
-        <div class="mb-6 flex items-center justify-between">
-          <h2 class="text-2xl font-display font-bold text-slate-900 tracking-tight">Related Tools &amp; Guides</h2>
-          <a href="/calculators.html" class="text-sm font-semibold text-primary-600 hover:text-primary-700 transition-colors">View All</a>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          
-          <!-- Related Item 1 (Tool) -->
-          <a href="/brick-calculator.html" class="group flex flex-col p-5 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-premium hover:border-primary-300 transition-all duration-300">
-            <div class="flex items-start justify-between mb-3">
-              <div class="w-10 h-10 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-              </div>
-              <span class="text-xs font-bold px-2 py-1 bg-slate-100 text-slate-500 rounded-md uppercase tracking-wider group-hover:bg-primary-50 group-hover:text-primary-600 transition-colors">Calculator</span>
-            </div>
-            <h4 class="font-display font-bold text-slate-900 group-hover:text-primary-600 transition-colors mb-2">Brick Calculator</h4>
-            <p class="text-sm text-slate-500 line-clamp-2">Calculate the exact number of bricks and mortar bags for your wall.</p>
-          </a>
-
-          <!-- Related Item 2 (Guide) -->
-          <a href="/guides/reading-architectural-drawings.html" class="group flex flex-col p-5 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-premium hover:border-primary-300 transition-all duration-300">
-            <div class="flex items-start justify-between mb-3">
-              <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center group-hover:scale-110 transition-transform">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-              </div>
-              <span class="text-xs font-bold px-2 py-1 bg-slate-100 text-slate-500 rounded-md uppercase tracking-wider group-hover:bg-slate-200 transition-colors">Guide</span>
-            </div>
-            <h4 class="font-display font-bold text-slate-900 group-hover:text-primary-600 transition-colors mb-2">Reading Architectural Drawings</h4>
-            <p class="text-sm text-slate-500 line-clamp-2">Learn how to read masonry hatch patterns and wall section details.</p>
-          </a>
-
-          <!-- Related Item 3 (Tool) -->
-          <a href="/concrete-calculator.html" class="group flex flex-col p-5 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-premium hover:border-primary-300 transition-all duration-300">
-            <div class="flex items-start justify-between mb-3">
-              <div class="w-10 h-10 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-              </div>
-              <span class="text-xs font-bold px-2 py-1 bg-slate-100 text-slate-500 rounded-md uppercase tracking-wider group-hover:bg-primary-50 group-hover:text-primary-600 transition-colors">Calculator</span>
-            </div>
-            <h4 class="font-display font-bold text-slate-900 group-hover:text-primary-600 transition-colors mb-2">Concrete Calculator</h4>
-            <p class="text-sm text-slate-500 line-clamp-2">Estimate concrete volume for footings, slabs, and masonry grout fills.</p>
-          </a>
-
-          <!-- Related Item 4 (Guide) -->
-          <a href="/guides/concrete-waste-allowance.html" class="group flex flex-col p-5 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-premium hover:border-primary-300 transition-all duration-300">
-            <div class="flex items-start justify-between mb-3">
-              <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center group-hover:scale-110 transition-transform">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-              </div>
-              <span class="text-xs font-bold px-2 py-1 bg-slate-100 text-slate-500 rounded-md uppercase tracking-wider group-hover:bg-slate-200 transition-colors">Guide</span>
-            </div>
-            <h4 class="font-display font-bold text-slate-900 group-hover:text-primary-600 transition-colors mb-2">Concrete Waste Allowance</h4>
-            <p class="text-sm text-slate-500 line-clamp-2">How much extra material should you order for grout and concrete?</p>
-          </a>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     PHASE 8/9 — FINAL JAVASCRIPT (INTERACTIONS & LOGIC)
-     File: masonry.html
-     ============================================================ -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    
-    /* ==========================================
-       1. MOBILE MENU TOGGLE
-       ========================================== */
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuIconOpen = document.getElementById('menu-icon-open');
-    const menuIconClose = document.getElementById('menu-icon-close');
-
-    if (mobileMenuBtn && mobileMenu) {
-      mobileMenuBtn.addEventListener('click', () => {
-        const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
-        
-        // Toggle aria-expanded for accessibility
-        mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
-        
-        // Toggle Menu Visibility
-        mobileMenu.classList.toggle('hidden');
-        
-        // Toggle Icons
-        menuIconOpen.classList.toggle('hidden');
-        menuIconClose.classList.toggle('hidden');
-      });
-    }
-
-    /* ==========================================
-       2. NAVBAR SCROLL EFFECT
-       ========================================== */
-    const navbar = document.querySelector('header');
-    
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 20) {
-        navbar.classList.add('shadow-md', 'bg-white/90');
-      } else {
-        navbar.classList.remove('shadow-md', 'bg-white/90');
-      }
-    }, { passive: true });
-
-    /* ==========================================
-       3. SEARCH & FILTER LOGIC (TOOLS GRID)
-       ========================================== */
-    const searchInput = document.getElementById('tool-search');
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const toolCards = document.querySelectorAll('.tool-card');
-    const noResults = document.getElementById('no-results');
-
-    // State
-    let currentFilter = 'all';
-    let currentSearch = '';
-
-    function filterTools() {
-      let visibleCount = 0;
-
-      toolCards.forEach(card => {
-        const name = card.getAttribute('data-name').toLowerCase();
-        const category = card.getAttribute('data-category').toLowerCase();
-        
-        // Check if search matches name or category
-        const matchesSearch = name.includes(currentSearch) || category.includes(currentSearch);
-        
-        // Check if filter matches (or if 'all' is selected)
-        const matchesFilter = currentFilter === 'all' || category.includes(currentFilter);
-
-        if (matchesSearch && matchesFilter) {
-          // Show Card
-          card.classList.remove('hidden');
-          // Add small animation
-          card.classList.add('animate-fade-in-up');
-          visibleCount++;
-        } else {
-          // Hide Card
-          card.classList.add('hidden');
-          card.classList.remove('animate-fade-in-up');
-        }
-      });
-
-      // Handle "No Results" Empty State
-      if (visibleCount === 0) {
-        noResults.classList.remove('hidden');
-      } else {
-        noResults.classList.add('hidden');
-      }
-    }
-
-    // Search Input Event Listener
-    if (searchInput) {
-      searchInput.addEventListener('input', (e) => {
-        currentSearch = e.target.value.toLowerCase().trim();
-        filterTools();
-      });
-    }
-
-    // Filter Buttons Event Listener
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        // 1. Update Active State classes for all buttons
-        filterBtns.forEach(b => {
-          b.classList.remove('bg-slate-900', 'text-white', 'shadow-md');
-          b.classList.add('bg-slate-100', 'text-slate-600', 'hover:bg-slate-200');
-        });
-        
-        // 2. Set Active State for clicked button
-        btn.classList.remove('bg-slate-100', 'text-slate-600', 'hover:bg-slate-200');
-        btn.classList.add('bg-slate-900', 'text-white', 'shadow-md');
-
-        // 3. Apply Filter
-        currentFilter = btn.getAttribute('data-filter');
-        filterTools();
-      });
-    });
-
-    /* ==========================================
-       4. SMOOTH SCROLL FOR INTERNAL LINKS
-       ========================================== */
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          e.preventDefault();
-          targetElement.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
-
-  });
-</script>
-
-    </main>
-  <!-- ============ MAIN CONTENT WRAPPER ENDS ============ -->
-
-  <!-- ============ FOOTER AD SLOT ============ -->
-  <div class="bg-slate-950 pt-10 pb-4">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-slate-900 border border-dashed border-slate-700 flex items-center justify-center min-h-[90px] w-full rounded-xl">
-        <span class="text-slate-500 font-medium text-xs tracking-widest uppercase">Ad Space — Leaderboard (728x90)</span>
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Related Guides -->
+  <section class="border-t border-slate-200 bg-slate-50 py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      
+      <div class="mb-10 flex items-end justify-between">
+        <div>
+          <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-600">Recommended Reading</p>
+          <h2 class="mt-2 font-display text-2xl font-extrabold tracking-tight text-ink-900 sm:text-3xl">Construction &amp; Estimating Guides</h2>
+        </div>
+        <a href="/guides.html" class="hidden sm:inline-flex items-center gap-1.5 text-sm font-bold text-brand-600 hover:text-brand-700">
+          View all guides
+          <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        
+        <!-- Guide 1 (Architectural Drawings) -->
+        <a href="/guides/reading-architectural-drawings.html" class="bento-tile group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+          <div class="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-indigo-600 to-indigo-800">
+            <div class="absolute inset-0 bg-grid-slate [background-size:22px_22px] opacity-20" aria-hidden="true"></div>
+            <svg class="absolute inset-x-0 bottom-3 mx-auto h-12 w-12 text-white/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" /><path d="M4 8h16M8 4v16" /></svg>
+          </div>
+          <div class="flex flex-1 flex-col p-5">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-indigo-600">General</span>
+            <h3 class="mt-1.5 font-display text-base font-bold leading-snug text-ink-900 group-hover:text-brand-700">How to Read Architectural Drawings (For Tradespeople)</h3>
+            <div class="mt-4 flex items-center justify-between border-t border-slate-100 pt-3 mt-auto">
+              <span class="text-[10px] font-bold uppercase tracking-[0.12em] text-slate-500">Read Guide</span>
+              <svg class="h-3.5 w-3.5 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- Guide 2 (Concrete Waste) -->
+        <a href="/guides/concrete-waste-allowance.html" class="bento-tile group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+          <div class="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-slate-600 to-slate-800">
+            <div class="absolute inset-0 bg-grid-slate [background-size:22px_22px] opacity-25" aria-hidden="true"></div>
+            <svg class="absolute inset-x-0 bottom-3 mx-auto h-12 w-12 text-white/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M5 20V9l7-5 7 5v11M9 20v-4h6v4" /></svg>
+          </div>
+          <div class="flex flex-1 flex-col p-5">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Concrete</span>
+            <h3 class="mt-1.5 font-display text-base font-bold leading-snug text-ink-900 group-hover:text-brand-700">How Much Waste Should You Add to a Concrete Order?</h3>
+            <div class="mt-4 flex items-center justify-between border-t border-slate-100 pt-3 mt-auto">
+              <span class="text-[10px] font-bold uppercase tracking-[0.12em] text-slate-500">Read Guide</span>
+              <svg class="h-3.5 w-3.5 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- Guide 3 (Stud Spacing) -->
+        <a href="/guides/stud-spacing-by-code.html" class="bento-tile group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+          <div class="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-brand-600 to-brand-800">
+            <div class="absolute inset-0 bg-grid-slate [background-size:22px_22px] opacity-20" aria-hidden="true"></div>
+            <svg class="absolute inset-x-0 bottom-3 mx-auto h-12 w-12 text-white/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V8l6-4 6 4v13M10 12h4M10 16h4" /></svg>
+          </div>
+          <div class="flex flex-1 flex-col p-5">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-brand-600">Framing</span>
+            <h3 class="mt-1.5 font-display text-base font-bold leading-snug text-ink-900 group-hover:text-brand-700">Stud Spacing: IRC 2021 vs BS 5268 vs AS 1684 Compared</h3>
+            <div class="mt-4 flex items-center justify-between border-t border-slate-100 pt-3 mt-auto">
+              <span class="text-[10px] font-bold uppercase tracking-[0.12em] text-slate-500">Read Guide</span>
+              <svg class="h-3.5 w-3.5 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  </main>
 
   <!-- ============================================================
-       PHASE 9/9 — PREMIUM FOOTER
-       File: masonry.html
+     PHASE 8/9 — JAVASCRIPT INTERACTIONS
+     ============================================================ -->
+<script>
+  (function () {
+    'use strict';
+
+    /* ============================================================
+       1. MOBILE MENU TOGGLE
+       ============================================================ */
+    (function initMobileMenu() {
+      var toggle = document.getElementById('navToggle');
+      var menu = document.getElementById('mobileMenu');
+      var iconOpen = document.getElementById('navIconOpen');
+      var iconClose = document.getElementById('navIconClose');
+      if (!toggle || !menu) return;
+
+      toggle.addEventListener('click', function () {
+        var isOpen = !menu.classList.contains('hidden');
+        menu.classList.toggle('hidden', isOpen);
+        iconOpen.classList.toggle('hidden', !isOpen);
+        iconClose.classList.toggle('hidden', isOpen);
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          menu.classList.add('hidden');
+          iconOpen.classList.remove('hidden');
+          iconClose.classList.add('hidden');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+          menu.classList.add('hidden');
+          iconOpen.classList.remove('hidden');
+          iconClose.classList.add('hidden');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.focus();
+        }
+      });
+    })();
+
+    /* ============================================================
+       2. SMOOTH SCROLL FOR HASH LINKS
+       ============================================================ */
+    (function initSmoothScroll() {
+      var headerOffset = 88;
+      document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        var targetId = link.getAttribute('href');
+        if (!targetId || targetId === '#') return;
+
+        link.addEventListener('click', function (e) {
+          var target = document.querySelector(targetId);
+          if (!target) return;
+          e.preventDefault();
+          var top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+          if (history.pushState) history.pushState(null, '', targetId);
+        });
+      });
+    })();
+
+    /* ============================================================
+       3. FILTER BUTTONS UI (Mockup Toggle)
+       ============================================================ */
+    (function initFilters() {
+      var filterBtns = document.querySelectorAll('.filter-btn');
+      if (!filterBtns.length) return;
+
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          // Reset all to default state
+          filterBtns.forEach(function (b) {
+            b.classList.remove('bg-brand-500', 'text-white', 'border-transparent');
+            b.classList.add('border-white/10', 'bg-white/5', 'text-slate-300');
+          });
+          // Set active state on clicked
+          this.classList.remove('border-white/10', 'bg-white/5', 'text-slate-300');
+          this.classList.add('bg-brand-500', 'text-white', 'border-transparent');
+        });
+      });
+    })();
+
+    /* ============================================================
+       4. REVEAL-ON-SCROLL (Subtle entrance for bento tiles)
+       ============================================================ */
+    (function initReveal() {
+      if (!('IntersectionObserver' in window)) return;
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      var tiles = document.querySelectorAll('.bento-tile');
+      if (!tiles.length) return;
+
+      tiles.forEach(function (el) {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(12px)';
+        el.style.transition = 'opacity .5s ease, transform .5s ease';
+      });
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -40px 0px', threshold: 0.05 });
+
+      tiles.forEach(function (el) { observer.observe(el); });
+    })();
+
+    /* ============================================================
+       5. COOKIE SETTINGS BUTTON (Footer CMP Integration)
+       ============================================================ */
+    (function initCookieSettings() {
+      var btn = document.getElementById('footerCookieSettings');
+      if (!btn) return;
+
+      btn.addEventListener('click', function () {
+        if (window.myCMP && typeof window.myCMP.open === 'function') {
+          window.myCMP.open();
+        } else if (window.Cookiebot && window.Cookiebot.dialog) {
+          window.Cookiebot.dialog.show();
+        } else {
+          alert('Cookie settings would open here. Connect this button to your consent manager.');
+        }
+      });
+    })();
+
+  })();
+</script>
+
+<!-- Year auto-fill for footer -->
+<script>
+  (function () {
+    var el = document.getElementById('yearNow');
+    if (el) el.textContent = new Date().getFullYear();
+  })();
+</script>
+
+    <!-- ============================================================
+       PHASE 9/9 — PREMIUM FOOTER + CLOSING TAGS
        ============================================================ -->
-  <footer class="bg-slate-950 text-slate-300 py-16 lg:py-24 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
-        
-        <!-- Brand Column -->
-        <div class="lg:col-span-2">
-          <a href="/index.html" class="flex items-center gap-2.5 mb-6 group inline-flex" aria-label="BuildMetric Home">
-            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-white shadow-premium group-hover:scale-105 transition-transform duration-300">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+  <footer class="relative overflow-hidden border-t border-ink-800 bg-ink-950 text-slate-400">
+
+    <!-- Top Gradient Border Line -->
+    <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-500/60 to-transparent" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -right-32 -top-32 h-72 w-72 rounded-full bg-brand-500/10 blur-3xl" aria-hidden="true"></div>
+
+    <div class="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
+
+      <!-- Top Grid -->
+      <div class="grid gap-10 md:grid-cols-12 md:gap-8">
+
+        <!-- Column 1: Brand & Contact -->
+        <div class="md:col-span-4">
+          <a href="/" class="group flex items-center gap-2.5" aria-label="BuildMetric home">
+            <span class="grid h-10 w-10 place-items-center rounded-xl bg-white/5 ring-1 ring-white/10 transition-transform duration-300 group-hover:scale-105">
+              <svg viewBox="0 0 100 100" class="h-6 w-6" aria-hidden="true">
+                <path d="M20 70 L50 24 L80 70" fill="none" stroke="#0ea5e9" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M38 70 L50 52 L62 70" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.75" />
               </svg>
-            </div>
-            <span class="font-display font-bold text-2xl tracking-tight text-white group-hover:text-primary-400 transition-colors">Build<span class="text-primary-500">Metric</span></span>
+            </span>
+            <span class="leading-tight">
+              <span class="block font-display text-lg font-extrabold tracking-tight text-white">
+                Build<span class="text-gradient">Metric</span>
+              </span>
+              <span class="block text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+                Engineering Calculators
+              </span>
+            </span>
           </a>
-          <p class="text-slate-400 leading-relaxed mb-8 max-w-sm">
-            Free, engineer-reviewed construction calculators and technical reference guides. Built for professionals, contractors, quantity surveyors, and DIY builders worldwide.
+
+          <p class="mt-5 max-w-sm text-[13.5px] leading-relaxed text-slate-400">
+            Independent construction calculators, estimating tools and technical reference guides for building professionals across the <span class="text-white">USA</span>, <span class="text-white">UK</span> and <span class="text-white">Australia</span>. Engineered for accuracy. Published for transparency.
           </p>
-          <div class="flex flex-col gap-3">
-            <a href="mailto:contact@buildmetric.org" class="flex items-center text-sm font-medium text-slate-400 hover:text-primary-400 transition-colors">
-              <svg class="w-5 h-5 mr-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+
+          <div class="mt-6 space-y-2">
+            <a href="mailto:contact@buildmetric.org" class="group flex items-center gap-2.5 text-sm font-semibold text-slate-300 transition-colors hover:text-brand-300">
+              <span class="grid h-8 w-8 place-items-center rounded-lg bg-white/5 ring-1 ring-white/10 transition-colors group-hover:bg-brand-500/20 group-hover:ring-brand-400/40">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" /><path d="M4 7l8 6 8-6" /></svg>
+              </span>
               contact@buildmetric.org
             </a>
+            <a href="mailto:ads@buildmetric.org" class="group flex items-center gap-2.5 text-sm font-semibold text-slate-300 transition-colors hover:text-brand-300">
+              <span class="grid h-8 w-8 place-items-center rounded-lg bg-white/5 ring-1 ring-white/10 transition-colors group-hover:bg-brand-500/20 group-hover:ring-brand-400/40">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8-8-2z" /></svg>
+              </span>
+              ads@buildmetric.org
+            </a>
+          </div>
+
+          <button type="button" id="footerCookieSettings" class="mt-4 inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-[11px] font-bold text-slate-300 transition-colors hover:border-brand-400/40 hover:bg-brand-500/10 hover:text-brand-300">
+            <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M8.5 8.5h.01M15.5 15.5h.01M12 12h.01M8.5 15.5h.01M15.5 8.5h.01" /></svg>
+            Cookie Settings
+          </button>
+        </div>
+
+        <!-- Column 2: Categories (Masonry Active) -->
+        <div class="md:col-span-2">
+          <h3 class="font-display text-[11px] font-bold uppercase tracking-[0.16em] text-white">Categories</h3>
+          <ul class="mt-4 space-y-2.5 text-[13.5px]">
+            <li><a href="/roofing.html" class="transition-colors hover:text-brand-300">Roofing</a></li>
+            <li><a href="/concrete.html" class="transition-colors hover:text-brand-300">Concrete</a></li>
+            <li><a href="/framing.html" class="transition-colors hover:text-brand-300">Framing</a></li>
+            <li><a href="/masonry.html" class="font-semibold text-brand-400 transition-colors hover:text-brand-300" aria-current="page">Masonry</a></li>
+            <li><a href="/drywall.html" class="transition-colors hover:text-brand-300">Drywall</a></li>
+            <li><a href="/paint.html" class="transition-colors hover:text-brand-300">Paint</a></li>
+            <li><a href="/calculators.html" class="font-semibold text-brand-400 transition-colors hover:text-brand-300">All Categories →</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Popular Tools -->
+        <div class="md:col-span-2">
+          <h3 class="font-display text-[11px] font-bold uppercase tracking-[0.16em] text-white">Popular Tools</h3>
+          <ul class="mt-4 space-y-2.5 text-[13.5px]">
+            <li><a href="/roof-pitch-calculator.html" class="transition-colors hover:text-brand-300">Roof Pitch</a></li>
+            <li><a href="/concrete-calculator.html" class="transition-colors hover:text-brand-300">Concrete Volume</a></li>
+            <li><a href="/stud-count-calculator.html" class="transition-colors hover:text-brand-300">Stud Count</a></li>
+            <li><a href="/paint-coverage-calculator.html" class="transition-colors hover:text-brand-300">Paint Coverage</a></li>
+            <li><a href="/calculators.html" class="font-semibold text-brand-400 transition-colors hover:text-brand-300">All Tools →</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Company & Legal -->
+        <div class="md:col-span-4">
+          <div class="grid grid-cols-2 gap-6">
+            <div>
+              <h3 class="font-display text-[11px] font-bold uppercase tracking-[0.16em] text-white">Company</h3>
+              <ul class="mt-4 space-y-2.5 text-[13.5px]">
+                <li><a href="/about.html" class="transition-colors hover:text-brand-300">About</a></li>
+                <li><a href="/guides.html" class="transition-colors hover:text-brand-300">Guides</a></li>
+                <li><a href="/estimating.html" class="transition-colors hover:text-brand-300">Estimating</a></li>
+                <li><a href="/contact.html" class="transition-colors hover:text-brand-300">Contact</a></li>
+                <li><a href="/sitemap.xml" class="transition-colors hover:text-brand-300">Sitemap</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-display text-[11px] font-bold uppercase tracking-[0.16em] text-white">Legal</h3>
+              <ul class="mt-4 space-y-2.5 text-[13.5px]">
+                <li><a href="/privacy.html" class="transition-colors hover:text-brand-300">Privacy Policy</a></li>
+                <li><a href="/terms.html" class="transition-colors hover:text-brand-300">Terms of Service</a></li>
+                <li><a href="/disclaimer.html" class="transition-colors hover:text-brand-300">Disclaimer</a></li>
+                <li><a href="/cookie-policy.html" class="transition-colors hover:text-brand-300">Cookie Policy</a></li>
+                <li><a href="/contact.html" class="transition-colors hover:text-brand-300">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Regional Notice Box -->
+          <div class="mt-5 rounded-xl border border-white/10 bg-white/5 p-3.5">
+            <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-300">Regional Notice</p>
+            <p class="mt-1.5 text-[11.5px] leading-relaxed text-slate-400">
+              BuildMetric content is published in English and reviewed against US, UK and Australian codes. Always verify against your local jurisdiction's current edition.
+            </p>
           </div>
         </div>
+      </div>
 
-        <!-- Column 1: Tools -->
-        <div>
-          <h3 class="font-display font-bold text-white mb-6 tracking-wide uppercase text-sm">Top Tools</h3>
-          <ul class="space-y-4">
-            <li><a href="/calculators.html" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">All Calculators</a></li>
-            <li><a href="/brick-calculator.html" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">Brick Calculator</a></li>
-            <li><a href="/concrete-calculator.html" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">Concrete Calculator</a></li>
-            <li><a href="/stud-count-calculator.html" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">Stud Count Calculator</a></li>
-            <li><a href="/roof-pitch-calculator.html" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">Roof Pitch Calculator</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 2: Categories -->
-        <div>
-          <h3 class="font-display font-bold text-white mb-6 tracking-wide uppercase text-sm">Categories</h3>
-          <ul class="space-y-4">
-            <li><a href="/masonry.html" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">Masonry</a></li>
-            <li><a href="/framing.html" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">Framing</a></li>
-            <li><a href="/roofing.html" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">Roofing</a></li>
-            <li><a href="/concrete.html" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">Concrete</a></li>
-            <li><a href="/estimating.html" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">Estimating</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 3: Resources & Legal -->
-        <div>
-          <h3 class="font-display font-bold text-white mb-6 tracking-wide uppercase text-sm">Resources</h3>
-          <ul class="space-y-4">
-            <li><a href="/guides.html" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">Guides Hub</a></li>
-            <li><a href="/about.html" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">About Us</a></li>
-            <li><a href="/contact.html" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">Contact Us</a></li>
-            <li><a href="/privacy.html" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">Privacy Policy</a></li>
-            <li><a href="/terms.html" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">Terms of Service</a></li>
-            <li><a href="/disclaimer.html" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">Disclaimer</a></li>
-            <li><a href="/cookie-policy.html" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">Cookie Policy</a></li>
-          </ul>
-        </div>
-
+      <!-- Ad Space (Footer Leaderboard) -->
+      <div class="mt-12 flex min-h-[90px] items-center justify-center rounded-xl border-2 border-dashed border-white/10 bg-white/[0.02] px-4 py-6 text-center">
+        <span class="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Ad Space — Footer Leaderboard</span>
       </div>
 
       <!-- Bottom Bar -->
-      <div class="mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-sm text-slate-500">
-          &copy; <span id="current-year">2026</span> BuildMetric. All rights reserved.
+      <div class="mt-10 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 md:flex-row md:items-center">
+        <p class="text-[12px] text-slate-500">
+          &copy; <span id="yearNow">2026</span> BuildMetric. All rights reserved. Operated from <span class="text-slate-400">buildmetric.org</span>.
         </p>
-        <div class="flex items-center gap-2 text-sm text-slate-500">
-          <svg class="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-          Engineer-Reviewed Content
-        </div>
+        <p class="text-[11px] text-slate-500">
+          Built for professionals. General information only — see our <a href="/disclaimer.html" class="font-semibold text-brand-400 underline decoration-brand-500/40 underline-offset-2 hover:text-brand-300">Disclaimer</a>.
+        </p>
       </div>
-
     </div>
   </footer>
 
-  <!-- Dynamic Year Script -->
-  <script>
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-  </script>
-
 </body>
 </html>
-
-  
-    
