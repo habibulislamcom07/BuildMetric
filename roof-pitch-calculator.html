@@ -903,30 +903,36 @@
       var saveBtn = document.getElementById('saveBtn');
 
       // Unit Toggle Logic
-      btnImperial.addEventListener('click', function() {
-        unitSystem.value = 'imperial';
-        btnImperial.classList.add('bg-white', 'text-ink-900', 'shadow-sm');
-        btnImperial.classList.remove('text-slate-500');
-        btnMetric.classList.remove('bg-white', 'text-ink-900', 'shadow-sm');
-        btnMetric.classList.add('text-slate-500');
-        
-        riseUnitLabel.textContent = '(in)';
-        runUnitLabel.textContent = '(in)';
-        if(runInput.value === '100') runInput.value = '12'; // Default to 12 for imperial
-      });
+btnImperial.addEventListener('click', function() {
+  unitSystem.value = 'imperial';
+  
+  // Visuals
+  btnImperial.className = "flex-1 rounded-md bg-white px-3 py-1.5 text-sm font-bold text-ink-900 shadow-sm transition-all";
+  btnMetric.className = "flex-1 rounded-md px-3 py-1.5 text-sm font-bold text-slate-500 transition-all hover:text-ink-900";
+  
+  // Labels & Values
+  riseUnitLabel.textContent = '(in)';
+  runUnitLabel.textContent = '(in)';
+  if(runInput.value === '100') runInput.value = '12';
+  
+  calculatePitch(); // Recalculate instantly
+});
 
-      btnMetric.addEventListener('click', function() {
-        unitSystem.value = 'metric';
-        btnMetric.classList.add('bg-white', 'text-ink-900', 'shadow-sm');
-        btnMetric.classList.remove('text-slate-500');
-        btnImperial.classList.remove('bg-white', 'text-ink-900', 'shadow-sm');
-        btnImperial.classList.add('text-slate-500');
-        
-        riseUnitLabel.textContent = '(mm)';
-        runUnitLabel.textContent = '(mm)';
-        if(runInput.value === '12') runInput.value = '100'; // Default to 100 for metric
-      });
-
+btnMetric.addEventListener('click', function() {
+  unitSystem.value = 'metric';
+  
+  // Visuals
+  btnMetric.className = "flex-1 rounded-md bg-white px-3 py-1.5 text-sm font-bold text-ink-900 shadow-sm transition-all";
+  btnImperial.className = "flex-1 rounded-md px-3 py-1.5 text-sm font-bold text-slate-500 transition-all hover:text-ink-900";
+  
+  // Labels & Values
+  riseUnitLabel.textContent = '(mm)';
+  runUnitLabel.textContent = '(mm)';
+  if(runInput.value === '12') runInput.value = '100';
+  
+  calculatePitch(); // Recalculate instantly
+});
+     
       // Calculation Function
       function calculatePitch(e) {
         if(e) e.preventDefault();
