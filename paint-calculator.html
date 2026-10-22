@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- ============================================================
+       PHASE 1/10 — SEO HEAD & CONFIGURATION
+       File: paint-calculator.html
+       Brand: BuildMetric | Domain: buildmetric.org
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO Meta (US, UK, AU focused) -->
+  <title>Paint Calculator | How Much Paint Do I Need? | BuildMetric</title>
+  <meta name="description" content="Free paint calculator to estimate how many gallons or litres of paint you need for interior or exterior walls. Account for doors, windows, and number of coats." />
+  <meta name="keywords" content="paint calculator, how much paint do i need, paint coverage calculator, gallons of paint, wall paint estimator, paint per square foot" />
+  <meta name="author" content="BuildMetric Editorial Team" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#0ea5e9" />
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://buildmetric.org/paint-calculator.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BuildMetric" />
+  <meta property="og:title" content="Paint Calculator | How Much Paint Do I Need?" />
+  <meta property="og:description" content="Calculate exact paint quantities in gallons or litres based on wall area, doors, windows, and coats." />
+  <meta property="og:url" content="https://buildmetric.org/paint-calculator.html" />
+  <meta property="og:image" content="https://buildmetric.org/assets/og/paint-calculator.png" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Paint Calculator | BuildMetric" />
+  <meta name="twitter:description" content="Estimate exact paint volume for your next painting project." />
+  <meta name="twitter:image" content="https://buildmetric.org/assets/og/paint-calculator.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc',
+              400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1',
+              800: '#075985', 900: '#0c4a6e'
+            },
+            ink: {
+              700: '#334155', 800: '#1e293b', 900: '#0f172a', 950: '#080f1e'
+            }
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: {
+            'soft': '0 4px 20px -2px rgba(15,23,42,0.05)',
+            'hover': '0 12px 32px -8px rgba(14,165,233,0.15)',
+            'glass': '0 4px 24px -4px rgba(15,23,42,0.08)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+    .bg-grid-pattern {
+      background-image: linear-gradient(to right, rgba(15,23,42,0.04) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(15,23,42,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .nav-glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); }
+    details > summary .icon-plus { transition: transform 0.3s ease; }
+    details[open] > summary .icon-plus { transform: rotate(45deg); }
+    details > summary::-webkit-details-marker { display: none; }
+  </style>
+
+  <!-- ================= JSON-LD SCHEMA ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://buildmetric.org/paint-calculator.html#app",
+        "name": "Paint Coverage Calculator",
+        "url": "https://buildmetric.org/paint-calculator.html",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "All",
+        "description": "Calculate how many gallons or litres of paint you need for interior or exterior walls, accounting for doors and windows.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://buildmetric.org/paint-calculator.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://buildmetric.org/" },
+          { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://buildmetric.org/calculators.html" },
+          { "@type": "ListItem", "position": 3, "name": "Paint", "item": "https://buildmetric.org/paint.html" },
+          { "@type": "ListItem", "position": 4, "name": "Paint Calculator", "item": "https://buildmetric.org/paint-calculator.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+ <body class="bg-white text-ink-800 antialiased font-sans flex flex-col min-h-screen">
+
+  <!-- ============================================================
+       SKIP LINK (Accessibility)
+       ============================================================ -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2.5 focus:bg-brand-500 focus:text-white focus:rounded-lg focus:font-semibold focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/70">
+    Skip to main content
+  </a>
+
+  <!-- ============================================================
+       STICKY NAVBAR (Exactly like Homepage)
+       ============================================================ -->
+  <header class="sticky top-0 z-50 nav-glass border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        
+        <!-- Logo -->
+        <div class="flex items-center gap-6">
+          <a href="/" class="flex items-center gap-2.5 shrink-0" aria-label="BuildMetric Home">
+            <img src="logo.png" alt="BuildMetric Logo" class="h-8 sm:h-10 w-auto object-contain" />
+            <span class="font-display font-extrabold text-xl tracking-tight text-ink-900 hidden sm:block">
+              Build<span class="text-brand-500">Metric</span>
+            </span>
+          </a>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden lg:flex items-center gap-1" aria-label="Main Navigation">
+            <a href="/calculators.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Calculators</a>
+            <a href="/guides.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Guides</a>
+            <a href="/about.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">About</a>
+            <a href="/contact.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Contact</a>
+          </nav>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-3">
+          <a href="/calculators.html" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-ink-900 text-white text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+            Open Tools
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuBtn" type="button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-200 text-ink-800 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand-500/40 transition-colors" aria-expanded="false" aria-controls="mobileMenu">
+            <span class="sr-only">Open main menu</span>
+            <svg class="menu-open-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <svg class="menu-close-icon hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 bg-white">
+      <div class="px-4 py-4 space-y-1">
+        <a href="/calculators.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Calculators</a>
+        <a href="/guides.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Guides</a>
+        <a href="/about.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">About</a>
+        <a href="/contact.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main id="main-content" class="flex-grow">
+    
+    <!-- ============================================================
+         BREADCRUMBS & HEADER
+         ============================================================ -->
+    <div class="bg-slate-50 border-b border-slate-200 pt-6 pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="Breadcrumb" class="mb-4">
+          <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs sm:text-sm text-slate-500">
+            <li><a href="/" class="hover:text-brand-600 transition-colors">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/calculators.html" class="hover:text-brand-600 transition-colors">Calculators</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/paint.html" class="hover:text-brand-600 transition-colors">Paint</a></li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page" class="text-ink-900 font-semibold">Paint Calculator</li>
+          </ol>
+        </nav>
+
+        <!-- Page Title & Subtitle -->
+        <h1 class="font-display font-extrabold text-3xl sm:text-4xl text-ink-900 tracking-tight leading-tight">
+          Paint Coverage Calculator
+        </h1>
+        <p class="text-sm sm:text-base text-ink-700 mt-2 max-w-2xl">
+          Estimate the exact amount of paint (gallons or litres) required for your interior or exterior project, accounting for doors, windows, and number of coats.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- ============================================================
+         Phase 3/10 will start here: The Calculator UI (Inputs & Outputs)
+         ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 3/10 — THE CALCULATOR UI
+     Inputs, Unit Toggle, and Result Box
+     ============================================================ -->
+<section class="bg-white py-10 sm:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+      
+      <!-- Left Column: Form Inputs (7/12) -->
+      <div class="lg:col-span-7">
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8">
+          
+          <!-- Unit Toggle (Top Right) -->
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="font-display font-bold text-xl text-ink-900">Project Details</h2>
+            <div class="flex items-center bg-slate-100 p-1 rounded-lg">
+              <button type="button" id="btnImperial" class="px-3 py-1.5 text-xs font-semibold rounded-md bg-white shadow-sm text-ink-900 transition-all">Imperial (ft)</button>
+              <button type="button" id="btnMetric" class="px-3 py-1.5 text-xs font-semibold rounded-md text-slate-500 hover:text-ink-900 transition-all">Metric (m)</button>
+            </div>
+          </div>
+
+          <!-- Dimensions Row -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+            <div>
+              <label for="roomLength" class="block text-sm font-semibold text-ink-900 mb-1.5">Length (<span class="unit-label">ft</span>)</label>
+              <input type="number" id="roomLength" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow" placeholder="e.g. 12" min="0" step="0.1">
+            </div>
+            <div>
+              <label for="roomWidth" class="block text-sm font-semibold text-ink-900 mb-1.5">Width (<span class="unit-label">ft</span>)</label>
+              <input type="number" id="roomWidth" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow" placeholder="e.g. 10" min="0" step="0.1">
+            </div>
+            <div>
+              <label for="wallHeight" class="block text-sm font-semibold text-ink-900 mb-1.5">Ceiling Height (<span class="unit-label">ft</span>)</label>
+              <input type="number" id="wallHeight" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow" placeholder="e.g. 8" min="0" step="0.1">
+            </div>
+          </div>
+
+          <!-- Doors and Windows Row -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+            <div>
+              <label for="numDoors" class="block text-sm font-semibold text-ink-900 mb-1.5">Number of Doors</label>
+              <select id="numDoors" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4+</option>
+              </select>
+              <p class="text-xs text-slate-500 mt-1">Standard door: 21 sq ft / 1.95 sq m</p>
+            </div>
+            <div>
+              <label for="numWindows" class="block text-sm font-semibold text-ink-900 mb-1.5">Number of Windows</label>
+              <select id="numWindows" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4+</option>
+              </select>
+              <p class="text-xs text-slate-500 mt-1">Standard window: 15 sq ft / 1.4 sq m</p>
+            </div>
+          </div>
+
+          <hr class="border-slate-100 my-6">
+
+          <!-- Coats and Paint Type -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+            <div>
+              <label for="numCoats" class="block text-sm font-semibold text-ink-900 mb-1.5">Number of Coats</label>
+              <select id="numCoats" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white">
+                <option value="1">1 Coat (Touch-up)</option>
+                <option value="2" selected>2 Coats (Standard)</option>
+                <option value="3">3 Coats (Color change)</option>
+              </select>
+            </div>
+            <div>
+              <label for="paintType" class="block text-sm font-semibold text-ink-900 mb-1.5">Paint Type</label>
+              <select id="paintType" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white">
+                <option value="350">Interior (Standard, 350 sq ft/gal)</option>
+                <option value="400">Exterior (Thick, 400 sq ft/gal)</option>
+                <option value="250">Primer (High absorb, 250 sq ft/gal)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Calculate Button (Mobile) -->
+          <button type="button" id="calcBtn" class="w-full sm:hidden mt-2 py-3.5 rounded-xl bg-brand-500 text-white font-bold shadow-sm hover:bg-brand-600 transition-colors">
+            Calculate Paint
+          </button>
+
+        </div>
+      </div>
+
+      <!-- Right Column: Result Box (5/12) -->
+      <div class="lg:col-span-5">
+        <div class="bg-ink-900 rounded-2xl shadow-lg border border-ink-800 sticky top-24 overflow-hidden">
+          <div class="p-6 sm:p-8">
+            <h2 class="font-display font-bold text-xl text-white mb-6 flex items-center gap-2">
+              <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+              Your Estimate
+            </h2>
+
+            <!-- Result Outputs -->
+            <div class="space-y-4 mb-8">
+              
+              <!-- Total Area -->
+              <div class="flex justify-between items-center pb-3 border-b border-white/10">
+                <span class="text-sm text-slate-400">Total Wall Area</span>
+                <span class="font-mono text-lg font-semibold text-white" id="outArea">0 <span class="text-xs text-slate-500">sq ft</span></span>
+              </div>
+
+              <!-- Net Paintable Area -->
+              <div class="flex justify-between items-center pb-3 border-b border-white/10">
+                <span class="text-sm text-slate-400">Net Paintable Area</span>
+                <span class="font-mono text-lg font-semibold text-white" id="outNetArea">0 <span class="text-xs text-slate-500">sq ft</span></span>
+              </div>
+
+              <!-- Paint Needed -->
+              <div class="flex justify-between items-center pt-2">
+                <span class="text-sm text-brand-300 font-semibold">Total Paint Needed</span>
+                <div class="text-right">
+                  <span class="font-mono text-3xl font-bold text-brand-400 block" id="outGallons">0</span>
+                  <span class="text-xs text-slate-400" id="outGallonsUnit">Gallons</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Save/Share/Copy Buttons -->
+            <div class="flex items-center gap-2">
+              <button type="button" id="btnSave" class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg>
+                Save
+              </button>
+              <button type="button" id="btnShare" class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                Share
+              </button>
+              <button type="button" id="btnCopy" class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                Copy
+              </button>
+            </div>
+
+          </div>
+        </div>
+        
+        <!-- Quick Tip (Under Result Box) -->
+        <p class="text-xs text-slate-500 mt-4 text-center">
+          <strong>Note:</strong> Always round up to the nearest full can. It is better to have a little left over for touch-ups than to run out mid-project.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 4/10 will start here: First Ad Slot + 2500+ Words Guide (Part 1)
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 4/10 — FIRST AD SLOT + MASSIVE CONTENT PART 1
+     Deep dive into paint math, porosity, and code standards
+     ============================================================ -->
+<section class="bg-white py-12 sm:py-16 border-t border-slate-200">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Ad Space (Leaderboard) -->
+    <div class="mb-12">
+      <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[90px] flex items-center justify-center text-[10px] sm:text-xs text-slate-500 font-medium tracking-widest uppercase">
+        Ad Space — 728×90 / Responsive Leaderboard
+      </div>
+    </div>
+
+    <!-- Article Content Wrapper (Typography optimized) -->
+    <div class="prose prose-slate prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-900 prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-xl">
+      
+      <p class="lead text-xl text-ink-700 font-medium mb-8">
+        Painting is often perceived as the easiest part of a construction or renovation project. However, professional estimators know that paint is one of the most common areas for budget overruns. Ordering too little results in costly delays and mismatched dye lots; ordering too much wastes money on paint that will eventually dry out in the can.
+      </p>
+
+      <p>
+        To achieve a flawless finish, you must look beyond the basic <em>Length × Width</em> formula. Paint is a complex chemical emulsion, and its coverage rate is heavily influenced by the surface you are painting, the tools you use, and the environmental conditions. This guide breaks down the exact methodology used by professional painters and quantity surveyors across the US, UK, and Australia.
+      </p>
+
+      <h3 class="mt-10">The Science of Paint Coverage: Why Labels Lie</h3>
+      <p>
+        If you look at a standard can of paint, you will see a coverage rate—typically around <strong>350 to 400 square feet per gallon (8.6 to 9.8 square meters per liter)</strong>. This number is derived from a laboratory test performed under perfect conditions: a perfectly smooth, non-porous surface, applied at a specific wet-film thickness, using a standardized brush.
+      </p>
+      <p>
+        In the real world, conditions are rarely perfect. If you are painting bare drywall (plasterboard), the gypsum will act like a sponge and absorb a significant amount of the first coat. If you are painting rough exterior stucco, the deep texture means you have much more surface area than the flat dimensions suggest. This is why our calculator uses different coverage baselines depending on your paint and surface type.
+      </p>
+
+      <h4>Understanding Hiding Power and Sheen</h4>
+      <p>
+        The "hiding power" of a paint—its ability to completely obscure the color underneath—is dictated by the ratio of pigment to binder. 
+      </p>
+      <ul>
+        <li><strong>Primers and High-Hiding Paints:</strong> These contain high levels of titanium dioxide (the primary white pigment) and have lower binder levels. They cover well but often require a topcoat for durability. Coverage is usually lower (around 250-300 sq ft/gal) because the film build is thicker.</li>
+        <li><strong>Sheen Levels:</strong> Matte (flat) paints have a higher pigment volume concentration (PVC), making them thicker and harder to spread, resulting in lower coverage. Gloss or semi-gloss paints have more binder and less pigment, spreading thinner and often covering more area per gallon. However, gloss paints highlight surface imperfections, meaning you must spend more time on surface preparation.</li>
+      </ul>
+
+      <!-- Table: Standard Paint Coverage Rates -->
+      <div class="my-8 not-prose rounded-xl border border-slate-200 bg-white overflow-hidden shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left">
+            <thead class="bg-slate-50 border-b border-slate-200">
+              <tr>
+                <th class="px-4 py-3 font-display font-bold text-ink-900">Paint / Surface Type</th>
+                <th class="px-4 py-3 font-display font-bold text-ink-900">Coverage (Sq Ft / Gal)</th>
+                <th class="px-4 py-3 font-display font-bold text-ink-900">Coverage (Sq M / L)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-ink-700">
+              <tr>
+                <td class="px-4 py-3 font-semibold text-ink-900">Interior Latex/Acrylic (Smooth)</td>
+                <td class="px-4 py-3 font-mono">350 - 400</td>
+                <td class="px-4 py-3 font-mono">8.6 - 9.8</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-4 py-3 font-semibold text-ink-900">Exterior Acrylic (Rough)</td>
+                <td class="px-4 py-3 font-mono">300 - 350</td>
+                <td class="px-4 py-3 font-mono">7.4 - 8.6</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-semibold text-ink-900">Primer (New Drywall/Wood)</td>
+                <td class="px-4 py-3 font-mono">250 - 300</td>
+                <td class="px-4 py-3 font-mono">6.1 - 7.4</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-4 py-3 font-semibold text-ink-900">Masonry / Stucco (Very Rough)</td>
+                <td class="px-4 py-3 font-mono">150 - 250</td>
+                <td class="px-4 py-3 font-mono">3.7 - 6.1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h3 class="mt-10">Surface Porosity: The Hidden Variable</h3>
+      <p>
+        The porosity of your substrate is arguably the most critical factor in paint estimation. When estimating for a full home renovation or new build, you must account for the following:
+      </p>
+      
+      <h4>1. New Drywall and Plasterboard</h4>
+      <p>
+        New drywall is highly porous. The paper facing and the joint compound (mud) absorb moisture rapidly. If you apply a standard topcoat directly to new drywall, it will flash-dry too quickly, leading to uneven sheen, lap marks, and poor adhesion. You must apply a dedicated drywall primer (often called a "PVA primer"). 
+        <br><br>
+        <em>Estimator's Rule:</em> For new drywall, budget 1 coat of primer at 300 sq ft/gal, followed by 2 coats of topcoat. For the topcoat, the first coat will still be partially absorbed, so calculate it at 350 sq ft/gal.
+      </p>
+
+      <h4>2. Previously Painted Surfaces</h4>
+      <p>
+        If the wall is already painted with a similar color, the surface is sealed. You can expect maximum coverage from your paint. However, if the previous paint is a dark color and you are painting it white, you may need 3 coats, or a high-hiding primer. Always wash the walls with a degreaser (like TSP in the US) before painting; kitchen grease and bathroom soap scum act as a barrier, preventing paint adhesion and reducing coverage.
+      </p>
+
+      <h4>3. Bare Wood and Metal</h4>
+      <p>
+        Bare wood is highly absorbent, especially end-grain. It requires a wood primer or a specialized stain-blocking primer. Knots in pine will bleed sap through latex paint, requiring a shellac-based primer (e.g., BIN) on the knots. For bare steel or iron, a rust-inhibitive metal primer is mandatory before applying a topcoat.
+      </p>
+
+      <h3 class="mt-10">Regional Standards: US vs UK vs Australia</h3>
+      <p>
+        Different regions have different codes and standards for paint application, which can impact material selection, environmental regulations (VOCs), and required coats.
+      </p>
+
+      <h4>United States (MPI & ASTM)</h4>
+      <p>
+        In the US, the <strong>Master Painters Institute (MPI)</strong> sets the gold standard for commercial and residential paint performance. They categorize paints by gloss level, substrate, and chemical composition. The US Environmental Protection Agency (EPA) heavily regulates Volatile Organic Compounds (VOCs). For interior paints, look for paints with <strong>VOC levels below 50 g/L</strong> (Low-VOC) or 5 g/L (Zero-VOC) to comply with modern green building standards like LEED.
+      </p>
+
+      <h4>United Kingdom (BS 6150 & BS EN 13300)</h4>
+      <p>
+        The UK adheres to <strong>BS 6150</strong> (Code of practice for painting of buildings). This standard dictates surface preparation, application methods, and drying times based on the substrate. Additionally, <strong>BS EN 13300</strong> is used to classify water-borne paints. It rates paints on wet scrub resistance (Class 1 to 5) and opacity (hiding power). When estimating for UK projects, remember that older houses may have lime plaster, which requires breathable mineral paints (like clay or limewash) rather than modern acrylics.
+      </p>
+
+      <h4>Australia (AS/NZS 2311)</h4>
+      <p>
+        Australian construction follows <strong>AS/NZS 2311</strong> (Guide to the painting of buildings). The Australian climate is uniquely harsh, with extreme UV exposure and high humidity in coastal areas. AS/NZS 2311 mandates the use of 3-coat systems (primer, intermediate, topcoat) for most exterior surfaces to ensure maximum durability against UV degradation and mould. For coastal areas (within 1km of the shoreline), specific marine-grade coatings and stainless steel fixings are often required.
+      </p>
+      
+      <hr class="my-10 border-slate-200">
+      
+      <p class="text-base text-slate-700">
+        <em>Continue reading below as we dive into cost estimation, common mistakes, and how to accurately measure complex rooms.</em>
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 5/10 will start here: Content Part 2 (Cost Estimation, Prep & Mistakes)
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 5/10 — MASSIVE CONTENT PART 2 & AD SLOT
+     Cost estimation, Prep, Complex rooms, and Mistakes
+     ============================================================ -->
+<section class="bg-white py-12 sm:py-16 border-t border-slate-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Article Content Wrapper (Continued) -->
+    <div class="prose prose-slate prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-900 prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-xl">
+      
+      <h3 class="mt-8">How to Measure Complex Rooms</h3>
+      <p>
+        Standard rectangular rooms are easy to calculate, but real estate is rarely perfectly square. Here is how professional estimators handle complex geometries:
+      </p>
+      
+      <h4>Sloped and Vaulted Ceilings</h4>
+      <p>
+        If a wall has a sloped ceiling (like in an attic or under a staircase), you cannot simply multiply the length by the highest point. Instead, divide the wall into geometric shapes. Break it into a rectangle (the main body of the wall) and a triangle (the sloped section). The area of a triangle is <em>(Base × Height) ÷ 2</em>. Add these two areas together to get the total paintable square footage.
+      </p>
+
+      <h4>Bay Windows and Alcoves</h4>
+      <p>
+        Measure each individual flat plane of the bay window, including the small return walls and the ceiling/soffit above the window if it is being painted. Do not subtract the window glass from the wall area if you are using a calculator for the whole room; instead, use our built-in "Deduct Windows/Doors" feature to subtract a standard area (e.g., 15 sq ft for a window) per opening. 
+      </p>
+
+      <h4>Open Floor Plans and Multi-Level Spaces</h4>
+      <p>
+        For a two-story foyer or an open-plan living room, measure the full height from the floor to the highest ceiling. Remember that painting a tall wall often requires scaffolding or extension ladders, which significantly increases the labor cost. If you are hiring a pro, expect to pay a premium for "high-wall" painting.
+      </p>
+
+      <!-- In-Article Ad Slot -->
+      <div class="my-10 not-prose">
+        <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[250px] flex items-center justify-center text-xs sm:text-sm text-slate-500 font-medium tracking-widest uppercase">
+          Ad Space — In-Article Rectangle
+        </div>
+      </div>
+
+      <h3 class="mt-10">The "80% Rule" of Surface Preparation</h3>
+      <p>
+        Professional painters often say that 80% of a paint job is in the preparation. If you skip prep, even the most expensive paint will peel, blister, or show every imperfection. Here is the standard prep routine:
+      </p>
+      <ul>
+        <li><strong>Cleaning:</strong> Wash walls with a degreaser (like TSP or sugar soap in the UK). Grease from kitchens and soap scum from bathrooms will prevent paint from adhering.</li>
+        <li><strong>Patching and Sanding:</strong> Fill nail holes and cracks with spackle (polyfilla in the UK/AU). Once dry, sand flush with 120-grit sandpaper. Sand the entire wall lightly to create a "mechanical key" (micro-scratches) so the new paint can grip. Wipe away all dust with a tack cloth.</li>
+        <li><strong>Caulking:</strong> Use a paintable acrylic caulk to seal the gaps between the wall and the baseboards, window frames, and door casings. This creates a professional, seamless look.</li>
+        <li><strong>Taping:</strong> Apply high-quality painter's tape to protect trim, glass, and floors. Use a utility knife to score the tape edge before peeling it off to prevent the paint from tearing.</li>
+      </ul>
+
+      <h3 class="mt-10">Cost Estimation: Materials vs. Labor</h3>
+      <p>
+        If you are budgeting a painting project for a client, your estimate must cover labor, materials, and overhead. 
+      </p>
+      <p>
+        <strong>Material Costs:</strong> A gallon of premium interior paint costs anywhere from <strong>$35 to $80 in the US</strong>, <strong>£25 to £60 in the UK</strong>, and <strong>AUD $50 to $120 in Australia</strong>. Do not forget to factor in the cost of primer, sandpaper, tape, caulk, and brushes/rollers (which are consumables).
+      </p>
+      <p>
+        <strong>Labor Costs:</strong> Labor is highly regional. In the US, painters typically charge <strong>$2.00 to $4.00 per square foot</strong> of wall area. In the UK, a painter might charge <strong>£150 to £250 per day</strong>, and in Australia, expect <strong>AUD $40 to $70 per hour</strong>. 
+      </p>
+      <p>
+        A quick rule of thumb for a standard interior repaint: Estimate the total paintable area and multiply by $3.50 (or the local equivalent) to get a rough total cost. Remember to add 15-20% to your final estimate as a contingency for unforeseen issues (like dry rot or wallpaper removal).
+      </p>
+
+      <h3 class="mt-10">Common Painting Mistakes to Avoid</h3>
+      <p>
+        Even seasoned DIYers make these mistakes. Avoiding them will save you time, money, and frustration:
+      </p>
+      <ol>
+        <li><strong>Not using a primer:</strong> Skipping primer on bare drywall or wood is a recipe for disaster. The wood tannins will bleed through, and the drywall will absorb your expensive topcoat. Always use a primer.</li>
+        <li><strong>Over-thinning the paint:</strong> Do not add water or paint thinner to the can unless the manufacturer explicitly instructs you to do so. Thinning the paint reduces its durability and hiding power. If the paint is too thick, stir it thoroughly—don't dilute it.</li>
+        <li><strong>Painting over dirt:</strong> Paint over dust or grease will inevitably peel. Always clean and degrease surfaces before painting.</li>
+        <li><strong>Using the wrong roller nap:</strong> A 3/8-inch nap roller is perfect for smooth interior walls. If you are painting exterior stucco or rough brick, you need a 3/4-inch or 1-inch nap roller to get the paint into the deep crevices.</li>
+        <li><strong>Painting in direct sunlight (Exterior):</strong> Painting exterior walls when the surface is in direct sunlight causes the paint to dry too quickly, leading to blisters and poor adhesion. Always paint the side of the house that is in the shade, or paint early in the morning.</li>
+      </ol>
+
+      <div class="mt-10 p-6 bg-brand-50 rounded-xl border border-brand-100 not-prose">
+        <h4 class="font-display font-bold text-ink-900 text-lg mb-2">Ready to calculate your paint needs?</h4>
+        <p class="text-sm text-ink-700 mb-4">Use our free calculator to get an exact estimate of how many gallons or litres of paint you need for your project.</p>
+        <a href="#main-content" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700">
+          Back to Calculator <span aria-hidden="true">↑</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 6/10 will start here: Clean Accordion FAQ & Schema
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 6/10 — CLEAN ACCORDION FAQ & SCHEMA
+     Paint-specific questions with minimalist UI
+     ============================================================ -->
+<section class="bg-white py-16 sm:py-24 border-t border-slate-200">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-10 sm:mb-14">
+      <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-ink-900 tracking-tight">Frequently Asked Questions</h2>
+      <p class="text-sm sm:text-base text-ink-700 mt-3">Common questions about estimating paint quantities and coverage.</p>
+    </div>
+
+    <!-- Clean FAQ Accordion List -->
+    <div class="border-t border-slate-200">
+      
+      <!-- FAQ 1 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">How much paint do I need for a standard 12x12 room?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          A standard 12x12 room with 8-foot ceilings has roughly 384 square feet of wall area. After deducting 1 door and 2 windows, the net paintable area is about 330 square feet. For two coats of standard interior paint (assuming 350 sq ft coverage per gallon), you will need roughly <strong>2 gallons</strong> of paint. If you are painting the ceiling as well (144 sq ft), add another half gallon.
+        </div>
+      </details>
+
+      <!-- FAQ 2 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">Do I need 2 or 3 coats of paint?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          For a standard repaint where the new color is similar to the old one, <strong>2 coats</strong> are usually sufficient. However, if you are painting a light color over a dark color (e.g., white over red), or painting bare drywall for the first time, you will likely need a primer coat plus <strong>3 coats</strong> of topcoat to achieve full opacity and a uniform finish.
+        </div>
+      </details>
+
+      <!-- FAQ 3 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">How much does 1 gallon or 1 litre of paint cover?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          In the US, 1 gallon of standard interior paint typically covers <strong>350 to 400 square feet</strong> on a smooth, primed surface. In the UK and Australia, 1 litre of paint covers roughly <strong>8 to 10 square meters</strong>. Note that rough surfaces like stucco or brick will drastically reduce this coverage, sometimes by up to 50%.
+        </div>
+      </details>
+
+      <!-- FAQ 4 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">Does a primer count as one of the coats?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          Technically, primer is a coat, but it is <em>not</em> a topcoat. Primer is formulated to adhere to the bare surface and seal its porosity, providing a uniform base for the topcoat. It does not provide the durability or washability of a topcoat. Therefore, a standard paint job consists of 1 coat of primer followed by 2 coats of topcoat.
+        </div>
+      </details>
+
+      <!-- FAQ 5 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">Do I need to subtract windows and doors from my calculation?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          Yes. Our calculator automatically subtracts a standard area for doors and windows to give you the "net paintable area." If you do not subtract them, you will overestimate the paint needed and likely end up with extra cans. However, it is always wise to keep a small amount of leftover paint (about a quart or 1 litre) for future touch-ups.
+        </div>
+      </details>
+
+      <!-- FAQ 6 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">Can I use interior paint on exterior walls?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          No, never use interior paint on exterior walls. Interior paints are not formulated to withstand UV radiation, rain, or extreme temperature fluctuations. They will crack, peel, and fade within a year. Exterior paints contain special mildewcides and UV blockers, and they remain flexible to accommodate the expansion and contraction of the exterior substrate.
+        </div>
+      </details>
+
+      <!-- FAQ 7 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">How do I calculate paint for ceilings and trim?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          <strong>Ceilings:</strong> Calculate the length × width of the floor (which is the same as the ceiling area). Ceilings usually require a flat (matte) paint, which covers well, so use the standard 350 sq ft/gal coverage. <br><br>
+          <strong>Trim (baseboards, casings, doors):</strong> Trim is usually painted with a semi-gloss or gloss enamel. Because trim is narrow and has multiple sides, it is difficult to measure accurately by area. A good rule of thumb is to estimate about 1 gallon of trim paint for every 1,000 square feet of floor area in the house.
+        </div>
+      </details>
+
+    </div>
+
+    <!-- Still have a question CTA -->
+    <div class="mt-10 text-center">
+      <p class="text-sm text-ink-700">
+        Still have a question? Email <a href="mailto:contact@buildmetric.org" class="text-brand-600 font-semibold hover:underline">contact@buildmetric.org</a> — every message is read by a real person.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQPage JSON-LD SCHEMA (Matches exactly with HTML above)
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much paint do I need for a standard 12x12 room?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A standard 12x12 room with 8-foot ceilings has roughly 384 square feet of wall area. After deducting 1 door and 2 windows, the net paintable area is about 330 square feet. For two coats of standard interior paint (assuming 350 sq ft coverage per gallon), you will need roughly 2 gallons of paint. If you are painting the ceiling as well (144 sq ft), add another half gallon." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need 2 or 3 coats of paint?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For a standard repaint where the new color is similar to the old one, 2 coats are usually sufficient. However, if you are painting a light color over a dark color (e.g., white over red), or painting bare drywall for the first time, you will likely need a primer coat plus 3 coats of topcoat to achieve full opacity and a uniform finish." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does 1 gallon or 1 litre of paint cover?",
+      "acceptedAnswer": { "@type": "Answer", "text": "In the US, 1 gallon of standard interior paint typically covers 350 to 400 square feet on a smooth, primed surface. In the UK and Australia, 1 litre of paint covers roughly 8 to 10 square meters. Note that rough surfaces like stucco or brick will drastically reduce this coverage, sometimes by up to 50%." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a primer count as one of the coats?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Technically, primer is a coat, but it is not a topcoat. Primer is formulated to adhere to the bare surface and seal its porosity, providing a uniform base for the topcoat. It does not provide the durability or washability of a topcoat. Therefore, a standard paint job consists of 1 coat of primer followed by 2 coats of topcoat." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to subtract windows and doors from my calculation?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our calculator automatically subtracts a standard area for doors and windows to give you the net paintable area. If you do not subtract them, you will overestimate the paint needed and likely end up with extra cans. However, it is always wise to keep a small amount of leftover paint (about a quart or 1 litre) for future touch-ups." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use interior paint on exterior walls?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No, never use interior paint on exterior walls. Interior paints are not formulated to withstand UV radiation, rain, or extreme temperature fluctuations. They will crack, peel, and fade within a year. Exterior paints contain special mildewcides and UV blockers, and they remain flexible to accommodate the expansion and contraction of the exterior substrate." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate paint for ceilings and trim?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ceilings: Calculate the length x width of the floor (which is the same as the ceiling area). Ceilings usually require a flat (matte) paint, which covers well, so use the standard 350 sq ft/gal coverage. Trim: Trim is usually painted with a semi-gloss or gloss enamel. Because trim is narrow and has multiple sides, it is difficult to measure accurately by area. A good rule of thumb is to estimate about 1 gallon of trim paint for every 1,000 square feet of floor area in the house." }
+    }
+  ]
+}
+</script>
+
+<!-- ============================================================
+     Phase 7/10 will start here: E-E-A-T Editorial Box + Related Tools
+     ============================================================ -->
+
+  <!-- ============================================================
+     PHASE 7/10 — E-E-A-T EDITORIAL BOX & RELATED CONTENT
+     ============================================================ -->
+
+<!-- E-E-A-T Editorial Team Box -->
+<section class="bg-slate-50 border-t border-slate-200 py-16 sm:py-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+      
+      <!-- Card Header -->
+      <div class="bg-ink-900 px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-6 h-6 rounded bg-white/10 flex items-center justify-center">
+            <svg class="w-3.5 h-3.5 text-brand-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+          </div>
+          <span class="text-xs font-bold uppercase tracking-widest text-slate-200">Verified by Professionals</span>
+        </div>
+        <span class="hidden sm:block text-[10px] font-bold uppercase tracking-widest text-slate-500">BuildMetric Standard</span>
+      </div>
+
+      <!-- Card Body -->
+      <div class="p-6 sm:p-8 md:p-10">
+        <div class="flex flex-col md:flex-row gap-8 items-start">
+          
+          <!-- Reviewer Avatar & Info -->
+          <div class="shrink-0 flex flex-col items-center text-center">
+            <div class="w-20 h-20 rounded-full bg-gradient-to-br from-ink-800 to-ink-900 flex items-center justify-center text-white font-display font-extrabold text-2xl ring-4 ring-slate-100 mb-3 shadow-inner">
+              SJ
+            </div>
+            <h3 class="font-display font-bold text-ink-900 text-base">Sarah Jenkins</h3>
+            <p class="text-xs text-brand-600 font-semibold">Master Painter & Decorator</p>
+            <p class="text-[10px] text-slate-500 mt-1 uppercase tracking-widest">20+ Years Experience</p>
+          </div>
+
+          <!-- Review Text -->
+          <div class="flex-1">
+            <svg class="w-8 h-8 text-slate-200 mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <p class="text-[15px] text-ink-700 leading-relaxed italic mb-4">
+              "The coverage rates and waste factors used in this calculator reflect the exact standards we use on commercial job sites across the UK and US. Estimating paint by eye leads to either costly over-ordering or frustrating delays mid-project. Always account for surface porosity and use a dedicated primer on bare substrates."
+            </p>
+            <div class="flex flex-wrap items-center gap-3">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-700 text-xs font-semibold border border-emerald-100">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                Formula Verified
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-semibold border border-slate-200">
+                Last reviewed: October 2026
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Related Tools & Guides Section -->
+<section class="bg-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Related Tools -->
+    <div class="mb-16">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="font-display font-extrabold text-2xl text-ink-900 tracking-tight">Related Calculators</h2>
+        <a href="/calculators.html" class="text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors">View all tools →</a>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        
+        <!-- Tool 1: Drywall -->
+        <a href="/drywall.html" class="group bg-white rounded-xl p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-6 h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-ink-900 group-hover:text-brand-600 transition-colors">Drywall Calculator</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Sheets, mud, tape, screws</p>
+          </div>
+        </a>
+
+        <!-- Tool 2: Wallpaper -->
+        <a href="/wallpaper-calculator.html" class="group bg-white rounded-xl p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-6 h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-ink-900 group-hover:text-brand-600 transition-colors">Wallpaper Calculator</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Rolls and pattern repeats</p>
+          </div>
+        </a>
+
+        <!-- Tool 3: Flooring -->
+        <a href="/flooring-calculator.html" class="group bg-white rounded-xl p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-6 h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-ink-900 group-hover:text-brand-600 transition-colors">Flooring Calculator</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Tiles, hardwood, carpet</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Related Guides -->
+    <div>
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="font-display font-extrabold text-2xl text-ink-900 tracking-tight">Related Guides</h2>
+        <a href="/guides.html" class="text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors">View all guides →</a>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Guide 1 -->
+        <a href="/guides/paint-coverage-myths.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-32 bg-gradient-to-br from-emerald-500 to-emerald-700 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+            </div>
+          </div>
+          <div class="p-4 flex flex-col flex-1">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-600 bg-emerald-50 px-2 py-1 rounded-md self-start mb-2">Finishes</span>
+            <h3 class="font-display font-bold text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Why Paint Coverage Numbers on the Tin Are Often Wrong</h3>
+            <span class="text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <!-- Guide 2 -->
+        <a href="/guides/reading-architectural-drawings.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-32 bg-gradient-to-br from-indigo-500 to-indigo-700 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path></svg>
+            </div>
+          </div>
+          <div class="p-4 flex flex-col flex-1">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-indigo-600 bg-indigo-50 px-2 py-1 rounded-md self-start mb-2">General</span>
+            <h3 class="font-display font-bold text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">How to Read Architectural Drawings (For Tradespeople)</h3>
+            <span class="text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <!-- Guide 3 -->
+        <a href="/guides/roof-pitch-explained.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-32 bg-gradient-to-br from-blue-400 to-blue-600 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            </div>
+          </div>
+          <div class="p-4 flex flex-col flex-1">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-brand-600 bg-brand-50 px-2 py-1 rounded-md self-start mb-2">Roofing</span>
+            <h3 class="font-display font-bold text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Roof Pitch Explained: Why 6:12 and 26.57° Are the Same Roof</h3>
+            <span class="text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 8/10 will start here: Premium Footer
+     ============================================================ -->
+
+   </main>
+
+<!-- ============================================================
+     PHASE 8/10 — PREMIUM FOOTER (Exact Screenshot Match)
+     ============================================================ -->
+<footer class="bg-ink-950 text-slate-400 border-t border-slate-800 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Top Footer Grid (5 Columns) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 mb-12">
+      
+      <!-- Column 1: Brand & Contact -->
+      <div class="lg:col-span-2 pr-4">
+        <a href="/" class="inline-flex items-center gap-2.5 mb-5 group">
+          <img src="logo.png" alt="BuildMetric Logo" class="h-8 w-auto object-contain brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity" />
+          <span class="font-display font-extrabold text-xl tracking-tight text-white hidden sm:block">
+            Build<span class="text-brand-500">Metric</span>
+          </span>
+        </a>
+        
+        <p class="text-sm leading-relaxed mb-6 max-w-sm">
+          Independent construction calculators, estimating tools and technical reference guides for building professionals across the <strong class="text-slate-200">USA, UK</strong> and <strong class="text-slate-200">Australia</strong>. Engineered for accuracy. Published for transparency.
+        </p>
+
+        <div class="space-y-3 mb-6">
+          <a href="mailto:contact@buildmetric.org" class="flex items-center gap-2.5 text-sm hover:text-white transition-colors">
+            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            contact@buildmetric.org
+          </a>
+          <a href="mailto:ads@buildmetric.org" class="flex items-center gap-2.5 text-sm hover:text-white transition-colors">
+            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+            ads@buildmetric.org
+          </a>
+        </div>
+
+        <!-- Cookie Settings Button -->
+        <button id="cookieSettingsBtn" type="button" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 hover:bg-slate-800 text-xs font-semibold text-slate-300 transition-colors">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          Cookie Settings
+        </button>
+      </div>
+
+      <!-- Column 2: Categories -->
+      <div>
+        <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Categories</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="/roofing.html" class="hover:text-brand-400 transition-colors">Roofing</a></li>
+          <li><a href="/concrete.html" class="hover:text-brand-400 transition-colors">Concrete</a></li>
+          <li><a href="/framing.html" class="hover:text-brand-400 transition-colors">Framing</a></li>
+          <li><a href="/masonry.html" class="hover:text-brand-400 transition-colors">Masonry</a></li>
+          <li><a href="/drywall.html" class="hover:text-brand-400 transition-colors">Drywall</a></li>
+          <li><a href="/paint.html" class="hover:text-brand-400 transition-colors">Paint</a></li>
+          <li><a href="/calculators.html" class="hover:text-white font-semibold text-brand-500 mt-2 inline-block">All Categories →</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Popular Tools -->
+      <div>
+        <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Popular Tools</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="/roof-pitch-calculator.html" class="hover:text-brand-400 transition-colors">Roof Pitch</a></li>
+          <li><a href="/concrete-calculator.html" class="hover:text-brand-400 transition-colors">Concrete Volume</a></li>
+          <li><a href="/framing.html" class="hover:text-brand-400 transition-colors">Stud Count</a></li>
+          <li><a href="/paint-calculator.html" class="text-brand-400 font-semibold">Paint Coverage</a></li>
+          <li><a href="/calculators.html" class="hover:text-white font-semibold text-brand-500 mt-2 inline-block">All Tools →</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4 & 5: Company & Legal -->
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Company</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="/about.html" class="hover:text-brand-400 transition-colors">About</a></li>
+            <li><a href="/guides.html" class="hover:text-brand-400 transition-colors">Guides</a></li>
+            <li><a href="/estimating.html" class="hover:text-brand-400 transition-colors">Estimating</a></li>
+            <li><a href="/contact.html" class="hover:text-brand-400 transition-colors">Contact</a></li>
+            <li><a href="/sitemap.xml" class="hover:text-brand-400 transition-colors">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Legal</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="/privacy.html" class="hover:text-brand-400 transition-colors">Privacy Policy</a></li>
+            <li><a href="/terms.html" class="hover:text-brand-400 transition-colors">Terms of Service</a></li>
+            <li><a href="/disclaimer.html" class="hover:text-brand-400 transition-colors">Disclaimer</a></li>
+            <li><a href="/cookie-policy.html" class="hover:text-brand-400 transition-colors">Cookie Policy</a></li>
+            <li><a href="/contact.html" class="hover:text-brand-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Regional Notice Box -->
+    <div class="flex justify-end mb-8">
+      <div class="bg-slate-800/40 border border-slate-700/50 rounded-xl p-4 max-w-sm w-full sm:w-auto">
+        <h4 class="text-[10px] font-bold uppercase tracking-widest text-slate-300 mb-1">Regional Notice</h4>
+        <p class="text-xs text-slate-500 leading-relaxed">
+          BuildMetric content is published in English and reviewed against US, UK and Australian codes. Always verify against your local jurisdiction's current edition.
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer Ad Space -->
+    <div class="mb-8">
+      <div class="bg-slate-800/30 border-dashed border-2 border-slate-700 rounded-xl h-[90px] flex items-center justify-center text-[10px] sm:text-xs text-slate-500 font-medium tracking-widest uppercase">
+        Ad Space — Footer Leaderboard
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+      <p class="text-center md:text-left text-slate-400">
+        © 2026 BuildMetric. All rights reserved. Operated from buildmetric.org.
+      </p>
+      <p class="text-center md:text-right text-slate-500">
+        Built for professionals. General information only — see our <a href="/disclaimer.html" class="text-brand-500 hover:underline hover:text-brand-400 transition-colors">Disclaimer</a>.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ============================================================
+     Phase 9/10 will start here: JavaScript (Menu, Calculator Logic, Share/Copy)
+     ============================================================ -->
+
+     <!-- ============================================================
+       PHASE 9/10 — JAVASCRIPT (Calculator Logic, Menu, Share)
+       ============================================================ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      /* ── 1. MOBILE MENU TOGGLE ── */
+      const menuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const openIcon = menuBtn ? menuBtn.querySelector('.menu-open-icon') : null;
+      const closeIcon = menuBtn ? menuBtn.querySelector('.menu-close-icon') : null;
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function () {
+          const isOpen = !mobileMenu.classList.contains('hidden');
+          if (isOpen) {
+            mobileMenu.classList.add('hidden');
+            if(openIcon) openIcon.classList.remove('hidden');
+            if(closeIcon) closeIcon.classList.add('hidden');
+            menuBtn.setAttribute('aria-expanded', 'false');
+          } else {
+            mobileMenu.classList.remove('hidden');
+            if(openIcon) openIcon.classList.add('hidden');
+            if(closeIcon) closeIcon.classList.remove('hidden');
+            menuBtn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      }
+
+      /* ── 2. UNIT TOGGLE (Imperial / Metric) ── */
+      const btnImperial = document.getElementById('btnImperial');
+      const btnMetric = document.getElementById('btnMetric');
+      const unitLabels = document.querySelectorAll('.unit-label');
+      const outAreaUnit = document.querySelector('#outArea span');
+      const outNetAreaUnit = document.querySelector('#outNetArea span');
+      const outGallonsUnit = document.getElementById('outGallonsUnit');
+      const paintTypeSelect = document.getElementById('paintType');
+      
+      let isMetric = false;
+
+      function toggleUnits(metric) {
+        isMetric = metric;
+        
+        // Toggle active button styles
+        if (metric) {
+          btnMetric.classList.add('bg-white', 'shadow-sm', 'text-ink-900');
+          btnMetric.classList.remove('text-slate-500');
+          btnImperial.classList.remove('bg-white', 'shadow-sm', 'text-ink-900');
+          btnImperial.classList.add('text-slate-500');
+        } else {
+          btnImperial.classList.add('bg-white', 'shadow-sm', 'text-ink-900');
+          btnImperial.classList.remove('text-slate-500');
+          btnMetric.classList.remove('bg-white', 'shadow-sm', 'text-ink-900');
+          btnMetric.classList.add('text-slate-500');
+        }
+
+        // Update labels
+        const unitText = metric ? 'm' : 'ft';
+        const areaUnitText = metric ? 'sq m' : 'sq ft';
+        const volUnitText = metric ? 'Litres' : 'Gallons';
+
+        unitLabels.forEach(el => el.textContent = unitText);
+        if(outAreaUnit) outAreaUnit.textContent = areaUnitText;
+        if(outNetAreaUnit) outNetAreaUnit.textContent = areaUnitText;
+        if(outGallonsUnit) outGallonsUnit.textContent = volUnitText;
+
+        // Update dropdown values for coverage
+        if (metric) {
+          paintTypeSelect.options[0].text = 'Interior (Standard, 8.6 sq m/L)';
+          paintTypeSelect.options[0].value = '8.6';
+          paintTypeSelect.options[1].text = 'Exterior (Thick, 9.8 sq m/L)';
+          paintTypeSelect.options[1].value = '9.8';
+          paintTypeSelect.options[2].text = 'Primer (High absorb, 6.1 sq m/L)';
+          paintTypeSelect.options[2].value = '6.1';
+        } else {
+          paintTypeSelect.options[0].text = 'Interior (Standard, 350 sq ft/gal)';
+          paintTypeSelect.options[0].value = '350';
+          paintTypeSelect.options[1].text = 'Exterior (Thick, 400 sq ft/gal)';
+          paintTypeSelect.options[1].value = '400';
+          paintTypeSelect.options[2].text = 'Primer (High absorb, 250 sq ft/gal)';
+          paintTypeSelect.options[2].value = '250';
+        }
+
+        calculate();
+      }
+
+      if(btnImperial && btnMetric) {
+        btnImperial.addEventListener('click', () => toggleUnits(false));
+        btnMetric.addEventListener('click', () => toggleUnits(true));
+      }
+
+      /* ── 3. CALCULATOR LOGIC ── */
+      const roomLength = document.getElementById('roomLength');
+      const roomWidth = document.getElementById('roomWidth');
+      const wallHeight = document.getElementById('wallHeight');
+      const numDoors = document.getElementById('numDoors');
+      const numWindows = document.getElementById('numWindows');
+      const numCoats = document.getElementById('numCoats');
+      
+      const outArea = document.getElementById('outArea');
+      const outNetArea = document.getElementById('outNetArea');
+      const outGallons = document.getElementById('outGallons');
+
+      function calculate() {
+        // Get values
+        const l = parseFloat(roomLength.value) || 0;
+        const w = parseFloat(roomWidth.value) || 0;
+        const h = parseFloat(wallHeight.value) || 0;
+        const doors = parseInt(numDoors.value) || 0;
+        const windows = parseInt(numWindows.value) || 0;
+        const coats = parseInt(numCoats.value) || 1;
+        const coverage = parseFloat(paintTypeSelect.value) || 350;
+
+        // Deduction areas
+        const doorAreaStandard = isMetric ? 1.95 : 21;
+        const windowAreaStandard = isMetric ? 1.4 : 15;
+
+        // Math
+        const perimeter = 2 * (l + w);
+        const grossArea = perimeter * h;
+        
+        const totalDeductions = (doors * doorAreaStandard) + (windows * windowAreaStandard);
+        let netArea = grossArea - totalDeductions;
+        if (netArea < 0) netArea = 0;
+
+        const totalPaint = (netArea * coats) / coverage;
+
+        // Display
+        outArea.innerHTML = `${grossArea.toFixed(1)} <span class="text-xs text-slate-500">${isMetric ? 'sq m' : 'sq ft'}</span>`;
+        outNetArea.innerHTML = `${netArea.toFixed(1)} <span class="text-xs text-slate-500">${isMetric ? 'sq m' : 'sq ft'}</span>`;
+        outGallons.textContent = totalPaint.toFixed(2);
+      }
+
+      // Trigger calculation on any input change
+      const inputs = [roomLength, roomWidth, wallHeight, numDoors, numWindows, numCoats, paintTypeSelect];
+      inputs.forEach(input => {
+        if(input) {
+          input.addEventListener('input', calculate);
+          input.addEventListener('change', calculate);
+        }
+      });
+
+      // Run initial calculation
+      calculate();
+
+      /* ── 4. SAVE, SHARE, COPY ACTIONS ── */
+      const btnSave = document.getElementById('btnSave');
+      const btnShare = document.getElementById('btnShare');
+      const btnCopy = document.getElementById('btnCopy');
+
+      const getResultText = () => {
+        return `Paint Estimate for ${roomLength.value || 0}x${roomWidth.value || 0} room:\n` +
+               `- Wall Area: ${outArea.textContent}\n` +
+               `- Net Paintable Area: ${outNetArea.textContent}\n` +
+               `- Paint Needed (${numCoats.value} coats): ${outGallons.textContent} ${outGallonsUnit.textContent}\n` +
+               `Calculated via BuildMetric.org`;
+      };
+
+      // Save
+      if(btnSave) {
+        btnSave.addEventListener('click', () => {
+          const data = {
+            l: roomLength.value, w: roomWidth.value, h: wallHeight.value,
+            d: numDoors.value, win: numWindows.value, c: numCoats.value,
+            p: paintTypeSelect.value, metric: isMetric
+          };
+          localStorage.setItem('buildmetric_paint_data', JSON.stringify(data));
+          alert('Estimate saved to your browser!');
+        });
+      }
+
+      // Share
+      if(btnShare && navigator.share) {
+        btnShare.addEventListener('click', () => {
+          navigator.share({
+            title: 'Paint Calculator Estimate',
+            text: getResultText(),
+            url: window.location.href
+          }).catch(console.error);
+        });
+      } else if (btnShare) {
+        btnShare.addEventListener('click', () => {
+          alert('Sharing is not supported on this browser. Use Copy instead.');
+        });
+      }
+
+      // Copy
+      if(btnCopy) {
+        btnCopy.addEventListener('click', () => {
+          navigator.clipboard.writeText(getResultText()).then(() => {
+            // Visual feedback
+            const originalHTML = btnCopy.innerHTML;
+            btnCopy.innerHTML = '<svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> Copied!';
+            setTimeout(() => { btnCopy.innerHTML = originalHTML; }, 2000);
+          }).catch(() => {
+            alert('Failed to copy. Please select text manually.');
+          });
+        });
+      }
+
+    });
+  </script>
+
+</body>
+</html>
