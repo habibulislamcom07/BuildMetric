@@ -1,1 +1,1299 @@
-TEST123
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- ============================================================
+       PHASE 1/10 — SEO HEAD & CONFIGURATION
+       File: index.html
+       Brand: BuildMetric | Domain: buildmetric.org
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO Meta (US, UK, AU focused) -->
+  <title>BuildMetric | Free Engineering & Construction Calculators</title>
+  <meta name="description" content="Free, engineer-reviewed construction calculators for roofing, concrete, framing, and more. Code-aware tools for the USA, UK, and Australia." />
+  <meta name="keywords" content="construction calculator, concrete calculator, roof pitch calculator, framing calculator, estimating guide, US building codes, UK building standards, Australian standards" />
+  <meta name="author" content="BuildMetric Editorial Team" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#0ea5e9" />
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://buildmetric.org/" />
+
+  <!-- Open Graph (Social Media) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BuildMetric" />
+  <meta property="og:title" content="BuildMetric | Engineering Calculators" />
+  <meta property="og:description" content="Free, engineer-reviewed construction calculators for builders and DIYers worldwide." />
+  <meta property="og:url" content="https://buildmetric.org/" />
+  <meta property="og:image" content="https://buildmetric.org/assets/og/home.png" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BuildMetric | Engineering Calculators" />
+  <meta name="twitter:description" content="Code-aware tools for the US, UK, and AU." />
+  <meta name="twitter:image" content="https://buildmetric.org/assets/og/home.png" />
+
+  <!-- Favicon (Using your uploaded logo.png) -->
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+
+  <!-- Fonts (Optimized for International readability) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc',
+              400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1',
+              800: '#075985', 900: '#0c4a6e'
+            },
+            ink: {
+              700: '#334155', 800: '#1e293b', 900: '#0f172a', 950: '#080f1e'
+            }
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: {
+            'soft': '0 4px 20px -2px rgba(15,23,42,0.05)',
+            'hover': '0 12px 32px -8px rgba(14,165,233,0.15)',
+            'glass': '0 4px 24px -4px rgba(15,23,42,0.08)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+    
+    /* Clean background grid pattern */
+    .bg-grid-pattern {
+      background-image: linear-gradient(to right, rgba(15,23,42,0.04) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(15,23,42,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    
+    /* Premium Navbar Blur */
+    .nav-glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); }
+    
+    /* Native Details Smooth Animation */
+    details > summary .icon-plus { transition: transform 0.3s ease; }
+    details[open] > summary .icon-plus { transform: rotate(45deg); }
+    details > summary::-webkit-details-marker { display: none; }
+  </style>
+
+  <!-- ================= JSON-LD SCHEMA ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://buildmetric.org/#website",
+        "url": "https://buildmetric.org/",
+        "name": "BuildMetric",
+        "description": "Engineering Calculators for Builders",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://buildmetric.org/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://buildmetric.org/#organization",
+        "name": "BuildMetric",
+        "url": "https://buildmetric.org",
+        "logo": "https://buildmetric.org/logo.png",
+        "email": "contact@buildmetric.org",
+        "sameAs": [
+          "https://twitter.com/buildmetric",
+          "https://youtube.com/@buildmetric"
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+  <body class="bg-white text-ink-800 antialiased font-sans flex flex-col min-h-screen">
+
+  <!-- ============================================================
+       SKIP LINK (Accessibility for Screen Readers & Keyboard)
+       ============================================================ -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2.5 focus:bg-brand-500 focus:text-white focus:rounded-lg focus:font-semibold focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/70">
+    Skip to main content
+  </a>
+
+  <!-- ============================================================
+       STICKY NAVBAR (Clean, Premium, Mobile-Friendly)
+       ============================================================ -->
+  <header class="sticky top-0 z-50 nav-glass border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        
+        <!-- Logo Area -->
+        <div class="flex items-center gap-6">
+          <a href="/" class="flex items-center gap-2.5 shrink-0" aria-label="BuildMetric Home">
+            <!-- Using uploaded logo.png -->
+            <img src="logo.png" alt="BuildMetric Logo" class="h-8 sm:h-10 w-auto object-contain" />
+            <span class="font-display font-extrabold text-xl tracking-tight text-ink-900 hidden sm:block">
+              Build<span class="text-brand-500">Metric</span>
+            </span>
+          </a>
+
+          <!-- Desktop Nav Links -->
+          <nav class="hidden lg:flex items-center gap-1" aria-label="Main Navigation">
+            <a href="/calculators.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Calculators</a>
+            <a href="/guides.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Guides</a>
+            <a href="/about.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">About</a>
+            <a href="/contact.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Contact</a>
+          </nav>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-3">
+          <!-- Main CTA Button -->
+          <a href="/calculators.html" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-ink-900 text-white text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+            Open Tools
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuBtn" type="button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-200 text-ink-800 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand-500/40 transition-colors" aria-expanded="false" aria-controls="mobileMenu">
+            <span class="sr-only">Open main menu</span>
+            <!-- Hamburger Icon -->
+            <svg class="menu-open-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <!-- Close Icon -->
+            <svg class="menu-close-icon hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu Panel (Push-down, no overlap) -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 bg-white">
+      <div class="px-4 py-4 space-y-1">
+        <a href="/calculators.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Calculators</a>
+        <a href="/guides.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Guides</a>
+        <a href="/about.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">About</a>
+        <a href="/contact.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Contact</a>
+        
+        <!-- Mobile CTA inside menu -->
+        <div class="pt-3 mt-2 border-t border-slate-100">
+          <a href="/calculators.html" class="flex w-full items-center justify-center px-4 py-3 rounded-xl bg-ink-900 text-white font-semibold hover:bg-brand-600 transition-colors">
+            Open All Tools
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main id="main-content" class="flex-grow">
+    
+    <!-- ============================================================
+         Phase 3/10 will start here: Hero Section & Search
+         ============================================================ -->
+<!-- ============================================================
+     PHASE 3/10 — HERO SECTION & SEARCH
+     Omni-style clean, high-converting intro
+     ============================================================ -->
+<section class="relative bg-white pt-16 pb-12 sm:pt-24 sm:pb-20 overflow-hidden border-b border-slate-100">
+  
+  <!-- Subtle US/UK/AU Style Background Grid -->
+  <div class="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    
+    <!-- Trust Badge -->
+    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-slate-700 text-xs sm:text-sm font-semibold mb-6 sm:mb-8 shadow-sm">
+      <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+      Trusted by builders in USA, UK &amp; Australia
+    </div>
+
+    <!-- Main Headline -->
+    <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-ink-900 tracking-tight leading-[1.1] max-w-4xl mx-auto">
+      Free, Engineer-Reviewed <br class="hidden sm:block" />
+      <span class="text-brand-600">Construction Calculators</span>
+    </h1>
+    
+    <!-- Subtitle -->
+    <p class="mt-5 sm:mt-6 text-base sm:text-lg text-ink-700 max-w-2xl mx-auto leading-relaxed">
+      Calculate materials, costs, and dimensions with absolute precision. Code-aware tools for residential and commercial projects.
+    </p>
+
+    <!-- Large Search Bar (Omni Style) -->
+    <div class="mt-10 max-w-2xl mx-auto relative group">
+      <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+        <svg class="h-6 w-6 text-slate-400 group-focus-within:text-brand-500 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </div>
+      <input type="text" id="heroSearch" 
+             class="block w-full pl-12 pr-4 py-4 sm:py-5 text-base sm:text-lg border border-slate-300 rounded-2xl leading-5 bg-white placeholder-slate-400 focus:outline-none focus:ring-4 focus:ring-brand-500/10 focus:border-brand-500 shadow-soft transition-all" 
+             placeholder="Search for a calculator (e.g., Concrete, Roof Pitch)..." 
+             autocomplete="off" />
+    </div>
+
+    <!-- Quick Links / Popular Searches -->
+    <div class="mt-6 flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-sm text-ink-700">
+      <span class="font-semibold text-slate-500">Popular:</span>
+      <a href="/concrete-calculator.html" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:bg-brand-50 hover:text-brand-600 hover:border-brand-200 transition-colors shadow-sm">Concrete Volume</a>
+      <a href="/roof-pitch-calculator.html" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:bg-brand-50 hover:text-brand-600 hover:border-brand-200 transition-colors shadow-sm">Roof Pitch</a>
+      <a href="/framing.html" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:bg-brand-50 hover:text-brand-600 hover:border-brand-200 transition-colors shadow-sm">Stud Count</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 4/10 will start here: Trust Badges & Suggest CTA
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 4/10 — TRUST BADGES & SUGGEST CTA
+     ============================================================ -->
+<section class="bg-slate-50 border-b border-slate-200 py-10 sm:py-14">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Trust Badges (4 items, 2x2 on mobile, 4x1 on desktop) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+      
+      <!-- Badge 1 -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200 flex items-start gap-4 shadow-sm hover:shadow-hover transition-shadow">
+        <div class="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center shrink-0">
+          <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        </div>
+        <div>
+          <h3 class="font-display font-bold text-ink-900 text-sm">Engineer-Reviewed</h3>
+          <p class="text-xs text-ink-700 mt-1 leading-relaxed">Every formula is verified by a practicing professional.</p>
+        </div>
+      </div>
+
+      <!-- Badge 2 -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200 flex items-start gap-4 shadow-sm hover:shadow-hover transition-shadow">
+        <div class="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center shrink-0">
+          <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+        </div>
+        <div>
+          <h3 class="font-display font-bold text-ink-900 text-sm">No Paywalls</h3>
+          <p class="text-xs text-ink-700 mt-1 leading-relaxed">Every calculator is 100% free with no sign-up required.</p>
+        </div>
+      </div>
+
+      <!-- Badge 3 -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200 flex items-start gap-4 shadow-sm hover:shadow-hover transition-shadow">
+        <div class="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center shrink-0">
+          <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+        </div>
+        <div>
+          <h3 class="font-display font-bold text-ink-900 text-sm">Privacy First</h3>
+          <p class="text-xs text-ink-700 mt-1 leading-relaxed">Calculator inputs stay in your browser. We never see them.</p>
+        </div>
+      </div>
+
+      <!-- Badge 4 -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200 flex items-start gap-4 shadow-sm hover:shadow-hover transition-shadow">
+        <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center shrink-0">
+          <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"></path></svg>
+        </div>
+        <div>
+          <h3 class="font-display font-bold text-ink-900 text-sm">Multi-Region</h3>
+          <p class="text-xs text-ink-700 mt-1 leading-relaxed">Code-aware calculations for US, UK, and Australian standards.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Suggest a Calculator CTA -->
+    <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 text-center max-w-3xl mx-auto shadow-sm">
+      <h2 class="font-display font-bold text-xl text-ink-900">Can't find the tool you need?</h2>
+      <p class="text-sm text-ink-700 mt-2 mb-5 max-w-xl mx-auto">We are constantly adding new calculators based on real project requests. If you are stuck on a specific formula, tell us.</p>
+      <a href="/contact.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-ink-900 text-white text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+        Suggest a Calculator <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <!-- Ad Space (Leaderboard) -->
+    <div class="mt-10 max-w-4xl mx-auto">
+      <div class="bg-slate-100 border-dashed border-2 border-slate-300 rounded-xl h-[90px] flex items-center justify-center text-[10px] sm:text-xs text-slate-500 font-medium tracking-widest uppercase">
+        Ad Space — 728×90 / Responsive Leaderboard
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 5/10 will start here: Explore by Trade (12 Categories, 3x4 Grid)
+     ============================================================ -->
+<!-- ============================================================
+     PHASE 5/10 — EXPLORE BY TRADE (12 Categories, Exact 3x4 Grid on Desktop)
+     ============================================================ -->
+<section class="bg-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+      <div>
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-ink-900 tracking-tight">Explore by Trade</h2>
+        <p class="text-sm text-ink-700 mt-2">Jump directly to a specific category of construction calculators.</p>
+      </div>
+      <a href="/calculators.html" class="text-sm font-semibold text-brand-600 hover:text-brand-700 flex items-center gap-1 shrink-0 transition-colors">
+        View all categories <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <!-- 12 Categories Grid (2 cols mobile, 3 cols desktop = 3x4) -->
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5">
+      
+      <!-- 1. Roofing -->
+      <a href="/roofing.html" class="group bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+        </div>
+        <div class="min-w-0">
+          <span class="block font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors truncate">Roofing</span>
+          <span class="block text-[11px] sm:text-xs text-slate-500 mt-0.5 truncate">Pitch, area, shingles</span>
+        </div>
+      </a>
+
+      <!-- 2. Concrete -->
+      <a href="/concrete.html" class="group bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+        </div>
+        <div class="min-w-0">
+          <span class="block font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors truncate">Concrete</span>
+          <span class="block text-[11px] sm:text-xs text-slate-500 mt-0.5 truncate">Volume, bags, slab</span>
+        </div>
+      </a>
+
+      <!-- 3. Framing -->
+      <a href="/framing.html" class="group bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+        </div>
+        <div class="min-w-0">
+          <span class="block font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors truncate">Framing</span>
+          <span class="block text-[11px] sm:text-xs text-slate-500 mt-0.5 truncate">Studs, joists, rafters</span>
+        </div>
+      </a>
+
+      <!-- 4. Masonry -->
+      <a href="/masonry.html" class="group bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+        </div>
+        <div class="min-w-0">
+          <span class="block font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors truncate">Masonry</span>
+          <span class="block text-[11px] sm:text-xs text-slate-500 mt-0.5 truncate">Bricks, blocks, mortar</span>
+        </div>
+      </a>
+
+      <!-- 5. Drywall -->
+      <a href="/drywall.html" class="group bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path></svg>
+        </div>
+        <div class="min-w-0">
+          <span class="block font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors truncate">Drywall</span>
+          <span class="block text-[11px] sm:text-xs text-slate-500 mt-0.5 truncate">Sheets, mud, tape</span>
+        </div>
+      </a>
+
+      <!-- 6. Paint -->
+      <a href="/paint.html" class="group bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+        </div>
+        <div class="min-w-0">
+          <span class="block font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors truncate">Paint</span>
+          <span class="block text-[11px] sm:text-xs text-slate-500 mt-0.5 truncate">Coverage, gallons</span>
+        </div>
+      </a>
+
+      <!-- 7. Insulation -->
+      <a href="/insulation.html" class="group bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+        </div>
+        <div class="min-w-0">
+          <span class="block font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors truncate">Insulation</span>
+          <span class="block text-[11px] sm:text-xs text-slate-500 mt-0.5 truncate">R-value, batts</span>
+        </div>
+      </a>
+
+      <!-- 8. Foundations -->
+      <a href="/foundations.html" class="group bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+        </div>
+        <div class="min-w-0">
+          <span class="block font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors truncate">Foundations</span>
+          <span class="block text-[11px] sm:text-xs text-slate-500 mt-0.5 truncate">Footings, rebar</span>
+        </div>
+      </a>
+
+      <!-- 9. Landscaping -->
+      <a href="/landscaping.html" class="group bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+        </div>
+        <div class="min-w-0">
+          <span class="block font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors truncate">Landscaping</span>
+          <span class="block text-[11px] sm:text-xs text-slate-500 mt-0.5 truncate">Mulch, soil, gravel</span>
+        </div>
+      </a>
+
+      <!-- 10. Estimating -->
+      <a href="/estimating.html" class="group bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+        </div>
+        <div class="min-w-0">
+          <span class="block font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors truncate">Estimating</span>
+          <span class="block text-[11px] sm:text-xs text-slate-500 mt-0.5 truncate">Labor, material cost</span>
+        </div>
+      </a>
+
+      <!-- 11. Stairs -->
+      <a href="/stairs.html" class="group bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 20h4v-4h4v-4h4V8h4"></path></svg>
+        </div>
+        <div class="min-w-0">
+          <span class="block font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors truncate">Stairs</span>
+          <span class="block text-[11px] sm:text-xs text-slate-500 mt-0.5 truncate">Rise, run, stringers</span>
+        </div>
+      </a>
+
+      <!-- 12. Conversions -->
+      <a href="/conversions.html" class="group bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+        </div>
+        <div class="min-w-0">
+          <span class="block font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors truncate">Conversions</span>
+          <span class="block text-[11px] sm:text-xs text-slate-500 mt-0.5 truncate">Unit converters</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 6/10 will start here: Latest Guides (6 Guides, 3x2 Grid)
+     ============================================================ -->
+
+    
+    <!-- ============================================================
+     PHASE 6/10 — LATEST GUIDES (Exact 6 Guides from GitHub, 3x2 Grid)
+     ============================================================ -->
+<section class="bg-slate-50 border-t border-slate-200 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+      <div>
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-ink-900 tracking-tight">Latest Guides</h2>
+        <p class="text-sm text-ink-700 mt-2">In-depth articles, code references, and field-tested advice.</p>
+      </div>
+      <a href="/guides.html" class="text-sm font-semibold text-brand-600 hover:text-brand-700 flex items-center gap-1 shrink-0 transition-colors">
+        View all guides <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <!-- 6 Guides Grid (1 col mobile, 2 col tablet, 3 col desktop = 3x2) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Guide 1: Roof Pitch -->
+      <a href="/guides/roof-pitch-explained.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+        <div class="h-40 bg-gradient-to-br from-blue-400 to-blue-600 relative overflow-hidden shrink-0">
+          <span class="absolute top-4 right-4 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded-md backdrop-blur-sm z-10">12 MIN READ</span>
+          <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+          </div>
+        </div>
+        <div class="p-5 flex flex-col flex-1">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-brand-600 bg-brand-50 px-2 py-1 rounded-md">Roofing</span>
+            <span class="text-[11px] text-slate-500">Updated 2026</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Roof Pitch Explained: Why 6:12 and 26.57° Are the Same Roof</h3>
+          <p class="text-sm text-ink-700 leading-relaxed mb-4 flex-1">The three ways to describe a roof, why conversion errors cost material, and how to check your own numbers against IRC and BS 5534.</p>
+          <span class="text-sm font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+
+      <!-- Guide 2: Concrete Waste -->
+      <a href="/guides/concrete-waste-allowance.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+        <div class="h-40 bg-gradient-to-br from-slate-700 to-slate-900 relative overflow-hidden shrink-0">
+          <span class="absolute top-4 right-4 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded-md backdrop-blur-sm z-10">6 MIN READ</span>
+          <div class="absolute inset-0 flex items-center justify-center opacity-20 group-hover:scale-110 transition-transform duration-500">
+            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+          </div>
+        </div>
+        <div class="p-5 flex flex-col flex-1">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-600 bg-slate-100 px-2 py-1 rounded-md">Concrete</span>
+            <span class="text-[11px] text-slate-500">Updated 2026</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">How Much Waste Should You Add to a Concrete Order?</h3>
+          <p class="text-sm text-ink-700 leading-relaxed mb-4 flex-1">Realistic waste factors for slabs, footings, columns and pump deliveries — and when the calculator answer is not enough.</p>
+          <span class="text-sm font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+
+      <!-- Guide 3: Stud Spacing -->
+      <a href="/guides/stud-spacing-by-code.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+        <div class="h-40 bg-gradient-to-br from-sky-400 to-sky-600 relative overflow-hidden shrink-0">
+          <span class="absolute top-4 right-4 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded-md backdrop-blur-sm z-10">7 MIN READ</span>
+          <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+          </div>
+        </div>
+        <div class="p-5 flex flex-col flex-1">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-sky-600 bg-sky-50 px-2 py-1 rounded-md">Framing</span>
+            <span class="text-[11px] text-slate-500">Updated 2026</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Stud Spacing: IRC 2021 vs BS 5268 vs AS 1684 Compared</h3>
+          <p class="text-sm text-ink-700 leading-relaxed mb-4 flex-1">The same wall, three different code editions — where the numbers match, where they diverge, and why it matters.</p>
+          <span class="text-sm font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+
+      <!-- Guide 4: Paint Coverage -->
+      <a href="/guides/paint-coverage-myths.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+        <div class="h-40 bg-gradient-to-br from-emerald-500 to-emerald-700 relative overflow-hidden shrink-0">
+          <span class="absolute top-4 right-4 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded-md backdrop-blur-sm z-10">5 MIN READ</span>
+          <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+          </div>
+        </div>
+        <div class="p-5 flex flex-col flex-1">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-600 bg-emerald-50 px-2 py-1 rounded-md">Finishes</span>
+            <span class="text-[11px] text-slate-500">Updated 2026</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Why Paint Coverage Numbers on the Tin Are Often Wrong</h3>
+          <p class="text-sm text-ink-700 leading-relaxed mb-4 flex-1">What manufacturers mean by "coverage", how surface porosity and colour affect it, and how to calculate a realistic order.</p>
+          <span class="text-sm font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+
+      <!-- Guide 5: Rafters -->
+      <a href="/guides/how-to-calculate-rafters.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+        <div class="h-40 bg-gradient-to-br from-orange-400 to-orange-600 relative overflow-hidden shrink-0">
+          <span class="absolute top-4 right-4 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded-md backdrop-blur-sm z-10">9 MIN READ</span>
+          <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 20h4v-4h4v-4h4V8h4"></path></svg>
+          </div>
+        </div>
+        <div class="p-5 flex flex-col flex-1">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-orange-600 bg-orange-50 px-2 py-1 rounded-md">Estimating</span>
+            <span class="text-[11px] text-slate-500">Updated 2026</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">How to Calculate Rafter Lengths (With Overhang)</h3>
+          <p class="text-sm text-ink-700 leading-relaxed mb-4 flex-1">A step-by-step guide to using the Pythagorean theorem and pitch multipliers to cut rafters that actually fit.</p>
+          <span class="text-sm font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+
+      <!-- Guide 6: Architectural Drawings -->
+      <a href="/guides/reading-architectural-drawings.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+        <div class="h-40 bg-gradient-to-br from-indigo-500 to-indigo-700 relative overflow-hidden shrink-0">
+          <span class="absolute top-4 right-4 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded-md backdrop-blur-sm z-10">10 MIN READ</span>
+          <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path></svg>
+          </div>
+        </div>
+        <div class="p-5 flex flex-col flex-1">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-indigo-600 bg-indigo-50 px-2 py-1 rounded-md">General</span>
+            <span class="text-[11px] text-slate-500">Updated 2026</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">How to Read Architectural Drawings (For Tradespeople)</h3>
+          <p class="text-sm text-ink-700 leading-relaxed mb-4 flex-1">Stop guessing what the architect meant. A guide to scales, line weights, abbreviations, and finding the dimensions you need.</p>
+          <span class="text-sm font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 7/10 will start here: Massive SEO Content (1800+ Words)
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 7/10 — MASSIVE SEO CONTENT (1800+ Words)
+     Construction Estimating & Material Takeoffs Guide
+     ============================================================ -->
+<section class="bg-white py-16 sm:py-24 border-t border-slate-200">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-12 sm:mb-16">
+      <p class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-2">The BuildMetric Standard</p>
+      <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-ink-900 tracking-tight leading-tight">The Ultimate Guide to Construction Estimating</h2>
+      <p class="mt-4 text-base sm:text-lg text-ink-700 max-w-2xl mx-auto">How to calculate materials, manage waste factors, and ensure code compliance across US, UK, and Australian projects.</p>
+    </div>
+
+    <!-- Article Content Wrapper (Typography optimized) -->
+    <div class="prose prose-slate prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-900 prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-xl">
+      
+      <p class="lead text-xl text-ink-700 font-medium mb-8">
+        Accurate construction estimating is the difference between a profitable project and a financial disaster. Whether you are a general contractor in Texas, a quantity surveyor in London, or a builder in Sydney, the fundamental rule remains the same: <strong>measure twice, calculate precisely, and always account for waste.</strong>
+      </p>
+
+      <p>
+        In this comprehensive guide, we break down the exact methodologies used by professional estimators to calculate material volumes, convert between metric and imperial units, and apply the correct waste factors. We also explore how regional building codes—such as the IRC in the USA, BS in the UK, and AS in Australia—directly impact your material quantities.
+      </p>
+
+      <h3 class="mt-10">1. The Three Pillars of Material Takeoff</h3>
+      <p>
+        A material takeoff (MTO) is the process of identifying and quantifying all the materials required for a project. Every calculation on BuildMetric falls into one of three mathematical categories:
+      </p>
+      <ul>
+        <li><strong>Area (Square Footage/Meters):</strong> Used for two-dimensional surfaces like drywall, paint, roofing, and flooring. The formula is simple: <em>Length × Width</em>. However, complications arise when dealing with pitched roofs or complex wall layouts with multiple openings.</li>
+        <li><strong>Volume (Cubic Yards/Meters):</strong> Used for three-dimensional materials like concrete, gravel, mulch, and soil. The formula is <em>Length × Width × Depth (or Height)</em>. This is where most DIY errors occur, usually due to incorrect unit conversions (e.g., mixing inches into a feet equation).</li>
+        <li><strong>Linear Length (Feet/Meters):</strong> Used for materials installed in straight lines, such as framing studs, baseboards, crown molding, and rebar. Calculating linear length often requires dividing the total area by the material's coverage width.</li>
+      </ul>
+
+      <h3 class="mt-10">2. Why the "Waste Factor" is Critical</h3>
+      <p>
+        The biggest mistake beginners make is ordering <em>exactly</em> the net quantity calculated. In the real world, materials get cut, broken, or simply cannot be used due to layout constraints. Professional estimators always add a waste factor.
+      </p>
+      <p>
+        For example, if you are installing 4x8 drywall sheets in a room with standard dimensions, you might have a 5% waste factor. But if the room has angled walls or numerous windows, that waste factor can jump to 15% because the offcuts become unusable scrap.
+      </p>
+
+      <!-- Standard Waste Factors Table -->
+      <div class="my-8 not-prose rounded-xl border border-slate-200 bg-white overflow-hidden shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left">
+            <thead class="bg-slate-50 border-b border-slate-200">
+              <tr>
+                <th class="px-4 py-3 font-display font-bold text-ink-900">Material</th>
+                <th class="px-4 py-3 font-display font-bold text-ink-900">Standard Waste Factor</th>
+                <th class="px-4 py-3 font-display font-bold text-ink-900">When to Increase It</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-ink-700">
+              <tr>
+                <td class="px-4 py-3 font-semibold text-ink-900">Concrete</td>
+                <td class="px-4 py-3 font-mono">5% - 10%</td>
+                <td class="px-4 py-3">Uneven subgrade, pump lines, or complex footings.</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-4 py-3 font-semibold text-ink-900">Roofing Shingles</td>
+                <td class="px-4 py-3 font-mono">10% - 15%</td>
+                <td class="px-4 py-3">Hips, valleys, dormers, or steep pitch roofs.</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-semibold text-ink-900">Drywall</td>
+                <td class="px-4 py-3 font-mono">10%</td>
+                <td class="px-4 py-3">High ceilings, angled walls, or multiple room corners.</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-4 py-3 font-semibold text-ink-900">Flooring (Tile / Wood)</td>
+                <td class="px-4 py-3 font-mono">10% - 20%</td>
+                <td class="px-4 py-3">Diagonal layouts, herringbone patterns, or complex cuts.</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-semibold text-ink-900">Framing Lumber</td>
+                <td class="px-4 py-3 font-mono">5% - 15%</td>
+                <td class="px-4 py-3">Custom architecture, heavy structural connections.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Ad Space -->
+      <div class="my-10 not-prose">
+        <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[250px] flex items-center justify-center text-xs sm:text-sm text-slate-500 font-medium tracking-widest uppercase">
+          Ad Space — In-Article Rectangle
+        </div>
+      </div>
+
+      <h3 class="mt-10">3. Regional Code Compliance: US vs UK vs AU</h3>
+      <p>
+        You cannot estimate materials accurately without understanding the local building codes. What works in the USA might fail inspection in Australia. BuildMetric calculators are designed to be "code-aware," meaning they help you align with the specific standards of your region.
+      </p>
+      
+      <h4>United States (IRC & ASTM)</h4>
+      <p>
+        The <strong>International Residential Code (IRC)</strong> is the standard for most US residential projects. For instance, when calculating stud spacing, the IRC generally allows 16" or 24" on-center (OC) for exterior walls, depending on wind load and lumber species. The ASTM (American Society for Testing and Materials) sets the product standards, such as ASTM C1396 for drywall thickness.
+      </p>
+
+      <h4>United Kingdom (British Standards - BS)</h4>
+      <p>
+        In the UK, projects adhere to <strong>British Standards (BS)</strong> and the Building Regulations. A common example is roof pitch and material specifications under BS 5534. The UK heavily utilizes metric measurements, so ensuring your calculators can seamlessly convert imperial inputs to metric is vital for accuracy.
+      </p>
+
+      <h4>Australia (Australian Standards - AS)</h4>
+      <p>
+        Australian construction is governed by the <strong>National Construction Code (NCC)</strong> and <strong>Australian Standards (AS)</strong>. For timber framing, AS 1684 provides span tables that differ significantly from US standards due to different timber species and wind classifications. Australian calculators must account for these specific span limits.
+      </p>
+
+      <h3 class="mt-10">4. From Estimation to Execution: Budgeting</h3>
+      <p>
+        Once you have your material quantities, the next step is costing. A professional estimate isn't just "materials × price." It includes:
+      </p>
+      <ul>
+        <li><strong>Material Costs:</strong> The raw cost of goods, plus sales tax and delivery fees.</li>
+        <li><strong>Labor Costs:</strong> Calculated by the hour, by the square foot, or as a percentage of the material cost. Highly regionalized.</li>
+        <li><strong>Equipment:</strong> Rentals (scaffolding, mixers) or wear-and-tear on owned tools.</li>
+        <li><strong>Overhead & Profit (O&P):</strong> Usually 10-20% added to cover business operations and margin.</li>
+        <li><strong>Contingency:</strong> A buffer (usually 5-10%) for unforeseen site conditions, like discovering rock during excavation.</li>
+      </ul>
+
+      <h3 class="mt-10">5. The BuildMetric Philosophy: Accuracy & Transparency</h3>
+      <p>
+        We built BuildMetric because we were tired of seeing calculators that provided a single, unadjustable number without explaining the math. A calculator is only as good as the assumptions it makes. That is why our tools explicitly state the formulas used, the default waste factors applied, and the code standards referenced.
+      </p>
+      <p>
+        Whether you are calculating the volume of a concrete slab for a shed base, or determining the exact number of screws needed for a drywall ceiling, our goal is to give you field-tested, engineer-reviewed answers.
+      </p>
+
+      <div class="mt-8 p-6 bg-brand-50 rounded-xl border border-brand-100 not-prose">
+        <h4 class="font-display font-bold text-ink-900 text-lg mb-2">Ready to start your takeoff?</h4>
+        <p class="text-sm text-ink-700 mb-4">Browse our collection of free, engineer-reviewed tools to get precise material quantities for your next project.</p>
+        <a href="/calculators.html" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700">
+          Browse all calculators <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 8/10 will start here: Clean Accordion FAQ & Schema
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 8/10 — CLEAN ACCORDION FAQ & SCHEMA
+     Minimalist, modern list style (No heavy boxes)
+     ============================================================ -->
+<section class="bg-white py-16 sm:py-24 border-t border-slate-200">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-10 sm:mb-14">
+      <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-ink-900 tracking-tight">Common Questions About Our Tools</h2>
+      <p class="text-sm sm:text-base text-ink-700 mt-3">Everything you need to know about how our calculators and guides work.</p>
+    </div>
+
+    <!-- Clean FAQ Accordion List -->
+    <div class="border-t border-slate-200">
+      
+      <!-- FAQ 1 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">Are all the calculators on BuildMetric completely free?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          Yes, 100%. Every calculator and guide on BuildMetric is free to use. There are no paywalls, no premium tiers, and no forced sign-ups required to view results.
+        </div>
+      </details>
+
+      <!-- FAQ 2 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">Do I need to create an account to use the tools?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          No account is required. You can use any calculator immediately without entering an email address, creating a password, or verifying a phone number.
+        </div>
+      </details>
+
+      <!-- FAQ 3 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">How accurate are the calculations?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          Our calculators apply universal mathematical formulas and are tested against reference cases. The logic is also reviewed by licensed contractors and structural engineers before publication to ensure real-world accuracy.
+        </div>
+      </details>
+
+      <!-- FAQ 4 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">Do you support both Metric and Imperial units?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          Yes. You can toggle between Imperial (feet/inches) and Metric (meters/centimeters) on almost every tool. The math adjusts automatically based on your region.
+        </div>
+      </details>
+
+      <!-- FAQ 5 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">Do your guides reference local building codes?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          Yes. Where applicable, our technical guides reference the IRC (International Residential Code) for the US, BS (British Standards) for the UK, and AS (Australian Standards) for Australia.
+        </div>
+      </details>
+
+      <!-- FAQ 6 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">Can I suggest a topic for a new calculator?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          Absolutely. If you are stuck on a specific formula, material calculation, or code requirement, email us at <a href="mailto:contact@buildmetric.org" class="text-brand-600 font-semibold hover:underline">contact@buildmetric.org</a>. We prioritise new tools based on what our readers actually need.
+        </div>
+      </details>
+
+      <!-- FAQ 7 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">Is my calculator data saved or tracked?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          No. All calculator inputs and results stay 100% in your browser. We do not transmit, store, or track the measurements you enter.
+        </div>
+      </details>
+
+    </div>
+
+    <!-- Still have a question CTA -->
+    <div class="mt-10 text-center">
+      <p class="text-sm text-ink-700">
+        Still have a question? Email <a href="mailto:contact@buildmetric.org" class="text-brand-600 font-semibold hover:underline">contact@buildmetric.org</a> — every message is read by a real person.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQPage JSON-LD SCHEMA (Matches exactly with HTML above)
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are all the calculators on BuildMetric completely free?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, 100%. Every calculator and guide on BuildMetric is free to use. There are no paywalls, no premium tiers, and no forced sign-ups required to view results." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to create an account to use the tools?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No account is required. You can use any calculator immediately without entering an email address, creating a password, or verifying a phone number." }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate are the calculations?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Our calculators apply universal mathematical formulas and are tested against reference cases. The logic is also reviewed by licensed contractors and structural engineers before publication to ensure real-world accuracy." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you support both Metric and Imperial units?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can toggle between Imperial (feet/inches) and Metric (meters/centimeters) on almost every tool. The math adjusts automatically based on your region." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do your guides reference local building codes?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Where applicable, our technical guides reference the IRC (International Residential Code) for the US, BS (British Standards) for the UK, and AS (Australian Standards) for Australia." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I suggest a topic for a new calculator?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. If you are stuck on a specific formula, material calculation, or code requirement, email us at contact@buildmetric.org. We prioritise new tools based on what our readers actually need." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my calculator data saved or tracked?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. All calculator inputs and results stay 100% in your browser. We do not transmit, store, or track the measurements you enter." }
+    }
+  ]
+}
+</script>
+
+<!-- ============================================================
+     Phase 9/10 will start here: E-E-A-T Editorial Box & Premium Footer
+     ============================================================ -->
+
+    
+      <!-- ============================================================
+       PHASE 9/10 — E-E-A-T EDITORIAL BOX & PREMIUM FOOTER
+       ============================================================ -->
+  
+  <!-- E-E-A-T Editorial Team Box -->
+  <section class="bg-slate-50 border-t border-slate-200 py-16 sm:py-20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+        
+        <!-- Card Header (Dark Premium Look) -->
+        <div class="bg-ink-900 px-6 py-4 flex items-center justify-between">
+          <div class="flex items-center gap-2.5">
+            <div class="w-6 h-6 rounded bg-white/10 flex items-center justify-center">
+              <svg class="w-3.5 h-3.5 text-brand-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+            </div>
+            <span class="text-xs font-bold uppercase tracking-widest text-slate-200">About the guides</span>
+          </div>
+          <span class="hidden sm:block text-[10px] font-bold uppercase tracking-widest text-slate-500">Independent · Since 2023</span>
+        </div>
+
+        <!-- Card Body -->
+        <div class="p-6 sm:p-8 md:p-10">
+          <div class="grid lg:grid-cols-12 gap-8 lg:gap-12">
+            
+            <!-- Left Column: Description -->
+            <div class="lg:col-span-7">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-10 h-10 rounded-xl bg-brand-500 flex items-center justify-center shrink-0 shadow-sm">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+                </div>
+                <h2 class="font-display font-extrabold text-xl sm:text-2xl text-ink-900 tracking-tight">BuildMetric Editorial Team</h2>
+              </div>
+              
+              <p class="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-brand-600 mb-1 ml-13">
+                Technical Writing &amp; Code Review
+              </p>
+              <p class="text-[11px] text-slate-500 font-semibold mb-6 ml-13 tracking-wide">
+                Surveyors · Engineers · Licensed Contractors
+              </p>
+
+              <div class="text-[15px] text-ink-700 leading-relaxed space-y-4 mb-8">
+                <p>
+                  The BuildMetric library is built by people who have actually worked on site. Our editorial team consists of quantity surveyors, structural engineers, and licensed contractors who translate complex engineering and building codes into plain-English guides.
+                </p>
+                <p>
+                  We do not use AI to generate technical content. Every article is written by a human, reviewed by a practising professional, and updated when the codes change.
+                </p>
+              </div>
+
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                  <span class="text-sm text-ink-700"><strong class="text-ink-900">Human-written.</strong> No AI-generated fluff. Real world experience.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                  <span class="text-sm text-ink-700"><strong class="text-ink-900">Code-aware.</strong> References IRC, BS, and AS standards where applicable.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                  <span class="text-sm text-ink-700"><strong class="text-ink-900">Open to corrections.</strong> Spotted a mistake? We log and publish the fix.</span>
+                </li>
+              </ul>
+
+              <div class="flex flex-col sm:flex-row items-center gap-3">
+                <a href="mailto:contact@buildmetric.org" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-ink-900 text-white text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                  contact@buildmetric.org
+                </a>
+                <a href="/about.html" class="w-full sm:w-auto inline-flex items-center justify-center px-5 py-2.5 rounded-xl border border-slate-300 text-ink-900 text-sm font-semibold hover:border-brand-500 hover:text-brand-600 transition-colors bg-white">
+                  Meet the Team <span class="ml-1 text-slate-400">→</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Column: Stats & Policy -->
+            <div class="lg:col-span-5 flex flex-col gap-4">
+              <div class="bg-slate-50 rounded-xl border border-slate-200 p-5 sm:p-6">
+                <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-4">This Library</h3>
+                <ul class="text-xs sm:text-sm space-y-3">
+                  <li class="flex justify-between items-center pb-3 border-b border-slate-200/60">
+                    <span class="text-slate-500 font-medium">Content Type</span>
+                    <span class="font-bold text-ink-900 text-right">Technical Guides</span>
+                  </li>
+                  <li class="flex justify-between items-center pb-3 border-b border-slate-200/60">
+                    <span class="text-slate-500 font-medium">Reviewed By</span>
+                    <span class="font-bold text-ink-900 text-right">Practising Professionals</span>
+                  </li>
+                  <li class="flex justify-between items-center pb-3 border-b border-slate-200/60">
+                    <span class="text-slate-500 font-medium">Regions</span>
+                    <span class="font-bold text-ink-900 text-right">US · UK · AU</span>
+                  </li>
+                  <li class="flex justify-between items-center">
+                    <span class="text-slate-500 font-medium">Cost</span>
+                    <span class="font-bold text-brand-600 text-right">Free Forever</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 flex-1">
+                <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-3">Editorial Policy</h3>
+                <p class="text-xs sm:text-sm text-ink-700 leading-relaxed">
+                  No paid reviews, no sponsored rankings, no AI-generated fluff. Full details in our <a href="/about.html" class="text-brand-600 font-semibold underline decoration-brand-300 underline-offset-2 hover:decoration-brand-500 transition-colors">About</a> and <a href="/disclaimer.html" class="text-brand-600 font-semibold underline decoration-brand-300 underline-offset-2 hover:decoration-brand-500 transition-colors">Disclaimer</a> pages.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     PREMIUM FOOTER (Exact Screenshot Match)
+     ============================================================ -->
+<footer class="bg-ink-950 text-slate-400 border-t border-slate-800 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Top Footer Grid (5 Columns) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 mb-12">
+      
+      <!-- Column 1: Brand & Contact -->
+      <div class="lg:col-span-2 pr-4">
+        <a href="/" class="inline-flex items-center gap-2.5 mb-5 group">
+          <!-- Logo with CSS invert to make it white on dark background -->
+          <img src="logo.png" alt="BuildMetric Logo" class="h-8 w-auto object-contain brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity" />
+          <span class="font-display font-extrabold text-xl tracking-tight text-white hidden sm:block">
+            Build<span class="text-brand-500">Metric</span>
+          </span>
+        </a>
+        
+        <p class="text-sm leading-relaxed mb-6 max-w-sm">
+          Independent construction calculators, estimating tools and technical reference guides for building professionals across the <strong class="text-slate-200">USA, UK</strong> and <strong class="text-slate-200">Australia</strong>. Engineered for accuracy. Published for transparency.
+        </p>
+
+        <div class="space-y-3 mb-6">
+          <a href="mailto:contact@buildmetric.org" class="flex items-center gap-2.5 text-sm hover:text-white transition-colors">
+            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            contact@buildmetric.org
+          </a>
+          <a href="mailto:ads@buildmetric.org" class="flex items-center gap-2.5 text-sm hover:text-white transition-colors">
+            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+            ads@buildmetric.org
+          </a>
+        </div>
+
+        <!-- Cookie Settings Button -->
+        <button id="cookieSettingsBtn" type="button" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 hover:bg-slate-800 text-xs font-semibold text-slate-300 transition-colors">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          Cookie Settings
+        </button>
+      </div>
+
+      <!-- Column 2: Categories -->
+      <div>
+        <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Categories</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="/roofing.html" class="hover:text-brand-400 transition-colors">Roofing</a></li>
+          <li><a href="/concrete.html" class="hover:text-brand-400 transition-colors">Concrete</a></li>
+          <li><a href="/framing.html" class="hover:text-brand-400 transition-colors">Framing</a></li>
+          <li><a href="/masonry.html" class="hover:text-brand-400 transition-colors">Masonry</a></li>
+          <li><a href="/drywall.html" class="hover:text-brand-400 transition-colors">Drywall</a></li>
+          <li><a href="/paint.html" class="hover:text-brand-400 transition-colors">Paint</a></li>
+          <li><a href="/calculators.html" class="hover:text-white font-semibold text-brand-500 mt-2 inline-block">All Categories →</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Popular Tools -->
+      <div>
+        <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Popular Tools</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="/roof-pitch-calculator.html" class="hover:text-brand-400 transition-colors">Roof Pitch</a></li>
+          <li><a href="/concrete-calculator.html" class="hover:text-brand-400 transition-colors">Concrete Volume</a></li>
+          <li><a href="/framing.html" class="hover:text-brand-400 transition-colors">Stud Count</a></li>
+          <li><a href="/paint-calculator.html" class="hover:text-brand-400 transition-colors">Paint Coverage</a></li>
+          <li><a href="/calculators.html" class="hover:text-white font-semibold text-brand-500 mt-2 inline-block">All Tools →</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4 & 5: Company & Legal (Nested grid to keep them side-by-side on desktop) -->
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Company</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="/about.html" class="hover:text-brand-400 transition-colors">About</a></li>
+            <li><a href="/guides.html" class="hover:text-brand-400 transition-colors">Guides</a></li>
+            <li><a href="/estimating.html" class="hover:text-brand-400 transition-colors">Estimating</a></li>
+            <li><a href="/contact.html" class="hover:text-brand-400 transition-colors">Contact</a></li>
+            <li><a href="/sitemap.xml" class="hover:text-brand-400 transition-colors">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Legal</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="/privacy.html" class="hover:text-brand-400 transition-colors">Privacy Policy</a></li>
+            <li><a href="/terms.html" class="hover:text-brand-400 transition-colors">Terms of Service</a></li>
+            <li><a href="/disclaimer.html" class="hover:text-brand-400 transition-colors">Disclaimer</a></li>
+            <li><a href="/cookie-policy.html" class="hover:text-brand-400 transition-colors">Cookie Policy</a></li>
+            <li><a href="/contact.html" class="hover:text-brand-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Regional Notice Box -->
+    <div class="flex justify-end mb-8">
+      <div class="bg-slate-800/40 border border-slate-700/50 rounded-xl p-4 max-w-sm w-full sm:w-auto">
+        <h4 class="text-[10px] font-bold uppercase tracking-widest text-slate-300 mb-1">Regional Notice</h4>
+        <p class="text-xs text-slate-500 leading-relaxed">
+          BuildMetric content is published in English and reviewed against US, UK and Australian codes. Always verify against your local jurisdiction's current edition.
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer Ad Space -->
+    <div class="mb-8">
+      <div class="bg-slate-800/30 border-dashed border-2 border-slate-700 rounded-xl h-[90px] flex items-center justify-center text-[10px] sm:text-xs text-slate-500 font-medium tracking-widest uppercase">
+        Ad Space — Footer Leaderboard
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+      <p class="text-center md:text-left text-slate-400">
+        © 2026 BuildMetric. All rights reserved. Operated from buildmetric.org.
+      </p>
+      <p class="text-center md:text-right text-slate-500">
+        Built for professionals. General information only — see our <a href="/disclaimer.html" class="text-brand-500 hover:underline hover:text-brand-400 transition-colors">Disclaimer</a>.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ============================================================
+     Phase 10/10 will start here: Final JavaScript (Menu, Search)
+     ============================================================ -->
+  <!-- ============================================================
+       PHASE 10/10 — JAVASCRIPT (Menu, Live Search, Cookie)
+       ============================================================ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      /* ── 1. MOBILE MENU TOGGLE ── */
+      const menuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const openIcon = menuBtn ? menuBtn.querySelector('.menu-open-icon') : null;
+      const closeIcon = menuBtn ? menuBtn.querySelector('.menu-close-icon') : null;
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function () {
+          const isOpen = !mobileMenu.classList.contains('hidden');
+          
+          if (isOpen) {
+            mobileMenu.classList.add('hidden');
+            if(openIcon) openIcon.classList.remove('hidden');
+            if(closeIcon) closeIcon.classList.add('hidden');
+            menuBtn.setAttribute('aria-expanded', 'false');
+          } else {
+            mobileMenu.classList.remove('hidden');
+            if(openIcon) openIcon.classList.add('hidden');
+            if(closeIcon) closeIcon.classList.remove('hidden');
+            menuBtn.setAttribute('aria-expanded', 'true');
+          }
+        });
+
+        // Close on ESC key
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+            menuBtn.click();
+          }
+        });
+
+        // Close when clicking a link inside the menu
+        mobileMenu.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            if (!mobileMenu.classList.contains('hidden')) {
+              menuBtn.click();
+            }
+          });
+        });
+      }
+
+      /* ── 2. HERO SEARCH LIVE FILTER ── */
+      const heroSearch = document.getElementById('heroSearch');
+      
+      if (heroSearch) {
+        heroSearch.addEventListener('input', function (e) {
+          const query = e.target.value.toLowerCase().trim();
+          
+          // Target all Category and Guide cards
+          // Both are <a> tags with the class "group" inside a grid layout
+          const searchableCards = document.querySelectorAll('.grid a.group');
+
+          searchableCards.forEach(function (card) {
+            const cardText = card.textContent.toLowerCase();
+            
+            if (cardText.includes(query)) {
+              // Reset to default layout (grid item)
+              card.style.display = ''; 
+            } else {
+              // Hide the card
+              card.style.display = 'none'; 
+            }
+          });
+        });
+      }
+
+      /* ── 3. COOKIE SETTINGS PLACEHOLDER ── */
+      const cookieBtn = document.getElementById('cookieSettingsBtn');
+      if (cookieBtn) {
+        cookieBtn.addEventListener('click', function (e) {
+          e.preventDefault();
+          // In a real scenario, this would open a modal or CMP (Consent Management Platform)
+          alert('Cookie settings panel will open here. (Integrate with your CMP)');
+        });
+      }
+
+    });
+  </script>
+
+</body>
+</html>
+    
