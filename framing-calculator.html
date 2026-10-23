@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- ============================================================
+       PHASE 1/10 — SEO HEAD & CONFIGURATION
+       File: framing-calculator.html
+       Brand: BuildMetric | Domain: buildmetric.org
+       Focus: High-Volume Search, US/UK/AU friendly
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO Meta (High Searchable Keywords) -->
+  <title>Framing Calculator | How Many Studs Do I Need? | BuildMetric</title>
+  <meta name="description" content="Free framing calculator to estimate the number of studs, plates, and lumber needed for your walls. Account for 16' or 24' OC spacing, corners, and waste factors (US, UK, AU standards)." />
+  <meta name="keywords" content="framing calculator, stud calculator, how many studs do i need, wall framing calculator, lumber estimator, stud count calculator, framing estimator" />
+  <meta name="author" content="BuildMetric Editorial Team" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#0ea5e9" />
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://buildmetric.org/framing-calculator.html" />
+
+  <!-- Open Graph (Social Media CTR) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BuildMetric" />
+  <meta property="og:title" content="Framing Calculator | Estimate Studs & Lumber" />
+  <meta property="og:description" content="Calculate exact stud counts, top plates, and bottom plates for any wall length. Includes US/UK/AU waste factors." />
+  <meta property="og:url" content="https://buildmetric.org/framing-calculator.html" />
+  <meta property="og:image" content="https://buildmetric.org/assets/og/framing-calculator.png" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Framing Calculator | BuildMetric" />
+  <meta name="twitter:description" content="Estimate exact framing materials (studs, plates, lumber) for your walls." />
+  <meta name="twitter:image" content="https://buildmetric.org/assets/og/framing-calculator.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc',
+              400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1',
+              800: '#075985', 900: '#0c4a6e'
+            },
+            ink: {
+              700: '#334155', 800: '#1e293b', 900: '#0f172a', 950: '#080f1e'
+            }
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: {
+            'soft': '0 4px 20px -2px rgba(15,23,42,0.05)',
+            'hover': '0 12px 32px -8px rgba(14,165,233,0.15)',
+            'glass': '0 4px 24px -4px rgba(15,23,42,0.08)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+    .bg-grid-pattern {
+      background-image: linear-gradient(to right, rgba(15,23,42,0.04) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(15,23,42,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .nav-glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); }
+    details > summary .icon-plus { transition: transform 0.3s ease; }
+    details[open] > summary .icon-plus { transform: rotate(45deg); }
+    details > summary::-webkit-details-marker { display: none; }
+  </style>
+
+  <!-- ================= JSON-LD SCHEMA ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://buildmetric.org/framing-calculator.html#app",
+        "name": "Wall Framing Calculator",
+        "url": "https://buildmetric.org/framing-calculator.html",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "All",
+        "description": "Calculate the number of studs, top plates, and bottom plates needed for wall framing based on length and spacing.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://buildmetric.org/framing-calculator.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://buildmetric.org/" },
+          { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://buildmetric.org/calculators.html" },
+          { "@type": "ListItem", "position": 3, "name": "Framing", "item": "https://buildmetric.org/framing.html" },
+          { "@type": "ListItem", "position": 4, "name": "Framing Calculator", "item": "https://buildmetric.org/framing-calculator.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+  <body class="bg-white text-ink-800 antialiased font-sans flex flex-col min-h-screen">
+
+  <!-- ============================================================
+       SKIP LINK (Accessibility)
+       ============================================================ -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2.5 focus:bg-brand-500 focus:text-white focus:rounded-lg focus:font-semibold focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/70">
+    Skip to main content
+  </a>
+
+  <!-- ============================================================
+       STICKY NAVBAR (Consistent across all tools)
+       ============================================================ -->
+  <header class="sticky top-0 z-50 nav-glass border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        
+        <!-- Logo -->
+        <div class="flex items-center gap-6">
+          <a href="/" class="flex items-center gap-2.5 shrink-0" aria-label="BuildMetric Home">
+            <img src="logo.png" alt="BuildMetric Logo" class="h-8 sm:h-10 w-auto object-contain" />
+            <span class="font-display font-extrabold text-xl tracking-tight text-ink-900 hidden sm:block">
+              Build<span class="text-brand-500">Metric</span>
+            </span>
+          </a>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden lg:flex items-center gap-1" aria-label="Main Navigation">
+            <a href="/calculators.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Calculators</a>
+            <a href="/guides.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Guides</a>
+            <a href="/about.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">About</a>
+            <a href="/contact.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Contact</a>
+          </nav>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-3">
+          <a href="/calculators.html" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-ink-900 text-white text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+            Open Tools
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuBtn" type="button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-200 text-ink-800 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand-500/40 transition-colors" aria-expanded="false" aria-controls="mobileMenu">
+            <span class="sr-only">Open main menu</span>
+            <svg class="menu-open-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <svg class="menu-close-icon hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu (Push-down) -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 bg-white">
+      <div class="px-4 py-4 space-y-1">
+        <a href="/calculators.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Calculators</a>
+        <a href="/guides.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Guides</a>
+        <a href="/about.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">About</a>
+        <a href="/contact.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main id="main-content" class="flex-grow">
+    
+    <!-- ============================================================
+         PAGE HEADER & BREADCRUMBS
+         ============================================================ -->
+    <div class="bg-slate-50 border-b border-slate-200 pt-6 pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="Breadcrumb" class="mb-4">
+          <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs sm:text-sm text-slate-500">
+            <li><a href="/" class="hover:text-brand-600 transition-colors">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/calculators.html" class="hover:text-brand-600 transition-colors">Calculators</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/framing.html" class="hover:text-brand-600 transition-colors">Framing</a></li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page" class="text-ink-900 font-semibold">Framing Calculator</li>
+          </ol>
+        </nav>
+
+        <!-- Page Title & Subtitle -->
+        <h1 class="font-display font-extrabold text-3xl sm:text-4xl text-ink-900 tracking-tight leading-tight">
+          Wall Framing Calculator
+        </h1>
+        <p class="text-sm sm:text-base text-ink-700 mt-2 max-w-2xl">
+          Estimate the exact number of studs, top plates, bottom plates, and lumber required for your wall framing. Supports both US (Imperial) and UK/AU (Metric) standards.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- ============================================================
+         Phase 3/10 will start here: The Calculator UI (Inputs & Outputs)
+         ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 3/10 — THE CALCULATOR UI
+     Inputs, Custom Options, and Result Box with Amber Buttons
+     ============================================================ -->
+<section class="bg-white py-10 sm:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+      
+      <!-- Left Column: Form Inputs (7/12) -->
+      <div class="lg:col-span-7">
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8">
+          
+          <!-- Unit Toggle (Top Right) -->
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="font-display font-bold text-xl text-ink-900">Wall Details</h2>
+            <div class="flex items-center bg-slate-100 p-1 rounded-lg">
+              <button type="button" id="btnImperial" class="px-3 py-1.5 text-xs font-semibold rounded-md bg-white shadow-sm text-ink-900 transition-all">Imperial (ft)</button>
+              <button type="button" id="btnMetric" class="px-3 py-1.5 text-xs font-semibold rounded-md text-slate-500 hover:text-ink-900 transition-all">Metric (m)</button>
+            </div>
+          </div>
+
+          <!-- Dimensions Row -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+            <div>
+              <label for="wallLength" class="block text-sm font-semibold text-ink-900 mb-1.5">Total Wall Length (<span class="unit-label">ft</span>)</label>
+              <input type="number" id="wallLength" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow" placeholder="e.g. 40" min="0" step="0.1">
+            </div>
+            <div>
+              <label for="wallHeight" class="block text-sm font-semibold text-ink-900 mb-1.5">Wall Height (<span class="unit-label">ft</span>)</label>
+              <input type="number" id="wallHeight" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow" placeholder="e.g. 8" min="0" step="0.1">
+            </div>
+          </div>
+
+          <!-- Spacing & Corners -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+            <div>
+              <label for="studSpacing" class="block text-sm font-semibold text-ink-900 mb-1.5">Stud Spacing (OC)</label>
+              <select id="studSpacing" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white">
+                <option value="16">16 inches (Standard US)</option>
+                <option value="24">24 inches (Advanced US)</option>
+                <option value="400">400mm (Standard UK/AU)</option>
+                <option value="600">600mm (Advanced UK/AU)</option>
+              </select>
+            </div>
+            <div>
+              <label for="numCorners" class="block text-sm font-semibold text-ink-900 mb-1.5">Number of Corners</label>
+              <select id="numCorners" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="custom">Custom...</option>
+              </select>
+              <!-- Custom Input for Corners -->
+              <input type="number" id="customCorners" class="hidden mt-2 w-full px-4 py-3 rounded-xl border border-brand-300 bg-brand-50 focus:ring-2 focus:ring-brand-500 text-ink-900 transition-all" placeholder="Enter exact corners" min="0">
+            </div>
+          </div>
+
+          <hr class="border-slate-100 my-6">
+
+          <!-- Openings & Waste -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+            <div>
+              <label for="numOpenings" class="block text-sm font-semibold text-ink-900 mb-1.5">Openings (Doors/Windows)</label>
+              <select id="numOpenings" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="custom">Custom...</option>
+              </select>
+              <!-- Custom Input for Openings -->
+              <input type="number" id="customOpenings" class="hidden mt-2 w-full px-4 py-3 rounded-xl border border-brand-300 bg-brand-50 focus:ring-2 focus:ring-brand-500 text-ink-900 transition-all" placeholder="Enter exact openings" min="0">
+            </div>
+            <div>
+              <label for="wasteFactor" class="block text-sm font-semibold text-ink-900 mb-1.5">Waste Factor</label>
+              <select id="wasteFactor" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white">
+                <option value="0.05">5% (Simple)</option>
+                <option value="0.10" selected>10% (Standard)</option>
+                <option value="0.15">15% (Complex)</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Column: Result Box (5/12) -->
+      <div class="lg:col-span-5">
+        <div class="bg-ink-900 rounded-2xl shadow-lg border border-ink-800 sticky top-24 overflow-hidden">
+          <div class="p-6 sm:p-8">
+            <h2 class="font-display font-bold text-xl text-white mb-6 flex items-center gap-2">
+              <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+              Framing Materials
+            </h2>
+
+            <!-- Result Outputs -->
+            <div class="space-y-4 mb-8">
+              
+              <!-- Studs -->
+              <div class="flex justify-between items-center pb-3 border-b border-white/10">
+                <span class="text-sm text-brand-300 font-semibold">Studs Required</span>
+                <div class="text-right">
+                  <span class="font-mono text-3xl font-bold text-brand-400 block" id="outStuds">0</span>
+                  <span class="text-xs text-slate-400">Pieces</span>
+                </div>
+              </div>
+
+              <!-- Top Plates -->
+              <div class="flex justify-between items-center pb-3 border-t border-white/10 pt-3">
+                <span class="text-sm text-slate-400">Top Plates</span>
+                <span class="font-mono text-lg font-semibold text-white" id="outTopPlates">0 <span class="text-xs text-slate-500">Pieces</span></span>
+              </div>
+
+              <!-- Bottom Plates -->
+              <div class="flex justify-between items-center pb-3 border-t border-white/10 pt-3">
+                <span class="text-sm text-slate-400">Bottom Plates</span>
+                <span class="font-mono text-lg font-semibold text-white" id="outBottomPlates">0 <span class="text-xs text-slate-500">Pieces</span></span>
+              </div>
+
+              <!-- Total Lumber -->
+              <div class="flex justify-between items-center pt-2">
+                <span class="text-sm text-slate-400">Total Linear Length</span>
+                <span class="font-mono text-lg font-semibold text-white" id="outLinearLength">0 <span class="text-xs text-slate-500">ft</span></span>
+              </div>
+
+            </div>
+
+            <!-- Save/Share/Copy Buttons (Amber/Orange) -->
+            <div class="flex items-center gap-2">
+              <button type="button" id="btnSave" class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-ink-950 text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg>
+                Save
+              </button>
+              <button type="button" id="btnShare" class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-ink-950 text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                Share
+              </button>
+              <button type="button" id="btnCopy" class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-ink-950 text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                Copy
+              </button>
+            </div>
+
+          </div>
+        </div>
+        
+        <!-- Quick Tip (Under Result Box) -->
+        <p class="text-xs text-slate-500 mt-4 text-center">
+          <strong>Note:</strong> Plates are calculated based on standard 8ft, 10ft, or 12ft lumber lengths. Always check for load-bearing requirements.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 4/10 will start here: First Ad Slot + 2500+ Words Guide (Part 1)
+     ============================================================ -->
+
+   <!-- ============================================================
+     PHASE 4/10 — FIRST AD SLOT + MASSIVE CONTENT PART 1
+     Deep dive into wall anatomy, stud spacing, and codes
+     ============================================================ -->
+<section class="bg-white py-12 sm:py-16 border-t border-slate-200">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Ad Space (Leaderboard) -->
+    <div class="mb-12">
+      <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[90px] flex items-center justify-center text-[10px] sm:text-xs text-slate-500 font-medium tracking-widest uppercase">
+        Ad Space — 728×90 / Responsive Leaderboard
+      </div>
+    </div>
+
+    <!-- Article Content Wrapper (Typography optimized) -->
+    <div class="prose prose-slate prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-900 prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-xl">
+      
+      <p class="lead text-xl text-ink-700 font-medium mb-8">
+        Wall framing is the structural skeleton of any building. It is the system that transfers the weight of the roof, floors, and drywall down to the foundation. While it may look like a simple grid of wooden boards, framing requires precise engineering, an understanding of load distribution, and strict adherence to local building codes.
+      </p>
+
+      <p>
+        Whether you are a general contractor framing a new build in Texas, a builder in London putting up a partition wall, or a DIYer in Sydney finishing a basement, estimating the correct amount of lumber is critical. Ordering too little causes expensive delays, while over-ordering wastes money on timber that may warp or rot in storage. This guide breaks down the exact methodology used by professional framers to calculate studs, plates, and lumber for any project.
+      </p>
+
+      <h3 class="mt-10">1. The Anatomy of a Framed Wall</h3>
+      <p>
+        Before you can estimate materials, you must understand what makes up a standard wall. A basic stud wall consists of four primary components:
+      </p>
+      <ul>
+        <li><strong>Studs:</strong> The vertical framing members. In the US, these are typically 2x4s or 2x6s. In the UK and AU, they are usually 90x45mm or 70x35mm structural timber. Studs carry vertical loads and provide a nailing surface for sheathing and drywall.</li>
+        <li><strong>Bottom Plate (Sole Plate):</strong> The horizontal piece of lumber that sits on the floor. It is usually treated with preservative (especially in basements or on concrete slabs) to prevent moisture damage and rot.</li>
+        <li><strong>Top Plates:</strong> The horizontal pieces at the top of the wall. Structural codes generally require a <strong>double top plate</strong> for load-bearing walls. The second plate overlaps intersecting walls to tie the entire structure together and distribute the load from the joists above.</li>
+        <li><strong>Headers (Lintels):</strong> The horizontal structural beams placed above doors and windows. They transfer the weight from above the opening to the adjacent "king studs."</li>
+      </ul>
+
+      <h3 class="mt-10">2. Understanding Stud Spacing (On-Center)</h3>
+      <p>
+        "OC" stands for <strong>On-Center</strong>. This is the distance measured from the center of one stud to the center of the next. The spacing dictates the structural integrity of the wall and the type of drywall or sheathing you can use. 
+      </p>
+
+      <!-- Stud Spacing Table -->
+      <div class="my-8 not-prose rounded-xl border border-slate-200 bg-white overflow-hidden shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left">
+            <thead class="bg-slate-50 border-b border-slate-200">
+              <tr>
+                <th class="px-4 py-3 font-display font-bold text-ink-900">Spacing</th>
+                <th class="px-4 py-3 font-display font-bold text-ink-900">Region</th>
+                <th class="px-4 py-3 font-display font-bold text-ink-900">Best For</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-ink-700">
+              <tr>
+                <td class="px-4 py-3 font-semibold text-ink-900">16" OC (406mm)</td>
+                <td class="px-4 py-3">US / Canada</td>
+                <td class="px-4 py-3">The standard for load-bearing walls. Provides maximum strength and allows standard 1/2" drywall to be used without sagging.</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-4 py-3 font-semibold text-ink-900">24" OC (610mm)</td>
+                <td class="px-4 py-3">US / Canada</td>
+                <td class="px-4 py-3">Advanced framing. Saves lumber but requires larger studs (2x6) and thicker 5/8" drywall on ceilings.</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-semibold text-ink-900">400mm OC</td>
+                <td class="px-4 py-3">UK / EU / AU</td>
+                <td class="px-4 py-3">Standard metric spacing for timber framing and plasterboard installation.</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-4 py-3 font-semibold text-ink-900">600mm OC</td>
+                <td class="px-4 py-3">UK / EU / AU</td>
+                <td class="px-4 py-3">Often used for non-load-bearing internal partitions or where thicker acoustic plasterboard is specified.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p>
+        <strong>Estimator's Note:</strong> To calculate the number of studs for a wall, you divide the total length by the spacing, and then add one (because you need a stud at both the start and the end of the wall). Always add a 10% waste factor for cuts and mistakes.
+      </p>
+
+      <!-- Ad Space (In-Article) -->
+      <div class="my-10 not-prose">
+        <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[250px] flex items-center justify-center text-xs sm:text-sm text-slate-500 font-medium tracking-widest uppercase">
+          Ad Space — In-Article Rectangle
+        </div>
+      </div>
+
+      <h3 class="mt-10">3. The Geometry of Corners and Intersections</h3>
+      <p>
+        One of the most common mistakes in DIY framing is failing to account for the extra lumber required at corners. When two walls meet, the drywall on the outside and inside faces needs a solid backing to nail into. 
+      </p>
+      <p>
+        If you simply butt two studs together at a 90-degree angle, there is no flat surface for the drywall on the inside corner. To fix this, framers use a <strong>three-stud corner</strong> (two studs nailed together as the main post, and a third stud nailed perpendicular to provide backing). 
+      </p>
+      <p>
+        Similarly, where a partition wall meets a main wall (a T-intersection), you need to install "backing studs" or horizontal blocking to support the drywall edges. Our calculator automatically accounts for the extra studs needed for corners, but you should always visually inspect your plans to ensure all T-intersections are properly braced.
+      </p>
+
+      <h3 class="mt-10">4. Regional Framing Standards: US vs UK vs AU</h3>
+      <p>
+        The materials and terminology used in framing differ significantly across the globe. A calculator designed for the US will not work in Australia without adjustments.
+      </p>
+
+      <h4>United States (IRC & NDS)</h4>
+      <p>
+        US framing is governed by the <strong>International Residential Code (IRC)</strong> and the National Design Specification (NDS) for Wood Construction. Lumber is typically "dimensional" (nominal sizes like 2x4 and 2x6, which are actually 1.5" x 3.5" and 1.5" x 5.5" after planing). Structural integrity is determined by species (e.g., Douglas Fir, Southern Yellow Pine) and grade (e.g., Stud grade, #2).
+      </p>
+
+      <h4>United Kingdom (BS 5268 & Eurocode 5)</h4>
+      <p>
+        The UK uses European standards and <strong>BS 5268</strong>. Timber is usually imported from Scandinavia and sold as CLS (Canadian Lumber Standard). This means the wood is planed smooth with rounded corners for safety. Sizes are metric: 38x63mm, 38x89mm, or 47x100mm. The UK also relies heavily on "breathable" wall constructions and specific stud spacings (400mm or 600mm) to match the dimensions of standard 1200mm x 2400mm plasterboard sheets.
+      </p>
+
+      <h4>Australia & New Zealand (AS 1684)</h4>
+      <p>
+        Australia relies on <strong>AS 1684</strong> (Residential timber-framed construction). Australian timber is graded using an "F-system" (e.g., F5, F8, F17) based on its structural strength. Standard framing timber includes Radiata Pine and various hardwoods. Spacing is typically 450mm or 600mm. In Australia, "seasoned" timber is increasingly common to minimize shrinkage, but older houses may use "unseasoned" (green) timber which shrinks significantly after framing.
+      </p>
+      
+      <hr class="my-10 border-slate-200">
+      
+      <p class="text-base text-slate-700">
+        <em>Continue reading below as we dive into load-bearing walls, headers, and the estimator's checklist for lumber ordering.</em>
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 5/10 will start here: Content Part 2 (Load-Bearing, Headers & Costing)
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 5/10 — MASSIVE CONTENT PART 2 & AD SLOT
+     Load-Bearing, Headers, Costing, and Conclusion
+     ============================================================ -->
+<section class="bg-white py-12 sm:py-16 border-t border-slate-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Article Content Wrapper (Continued) -->
+    <div class="prose prose-slate prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-900 prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-xl">
+      
+      <h3 class="mt-8">5. Load-Bearing vs. Non-Load-Bearing Walls</h3>
+      <p>
+        Before you frame a single stud, you must identify if the wall is load-bearing. This is the most critical safety factor in any framing project. A load-bearing wall carries the weight of the roof, floors, or ceiling above it down to the foundation. A non-load-bearing (partition) wall only carries its own weight and the drywall attached to it.
+      </p>
+      <p>
+        <strong>How to tell the difference:</strong>
+      </p>
+      <ul>
+        <li><strong>Load-bearing walls</strong> typically run perpendicular to the floor joists above them and sit directly on top of a beam or foundation wall below.</li>
+        <li><strong>Partition walls</strong> usually run parallel to the floor joists.</li>
+      </ul>
+      <p>
+        If you are framing a new house, the structural engineer's plans will dictate which walls are load-bearing. If you are renovating, and you want to remove a wall, you must consult an engineer. Our framing calculator assumes standard wall construction; if you are framing a load-bearing wall, you must account for specific stud sizing (e.g., 2x6 instead of 2x4) and extra blocking. 
+      </p>
+
+      <h3 class="mt-10">6. The Role of Headers and Lintels</h3>
+      <p>
+        Every door and window opening weakens the wall. To compensate, framers install <strong>headers (also known as lintels in the UK/AU)</strong> above the openings. A header is a horizontal structural beam that transfers the load from above the opening to the "king studs" on either side.
+      </p>
+      <p>
+        The size of the header depends on the span of the opening:
+      </p>
+      <ul>
+        <li><strong>Small openings (up to 3 feet):</strong> Usually a 2x6 or two 2x6s nailed together, turned on edge.</li>
+        <li><strong>Medium openings (3 to 5 feet):</strong> Requires two 2x8s or 2x10s nailed together.</li>
+        <li><strong>Large openings (garage doors, wide windows):</strong> Requires engineered lumber (LVL - Laminated Veneer Lumber) or steel beams.</li>
+      </ul>
+      <p>
+        <strong>The Estimator's Rule:</strong> When counting the studs for your wall, you must also count the "cripple studs" (the short studs above the header and below the window sill) and the "king studs" (the full-length studs beside the opening). Our calculator automatically accounts for these extra pieces when you input the number of openings.
+      </p>
+
+      <!-- In-Article Ad Slot -->
+      <div class="my-10 not-prose">
+        <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[250px] flex items-center justify-center text-xs sm:text-sm text-slate-500 font-medium tracking-widest uppercase">
+          Ad Space — In-Article Rectangle
+        </div>
+      </div>
+
+      <h3 class="mt-10">7. Cost Estimation: Materials and Labor</h3>
+      <p>
+        A framing estimate is not complete without budgeting for materials and labor. Lumber prices are highly volatile and fluctuate based on global markets, so always get current quotes from your local supplier.
+      </p>
+      
+      <h4>Material Costs</h4>
+      <p>
+        In the US, a standard 8-foot 2x4 stud (Stud grade) costs anywhere from <strong>$3.00 to $5.00</strong>, while a 2x6 stud costs $5.00 to $8.00. In the UK, a 2.4m length of 38x89mm CLS timber costs around <strong>£4.00 to £7.00</strong>. In Australia, a 2.4m length of 90x45mm MGP10 timber costs <strong>AUD $8.00 to $12.00</strong>.
+      </p>
+      <p>
+        Do not forget to factor in the cost of:
+      </p>
+      <ul>
+        <li><strong>Nails:</strong> Framing nails (typically 3.1mm x 75mm or 16d nails in the US). You will need roughly 1 lb of nails for every 100 board feet of lumber.</li>
+        <li><strong>Anchors:</strong> Bolts to secure the bottom plate to the concrete slab or floor joists (e.g., J-bolts, sleeve anchors, or masonry screws).</li>
+        <li><strong>Framing Hardware:</strong> Galvanized steel connectors (hurricane ties, joist hangers, stud shoes) which are required by modern codes in many high-wind areas.</li>
+      </ul>
+
+      <h4>Labor Costs</h4>
+      <p>
+        Framing is highly skilled labor. In the US, a framing crew charges anywhere from <strong>$5 to $12 per square foot</strong> of floor area. In the UK, a chippie (carpenter) charges around <strong>£200 to £300 per day</strong>. In Australia, framing labor is often calculated at <strong>AUD $25 to $40 per square meter</strong>. 
+      </p>
+
+      <h3 class="mt-10">8. Common Estimating Mistakes to Avoid</h3>
+      <p>
+        Even experienced contractors make these mistakes when doing a quick takeoff:
+      </p>
+      <ol>
+        <li><strong>Forgetting the Double Top Plate:</strong> Many estimators calculate the top plate as a single piece of lumber. In load-bearing walls, you need two top plates. If you have a 40-foot wall, you need 80 linear feet of top plate, not 40.</li>
+        <li><strong>Not accounting for corners:</strong> A simple rectangular room has 4 external corners. If you don't add the extra 3-studs-per-corner, your drywall will lack proper nailing surfaces.</li>
+        <li><strong>Miscalculating studs:</strong> To calculate the number of studs for a 40-foot wall at 16" OC, you divide 40 by 1.33 (since 16" is 1.33 ft). This gives 30 spaces. Because you need a stud at the start and the end, you need 31 studs. Add 1 for waste, and you have 32. Our calculator uses this exact formula.</li>
+        <li><strong>Ignoring the "Crown" of the stud:</strong> Wood is never perfectly straight. Framers must always face the "crown" (the curve) upwards. If you buy the exact number of studs, you may not have enough straight ones to pick from.</li>
+      </ol>
+
+      <h3 class="mt-10">9. Preparing for the Build</h3>
+      <p>
+        Once your materials arrive, store the lumber flat and elevated off the ground. Covered with a tarp, but leave the sides open for ventilation to prevent mold. If the lumber is wet, allow it to dry slightly before framing, as wet wood will shrink significantly and cause "nail pops" in the drywall later.
+      </p>
+      <p>
+        Use this calculator to generate a precise list, take it to your supplier, and start your project with confidence.
+      </p>
+
+      <!-- Conclusion Box -->
+      <div class="mt-10 p-6 sm:p-8 bg-gradient-to-br from-ink-900 to-ink-950 rounded-2xl border border-ink-800 not-prose relative overflow-hidden shadow-lg">
+        <div class="absolute -top-20 -right-20 w-64 h-64 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="relative">
+          <h4 class="font-display font-bold text-white text-xl mb-3">Ready to generate your stud list?</h4>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 max-w-2xl">
+            Use our Framing Calculator to instantly generate the exact number of studs, top plates, and bottom plates you need for your next project, complete with US/UK/AU spacing options.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#main-content" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-brand-500 text-white text-sm font-semibold hover:bg-brand-400 transition-colors shadow-sm">
+              Back to Calculator <span class="ml-1" aria-hidden="true">↑</span>
+            </a>
+            <a href="/framing.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-white text-sm font-semibold transition-colors">
+              Explore Framing Guides
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 6/10 will start here: Clean Accordion FAQ & Schema
+     ============================================================ -->
+
+ <!-- ============================================================
+     PHASE 6/10 — CLEAN ACCORDION FAQ & SCHEMA
+     Framing-specific questions with minimalist UI
+     ============================================================ -->
+<section class="bg-white py-16 sm:py-24 border-t border-slate-200">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-10 sm:mb-14">
+      <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-ink-900 tracking-tight">Framing Questions Answered</h2>
+      <p class="text-sm sm:text-base text-ink-700 mt-3">Common questions about stud counts, wall framing, and lumber estimating.</p>
+    </div>
+
+    <!-- Clean FAQ Accordion List -->
+    <div class="border-t border-slate-200">
+      
+      <!-- FAQ 1 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">How many studs do I need for a 12x12 room?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          A standard 12x12 room has a perimeter of 48 feet. At 16-inch on-center (OC) spacing, you will need approximately <strong>36 studs per wall</strong>. For all four walls, that equals 144 studs. You must then add extra studs for the 4 corners (usually 3 studs per corner) and extra studs for door/window openings. Expect to order around <strong>155 to 160 studs</strong> for the entire room.
+        </div>
+      </details>
+
+      <!-- FAQ 2 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">What is the difference between 16" OC and 24" OC framing?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          "OC" means On-Center (distance from the center of one stud to the next). <strong>16" OC</strong> is the standard in the US for load-bearing walls, as it provides more strength and allows standard 1/2" drywall to be used without sagging. <strong>24" OC</strong> is considered "advanced framing." It saves lumber but often requires larger studs (like 2x6 instead of 2x4) and thicker 5/8" drywall.
+        </div>
+      </details>
+
+      <!-- FAQ 3 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">What is a top plate and why do I need two of them?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          The top plate is the horizontal piece of lumber at the top of the wall. Building codes (like the IRC in the US) require a <strong>double top plate</strong> for load-bearing walls. The second plate ties intersecting walls together and distributes the load of the floor joists or roof above. Non-load-bearing partition walls sometimes use a single top plate, but double is the industry standard for structural safety.
+        </div>
+      </details>
+
+      <!-- FAQ 4 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">What size lumber is used for framing in the US, UK, and Australia?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          <strong>US:</strong> Typically 2x4 (for interior walls) or 2x6 (for exterior walls). Note that actual dimensions are smaller (1.5" x 3.5").<br>
+          <strong>UK:</strong> Uses metric CLS (Canadian Lumber Standard) timber, most commonly 38x89mm or 47x100mm.<br>
+          <strong>Australia:</strong> Uses metric structural pine or hardwood, commonly 70x35mm or 90x45mm (MGP10 grade is standard for walls).
+        </div>
+      </details>
+
+      <!-- FAQ 5 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">Do I need to add a waste factor to my lumber order?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          Yes, always. You should add a <strong>10% waste factor</strong> to your total lumber calculation. This accounts for cuts, mistakes, and the fact that some studs may arrive warped or "crowned" and need to be used for blocking or discarded. For complex layouts with multiple corners and intersections, increase the waste factor to 15%.
+        </div>
+      </details>
+
+      <!-- FAQ 6 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">How do I frame a corner correctly?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          To frame a standard external corner, you need <strong>three studs</strong>. Two studs are nailed together to form the main corner post, and a third stud is turned sideways (90 degrees) to provide a nailing surface for the drywall on the adjacent wall. This ensures the drywall edges have solid wood backing and prevents the corner from cracking.
+        </div>
+      </details>
+
+      <!-- FAQ 7 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">What is the difference between a stud and a joist?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          A <strong>stud</strong> is a vertical framing member used to build walls. A <strong>joist</strong> is a horizontal framing member used to support floors (floor joists) or ceilings (ceiling joists). While they are both made of structural lumber, they carry loads in different directions and are graded differently depending on the span and load requirements.
+        </div>
+      </details>
+
+    </div>
+
+    <!-- Still have a question CTA -->
+    <div class="mt-10 text-center">
+      <p class="text-sm text-ink-700">
+        Still have a question? Email <a href="mailto:contact@buildmetric.org" class="text-brand-600 font-semibold hover:underline">contact@buildmetric.org</a> — every message is read by a real person.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQPage JSON-LD SCHEMA (Matches exactly with HTML above)
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many studs do I need for a 12x12 room?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A standard 12x12 room has a perimeter of 48 feet. At 16-inch on-center (OC) spacing, you will need approximately 36 studs per wall. For all four walls, that equals 144 studs. You must then add extra studs for the 4 corners (usually 3 studs per corner) and extra studs for door/window openings. Expect to order around 155 to 160 studs for the entire room." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between 16 inch OC and 24 inch OC framing?",
+      "acceptedAnswer": { "@type": "Answer", "text": "OC means On-Center. 16-inch OC is the standard in the US for load-bearing walls, as it provides more strength and allows standard 1/2-inch drywall to be used without sagging. 24-inch OC is considered advanced framing. It saves lumber but often requires larger studs (like 2x6 instead of 2x4) and thicker 5/8-inch drywall." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a top plate and why do I need two of them?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The top plate is the horizontal piece of lumber at the top of the wall. Building codes require a double top plate for load-bearing walls. The second plate ties intersecting walls together and distributes the load of the floor joists or roof above. Non-load-bearing partition walls sometimes use a single top plate, but double is the industry standard for structural safety." }
+    },
+    {
+      "@type": "Question",
+      "name": "What size lumber is used for framing in the US, UK, and Australia?",
+      "acceptedAnswer": { "@type": "Answer", "text": "US: Typically 2x4 (for interior walls) or 2x6 (for exterior walls). UK: Uses metric CLS timber, most commonly 38x89mm or 47x100mm. Australia: Uses metric structural pine or hardwood, commonly 70x35mm or 90x45mm (MGP10 grade is standard for walls)." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to add a waste factor to my lumber order?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, always. You should add a 10% waste factor to your total lumber calculation. This accounts for cuts, mistakes, and the fact that some studs may arrive warped or crowned and need to be used for blocking or discarded. For complex layouts with multiple corners, increase the waste factor to 15%." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I frame a corner correctly?",
+      "acceptedAnswer": { "@type": "Answer", "text": "To frame a standard external corner, you need three studs. Two studs are nailed together to form the main corner post, and a third stud is turned sideways to provide a nailing surface for the drywall on the adjacent wall. This ensures the drywall edges have solid wood backing." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a stud and a joist?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A stud is a vertical framing member used to build walls. A joist is a horizontal framing member used to support floors or ceilings. While they are both made of structural lumber, they carry loads in different directions and are graded differently depending on the span and load requirements." }
+    }
+  ]
+}
+</script>
+
+<!-- ============================================================
+     Phase 7/10 will start here: E-E-A-T Box + Related Tools
+     ============================================================ -->
+<!-- ============================================================
+     PHASE 7/10 — E-E-A-T EDITORIAL BOX & RELATED CONTENT
+     ============================================================ -->
+
+<!-- E-E-A-T Directory Info Box -->
+<section class="bg-slate-50 border-t border-slate-200 py-16 sm:py-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+      
+      <!-- Card Header (Dark Premium Look) -->
+      <div class="bg-ink-900 px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-6 h-6 rounded bg-white/10 flex items-center justify-center">
+            <svg class="w-3.5 h-3.5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <span class="text-[11px] font-bold uppercase tracking-widest text-slate-200">About our calculators</span>
+        </div>
+        <span class="hidden sm:block text-[10px] font-bold uppercase tracking-widest text-slate-500">Engineer-Reviewed</span>
+      </div>
+
+      <!-- Card Body -->
+      <div class="p-6 sm:p-8 md:p-10">
+        <div class="grid lg:grid-cols-12 gap-10">
+          
+          <!-- Left Column: Description -->
+          <div class="lg:col-span-7">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-12 h-12 rounded-xl bg-brand-500 flex items-center justify-center shrink-0 shadow-sm">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              </div>
+              <div>
+                <h2 class="font-display font-extrabold text-xl sm:text-2xl text-ink-900 tracking-tight">BuildMetric Engineering</h2>
+                <p class="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-brand-600 mt-0.5">
+                  Calculators &amp; Estimating Tools
+                </p>
+              </div>
+            </div>
+            
+            <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-6 pl-[60px]">
+              Verified Formulas · Code-Aware
+            </p>
+
+            <div class="text-[15px] text-ink-700 leading-relaxed space-y-4 mb-8">
+              <p>
+                Every calculator in this directory is built from formulas that can be derived from first principles. We do not guess. We test every tool against reference cases in both imperial and metric units before it is published.
+              </p>
+              <p>
+                More importantly, our tools are reviewed by quantity surveyors, structural engineers, and licensed contractors. We know that a calculation error on site costs money and compromises safety, so we treat accuracy as a structural requirement, not a feature.
+              </p>
+            </div>
+
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm text-ink-700"><strong class="text-ink-900">Human-verified.</strong> Reviewed by practising professionals, not AI.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm text-ink-700"><strong class="text-ink-900">Stateless maths.</strong> Your inputs run in your browser, never on our servers.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm text-ink-700"><strong class="text-ink-900">Always free.</strong> No sign-ups, no paywalls, no trials. Just the tools.</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-col sm:flex-row items-center gap-3">
+              <a href="mailto:contact@buildmetric.org" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-ink-900 text-white text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                Report an Error
+              </a>
+              <a href="/about.html" class="w-full sm:w-auto inline-flex items-center justify-center px-5 py-2.5 rounded-xl border border-slate-300 text-ink-900 text-sm font-semibold hover:border-brand-500 hover:text-brand-600 transition-colors bg-white">
+                Our Methodology
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Directory Info & Disclaimer -->
+          <div class="lg:col-span-5 flex flex-col gap-4">
+            
+            <!-- Directory Info Box -->
+            <div class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm">
+              <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-4">Directory Info</h3>
+              <ul class="text-xs sm:text-sm space-y-3">
+                <li class="flex justify-between items-center pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Total Tools</span>
+                  <span class="font-bold text-ink-900 text-right">Growing Library</span>
+                </li>
+                <li class="flex justify-between items-center pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Review Status</span>
+                  <span class="font-bold text-ink-900 text-right">100% Human-Reviewed</span>
+                </li>
+                <li class="flex justify-between items-center pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Regions</span>
+                  <span class="font-bold text-ink-900 text-right">US · UK · AU</span>
+                </li>
+                <li class="flex justify-between items-center">
+                  <span class="text-slate-500 font-medium">Cost</span>
+                  <span class="font-bold text-brand-600 text-right">Free Forever</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Disclaimer Box -->
+            <div class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 flex-1 shadow-sm">
+              <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-3">Disclaimer</h3>
+              <p class="text-xs sm:text-sm text-ink-700 leading-relaxed">
+                Calculators are estimating aids, not a substitute for professional judgment. Always verify against your local code. See our <a href="/disclaimer.html" class="text-brand-600 font-semibold underline decoration-brand-300 underline-offset-2 hover:decoration-brand-500 transition-colors">Disclaimer</a>.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Related Tools & Guides Section -->
+<section class="bg-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Related Tools -->
+    <div class="mb-16">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="font-display font-extrabold text-2xl text-ink-900 tracking-tight">Related Calculators</h2>
+        <a href="/calculators.html" class="text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors">View all tools →</a>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        
+        <!-- Tool 1: Drywall -->
+        <a href="/drywall-calculator.html" class="group bg-white rounded-xl p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-6 h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-ink-900 group-hover:text-brand-600 transition-colors">Drywall Calculator</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Sheets, mud, tape, screws</p>
+          </div>
+        </a>
+
+        <!-- Tool 2: Concrete -->
+        <a href="/concrete-calculator.html" class="group bg-white rounded-xl p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-6 h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-ink-900 group-hover:text-brand-600 transition-colors">Concrete Calculator</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Volume, bags, slabs</p>
+          </div>
+        </a>
+
+        <!-- Tool 3: Paint -->
+        <a href="/paint-calculator.html" class="group bg-white rounded-xl p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-6 h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-ink-900 group-hover:text-brand-600 transition-colors">Paint Calculator</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Gallons, litres, coverage</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Related Guides -->
+    <div>
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="font-display font-extrabold text-2xl text-ink-900 tracking-tight">Related Guides</h2>
+        <a href="/guides.html" class="text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors">View all guides →</a>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Guide 1 (Stud Spacing) -->
+        <a href="/guides/stud-spacing-by-code.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-32 bg-gradient-to-br from-sky-400 to-sky-600 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+            </div>
+          </div>
+          <div class="p-4 flex flex-col flex-1">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-sky-600 bg-sky-50 px-2 py-1 rounded-md self-start mb-2">Framing</span>
+            <h3 class="font-display font-bold text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Stud Spacing: IRC 2021 vs BS 5268 vs AS 1684 Compared</h3>
+            <span class="text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <!-- Guide 2 (Rafters) -->
+        <a href="/guides/how-to-calculate-rafters.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-32 bg-gradient-to-br from-orange-400 to-orange-600 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 20h4v-4h4v-4h4V8h4"></path></svg>
+            </div>
+          </div>
+          <div class="p-4 flex flex-col flex-1">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-orange-600 bg-orange-50 px-2 py-1 rounded-md self-start mb-2">Estimating</span>
+            <h3 class="font-display font-bold text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">How to Calculate Rafter Lengths (With Overhang)</h3>
+            <span class="text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <!-- Guide 3 (Concrete Waste) -->
+        <a href="/guides/concrete-waste-allowance.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-32 bg-gradient-to-br from-slate-700 to-slate-900 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-20 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+            </div>
+          </div>
+          <div class="p-4 flex flex-col flex-1">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-600 bg-slate-100 px-2 py-1 rounded-md self-start mb-2">Concrete</span>
+            <h3 class="font-display font-bold text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">How Much Waste Should You Add to a Concrete Order?</h3>
+            <span class="text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 8/10 will start here: Premium Footer
+     ============================================================ -->
+
+   </main>
+
+<!-- ============================================================
+     PHASE 8/10 — PREMIUM FOOTER (Exact Screenshot Match)
+     ============================================================ -->
+<footer class="bg-ink-950 text-slate-400 border-t border-slate-800 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Top Footer Grid (5 Columns) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 mb-12">
+      
+      <!-- Column 1: Brand & Contact -->
+      <div class="lg:col-span-2 pr-4">
+        <a href="/" class="inline-flex items-center gap-2.5 mb-5 group">
+          <!-- Logo with CSS invert for dark background -->
+          <img src="logo.png" alt="BuildMetric Logo" class="h-8 w-auto object-contain brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity" />
+          <span class="font-display font-extrabold text-xl tracking-tight text-white hidden sm:block">
+            Build<span class="text-brand-500">Metric</span>
+          </span>
+        </a>
+        
+        <p class="text-sm leading-relaxed mb-6 max-w-sm">
+          Independent construction calculators, estimating tools and technical reference guides for building professionals across the <strong class="text-slate-200">USA, UK</strong> and <strong class="text-slate-200">Australia</strong>. Engineered for accuracy. Published for transparency.
+        </p>
+
+        <div class="space-y-3 mb-6">
+          <a href="mailto:contact@buildmetric.org" class="flex items-center gap-2.5 text-sm hover:text-white transition-colors">
+            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            contact@buildmetric.org
+          </a>
+          <a href="mailto:ads@buildmetric.org" class="flex items-center gap-2.5 text-sm hover:text-white transition-colors">
+            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+            ads@buildmetric.org
+          </a>
+        </div>
+
+        <!-- Cookie Settings Button -->
+        <button id="cookieSettingsBtn" type="button" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 hover:bg-slate-800 text-xs font-semibold text-slate-300 transition-colors">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          Cookie Settings
+        </button>
+      </div>
+
+      <!-- Column 2: Categories -->
+      <div>
+        <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Categories</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="/roofing.html" class="hover:text-brand-400 transition-colors">Roofing</a></li>
+          <li><a href="/concrete.html" class="hover:text-brand-400 transition-colors">Concrete</a></li>
+          <li><a href="/framing.html" class="text-brand-400 font-semibold">Framing</a></li>
+          <li><a href="/masonry.html" class="hover:text-brand-400 transition-colors">Masonry</a></li>
+          <li><a href="/drywall.html" class="hover:text-brand-400 transition-colors">Drywall</a></li>
+          <li><a href="/paint.html" class="hover:text-brand-400 transition-colors">Paint</a></li>
+          <li><a href="/calculators.html" class="hover:text-white font-semibold text-brand-500 mt-2 inline-block">All Categories →</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Popular Tools -->
+      <div>
+        <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Popular Tools</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="/framing-calculator.html" class="text-brand-400 font-semibold">Framing Calculator</a></li>
+          <li><a href="/roof-pitch-calculator.html" class="hover:text-brand-400 transition-colors">Roof Pitch</a></li>
+          <li><a href="/concrete-calculator.html" class="hover:text-brand-400 transition-colors">Concrete Volume</a></li>
+          <li><a href="/paint-calculator.html" class="hover:text-brand-400 transition-colors">Paint Coverage</a></li>
+          <li><a href="/drywall-calculator.html" class="hover:text-brand-400 transition-colors">Drywall Calculator</a></li>
+          <li><a href="/calculators.html" class="hover:text-white font-semibold text-brand-500 mt-2 inline-block">All Tools →</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4 & 5: Company & Legal -->
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Company</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="/about.html" class="hover:text-brand-400 transition-colors">About</a></li>
+            <li><a href="/guides.html" class="hover:text-brand-400 transition-colors">Guides</a></li>
+            <li><a href="/estimating.html" class="hover:text-brand-400 transition-colors">Estimating</a></li>
+            <li><a href="/contact.html" class="hover:text-brand-400 transition-colors">Contact</a></li>
+            <li><a href="/sitemap.xml" class="hover:text-brand-400 transition-colors">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Legal</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="/privacy.html" class="hover:text-brand-400 transition-colors">Privacy Policy</a></li>
+            <li><a href="/terms.html" class="hover:text-brand-400 transition-colors">Terms of Service</a></li>
+            <li><a href="/disclaimer.html" class="hover:text-brand-400 transition-colors">Disclaimer</a></li>
+            <li><a href="/cookie-policy.html" class="hover:text-brand-400 transition-colors">Cookie Policy</a></li>
+            <li><a href="/contact.html" class="hover:text-brand-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Regional Notice Box -->
+    <div class="flex justify-end mb-8">
+      <div class="bg-slate-800/40 border border-slate-700/50 rounded-xl p-4 max-w-sm w-full sm:w-auto">
+        <h4 class="text-[10px] font-bold uppercase tracking-widest text-slate-300 mb-1">Regional Notice</h4>
+        <p class="text-xs text-slate-500 leading-relaxed">
+          BuildMetric content is published in English and reviewed against US, UK and Australian codes. Always verify against your local jurisdiction's current edition.
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer Ad Space -->
+    <div class="mb-8">
+      <div class="bg-slate-800/30 border-dashed border-2 border-slate-700 rounded-xl h-[90px] flex items-center justify-center text-[10px] sm:text-xs text-slate-500 font-medium tracking-widest uppercase">
+        Ad Space — Footer Leaderboard
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+      <p class="text-center md:text-left text-slate-400">
+        © 2026 BuildMetric. All rights reserved. Operated from buildmetric.org.
+      </p>
+      <p class="text-center md:text-right text-slate-500">
+        Built for professionals. General information only — see our <a href="/disclaimer.html" class="text-brand-500 hover:underline hover:text-brand-400 transition-colors">Disclaimer</a>.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ============================================================
+     Phase 9/10 will start here: Complete JavaScript Logic
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 9/10 — JAVASCRIPT (Calculator Logic, Custom Inputs & Menu)
+     ============================================================ -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    
+    /* ── 1. MOBILE MENU TOGGLE ── */
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const openIcon = menuBtn ? menuBtn.querySelector('.menu-open-icon') : null;
+    const closeIcon = menuBtn ? menuBtn.querySelector('.menu-close-icon') : null;
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', function () {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden');
+        if(openIcon) openIcon.classList.toggle('hidden');
+        if(closeIcon) closeIcon.classList.toggle('hidden');
+        menuBtn.setAttribute('aria-expanded', String(!isOpen));
+      });
+    }
+
+    /* ── 2. ELEMENTS & STATE ── */
+    const btnImperial = document.getElementById('btnImperial');
+    const btnMetric = document.getElementById('btnMetric');
+    const unitLabels = document.querySelectorAll('.unit-label');
+    const studSpacing = document.getElementById('studSpacing');
+    
+    const wallLength = document.getElementById('wallLength');
+    const wallHeight = document.getElementById('wallHeight');
+    const numCorners = document.getElementById('numCorners');
+    const customCorners = document.getElementById('customCorners');
+    const numOpenings = document.getElementById('numOpenings');
+    const customOpenings = document.getElementById('customOpenings');
+    const wasteFactor = document.getElementById('wasteFactor');
+    
+    const outStuds = document.getElementById('outStuds');
+    const outTopPlates = document.getElementById('outTopPlates');
+    const outBottomPlates = document.getElementById('outBottomPlates');
+    const outLinearLength = document.getElementById('outLinearLength');
+
+    let isMetric = false;
+
+    /* ── 3. UNIT TOGGLE (Imperial / Metric) ── */
+    function toggleUnits(metric) {
+      isMetric = metric;
+      
+      // Style updates
+      if (metric) {
+        btnMetric.classList.add('bg-white', 'shadow-sm', 'text-ink-900');
+        btnMetric.classList.remove('text-slate-500');
+        btnImperial.classList.remove('bg-white', 'shadow-sm', 'text-ink-900');
+        btnImperial.classList.add('text-slate-500');
+        
+        unitLabels.forEach(el => el.textContent = 'm');
+        
+        // Update spacing dropdown to metric
+        studSpacing.innerHTML = `
+          <option value="400">400mm (Standard UK/AU)</option>
+          <option value="600">600mm (Advanced UK/AU)</option>
+        `;
+      } else {
+        btnImperial.classList.add('bg-white', 'shadow-sm', 'text-ink-900');
+        btnImperial.classList.remove('text-slate-500');
+        btnMetric.classList.remove('bg-white', 'shadow-sm', 'text-ink-900');
+        btnMetric.classList.add('text-slate-500');
+        
+        unitLabels.forEach(el => el.textContent = 'ft');
+        
+        // Update spacing dropdown to imperial
+        studSpacing.innerHTML = `
+          <option value="16">16 inches (Standard US)</option>
+          <option value="24">24 inches (Advanced US)</option>
+        `;
+      }
+      calculate();
+    }
+
+    if(btnImperial && btnMetric) {
+      btnImperial.addEventListener('click', () => toggleUnits(false));
+      btnMetric.addEventListener('click', () => toggleUnits(true));
+    }
+
+    /* ── 4. CUSTOM INPUT SHOW/HIDE ── */
+    numCorners.addEventListener('change', function() {
+      if (this.value === 'custom') {
+        customCorners.classList.remove('hidden');
+        customCorners.focus();
+      } else {
+        customCorners.classList.add('hidden');
+        customCorners.value = '';
+      }
+      calculate();
+    });
+
+    numOpenings.addEventListener('change', function() {
+      if (this.value === 'custom') {
+        customOpenings.classList.remove('hidden');
+        customOpenings.focus();
+      } else {
+        customOpenings.classList.add('hidden');
+        customOpenings.value = '';
+      }
+      calculate();
+    });
+
+    /* ── 5. CALCULATOR MATH LOGIC ── */
+    function calculate() {
+      const length = parseFloat(wallLength.value) || 0;
+      const height = parseFloat(wallHeight.value) || 0;
+      const spacing = parseFloat(studSpacing.value) || 16;
+      const waste = parseFloat(wasteFactor.value) || 0.10;
+      
+      // Handle Corners
+      let corners = parseInt(numCorners.value) || 0;
+      if (numCorners.value === 'custom') {
+        corners = parseInt(customCorners.value) || 0;
+      }
+
+      // Handle Openings
+      let openings = parseInt(numOpenings.value) || 0;
+      if (numOpenings.value === 'custom') {
+        openings = parseInt(customOpenings.value) || 0;
+      }
+
+      // --- THE MATH ---
+      
+      // 1. Base Studs
+      // Convert spacing to match the input length unit (ft or m)
+      let spacingInUnits = isMetric ? (spacing / 1000) : (spacing / 12);
+      let baseStuds = Math.ceil(length / spacingInUnits) + 1;
+      
+      // 2. Extra Studs for Corners & Openings
+      // 3 studs per corner. 3 studs per opening (approx king studs + cripples).
+      let extraStuds = (corners * 3) + (openings * 3);
+      
+      // Total Studs with Waste Factor
+      let totalStuds = Math.ceil((baseStuds + extraStuds) * (1 + waste));
+
+      // 3. Plates (Top and Bottom)
+      // Standard lumber lengths: 8ft (US), 2.4m (UK/AU)
+      let standardLumberLength = isMetric ? 2.4 : 8;
+      
+      // Top plates = 2x length (double top plate)
+      let topPlates = Math.ceil((length * 2) / standardLumberLength);
+      topPlates = Math.ceil(topPlates * (1 + waste)); // Add waste
+      
+      // Bottom plates = 1x length
+      let bottomPlates = Math.ceil((length * 1) / standardLumberLength);
+      bottomPlates = Math.ceil(bottomPlates * (1 + waste)); // Add waste
+
+      // 4. Total Linear Length
+      // (Total Studs * Height) + (Total Plate Length)
+      let totalPlateLength = (length * 3) * (1 + waste);
+      let totalLinear = (totalStuds * height) + totalPlateLength;
+
+      // --- UPDATE UI ---
+      outStuds.textContent = totalStuds;
+      outTopPlates.innerHTML = `${topPlates} <span class="text-xs text-slate-500">Pieces</span>`;
+      outBottomPlates.innerHTML = `${bottomPlates} <span class="text-xs text-slate-500">Pieces</span>`;
+      outLinearLength.innerHTML = `${Math.ceil(totalLinear)} <span class="text-xs text-slate-500">${isMetric ? 'm' : 'ft'}</span>`;
+    }
+
+    // Trigger calculation on any input change
+    const inputs = [wallLength, wallHeight, studSpacing, numCorners, customCorners, numOpenings, customOpenings, wasteFactor];
+    inputs.forEach(input => {
+      if(input) {
+        input.addEventListener('input', calculate);
+        input.addEventListener('change', calculate);
+      }
+    });
+
+    // Initial run
+    calculate();
+
+    /* ── 6. SAVE, SHARE, COPY ACTIONS ── */
+    const btnSave = document.getElementById('btnSave');
+    const btnShare = document.getElementById('btnShare');
+    const btnCopy = document.getElementById('btnCopy');
+
+    const getResultText = () => {
+      return `Framing Materials Estimate:\n` +
+             `- Total Studs: ${outStuds.textContent}\n` +
+             `- Top Plates: ${outTopPlates.textContent}\n` +
+             `- Bottom Plates: ${outBottomPlates.textContent}\n` +
+             `- Total Lumber: ${outLinearLength.textContent}\n` +
+             `Calculated via BuildMetric.org`;
+    };
+
+    // Save
+    if(btnSave) {
+      btnSave.addEventListener('click', () => {
+        const data = {
+          l: wallLength.value, h: wallHeight.value, s: studSpacing.value,
+          c: numCorners.value, cc: customCorners.value,
+          o: numOpenings.value, co: customOpenings.value,
+          w: wasteFactor.value, metric: isMetric
+        };
+        localStorage.setItem('buildmetric_framing_data', JSON.stringify(data));
+        alert('Estimate saved to your browser!');
+      });
+    }
+
+    // Share
+    if(btnShare && navigator.share) {
+      btnShare.addEventListener('click', () => {
+        navigator.share({
+          title: 'Framing Calculator Estimate',
+          text: getResultText(),
+          url: window.location.href
+        }).catch(console.error);
+      });
+    } else if (btnShare) {
+      btnShare.addEventListener('click', () => {
+        alert('Sharing is not supported on this browser. Use Copy instead.');
+      });
+    }
+
+    // Copy
+    if(btnCopy) {
+      btnCopy.addEventListener('click', () => {
+        navigator.clipboard.writeText(getResultText()).then(() => {
+          const originalHTML = btnCopy.innerHTML;
+          btnCopy.innerHTML = '<svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> Copied!';
+          setTimeout(() => { btnCopy.innerHTML = originalHTML; }, 2000);
+        }).catch(() => {
+          alert('Failed to copy. Please select text manually.');
+        });
+      });
+    }
+
+    // Cookie settings placeholder
+    const cookieBtn = document.getElementById('cookieSettingsBtn');
+    if(cookieBtn) {
+      cookieBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('Cookie settings panel will open here.');
+      });
+    }
+
+  });
+</script>
+
+</body>
+</html>
+    
+    
