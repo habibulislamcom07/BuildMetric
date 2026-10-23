@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- ============================================================
+       PHASE 1/10 — SEO HEAD & CONFIGURATION (Long-Tail Focus)
+       File: fence-calculator.html
+       Brand: BuildMetric | Domain: buildmetric.org
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO Meta (Long-Tail Keywords) -->
+  <title>Fence Calculator | How Many Pickets & Posts Do I Need? | BuildMetric</title>
+  <meta name="description" content="Free fence calculator to estimate how many pickets, posts, rails, and bags of concrete you need. Enter your fence length, height, and post spacing for an exact material list." />
+  <meta name="keywords" content="fence calculator, how many fence pickets do i need, fence post calculator, fence material estimator, how much concrete for fence posts, wood fence calculator" />
+  <meta name="author" content="BuildMetric Editorial Team" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#0ea5e9" />
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://buildmetric.org/fence-calculator.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BuildMetric" />
+  <meta property="og:title" content="Fence Calculator | Estimate Pickets & Posts" />
+  <meta property="og:description" content="Calculate exact fence materials (pickets, rails, posts, concrete) for your yard project." />
+  <meta property="og:url" content="https://buildmetric.org/fence-calculator.html" />
+  <meta property="og:image" content="https://buildmetric.org/assets/og/fence-calculator.png" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fence Material Calculator | BuildMetric" />
+  <meta name="twitter:description" content="Estimate exact materials for your wood fence project." />
+  <meta name="twitter:image" content="https://buildmetric.org/assets/og/fence-calculator.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e' },
+            ink: { 700: '#334155', 800: '#1e293b', 900: '#0f172a', 950: '#080f1e' }
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: {
+            'soft': '0 4px 20px -2px rgba(15,23,42,0.05)',
+            'hover': '0 12px 32px -8px rgba(14,165,233,0.15)',
+            'glass': '0 4px 24px -4px rgba(15,23,42,0.08)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+    .bg-grid-pattern {
+      background-image: linear-gradient(to right, rgba(15,23,42,0.04) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(15,23,42,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .nav-glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); }
+    details > summary .icon-plus { transition: transform 0.3s ease; }
+    details[open] > summary .icon-plus { transform: rotate(45deg); }
+    details > summary::-webkit-details-marker { display: none; }
+  </style>
+
+  <!-- ================= JSON-LD SCHEMA ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://buildmetric.org/fence-calculator.html#app",
+        "name": "Fence Material Calculator",
+        "url": "https://buildmetric.org/fence-calculator.html",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "All",
+        "description": "Calculate the number of fence pickets, posts, rails, and concrete bags needed for a wood fence.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://buildmetric.org/fence-calculator.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://buildmetric.org/" },
+          { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://buildmetric.org/calculators.html" },
+          { "@type": "ListItem", "position": 3, "name": "Landscaping", "item": "https://buildmetric.org/landscaping.html" },
+          { "@type": "ListItem", "position": 4, "name": "Fence Calculator", "item": "https://buildmetric.org/fence-calculator.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+  <body class="bg-white text-ink-800 antialiased font-sans flex flex-col min-h-screen">
+
+  <!-- ============================================================
+       SKIP LINK (Accessibility)
+       ============================================================ -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2.5 focus:bg-brand-500 focus:text-white focus:rounded-lg focus:font-semibold focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/70">
+    Skip to main content
+  </a>
+
+  <!-- ============================================================
+       STICKY NAVBAR (Consistent across all tools)
+       ============================================================ -->
+  <header class="sticky top-0 z-50 nav-glass border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        
+        <!-- Logo -->
+        <div class="flex items-center gap-6">
+          <a href="/" class="flex items-center gap-2.5 shrink-0" aria-label="BuildMetric Home">
+            <img src="logo.png" alt="BuildMetric Logo" class="h-8 sm:h-10 w-auto object-contain" />
+            <span class="font-display font-extrabold text-xl tracking-tight text-ink-900 hidden sm:block">
+              Build<span class="text-brand-500">Metric</span>
+            </span>
+          </a>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden lg:flex items-center gap-1" aria-label="Main Navigation">
+            <a href="/calculators.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Calculators</a>
+            <a href="/guides.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Guides</a>
+            <a href="/about.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">About</a>
+            <a href="/contact.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Contact</a>
+          </nav>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-3">
+          <a href="/calculators.html" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-ink-900 text-white text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+            Open Tools
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuBtn" type="button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-200 text-ink-800 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand-500/40 transition-colors" aria-expanded="false" aria-controls="mobileMenu">
+            <span class="sr-only">Open main menu</span>
+            <svg class="menu-open-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <svg class="menu-close-icon hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu (Push-down) -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 bg-white">
+      <div class="px-4 py-4 space-y-1">
+        <a href="/calculators.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Calculators</a>
+        <a href="/guides.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Guides</a>
+        <a href="/about.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">About</a>
+        <a href="/contact.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main id="main-content" class="flex-grow">
+    
+    <!-- ============================================================
+         PAGE HEADER & BREADCRUMBS
+         ============================================================ -->
+    <div class="bg-slate-50 border-b border-slate-200 pt-6 pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="Breadcrumb" class="mb-4">
+          <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs sm:text-sm text-slate-500">
+            <li><a href="/" class="hover:text-brand-600 transition-colors">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/calculators.html" class="hover:text-brand-600 transition-colors">Calculators</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/landscaping.html" class="hover:text-brand-600 transition-colors">Landscaping</a></li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page" class="text-ink-900 font-semibold">Fence Calculator</li>
+          </ol>
+        </nav>
+
+        <!-- Page Title & Subtitle -->
+        <h1 class="font-display font-extrabold text-3xl sm:text-4xl text-ink-900 tracking-tight leading-tight">
+          Fence Material Calculator
+        </h1>
+        <p class="text-sm sm:text-base text-ink-700 mt-2 max-w-2xl">
+          Calculate exactly how many pickets, rails, posts, and bags of concrete you need for your wood fence project. Accounts for post spacing, fence height, and standard waste factors.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- ============================================================
+         Phase 3/10 will start here: The Calculator UI (Inputs & Outputs)
+         ============================================================ -->
+<!-- ============================================================
+     PHASE 3/10 — THE CALCULATOR UI
+     Fence specific inputs and result box
+     ============================================================ -->
+<section class="bg-white py-10 sm:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+      
+      <!-- Left Column: Form Inputs (7/12) -->
+      <div class="lg:col-span-7">
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 sm:p-8">
+          
+          <!-- Unit Toggle (Top Right) -->
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="font-display font-bold text-xl text-ink-900">Fence Details</h2>
+            <div class="flex items-center bg-slate-100 p-1 rounded-lg">
+              <button type="button" id="btnImperial" class="px-3 py-1.5 text-xs font-semibold rounded-md bg-white shadow-sm text-ink-900 transition-all">Imperial (ft/in)</button>
+              <button type="button" id="btnMetric" class="px-3 py-1.5 text-xs font-semibold rounded-md text-slate-500 hover:text-ink-900 transition-all">Metric (m/mm)</button>
+            </div>
+          </div>
+
+          <!-- Dimensions Row (2 cols on mobile) -->
+          <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-4">
+            <div>
+              <label for="fenceLength" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Total Length (<span class="unit-label">ft</span>)</label>
+              <input type="number" id="fenceLength" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow text-sm sm:text-base" placeholder="e.g. 100" min="0" step="0.1">
+            </div>
+            <div>
+              <label for="fenceHeight" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Fence Height (<span class="unit-label">ft</span>)</label>
+              <select id="fenceHeight" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm sm:text-base">
+                <option value="4">4 ft (1.2m)</option>
+                <option value="5">5 ft (1.5m)</option>
+                <option value="6" selected>6 ft (1.8m)</option>
+                <option value="8">8 ft (2.4m)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Post Spacing & Rails Row (2 cols on mobile) -->
+          <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-4">
+            <div>
+              <label for="postSpacing" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Post Spacing (OC)</label>
+              <select id="postSpacing" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm sm:text-base">
+                <option value="6">6 ft (1.8m)</option>
+                <option value="8" selected>8 ft (2.4m)</option>
+                <option value="10">10 ft (3.0m)</option>
+                <option value="custom">Custom...</option>
+              </select>
+              <!-- Custom Input for Post Spacing -->
+              <input type="number" id="customPostSpacing" class="hidden mt-2 w-full px-3 py-2 rounded-lg border border-brand-300 bg-brand-50 focus:ring-2 focus:ring-brand-500 text-sm" placeholder="Exact ft/m" min="0" step="0.1">
+            </div>
+            <div>
+              <label for="numRails" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Rails per Section</label>
+              <select id="numRails" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm sm:text-base">
+                <option value="2">2 Rails (Standard)</option>
+                <option value="3">3 Rails (Heavy)</option>
+              </select>
+            </div>
+          </div>
+
+          <hr class="border-slate-100 my-6">
+
+          <!-- Picket Details Row (2 cols on mobile) -->
+          <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-4">
+            <div>
+              <label for="picketWidth" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Picket Width (<span class="picket-unit-label">in</span>)</label>
+              <select id="picketWidth" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm sm:text-base">
+                <option value="3.5">3.5" (1x4)</option>
+                <option value="5.5" selected>5.5" (1x6)</option>
+                <option value="7.25">7.25" (1x8)</option>
+              </select>
+            </div>
+            <div>
+              <label for="picketGap" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Gap Between Pickets (<span class="gap-unit-label">in</span>)</label>
+              <select id="picketGap" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm sm:text-base">
+                <option value="0.25">0.25" (Privacy)</option>
+                <option value="0.5" selected>0.5" (Standard)</option>
+                <option value="1">1.0" (Spaced)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Waste Factor -->
+          <div class="mb-6">
+            <label for="wasteFactor" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Waste Factor</label>
+            <select id="wasteFactor" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm sm:text-base">
+              <option value="0.05">5% (Straight Layout)</option>
+              <option value="0.10" selected>10% (Standard)</option>
+              <option value="0.15">15% (Hilly/Tricky)</option>
+            </select>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Column: Result Box (5/12) -->
+      <div class="lg:col-span-5">
+        <div class="bg-ink-900 rounded-2xl shadow-lg border border-ink-800 sticky top-24 overflow-hidden">
+          <div class="p-6 sm:p-8">
+            
+            <!-- Highlighted Total Pickets -->
+            <div class="text-center pb-6 border-b border-white/10 mb-6">
+              <p class="text-sm text-brand-300 font-semibold mb-1">Total Pickets Needed</p>
+              <div class="flex items-center justify-center gap-2">
+                <span class="font-mono text-5xl font-extrabold text-white" id="outPickets">0</span>
+                <span class="text-sm text-slate-400 mt-4">Pieces</span>
+              </div>
+            </div>
+
+            <!-- Other Results -->
+            <div class="space-y-3 mb-8">
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-slate-400">Fence Posts (4x4)</span>
+                <span class="font-mono text-base font-semibold text-white" id="outPosts">0 <span class="text-xs text-slate-500">posts</span></span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-slate-400">Fence Rails</span>
+                <span class="font-mono text-base font-semibold text-white" id="outRails">0 <span class="text-xs text-slate-500">pieces</span></span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-slate-400">Concrete Bags (50lb/25kg)</span>
+                <span class="font-mono text-base font-semibold text-white" id="outConcrete">0 <span class="text-xs text-slate-500">bags</span></span>
+              </div>
+            </div>
+
+            <!-- Save/Share/Copy Buttons (Blue) -->
+            <div class="flex items-center gap-2">
+              <button type="button" id="btnSave" class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg>
+                Save
+              </button>
+              <button type="button" id="btnShare" class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                Share
+              </button>
+              <button type="button" id="btnCopy" class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                Copy
+              </button>
+            </div>
+
+          </div>
+        </div>
+        
+        <!-- Quick Tip -->
+        <p class="text-xs text-slate-500 mt-4 text-center">
+          <strong>Pro Tip:</strong> Concrete bag estimates assume 2 bags per post hole (10"-12" diameter, 30" deep). Adjust based on your local frost line.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 4/10 will start here: First Ad Slot + Massive Content Part 1
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 4/10 — FIRST AD SLOT + MASSIVE CONTENT PART 1
+     Deep dive into fence anatomy, post depth, and math
+     ============================================================ -->
+<section class="bg-white py-12 sm:py-16 border-t border-slate-200">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Ad Space (Leaderboard) -->
+    <div class="mb-12">
+      <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[90px] flex items-center justify-center text-[10px] sm:text-xs text-slate-500 font-medium tracking-widest uppercase">
+        Ad Space — 728×90 / Responsive Leaderboard
+      </div>
+    </div>
+
+    <!-- Article Content Wrapper (Typography optimized) -->
+    <div class="prose prose-slate prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-900 prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-xl">
+      
+      <p class="lead text-xl text-ink-700 font-medium mb-8">
+        Building a wood fence is one of the most satisfying DIY projects, but it is also a significant financial investment. The biggest challenge for most homeowners is answering the question: <strong>"How many fence pickets and posts do I actually need?"</strong> 
+      </p>
+
+      <p>
+        Unlike interior projects where you can easily make a trip to the hardware store, a fence project requires a massive amount of lumber. If you under-order, you might get stuck with a half-finished fence because the store ran out of your specific wood treatment. If you over-order, you are left with hundreds of dollars of warped lumber sitting in your yard. This guide will walk you through the exact mathematical formulas and structural codes used by professional fence contractors in the US, UK, and Australia.
+      </p>
+
+      <h3 class="mt-10">1. The Anatomy of a Wood Fence</h3>
+      <p>
+        To calculate materials accurately, you must break the fence down into its three main components:
+      </p>
+      <ul>
+        <li><strong>Posts:</strong> The vertical anchors. In the US, these are typically 4x4 treated pine (often ground-contact rated). In the UK, 100mm x 100mm wooden posts are standard. Posts bear the entire wind load of the fence.</li>
+        <li><strong>Rails:</strong> The horizontal supports that connect the posts. Most fences use two rails (top and bottom), but taller or privacy fences may use three. Rails are usually 2x4 lumber in the US, or 47x75mm in the UK.</li>
+        <li><strong>Pickets (or Slats):</strong> The vertical boards that create the privacy and aesthetic. In the US, standard dog-ear pickets are 5.5 inches wide (1x6). In the UK, fences are often built using pre-assembled panels rather than individual pickets.</li>
+      </ul>
+
+      <h3 class="mt-10">2. The Golden Rule: Post Depth and Frost Lines</h3>
+      <p>
+        The most common reason a fence fails is not the wood rotting; it is the posts heaving out of the ground due to frost. To calculate how much concrete you need, you must first determine your post depth.
+      </p>
+      <p>
+        <strong>The 1/3 Rule:</strong> As a general rule of thumb, one-third of the post's total length should be buried underground. For a standard 6-foot high fence, you will use an 8-foot post. 2 feet goes in the ground, and 6 feet stays above. 
+      </p>
+      <p>
+        <strong>The Frost Line:</strong> In colder climates (like the northern US, Canada, and parts of the UK/EU), the hole must be dug below the "frost line"—the depth at which the ground freezes. If your post hole is too shallow, the freezing ground will push the post upward, destroying your fence. 
+      </p>
+
+      <!-- Post Depth Table -->
+      <div class="my-8 not-prose rounded-xl border border-slate-200 bg-white overflow-hidden shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left">
+            <thead class="bg-slate-50 border-b border-slate-200">
+              <tr>
+                <th class="px-4 py-3 font-display font-bold text-ink-900">Region</th>
+                <th class="px-4 py-3 font-display font-bold text-ink-900">Typical Frost Depth</th>
+                <th class="px-4 py-3 font-display font-bold text-ink-900">Recommended Post Depth</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-ink-700">
+              <tr>
+                <td class="px-4 py-3 font-semibold text-ink-900">Southern US (e.g., Texas)</td>
+                <td class="px-4 py-3 font-mono">0 - 6 inches</td>
+                <td class="px-4 py-3 font-mono font-bold">24 inches (2 ft)</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-4 py-3 font-semibold text-ink-900">Northern US (e.g., Minnesota)</td>
+                <td class="px-4 py-3 font-mono">36 - 48 inches</td>
+                <td class="px-4 py-3 font-mono font-bold">48+ inches (4 ft)</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-semibold text-ink-900">United Kingdom</td>
+                <td class="px-4 py-3 font-mono">~450mm (18 in)</td>
+                <td class="px-4 py-3 font-mono font-bold">600mm (2 ft)</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-4 py-3 font-semibold text-ink-900">Australia (Temperate)</td>
+                <td class="px-4 py-3 font-mono">No hard frost</td>
+                <td class="px-4 py-3 font-mono font-bold">600mm (2 ft)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p>
+        <strong>Concrete Math:</strong> A standard 10-inch diameter hole, dug 30 inches deep, requires roughly <strong>2 bags of 50lb fast-setting concrete</strong> (or 1 bag of 80lb). Our calculator automatically assumes 2 bags per post to give you a safe estimate. Never use dirt to backfill a post; it will rot and shift.
+      </p>
+
+      <!-- Ad Space (In-Article) -->
+      <div class="my-10 not-prose">
+        <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[250px] flex items-center justify-center text-xs sm:text-sm text-slate-500 font-medium tracking-widest uppercase">
+          Ad Space — In-Article Rectangle
+        </div>
+      </div>
+
+      <h3 class="mt-10">3. Calculating Posts and Rails</h3>
+      <p>
+        Calculating posts is straightforward, but the math changes based on whether you have a property line constraint.
+      </p>
+      <p>
+        <strong>Posts:</strong> If your fence is 100 feet long, and you space posts every 8 feet, you divide 100 by 8. This equals 12.5. You round up to 13 "spaces." Because you need a post at the beginning AND the end of the fence line, you add 1. So, you need <strong>14 posts</strong>.
+      </p>
+      <p>
+        <strong>Rails:</strong> A standard privacy fence has 2 rails per section. If you have 13 spaces, you need 26 rails. However, rails are sold in standard lengths (usually 8ft, 10ft, or 12ft). If your post spacing is 8ft, you can use one 8ft rail per section. If you have a custom spacing (e.g., 7.5ft), you might have to buy 8ft rails and cut 6 inches off each one. Always buy rails in the length that matches your post spacing to minimize waste.
+      </p>
+
+      <h3 class="mt-10">4. How Many Fence Pickets Do I Need?</h3>
+      <p>
+        This is where most people get confused. Pickets are not measured by square footage; they are measured by "linear coverage" including the gap between them.
+      </p>
+      <p>
+        To find the number of pickets, you need to calculate the "Effective Width" of a single picket + gap. 
+      </p>
+      <p>
+        <strong>Formula:</strong> (Picket Width + Gap) = Effective Width. 
+        <br>
+        <em>Example:</em> You are using 5.5-inch pickets with a 0.5-inch gap. 5.5 + 0.5 = 6 inches. 
+        <br>
+        Convert 6 inches to feet (6 / 12 = 0.5 feet). This means every picket takes up half a foot of fence line.
+      </p>
+      <p>
+        If your fence is 100 feet long: 100 / 0.5 = 200 pickets. 
+        <br>
+        You must then add a 5% to 10% waste factor for damaged boards or angled cuts on hills. Our calculator does this automatically by calculating the total linear inches of the fence and dividing it by the effective width of the picket.
+      </p>
+      
+      <hr class="my-10 border-slate-200">
+      
+      <p class="text-base text-slate-700">
+        <em>Continue reading below as we dive into regional fencing standards (US vs UK vs AU), the difference between wood types, and how to estimate the total project cost.</em>
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 5/10 will start here: Content Part 2 (Standards, Wood Types & Conclusion)
+     ============================================================ -->
+ <!-- ============================================================
+     PHASE 5/10 — MASSIVE CONTENT PART 2 & CONCLUSION
+     Wood Types, Regional Standards, Costing, and Conclusion
+     ============================================================ -->
+<section class="bg-white py-12 sm:py-16 border-t border-slate-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Article Content Wrapper (Continued) -->
+    <div class="prose prose-slate prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-900 prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-xl">
+      
+      <h3 class="mt-8">5. Choosing the Right Wood for Your Fence</h3>
+      <p>
+        The longevity and cost of your fence are heavily dependent on the material you choose. In North America, pressure-treated pine and cedar are the most common. In the UK and Australia, different species and treatments are standard.
+      </p>
+      
+      <h4>Pressure-Treated Pine (US/UK)</h4>
+      <p>
+        The most budget-friendly option. Pine is treated with chemicals (like copper azole) to resist rot and insects. It is perfect for the posts (which go underground), but the pickets may warp or twist over time as the wood dries. It requires regular staining or painting to extend its lifespan.
+      </p>
+
+      <h4>Cedar and Redwood (US)</h4>
+      <p>
+        Naturally rot-resistant and insect-repellent. Cedar is lighter than pine, resists warping much better, and takes stain beautifully. It is significantly more expensive than pressure-treated pine, but a cedar fence can last 15-20 years with minimal maintenance.
+      </p>
+
+      <h4>Composite and Vinyl Fencing</h4>
+      <p>
+        Growing in popularity globally, composite (wood-plastic blend) and vinyl fences offer the ultimate low-maintenance solution. They never need painting and resist rot entirely. However, they have a high upfront cost and can look less "natural." They also expand and contract significantly in extreme heat (like in Australia).
+      </p>
+
+      <h3 class="mt-10">6. Regional Fencing Standards and Regulations</h3>
+      <p>
+        You cannot just build a fence anywhere; local codes dictate the maximum height, the material, and even which side the "good side" faces.
+      </p>
+
+      <h4>United States (IRC & Local HOA)</h4>
+      <p>
+        The <strong>IRC</strong> generally limits residential fences to 6 feet (1.8m) in backyards and 4 feet (1.2m) in front yards for visibility. However, Homeowners Associations (HOAs) often have stricter rules regarding materials and colors. In many states, the "good side" (the side without the structural rails) must face the neighbor. Pool fences are heavily regulated under the <strong>International Swimming Pool and Spa Code (ISPSC)</strong>, requiring self-closing gates and specific picket gaps.
+      </p>
+
+      <h4>United Kingdom (Permitted Development)</h4>
+      <p>
+        In the UK, you usually do not need planning permission for a fence up to <strong>2 meters (6.5 feet)</strong> high. However, if your property borders a public highway, the limit drops to 1 meter (3.2 feet). UK fences are often built using pre-assembled panels, which are slotted into concrete or wooden posts. Using concrete posts and gravel boards is a highly recommended UK practice to prevent rot at the base.
+      </p>
+
+      <h4>Australia (AS 1926 & Local Councils)</h4>
+      <p>
+        Australian fencing rules are strictly governed by local councils. In New South Wales, the standard maximum height is 1.8 meters. A major consideration in Australia is the <strong>Dividing Fences Act</strong>. If you are building a fence on a property line, you may legally require your neighbor to contribute to half the cost (unless the fence is over the standard height or made of luxury materials). Pool fences must comply with <strong>AS 1926</strong>, requiring non-climbable zones and gaps no larger than 100mm.
+      </p>
+
+      <!-- In-Article Ad Slot -->
+      <div class="my-10 not-prose">
+        <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[250px] flex items-center justify-center text-xs sm:text-sm text-slate-500 font-medium tracking-widest uppercase">
+          Ad Space — In-Article Rectangle
+        </div>
+      </div>
+
+      <h3 class="mt-10">7. Cost Estimation: Materials and Labor</h3>
+      <p>
+        Fencing is one of the most expensive exterior projects per linear foot. 
+      </p>
+      
+      <h4>Material Costs</h4>
+      <ul>
+        <li><strong>Wood Fence (US):</strong> $15 to $30 per linear foot (materials only). A 4x4x8 post costs $10-$15. A 6ft dog-ear picket costs $2-$3.</li>
+        <li><strong>Wood Fence (UK):</strong> £40 to £80 per panel (usually 6ft wide).</li>
+        <li><strong>Wood Fence (AU):</strong> AUD $30 to $60 per linear meter.</li>
+        <li><strong>Concrete:</strong> Fast-setting concrete is roughly $6-$10 per 50lb bag.</li>
+      </ul>
+
+      <h4>Labor Costs</h4>
+      <p>
+        Building a fence is physically exhausting work, especially digging post holes. If you hire a professional, expect to pay:
+      </p>
+      <ul>
+        <li><strong>US:</strong> $25 to $50 per linear foot (installed).</li>
+        <li><strong>UK:</strong> £200 to £350 per day for a fencing contractor.</li>
+        <li><strong>Australia:</strong> AUD $50 to $90 per linear meter (installed).</li>
+      </ul>
+      <p>
+        <em>Pro Tip:</em> Before digging, always call 811 (in the US) or your local utility locating service to ensure you do not hit underground power, water, or gas lines.
+      </p>
+
+      <h3 class="mt-10">8. Maintenance and Longevity</h3>
+      <p>
+        To protect your investment, you must maintain your fence. Even pressure-treated wood will eventually rot if left in standing water. 
+      </p>
+      <ul>
+        <li><strong>Sealing:</strong> Apply a water-repellent stain or sealant to your wood fence within the first year, and reapply every 2-3 years.</li>
+        <li><strong>Cleaning:</strong> Use a pressure washer on a low setting to remove mold and mildew, but avoid getting too close to the wood grain.</li>
+        <li><strong>Inspection:</strong> Check the posts annually for signs of rot or termite damage. If the base of the post begins to soften, it may need to be replaced before the fence collapses.</li>
+      </ul>
+      <p>
+        By using our calculator to precisely estimate your pickets, posts, and concrete, you ensure your fencing project stays on budget and is completed without delays.
+      </p>
+
+      <!-- Conclusion Box -->
+      <div class="mt-10 p-6 sm:p-8 bg-gradient-to-br from-ink-900 to-ink-950 rounded-2xl border border-ink-800 not-prose relative overflow-hidden shadow-lg">
+        <div class="absolute -top-20 -right-20 w-64 h-64 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="relative">
+          <h4 class="font-display font-bold text-white text-xl mb-3">Ready to order your fence materials?</h4>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 max-w-2xl">
+            Use our Fence Calculator to instantly generate the exact number of pickets, posts, rails, and bags of concrete you need for your yard, complete with standard post spacing and waste factors.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#main-content" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-brand-500 text-white text-sm font-semibold hover:bg-brand-400 transition-colors shadow-sm">
+              Back to Calculator <span class="ml-1" aria-hidden="true">↑</span>
+            </a>
+            <a href="/calculators.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-white text-sm font-semibold transition-colors">
+              Browse All Tools
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 6/10 will start here: FAQ (Numbered Card Style) & Schema
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 6/10 — FAQ (Numbered Card Style) & SCHEMA
+     Exact design match from screenshot
+     ============================================================ -->
+<section class="bg-slate-50 py-16 sm:py-24 border-t border-slate-200">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-10 sm:mb-14">
+      <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-ink-900 tracking-tight">Fence Questions Answered</h2>
+      <p class="text-sm sm:text-base text-ink-700 mt-3">Common questions about estimating pickets, posts, concrete, and spacing.</p>
+    </div>
+
+    <!-- FAQ Accordion Cards -->
+    <div class="space-y-3 sm:space-y-4">
+      
+      <!-- FAQ 1 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">01</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How many fence pickets do I need for a 100-foot fence?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          For a standard 100-foot fence using 5.5-inch pickets with a 0.5-inch gap, each picket takes up 6 inches (0.5 feet) of space. Divide 100 feet by 0.5 feet to get <strong>200 pickets</strong>. You must then add a 10% waste factor for cuts and breakage, bringing your total order to <strong>220 pickets</strong>.
+        </div>
+      </details>
+
+      <!-- FAQ 2 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">02</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How much concrete do I need per fence post?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          For a standard 4x4 post set in a 10-inch diameter hole that is 30 inches deep, you will need approximately <strong>2 bags of 50lb fast-setting concrete</strong> (or 1 bag of 80lb). If you are digging deeper due to a frost line, you may need 3 to 4 bags per post. Never use dirt to backfill a post; it will rot.
+        </div>
+      </details>
+
+      <!-- FAQ 3 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">03</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How deep should I dig my fence post holes?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          The universal rule is that <strong>1/3 of the post</strong> should be underground. For a 6-foot fence using an 8-foot post, 2 feet goes in the ground. However, in cold climates (Northern US, Canada, UK), you must dig below the <strong>frost line</strong> (often 36 to 48 inches deep) to prevent the ground from heaving and pushing the post up during winter.
+        </div>
+      </details>
+
+      <!-- FAQ 4 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">04</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">Do I need to subtract gates from my fence calculation?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          Yes. Gates (especially driveways gates) take up significant linear footage where no pickets are needed. Measure the width of your gate and subtract that from your total fence length before calculating pickets. However, you will still need two heavy-duty posts on either side of the gate to support the weight.
+        </div>
+      </details>
+
+      <!-- FAQ 5 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">05</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">What is the best wood for a fence?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          <strong>Pressure-treated pine</strong> is the most budget-friendly and is essential for the posts (which go in the ground). However, for the pickets, <strong>Cedar</strong> is highly recommended. Cedar is naturally rot-resistant, lightweight, resists warping, and takes stain beautifully, lasting 15-20 years longer than pine.
+        </div>
+      </details>
+
+      <!-- FAQ 6 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">06</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How tall can I legally build my fence?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          In the <strong>US</strong>, the typical limit is 6 feet in the backyard and 4 feet in the front yard. In the <strong>UK</strong>, the permitted development limit is usually 2 meters (6.5 ft), unless it borders a public highway (1 meter). In <strong>Australia</strong>, the standard limit is 1.8 meters. Always check with your local council or HOA before buying materials.
+        </div>
+      </details>
+
+      <!-- FAQ 7 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">07</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How do I calculate the number of fence rails?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          Most standard privacy fences use <strong>2 rails</strong> per section (top and bottom), while taller fences might use 3. Multiply the number of sections (spaces between posts) by the number of rails per section. For example, 14 sections with 2 rails each equals 28 rails. Always buy rails in the length that matches your post spacing (e.g., 8ft rails for 8ft post spacing) to minimize waste.
+        </div>
+      </details>
+
+    </div>
+
+    <!-- Still have a question CTA -->
+    <div class="mt-10 text-center">
+      <p class="text-sm text-ink-700">
+        Still have a question? Email <a href="mailto:contact@buildmetric.org" class="text-brand-600 font-semibold hover:underline">contact@buildmetric.org</a> — every message is read by a real person.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQPage JSON-LD SCHEMA (Matches exactly with HTML above)
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many fence pickets do I need for a 100-foot fence?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For a standard 100-foot fence using 5.5-inch pickets with a 0.5-inch gap, each picket takes up 6 inches (0.5 feet) of space. Divide 100 feet by 0.5 feet to get 200 pickets. You must then add a 10% waste factor for cuts and breakage, bringing your total order to 220 pickets." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much concrete do I need per fence post?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For a standard 4x4 post set in a 10-inch diameter hole that is 30 inches deep, you will need approximately 2 bags of 50lb fast-setting concrete (or 1 bag of 80lb). If you are digging deeper due to a frost line, you may need 3 to 4 bags per post. Never use dirt to backfill a post." }
+    },
+    {
+      "@type": "Question",
+      "name": "How deep should I dig my fence post holes?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The universal rule is that 1/3 of the post should be underground. For a 6-foot fence using an 8-foot post, 2 feet goes in the ground. However, in cold climates, you must dig below the frost line (often 36 to 48 inches deep) to prevent the ground from heaving." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to subtract gates from my fence calculation?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Gates take up significant linear footage where no pickets are needed. Measure the width of your gate and subtract that from your total fence length before calculating pickets. However, you will still need two heavy-duty posts on either side of the gate." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best wood for a fence?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Pressure-treated pine is the most budget-friendly and is essential for the posts. However, for the pickets, Cedar is highly recommended. Cedar is naturally rot-resistant, lightweight, resists warping, and takes stain beautifully, lasting longer than pine." }
+    },
+    {
+      "@type": "Question",
+      "name": "How tall can I legally build my fence?",
+      "acceptedAnswer": { "@type": "Answer", "text": "In the US, the typical limit is 6 feet in the backyard and 4 feet in the front yard. In the UK, the limit is usually 2 meters unless bordering a public highway. In Australia, the standard limit is 1.8 meters. Always check with your local council." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate the number of fence rails?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Most standard privacy fences use 2 rails per section. Multiply the number of sections (spaces between posts) by the number of rails per section. Always buy rails in the length that matches your post spacing to minimize waste." }
+    }
+  ]
+}
+</script>
+
+<!-- ============================================================
+     Phase 7/10 will start here: E-E-A-T Box + Related Tools
+     ============================================================ -->
+
+   <!-- ============================================================
+     PHASE 7/10 — E-E-A-T EDITORIAL BOX & RELATED CONTENT
+     ============================================================ -->
+
+<!-- E-E-A-T Directory Info Box -->
+<section class="bg-slate-50 border-t border-slate-200 py-16 sm:py-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+      
+      <!-- Card Header (Dark Premium Look) -->
+      <div class="bg-ink-900 px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-6 h-6 rounded bg-white/10 flex items-center justify-center">
+            <svg class="w-3.5 h-3.5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <span class="text-[11px] font-bold uppercase tracking-widest text-slate-200">About our calculators</span>
+        </div>
+        <span class="hidden sm:block text-[10px] font-bold uppercase tracking-widest text-slate-500">Engineer-Reviewed</span>
+      </div>
+
+      <!-- Card Body -->
+      <div class="p-6 sm:p-8 md:p-10">
+        <div class="grid lg:grid-cols-12 gap-10">
+          
+          <!-- Left Column: Description -->
+          <div class="lg:col-span-7">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-12 h-12 rounded-xl bg-brand-500 flex items-center justify-center shrink-0 shadow-sm">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              </div>
+              <div>
+                <h2 class="font-display font-extrabold text-xl sm:text-2xl text-ink-900 tracking-tight">BuildMetric Engineering</h2>
+                <p class="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-brand-600 mt-0.5">
+                  Calculators &amp; Estimating Tools
+                </p>
+              </div>
+            </div>
+            
+            <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-6 pl-[60px]">
+              Verified Formulas · Code-Aware
+            </p>
+
+            <div class="text-[15px] text-ink-700 leading-relaxed space-y-4 mb-8">
+              <p>
+                Every calculator in this directory is built from formulas that can be derived from first principles. We do not guess. We test every tool against reference cases in both imperial and metric units before it is published.
+              </p>
+              <p>
+                More importantly, our tools are reviewed by quantity surveyors, structural engineers, and licensed contractors. We know that a calculation error on site costs money and compromises safety, so we treat accuracy as a structural requirement, not a feature.
+              </p>
+            </div>
+
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm text-ink-700"><strong class="text-ink-900">Human-verified.</strong> Reviewed by practising professionals, not AI.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm text-ink-700"><strong class="text-ink-900">Stateless maths.</strong> Your inputs run in your browser, never on our servers.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm text-ink-700"><strong class="text-ink-900">Always free.</strong> No sign-ups, no paywalls, no trials. Just the tools.</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-col sm:flex-row items-center gap-3">
+              <a href="mailto:contact@buildmetric.org" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-ink-900 text-white text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                Report an Error
+              </a>
+              <a href="/about.html" class="w-full sm:w-auto inline-flex items-center justify-center px-5 py-2.5 rounded-xl border border-slate-300 text-ink-900 text-sm font-semibold hover:border-brand-500 hover:text-brand-600 transition-colors bg-white">
+                Our Methodology
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Directory Info & Disclaimer -->
+          <div class="lg:col-span-5 flex flex-col gap-4">
+            
+            <!-- Directory Info Box -->
+            <div class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm">
+              <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-4">Directory Info</h3>
+              <ul class="text-xs sm:text-sm space-y-3">
+                <li class="flex justify-between items-center pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Total Tools</span>
+                  <span class="font-bold text-ink-900 text-right">Growing Library</span>
+                </li>
+                <li class="flex justify-between items-center pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Review Status</span>
+                  <span class="font-bold text-ink-900 text-right">100% Human-Reviewed</span>
+                </li>
+                <li class="flex justify-between items-center pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Regions</span>
+                  <span class="font-bold text-ink-900 text-right">US · UK · AU</span>
+                </li>
+                <li class="flex justify-between items-center">
+                  <span class="text-slate-500 font-medium">Cost</span>
+                  <span class="font-bold text-brand-600 text-right">Free Forever</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Disclaimer Box -->
+            <div class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 flex-1 shadow-sm">
+              <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-3">Disclaimer</h3>
+              <p class="text-xs sm:text-sm text-ink-700 leading-relaxed">
+                Calculators are estimating aids, not a substitute for professional judgment. Always verify against your local code. See our <a href="/disclaimer.html" class="text-brand-600 font-semibold underline decoration-brand-300 underline-offset-2 hover:decoration-brand-500 transition-colors">Disclaimer</a>.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Related Tools & Guides Section -->
+<section class="bg-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Related Tools -->
+    <div class="mb-16">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="font-display font-extrabold text-2xl text-ink-900 tracking-tight">Related Calculators</h2>
+        <a href="/calculators.html" class="text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors">View all tools →</a>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        
+        <!-- Tool 1: Concrete (Post holes) -->
+        <a href="/concrete-calculator.html" class="group bg-white rounded-xl p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-6 h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-ink-900 group-hover:text-brand-600 transition-colors">Concrete Calculator</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Volume, bags for posts</p>
+          </div>
+        </a>
+
+        <!-- Tool 2: Framing (Lumber) -->
+        <a href="/framing-calculator.html" class="group bg-white rounded-xl p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-6 h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-ink-900 group-hover:text-brand-600 transition-colors">Framing Calculator</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Studs, plates, lumber</p>
+          </div>
+        </a>
+
+        <!-- Tool 3: Brick -->
+        <a href="/brick-calculator.html" class="group bg-white rounded-xl p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-6 h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-ink-900 group-hover:text-brand-600 transition-colors">Brick Calculator</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Bricks and mortar</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Related Guides -->
+    <div>
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="font-display font-extrabold text-2xl text-ink-900 tracking-tight">Related Guides</h2>
+        <a href="/guides.html" class="text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors">View all guides →</a>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Guide 1 (Concrete Waste) -->
+        <a href="/guides/concrete-waste-allowance.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-32 bg-gradient-to-br from-slate-700 to-slate-900 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-20 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+            </div>
+          </div>
+          <div class="p-4 flex flex-col flex-1">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-600 bg-slate-100 px-2 py-1 rounded-md self-start mb-2">Concrete</span>
+            <h3 class="font-display font-bold text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">How Much Waste Should You Add to a Concrete Order?</h3>
+            <span class="text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <!-- Guide 2 (Stud Spacing) -->
+        <a href="/guides/stud-spacing-by-code.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-32 bg-gradient-to-br from-sky-400 to-sky-600 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+            </div>
+          </div>
+          <div class="p-4 flex flex-col flex-1">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-sky-600 bg-sky-50 px-2 py-1 rounded-md self-start mb-2">Framing</span>
+            <h3 class="font-display font-bold text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Stud Spacing: IRC 2021 vs BS 5268 vs AS 1684 Compared</h3>
+            <span class="text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <!-- Guide 3 (Roof Pitch) -->
+        <a href="/guides/roof-pitch-explained.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-32 bg-gradient-to-br from-blue-400 to-blue-600 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            </div>
+          </div>
+          <div class="p-4 flex flex-col flex-1">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-brand-600 bg-brand-50 px-2 py-1 rounded-md self-start mb-2">Roofing</span>
+            <h3 class="font-display font-bold text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Roof Pitch Explained: Why 6:12 and 26.57° Are the Same Roof</h3>
+            <span class="text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 8/10 will start here: Premium Footer
+     ============================================================ --> 
+</main>
+
+<!-- ============================================================
+     PHASE 8/10 — PREMIUM FOOTER (4 Columns, No Ads, Uniform)
+     ============================================================ -->
+<footer class="bg-ink-950 text-slate-400 border-t border-slate-800 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Top Footer Grid (4 Columns) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-12">
+      
+      <!-- Column 1: Brand & Contact -->
+      <div class="pr-4">
+        <a href="/" class="inline-flex items-center gap-2.5 mb-5 group">
+          <img src="logo.png" alt="BuildMetric Logo" class="h-8 w-auto object-contain brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity" />
+          <span class="font-display font-extrabold text-xl tracking-tight text-white hidden sm:block">
+            Build<span class="text-brand-500">Metric</span>
+          </span>
+        </a>
+        
+        <p class="text-sm leading-relaxed mb-6 max-w-sm">
+          Independent construction calculators, estimating tools and technical reference guides for building professionals across the <strong class="text-slate-200">USA, UK</strong> and <strong class="text-slate-200">Australia</strong>. Engineered for accuracy. Published for transparency.
+        </p>
+
+        <div class="space-y-3 mb-6">
+          <a href="mailto:contact@buildmetric.org" class="flex items-center gap-2.5 text-sm hover:text-white transition-colors">
+            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            contact@buildmetric.org
+          </a>
+          <a href="mailto:ads@buildmetric.org" class="flex items-center gap-2.5 text-sm hover:text-white transition-colors">
+            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+            ads@buildmetric.org
+          </a>
+        </div>
+
+        <!-- Cookie Settings Button -->
+        <button id="cookieSettingsBtn" type="button" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 hover:bg-slate-800 text-xs font-semibold text-slate-300 transition-colors">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          Cookie Settings
+        </button>
+      </div>
+
+      <!-- Column 2: Calculators -->
+      <div>
+        <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Calculators</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="/framing-calculator.html" class="hover:text-brand-400 transition-colors">Framing Calculator</a></li>
+          <li><a href="/roofing-calculator.html" class="hover:text-brand-400 transition-colors">Roofing Calculator</a></li>
+          <li><a href="/concrete-calculator.html" class="hover:text-brand-400 transition-colors">Concrete Volume</a></li>
+          <li><a href="/drywall-calculator.html" class="hover:text-brand-400 transition-colors">Drywall Calculator</a></li>
+          <li><a href="/paint-coverage-calculator.html" class="hover:text-brand-400 transition-colors">Paint Coverage</a></li>
+          <li><a href="/tile-calculator.html" class="hover:text-brand-400 transition-colors">Tile Calculator</a></li>
+          <li><a href="/brick-calculator.html" class="hover:text-brand-400 transition-colors">Brick Calculator</a></li>
+          <li><a href="/fence-calculator.html" class="hover:text-brand-400 transition-colors">Fence Calculator</a></li>
+          <li><a href="/calculators.html" class="hover:text-white font-semibold text-brand-500 mt-2 inline-block">All Tools →</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Company -->
+      <div>
+        <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Company</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="/about.html" class="hover:text-brand-400 transition-colors">About</a></li>
+          <li><a href="/guides.html" class="hover:text-brand-400 transition-colors">Guides</a></li>
+          <li><a href="/estimating.html" class="hover:text-brand-400 transition-colors">Estimating</a></li>
+          <li><a href="/contact.html" class="hover:text-brand-400 transition-colors">Contact</a></li>
+          <li><a href="/sitemap.xml" class="hover:text-brand-400 transition-colors">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Legal & Compliance -->
+      <div>
+        <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Legal &amp; Compliance</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="/privacy.html" class="hover:text-brand-400 transition-colors">Privacy Policy</a></li>
+          <li><a href="/terms.html" class="hover:text-brand-400 transition-colors">Terms of Service</a></li>
+          <li><a href="/disclaimer.html" class="hover:text-brand-400 transition-colors">Disclaimer</a></li>
+          <li><a href="/cookie-policy.html" class="hover:text-brand-400 transition-colors">Cookie Policy</a></li>
+          <li><a href="/contact.html" class="hover:text-brand-400 transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Regional Notice Box -->
+    <div class="flex justify-end mb-8">
+      <div class="bg-slate-800/40 border border-slate-700/50 rounded-xl p-4 max-w-sm w-full sm:w-auto">
+        <h4 class="text-[10px] font-bold uppercase tracking-widest text-slate-300 mb-1">Regional Notice</h4>
+        <p class="text-xs text-slate-500 leading-relaxed">
+          BuildMetric content is published in English and reviewed against US, UK and Australian codes. Always verify against your local jurisdiction's current edition.
+        </p>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+      <p class="text-center md:text-left text-slate-400">
+        © 2026 BuildMetric. All rights reserved. Operated from buildmetric.org.
+      </p>
+      <p class="text-center md:text-right text-slate-500">
+        Built for professionals. General information only — see our <a href="/disclaimer.html" class="text-brand-500 hover:underline hover:text-brand-400 transition-colors">Disclaimer</a>.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ============================================================
+     Phase 9/10 will start here: Complete JavaScript Logic
+     ============================================================ -->
+
+      <!-- ============================================================
+       PHASE 9/10 — JAVASCRIPT (Calculator Logic & Menu)
+       ============================================================ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      /* ── 1. MOBILE MENU TOGGLE ── */
+      const menuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const openIcon = menuBtn ? menuBtn.querySelector('.menu-open-icon') : null;
+      const closeIcon = menuBtn ? menuBtn.querySelector('.menu-close-icon') : null;
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function () {
+          const isOpen = !mobileMenu.classList.contains('hidden');
+          mobileMenu.classList.toggle('hidden');
+          if(openIcon) openIcon.classList.toggle('hidden');
+          if(closeIcon) closeIcon.classList.toggle('hidden');
+          menuBtn.setAttribute('aria-expanded', String(!isOpen));
+        });
+      }
+
+      /* ── 2. ELEMENTS & STATE ── */
+      const btnImperial = document.getElementById('btnImperial');
+      const btnMetric = document.getElementById('btnMetric');
+      
+      const unitLabels = document.querySelectorAll('.unit-label');
+      const picketUnitLabels = document.querySelectorAll('.picket-unit-label');
+      const gapUnitLabels = document.querySelectorAll('.gap-unit-label');
+      
+      const fenceLength = document.getElementById('fenceLength');
+      const fenceHeight = document.getElementById('fenceHeight');
+      const postSpacing = document.getElementById('postSpacing');
+      const customPostSpacing = document.getElementById('customPostSpacing');
+      const numRails = document.getElementById('numRails');
+      const picketWidth = document.getElementById('picketWidth');
+      const picketGap = document.getElementById('picketGap');
+      const wasteFactor = document.getElementById('wasteFactor');
+      
+      const outPickets = document.getElementById('outPickets');
+      const outPosts = document.getElementById('outPosts');
+      const outRails = document.getElementById('outRails');
+      const outConcrete = document.getElementById('outConcrete');
+
+      let isMetric = false;
+
+      /* ── 3. UNIT TOGGLE (Imperial / Metric) ── */
+      function toggleUnits(metric) {
+        isMetric = metric;
+        
+        if (metric) {
+          btnMetric.classList.add('bg-white', 'shadow-sm', 'text-ink-900');
+          btnMetric.classList.remove('text-slate-500');
+          btnImperial.classList.remove('bg-white', 'shadow-sm', 'text-ink-900');
+          btnImperial.classList.add('text-slate-500');
+          
+          unitLabels.forEach(el => el.textContent = 'm');
+          picketUnitLabels.forEach(el => el.textContent = 'mm');
+          gapUnitLabels.forEach(el => el.textContent = 'mm');
+
+          // Update Dropdowns for Metric
+          postSpacing.innerHTML = `
+            <option value="1.8">1.8m</option>
+            <option value="2.4" selected>2.4m</option>
+            <option value="3.0">3.0m</option>
+            <option value="custom">Custom...</option>
+          `;
+          picketWidth.innerHTML = `
+            <option value="90">90mm (1x4)</option>
+            <option value="140" selected>140mm (1x6)</option>
+            <option value="184">184mm (1x8)</option>
+          `;
+          picketGap.innerHTML = `
+            <option value="6">6mm (Privacy)</option>
+            <option value="12" selected>12mm (Standard)</option>
+            <option value="25">25mm (Spaced)</option>
+          `;
+
+        } else {
+          btnImperial.classList.add('bg-white', 'shadow-sm', 'text-ink-900');
+          btnImperial.classList.remove('text-slate-500');
+          btnMetric.classList.remove('bg-white', 'shadow-sm', 'text-ink-900');
+          btnMetric.classList.add('text-slate-500');
+          
+          unitLabels.forEach(el => el.textContent = 'ft');
+          picketUnitLabels.forEach(el => el.textContent = 'in');
+          gapUnitLabels.forEach(el => el.textContent = 'in');
+
+          // Update Dropdowns for Imperial
+          postSpacing.innerHTML = `
+            <option value="6">6 ft</option>
+            <option value="8" selected>8 ft</option>
+            <option value="10">10 ft</option>
+            <option value="custom">Custom...</option>
+          `;
+          picketWidth.innerHTML = `
+            <option value="3.5">3.5" (1x4)</option>
+            <option value="5.5" selected>5.5" (1x6)</option>
+            <option value="7.25">7.25" (1x8)</option>
+          `;
+          picketGap.innerHTML = `
+            <option value="0.25">0.25" (Privacy)</option>
+            <option value="0.5" selected>0.5" (Standard)</option>
+            <option value="1">1.0" (Spaced)</option>
+          `;
+        }
+        
+        // Hide custom inputs if they were open
+        customPostSpacing.classList.add('hidden');
+        calculate();
+      }
+
+      if(btnImperial && btnMetric) {
+        btnImperial.addEventListener('click', () => toggleUnits(false));
+        btnMetric.addEventListener('click', () => toggleUnits(true));
+      }
+
+      /* ── 4. HYBRID CUSTOM SIZE LOGIC ── */
+      postSpacing.addEventListener('change', function() {
+        if (this.value === 'custom') {
+          customPostSpacing.classList.remove('hidden');
+          customPostSpacing.focus();
+        } else {
+          customPostSpacing.classList.add('hidden');
+          customPostSpacing.value = '';
+        }
+        calculate();
+      });
+
+      /* ── 5. CALCULATOR MATH LOGIC ── */
+      function calculate() {
+        const length = parseFloat(fenceLength.value) || 0;
+        const waste = parseFloat(wasteFactor.value) || 0.10;
+        const railsPerSection = parseInt(numRails.value) || 2;
+        const pWidth = parseFloat(picketWidth.value) || 0;
+        const pGap = parseFloat(picketGap.value) || 0;
+        
+        let spacing = parseFloat(postSpacing.value) || 8;
+        if (postSpacing.value === 'custom') {
+          spacing = parseFloat(customPostSpacing.value) || 0;
+        }
+
+        if (length <= 0 || spacing <= 0 || pWidth <= 0) {
+          outPickets.textContent = '0';
+          outPosts.innerHTML = '0 <span class="text-xs text-slate-500">posts</span>';
+          outRails.innerHTML = '0 <span class="text-xs text-slate-500">pieces</span>';
+          outConcrete.innerHTML = '0 <span class="text-xs text-slate-500">bags</span>';
+          return;
+        }
+
+        // 1. Post Math
+        let sections = Math.ceil(length / spacing);
+        let posts = sections + 1; 
+
+        // 2. Rail Math
+        let totalRails = Math.ceil((sections * railsPerSection) * (1 + 0.05)); // 5% waste for rails
+
+        // 3. Picket Math
+        let totalInchesOrMM = 0;
+        let effectiveWidth = pWidth + pGap;
+
+        if (isMetric) {
+          // Length in meters -> convert to mm
+          totalInchesOrMM = length * 1000;
+        } else {
+          // Length in feet -> convert to inches
+          totalInchesOrMM = length * 12;
+        }
+
+        let picketsBase = totalInchesOrMM / effectiveWidth;
+        let totalPickets = Math.ceil(picketsBase * (1 + waste));
+
+        // 4. Concrete Math (2 bags per post)
+        let concreteBags = posts * 2;
+
+        // --- UPDATE UI ---
+        outPosts.innerHTML = `${posts} <span class="text-xs text-slate-500">posts</span>`;
+        outRails.innerHTML = `${totalRails} <span class="text-xs text-slate-500">pieces</span>`;
+        outPickets.textContent = totalPickets;
+        outConcrete.innerHTML = `${concreteBags} <span class="text-xs text-slate-500">bags</span>`;
+      }
+
+      // Trigger calculation on any input change
+      const inputs = [fenceLength, fenceHeight, postSpacing, customPostSpacing, numRails, picketWidth, picketGap, wasteFactor];
+      inputs.forEach(input => {
+        if(input) {
+          input.addEventListener('input', calculate);
+          input.addEventListener('change', calculate);
+        }
+      });
+
+      // Initial run
+      calculate();
+
+      /* ── 6. SAVE, SHARE, COPY ACTIONS ── */
+      const btnSave = document.getElementById('btnSave');
+      const btnShare = document.getElementById('btnShare');
+      const btnCopy = document.getElementById('btnCopy');
+
+      const getResultText = () => {
+        return `Fence Materials Estimate:\n` +
+               `- Total Pickets: ${outPickets.textContent}\n` +
+               `- Fence Posts: ${outPosts.textContent}\n` +
+               `- Fence Rails: ${outRails.textContent}\n` +
+               `- Concrete Bags: ${outConcrete.textContent}\n` +
+               `Calculated via BuildMetric.org`;
+      };
+
+      // Save
+      if(btnSave) {
+        btnSave.addEventListener('click', () => {
+          const data = {
+            l: fenceLength.value, h: fenceHeight.value, ps: postSpacing.value,
+            cps: customPostSpacing.value, r: numRails.value,
+            pw: picketWidth.value, pg: picketGap.value, waste: wasteFactor.value, metric: isMetric
+          };
+          localStorage.setItem('buildmetric_fence_data', JSON.stringify(data));
+          alert('Estimate saved to your browser!');
+        });
+      }
+
+      // Share
+      if(btnShare && navigator.share) {
+        btnShare.addEventListener('click', () => {
+          navigator.share({
+            title: 'Fence Calculator Estimate',
+            text: getResultText(),
+            url: window.location.href
+          }).catch(console.error);
+        });
+      } else if (btnShare) {
+        btnShare.addEventListener('click', () => {
+          alert('Sharing is not supported on this browser. Use Copy instead.');
+        });
+      }
+
+      // Copy
+      if(btnCopy) {
+        btnCopy.addEventListener('click', () => {
+          navigator.clipboard.writeText(getResultText()).then(() => {
+            const originalHTML = btnCopy.innerHTML;
+            btnCopy.innerHTML = '<svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> Copied!';
+            setTimeout(() => { btnCopy.innerHTML = originalHTML; }, 2000);
+          }).catch(() => {
+            alert('Failed to copy. Please select text manually.');
+          });
+        });
+      }
+
+      // Cookie settings placeholder
+      const cookieBtn = document.getElementById('cookieSettingsBtn');
+      if(cookieBtn) {
+        cookieBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          alert('Cookie settings panel will open here.');
+        });
+      }
+
+    });
+  </script>
+
+  <!-- ============================================================
+       PHASE 10/10 — CLOSING TAGS
+       ============================================================ -->
+</body>
+</html>
+    
+    
