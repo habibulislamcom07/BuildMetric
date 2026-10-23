@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- ============================================================
+       PHASE 1/10 — SEO HEAD & CONFIGURATION (Long-Tail Focus)
+       File: brick-calculator.html
+       Brand: BuildMetric | Domain: buildmetric.org
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO Meta (Long-Tail Keywords) -->
+  <title>Brick Calculator | How Many Bricks Do I Need for a Wall? | BuildMetric</title>
+  <meta name="description" content="Free brick calculator to estimate how many bricks and bags of mortar you need for a wall. Account for brick size, mortar joint thickness, and waste factor (US, UK, AU)." />
+  <meta name="keywords" content="how many bricks do i need, brick calculator for wall, mortar calculator for bricks, brick and block estimator, bricks per square foot, brick wall cost calculator" />
+  <meta name="author" content="BuildMetric Editorial Team" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#0ea5e9" />
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://buildmetric.org/brick-calculator.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BuildMetric" />
+  <meta property="og:title" content="Brick Calculator | How Many Bricks Do I Need?" />
+  <meta property="og:description" content="Calculate exact brick counts and mortar bags for your wall project." />
+  <meta property="og:url" content="https://buildmetric.org/brick-calculator.html" />
+  <meta property="og:image" content="https://buildmetric.org/assets/og/brick-calculator.png" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Brick Calculator with Mortar Estimator | BuildMetric" />
+  <meta name="twitter:description" content="Estimate exact bricks and mortar for your next masonry project." />
+  <meta name="twitter:image" content="https://buildmetric.org/assets/og/brick-calculator.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e' },
+            ink: { 700: '#334155', 800: '#1e293b', 900: '#0f172a', 950: '#080f1e' }
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: {
+            'soft': '0 4px 20px -2px rgba(15,23,42,0.05)',
+            'hover': '0 12px 32px -8px rgba(14,165,233,0.15)',
+            'glass': '0 4px 24px -4px rgba(15,23,42,0.08)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+    .bg-grid-pattern {
+      background-image: linear-gradient(to right, rgba(15,23,42,0.04) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(15,23,42,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .nav-glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); }
+    details > summary .icon-plus { transition: transform 0.3s ease; }
+    details[open] > summary .icon-plus { transform: rotate(45deg); }
+    details > summary::-webkit-details-marker { display: none; }
+  </style>
+
+  <!-- ================= JSON-LD SCHEMA ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://buildmetric.org/brick-calculator.html#app",
+        "name": "Brick and Mortar Calculator",
+        "url": "https://buildmetric.org/brick-calculator.html",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "All",
+        "description": "Calculate how many bricks and bags of mortar are needed for a wall based on dimensions and brick size.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://buildmetric.org/brick-calculator.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://buildmetric.org/" },
+          { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://buildmetric.org/calculators.html" },
+          { "@type": "ListItem", "position": 3, "name": "Masonry", "item": "https://buildmetric.org/masonry.html" },
+          { "@type": "ListItem", "position": 4, "name": "Brick Calculator", "item": "https://buildmetric.org/brick-calculator.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+  <body class="bg-white text-ink-800 antialiased font-sans flex flex-col min-h-screen">
+
+  <!-- ============================================================
+       SKIP LINK (Accessibility)
+       ============================================================ -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2.5 focus:bg-brand-500 focus:text-white focus:rounded-lg focus:font-semibold focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/70">
+    Skip to main content
+  </a>
+
+  <!-- ============================================================
+       STICKY NAVBAR (Consistent across all tools)
+       ============================================================ -->
+  <header class="sticky top-0 z-50 nav-glass border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        
+        <!-- Logo -->
+        <div class="flex items-center gap-6">
+          <a href="/" class="flex items-center gap-2.5 shrink-0" aria-label="BuildMetric Home">
+            <img src="logo.png" alt="BuildMetric Logo" class="h-8 sm:h-10 w-auto object-contain" />
+            <span class="font-display font-extrabold text-xl tracking-tight text-ink-900 hidden sm:block">
+              Build<span class="text-brand-500">Metric</span>
+            </span>
+          </a>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden lg:flex items-center gap-1" aria-label="Main Navigation">
+            <a href="/calculators.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Calculators</a>
+            <a href="/guides.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Guides</a>
+            <a href="/about.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">About</a>
+            <a href="/contact.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Contact</a>
+          </nav>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-3">
+          <a href="/calculators.html" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-ink-900 text-white text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+            Open Tools
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuBtn" type="button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-200 text-ink-800 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand-500/40 transition-colors" aria-expanded="false" aria-controls="mobileMenu">
+            <span class="sr-only">Open main menu</span>
+            <svg class="menu-open-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <svg class="menu-close-icon hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu (Push-down) -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 bg-white">
+      <div class="px-4 py-4 space-y-1">
+        <a href="/calculators.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Calculators</a>
+        <a href="/guides.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Guides</a>
+        <a href="/about.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">About</a>
+        <a href="/contact.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main id="main-content" class="flex-grow">
+    
+    <!-- ============================================================
+         PAGE HEADER & BREADCRUMBS
+         ============================================================ -->
+    <div class="bg-slate-50 border-b border-slate-200 pt-6 pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="Breadcrumb" class="mb-4">
+          <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs sm:text-sm text-slate-500">
+            <li><a href="/" class="hover:text-brand-600 transition-colors">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/calculators.html" class="hover:text-brand-600 transition-colors">Calculators</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/masonry.html" class="hover:text-brand-600 transition-colors">Masonry</a></li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page" class="text-ink-900 font-semibold">Brick Calculator</li>
+          </ol>
+        </nav>
+
+        <!-- Page Title & Subtitle -->
+        <h1 class="font-display font-extrabold text-3xl sm:text-4xl text-ink-900 tracking-tight leading-tight">
+          Brick &amp; Mortar Calculator
+        </h1>
+        <p class="text-sm sm:text-base text-ink-700 mt-2 max-w-2xl">
+          Calculate exactly how many bricks and bags of mortar you need for your wall project. Accounts for brick size, mortar joint thickness, and standard waste factors for US, UK, and AU builds.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- ============================================================
+         Phase 3/10 will start here: The Calculator UI (Inputs & Outputs)
+         ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 3/10 — THE CALCULATOR UI
+     Brick specific inputs with Hybrid Custom Size feature
+     ============================================================ -->
+<section class="bg-white py-10 sm:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+      
+      <!-- Left Column: Form Inputs (7/12) -->
+      <div class="lg:col-span-7">
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 sm:p-8">
+          
+          <!-- Unit Toggle (Top Right) -->
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="font-display font-bold text-xl text-ink-900">Wall Details</h2>
+            <div class="flex items-center bg-slate-100 p-1 rounded-lg">
+              <button type="button" id="btnImperial" class="px-3 py-1.5 text-xs font-semibold rounded-md bg-white shadow-sm text-ink-900 transition-all">Imperial (ft/in)</button>
+              <button type="button" id="btnMetric" class="px-3 py-1.5 text-xs font-semibold rounded-md text-slate-500 hover:text-ink-900 transition-all">Metric (m/mm)</button>
+            </div>
+          </div>
+
+          <!-- Dimensions Row (2 cols on mobile) -->
+          <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-4">
+            <div>
+              <label for="wallLength" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Wall Length (<span class="unit-label">ft</span>)</label>
+              <input type="number" id="wallLength" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow text-sm sm:text-base" placeholder="e.g. 10" min="0" step="0.1">
+            </div>
+            <div>
+              <label for="wallHeight" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Wall Height (<span class="unit-label">ft</span>)</label>
+              <input type="number" id="wallHeight" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow text-sm sm:text-base" placeholder="e.g. 8" min="0" step="0.1">
+            </div>
+          </div>
+
+          <!-- Brick Size (Hybrid Feature) -->
+          <div class="mb-4">
+            <label for="brickSize" class="block text-sm font-semibold text-ink-900 mb-1.5">Brick Size</label>
+            <select id="brickSize" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white">
+              <optgroup label="Standard US">
+                <option value="7.625x2.25">US Modular (7-5/8" x 2-1/4")</option>
+                <option value="8x2.25">US Standard (8" x 2-1/4")</option>
+              </optgroup>
+              <optgroup label="Standard UK / AU">
+                <option value="215x65">UK Standard (215mm x 65mm)</option>
+                <option value="230x76">AU Standard (230mm x 76mm)</option>
+              </optgroup>
+              <option value="custom">Custom Size...</option>
+            </select>
+          </div>
+
+          <!-- Custom Brick Inputs (Hidden by default) -->
+          <div id="customBrickContainer" class="hidden grid grid-cols-2 gap-3 sm:gap-4 mb-4 bg-brand-50 p-3 sm:p-4 rounded-xl border border-brand-100">
+            <div>
+              <label for="customBrickLength" class="block text-xs font-semibold text-ink-900 mb-1.5">Brick Length (<span class="brick-unit-label">in</span>)</label>
+              <input type="number" id="customBrickLength" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 text-sm" placeholder="e.g. 7.6" min="0" step="0.1">
+            </div>
+            <div>
+              <label for="customBrickHeight" class="block text-xs font-semibold text-ink-900 mb-1.5">Brick Height (<span class="brick-unit-label">in</span>)</label>
+              <input type="number" id="customBrickHeight" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 text-sm" placeholder="e.g. 2.25" min="0" step="0.1">
+            </div>
+          </div>
+
+          <!-- Mortar & Waste Row (2 cols on mobile) -->
+          <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-6">
+            <div>
+              <label for="mortarJoint" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Mortar Joint (<span class="joint-unit-label">in</span>)</label>
+              <select id="mortarJoint" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm sm:text-base">
+                <option value="0.25">1/4" (6mm)</option>
+                <option value="0.375" selected>3/8" (10mm)</option>
+                <option value="0.5">1/2" (12mm)</option>
+              </select>
+            </div>
+            <div>
+              <label for="wasteFactor" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Waste Factor</label>
+              <select id="wasteFactor" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm sm:text-base">
+                <option value="0.05">5% (Simple Wall)</option>
+                <option value="0.10" selected>10% (Standard)</option>
+                <option value="0.15">15% (Complex)</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Column: Result Box (5/12) -->
+      <div class="lg:col-span-5">
+        <div class="bg-ink-900 rounded-2xl shadow-lg border border-ink-800 sticky top-24 overflow-hidden">
+          <div class="p-6 sm:p-8">
+            
+            <!-- Highlighted Total Bricks -->
+            <div class="text-center pb-6 border-b border-white/10 mb-6">
+              <p class="text-sm text-brand-300 font-semibold mb-1">Total Bricks Needed</p>
+              <div class="flex items-center justify-center gap-2">
+                <span class="font-mono text-5xl font-extrabold text-white" id="outBricks">0</span>
+                <span class="text-sm text-slate-400 mt-4">Pieces</span>
+              </div>
+            </div>
+
+            <!-- Other Results -->
+            <div class="space-y-3 mb-8">
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-slate-400">Total Wall Area</span>
+                <span class="font-mono text-base font-semibold text-white" id="outArea">0 <span class="text-xs text-slate-500">sq ft</span></span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-slate-400">Mortar Bags (60lb/25kg)</span>
+                <span class="font-mono text-base font-semibold text-white" id="outMortar">0 <span class="text-xs text-slate-500">bags</span></span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-slate-400">Waste Included</span>
+                <span class="font-mono text-base font-semibold text-white" id="outWaste">0 <span class="text-xs text-slate-500">bricks</span></span>
+              </div>
+            </div>
+
+            <!-- Save/Share/Copy Buttons (Blue) -->
+            <div class="flex items-center gap-2">
+              <button type="button" id="btnSave" class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg>
+                Save
+              </button>
+              <button type="button" id="btnShare" class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                Share
+              </button>
+              <button type="button" id="btnCopy" class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                Copy
+              </button>
+            </div>
+
+          </div>
+        </div>
+        
+        <!-- Quick Tip -->
+        <p class="text-xs text-slate-500 mt-4 text-center">
+          <strong>Note:</strong> Mortar calculation assumes standard 3/8" (10mm) joints and includes waste. Always check local building codes for structural walls.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 4/10 will start here: First Ad Slot + Massive Content Part 1
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 4/10 — FIRST AD SLOT + MASSIVE CONTENT PART 1
+     Deep dive into brick math, mortar, and wall bonds
+     ============================================================ -->
+<section class="bg-white py-12 sm:py-16 border-t border-slate-200">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Ad Space (Leaderboard) -->
+    <div class="mb-12">
+      <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[90px] flex items-center justify-center text-[10px] sm:text-xs text-slate-500 font-medium tracking-widest uppercase">
+        Ad Space — 728×90 / Responsive Leaderboard
+      </div>
+    </div>
+
+    <!-- Article Content Wrapper (Typography optimized) -->
+    <div class="prose prose-slate prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-900 prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-xl">
+      
+      <p class="lead text-xl text-ink-700 font-medium mb-8">
+        Building a brick wall is one of the oldest and most durable forms of construction. However, before you mix a single batch of mortar, you must answer the most critical question: <strong>"How many bricks do I need?"</strong> Whether you are building a small garden wall or the exterior envelope of a house, running out of bricks halfway through is a costly mistake. Bricks are often manufactured in specific dye lots, and a new batch might have a slightly different color or texture.
+      </p>
+
+      <p>
+        Conversely, over-ordering means you are left with heavy, difficult-to-return pallets of clay. This guide breaks down the exact mathematical formulas used by professional masons and estimators to calculate bricks, mortar, and waste factors for projects in the US, UK, and Australia.
+      </p>
+
+      <h3 class="mt-10">1. The Anatomy of a Brick Wall (Bonds)</h3>
+      <p>
+        To estimate materials accurately, you must first understand how the wall is assembled. Bricks are not just stacked directly on top of each other; they are laid in a specific pattern called a <strong>bond</strong>. The bond determines the wall's strength and aesthetic.
+      </p>
+      <ul>
+        <li><strong>Stretcher Bond (Running Bond):</strong> The most common and economical bond. Each brick is offset by half its length from the row below. It is ideal for single-wythe (one brick thick) walls.</li>
+        <li><strong>English Bond:</strong> Alternating courses of stretchers (long side facing out) and headers (short side facing out). This creates the strongest structural wall but requires more bricks per square foot.</li>
+        <li><strong>Flemish Bond:</strong> Alternating stretchers and headers within the same course. It offers excellent strength and a traditional aesthetic, often used in historic restoration.</li>
+      </ul>
+      <p>
+        The bond you choose affects the waste factor. Complex bonds (like English or Flemish) require more bricks to be cut at corners and edges, which means you will need a higher quantity of bricks.
+      </p>
+
+      <h3 class="mt-10">2. How to Calculate Bricks Per Square Foot</h3>
+      <p>
+        The standard method for estimating bricks is to calculate the wall's surface area and multiply it by the number of bricks per square foot (or per square meter). However, this number varies based on the brick size and the mortar joint thickness.
+      </p>
+
+      <!-- Brick Sizes Table -->
+      <div class="my-8 not-prose rounded-xl border border-slate-200 bg-white overflow-hidden shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left">
+            <thead class="bg-slate-50 border-b border-slate-200">
+              <tr>
+                <th class="px-4 py-3 font-display font-bold text-ink-900">Region</th>
+                <th class="px-4 py-3 font-display font-bold text-ink-900">Nominal Size (with mortar)</th>
+                <th class="px-4 py-3 font-display font-bold text-ink-900">Bricks per Sq Ft</th>
+                <th class="px-4 py-3 font-display font-bold text-ink-900">Bricks per Sq M</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-ink-700">
+              <tr>
+                <td class="px-4 py-3 font-semibold text-ink-900">United States</td>
+                <td class="px-4 py-3 font-mono">7-5/8" × 2-1/4"</td>
+                <td class="px-4 py-3 font-mono font-bold text-brand-600">6.5 - 7</td>
+                <td class="px-4 py-3 font-mono font-bold text-brand-600">~70</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-4 py-3 font-semibold text-ink-900">United Kingdom</td>
+                <td class="px-4 py-3 font-mono">215mm × 65mm</td>
+                <td class="px-4 py-3 font-mono font-bold text-brand-600">~8.5</td>
+                <td class="px-4 py-3 font-mono font-bold text-brand-600">60</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-semibold text-ink-900">Australia</td>
+                <td class="px-4 py-3 font-mono">230mm × 76mm</td>
+                <td class="px-4 py-3 font-mono font-bold text-brand-600">~7.7</td>
+                <td class="px-4 py-3 font-mono font-bold text-brand-600">48.5</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p>
+        <strong>The Math:</strong> To calculate bricks per square foot, convert the brick's nominal dimensions to feet (including the mortar joint) and calculate the area of one brick. Then, divide 1 (one square foot) by the area of the brick. For example, a standard US modular brick is 7.625 inches long and 2.25 inches high. Add a 3/8" mortar joint, and the nominal size is 8" × 2.625". Convert to feet: (8/12) × (2.625/12) = 0.666 × 0.218 = 0.145 sq ft per brick. <em>1 / 0.145 = 6.89 bricks per square foot.</em>
+      </p>
+
+      <!-- Ad Space (In-Article) -->
+      <div class="my-10 not-prose">
+        <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[250px] flex items-center justify-center text-xs sm:text-sm text-slate-500 font-medium tracking-widest uppercase">
+          Ad Space — In-Article Rectangle
+        </div>
+      </div>
+
+      <h3 class="mt-10">3. The Crucial Role of Mortar Joints</h3>
+      <p>
+        Many DIYers make the mistake of calculating bricks based solely on the brick size. In reality, the mortar joint is just as important as the brick itself. A standard mortar joint is <strong>3/8 inch (10mm)</strong>.
+      </p>
+      <p>
+        If you use a thinner joint (e.g., 1/4 inch for a more refined look), you will need <em>more</em> bricks to fill the same wall area. If you use a thicker joint (e.g., 1/2 inch), you will need <em>fewer</em> bricks, but your mortar consumption will increase significantly. Our calculator automatically adds the mortar joint thickness to the brick dimensions to give you a precise count.
+      </p>
+
+      <h3 class="mt-10">4. Calculating Mortar Needs</h3>
+      <p>
+        Mortar is the glue that holds the bricks together. It is typically made from a mix of sand, cement, and lime. Estimating mortar accurately is just as important as estimating bricks.
+      </p>
+      <p>
+        Mortar is usually sold in 60 lb or 80 lb bags (US), or 25 kg bags (UK/AU). A good rule of thumb for estimating mortar is that you will need roughly <strong>1 cubic foot of mortar for every 30 to 40 square feet of brick wall</strong> (assuming a standard 3/8" joint).
+      </p>
+      <p>
+        In terms of bags: For a standard wall, you can expect to use about <strong>1 bag of mortar (60 lb) for every 50 to 60 bricks</strong>. If you are laying large blocks or using a thick mortar bed, that number will drop to 30-40 blocks per bag.
+      </p>
+
+      <h3 class="mt-10">5. The Waste Factor: Why You Must Add Extra</h3>
+      <p>
+        No matter how precise your math is, you must add a waste factor to your brick order. Brick is a brittle material, and breakage occurs during shipping, unloading, and cutting. Furthermore, cuts made at the corners or around windows often produce offcuts that cannot be reused.
+      </p>
+      <ul>
+        <li><strong>5% Waste Factor:</strong> For a simple, straight, single-wythe garden wall with no openings.</li>
+        <li><strong>10% Waste Factor:</strong> The standard for most residential walls with a few corners and a door/window opening.</li>
+        <li><strong>15% Waste Factor:</strong> Required for complex walls with many corners, intricate bonds (herringbone, Flemish), or extensive cutting around architectural features.</li>
+      </ul>
+      <p>
+        <strong>Pro Tip:</strong> Never order the exact number of bricks calculated. Always round up to the nearest pallet (usually 500 or 1,000 bricks) and keep a few spare bricks wrapped in plastic for future repairs.
+      </p>
+      
+      <hr class="my-10 border-slate-200">
+      
+      <p class="text-base text-slate-700">
+        <em>Continue reading below as we dive into regional masonry standards (US vs UK vs AU), the difference between brick and CMU blocks, and how to estimate material costs.</em>
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 5/10 will start here: Content Part 2 (Standards, Costing & Conclusion)
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 5/10 — MASSIVE CONTENT PART 2 & CONCLUSION
+     Standards, Brick vs Block, Costing, and Conclusion
+     ============================================================ -->
+<section class="bg-white py-12 sm:py-16 border-t border-slate-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Article Content Wrapper (Continued) -->
+    <div class="prose prose-slate prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-900 prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-xl">
+      
+      <h3 class="mt-8">6. Regional Masonry Standards: US vs UK vs AU</h3>
+      <p>
+        Brick and block construction is heavily regulated because it is a structural load-bearing system. The standards vary significantly across the globe.
+      </p>
+      
+      <h4>United States (ASTM & TMS)</h4>
+      <p>
+        In the US, bricks are classified by <strong>ASTM C216</strong> (Standard Specification for Facing Brick). This standard grades bricks based on their resistance to weathering (Severe, Moderate, or Negligible Weathering). The structural design of masonry walls is governed by <strong>TMS 402</strong> (Building Code Requirements for Masonry Structures). In seismic zones like California, walls must be reinforced with steel rebar and grout-filled cells, which dramatically increases the material estimate.
+      </p>
+
+      <h4>United Kingdom (BS EN 771 & BS 5628)</h4>
+      <p>
+        The UK uses <strong>BS EN 771-1</strong> for clay masonry units. UK bricks are typically classified by their compressive strength (e.g., Class B, Class A) and their frost resistance (F1 or F2). A crucial part of UK masonry is the use of <strong>wall ties</strong>. UK external walls are almost always "cavity walls" (two layers of brick with a gap in between for insulation). You must estimate stainless steel wall ties to connect the two layers, which adds to the material cost.
+      </p>
+
+      <h4>Australia & New Zealand (AS 3700)</h4>
+      <p>
+        Australian masonry is governed by <strong>AS 3700</strong> (Masonry Structures). Due to Australia's high temperatures, the standard places a heavy emphasis on articulation joints (expansion joints) to allow the brickwork to expand and contract without cracking. Australian bricks (often referred to as "commons" or "face bricks") are typically larger than UK bricks, resulting in fewer bricks per square meter but a heavier overall wall.
+      </p>
+
+      <h3 class="mt-10">7. Brick vs. Concrete Block (CMU)</h3>
+      <p>
+        When estimating for a wall, you must decide between clay bricks and Concrete Masonry Units (CMUs), commonly known as cinder blocks. 
+      </p>
+      <p>
+        <strong>Clay Bricks</strong> are smaller, more expensive per unit, and require more labor to lay because there are more joints to mortar. However, they offer superior aesthetics, fire resistance, and moisture control.
+      </p>
+      <p>
+        <strong>Concrete Blocks</strong> are much larger (e.g., 8"x8"x16" in the US) and hollow. They are cheaper, faster to lay, and excellent for structural walls. However, they are rarely left exposed as a finish; they are usually rendered (stuccoed) or covered with brick veneer. If you are calculating for a block wall, the quantity required will be drastically lower than a brick wall of the same area.
+      </p>
+
+      <!-- In-Article Ad Slot -->
+      <div class="my-10 not-prose">
+        <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[250px] flex items-center justify-center text-xs sm:text-sm text-slate-500 font-medium tracking-widest uppercase">
+          Ad Space — In-Article Rectangle
+        </div>
+      </div>
+
+      <h3 class="mt-10">8. Understanding Mortar Types (M, S, N, O)</h3>
+      <p>
+        You cannot just use any cement mix for bricks. Mortar must be softer than the brick itself; if the mortar is stronger, the brick will crack under stress instead of the mortar joint. 
+      </p>
+      <ul>
+        <li><strong>Type M:</strong> Highest compressive strength. Used for heavy loads, foundations, and retaining walls.</li>
+        <li><strong>Type S:</strong> High strength and excellent tensile bond. Used for exterior walls, patios, and where high wind or seismic loads are present.</li>
+        <li><strong>Type N:</strong> Medium strength. The most common mortar for standard exterior and interior load-bearing walls above grade.</li>
+        <li><strong>Type O:</strong> Lowest strength. Used for non-load-bearing interior walls or historic restorations.</li>
+      </ul>
+      <p>
+        When you buy pre-bagged mortar (like Quikrete or Sakrete), the bag will specify which type it is. Ensure it matches your engineering requirements.
+      </p>
+
+      <h3 class="mt-10">9. Cost Estimation: Bricks, Mortar, and Labor</h3>
+      <p>
+        Masonry is one of the most labor-intensive trades in construction. The cost of the bricks is often less than the cost to install them.
+      </p>
+      
+      <h4>Material Costs</h4>
+      <ul>
+        <li><strong>Bricks (US):</strong> $0.50 to $1.50 per brick, depending on the type (e.g., standard red brick vs. handmade or glazed brick).</li>
+        <li><strong>Bricks (UK):</strong> £0.40 to £1.00 per brick. London stock bricks can be significantly more expensive.</li>
+        <li><strong>Bricks (AU):</strong> AUD $0.80 to $1.50 per brick.</li>
+        <li><strong>Mortar:</strong> A 60lb bag of pre-mixed mortar costs $8-$12 in the US. You will need roughly 1 bag for every 50-60 bricks.</li>
+      </ul>
+
+      <h4>Labor Costs</h4>
+      <p>
+        Because laying bricks requires skill, precision, and physical endurance, labor is expensive. In the US, a mason charges between <strong>$10 and $20 per square foot</strong> of wall area (this includes the brick and mortar). In the UK, a bricklayer charges <strong>£400 to £600 per 1,000 bricks</strong> laid. In Australia, bricklaying costs roughly <strong>AUD $1.00 to $2.00 per brick</strong> laid.
+      </p>
+
+      <h3 class="mt-10">10. Preparing for the Build</h3>
+      <p>
+        Once your bricks arrive, ensure they are stored on a firm, level surface, preferably on wooden pallets, and covered with a tarp to protect them from rain. Do not stack them too high, as the weight can crack the bottom bricks.
+      </p>
+      <p>
+        Always build a "gauge" or "story pole" before you start laying. This is a piece of wood marked with the height of every brick course (brick + mortar joint). Using a gauge ensures that your mortar joints remain consistent throughout the wall and prevents "creeping" joints.
+      </p>
+
+      <!-- Conclusion Box -->
+      <div class="mt-10 p-6 sm:p-8 bg-gradient-to-br from-ink-900 to-ink-950 rounded-2xl border border-ink-800 not-prose relative overflow-hidden shadow-lg">
+        <div class="absolute -top-20 -right-20 w-64 h-64 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="relative">
+          <h4 class="font-display font-bold text-white text-xl mb-3">Ready to order your bricks?</h4>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 max-w-2xl">
+            Use our Brick Calculator to instantly generate the exact number of bricks and bags of mortar you need for your wall, complete with US/UK/AU standard sizes and custom sizing.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#main-content" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-brand-500 text-white text-sm font-semibold hover:bg-brand-400 transition-colors shadow-sm">
+              Back to Calculator <span class="ml-1" aria-hidden="true">↑</span>
+            </a>
+            <a href="/calculators.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-white text-sm font-semibold transition-colors">
+              Browse All Tools
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 6/10 will start here: FAQ (Numbered Card Style) & Schema
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 6/10 — FAQ (Numbered Card Style) & SCHEMA
+     Exact design match from screenshot
+     ============================================================ -->
+<section class="bg-slate-50 py-16 sm:py-24 border-t border-slate-200">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-10 sm:mb-14">
+      <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-ink-900 tracking-tight">Brick Questions Answered</h2>
+      <p class="text-sm sm:text-base text-ink-700 mt-3">Common questions about estimating bricks, mortar, and block sizes.</p>
+    </div>
+
+    <!-- FAQ Accordion Cards -->
+    <div class="space-y-3 sm:space-y-4">
+      
+      <!-- FAQ 1 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">01</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How many bricks do I need for a 10x10 wall?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          A 10x10 foot wall has an area of <strong>100 square feet</strong>. Using standard US modular bricks (7.625" x 2.25") with a 3/8" mortar joint, you need approximately 6.5 to 7 bricks per square foot. Therefore, you need roughly <strong>650 to 700 bricks</strong>. You must then add a 5-10% waste factor for cuts and breakage, bringing the total order to about 715 to 770 bricks.
+        </div>
+      </details>
+
+      <!-- FAQ 2 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">02</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How much mortar do I need per 1,000 bricks?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          For standard bricks laid with a 3/8" (10mm) mortar joint, you will need approximately <strong>1 cubic yard of mortar for every 1,000 bricks</strong>. In terms of pre-mixed bags, this usually translates to about <strong>15 to 20 bags (60 lb or 80 lb)</strong>, depending on the exact joint thickness and the mason's technique.
+        </div>
+      </details>
+
+      <!-- FAQ 3 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">03</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">What is the standard size of a brick?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          Brick sizes vary globally:<br>
+          <strong>US:</strong> Standard modular is 7-5/8" x 2-1/4" x 3-5/8".<br>
+          <strong>UK:</strong> Standard is 215mm x 65mm x 102.5mm.<br>
+          <strong>Australia:</strong> Standard is 230mm x 76mm x 110mm.<br>
+          If you are using a non-standard brick (like a Roman or Norman brick), always use our "Custom Size" option to get an accurate calculation.
+        </div>
+      </details>
+
+      <!-- FAQ 4 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">04</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">Do the tools work on mobile phones and tablets?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          Yes, absolutely. BuildMetric is designed with a mobile-first approach. All calculators, including the Brick Calculator, use responsive layouts, large touch targets, and unit toggles so you can easily use them on site from your phone or tablet.
+        </div>
+      </details>
+
+      <!-- FAQ 5 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">05</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">Are the calculators updated for current building codes?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          Yes. Our formulas are tested against reference cases in both imperial and metric units and are reviewed by practising professionals. We cross-reference standards like ASTM (US), BS (UK), and AS (Australia) to ensure the mathematical logic aligns with current industry practices.
+        </div>
+      </details>
+
+      <!-- FAQ 6 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">06</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">Can I use these tools for projects outside the US, UK, or Australia?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          Yes. While our content is tailored to US, UK, and Australian standards, the underlying mathematics (area, volume, and multipliers) is universal. You can use the "Custom Size" feature to input the exact dimensions of bricks or tiles used in your country, and the calculator will provide accurate results.
+        </div>
+      </details>
+
+      <!-- FAQ 7 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">07</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How do I request a calculator that isn't listed here?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          If you are stuck on a specific formula, material calculation, or code requirement, email us at <a href="mailto:contact@buildmetric.org" class="text-brand-600 font-semibold hover:underline">contact@buildmetric.org</a>. Every message is read by a real person, and we prioritise new tools based on what our readers actually need.
+        </div>
+      </details>
+
+    </div>
+
+    <!-- Still have a question CTA -->
+    <div class="mt-10 bg-brand-50 border border-brand-100 rounded-2xl p-6 sm:p-8 text-center">
+      <h3 class="text-sm font-bold uppercase tracking-widest text-brand-700 mb-2">Still have a question?</h3>
+      <p class="text-sm sm:text-base text-ink-700">
+        Email <a href="mailto:contact@buildmetric.org" class="text-brand-600 font-bold hover:underline">contact@buildmetric.org</a> — every message is read by a real person, and we reply within two business days.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQPage JSON-LD SCHEMA (Matches exactly with HTML above)
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many bricks do I need for a 10x10 wall?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A 10x10 foot wall has an area of 100 square feet. Using standard US modular bricks with a 3/8-inch mortar joint, you need approximately 6.5 to 7 bricks per square foot. Therefore, you need roughly 650 to 700 bricks. You must then add a 5-10% waste factor for cuts and breakage, bringing the total order to about 715 to 770 bricks." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much mortar do I need per 1,000 bricks?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For standard bricks laid with a 3/8-inch mortar joint, you will need approximately 1 cubic yard of mortar for every 1,000 bricks. In terms of pre-mixed bags, this usually translates to about 15 to 20 bags (60 lb or 80 lb), depending on the exact joint thickness." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the standard size of a brick?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Brick sizes vary globally: US standard modular is 7-5/8 x 2-1/4 x 3-5/8 inches. UK standard is 215mm x 65mm x 102.5mm. Australia standard is 230mm x 76mm x 110mm. If you are using a non-standard brick, use the Custom Size option for an accurate calculation." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do the tools work on mobile phones and tablets?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, absolutely. BuildMetric is designed with a mobile-first approach. All calculators use responsive layouts, large touch targets, and unit toggles so you can easily use them on site from your phone or tablet." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the calculators updated for current building codes?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our formulas are tested against reference cases in both imperial and metric units and are reviewed by practising professionals. We cross-reference standards like ASTM (US), BS (UK), and AS (Australia) to ensure the logic aligns with current practices." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use these tools for projects outside the US, UK, or Australia?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. While our content is tailored to US, UK, and Australian standards, the underlying mathematics is universal. You can use the Custom Size feature to input the exact dimensions of bricks used in your country, and the calculator will provide accurate results." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I request a calculator that isn't listed here?",
+      "acceptedAnswer": { "@type": "Answer", "text": "If you are stuck on a specific formula, material calculation, or code requirement, email us at contact@buildmetric.org. Every message is read by a real person, and we prioritise new tools based on what our readers actually need." }
+    }
+  ]
+}
+</script>
+
+<!-- ============================================================
+     Phase 7/10 will start here: E-E-A-T Box + Related Tools
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 7/10 — E-E-A-T EDITORIAL BOX & RELATED CONTENT
+     ============================================================ -->
+
+<!-- E-E-A-T Directory Info Box -->
+<section class="bg-slate-50 border-t border-slate-200 py-16 sm:py-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+      
+      <!-- Card Header (Dark Premium Look) -->
+      <div class="bg-ink-900 px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-6 h-6 rounded bg-white/10 flex items-center justify-center">
+            <svg class="w-3.5 h-3.5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <span class="text-[11px] font-bold uppercase tracking-widest text-slate-200">About our calculators</span>
+        </div>
+        <span class="hidden sm:block text-[10px] font-bold uppercase tracking-widest text-slate-500">Engineer-Reviewed</span>
+      </div>
+
+      <!-- Card Body -->
+      <div class="p-6 sm:p-8 md:p-10">
+        <div class="grid lg:grid-cols-12 gap-10">
+          
+          <!-- Left Column: Description -->
+          <div class="lg:col-span-7">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-12 h-12 rounded-xl bg-brand-500 flex items-center justify-center shrink-0 shadow-sm">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              </div>
+              <div>
+                <h2 class="font-display font-extrabold text-xl sm:text-2xl text-ink-900 tracking-tight">BuildMetric Engineering</h2>
+                <p class="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-brand-600 mt-0.5">
+                  Calculators &amp; Estimating Tools
+                </p>
+              </div>
+            </div>
+            
+            <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-6 pl-[60px]">
+              Verified Formulas · Code-Aware
+            </p>
+
+            <div class="text-[15px] text-ink-700 leading-relaxed space-y-4 mb-8">
+              <p>
+                Every calculator in this directory is built from formulas that can be derived from first principles. We do not guess. We test every tool against reference cases in both imperial and metric units before it is published.
+              </p>
+              <p>
+                More importantly, our tools are reviewed by quantity surveyors, structural engineers, and licensed contractors. We know that a calculation error on site costs money and compromises safety, so we treat accuracy as a structural requirement, not a feature.
+              </p>
+            </div>
+
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm text-ink-700"><strong class="text-ink-900">Human-verified.</strong> Reviewed by practising professionals, not AI.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm text-ink-700"><strong class="text-ink-900">Stateless maths.</strong> Your inputs run in your browser, never on our servers.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm text-ink-700"><strong class="text-ink-900">Always free.</strong> No sign-ups, no paywalls, no trials. Just the tools.</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-col sm:flex-row items-center gap-3">
+              <a href="mailto:contact@buildmetric.org" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-ink-900 text-white text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                Report an Error
+              </a>
+              <a href="/about.html" class="w-full sm:w-auto inline-flex items-center justify-center px-5 py-2.5 rounded-xl border border-slate-300 text-ink-900 text-sm font-semibold hover:border-brand-500 hover:text-brand-600 transition-colors bg-white">
+                Our Methodology
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Directory Info & Disclaimer -->
+          <div class="lg:col-span-5 flex flex-col gap-4">
+            
+            <!-- Directory Info Box -->
+            <div class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm">
+              <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-4">Directory Info</h3>
+              <ul class="text-xs sm:text-sm space-y-3">
+                <li class="flex justify-between items-center pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Total Tools</span>
+                  <span class="font-bold text-ink-900 text-right">Growing Library</span>
+                </li>
+                <li class="flex justify-between items-center pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Review Status</span>
+                  <span class="font-bold text-ink-900 text-right">100% Human-Reviewed</span>
+                </li>
+                <li class="flex justify-between items-center pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Regions</span>
+                  <span class="font-bold text-ink-900 text-right">US · UK · AU</span>
+                </li>
+                <li class="flex justify-between items-center">
+                  <span class="text-slate-500 font-medium">Cost</span>
+                  <span class="font-bold text-brand-600 text-right">Free Forever</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Disclaimer Box -->
+            <div class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 flex-1 shadow-sm">
+              <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-3">Disclaimer</h3>
+              <p class="text-xs sm:text-sm text-ink-700 leading-relaxed">
+                Calculators are estimating aids, not a substitute for professional judgment. Always verify against your local code. See our <a href="/disclaimer.html" class="text-brand-600 font-semibold underline decoration-brand-300 underline-offset-2 hover:decoration-brand-500 transition-colors">Disclaimer</a>.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Related Tools & Guides Section -->
+<section class="bg-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Related Tools -->
+    <div class="mb-16">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="font-display font-extrabold text-2xl text-ink-900 tracking-tight">Related Calculators</h2>
+        <a href="/calculators.html" class="text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors">View all tools →</a>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        
+        <!-- Tool 1: Concrete -->
+        <a href="/concrete-calculator.html" class="group bg-white rounded-xl p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-6 h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-ink-900 group-hover:text-brand-600 transition-colors">Concrete Calculator</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Volume, bags, slabs</p>
+          </div>
+        </a>
+
+        <!-- Tool 2: Framing -->
+        <a href="/framing-calculator.html" class="group bg-white rounded-xl p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-6 h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-ink-900 group-hover:text-brand-600 transition-colors">Framing Calculator</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Studs, plates, headers</p>
+          </div>
+        </a>
+
+        <!-- Tool 3: Tile -->
+        <a href="/tile-calculator.html" class="group bg-white rounded-xl p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-6 h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h16v16H4z M4 12h16 M12 4v16"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-ink-900 group-hover:text-brand-600 transition-colors">Tile Calculator</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Boxes, waste, grout</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Related Guides -->
+    <div>
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="font-display font-extrabold text-2xl text-ink-900 tracking-tight">Related Guides</h2>
+        <a href="/guides.html" class="text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors">View all guides →</a>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Guide 1 (Concrete Waste) -->
+        <a href="/guides/concrete-waste-allowance.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-32 bg-gradient-to-br from-slate-700 to-slate-900 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-20 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+            </div>
+          </div>
+          <div class="p-4 flex flex-col flex-1">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-600 bg-slate-100 px-2 py-1 rounded-md self-start mb-2">Concrete</span>
+            <h3 class="font-display font-bold text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">How Much Waste Should You Add to a Concrete Order?</h3>
+            <span class="text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <!-- Guide 2 (Stud Spacing) -->
+        <a href="/guides/stud-spacing-by-code.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-32 bg-gradient-to-br from-sky-400 to-sky-600 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+            </div>
+          </div>
+          <div class="p-4 flex flex-col flex-1">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-sky-600 bg-sky-50 px-2 py-1 rounded-md self-start mb-2">Framing</span>
+            <h3 class="font-display font-bold text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Stud Spacing: IRC 2021 vs BS 5268 vs AS 1684 Compared</h3>
+            <span class="text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <!-- Guide 3 (Roof Pitch) -->
+        <a href="/guides/roof-pitch-explained.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-32 bg-gradient-to-br from-blue-400 to-blue-600 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            </div>
+          </div>
+          <div class="p-4 flex flex-col flex-1">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-brand-600 bg-brand-50 px-2 py-1 rounded-md self-start mb-2">Roofing</span>
+            <h3 class="font-display font-bold text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Roof Pitch Explained: Why 6:12 and 26.57° Are the Same Roof</h3>
+            <span class="text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 8/10 will start here: Premium Footer
+     ============================================================ -->
+
+    </main>
+
+<!-- ============================================================
+     PHASE 8/10 — PREMIUM FOOTER (4 Columns, No Ads, Uniform)
+     ============================================================ -->
+<footer class="bg-ink-950 text-slate-400 border-t border-slate-800 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Top Footer Grid (4 Columns) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-12">
+      
+      <!-- Column 1: Brand & Contact -->
+      <div class="pr-4">
+        <a href="/" class="inline-flex items-center gap-2.5 mb-5 group">
+          <img src="logo.png" alt="BuildMetric Logo" class="h-8 w-auto object-contain brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity" />
+          <span class="font-display font-extrabold text-xl tracking-tight text-white hidden sm:block">
+            Build<span class="text-brand-500">Metric</span>
+          </span>
+        </a>
+        
+        <p class="text-sm leading-relaxed mb-6 max-w-sm">
+          Independent construction calculators, estimating tools and technical reference guides for building professionals across the <strong class="text-slate-200">USA, UK</strong> and <strong class="text-slate-200">Australia</strong>. Engineered for accuracy. Published for transparency.
+        </p>
+
+        <div class="space-y-3 mb-6">
+          <a href="mailto:contact@buildmetric.org" class="flex items-center gap-2.5 text-sm hover:text-white transition-colors">
+            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            contact@buildmetric.org
+          </a>
+          <a href="mailto:ads@buildmetric.org" class="flex items-center gap-2.5 text-sm hover:text-white transition-colors">
+            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+            ads@buildmetric.org
+          </a>
+        </div>
+
+        <!-- Cookie Settings Button -->
+        <button id="cookieSettingsBtn" type="button" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 hover:bg-slate-800 text-xs font-semibold text-slate-300 transition-colors">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          Cookie Settings
+        </button>
+      </div>
+
+      <!-- Column 2: Calculators -->
+      <div>
+        <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Calculators</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="/framing-calculator.html" class="hover:text-brand-400 transition-colors">Framing Calculator</a></li>
+          <li><a href="/roofing-calculator.html" class="hover:text-brand-400 transition-colors">Roofing Calculator</a></li>
+          <li><a href="/concrete-calculator.html" class="hover:text-brand-400 transition-colors">Concrete Volume</a></li>
+          <li><a href="/drywall-calculator.html" class="hover:text-brand-400 transition-colors">Drywall Calculator</a></li>
+          <li><a href="/paint-calculator.html" class="hover:text-brand-400 transition-colors">Paint Coverage</a></li>
+          <li><a href="/tile-calculator.html" class="hover:text-brand-400 transition-colors">Tile Calculator</a></li>
+          <li><a href="/brick-calculator.html" class="hover:text-brand-400 transition-colors">Brick Calculator</a></li>
+          <li><a href="/calculators.html" class="hover:text-white font-semibold text-brand-500 mt-2 inline-block">All Tools →</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Company -->
+      <div>
+        <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Company</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="/about.html" class="hover:text-brand-400 transition-colors">About</a></li>
+          <li><a href="/guides.html" class="hover:text-brand-400 transition-colors">Guides</a></li>
+          <li><a href="/estimating.html" class="hover:text-brand-400 transition-colors">Estimating</a></li>
+          <li><a href="/contact.html" class="hover:text-brand-400 transition-colors">Contact</a></li>
+          <li><a href="/sitemap.xml" class="hover:text-brand-400 transition-colors">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Legal & Compliance -->
+      <div>
+        <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Legal &amp; Compliance</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="/privacy.html" class="hover:text-brand-400 transition-colors">Privacy Policy</a></li>
+          <li><a href="/terms.html" class="hover:text-brand-400 transition-colors">Terms of Service</a></li>
+          <li><a href="/disclaimer.html" class="hover:text-brand-400 transition-colors">Disclaimer</a></li>
+          <li><a href="/cookie-policy.html" class="hover:text-brand-400 transition-colors">Cookie Policy</a></li>
+          <li><a href="/contact.html" class="hover:text-brand-400 transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Regional Notice Box -->
+    <div class="flex justify-end mb-8">
+      <div class="bg-slate-800/40 border border-slate-700/50 rounded-xl p-4 max-w-sm w-full sm:w-auto">
+        <h4 class="text-[10px] font-bold uppercase tracking-widest text-slate-300 mb-1">Regional Notice</h4>
+        <p class="text-xs text-slate-500 leading-relaxed">
+          BuildMetric content is published in English and reviewed against US, UK and Australian codes. Always verify against your local jurisdiction's current edition.
+        </p>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+      <p class="text-center md:text-left text-slate-400">
+        © 2026 BuildMetric. All rights reserved. Operated from buildmetric.org.
+      </p>
+      <p class="text-center md:text-right text-slate-500">
+        Built for professionals. General information only — see our <a href="/disclaimer.html" class="text-brand-500 hover:underline hover:text-brand-400 transition-colors">Disclaimer</a>.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ============================================================
+     Phase 9/10 will start here: Complete JavaScript Logic
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 9/10 — JAVASCRIPT (Calculator Logic & Menu)
+     ============================================================ -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    
+    /* ── 1. MOBILE MENU TOGGLE ── */
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const openIcon = menuBtn ? menuBtn.querySelector('.menu-open-icon') : null;
+    const closeIcon = menuBtn ? menuBtn.querySelector('.menu-close-icon') : null;
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', function () {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden');
+        if(openIcon) openIcon.classList.toggle('hidden');
+        if(closeIcon) closeIcon.classList.toggle('hidden');
+        menuBtn.setAttribute('aria-expanded', String(!isOpen));
+      });
+    }
+
+    /* ── 2. ELEMENTS & STATE ── */
+    const btnImperial = document.getElementById('btnImperial');
+    const btnMetric = document.getElementById('btnMetric');
+    
+    const unitLabels = document.querySelectorAll('.unit-label');
+    const brickUnitLabels = document.querySelectorAll('.brick-unit-label');
+    const jointUnitLabels = document.querySelectorAll('.joint-unit-label');
+    const outAreaUnit = document.querySelector('#outArea span');
+    
+    const wallLength = document.getElementById('wallLength');
+    const wallHeight = document.getElementById('wallHeight');
+    const brickSize = document.getElementById('brickSize');
+    const customBrickContainer = document.getElementById('customBrickContainer');
+    const customBrickLength = document.getElementById('customBrickLength');
+    const customBrickHeight = document.getElementById('customBrickHeight');
+    const mortarJoint = document.getElementById('mortarJoint');
+    const wasteFactor = document.getElementById('wasteFactor');
+    
+    const outBricks = document.getElementById('outBricks');
+    const outArea = document.getElementById('outArea');
+    const outMortar = document.getElementById('outMortar');
+    const outWaste = document.getElementById('outWaste');
+
+    let isMetric = false;
+
+    /* ── 3. UNIT TOGGLE (Imperial / Metric) ── */
+    function toggleUnits(metric) {
+      isMetric = metric;
+      
+      if (metric) {
+        btnMetric.classList.add('bg-white', 'shadow-sm', 'text-ink-900');
+        btnMetric.classList.remove('text-slate-500');
+        btnImperial.classList.remove('bg-white', 'shadow-sm', 'text-ink-900');
+        btnImperial.classList.add('text-slate-500');
+        
+        unitLabels.forEach(el => el.textContent = 'm');
+        brickUnitLabels.forEach(el => el.textContent = 'mm');
+        jointUnitLabels.forEach(el => el.textContent = 'mm');
+        if(outAreaUnit) outAreaUnit.textContent = 'sq m';
+
+        // Update Brick Size dropdown for Metric
+        brickSize.innerHTML = `
+          <optgroup label="Standard Metric">
+            <option value="215x65">UK Standard (215mm x 65mm)</option>
+            <option value="230x76">AU Standard (230mm x 76mm)</option>
+          </optgroup>
+          <option value="custom">Custom Size...</option>
+        `;
+
+        // Update Mortar dropdown for Metric (mm)
+        mortarJoint.innerHTML = `
+          <option value="6">6mm</option>
+          <option value="10" selected>10mm</option>
+          <option value="12">12mm</option>
+        `;
+
+      } else {
+        btnImperial.classList.add('bg-white', 'shadow-sm', 'text-ink-900');
+        btnImperial.classList.remove('text-slate-500');
+        btnMetric.classList.remove('bg-white', 'shadow-sm', 'text-ink-900');
+        btnMetric.classList.add('text-slate-500');
+        
+        unitLabels.forEach(el => el.textContent = 'ft');
+        brickUnitLabels.forEach(el => el.textContent = 'in');
+        jointUnitLabels.forEach(el => el.textContent = 'in');
+        if(outAreaUnit) outAreaUnit.textContent = 'sq ft';
+
+        // Update Brick Size dropdown for Imperial
+        brickSize.innerHTML = `
+          <optgroup label="Standard Imperial">
+            <option value="7.625x2.25">US Modular (7-5/8" x 2-1/4")</option>
+            <option value="8x2.25">US Standard (8" x 2-1/4")</option>
+          </optgroup>
+          <option value="custom">Custom Size...</option>
+        `;
+
+        // Update Mortar dropdown for Imperial (inches)
+        mortarJoint.innerHTML = `
+          <option value="0.25">1/4"</option>
+          <option value="0.375" selected>3/8"</option>
+          <option value="0.5">1/2"</option>
+        `;
+      }
+      
+      // Hide custom inputs if they were open
+      customBrickContainer.classList.add('hidden');
+      calculate();
+    }
+
+    if(btnImperial && btnMetric) {
+      btnImperial.addEventListener('click', () => toggleUnits(false));
+      btnMetric.addEventListener('click', () => toggleUnits(true));
+    }
+
+    /* ── 4. HYBRID CUSTOM SIZE LOGIC ── */
+    brickSize.addEventListener('change', function() {
+      if (this.value === 'custom') {
+        customBrickContainer.classList.remove('hidden');
+        customBrickLength.focus();
+      } else {
+        customBrickContainer.classList.add('hidden');
+        customBrickLength.value = '';
+        customBrickHeight.value = '';
+      }
+      calculate();
+    });
+
+    /* ── 5. CALCULATOR MATH LOGIC ── */
+    function calculate() {
+      const wLength = parseFloat(wallLength.value) || 0;
+      const wHeight = parseFloat(wallHeight.value) || 0;
+      const waste = parseFloat(wasteFactor.value) || 0.05;
+      const joint = parseFloat(mortarJoint.value) || 0;
+
+      // Get Brick Dimensions
+      let bLength = 0;
+      let bHeight = 0;
+
+      if (brickSize.value === 'custom') {
+        bLength = parseFloat(customBrickLength.value) || 0;
+        bHeight = parseFloat(customBrickHeight.value) || 0;
+      } else {
+        const dims = brickSize.value.split('x');
+        bLength = parseFloat(dims[0]);
+        bHeight = parseFloat(dims[1]);
+      }
+
+      // Calculate Wall Area
+      let wallArea = wLength * wHeight;
+      let bricksNeeded = 0;
+
+      if (isMetric) {
+        // Room in meters (m), Brick in mm, Joint in mm
+        let nominalLength = (bLength + joint) / 1000; // meters
+        let nominalHeight = (bHeight + joint) / 1000; // meters
+        let brickArea = nominalLength * nominalHeight;
+        
+        if(brickArea > 0) bricksNeeded = Math.ceil(wallArea / brickArea);
+      } else {
+        // Room in feet (ft), Brick in inches, Joint in inches
+        let nominalLength = (bLength + joint) / 12; // feet
+        let nominalHeight = (bHeight + joint) / 12; // feet
+        let brickArea = nominalLength * nominalHeight;
+        
+        if(brickArea > 0) bricksNeeded = Math.ceil(wallArea / brickArea);
+      }
+
+      // Waste Math
+      let wasteBricks = Math.ceil(bricksNeeded * waste);
+      let totalBricks = bricksNeeded + wasteBricks;
+
+      // Mortar Math
+      // Rule of thumb: 1 bag (60lb or 25kg) per 35 bricks
+      let mortarBags = Math.ceil(totalBricks / 35);
+
+      // --- UPDATE UI ---
+      outArea.innerHTML = `${wallArea.toFixed(1)} <span class="text-xs text-slate-500">${isMetric ? 'sq m' : 'sq ft'}</span>`;
+      outBricks.textContent = totalBricks;
+      outMortar.innerHTML = `${mortarBags} <span class="text-xs text-slate-500">bags</span>`;
+      outWaste.innerHTML = `${wasteBricks} <span class="text-xs text-slate-500">bricks</span>`;
+    }
+
+    // Trigger calculation on any input change
+    const inputs = [wallLength, wallHeight, brickSize, customBrickLength, customBrickHeight, mortarJoint, wasteFactor];
+    inputs.forEach(input => {
+      if(input) {
+        input.addEventListener('input', calculate);
+        input.addEventListener('change', calculate);
+      }
+    });
+
+    // Initial run
+    calculate();
+
+    /* ── 6. SAVE, SHARE, COPY ACTIONS ── */
+    const btnSave = document.getElementById('btnSave');
+    const btnShare = document.getElementById('btnShare');
+    const btnCopy = document.getElementById('btnCopy');
+
+    const getResultText = () => {
+      return `Brick Materials Estimate:\n` +
+             `- Total Wall Area: ${outArea.textContent}\n` +
+             `- Total Bricks (with waste): ${outBricks.textContent}\n` +
+             `- Mortar Bags: ${outMortar.textContent}\n` +
+             `- Waste Bricks: ${outWaste.textContent}\n` +
+             `Calculated via BuildMetric.org`;
+    };
+
+    // Save
+    if(btnSave) {
+      btnSave.addEventListener('click', () => {
+        const data = {
+          l: wallLength.value, h: wallHeight.value, bs: brickSize.value,
+          cbl: customBrickLength.value, cbh: customBrickHeight.value,
+          j: mortarJoint.value, waste: wasteFactor.value, metric: isMetric
+        };
+        localStorage.setItem('buildmetric_brick_data', JSON.stringify(data));
+        alert('Estimate saved to your browser!');
+      });
+    }
+
+    // Share
+    if(btnShare && navigator.share) {
+      btnShare.addEventListener('click', () => {
+        navigator.share({
+          title: 'Brick Calculator Estimate',
+          text: getResultText(),
+          url: window.location.href
+        }).catch(console.error);
+      });
+    } else if (btnShare) {
+      btnShare.addEventListener('click', () => {
+        alert('Sharing is not supported on this browser. Use Copy instead.');
+      });
+    }
+
+    // Copy
+    if(btnCopy) {
+      btnCopy.addEventListener('click', () => {
+        navigator.clipboard.writeText(getResultText()).then(() => {
+          const originalHTML = btnCopy.innerHTML;
+          btnCopy.innerHTML = '<svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> Copied!';
+          setTimeout(() => { btnCopy.innerHTML = originalHTML; }, 2000);
+        }).catch(() => {
+          alert('Failed to copy. Please select text manually.');
+        });
+      });
+    }
+
+    // Cookie settings placeholder
+    const cookieBtn = document.getElementById('cookieSettingsBtn');
+    if(cookieBtn) {
+      cookieBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('Cookie settings panel will open here.');
+      });
+    }
+
+  });
+</script>
+
+<!-- ============================================================
+     Phase 10/10 will start here: Closing Tags
+     ============================================================ -->
+
+      <!-- ============================================================
+       PHASE 10/10 — CLOSING TAGS
+       ============================================================ -->
+</body>
+</html>
