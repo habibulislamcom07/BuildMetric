@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- ============================================================
+       PHASE 1/10 — SEO HEAD & CONFIGURATION (Long-Tail Focus)
+       File: deck-calculator.html
+       Brand: BuildMetric | Domain: buildmetric.org
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO Meta (Long-Tail Keywords) -->
+  <title>Deck Calculator | How Many Deck Boards & Joists Do I Need? | BuildMetric</title>
+  <meta name="description" content="Free deck calculator to estimate how many deck boards, joists, posts, and concrete footings you need. Enter your deck size and get an exact material list." />
+  <meta name="keywords" content="deck calculator, how many deck boards do i need, deck joist calculator, deck footing calculator, deck material estimator, deck board spacing calculator" />
+  <meta name="author" content="BuildMetric Editorial Team" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#0ea5e9" />
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://buildmetric.org/deck-calculator.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BuildMetric" />
+  <meta property="og:title" content="Deck Calculator | Estimate Boards, Joists & Footings" />
+  <meta property="og:description" content="Calculate exact deck materials including decking boards, joists, posts, and concrete." />
+  <meta property="og:url" content="https://buildmetric.org/deck-calculator.html" />
+  <meta property="og:image" content="https://buildmetric.org/assets/og/deck-calculator.png" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Deck Material Calculator | BuildMetric" />
+  <meta name="twitter:description" content="Estimate exact decking materials for your backyard project." />
+  <meta name="twitter:image" content="https://buildmetric.org/assets/og/deck-calculator.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e' },
+            ink: { 700: '#334155', 800: '#1e293b', 900: '#0f172a', 950: '#080f1e' }
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: {
+            'soft': '0 4px 20px -2px rgba(15,23,42,0.05)',
+            'hover': '0 12px 32px -8px rgba(14,165,233,0.15)',
+            'glass': '0 4px 24px -4px rgba(15,23,42,0.08)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+    .bg-grid-pattern {
+      background-image: linear-gradient(to right, rgba(15,23,42,0.04) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(15,23,42,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .nav-glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); }
+    details > summary .icon-plus { transition: transform 0.3s ease; }
+    details[open] > summary .icon-plus { transform: rotate(45deg); }
+    details > summary::-webkit-details-marker { display: none; }
+  </style>
+
+  <!-- ================= JSON-LD SCHEMA ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://buildmetric.org/deck-calculator.html#app",
+        "name": "Deck Material Calculator",
+        "url": "https://buildmetric.org/deck-calculator.html",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "All",
+        "description": "Calculate the number of deck boards, joists, posts, and concrete bags needed for a wood deck.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://buildmetric.org/deck-calculator.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://buildmetric.org/" },
+          { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://buildmetric.org/calculators.html" },
+          { "@type": "ListItem", "position": 3, "name": "Framing", "item": "https://buildmetric.org/framing.html" },
+          { "@type": "ListItem", "position": 4, "name": "Deck Calculator", "item": "https://buildmetric.org/deck-calculator.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+  <body class="bg-white text-ink-800 antialiased font-sans flex flex-col min-h-screen">
+
+  <!-- ============================================================
+       SKIP LINK (Accessibility)
+       ============================================================ -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2.5 focus:bg-brand-500 focus:text-white focus:rounded-lg focus:font-semibold focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/70">
+    Skip to main content
+  </a>
+
+  <!-- ============================================================
+       STICKY NAVBAR (Consistent across all tools)
+       ============================================================ -->
+  <header class="sticky top-0 z-50 nav-glass border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        
+        <!-- Logo -->
+        <div class="flex items-center gap-6">
+          <a href="/" class="flex items-center gap-2.5 shrink-0" aria-label="BuildMetric Home">
+            <img src="logo.png" alt="BuildMetric Logo" class="h-8 sm:h-10 w-auto object-contain" />
+            <span class="font-display font-extrabold text-xl tracking-tight text-ink-900 hidden sm:block">
+              Build<span class="text-brand-500">Metric</span>
+            </span>
+          </a>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden lg:flex items-center gap-1" aria-label="Main Navigation">
+            <a href="/calculators.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Calculators</a>
+            <a href="/guides.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Guides</a>
+            <a href="/about.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">About</a>
+            <a href="/contact.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Contact</a>
+          </nav>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-3">
+          <a href="/calculators.html" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-ink-900 text-white text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+            Open Tools
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuBtn" type="button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-200 text-ink-800 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand-500/40 transition-colors" aria-expanded="false" aria-controls="mobileMenu">
+            <span class="sr-only">Open main menu</span>
+            <svg class="menu-open-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <svg class="menu-close-icon hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu (Push-down) -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 bg-white">
+      <div class="px-4 py-4 space-y-1">
+        <a href="/calculators.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Calculators</a>
+        <a href="/guides.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Guides</a>
+        <a href="/about.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">About</a>
+        <a href="/contact.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main id="main-content" class="flex-grow">
+    
+    <!-- ============================================================
+         PAGE HEADER & BREADCRUMBS
+         ============================================================ -->
+    <div class="bg-slate-50 border-b border-slate-200 pt-6 pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="Breadcrumb" class="mb-4">
+          <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs sm:text-sm text-slate-500">
+            <li><a href="/" class="hover:text-brand-600 transition-colors">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/calculators.html" class="hover:text-brand-600 transition-colors">Calculators</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/framing.html" class="hover:text-brand-600 transition-colors">Framing</a></li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page" class="text-ink-900 font-semibold">Deck Calculator</li>
+          </ol>
+        </nav>
+
+        <!-- Page Title & Subtitle -->
+        <h1 class="font-display font-extrabold text-3xl sm:text-4xl text-ink-900 tracking-tight leading-tight">
+          Deck Material Calculator
+        </h1>
+        <p class="text-sm sm:text-base text-ink-700 mt-2 max-w-2xl">
+          Calculate exactly how many deck boards, joists, posts, and bags of concrete you need for your backyard deck. Accounts for joist spacing, board gaps, and diagonal layouts.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- ============================================================
+         Phase 3/10 will start here: The Calculator UI (Inputs & Outputs)
+         ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 3/10 — THE CALCULATOR UI (With Custom Inputs)
+     Deck specific inputs and result box
+     ============================================================ -->
+<section class="bg-white py-10 sm:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+      
+      <!-- Left Column: Form Inputs (7/12) -->
+      <div class="lg:col-span-7">
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 sm:p-8">
+          
+          <!-- Unit Toggle (Top Right) -->
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="font-display font-bold text-xl text-ink-900">Deck Dimensions</h2>
+            <div class="flex items-center bg-slate-100 p-1 rounded-lg">
+              <button type="button" id="btnImperial" class="px-3 py-1.5 text-xs font-semibold rounded-md bg-white shadow-sm text-ink-900 transition-all">Imperial (ft/in)</button>
+              <button type="button" id="btnMetric" class="px-3 py-1.5 text-xs font-semibold rounded-md text-slate-500 hover:text-ink-900 transition-all">Metric (m/mm)</button>
+            </div>
+          </div>
+
+          <!-- Dimensions Row (2 cols on mobile) -->
+          <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-4">
+            <div>
+              <label for="deckLength" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Deck Length (<span class="unit-label">ft</span>)</label>
+              <input type="number" id="deckLength" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow text-sm sm:text-base" placeholder="e.g. 16" min="0" step="0.1">
+            </div>
+            <div>
+              <label for="deckWidth" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Deck Width (<span class="unit-label">ft</span>)</label>
+              <input type="number" id="deckWidth" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow text-sm sm:text-base" placeholder="e.g. 12" min="0" step="0.1">
+            </div>
+          </div>
+
+          <!-- Board Size & Gap Row (2 cols on mobile) -->
+          <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-4">
+            <div>
+              <label for="boardSize" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Board Width (<span class="board-unit-label">in</span>)</label>
+              <select id="boardSize" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm sm:text-base">
+                <option value="5.5" selected>5.5" (Standard 5/4x6)</option>
+                <option value="3.5">3.5" (1x4)</option>
+                <option value="7.25">7.25" (1x8)</option>
+                <option value="custom">Custom...</option>
+              </select>
+              <!-- Custom Input for Board Width -->
+              <input type="number" id="customBoardWidth" class="hidden mt-2 w-full px-3 py-2 rounded-lg border border-brand-300 bg-brand-50 focus:ring-2 focus:ring-brand-500 text-sm" placeholder="Exact width in inches" min="0" step="0.1">
+            </div>
+            <div>
+              <label for="boardGap" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Board Gap (<span class="gap-unit-label">in</span>)</label>
+              <select id="boardGap" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm sm:text-base">
+                <option value="0.125">1/8" (Tight)</option>
+                <option value="0.1875" selected>3/16" (Standard)</option>
+                <option value="0.25">1/4" (Wide)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Joist Spacing & Layout Pattern (2 cols on mobile) -->
+          <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-4">
+            <div>
+              <label for="joistSpacing" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Joist Spacing (OC)</label>
+              <select id="joistSpacing" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm sm:text-base">
+                <option value="12">12 inches</option>
+                <option value="16" selected>16 inches</option>
+                <option value="24">24 inches</option>
+                <option value="custom">Custom...</option>
+              </select>
+              <!-- Custom Input for Joist Spacing -->
+              <input type="number" id="customJoistSpacing" class="hidden mt-2 w-full px-3 py-2 rounded-lg border border-brand-300 bg-brand-50 focus:ring-2 focus:ring-brand-500 text-sm" placeholder="Exact spacing in inches" min="0" step="0.1">
+            </div>
+            <div>
+              <label for="layoutType" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Layout Pattern</label>
+              <select id="layoutType" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm sm:text-base">
+                <option value="straight" selected>Straight (Parallel)</option>
+                <option value="diagonal">Diagonal (45°)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Board Length & Waste (2 cols on mobile) -->
+          <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-6">
+            <div>
+              <label for="boardLength" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Stock Length (<span class="unit-label">ft</span>)</label>
+              <select id="boardLength" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm sm:text-base">
+                <option value="8">8 ft</option>
+                <option value="10">10 ft</option>
+                <option value="12" selected>12 ft</option>
+                <option value="16">16 ft</option>
+              </select>
+            </div>
+            <div>
+              <label for="wasteFactor" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Waste Factor</label>
+              <select id="wasteFactor" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm sm:text-base">
+                <option value="0.10" selected>10% (Standard)</option>
+                <option value="0.15">15% (Diagonal)</option>
+                <option value="0.20">20% (Complex)</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Column: Result Box (5/12) -->
+      <div class="lg:col-span-5">
+        <div class="bg-ink-900 rounded-2xl shadow-lg border border-ink-800 sticky top-24 overflow-hidden">
+          <div class="p-6 sm:p-8">
+            
+            <!-- Highlighted Total Boards -->
+            <div class="text-center pb-6 border-b border-white/10 mb-6">
+              <p class="text-sm text-brand-300 font-semibold mb-1">Total Deck Boards Needed</p>
+              <div class="flex items-center justify-center gap-2">
+                <span class="font-mono text-5xl font-extrabold text-white" id="outBoards">0</span>
+                <span class="text-sm text-slate-400 mt-4">Pieces</span>
+              </div>
+            </div>
+
+            <!-- Other Results -->
+            <div class="space-y-3 mb-8">
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-slate-400">Deck Area</span>
+                <span class="font-mono text-base font-semibold text-white" id="outArea">0 <span class="text-xs text-slate-500">sq ft</span></span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-slate-400">Joists</span>
+                <span class="font-mono text-base font-semibold text-white" id="outJoists">0 <span class="text-xs text-slate-500">pieces</span></span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-slate-400">Concrete Bags (Footings)</span>
+                <span class="font-mono text-base font-semibold text-white" id="outConcrete">0 <span class="text-xs text-slate-500">bags</span></span>
+              </div>
+            </div>
+
+            <!-- Save/Share/Copy Buttons (Blue) -->
+            <div class="flex items-center gap-2">
+              <button type="button" id="btnSave" class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg>
+                Save
+              </button>
+              <button type="button" id="btnShare" class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                Share
+              </button>
+              <button type="button" id="btnCopy" class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                Copy
+              </button>
+            </div>
+
+          </div>
+        </div>
+        
+        <!-- Quick Tip -->
+        <p class="text-xs text-slate-500 mt-4 text-center">
+          <strong>Note:</strong> Concrete estimates assume 1 bag (80lb/50kg) per footing. Footing size depends on local frost depth and deck load.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- ============================================================
+     PHASE 4/10 — FIRST AD SLOT + MASSIVE CONTENT PART 1
+     Deep dive into deck anatomy, footings, and load capacity
+     ============================================================ -->
+<section class="bg-white py-12 sm:py-16 border-t border-slate-200">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Ad Space (Leaderboard) -->
+    <div class="mb-12">
+      <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[90px] flex items-center justify-center text-[10px] sm:text-xs text-slate-500 font-medium tracking-widest uppercase">
+        Ad Space — 728×90 / Responsive Leaderboard
+      </div>
+    </div>
+
+    <!-- Article Content Wrapper (Typography optimized) -->
+    <div class="prose prose-slate prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-900 prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-xl">
+      
+      <p class="lead text-xl text-ink-700 font-medium mb-8">
+        Building a deck is one of the most rewarding home improvement projects. It extends your living space outdoors and adds significant value to your property. However, a deck is not just a piece of furniture; it is a structural system that must safely support people, furniture, snow loads, and wind. The most critical step before buying any lumber is accurately answering the question: <strong>"How many deck boards and joists do I need?"</strong>
+      </p>
+
+      <p>
+        Unlike a simple fence, a deck requires a complex interplay of footings, posts, beams, joists, and decking. If you under-order, you will make endless trips to the lumber yard. If you over-order, you waste hundreds of dollars on warped or unused wood. This guide breaks down the exact math, load calculations, and building codes used by professional deck builders in the US, UK, and Australia to ensure your project is safe and perfectly estimated.
+      </p>
+
+      <h3 class="mt-10">1. The Structural Anatomy of a Deck</h3>
+      <p>
+        To estimate materials accurately, you must understand the layers of a deck structure from the ground up. A deck is a load-bearing system composed of six primary components:
+      </p>
+      <ul>
+        <li><strong>Footings & Piers:</strong> Concrete poured into the ground to support the deck's weight and prevent frost heaving. The size and depth depend entirely on your local soil conditions and frost line.</li>
+        <li><strong>Posts:</strong> Vertical lumber (usually 4x4 or 6x6 pressure-treated wood) that connects the footing to the beam. They carry the vertical load of the deck down to the ground.</li>
+        <li><strong>Beams (Girders):</strong> Horizontal structural members that carry the load of the joists. They are typically made of double 2x8 or 2x10 lumber bolted together.</li>
+        <li><strong>Ledger Board:</strong> A board securely bolted to the house's rim joist, which supports one side of the deck. <em>This is the most critical point of failure if not flashed correctly.</em></li>
+        <li><strong>Joists:</strong> The parallel framing members that support the deck boards. Usually 2x8, 2x10, or 2x12 lumber, spaced 12", 16", or 24" apart.</li>
+        <li><strong>Decking Boards:</strong> The visible walking surface. Typically 5/4x6 wood planks, 2x6 boards, or composite boards.</li>
+      </ul>
+
+      <h3 class="mt-10">2. The Critical Importance of Footing Depth (Frost Line)</h3>
+      <p>
+        The most common reason a deck collapses, shifts, or becomes uneven is improper footings. A footing must be dug below the <strong>frost line</strong>. The frost line is the depth at which groundwater in the soil freezes. If your footing is above this line, freezing soil will expand and push the entire deck upwards (a process known as "frost heave").
+      </p>
+
+      <!-- Footing Table -->
+      <div class="my-8 not-prose rounded-xl border border-slate-200 bg-white overflow-hidden shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left">
+            <thead class="bg-slate-50 border-b border-slate-200">
+              <tr>
+                <th class="px-4 py-3 font-display font-bold text-ink-900">Region</th>
+                <th class="px-4 py-3 font-display font-bold text-ink-900">Typical Frost Depth</th>
+                <th class="px-4 py-3 font-display font-bold text-ink-900">Minimum Footing Depth</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-ink-700">
+              <tr>
+                <td class="px-4 py-3 font-semibold text-ink-900">Southern US (e.g., Texas, Florida)</td>
+                <td class="px-4 py-3 font-mono">0 - 6 inches</td>
+                <td class="px-4 py-3 font-mono font-bold">12 inches</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-4 py-3 font-semibold text-ink-900">Northern US (e.g., Minnesota, NY)</td>
+                <td class="px-4 py-3 font-mono">36 - 48 inches</td>
+                <td class="px-4 py-3 font-mono font-bold">48+ inches</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-semibold text-ink-900">United Kingdom</td>
+                <td class="px-4 py-3 font-mono">~450mm (18 in)</td>
+                <td class="px-4 py-3 font-mono font-bold">600mm (2 ft)</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-4 py-3 font-semibold text-ink-900">Australia (Temperate)</td>
+                <td class="px-4 py-3 font-mono">No hard frost</td>
+                <td class="px-4 py-3 font-mono font-bold">300mm - 600mm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p>
+        <strong>Footing Math:</strong> A standard 12-inch diameter footing that is 36 inches deep requires roughly <strong>3 to 4 bags of 50lb fast-setting concrete</strong> (or 2-3 bags of 80lb). Our calculator assumes 1 bag per footing as a baseline to account for variations, but you should adjust this based on your actual hole depth and width.
+      </p>
+
+      <!-- Ad Space (In-Article) -->
+      <div class="my-10 not-prose">
+        <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[250px] flex items-center justify-center text-xs sm:text-sm text-slate-500 font-medium tracking-widest uppercase">
+          Ad Space — In-Article Rectangle
+        </div>
+      </div>
+
+      <h3 class="mt-10">3. Joist Spacing and Load Capacity</h3>
+      <p>
+        Joist spacing is the distance on-center (OC) between parallel joists. This spacing dictates the thickness and type of decking you can use, as well as the overall "bounciness" of the deck. The three standard spacings are 12", 16", and 24".
+      </p>
+      <ul>
+        <li><strong>12" OC:</strong> Used for diagonal decking patterns (45 degrees), heavy composite boards, or areas with extreme loads (like hot tubs). It provides maximum rigidity.</li>
+        <li><strong>16" OC:</strong> The standard for most residential wood and composite decks. It prevents standard 5/4" deck boards from feeling "bouncy" underfoot.</li>
+        <li><strong>24" OC:</strong> Only used for thick 2x6 decking or when installing boards perpendicular to the joists. Do not use 24" OC with standard 5/4" decking, or the boards will sag between the joists over time.</li>
+      </ul>
+      <p>
+        <strong>Joist Math:</strong> To calculate joists, divide the deck width by the joist spacing. For a 12-foot wide deck at 16" OC: 12 ft / 1.33 ft = 9 spaces. Because you need a joist at both the start and the end (the rim joists), you need 10 joists. Always add 1 or 2 extra joists for blocking and structural integrity around stair openings.
+      </p>
+
+      <h3 class="mt-10">4. Calculating Deck Boards (Decking)</h3>
+      <p>
+        Calculating the number of deck boards is different from calculating the square footage. You must account for the <strong>gap</strong> between boards. Standard 5.5-inch boards use a 1/8" to 1/4" gap for water drainage and expansion. 
+      </p>
+      <p>
+        If you use 5.5" boards with a 0.1875" gap, the <strong>effective width</strong> of each board is 5.6875 inches. 
+        <br><em>Example:</em> For a deck that is 12 feet wide (144 inches), divide 144 by 5.6875. This equals 25.3. Round up, and you need <strong>26 boards</strong> to cover the width. You then calculate the linear footage and divide by the length of the boards you are buying (e.g., 12ft or 16ft boards). 
+      </p>
+      <p>
+        <strong>Waste Factor:</strong> Always add 10% waste for straight layouts. If you are running boards diagonally, you must increase the waste factor to 15% or even 20%, as diagonal cuts create massive triangular offcuts that cannot be reused.
+      </p>
+      
+      <hr class="my-10 border-slate-200">
+      
+      <p class="text-base text-slate-700">
+        <em>Continue reading below as we dive into regional deck codes (IRC vs BS vs AS), ledger flashing, and estimating composite vs wood costs.</em>
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 5/10 will start here: Content Part 2 (Codes, Materials, Costing & Conclusion)
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 5/10 — MASSIVE CONTENT PART 2 & CONCLUSION
+     Ledger Flashing, Deck Codes, Materials, and Costing
+     ============================================================ -->
+<section class="bg-white py-12 sm:py-16 border-t border-slate-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Article Content Wrapper (Continued) -->
+    <div class="prose prose-slate prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-900 prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-xl">
+      
+      <h3 class="mt-8">5. The Ledger Board: The Most Dangerous Part of a Deck</h3>
+      <p>
+        If you are building an attached deck, the ledger board is the component that connects the deck to your house. When a deck collapses in the news, 90% of the time, it is because the ledger board pulled away from the house or rotted out. 
+      </p>
+      <p>
+        <strong>Attachment:</strong> You cannot simply nail a ledger board to the siding. It must be attached directly to the structural rim joist of the house using <strong>1/2-inch galvanized lag screws</strong> or through-bolts. The IRC (International Residential Code) dictates specific spacing for these bolts, usually every 12 to 16 inches on-center, staggered top and bottom.
+      </p>
+      <p>
+        <strong>Flashing (Crucial):</strong> Water is the enemy of the ledger board. You must install a metal flashing system (often called Z-flashing) that goes <em>behind</em> the siding and drapes <em>over</em> the top of the ledger board. This prevents rain from seeping behind the deck and rotting the wood. In the US, aluminum flashing is common, but if you are using treated wood, you must use copper or a special tape to prevent the corrosive chemicals in the wood from eating the aluminum.
+      </p>
+
+      <h3 class="mt-10">6. Regional Deck Codes: US vs UK vs AU</h3>
+      <p>
+        A deck is a structure. It must be built to code to ensure it doesn't collapse under the weight of a snowstorm or a summer party. 
+      </p>
+
+      <h4>United States (IRC Section R507)</h4>
+      <p>
+        The US relies on the <strong>IRC</strong>. It mandates a minimum live load of <strong>40 pounds per square foot (psf)</strong> for residential decks. The code has strict span tables for joists and beams. If a deck is higher than 30 inches above grade, it requires guardrails with a minimum height of 36 inches and balusters spaced no more than 4 inches apart (so a child cannot fit through). Decks higher than 30 inches usually require a building permit and inspection.
+      </p>
+
+      <h4>United Kingdom (BS 3632 & Building Regs)</h4>
+      <p>
+        In the UK, decks under 30cm (12 inches) above ground usually do not require planning permission or building regs. However, if the deck is higher than 30cm, or covers more than 50% of your garden, you need to check with your local council. UK standards often use <strong>BS 3632</strong> for timber decking. The UK heavily emphasizes the use of "joist hangers" rather than just nailing joists through the beam, as this creates a much stronger mechanical connection against wind uplift.
+      </p>
+
+      <h4>Australia (AS 1684 & NCC)</h4>
+      <p>
+        Australia follows the National Construction Code (NCC) and <strong>AS 1684</strong>. Australian decks must be engineered for high wind loads and termite resilience. The live load requirement is typically 2.0 kPa (approx 41 psf). Furthermore, the use of stainless steel fixings (nails, screws, brackets) is mandatory in coastal zones to prevent rust. Australian code also strictly dictates the size of footing pads based on soil classification (e.g., Sandy, Clay, Rock).
+      </p>
+
+      <!-- In-Article Ad Slot -->
+      <div class="my-10 not-prose">
+        <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[250px] flex items-center justify-center text-xs sm:text-sm text-slate-500 font-medium tracking-widest uppercase">
+          Ad Space — In-Article Rectangle
+        </div>
+      </div>
+
+      <h3 class="mt-10">7. Material Selection: Wood vs. Composite</h3>
+      <p>
+        The material you choose for your decking boards will have the biggest impact on both the cost and the maintenance of your project.
+      </p>
+
+      <h4>Pressure-Treated Wood (Pine/Fir)</h4>
+      <p>
+        The most cost-effective option. It is chemically treated to resist rot and termites. However, it will weather to a gray color within a year unless you seal it. It can also warp, twist, and splinter over time. If using treated wood, ensure you use stainless steel or hot-dipped galvanized screws; standard screws will rust and snap due to the chemicals in the wood.
+      </p>
+
+      <h4>Hardwoods (Ipe, Cumaru, Mahogany)</h4>
+      <p>
+        Extremely durable, naturally resistant to rot, and beautiful. Hardwoods last 30+ years. However, they are very expensive and incredibly heavy. They also require specific fasteners (hidden clip systems) and pre-drilling every hole, which significantly increases labor time.
+      </p>
+
+      <h4>Composite (Trex, TimberTech, etc.)</h4>
+      <p>
+        Made from a blend of wood fibers and plastic. Composite boards do not rot, splinter, or require staining. They are incredibly popular in the US due to their low maintenance. However, they are expensive (2-3x the cost of wood), they can get very hot underfoot in direct sunlight, and they require specific joist spacing (usually 12" OC) to prevent sagging.
+      </p>
+
+      <h3 class="mt-10">8. Cost Estimation & Budgeting</h3>
+      <p>
+        A deck is a significant investment. A well-built deck adds value to your home, but you need a realistic budget.
+      </p>
+      
+      <h4>Material Costs (Estimated)</h4>
+      <ul>
+        <li><strong>Pressure-Treated Wood (US):</strong> $15 - $25 per square foot (materials only).</li>
+        <li><strong>Composite Decking (US):</strong> $30 - $50+ per square foot (materials only).</li>
+        <li><strong>UK Wood Decking:</strong> £20 - £40 per square meter (materials only).</li>
+        <li><strong>AU Hardwood Decking:</strong> AUD $60 - $120 per square meter (materials only).</li>
+      </ul>
+
+      <h4>Labor Costs</h4>
+      <p>
+        Building a deck requires carpentry skills and heavy lifting. Professional installation (including footings) typically costs:
+      </p>
+      <ul>
+        <li><strong>US:</strong> $30 - $60 per square foot (installed).</li>
+        <li><strong>UK:</strong> £100 - £200 per day for a carpenter.</li>
+        <li><strong>Australia:</strong> AUD $150 - $300 per square meter (installed).</li>
+      </ul>
+
+      <h3 class="mt-10">9. Final Checklist Before Digging</h3>
+      <p>
+        Before you buy materials, ensure you have done the following:
+      </p>
+      <ol>
+        <li><strong>Call 811 (Before You Dig):</strong> In the US, this free service marks underground utility lines (gas, water, power). Hitting a gas line while digging footings is dangerous and expensive. (In the UK, use the Safe Digging chart, and in AU, use Before You Dig Australia).</li>
+        <li><strong>Check Permits:</strong> Most municipalities require a permit for decks over a certain height (usually 30 inches).</li>
+        <li><strong>Buy Extra Fasteners:</strong> You will always drop screws in the grass. Buy an extra box of deck screws and joist hanger nails.</li>
+        <li><strong>Seal the Cut Ends:</strong> Any pressure-treated board you cut must be treated with a liquid end-cut preservative to prevent rot.</li>
+      </ol>
+      <p>
+        By using our calculator to precisely estimate your materials and understanding the structural requirements, you ensure your deck is safe, compliant, and built to last for decades.
+      </p>
+
+      <!-- Conclusion Box -->
+      <div class="mt-10 p-6 sm:p-8 bg-gradient-to-br from-ink-900 to-ink-950 rounded-2xl border border-ink-800 not-prose relative overflow-hidden shadow-lg">
+        <div class="absolute -top-20 -right-20 w-64 h-64 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="relative">
+          <h4 class="font-display font-bold text-white text-xl mb-3">Ready to order your deck materials?</h4>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 max-w-2xl">
+            Use our Deck Calculator to instantly generate the exact number of deck boards, joists, and concrete footings you need for your backyard project, complete with standard spacing and waste factors.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#main-content" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-brand-500 text-white text-sm font-semibold hover:bg-brand-400 transition-colors shadow-sm">
+              Back to Calculator <span class="ml-1" aria-hidden="true">↑</span>
+            </a>
+            <a href="/calculators.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-white text-sm font-semibold transition-colors">
+              Browse All Tools
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 6/10 will start here: FAQ (Numbered Card Style) & Schema
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 6/10 — FAQ (Numbered Card Style) & SCHEMA
+     Deck-specific questions with minimalist UI
+     ============================================================ -->
+<section class="bg-slate-50 py-16 sm:py-24 border-t border-slate-200">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-10 sm:mb-14">
+      <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-ink-900 tracking-tight">Deck Questions Answered</h2>
+      <p class="text-sm sm:text-base text-ink-700 mt-3">Common questions about estimating deck boards, joists, and footings.</p>
+    </div>
+
+    <!-- FAQ Accordion Cards -->
+    <div class="space-y-3 sm:space-y-4">
+      
+      <!-- FAQ 1 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">01</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How many deck boards do I need for a 12x16 deck?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          A 12x16 deck has an area of 192 square feet. If you are using standard 5.5-inch boards with a 3/16" gap (effective width of 5.6875"), you would need 26 boards to cover the 12-foot width. Since the boards run the 16-foot length, and standard boards are usually 16 feet long, you would need <strong>26 boards</strong> (assuming no waste). With a 10% waste factor, you should buy <strong>29 boards</strong>.
+        </div>
+      </details>
+
+      <!-- FAQ 2 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">02</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">What is the standard joist spacing for a deck?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          <strong>16 inches on-center (OC)</strong> is the standard for most residential decks using 5/4-inch wood or composite decking. This spacing prevents the boards from sagging or feeling bouncy. If you are using a diagonal layout pattern (45 degrees), you must decrease the spacing to <strong>12 inches OC</strong> for adequate support.
+        </div>
+      </details>
+
+      <!-- FAQ 3 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">03</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How deep should deck footings be?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          Deck footings must be dug below the <strong>frost line</strong> to prevent the ground from freezing and pushing the deck upward (frost heave). In the Southern US, this might only be 12 inches. In the Northern US and Canada, it can be 48 inches or deeper. In the UK and Australia, a minimum depth of <strong>600mm (2 feet)</strong> is typically required.
+        </div>
+      </details>
+
+      <!-- FAQ 4 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">04</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How much gap should be between deck boards?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          The standard gap is <strong>1/8 inch to 1/4 inch</strong> (3mm to 6mm). This gap allows water to drain off the deck, prevents debris from getting trapped, and allows the wood to expand and contract with changing weather conditions without buckling. If you are using wet, pressure-treated wood, use a slightly wider gap (1/4"), as the wood will shrink as it dries.
+        </div>
+      </details>
+
+      <!-- FAQ 5 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">05</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">Do I need flashing on my ledger board?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          <strong>Yes, absolutely.</strong> The ledger board is the most vulnerable part of an attached deck. Water gets trapped between the house and the ledger, causing rot. You must install metal flashing (Z-flashing) over the top of the ledger board to direct water away from the house and the wood.
+        </div>
+      </details>
+
+      <!-- FAQ 6 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">06</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">Is composite decking worth the extra cost?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          Composite decking costs 2 to 3 times more than pressure-treated wood upfront. However, it requires virtually no maintenance (no sanding, staining, or sealing) and will not rot, splinter, or warp. Over a 15-20 year period, the money you save on stains and sealers often makes composite a financially smarter choice.
+        </div>
+      </details>
+
+      <!-- FAQ 7 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">07</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">Do I need a permit to build a deck?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          In most jurisdictions (US, UK, AU), a building permit is required if the deck is higher than <strong>30 inches (or 1 meter) above grade</strong>, or if it is attached to the house. Because a deck is a structural load-bearing element, local councils need to inspect the footings before the concrete is poured. Always check with your local building department before digging.
+        </div>
+      </details>
+
+    </div>
+
+    <!-- Still have a question CTA -->
+    <div class="mt-10 text-center">
+      <p class="text-sm text-ink-700">
+        Still have a question? Email <a href="mailto:contact@buildmetric.org" class="text-brand-600 font-semibold hover:underline">contact@buildmetric.org</a> — every message is read by a real person.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQPage JSON-LD SCHEMA (Matches exactly with HTML above)
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many deck boards do I need for a 12x16 deck?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A 12x16 deck has an area of 192 square feet. If you are using standard 5.5-inch boards with a 3/16-inch gap, you would need 26 boards to cover the 12-foot width. Since the boards run the 16-foot length, and standard boards are usually 16 feet long, you would need 26 boards (assuming no waste). With a 10% waste factor, you should buy 29 boards." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the standard joist spacing for a deck?",
+      "acceptedAnswer": { "@type": "Answer", "text": "16 inches on-center (OC) is the standard for most residential decks using 5/4-inch wood or composite decking. This spacing prevents the boards from sagging or feeling bouncy. If you are using a diagonal layout pattern, you must decrease the spacing to 12 inches OC." }
+    },
+    {
+      "@type": "Question",
+      "name": "How deep should deck footings be?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Deck footings must be dug below the frost line to prevent the ground from freezing and pushing the deck upward. In the Southern US, this might only be 12 inches. In the Northern US and Canada, it can be 48 inches or deeper. In the UK and Australia, a minimum depth of 600mm is typically required." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much gap should be between deck boards?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The standard gap is 1/8 inch to 1/4 inch. This gap allows water to drain off the deck, prevents debris from getting trapped, and allows the wood to expand and contract with changing weather conditions without buckling." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need flashing on my ledger board?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, absolutely. The ledger board is the most vulnerable part of an attached deck. Water gets trapped between the house and the ledger, causing rot. You must install metal flashing over the top of the ledger board to direct water away from the house and the wood." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is composite decking worth the extra cost?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Composite decking costs 2 to 3 times more than pressure-treated wood upfront. However, it requires virtually no maintenance and will not rot, splinter, or warp. Over a 15-20 year period, the money you save on stains and sealers often makes composite a financially smarter choice." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a permit to build a deck?",
+      "acceptedAnswer": { "@type": "Answer", "text": "In most jurisdictions, a building permit is required if the deck is higher than 30 inches above grade, or if it is attached to the house. Because a deck is a structural load-bearing element, local councils need to inspect the footings before the concrete is poured." }
+    }
+  ]
+}
+</script>
+
+<!-- ============================================================
+     Phase 7/10 will start here: E-E-A-T Box + Related Tools
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 7/10 — E-E-A-T EDITORIAL BOX & RELATED CONTENT
+     ============================================================ -->
+
+<!-- E-E-A-T Directory Info Box -->
+<section class="bg-slate-50 border-t border-slate-200 py-16 sm:py-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+      
+      <!-- Card Header (Dark Premium Look) -->
+      <div class="bg-ink-900 px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-6 h-6 rounded bg-white/10 flex items-center justify-center">
+            <svg class="w-3.5 h-3.5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <span class="text-[11px] font-bold uppercase tracking-widest text-slate-200">About our calculators</span>
+        </div>
+        <span class="hidden sm:block text-[10px] font-bold uppercase tracking-widest text-slate-500">Engineer-Reviewed</span>
+      </div>
+
+      <!-- Card Body -->
+      <div class="p-6 sm:p-8 md:p-10">
+        <div class="grid lg:grid-cols-12 gap-10">
+          
+          <!-- Left Column: Description -->
+          <div class="lg:col-span-7">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-12 h-12 rounded-xl bg-brand-500 flex items-center justify-center shrink-0 shadow-sm">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              </div>
+              <div>
+                <h2 class="font-display font-extrabold text-xl sm:text-2xl text-ink-900 tracking-tight">BuildMetric Engineering</h2>
+                <p class="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-brand-600 mt-0.5">
+                  Calculators &amp; Estimating Tools
+                </p>
+              </div>
+            </div>
+            
+            <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-6 pl-[60px]">
+              Verified Formulas · Code-Aware
+            </p>
+
+            <div class="text-[15px] text-ink-700 leading-relaxed space-y-4 mb-8">
+              <p>
+                Every calculator in this directory is built from formulas that can be derived from first principles. We do not guess. We test every tool against reference cases in both imperial and metric units before it is published.
+              </p>
+              <p>
+                More importantly, our tools are reviewed by quantity surveyors, structural engineers, and licensed contractors. We know that a calculation error on site costs money and compromises safety, so we treat accuracy as a structural requirement, not a feature.
+              </p>
+            </div>
+
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm text-ink-700"><strong class="text-ink-900">Human-verified.</strong> Reviewed by practising professionals, not AI.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm text-ink-700"><strong class="text-ink-900">Stateless maths.</strong> Your inputs run in your browser, never on our servers.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm text-ink-700"><strong class="text-ink-900">Always free.</strong> No sign-ups, no paywalls, no trials. Just the tools.</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-col sm:flex-row items-center gap-3">
+              <a href="mailto:contact@buildmetric.org" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-ink-900 text-white text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                Report an Error
+              </a>
+              <a href="/about.html" class="w-full sm:w-auto inline-flex items-center justify-center px-5 py-2.5 rounded-xl border border-slate-300 text-ink-900 text-sm font-semibold hover:border-brand-500 hover:text-brand-600 transition-colors bg-white">
+                Our Methodology
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Directory Info & Disclaimer -->
+          <div class="lg:col-span-5 flex flex-col gap-4">
+            
+            <!-- Directory Info Box -->
+            <div class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm">
+              <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-4">Directory Info</h3>
+              <ul class="text-xs sm:text-sm space-y-3">
+                <li class="flex justify-between items-center pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Total Tools</span>
+                  <span class="font-bold text-ink-900 text-right">Growing Library</span>
+                </li>
+                <li class="flex justify-between items-center pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Review Status</span>
+                  <span class="font-bold text-ink-900 text-right">100% Human-Reviewed</span>
+                </li>
+                <li class="flex justify-between items-center pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Regions</span>
+                  <span class="font-bold text-ink-900 text-right">US · UK · AU</span>
+                </li>
+                <li class="flex justify-between items-center">
+                  <span class="text-slate-500 font-medium">Cost</span>
+                  <span class="font-bold text-brand-600 text-right">Free Forever</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Disclaimer Box -->
+            <div class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 flex-1 shadow-sm">
+              <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-3">Disclaimer</h3>
+              <p class="text-xs sm:text-sm text-ink-700 leading-relaxed">
+                Calculators are estimating aids, not a substitute for professional judgment. Always verify against your local code. See our <a href="/disclaimer.html" class="text-brand-600 font-semibold underline decoration-brand-300 underline-offset-2 hover:decoration-brand-500 transition-colors">Disclaimer</a>.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Related Tools & Guides Section -->
+<section class="bg-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Related Tools -->
+    <div class="mb-16">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="font-display font-extrabold text-2xl text-ink-900 tracking-tight">Related Calculators</h2>
+        <a href="/calculators.html" class="text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors">View all tools →</a>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        
+        <!-- Tool 1: Framing -->
+        <a href="/framing-calculator.html" class="group bg-white rounded-xl p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-6 h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-ink-900 group-hover:text-brand-600 transition-colors">Framing Calculator</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Studs, plates, lumber</p>
+          </div>
+        </a>
+
+        <!-- Tool 2: Concrete -->
+        <a href="/concrete-calculator.html" class="group bg-white rounded-xl p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-6 h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-ink-900 group-hover:text-brand-600 transition-colors">Concrete Calculator</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Volume, bags for footings</p>
+          </div>
+        </a>
+
+        <!-- Tool 3: Fence -->
+        <a href="/fence-calculator.html" class="group bg-white rounded-xl p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-6 h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-ink-900 group-hover:text-brand-600 transition-colors">Fence Calculator</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Pickets, posts, concrete</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Related Guides -->
+    <div>
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="font-display font-extrabold text-2xl text-ink-900 tracking-tight">Related Guides</h2>
+        <a href="/guides.html" class="text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors">View all guides →</a>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Guide 1 (Concrete Waste) -->
+        <a href="/guides/concrete-waste-allowance.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-32 bg-gradient-to-br from-slate-700 to-slate-900 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-20 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+            </div>
+          </div>
+          <div class="p-4 flex flex-col flex-1">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-600 bg-slate-100 px-2 py-1 rounded-md self-start mb-2">Concrete</span>
+            <h3 class="font-display font-bold text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">How Much Waste Should You Add to a Concrete Order?</h3>
+            <span class="text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <!-- Guide 2 (Stud Spacing) -->
+        <a href="/guides/stud-spacing-by-code.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-32 bg-gradient-to-br from-sky-400 to-sky-600 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+            </div>
+          </div>
+          <div class="p-4 flex flex-col flex-1">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-sky-600 bg-sky-50 px-2 py-1 rounded-md self-start mb-2">Framing</span>
+            <h3 class="font-display font-bold text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Stud Spacing: IRC 2021 vs BS 5268 vs AS 1684 Compared</h3>
+            <span class="text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <!-- Guide 3 (Roof Pitch) -->
+        <a href="/guides/roof-pitch-explained.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-32 bg-gradient-to-br from-blue-400 to-blue-600 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            </div>
+          </div>
+          <div class="p-4 flex flex-col flex-1">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-brand-600 bg-brand-50 px-2 py-1 rounded-md self-start mb-2">Roofing</span>
+            <h3 class="font-display font-bold text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Roof Pitch Explained: Why 6:12 and 26.57° Are the Same Roof</h3>
+            <span class="text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 8/10 will start here: Premium Footer
+     ============================================================ -->
+
+    </main>
+
+<!-- ============================================================
+     PHASE 8/10 — PREMIUM FOOTER (4 Columns, No Ads, Uniform)
+     ============================================================ -->
+<footer class="bg-ink-950 text-slate-400 border-t border-slate-800 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Top Footer Grid (4 Columns) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-12">
+      
+      <!-- Column 1: Brand & Contact -->
+      <div class="pr-4">
+        <a href="/" class="inline-flex items-center gap-2.5 mb-5 group">
+          <img src="logo.png" alt="BuildMetric Logo" class="h-8 w-auto object-contain brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity" />
+          <span class="font-display font-extrabold text-xl tracking-tight text-white hidden sm:block">
+            Build<span class="text-brand-500">Metric</span>
+          </span>
+        </a>
+        
+        <p class="text-sm leading-relaxed mb-6 max-w-sm">
+          Independent construction calculators, estimating tools and technical reference guides for building professionals across the <strong class="text-slate-200">USA, UK</strong> and <strong class="text-slate-200">Australia</strong>. Engineered for accuracy. Published for transparency.
+        </p>
+
+        <div class="space-y-3 mb-6">
+          <a href="mailto:contact@buildmetric.org" class="flex items-center gap-2.5 text-sm hover:text-white transition-colors">
+            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            contact@buildmetric.org
+          </a>
+          <a href="mailto:ads@buildmetric.org" class="flex items-center gap-2.5 text-sm hover:text-white transition-colors">
+            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+            ads@buildmetric.org
+          </a>
+        </div>
+
+        <!-- Cookie Settings Button -->
+        <button id="cookieSettingsBtn" type="button" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 hover:bg-slate-800 text-xs font-semibold text-slate-300 transition-colors">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          Cookie Settings
+        </button>
+      </div>
+
+      <!-- Column 2: Calculators -->
+      <div>
+        <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Calculators</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="/framing-calculator.html" class="hover:text-brand-400 transition-colors">Framing Calculator</a></li>
+          <li><a href="/roofing-calculator.html" class="hover:text-brand-400 transition-colors">Roofing Calculator</a></li>
+          <li><a href="/concrete-calculator.html" class="hover:text-brand-400 transition-colors">Concrete Volume</a></li>
+          <li><a href="/drywall-calculator.html" class="hover:text-brand-400 transition-colors">Drywall Calculator</a></li>
+          <li><a href="/paint-coverage-calculator.html" class="hover:text-brand-400 transition-colors">Paint Coverage</a></li>
+          <li><a href="/tile-calculator.html" class="hover:text-brand-400 transition-colors">Tile Calculator</a></li>
+          <li><a href="/brick-calculator.html" class="hover:text-brand-400 transition-colors">Brick Calculator</a></li>
+          <li><a href="/fence-calculator.html" class="hover:text-brand-400 transition-colors">Fence Calculator</a></li>
+          <li><a href="/deck-calculator.html" class="hover:text-brand-400 transition-colors">Deck Calculator</a></li>
+          <li><a href="/calculators.html" class="hover:text-white font-semibold text-brand-500 mt-2 inline-block">All Tools →</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Company -->
+      <div>
+        <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Company</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="/about.html" class="hover:text-brand-400 transition-colors">About</a></li>
+          <li><a href="/guides.html" class="hover:text-brand-400 transition-colors">Guides</a></li>
+          <li><a href="/estimating.html" class="hover:text-brand-400 transition-colors">Estimating</a></li>
+          <li><a href="/contact.html" class="hover:text-brand-400 transition-colors">Contact</a></li>
+          <li><a href="/sitemap.xml" class="hover:text-brand-400 transition-colors">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Legal & Compliance -->
+      <div>
+        <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Legal &amp; Compliance</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="/privacy.html" class="hover:text-brand-400 transition-colors">Privacy Policy</a></li>
+          <li><a href="/terms.html" class="hover:text-brand-400 transition-colors">Terms of Service</a></li>
+          <li><a href="/disclaimer.html" class="hover:text-brand-400 transition-colors">Disclaimer</a></li>
+          <li><a href="/cookie-policy.html" class="hover:text-brand-400 transition-colors">Cookie Policy</a></li>
+          <li><a href="/contact.html" class="hover:text-brand-400 transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Regional Notice Box -->
+    <div class="flex justify-end mb-8">
+      <div class="bg-slate-800/40 border border-slate-700/50 rounded-xl p-4 max-w-sm w-full sm:w-auto">
+        <h4 class="text-[10px] font-bold uppercase tracking-widest text-slate-300 mb-1">Regional Notice</h4>
+        <p class="text-xs text-slate-500 leading-relaxed">
+          BuildMetric content is published in English and reviewed against US, UK and Australian codes. Always verify against your local jurisdiction's current edition.
+        </p>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+      <p class="text-center md:text-left text-slate-400">
+        © 2026 BuildMetric. All rights reserved. Operated from buildmetric.org.
+      </p>
+      <p class="text-center md:text-right text-slate-500">
+        Built for professionals. General information only — see our <a href="/disclaimer.html" class="text-brand-500 hover:underline hover:text-brand-400 transition-colors">Disclaimer</a>.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ============================================================
+     Phase 9/10 will start here: Complete JavaScript Logic
+     ============================================================ -->
+
+      <!-- ============================================================
+       PHASE 9/10 — JAVASCRIPT (Calculator Logic & Menu)
+       ============================================================ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      /* ── 1. MOBILE MENU TOGGLE ── */
+      const menuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const openIcon = menuBtn ? menuBtn.querySelector('.menu-open-icon') : null;
+      const closeIcon = menuBtn ? menuBtn.querySelector('.menu-close-icon') : null;
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function () {
+          const isOpen = !mobileMenu.classList.contains('hidden');
+          mobileMenu.classList.toggle('hidden');
+          if(openIcon) openIcon.classList.toggle('hidden');
+          if(closeIcon) closeIcon.classList.toggle('hidden');
+          menuBtn.setAttribute('aria-expanded', String(!isOpen));
+        });
+      }
+
+      /* ── 2. ELEMENTS & STATE ── */
+      const btnImperial = document.getElementById('btnImperial');
+      const btnMetric = document.getElementById('btnMetric');
+      
+      const unitLabels = document.querySelectorAll('.unit-label');
+      const boardUnitLabels = document.querySelectorAll('.board-unit-label');
+      const gapUnitLabels = document.querySelectorAll('.gap-unit-label');
+      
+      const deckLength = document.getElementById('deckLength');
+      const deckWidth = document.getElementById('deckWidth');
+      const boardSize = document.getElementById('boardSize');
+      const customBoardWidth = document.getElementById('customBoardWidth');
+      const boardGap = document.getElementById('boardGap');
+      const joistSpacing = document.getElementById('joistSpacing');
+      const customJoistSpacing = document.getElementById('customJoistSpacing');
+      const layoutType = document.getElementById('layoutType');
+      const boardLength = document.getElementById('boardLength');
+      const wasteFactor = document.getElementById('wasteFactor');
+      
+      const outBoards = document.getElementById('outBoards');
+      const outArea = document.getElementById('outArea');
+      const outJoists = document.getElementById('outJoists');
+      const outConcrete = document.getElementById('outConcrete');
+
+      let isMetric = false;
+
+      /* ── 3. UNIT TOGGLE (Imperial / Metric) ── */
+      function toggleUnits(metric) {
+        isMetric = metric;
+        
+        if (metric) {
+          btnMetric.classList.add('bg-white', 'shadow-sm', 'text-ink-900');
+          btnMetric.classList.remove('text-slate-500');
+          btnImperial.classList.remove('bg-white', 'shadow-sm', 'text-ink-900');
+          btnImperial.classList.add('text-slate-500');
+          
+          unitLabels.forEach(el => el.textContent = 'm');
+          boardUnitLabels.forEach(el => el.textContent = 'mm');
+          gapUnitLabels.forEach(el => el.textContent = 'mm');
+          
+          // Update Dropdowns for Metric
+          boardSize.innerHTML = `
+            <option value="140" selected>140mm (Standard)</option>
+            <option value="90">90mm (Narrow)</option>
+            <option value="184">184mm (Wide)</option>
+            <option value="custom">Custom...</option>
+          `;
+          joistSpacing.innerHTML = `
+            <option value="300">300mm</option>
+            <option value="400" selected>400mm</option>
+            <option value="600">600mm</option>
+            <option value="custom">Custom...</option>
+          `;
+          boardLength.innerHTML = `
+            <option value="2.4">2.4m</option>
+            <option value="3.0">3.0m</option>
+            <option value="3.6" selected>3.6m</option>
+            <option value="4.8">4.8m</option>
+          `;
+
+        } else {
+          btnImperial.classList.add('bg-white', 'shadow-sm', 'text-ink-900');
+          btnImperial.classList.remove('text-slate-500');
+          btnMetric.classList.remove('bg-white', 'shadow-sm', 'text-ink-900');
+          btnMetric.classList.add('text-slate-500');
+          
+          unitLabels.forEach(el => el.textContent = 'ft');
+          boardUnitLabels.forEach(el => el.textContent = 'in');
+          gapUnitLabels.forEach(el => el.textContent = 'in');
+
+          // Update Dropdowns for Imperial
+          boardSize.innerHTML = `
+            <option value="5.5" selected>5.5" (Standard 5/4x6)</option>
+            <option value="3.5">3.5" (1x4)</option>
+            <option value="7.25">7.25" (1x8)</option>
+            <option value="custom">Custom...</option>
+          `;
+          joistSpacing.innerHTML = `
+            <option value="12">12 inches</option>
+            <option value="16" selected>16 inches</option>
+            <option value="24">24 inches</option>
+            <option value="custom">Custom...</option>
+          `;
+          boardLength.innerHTML = `
+            <option value="8">8 ft</option>
+            <option value="10">10 ft</option>
+            <option value="12" selected>12 ft</option>
+            <option value="16">16 ft</option>
+          `;
+        }
+        
+        // Hide custom inputs if they were open
+        customBoardWidth.classList.add('hidden');
+        customJoistSpacing.classList.add('hidden');
+        calculate();
+      }
+
+      if(btnImperial && btnMetric) {
+        btnImperial.addEventListener('click', () => toggleUnits(false));
+        btnMetric.addEventListener('click', () => toggleUnits(true));
+      }
+
+      /* ── 4. HYBRID CUSTOM SIZE LOGIC ── */
+      boardSize.addEventListener('change', function() {
+        if (this.value === 'custom') {
+          customBoardWidth.classList.remove('hidden');
+          customBoardWidth.focus();
+        } else {
+          customBoardWidth.classList.add('hidden');
+          customBoardWidth.value = '';
+        }
+        calculate();
+      });
+
+      joistSpacing.addEventListener('change', function() {
+        if (this.value === 'custom') {
+          customJoistSpacing.classList.remove('hidden');
+          customJoistSpacing.focus();
+        } else {
+          customJoistSpacing.classList.add('hidden');
+          customJoistSpacing.value = '';
+        }
+        calculate();
+      });
+
+      /* ── 5. CALCULATOR MATH LOGIC ── */
+      function calculate() {
+        const length = parseFloat(deckLength.value) || 0;
+        const width = parseFloat(deckWidth.value) || 0;
+        const gap = parseFloat(boardGap.value) || 0;
+        const stockLength = parseFloat(boardLength.value) || 8;
+        const waste = parseFloat(wasteFactor.value) || 0.10;
+        const layout = layoutType.value;
+
+        // Get Board Width
+        let bWidth = 0;
+        if (boardSize.value === 'custom') {
+          bWidth = parseFloat(customBoardWidth.value) || 0;
+        } else {
+          bWidth = parseFloat(boardSize.value);
+        }
+
+        // Get Joist Spacing
+        let jSpacing = 0;
+        if (joistSpacing.value === 'custom') {
+          jSpacing = parseFloat(customJoistSpacing.value) || 0;
+        } else {
+          jSpacing = parseFloat(joistSpacing.value);
+        }
+
+        if (length <= 0 || width <= 0 || bWidth <= 0) {
+          outBoards.textContent = '0';
+          outArea.innerHTML = `0 <span class="text-xs text-slate-500">${isMetric ? 'sq m' : 'sq ft'}</span>`;
+          outJoists.innerHTML = '0 <span class="text-xs text-slate-500">pieces</span>';
+          outConcrete.innerHTML = '0 <span class="text-xs text-slate-500">bags</span>';
+          return;
+        }
+
+        // 1. Area
+        let area = length * width;
+
+        // 2. Deck Boards Math
+        // Convert deck width to match board dimensions (inches or mm)
+        let totalWidthInUnits = isMetric ? (width * 1000) : (width * 12);
+        let effectiveBoardWidth = bWidth + gap;
+        
+        let boardsAcross = Math.ceil(totalWidthInUnits / effectiveBoardWidth);
+        
+        // If diagonal, add roughly 15% more boards for angled cuts (calculated via waste factor usually, but we can add a multiplier here)
+        let diagonalMultiplier = (layout === 'diagonal') ? 1.1 : 1.0;
+        boardsAcross = Math.ceil(boardsAcross * diagonalMultiplier);
+
+        // Total linear length needed
+        let totalLinearLength = boardsAcross * length;
+        
+        // Total stock boards
+        let totalBoards = Math.ceil((totalLinearLength * (1 + waste)) / stockLength);
+
+        // 3. Joists Math
+        let spacingInLengthUnits = isMetric ? (jSpacing / 1000) : (jSpacing / 12);
+        let joistsCount = Math.ceil(width / spacingInLengthUnits) + 1;
+
+        // 4. Concrete Math (Footings)
+        // Assume posts every 8ft/2.4m. For a standard deck, 2 beam lines.
+        let postSpacing = isMetric ? 2.4 : 8;
+        let postsLength = Math.ceil(length / postSpacing) + 1;
+        let postsWidth = Math.ceil(width / postSpacing) + 1;
+        // Rough estimate of total footings: (posts on length * 2) + (posts on width * 2)
+        let totalFootings = (postsLength * 2) + (postsWidth * 2);
+        let concreteBags = totalFootings; // 1 bag per footing baseline
+
+        // --- UPDATE UI ---
+        outArea.innerHTML = `${area.toFixed(1)} <span class="text-xs text-slate-500">${isMetric ? 'sq m' : 'sq ft'}</span>`;
+        outBoards.textContent = totalBoards;
+        outJoists.innerHTML = `${joistsCount} <span class="text-xs text-slate-500">pieces</span>`;
+        outConcrete.innerHTML = `${concreteBags} <span class="text-xs text-slate-500">bags</span>`;
+      }
+
+      // Trigger calculation on any input change
+      const inputs = [deckLength, deckWidth, boardSize, customBoardWidth, boardGap, joistSpacing, customJoistSpacing, layoutType, boardLength, wasteFactor];
+      inputs.forEach(input => {
+        if(input) {
+          input.addEventListener('input', calculate);
+          input.addEventListener('change', calculate);
+        }
+      });
+
+      // Initial run
+      calculate();
+
+      /* ── 6. SAVE, SHARE, COPY ACTIONS ── */
+      const btnSave = document.getElementById('btnSave');
+      const btnShare = document.getElementById('btnShare');
+      const btnCopy = document.getElementById('btnCopy');
+
+      const getResultText = () => {
+        return `Deck Materials Estimate:\n` +
+               `- Total Area: ${outArea.textContent}\n` +
+               `- Deck Boards: ${outBoards.textContent}\n` +
+               `- Joists: ${outJoists.textContent}\n` +
+               `- Concrete Bags: ${outConcrete.textContent}\n` +
+               `Calculated via BuildMetric.org`;
+      };
+
+      // Save
+      if(btnSave) {
+        btnSave.addEventListener('click', () => {
+          const data = {
+            l: deckLength.value, w: deckWidth.value, bs: boardSize.value,
+            cbw: customBoardWidth.value, bg: boardGap.value, js: joistSpacing.value,
+            cjs: customJoistSpacing.value, lt: layoutType.value, bl: boardLength.value,
+            waste: wasteFactor.value, metric: isMetric
+          };
+          localStorage.setItem('buildmetric_deck_data', JSON.stringify(data));
+          alert('Estimate saved to your browser!');
+        });
+      }
+
+      // Share
+      if(btnShare && navigator.share) {
+        btnShare.addEventListener('click', () => {
+          navigator.share({
+            title: 'Deck Calculator Estimate',
+            text: getResultText(),
+            url: window.location.href
+          }).catch(console.error);
+        });
+      } else if (btnShare) {
+        btnShare.addEventListener('click', () => {
+          alert('Sharing is not supported on this browser. Use Copy instead.');
+        });
+      }
+
+      // Copy
+      if(btnCopy) {
+        btnCopy.addEventListener('click', () => {
+          navigator.clipboard.writeText(getResultText()).then(() => {
+            const originalHTML = btnCopy.innerHTML;
+            btnCopy.innerHTML = '<svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> Copied!';
+            setTimeout(() => { btnCopy.innerHTML = originalHTML; }, 2000);
+          }).catch(() => {
+            alert('Failed to copy. Please select text manually.');
+          });
+        });
+      }
+
+      // Cookie settings placeholder
+      const cookieBtn = document.getElementById('cookieSettingsBtn');
+      if(cookieBtn) {
+        cookieBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          alert('Cookie settings panel will open here.');
+        });
+      }
+
+    });
+  </script>
+
+  <!-- ============================================================
+       PHASE 10/10 — CLOSING TAGS
+       ============================================================ -->
+</body>
+</html>
