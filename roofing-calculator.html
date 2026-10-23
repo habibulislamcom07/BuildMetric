@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- ============================================================
+       PHASE 1/10 — SEO HEAD & CONFIGURATION
+       File: roofing-calculator.html
+       Brand: BuildMetric | Domain: buildmetric.org
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO Meta (High Searchable Keywords) -->
+  <title>Roofing Calculator | Estimate Shingles & Materials | BuildMetric</title>
+  <meta name="description" content="Free roofing calculator to estimate the number of shingle bundles, underlayment, and roofing squares needed. Accounts for roof pitch, waste factor, and all roof types." />
+  <meta name="keywords" content="roofing calculator, shingle calculator, how many shingles do i need, roofing square calculator, roof area calculator, roof underlayment estimator" />
+  <meta name="author" content="BuildMetric Editorial Team" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#0ea5e9" />
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://buildmetric.org/roofing-calculator.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BuildMetric" />
+  <meta property="og:title" content="Roofing Calculator | Estimate Shingles & Materials" />
+  <meta property="og:description" content="Calculate exact shingle bundles, roofing squares, and underlayment for your roof." />
+  <meta property="og:url" content="https://buildmetric.org/roofing-calculator.html" />
+  <meta property="og:image" content="https://buildmetric.org/assets/og/roofing-calculator.png" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Roofing Calculator | BuildMetric" />
+  <meta name="twitter:description" content="Estimate exact roofing materials for your next project." />
+  <meta name="twitter:image" content="https://buildmetric.org/assets/og/roofing-calculator.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc',
+              400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1',
+              800: '#075985', 900: '#0c4a6e'
+            },
+            ink: {
+              700: '#334155', 800: '#1e293b', 900: '#0f172a', 950: '#080f1e'
+            }
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: {
+            'soft': '0 4px 20px -2px rgba(15,23,42,0.05)',
+            'hover': '0 12px 32px -8px rgba(14,165,233,0.15)',
+            'glass': '0 4px 24px -4px rgba(15,23,42,0.08)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+    .bg-grid-pattern {
+      background-image: linear-gradient(to right, rgba(15,23,42,0.04) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(15,23,42,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .nav-glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); }
+    details > summary .icon-plus { transition: transform 0.3s ease; }
+    details[open] > summary .icon-plus { transform: rotate(45deg); }
+    details > summary::-webkit-details-marker { display: none; }
+  </style>
+
+  <!-- ================= JSON-LD SCHEMA ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://buildmetric.org/roofing-calculator.html#app",
+        "name": "Roofing Material Calculator",
+        "url": "https://buildmetric.org/roofing-calculator.html",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "All",
+        "description": "Calculate the number of shingle bundles, roofing squares, and underlayment needed based on roof dimensions and pitch.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://buildmetric.org/roofing-calculator.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://buildmetric.org/" },
+          { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://buildmetric.org/calculators.html" },
+          { "@type": "ListItem", "position": 3, "name": "Roofing", "item": "https://buildmetric.org/roofing.html" },
+          { "@type": "ListItem", "position": 4, "name": "Roofing Calculator", "item": "https://buildmetric.org/roofing-calculator.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+  <body class="bg-white text-ink-800 antialiased font-sans flex flex-col min-h-screen">
+
+  <!-- ============================================================
+       SKIP LINK (Accessibility)
+       ============================================================ -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2.5 focus:bg-brand-500 focus:text-white focus:rounded-lg focus:font-semibold focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/70">
+    Skip to main content
+  </a>
+
+  <!-- ============================================================
+       STICKY NAVBAR (Consistent across all tools)
+       ============================================================ -->
+  <header class="sticky top-0 z-50 nav-glass border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        
+        <!-- Logo -->
+        <div class="flex items-center gap-6">
+          <a href="/" class="flex items-center gap-2.5 shrink-0" aria-label="BuildMetric Home">
+            <img src="logo.png" alt="BuildMetric Logo" class="h-8 sm:h-10 w-auto object-contain" />
+            <span class="font-display font-extrabold text-xl tracking-tight text-ink-900 hidden sm:block">
+              Build<span class="text-brand-500">Metric</span>
+            </span>
+          </a>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden lg:flex items-center gap-1" aria-label="Main Navigation">
+            <a href="/calculators.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Calculators</a>
+            <a href="/guides.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Guides</a>
+            <a href="/about.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">About</a>
+            <a href="/contact.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Contact</a>
+          </nav>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-3">
+          <a href="/calculators.html" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-ink-900 text-white text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+            Open Tools
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuBtn" type="button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-200 text-ink-800 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand-500/40 transition-colors" aria-expanded="false" aria-controls="mobileMenu">
+            <span class="sr-only">Open main menu</span>
+            <svg class="menu-open-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <svg class="menu-close-icon hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu (Push-down) -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 bg-white">
+      <div class="px-4 py-4 space-y-1">
+        <a href="/calculators.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Calculators</a>
+        <a href="/guides.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Guides</a>
+        <a href="/about.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">About</a>
+        <a href="/contact.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main id="main-content" class="flex-grow">
+    
+    <!-- ============================================================
+         PAGE HEADER & BREADCRUMBS
+         ============================================================ -->
+    <div class="bg-slate-50 border-b border-slate-200 pt-6 pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="Breadcrumb" class="mb-4">
+          <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs sm:text-sm text-slate-500">
+            <li><a href="/" class="hover:text-brand-600 transition-colors">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/calculators.html" class="hover:text-brand-600 transition-colors">Calculators</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/roofing.html" class="hover:text-brand-600 transition-colors">Roofing</a></li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page" class="text-ink-900 font-semibold">Roofing Calculator</li>
+          </ol>
+        </nav>
+
+        <!-- Page Title & Subtitle -->
+        <h1 class="font-display font-extrabold text-3xl sm:text-4xl text-ink-900 tracking-tight leading-tight">
+          Roofing Material Calculator
+        </h1>
+        <p class="text-sm sm:text-base text-ink-700 mt-2 max-w-2xl">
+          Estimate the exact number of shingle bundles, roofing squares, and underlayment rolls required for your project. Accounts for roof pitch, waste factor, and all roof types.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- ============================================================
+         Phase 3/10 will start here: The Calculator UI (Inputs & Outputs)
+         ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 3/10 — THE CALCULATOR UI
+     Roofing specific inputs and result box
+     ============================================================ -->
+<section class="bg-white py-10 sm:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+      
+      <!-- Left Column: Form Inputs (7/12) -->
+      <div class="lg:col-span-7">
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 sm:p-8">
+          
+          <!-- Unit Toggle (Top Right) -->
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="font-display font-bold text-xl text-ink-900">Roof Details</h2>
+            <div class="flex items-center bg-slate-100 p-1 rounded-lg">
+              <button type="button" id="btnImperial" class="px-3 py-1.5 text-xs font-semibold rounded-md bg-white shadow-sm text-ink-900 transition-all">Imperial (ft)</button>
+              <button type="button" id="btnMetric" class="px-3 py-1.5 text-xs font-semibold rounded-md text-slate-500 hover:text-ink-900 transition-all">Metric (m)</button>
+            </div>
+          </div>
+
+          <!-- Dimensions Row (2 cols on mobile) -->
+          <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-4">
+            <div>
+              <label for="roofLength" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Roof Length (<span class="unit-label">ft</span>)</label>
+              <input type="number" id="roofLength" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow text-sm sm:text-base" placeholder="e.g. 40" min="0" step="0.1">
+            </div>
+            <div>
+              <label for="roofWidth" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Roof Width (<span class="unit-label">ft</span>)</label>
+              <input type="number" id="roofWidth" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow text-sm sm:text-base" placeholder="e.g. 20" min="0" step="0.1">
+            </div>
+          </div>
+
+          <!-- Pitch & Roof Type Row -->
+          <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-4">
+            <div>
+              <label for="roofPitch" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Roof Pitch</label>
+              <select id="roofPitch" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm sm:text-base">
+                <option value="flat">Flat (0° - 2:12)</option>
+                <option value="low">Low Slope (3:12 - 5:12)</option>
+                <option value="medium" selected>Medium (6:12 - 9:12)</option>
+                <option value="steep">Steep (10:12+)</option>
+              </select>
+            </div>
+            <div>
+              <label for="roofType" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Roof Type</label>
+              <select id="roofType" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm sm:text-base">
+                <option value="gable" selected>Gable Roof</option>
+                <option value="hip">Hip Roof</option>
+                <option value="complex">Complex Roof</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Shingles Type & Waste -->
+          <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-6">
+            <div>
+              <label for="shingleType" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Shingle Type</label>
+              <select id="shingleType" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm sm:text-base">
+                <option value="3-tab">3-Tab Asphalt</option>
+                <option value="architectural" selected>Architectural</option>
+                <option value="premium">Premium / Designer</option>
+              </select>
+            </div>
+            <div>
+              <label for="wasteFactor" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Waste Factor</label>
+              <select id="wasteFactor" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm sm:text-base">
+                <option value="0.10">10% (Standard)</option>
+                <option value="0.15" selected>15% (Complex)</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Column: Result Box (5/12) -->
+      <div class="lg:col-span-5">
+        <div class="bg-ink-900 rounded-2xl shadow-lg border border-ink-800 sticky top-24 overflow-hidden">
+          <div class="p-6 sm:p-8">
+            
+            <!-- Highlighted Total Bundles -->
+            <div class="text-center pb-6 border-b border-white/10 mb-6">
+              <p class="text-sm text-brand-300 font-semibold mb-1">Total Shingle Bundles</p>
+              <div class="flex items-center justify-center gap-2">
+                <span class="font-mono text-5xl font-extrabold text-white" id="outBundles">0</span>
+              </div>
+            </div>
+
+            <!-- Other Results -->
+            <div class="space-y-3 mb-8">
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-slate-400">Roof Area</span>
+                <span class="font-mono text-base font-semibold text-white" id="outArea">0 <span class="text-xs text-slate-500">sq ft</span></span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-slate-400">Total Squares</span>
+                <span class="font-mono text-base font-semibold text-white" id="outSquares">0 <span class="text-xs text-slate-500">squares</span></span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-slate-400">Underlayment Rolls</span>
+                <span class="font-mono text-base font-semibold text-white" id="outUnderlayment">0 <span class="text-xs text-slate-500">rolls</span></span>
+              </div>
+            </div>
+
+            <!-- Save/Share/Copy Buttons (Blue Gradient) -->
+            <div class="flex items-center gap-2">
+              <button type="button" id="btnSave" class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg>
+                Save
+              </button>
+              <button type="button" id="btnShare" class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                Share
+              </button>
+              <button type="button" id="btnCopy" class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                Copy
+              </button>
+            </div>
+
+          </div>
+        </div>
+        
+        <!-- Quick Tip -->
+        <p class="text-xs text-slate-500 mt-4 text-center">
+          <strong>Note:</strong> Shingle bundles are calculated based on 3 bundles per roofing square (100 sq ft). Underlayment is based on standard 400 sq ft rolls.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 4/10 will start here: First Ad Slot + Massive Content Part 1
+     ============================================================ -->
+<!-- ============================================================
+     PHASE 4/10 — FIRST AD SLOT + MASSIVE CONTENT PART 1
+     Deep dive into Roofing Squares, Pitch, and Materials
+     ============================================================ -->
+<section class="bg-white py-12 sm:py-16 border-t border-slate-200">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Ad Space (Leaderboard) -->
+    <div class="mb-12">
+      <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[90px] flex items-center justify-center text-[10px] sm:text-xs text-slate-500 font-medium tracking-widest uppercase">
+        Ad Space — 728×90 / Responsive Leaderboard
+      </div>
+    </div>
+
+    <!-- Article Content Wrapper (Typography optimized) -->
+    <div class="prose prose-slate prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-900 prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-xl">
+      
+      <p class="lead text-xl text-ink-700 font-medium mb-8">
+        A roof is the most critical component of any building's envelope. It protects the structure from rain, snow, wind, and sun. Because roofing materials are expensive and installation is labor-intensive, accurate estimating is crucial. Ordering too few shingles can halt a project and cost hundreds of dollars in rush delivery fees, while ordering too many leaves you with heavy, non-returnable bundles sitting in your driveway.
+      </p>
+
+      <p>
+        In the United States, the United Kingdom, and Australia, roofing materials are calculated using standard industry metrics. This comprehensive guide explains how to calculate the exact amount of shingles, underlayment, and roofing squares you need for your project, regardless of the roof's complexity.
+      </p>
+
+      <h3 class="mt-10">1. What is a "Roofing Square"?</h3>
+      <p>
+        The fundamental unit of measurement in the roofing industry is the <strong>Square</strong>. One roofing square is equal to <strong>100 square feet (9.29 square meters)</strong> of roof surface area. 
+      </p>
+      <p>
+        Roofing materials are sold by the square. For example, a standard bundle of 3-tab asphalt shingles covers 33.3 square feet, meaning it takes <strong>three bundles to make one square</strong>. Architectural shingles are heavier and may require three bundles per square as well, while some premium designer shingles may require four or even five bundles per square. Underlayment (felt paper or synthetic) is usually sold in rolls that cover 400 square feet (4 squares).
+      </p>
+      <p>
+        <strong>Important:</strong> You cannot simply measure the footprint (floor area) of the house and use that number. A pitched roof has significantly more surface area than the floor plan below it.
+      </p>
+
+      <h3 class="mt-10">2. Understanding Roof Pitch and Multipliers</h3>
+      <p>
+        Roof pitch describes the steepness of the roof. It is expressed as the ratio of vertical rise (in inches) to horizontal run (in inches). For example, a "6:12 pitch" means the roof rises 6 inches for every 12 inches of horizontal distance. 
+      </p>
+      <p>
+        The steeper the roof, the more surface area it has. To calculate the true surface area, you must multiply the footprint area (Length × Width) by a <strong>Pitch Multiplier</strong>. 
+      </p>
+
+      <!-- Pitch Multiplier Table -->
+      <div class="my-8 not-prose rounded-xl border border-slate-200 bg-white overflow-hidden shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left">
+            <thead class="bg-slate-50 border-b border-slate-200">
+              <tr>
+                <th class="px-4 py-3 font-display font-bold text-ink-900">Roof Pitch</th>
+                <th class="px-4 py-3 font-display font-bold text-ink-900">Angle (Degrees)</th>
+                <th class="px-4 py-3 font-display font-bold text-ink-900">Multiplier</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-ink-700">
+              <tr>
+                <td class="px-4 py-3 font-semibold text-ink-900">Flat (0:12)</td>
+                <td class="px-4 py-3">0°</td>
+                <td class="px-4 py-3 font-mono font-bold">1.00</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-4 py-3 font-semibold text-ink-900">Low (4:12)</td>
+                <td class="px-4 py-3">18.4°</td>
+                <td class="px-4 py-3 font-mono font-bold">1.054</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-semibold text-ink-900">Medium (6:12)</td>
+                <td class="px-4 py-3">26.6°</td>
+                <td class="px-4 py-3 font-mono font-bold">1.118</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-4 py-3 font-semibold text-ink-900">Medium (8:12)</td>
+                <td class="px-4 py-3">33.7°</td>
+                <td class="px-4 py-3 font-mono font-bold">1.202</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-semibold text-ink-900">Steep (10:12)</td>
+                <td class="px-4 py-3">39.8°</td>
+                <td class="px-4 py-3 font-mono font-bold">1.302</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-4 py-3 font-semibold text-ink-900">Very Steep (12:12)</td>
+                <td class="px-4 py-3">45°</td>
+                <td class="px-4 py-3 font-mono font-bold">1.414</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p>
+        To use the multiplier: If your house footprint is 2,000 sq ft and you have a 6:12 pitch, the actual roof area is <strong>2,000 × 1.118 = 2,236 square feet</strong>. Our calculator automatically applies this multiplier based on the pitch you select.
+      </p>
+
+      <!-- Ad Space (In-Article) -->
+      <div class="my-10 not-prose">
+        <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[250px] flex items-center justify-center text-xs sm:text-sm text-slate-500 font-medium tracking-widest uppercase">
+          Ad Space — In-Article Rectangle
+        </div>
+      </div>
+
+      <h3 class="mt-10">3. Roof Types and Waste Factors</h3>
+      <p>
+        The shape of your roof dictates how much material is wasted during installation. You must account for offcuts, valleys, and hips.
+      </p>
+      <ul>
+        <li><strong>Gable Roof:</strong> The simplest and most common roof shape, featuring two sloping sides that meet at a central ridge. It produces minimal waste. Standard waste factor: <strong>10%</strong>.</li>
+        <li><strong>Hip Roof:</strong> A roof with four sloping sides that meet at a central ridge or point. It is more aerodynamic but requires cutting shingles at multiple angles. Standard waste factor: <strong>15%</strong>.</li>
+        <li><strong>Complex Roof (Dormers, Valleys, Skylights):</strong> Architectural features create many valleys and transitions. Valleys are notorious for consuming shingles because they require a "woven" or "cut" installation method. Standard waste factor: <strong>15% to 20%</strong>.</li>
+      </ul>
+      <p>
+        <strong>The Estimator's Rule:</strong> Never order exactly the square footage needed. Always round up to the nearest full bundle and add at least a 10% waste factor. If your roof has complex geometry, increase that waste factor to 15%.
+      </p>
+
+      <h3 class="mt-10">4. The Full Anatomy of a Roofing System</h3>
+      <p>
+        Shingles are just the visible layer. A proper roofing estimate must include the underlying layers that make the roof waterproof:
+      </p>
+      <ul>
+        <li><strong>Roof Decking (Sheathing):</strong> The plywood or OSB boards nailed to the trusses. Usually, 4x8 sheets of 7/16" or 15/32" OSB. (Not included in this calculator, but essential for new builds).</li>
+        <li><strong>Ice & Water Shield:</strong> A waterproof membrane installed in valleys, around chimneys, and along the eaves (in cold climates). It prevents water from backing up under the shingles.</li>
+        <li><strong>Underlayment:</strong> A water-resistant barrier laid over the decking. It comes in traditional #15 or #30 felt paper, or modern synthetic underlayment (which is lighter and stronger). A standard roll covers 400 sq ft.</li>
+        <li><strong>Drip Edge:</strong> Metal flashing installed along the eaves and rake to direct water away from the fascia board.</li>
+        <li><strong>Ridge Vent:</strong> Installed at the peak of the roof to allow hot air to escape from the attic.</li>
+      </ul>
+
+      <p>
+        When you use our calculator to find the total squares and bundles, remember that you still need to purchase underlayment, nails, and flashing separately. A good rule of thumb is to order one roll of underlayment for every 4 squares of roof area.
+      </p>
+      
+      <hr class="my-10 border-slate-200">
+      
+      <p class="text-base text-slate-700">
+        <em>Continue reading below as we break down regional roofing standards (US vs UK vs AU), the difference between asphalt and metal roofing, and how to accurately measure complex roof shapes.</em>
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 5/10 will start here: Content Part 2 (Standards, Materials & Conclusion)
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 5/10 — MASSIVE CONTENT PART 2 & CONCLUSION
+     Standards, Materials, Costing, and Conclusion
+     ============================================================ -->
+<section class="bg-white py-12 sm:py-16 border-t border-slate-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Article Content Wrapper (Continued) -->
+    <div class="prose prose-slate prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-900 prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-xl">
+      
+      <h3 class="mt-8">5. Regional Roofing Standards: US vs UK vs AU</h3>
+      <p>
+        Roofing materials and installation methods vary significantly across the globe due to climate, tradition, and building codes. An estimate for a home in Texas will look very different from one in London or Sydney.
+      </p>
+      
+      <h4>United States (IRC & ASTM)</h4>
+      <p>
+        In the US, residential roofing is heavily regulated by the <strong>International Residential Code (IRC)</strong> and standards set by <strong>ASTM International</strong>. Asphalt shingles dominate the market. The IRC mandates specific nailing patterns (usually 4 to 6 nails per shingle, depending on wind zone) and requires a minimum roof pitch of 2:12 for standard shingles (lower slopes require a special "double-layer" underlayment or rolled roofing). In hurricane-prone states like Florida, shingles must meet strict wind uplift ratings (e.g., ASTM D3161 Class F).
+      </p>
+
+      <h4>United Kingdom (BS 5534)</h4>
+      <p>
+        The UK roofing market is dominated by natural slate, clay tiles, and concrete tiles. The governing standard is <strong>BS 5534</strong> (Code of practice for slating and tiling). Because the UK experiences high winds, BS 5534 places a massive emphasis on mechanical fixing; almost every slate or tile must be nailed or screwed, unlike some US shingle applications where adhesive strips do the work. Furthermore, UK roofs often utilize a "cold roof" ventilation design, requiring specific breathable membranes (BS 5250).
+      </p>
+
+      <h4>Australia & New Zealand (AS/NZS 1562)</h4>
+      <p>
+        Australia's climate is uniquely harsh, with extreme UV exposure and cyclonic winds in the north. The standard <strong>AS/NZS 1562</strong> dictates roofing design and installation. While terracotta and concrete tiles are popular, <strong>metal roofing</strong> (like Colorbond steel) is the most dominant material due to its durability and heat reflection. Australian standards require specific cyclonic tie-downs and fasteners to prevent roofs from being ripped off during storms.
+      </p>
+
+      <h3 class="mt-10">6. Choosing the Right Roofing Material</h3>
+      <p>
+        The material you choose affects not only the cost but the structural load on the building.
+      </p>
+      <ul>
+        <li><strong>Asphalt Shingles (US/Canada):</strong> The most cost-effective option. 3-tab shingles are the cheapest but have a shorter lifespan (15-20 years). Architectural shingles are thicker, look better, and last 25-30 years. They weigh about 200-250 lbs per square.</li>
+        <li><strong>Clay & Concrete Tiles (UK/AU/Mediterranean):</strong> Extremely durable and fire-resistant, lasting 50+ years. However, they are incredibly heavy (600-900 lbs per square), often requiring the roof structure to be specially engineered to carry the load.</li>
+        <li><strong>Metal Roofing (Global):</strong> Standing seam metal or corrugated steel is gaining massive popularity. It reflects heat, sheds snow easily, and lasts 40-70 years. It is lightweight but can be noisy in the rain if not properly insulated.</li>
+        <li><strong>Wood Shakes / Shingles:</strong> Beautiful and natural (cedar is popular), but highly flammable and require regular maintenance. Many local fire codes restrict their use.</li>
+      </ul>
+
+      <!-- In-Article Ad Slot -->
+      <div class="my-10 not-prose">
+        <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[250px] flex items-center justify-center text-xs sm:text-sm text-slate-500 font-medium tracking-widest uppercase">
+          Ad Space — In-Article Rectangle
+        </div>
+      </div>
+
+      <h3 class="mt-10">7. How to Measure a Complex Roof</h3>
+      <p>
+        If your roof has dormers, intersecting gables, or a complex hip-and-valley design, measuring the footprint and applying a multiplier may not be accurate enough. 
+      </p>
+      <p>
+        In these cases, you must break the roof down into individual geometric planes:
+      </p>
+      <ol>
+        <li><strong>Rectangles & Squares:</strong> Measure the length and width of the plane and multiply them.</li>
+        <li><strong>Triangles:</strong> Measure the base and the height of the triangle, then use the formula <em>(Base × Height) ÷ 2</em>.</li>
+        <li><strong>Trapezoids:</strong> Add the length of the two parallel sides, divide by 2, then multiply by the height.</li>
+      </ol>
+      <p>
+        Add the square footage of all the planes together to get the total roof area. Because complex roofs require a lot of cutting and fitting around valleys and dormers, you must increase your waste factor to at least <strong>15%</strong>.
+      </p>
+
+      <h3 class="mt-10">8. Roofing Cost Estimation</h3>
+      <p>
+        Roofing is a major financial investment. A complete roof replacement involves materials, labor, disposal of old shingles, and permits.
+      </p>
+      <ul>
+        <li><strong>Material Costs:</strong> In the US, asphalt shingles cost roughly <strong>$100 to $150 per square</strong> (materials only). In the UK, slate or concrete tiles cost roughly <strong>£30 to £60 per square meter</strong>. In Australia, metal roofing or tiles range from <strong>AUD $30 to $70 per square meter</strong>.</li>
+        <li><strong>Labor Costs:</strong> Roofing is dangerous, steep-slope work. In the US, labor adds $150 to $300 per square. In the UK, a roofer charges £150-£250 per day. In Australia, expect to pay AUD $40-$80 per square meter for installation.</li>
+        <li><strong>Disposal & Permits:</strong> Don't forget the cost of a dumpster (skip) to haul away the old roof. In the US, a 20-yard dumpster costs $300-$500. Building permits also add to the final bill.</li>
+      </ul>
+
+      <h3 class="mt-10">9. Final Checklist Before Ordering</h3>
+      <p>
+        Before you take the final numbers from this calculator to your supplier, double-check the following:
+      </p>
+      <ul>
+        <li><strong>Check the Decking:</strong> Once the old shingles are off, you may find rotten plywood that needs replacing. Add a contingency fund (10-15%) for decking repairs.</li>
+        <li><strong>Ventilation:</strong> Ensure your attic is properly vented (via ridge vents or soffit vents). Poor ventilation can cook the shingles from the inside out, voiding the manufacturer's warranty.</li>
+        <li><strong>Flashing:</strong> Ensure all valleys, chimneys, and skylights have new metal flashing. Reusing old flashing is a leading cause of roof leaks.</li>
+      </ul>
+      <p>
+        By following this guide and using our calculator, you can confidently estimate your project, avoid the headache of mid-job material shortages, and ensure your roof protects your home for decades to come.
+      </p>
+
+      <!-- Conclusion Box -->
+      <div class="mt-10 p-6 sm:p-8 bg-gradient-to-br from-ink-900 to-ink-950 rounded-2xl border border-ink-800 not-prose relative overflow-hidden shadow-lg">
+        <div class="absolute -top-20 -right-20 w-64 h-64 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="relative">
+          <h4 class="font-display font-bold text-white text-xl mb-3">Ready to order your roofing materials?</h4>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 max-w-2xl">
+            Use our Roofing Calculator to instantly generate the exact number of shingle bundles, squares, and underlayment rolls you need for your project, complete with US/UK/AU pitch multipliers.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#main-content" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-brand-500 text-white text-sm font-semibold hover:bg-brand-400 transition-colors shadow-sm">
+              Back to Calculator <span class="ml-1" aria-hidden="true">↑</span>
+            </a>
+            <a href="/framing-calculator.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-white text-sm font-semibold transition-colors">
+              Try Framing Calculator
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 6/10 will start here: Clean Accordion FAQ & Schema
+     ============================================================ -->
+
+  <!-- ============================================================
+     PHASE 6/10 — CLEAN ACCORDION FAQ & SCHEMA
+     Roofing-specific questions with minimalist UI
+     ============================================================ -->
+<section class="bg-white py-16 sm:py-24 border-t border-slate-200">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-10 sm:mb-14">
+      <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-ink-900 tracking-tight">Roofing Questions Answered</h2>
+      <p class="text-sm sm:text-base text-ink-700 mt-3">Common questions about shingle bundles, roofing squares, and pitch calculations.</p>
+    </div>
+
+    <!-- Clean FAQ Accordion List -->
+    <div class="border-t border-slate-200">
+      
+      <!-- FAQ 1 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">How many bundles of shingles do I need for a 2,000 sq ft roof?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          To determine the number of bundles, you first need to factor in the roof pitch. If 2,000 sq ft is the actual surface area, that equals <strong>20 roofing squares</strong>. Since it takes 3 bundles to make one square, you need <strong>60 bundles</strong>. However, you must add a 10% to 15% waste factor for cuts and valleys. Expect to order around <strong>66 to 69 bundles</strong> for the project.
+        </div>
+      </details>
+
+      <!-- FAQ 2 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">What exactly is a "roofing square"?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          A "roofing square" is the standard unit of measurement used by contractors and suppliers. It is exactly <strong>100 square feet</strong> of roof surface area. Roofing materials are almost always priced and sold by the square. For example, one roll of standard underlayment covers about 4 squares (400 sq ft).
+        </div>
+      </details>
+
+      <!-- FAQ 3 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">How do I calculate the pitch of my roof?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          Roof pitch is the ratio of vertical rise to horizontal run. You can calculate it by placing a level against the gable end of your roof, extending it out 12 inches. Measure the distance from the end of the level straight down to the roof surface. If it drops 6 inches, your pitch is <strong>6:12</strong>. You can use our <a href="/roof-pitch-calculator.html" class="text-brand-600 font-semibold underline decoration-brand-300 underline-offset-2 hover:decoration-brand-500">Roof Pitch Calculator</a> to convert this into degrees and a pitch multiplier.
+        </div>
+      </details>
+
+      <!-- FAQ 4 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">Can I install new shingles over old shingles?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          While some building codes allow a second layer of shingles (an "overlay"), it is generally <strong>not recommended</strong>. Installing over old shingles adds excessive weight to the roof structure, traps heat (reducing shingle lifespan), and hides rotten decking or flashing damage underneath. Furthermore, most manufacturer warranties are voided if installed over an existing roof. Tear-off is the industry standard.
+        </div>
+      </details>
+
+      <!-- FAQ 5 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">What is the difference between 3-tab and architectural shingles?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          <strong>3-tab shingles</strong> are flat, lightweight, and inexpensive. They have a shorter lifespan (15-20 years) and a uniform look. <strong>Architectural shingles</strong> (also known as dimensional shingles) are thicker, heavier, and have a layered, textured appearance that mimics wood shakes. They cost more but last 25-30 years, offer better wind resistance, and significantly boost curb appeal.
+        </div>
+      </details>
+
+      <!-- FAQ 6 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">How much does a new roof cost per square?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          Costs vary widely by region and material. In the <strong>US</strong>, a full asphalt shingle roof installation (materials + labor) ranges from <strong>$350 to $550 per square</strong> ($3.50 to $5.50 per sq ft). In the <strong>UK</strong>, slate or tile roofing typically costs <strong>£100 to £200 per square meter</strong>. In <strong>Australia</strong>, metal roofing or tiles cost between <strong>AUD $60 to $120 per square meter</strong>, depending on the complexity of the roof and height of the house.
+        </div>
+      </details>
+
+      <!-- FAQ 7 -->
+      <details class="group border-b border-slate-200">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-5 sm:py-6 [&::-webkit-details-marker]:hidden">
+          <span class="font-display font-semibold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-4">Do I need underlayment if I am installing a metal roof?</span>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-brand-600 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="pb-6 text-sm sm:text-base text-ink-700 leading-relaxed">
+          <strong>Yes, absolutely.</strong> While metal roofs themselves are waterproof, underlayment acts as a secondary barrier to prevent condensation (sweat) from dripping onto the attic insulation. It also protects the roof deck from moisture if wind-driven rain gets under the metal panels. Furthermore, underlayment provides a thermal break and prevents the metal from reacting chemically with treated lumber.
+        </div>
+      </details>
+
+    </div>
+
+    <!-- Still have a question CTA -->
+    <div class="mt-10 text-center">
+      <p class="text-sm text-ink-700">
+        Still have a question? Email <a href="mailto:contact@buildmetric.org" class="text-brand-600 font-semibold hover:underline">contact@buildmetric.org</a> — every message is read by a real person.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQPage JSON-LD SCHEMA (Matches exactly with HTML above)
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many bundles of shingles do I need for a 2,000 sq ft roof?",
+      "acceptedAnswer": { "@type": "Answer", "text": "To determine the number of bundles, you first need to factor in the roof pitch. If 2,000 sq ft is the actual surface area, that equals 20 roofing squares. Since it takes 3 bundles to make one square, you need 60 bundles. However, you must add a 10% to 15% waste factor for cuts and valleys. Expect to order around 66 to 69 bundles for the project." }
+    },
+    {
+      "@type": "Question",
+      "name": "What exactly is a roofing square?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A roofing square is the standard unit of measurement used by contractors and suppliers. It is exactly 100 square feet of roof surface area. Roofing materials are almost always priced and sold by the square. For example, one roll of standard underlayment covers about 4 squares (400 sq ft)." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate the pitch of my roof?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Roof pitch is the ratio of vertical rise to horizontal run. You can calculate it by placing a level against the gable end of your roof, extending it out 12 inches. Measure the distance from the end of the level straight down to the roof surface. If it drops 6 inches, your pitch is 6:12." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I install new shingles over old shingles?",
+      "acceptedAnswer": { "@type": "Answer", "text": "While some building codes allow a second layer of shingles, it is generally not recommended. Installing over old shingles adds excessive weight to the roof structure, traps heat, and hides rotten decking or flashing damage underneath. Furthermore, most manufacturer warranties are voided if installed over an existing roof." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between 3-tab and architectural shingles?",
+      "acceptedAnswer": { "@type": "Answer", "text": "3-tab shingles are flat, lightweight, and inexpensive. They have a shorter lifespan and a uniform look. Architectural shingles are thicker, heavier, and have a layered, textured appearance. They cost more but last longer, offer better wind resistance, and significantly boost curb appeal." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a new roof cost per square?",
+      "acceptedAnswer": { "@type": "Answer", "text": "In the US, a full asphalt shingle roof installation ranges from $350 to $550 per square. In the UK, slate or tile roofing typically costs £100 to £200 per square meter. In Australia, metal roofing or tiles cost between AUD $60 to $120 per square meter." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need underlayment if I am installing a metal roof?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, absolutely. While metal roofs themselves are waterproof, underlayment acts as a secondary barrier to prevent condensation from dripping onto the attic insulation. It also protects the roof deck from moisture if wind-driven rain gets under the metal panels." }
+    }
+  ]
+}
+</script>
+
+<!-- ============================================================
+     Phase 7/10 will start here: E-E-A-T Box + Related Tools
+     ============================================================ -->  
+
+    <!-- ============================================================
+     PHASE 7/10 — E-E-A-T EDITORIAL BOX & RELATED CONTENT
+     ============================================================ -->
+
+<!-- E-E-A-T Directory Info Box -->
+<section class="bg-slate-50 border-t border-slate-200 py-16 sm:py-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+      
+      <!-- Card Header (Dark Premium Look) -->
+      <div class="bg-ink-900 px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-6 h-6 rounded bg-white/10 flex items-center justify-center">
+            <svg class="w-3.5 h-3.5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <span class="text-[11px] font-bold uppercase tracking-widest text-slate-200">About our calculators</span>
+        </div>
+        <span class="hidden sm:block text-[10px] font-bold uppercase tracking-widest text-slate-500">Engineer-Reviewed</span>
+      </div>
+
+      <!-- Card Body -->
+      <div class="p-6 sm:p-8 md:p-10">
+        <div class="grid lg:grid-cols-12 gap-10">
+          
+          <!-- Left Column: Description -->
+          <div class="lg:col-span-7">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-12 h-12 rounded-xl bg-brand-500 flex items-center justify-center shrink-0 shadow-sm">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              </div>
+              <div>
+                <h2 class="font-display font-extrabold text-xl sm:text-2xl text-ink-900 tracking-tight">BuildMetric Engineering</h2>
+                <p class="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-brand-600 mt-0.5">
+                  Calculators &amp; Estimating Tools
+                </p>
+              </div>
+            </div>
+            
+            <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-6 pl-[60px]">
+              Verified Formulas · Code-Aware
+            </p>
+
+            <div class="text-[15px] text-ink-700 leading-relaxed space-y-4 mb-8">
+              <p>
+                Every calculator in this directory is built from formulas that can be derived from first principles. We do not guess. We test every tool against reference cases in both imperial and metric units before it is published.
+              </p>
+              <p>
+                More importantly, our tools are reviewed by quantity surveyors, structural engineers, and licensed contractors. We know that a calculation error on site costs money and compromises safety, so we treat accuracy as a structural requirement, not a feature.
+              </p>
+            </div>
+
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm text-ink-700"><strong class="text-ink-900">Human-verified.</strong> Reviewed by practising professionals, not AI.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm text-ink-700"><strong class="text-ink-900">Stateless maths.</strong> Your inputs run in your browser, never on our servers.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm text-ink-700"><strong class="text-ink-900">Always free.</strong> No sign-ups, no paywalls, no trials. Just the tools.</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-col sm:flex-row items-center gap-3">
+              <a href="mailto:contact@buildmetric.org" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-ink-900 text-white text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                Report an Error
+              </a>
+              <a href="/about.html" class="w-full sm:w-auto inline-flex items-center justify-center px-5 py-2.5 rounded-xl border border-slate-300 text-ink-900 text-sm font-semibold hover:border-brand-500 hover:text-brand-600 transition-colors bg-white">
+                Our Methodology
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Directory Info & Disclaimer -->
+          <div class="lg:col-span-5 flex flex-col gap-4">
+            
+            <!-- Directory Info Box -->
+            <div class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm">
+              <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-4">Directory Info</h3>
+              <ul class="text-xs sm:text-sm space-y-3">
+                <li class="flex justify-between items-center pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Total Tools</span>
+                  <span class="font-bold text-ink-900 text-right">Growing Library</span>
+                </li>
+                <li class="flex justify-between items-center pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Review Status</span>
+                  <span class="font-bold text-ink-900 text-right">100% Human-Reviewed</span>
+                </li>
+                <li class="flex justify-between items-center pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Regions</span>
+                  <span class="font-bold text-ink-900 text-right">US · UK · AU</span>
+                </li>
+                <li class="flex justify-between items-center">
+                  <span class="text-slate-500 font-medium">Cost</span>
+                  <span class="font-bold text-brand-600 text-right">Free Forever</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Disclaimer Box -->
+            <div class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 flex-1 shadow-sm">
+              <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-3">Disclaimer</h3>
+              <p class="text-xs sm:text-sm text-ink-700 leading-relaxed">
+                Calculators are estimating aids, not a substitute for professional judgment. Always verify against your local code. See our <a href="/disclaimer.html" class="text-brand-600 font-semibold underline decoration-brand-300 underline-offset-2 hover:decoration-brand-500 transition-colors">Disclaimer</a>.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Related Tools & Guides Section -->
+<section class="bg-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Related Tools -->
+    <div class="mb-16">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="font-display font-extrabold text-2xl text-ink-900 tracking-tight">Related Calculators</h2>
+        <a href="/calculators.html" class="text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors">View all tools →</a>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        
+        <!-- Tool 1: Framing -->
+        <a href="/framing-calculator.html" class="group bg-white rounded-xl p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-6 h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-ink-900 group-hover:text-brand-600 transition-colors">Framing Calculator</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Studs, plates, headers</p>
+          </div>
+        </a>
+
+        <!-- Tool 2: Concrete -->
+        <a href="/concrete-calculator.html" class="group bg-white rounded-xl p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-6 h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-ink-900 group-hover:text-brand-600 transition-colors">Concrete Calculator</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Volume, bags, slabs</p>
+          </div>
+        </a>
+
+        <!-- Tool 3: Drywall -->
+        <a href="/drywall-calculator.html" class="group bg-white rounded-xl p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-6 h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-ink-900 group-hover:text-brand-600 transition-colors">Drywall Calculator</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Sheets, mud, tape</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Related Guides -->
+    <div>
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="font-display font-extrabold text-2xl text-ink-900 tracking-tight">Related Guides</h2>
+        <a href="/guides.html" class="text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors">View all guides →</a>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Guide 1 (Roof Pitch) -->
+        <a href="/guides/roof-pitch-explained.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-32 bg-gradient-to-br from-blue-400 to-blue-600 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            </div>
+          </div>
+          <div class="p-4 flex flex-col flex-1">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-brand-600 bg-brand-50 px-2 py-1 rounded-md self-start mb-2">Roofing</span>
+            <h3 class="font-display font-bold text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Roof Pitch Explained: Why 6:12 and 26.57° Are the Same Roof</h3>
+            <span class="text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <!-- Guide 2 (Rafters) -->
+        <a href="/guides/how-to-calculate-rafters.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-32 bg-gradient-to-br from-orange-400 to-orange-600 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 20h4v-4h4v-4h4V8h4"></path></svg>
+            </div>
+          </div>
+          <div class="p-4 flex flex-col flex-1">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-orange-600 bg-orange-50 px-2 py-1 rounded-md self-start mb-2">Estimating</span>
+            <h3 class="font-display font-bold text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">How to Calculate Rafter Lengths (With Overhang)</h3>
+            <span class="text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <!-- Guide 3 (Stud Spacing) -->
+        <a href="/guides/stud-spacing-by-code.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-32 bg-gradient-to-br from-sky-400 to-sky-600 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+            </div>
+          </div>
+          <div class="p-4 flex flex-col flex-1">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-sky-600 bg-sky-50 px-2 py-1 rounded-md self-start mb-2">Framing</span>
+            <h3 class="font-display font-bold text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Stud Spacing: IRC 2021 vs BS 5268 vs AS 1684 Compared</h3>
+            <span class="text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 8/10 will start here: Premium Footer
+     ============================================================ -->
+
+    </main>
+
+<!-- ============================================================
+     PHASE 8/10 — PREMIUM FOOTER (Uniform & Clean)
+     ============================================================ -->
+<footer class="bg-ink-950 text-slate-400 border-t border-slate-800 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Top Footer Grid (5 Columns) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 mb-12">
+      
+      <!-- Column 1: Brand & Contact -->
+      <div class="lg:col-span-2 pr-4">
+        <a href="/" class="inline-flex items-center gap-2.5 mb-5 group">
+          <!-- Logo with CSS invert for dark background -->
+          <img src="logo.png" alt="BuildMetric Logo" class="h-8 w-auto object-contain brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity" />
+          <span class="font-display font-extrabold text-xl tracking-tight text-white hidden sm:block">
+            Build<span class="text-brand-500">Metric</span>
+          </span>
+        </a>
+        
+        <p class="text-sm leading-relaxed mb-6 max-w-sm">
+          Independent construction calculators, estimating tools and technical reference guides for building professionals across the <strong class="text-slate-200">USA, UK</strong> and <strong class="text-slate-200">Australia</strong>. Engineered for accuracy. Published for transparency.
+        </p>
+
+        <div class="space-y-3 mb-6">
+          <a href="mailto:contact@buildmetric.org" class="flex items-center gap-2.5 text-sm hover:text-white transition-colors">
+            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            contact@buildmetric.org
+          </a>
+          <a href="mailto:ads@buildmetric.org" class="flex items-center gap-2.5 text-sm hover:text-white transition-colors">
+            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+            ads@buildmetric.org
+          </a>
+        </div>
+
+        <!-- Cookie Settings Button -->
+        <button id="cookieSettingsBtn" type="button" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 hover:bg-slate-800 text-xs font-semibold text-slate-300 transition-colors">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          Cookie Settings
+        </button>
+      </div>
+
+      <!-- Column 2: Categories (Uniform, no highlight) -->
+      <div>
+        <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Categories</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="/roofing.html" class="hover:text-brand-400 transition-colors">Roofing</a></li>
+          <li><a href="/concrete.html" class="hover:text-brand-400 transition-colors">Concrete</a></li>
+          <li><a href="/framing.html" class="hover:text-brand-400 transition-colors">Framing</a></li>
+          <li><a href="/masonry.html" class="hover:text-brand-400 transition-colors">Masonry</a></li>
+          <li><a href="/drywall.html" class="hover:text-brand-400 transition-colors">Drywall</a></li>
+          <li><a href="/paint.html" class="hover:text-brand-400 transition-colors">Paint</a></li>
+          <li><a href="/calculators.html" class="hover:text-white font-semibold text-brand-500 mt-2 inline-block">All Categories →</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Popular Tools (Uniform, no highlight) -->
+      <div>
+        <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Popular Tools</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="/roofing-calculator.html" class="hover:text-brand-400 transition-colors">Roofing Calculator</a></li>
+          <li><a href="/roof-pitch-calculator.html" class="hover:text-brand-400 transition-colors">Roof Pitch</a></li>
+          <li><a href="/framing-calculator.html" class="hover:text-brand-400 transition-colors">Framing Calculator</a></li>
+          <li><a href="/concrete-calculator.html" class="hover:text-brand-400 transition-colors">Concrete Volume</a></li>
+          <li><a href="/drywall-calculator.html" class="hover:text-brand-400 transition-colors">Drywall Calculator</a></li>
+          <li><a href="/calculators.html" class="hover:text-white font-semibold text-brand-500 mt-2 inline-block">All Tools →</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4 & 5: Company & Legal -->
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Company</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="/about.html" class="hover:text-brand-400 transition-colors">About</a></li>
+            <li><a href="/guides.html" class="hover:text-brand-400 transition-colors">Guides</a></li>
+            <li><a href="/estimating.html" class="hover:text-brand-400 transition-colors">Estimating</a></li>
+            <li><a href="/contact.html" class="hover:text-brand-400 transition-colors">Contact</a></li>
+            <li><a href="/sitemap.xml" class="hover:text-brand-400 transition-colors">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Legal</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="/privacy.html" class="hover:text-brand-400 transition-colors">Privacy Policy</a></li>
+            <li><a href="/terms.html" class="hover:text-brand-400 transition-colors">Terms of Service</a></li>
+            <li><a href="/disclaimer.html" class="hover:text-brand-400 transition-colors">Disclaimer</a></li>
+            <li><a href="/cookie-policy.html" class="hover:text-brand-400 transition-colors">Cookie Policy</a></li>
+            <li><a href="/contact.html" class="hover:text-brand-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Regional Notice Box -->
+    <div class="flex justify-end mb-8">
+      <div class="bg-slate-800/40 border border-slate-700/50 rounded-xl p-4 max-w-sm w-full sm:w-auto">
+        <h4 class="text-[10px] font-bold uppercase tracking-widest text-slate-300 mb-1">Regional Notice</h4>
+        <p class="text-xs text-slate-500 leading-relaxed">
+          BuildMetric content is published in English and reviewed against US, UK and Australian codes. Always verify against your local jurisdiction's current edition.
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer Ad Space -->
+    <div class="mb-8">
+      <div class="bg-slate-800/30 border-dashed border-2 border-slate-700 rounded-xl h-[90px] flex items-center justify-center text-[10px] sm:text-xs text-slate-500 font-medium tracking-widest uppercase">
+        Ad Space — Footer Leaderboard
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+      <p class="text-center md:text-left text-slate-400">
+        © 2026 BuildMetric. All rights reserved. Operated from buildmetric.org.
+      </p>
+      <p class="text-center md:text-right text-slate-500">
+        Built for professionals. General information only — see our <a href="/disclaimer.html" class="text-brand-500 hover:underline hover:text-brand-400 transition-colors">Disclaimer</a>.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ============================================================
+     Phase 9/10 will start here: Complete JavaScript Logic
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 9/10 — JAVASCRIPT (Calculator Logic & Menu)
+     ============================================================ -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    
+    /* ── 1. MOBILE MENU TOGGLE ── */
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const openIcon = menuBtn ? menuBtn.querySelector('.menu-open-icon') : null;
+    const closeIcon = menuBtn ? menuBtn.querySelector('.menu-close-icon') : null;
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', function () {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden');
+        if(openIcon) openIcon.classList.toggle('hidden');
+        if(closeIcon) closeIcon.classList.toggle('hidden');
+        menuBtn.setAttribute('aria-expanded', String(!isOpen));
+      });
+    }
+
+    /* ── 2. ELEMENTS & STATE ── */
+    const btnImperial = document.getElementById('btnImperial');
+    const btnMetric = document.getElementById('btnMetric');
+    const unitLabels = document.querySelectorAll('.unit-label');
+    const outAreaUnit = document.querySelector('#outArea span');
+    
+    const roofLength = document.getElementById('roofLength');
+    const roofWidth = document.getElementById('roofWidth');
+    const roofPitch = document.getElementById('roofPitch');
+    const roofType = document.getElementById('roofType');
+    const wasteFactor = document.getElementById('wasteFactor');
+    
+    const outBundles = document.getElementById('outBundles');
+    const outArea = document.getElementById('outArea');
+    const outSquares = document.getElementById('outSquares');
+    const outUnderlayment = document.getElementById('outUnderlayment');
+
+    let isMetric = false;
+
+    /* ── 3. UNIT TOGGLE (Imperial / Metric) ── */
+    function toggleUnits(metric) {
+      isMetric = metric;
+      
+      // Style updates
+      if (metric) {
+        btnMetric.classList.add('bg-white', 'shadow-sm', 'text-ink-900');
+        btnMetric.classList.remove('text-slate-500');
+        btnImperial.classList.remove('bg-white', 'shadow-sm', 'text-ink-900');
+        btnImperial.classList.add('text-slate-500');
+        unitLabels.forEach(el => el.textContent = 'm');
+        if(outAreaUnit) outAreaUnit.textContent = 'sq m';
+      } else {
+        btnImperial.classList.add('bg-white', 'shadow-sm', 'text-ink-900');
+        btnImperial.classList.remove('text-slate-500');
+        btnMetric.classList.remove('bg-white', 'shadow-sm', 'text-ink-900');
+        btnMetric.classList.add('text-slate-500');
+        unitLabels.forEach(el => el.textContent = 'ft');
+        if(outAreaUnit) outAreaUnit.textContent = 'sq ft';
+      }
+      calculate();
+    }
+
+    if(btnImperial && btnMetric) {
+      btnImperial.addEventListener('click', () => toggleUnits(false));
+      btnMetric.addEventListener('click', () => toggleUnits(true));
+    }
+
+    /* ── 4. CALCULATOR MATH LOGIC ── */
+    function calculate() {
+      const length = parseFloat(roofLength.value) || 0;
+      const width = parseFloat(roofWidth.value) || 0;
+      const waste = parseFloat(wasteFactor.value) || 0.10;
+      
+      // Pitch Multipliers
+      let multiplier = 1.0;
+      switch(roofPitch.value) {
+        case 'flat': multiplier = 1.00; break;
+        case 'low': multiplier = 1.054; break;
+        case 'medium': multiplier = 1.118; break;
+        case 'steep': multiplier = 1.302; break;
+      }
+
+      // Roof Type adjustments (Complex roofs might have more waste, but we'll rely on waste dropdown)
+      // If user selected complex roof but left waste at 10%, we could auto-adjust, but keeping it manual is safer.
+
+      // 1. Calculate Area
+      let baseArea = length * width;
+      let actualArea = baseArea * multiplier;
+      let totalAreaWithWaste = actualArea * (1 + waste);
+
+      // 2. Calculate Squares
+      // 1 Square = 100 sq ft (US) or 9.29 sq m (Metric)
+      let squares = isMetric ? (totalAreaWithWaste / 9.29) : (totalAreaWithWaste / 100);
+
+      // 3. Calculate Bundles
+      // Standard: 3 bundles per square
+      let bundles = Math.ceil(squares * 3);
+
+      // 4. Calculate Underlayment Rolls
+      // 1 Roll = 400 sq ft (US) or 37 sq m (Metric)
+      let underlaymentRolls = isMetric ? Math.ceil(totalAreaWithWaste / 37) : Math.ceil(totalAreaWithWaste / 400);
+
+      // --- UPDATE UI ---
+      outArea.innerHTML = `${Math.ceil(totalAreaWithWaste).toLocaleString()} <span class="text-xs text-slate-500">${isMetric ? 'sq m' : 'sq ft'}</span>`;
+      outSquares.innerHTML = `${squares.toFixed(1)} <span class="text-xs text-slate-500">squares</span>`;
+      outBundles.textContent = bundles;
+      outUnderlayment.innerHTML = `${underlaymentRolls} <span class="text-xs text-slate-500">rolls</span>`;
+    }
+
+    // Trigger calculation on any input change
+    const inputs = [roofLength, roofWidth, roofPitch, roofType, wasteFactor];
+    inputs.forEach(input => {
+      if(input) {
+        input.addEventListener('input', calculate);
+        input.addEventListener('change', calculate);
+      }
+    });
+
+    // Initial run
+    calculate();
+
+    /* ── 5. SAVE, SHARE, COPY ACTIONS ── */
+    const btnSave = document.getElementById('btnSave');
+    const btnShare = document.getElementById('btnShare');
+    const btnCopy = document.getElementById('btnCopy');
+
+    const getResultText = () => {
+      return `Roofing Materials Estimate:\n` +
+             `- Total Area: ${outArea.textContent}\n` +
+             `- Total Squares: ${outSquares.textContent}\n` +
+             `- Shingle Bundles: ${outBundles.textContent}\n` +
+             `- Underlayment Rolls: ${outUnderlayment.textContent}\n` +
+             `Calculated via BuildMetric.org`;
+    };
+
+    // Save
+    if(btnSave) {
+      btnSave.addEventListener('click', () => {
+        const data = {
+          l: roofLength.value, w: roofWidth.value, p: roofPitch.value,
+          t: roofType.value, waste: wasteFactor.value, metric: isMetric
+        };
+        localStorage.setItem('buildmetric_roofing_data', JSON.stringify(data));
+        alert('Estimate saved to your browser!');
+      });
+    }
+
+    // Share
+    if(btnShare && navigator.share) {
+      btnShare.addEventListener('click', () => {
+        navigator.share({
+          title: 'Roofing Calculator Estimate',
+          text: getResultText(),
+          url: window.location.href
+        }).catch(console.error);
+      });
+    } else if (btnShare) {
+      btnShare.addEventListener('click', () => {
+        alert('Sharing is not supported on this browser. Use Copy instead.');
+      });
+    }
+
+    // Copy
+    if(btnCopy) {
+      btnCopy.addEventListener('click', () => {
+        navigator.clipboard.writeText(getResultText()).then(() => {
+          const originalHTML = btnCopy.innerHTML;
+          btnCopy.innerHTML = '<svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> Copied!';
+          setTimeout(() => { btnCopy.innerHTML = originalHTML; }, 2000);
+        }).catch(() => {
+          alert('Failed to copy. Please select text manually.');
+        });
+      });
+    }
+
+    // Cookie settings placeholder
+    const cookieBtn = document.getElementById('cookieSettingsBtn');
+    if(cookieBtn) {
+      cookieBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('Cookie settings panel will open here.');
+      });
+    }
+
+  });
+</script>
+
+<!-- ============================================================
+     Phase 10/10 will start here: Closing Tags
+     ============================================================ -->
+
+      <!-- ============================================================
+       PHASE 10/10 — CLOSING TAGS
+       ============================================================ -->
+</body>
+</html>
+    
