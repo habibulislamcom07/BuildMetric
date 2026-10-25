@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- ============================================================
+       PHASE 1/10 — SEO HEAD & CONFIGURATION (Long-Tail, High Intent)
+       File: fence-post-calculator.html
+       Brand: BuildMetric | Domain: buildmetric.org
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO Meta (US/UK/AU Long-Tail Keywords) -->
+  <title>Fence Post Calculator | How Much Concrete Per Post? | BuildMetric</title>
+  <meta name="description" content="Calculate exactly how much concrete, gravel, and wood you need for each fence post. Accounts for hole depth, frost lines, and post size for US, UK, and AU builds." />
+  <meta name="keywords" content="fence post calculator, how much concrete per fence post, fence post depth, post hole concrete calculator, fence post hole size, setting fence posts in concrete" />
+  <meta name="author" content="BuildMetric Editorial Team" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#0ea5e9" />
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://buildmetric.org/fence-post-calculator.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BuildMetric" />
+  <meta property="og:title" content="Fence Post Calculator | Concrete & Depth Estimator" />
+  <meta property="og:description" content="Calculate exact concrete bags and depth for your fence posts." />
+  <meta property="og:url" content="https://buildmetric.org/fence-post-calculator.html" />
+  <meta property="og:image" content="https://buildmetric.org/assets/og/fence-post-calculator.png" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fence Post Concrete Calculator | BuildMetric" />
+  <meta name="twitter:description" content="Estimate exact concrete per fence post based on frost line." />
+  <meta name="twitter:image" content="https://buildmetric.org/assets/og/fence-post-calculator.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e' },
+            ink: { 700: '#334155', 800: '#1e293b', 900: '#0f172a', 950: '#080f1e' }
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: {
+            'soft': '0 4px 20px -2px rgba(15,23,42,0.05)',
+            'hover': '0 12px 32px -8px rgba(14,165,233,0.15)',
+            'glass': '0 4px 24px -4px rgba(15,23,42,0.08)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+    .bg-grid-pattern {
+      background-image: linear-gradient(to right, rgba(15,23,42,0.04) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(15,23,42,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .nav-glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); }
+    details > summary .icon-plus { transition: transform 0.3s ease; }
+    details[open] > summary .icon-plus { transform: rotate(45deg); }
+    details > summary::-webkit-details-marker { display: none; }
+  </style>
+
+  <!-- ================= JSON-LD SCHEMA ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://buildmetric.org/fence-post-calculator.html#app",
+        "name": "Fence Post Concrete & Depth Calculator",
+        "url": "https://buildmetric.org/fence-post-calculator.html",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "All",
+        "description": "Calculate the exact volume of concrete and depth required for each fence post, based on hole size and frost line.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://buildmetric.org/fence-post-calculator.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://buildmetric.org/" },
+          { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://buildmetric.org/calculators.html" },
+          { "@type": "ListItem", "position": 3, "name": "Landscaping", "item": "https://buildmetric.org/landscaping.html" },
+          { "@type": "ListItem", "position": 4, "name": "Fence Post Calculator", "item": "https://buildmetric.org/fence-post-calculator.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+    <body class="bg-white text-ink-800 antialiased font-sans flex flex-col min-h-screen">
+
+  <!-- ============================================================
+       SKIP LINK (Accessibility)
+       ============================================================ -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2.5 focus:bg-brand-500 focus:text-white focus:rounded-lg focus:font-semibold focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/70">
+    Skip to main content
+  </a>
+
+  <!-- ============================================================
+       STICKY NAVBAR (Compact & Mobile Friendly)
+       ============================================================ -->
+  <header class="sticky top-0 z-50 nav-glass border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-14 sm:h-16 lg:h-20">
+        
+        <!-- Logo -->
+        <div class="flex items-center gap-6">
+          <a href="/" class="flex items-center gap-2.5 shrink-0" aria-label="BuildMetric Home">
+            <img src="logo.png" alt="BuildMetric Logo" class="h-7 sm:h-9 w-auto object-contain" />
+            <span class="font-display font-extrabold text-lg sm:text-xl tracking-tight text-ink-900 hidden sm:block">
+              Build<span class="text-brand-500">Metric</span>
+            </span>
+          </a>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden lg:flex items-center gap-1" aria-label="Main Navigation">
+            <a href="/calculators.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Calculators</a>
+            <a href="/guides.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Guides</a>
+            <a href="/about.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">About</a>
+            <a href="/contact.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Contact</a>
+          </nav>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <a href="/calculators.html" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-lg bg-ink-900 text-white text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+            Open Tools
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuBtn" type="button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-200 text-ink-800 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand-500/40 transition-colors" aria-expanded="false" aria-controls="mobileMenu">
+            <span class="sr-only">Open main menu</span>
+            <svg class="menu-open-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <svg class="menu-close-icon hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu (Compact) -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 bg-white">
+      <div class="px-3 py-3 space-y-1">
+        <a href="/calculators.html" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Calculators</a>
+        <a href="/guides.html" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Guides</a>
+        <a href="/about.html" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-ink-900 hover:bg-slate-50 transition-colors">About</a>
+        <a href="/contact.html" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main id="main-content" class="flex-grow">
+    
+    <!-- ============================================================
+         PAGE HEADER & BREADCRUMBS (Compact)
+         ============================================================ -->
+    <div class="bg-slate-50 border-b border-slate-200 pt-4 pb-5 sm:pt-6 sm:pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="Breadcrumb" class="mb-2 sm:mb-4">
+          <ol class="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-[11px] sm:text-sm text-slate-500">
+            <li><a href="/" class="hover:text-brand-600 transition-colors">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/calculators.html" class="hover:text-brand-600 transition-colors">Calculators</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/landscaping.html" class="hover:text-brand-600 transition-colors">Landscaping</a></li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page" class="text-ink-900 font-semibold">Fence Post Calculator</li>
+          </ol>
+        </nav>
+
+        <!-- Page Title & Subtitle -->
+        <h1 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-ink-900 tracking-tight leading-tight">
+          Fence Post Calculator
+        </h1>
+        <p class="text-xs sm:text-sm md:text-base text-ink-700 mt-1 max-w-2xl leading-relaxed">
+          Calculate exactly how much concrete and what depth you need for each fence post. Accounts for frost lines (US/UK/AU) and post hole diameter.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- ============================================================
+         Phase 3/10 will start here: The Compact Calculator UI
+         ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 3/10 — THE CALCULATOR UI
+     Fence Post specific inputs and result box
+     ============================================================ -->
+<section class="bg-white py-6 sm:py-12">
+  <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-10">
+      
+      <!-- Left Column: Form Inputs (7/12) -->
+      <div class="lg:col-span-7">
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-6">
+          
+          <!-- Unit Toggle (Compact) -->
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="font-display font-bold text-lg text-ink-900">Post Details</h2>
+            <div class="flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200">
+              <button type="button" id="btnImperial" class="px-2.5 py-1 text-[11px] sm:text-xs font-semibold rounded-md bg-white shadow-sm text-ink-900 transition-all">Imperial (in)</button>
+              <button type="button" id="btnMetric" class="px-2.5 py-1 text-[11px] sm:text-xs font-semibold rounded-md text-slate-500 hover:text-ink-900 transition-all">Metric (mm)</button>
+            </div>
+          </div>
+
+          <!-- Post Size & Hole Diameter -->
+          <div class="grid grid-cols-2 gap-3 mb-4">
+            <div>
+              <label for="postSize" class="block text-xs font-semibold text-ink-900 mb-1">Post Size</label>
+              <select id="postSize" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm">
+                <option value="4x4" selected>4x4 (Standard)</option>
+                <option value="6x6">6x6 (Heavy Duty)</option>
+                <option value="round">Round Post</option>
+              </select>
+            </div>
+            <div>
+              <label for="holeDiameter" class="block text-xs font-semibold text-ink-900 mb-1">Hole Diameter (<span class="unit-label">in</span>)</label>
+              <select id="holeDiameter" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm">
+                <option value="8">8 inches</option>
+                <option value="10" selected>10 inches</option>
+                <option value="12">12 inches</option>
+                <option value="custom">Custom...</option>
+              </select>
+              <!-- Custom Input for Hole -->
+              <input type="number" id="customHole" class="hidden mt-2 w-full px-3 py-1.5 rounded-lg border border-brand-300 bg-brand-50 focus:ring-2 focus:ring-brand-500 text-xs" placeholder="Exact diameter" min="0" step="0.1">
+            </div>
+          </div>
+
+          <!-- Depth & Frost Line -->
+          <div class="grid grid-cols-2 gap-3 mb-4">
+            <div>
+              <label for="holeDepth" class="block text-xs font-semibold text-ink-900 mb-1">Hole Depth (<span class="unit-label">in</span>)</label>
+              <select id="holeDepth" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm">
+                <option value="24">24 inches (2 ft)</option>
+                <option value="30" selected>30 inches (2.5 ft)</option>
+                <option value="36">36 inches (3 ft)</option>
+                <option value="48">48 inches (4 ft)</option>
+                <option value="custom">Custom...</option>
+              </select>
+              <!-- Custom Input for Depth -->
+              <input type="number" id="customDepth" class="hidden mt-2 w-full px-3 py-1.5 rounded-lg border border-brand-300 bg-brand-50 focus:ring-2 focus:ring-brand-500 text-xs" placeholder="Exact depth" min="0" step="0.1">
+            </div>
+            <div>
+              <label for="frostLine" class="block text-xs font-semibold text-ink-900 mb-1">Frost Line</label>
+              <select id="frostLine" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm">
+                <option value="no" selected>No Frost / Mild</option>
+                <option value="yes">Deep Frost (Northern)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Concrete Type & Waste Factor -->
+          <div class="grid grid-cols-2 gap-3 mb-4">
+            <div>
+              <label for="concreteType" class="block text-xs font-semibold text-ink-900 mb-1">Concrete Type</label>
+              <select id="concreteType" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm">
+                <option value="fast" selected>Fast-Setting (50lb)</option>
+                <option value="standard">Standard (80lb)</option>
+              </select>
+            </div>
+            <div>
+              <label for="wasteFactor" class="block text-xs font-semibold text-ink-900 mb-1">Waste Factor</label>
+              <select id="wasteFactor" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm">
+                <option value="0.10" selected>10% (Standard)</option>
+                <option value="0.15">15% (Sandy soil)</option>
+                <option value="0.20">20% (Rocky soil)</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Column: Result Box (5/12) -->
+      <div class="lg:col-span-5">
+        <div class="bg-ink-900 rounded-2xl shadow-lg border border-ink-800 sticky top-20 overflow-hidden">
+          <div class="p-4 sm:p-6">
+            
+            <!-- Highlighted Total Concrete -->
+            <div class="text-center pb-4 border-b border-white/10 mb-4">
+              <p class="text-xs text-brand-300 font-semibold mb-1">Concrete Per Post</p>
+              <div class="flex items-center justify-center gap-2">
+                <span class="font-mono text-4xl sm:text-5xl font-extrabold text-white" id="outBags">0</span>
+                <span class="text-xs sm:text-sm text-slate-400 mt-2">Bags</span>
+              </div>
+            </div>
+
+            <!-- Other Results -->
+            <div class="space-y-2 mb-5 text-sm">
+              <div class="flex justify-between items-center">
+                <span class="text-slate-400">Hole Volume</span>
+                <span class="font-mono font-semibold text-white" id="outVolume">0 <span class="text-[10px] text-slate-500">cu ft</span></span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-400">Concrete Needed (Total)</span>
+                <span class="font-mono font-semibold text-white" id="outTotal">0 <span class="text-[10px] text-slate-500">cu ft</span></span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-400">Bags Per 10 Posts</span>
+                <span class="font-mono font-semibold text-white" id="outTen">0 <span class="text-[10px] text-slate-500">bags</span></span>
+              </div>
+            </div>
+
+            <!-- Save/Share/Copy Buttons (Compact Blue) -->
+            <div class="flex items-center gap-1.5">
+              <button type="button" id="btnSave" class="flex-1 flex items-center justify-center gap-1 py-2 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-[11px] sm:text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg>
+                Save
+              </button>
+              <button type="button" id="btnShare" class="flex-1 flex items-center justify-center gap-1 py-2 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-[11px] sm:text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                Share
+              </button>
+              <button type="button" id="btnCopy" class="flex-1 flex items-center justify-center gap-1 py-2 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-[11px] sm:text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                Copy
+              </button>
+            </div>
+
+          </div>
+        </div>
+        
+        <!-- Quick Tip -->
+        <p class="text-[10px] sm:text-xs text-slate-500 mt-2 text-center">
+          <strong>Pro Tip:</strong> For maximum stability, always dig the hole 3x wider than the post and below the frost line.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 4/10 will start here: First Ad Slot + Massive Content Part 1
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 4/10 — FIRST AD SLOT + MASSIVE CONTENT PART 1
+     Deep dive into post depth, hole size, and concrete math
+     ============================================================ -->
+<section class="bg-white py-10 sm:py-16 border-t border-slate-200">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Ad Space (Leaderboard) -->
+    <div class="mb-10">
+      <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[90px] flex items-center justify-center text-[10px] sm:text-xs text-slate-500 font-medium tracking-widest uppercase">
+        Ad Space — 728×90 / Responsive Leaderboard
+      </div>
+    </div>
+
+    <!-- Article Content Wrapper -->
+    <div class="prose prose-slate prose-base sm:prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-900 prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-xl">
+      
+      <p class="lead text-lg sm:text-xl text-ink-700 font-medium mb-6">
+        A fence is only as strong as its posts. Whether you are building a small garden fence or a 6-foot privacy fence, the posts must be anchored deep enough and set in enough concrete to withstand wind, frost, and the weight of the panels. If you under-concrete your posts, the fence will lean, sag, or completely blow over within a few years.
+      </p>
+
+      <p>
+        The most common question we hear is: <strong>"How much concrete do I need per fence post?"</strong> The answer depends on three factors: the size of the post, the diameter of the hole, and how deep you dig. This guide walks through the exact math, frost line requirements (US, UK, AU), and the concrete mixes used by professional fence contractors.
+      </p>
+
+      <h3 class="mt-8">1. The Golden Rule of Fence Post Holes</h3>
+      <p>
+        Before calculating concrete, you must determine the hole size. The two golden rules of fence post installation are:
+      </p>
+      <ul>
+        <li><strong>The 1/3 Rule:</strong> One-third of the post's total length should be underground. For a 6-foot fence using an 8-foot post, 2 feet goes in the ground.</li>
+        <li><strong>The 3x Rule:</strong> The hole diameter should be 3 times the width of the post. For a 4x4 post (which is actually 3.5" wide), the hole should be about 10 to 12 inches in diameter. This provides a stable "bell" of concrete that resists frost heave and wind uplift.</li>
+      </ul>
+
+      <!-- Hole Size Table -->
+      <div class="my-6 not-prose rounded-xl border border-slate-200 bg-white overflow-hidden shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left">
+            <thead class="bg-slate-50 border-b border-slate-200">
+              <tr>
+                <th class="px-3 py-2 font-display font-bold text-ink-900">Post Size</th>
+                <th class="px-3 py-2 font-display font-bold text-ink-900">Min Hole Dia.</th>
+                <th class="px-3 py-2 font-display font-bold text-ink-900">Concrete (30" deep)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-ink-700">
+              <tr>
+                <td class="px-3 py-2 font-mono font-semibold">4x4 (3.5")</td>
+                <td class="px-3 py-2 font-mono">10 inches</td>
+                <td class="px-3 py-2 font-mono">2 bags (50lb)</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-3 py-2 font-mono font-semibold">4x4 (3.5")</td>
+                <td class="px-3 py-2 font-mono">12 inches</td>
+                <td class="px-3 py-2 font-mono">3 bags (50lb)</td>
+              </tr>
+              <tr>
+                <td class="px-3 py-2 font-mono font-semibold">6x6 (5.5")</td>
+                <td class="px-3 py-2 font-mono">12 inches</td>
+                <td class="px-3 py-2 font-mono">3 bags (50lb)</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-3 py-2 font-mono font-semibold">6x6 (5.5")</td>
+                <td class="px-3 py-2 font-mono">14 inches</td>
+                <td class="px-3 py-2 font-mono">4 bags (50lb)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p>
+        <strong>The Formula:</strong> Volume of cylinder = π × r² × h. For a 10-inch hole that is 30 inches deep: r = 5, h = 30. Volume = 3.14 × 25 × 30 = 2,355 cubic inches. Divide by 1,728 (cubic inches in a cubic foot) = 1.36 cubic feet. A 50lb bag of fast-setting concrete yields about 0.37 cubic feet, so 1.36 / 0.37 = <strong>3.6 bags</strong>. (We round up to 4 for waste).
+      </p>
+
+      <!-- Ad Space (In-Article) -->
+      <div class="my-8 not-prose">
+        <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[250px] flex items-center justify-center text-xs sm:text-sm text-slate-500 font-medium tracking-widest uppercase">
+          Ad Space — In-Article Rectangle
+        </div>
+      </div>
+
+      <h3 class="mt-8">2. The Frost Line: The Most Critical Factor</h3>
+      <p>
+        If you live in a cold climate, you cannot just dig a hole 2 feet deep and call it done. The ground freezes in winter, expands, and pushes the post upward. This is called "frost heave." To prevent it, your post hole must be dug below the <strong>frost line</strong>.
+      </p>
+      
+      <h4>US Frost Lines</h4>
+      <ul>
+        <li><strong>Southern States (FL, TX, AZ):</strong> 6-12 inches.</li>
+        <li><strong>Mid-Atlantic (VA, MD, PA):</strong> 24-36 inches.</li>
+        <li><strong>Northern States (NY, MN, ME):</strong> 48+ inches.</li>
+        <li><strong>Mountain West (CO, UT):</strong> 36-48 inches.</li>
+      </ul>
+
+      <h4>UK and Australian Frost Lines</h4>
+      <p>
+        The UK rarely experiences deep frost, but the standard practice is to dig fence post holes <strong>600mm (24 inches)</strong> deep. In Australia, frost is only an issue in the Australian Alps and Tasmania. For most of AU, a depth of <strong>600mm to 900mm</strong> is used based on wind load requirements.
+      </p>
+
+      <h3 class="mt-8">3. Concrete Types: Fast-Setting vs. Standard</h3>
+      <p>
+        You should never use standard mortar mix or pure cement to set fence posts. You need either fast-setting concrete or a standard concrete mix.
+      </p>
+      
+      <h4>Fast-Setting Concrete (e.g., Quikrete Fast-Setting)</h4>
+      <p>
+        The most popular choice for DIY fence posts. You pour the dry mix into the hole, add water, and it hardens in 20-40 minutes. No mixing required. Each 50lb bag yields about 0.37 cubic feet of concrete. This is the standard for residential fences.
+      </p>
+
+      <h4>Standard Concrete Mix (e.g., Quikrete Concrete Mix)</h4>
+      <p>
+        Requires you to mix the concrete in a wheelbarrow with water before pouring. It sets in 24 hours and has a higher compressive strength. Best for commercial fences or very heavy gates.
+      </p>
+
+      <h4>Gravel and Packed Soil</h4>
+      <p>
+        Some contractors use compacted gravel instead of concrete. This allows water to drain away from the post, reducing rot. However, gravel provides less lateral support against wind. It is often used in the UK for wooden posts and is increasingly popular in the US for privacy fences in wet climates.
+      </p>
+
+      <h3 class="mt-8">4. Setting the Posts: Best Practices</h3>
+      <ol>
+        <li><strong>Call 811 (Before You Dig):</strong> In the US, call 811 to have underground utilities marked. Hitting a gas or power line while digging is deadly.</li>
+        <li><strong>Dig Deeper Than You Need:</strong> Add 6 inches to your calculated depth to account for a gravel base (for drainage).</li>
+        <li><strong>Add Gravel First:</strong> Put 6 inches of gravel at the bottom of the hole. This drains water away from the bottom of the post.</li>
+        <li><strong>Set the Post with Wood Blocks:</strong> Use scrap wood to hold the post plumb (straight) and level while the concrete hardens.</li>
+        <li><strong>Crown the Concrete:</strong> Slope the concrete slightly away from the post so water runs off, not toward it.</li>
+        <li><strong>Leave a Gap:</strong> The bottom of the post should sit on the gravel, not directly on the concrete. Concrete is porous; if the post sits directly in concrete, the water in the concrete will rot the wood.</li>
+      </ol>
+      
+      <hr class="my-8 border-slate-200">
+      
+      <p class="text-base text-slate-700">
+        <em>Continue reading below as we dive into regional fence post standards (US vs UK vs AU), the difference between treated wood and cedar posts, and cost estimation.</em>
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 5/10 will start here: Content Part 2 (Regional, Wood Types & Conclusion)
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 5/10 — MASSIVE CONTENT PART 2 & CONCLUSION
+     Wood Types, Regional Standards, Costing, and Conclusion
+     ============================================================ -->
+<section class="bg-white py-10 sm:py-16 border-t border-slate-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Article Content Wrapper (Continued) -->
+    <div class="prose prose-slate prose-base sm:prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-900 prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-xl">
+      
+      <h3 class="mt-8">5. Choosing the Right Wood for Fence Posts</h3>
+      <p>
+        The concrete you pour is only half the equation. The post itself must be capable of surviving decades of ground contact. 
+      </p>
+
+      <h4>Pressure-Treated Pine (US/UK)</h4>
+      <p>
+        The standard choice. Look for posts rated <strong>"Ground Contact"</strong> or <strong>UC4B</strong> (in the US). This means the wood is chemically treated to resist rot and termites when buried. Standard treated wood (above-ground rating) will rot within 3-5 years if placed in the ground. <em>Never use untreated pine for fence posts.</em>
+      </p>
+
+      <h4>Cedar and Redwood (US)</h4>
+      <p>
+        Naturally rot-resistant. Cedar posts can last 15-20 years in the ground without chemical treatment. However, they are more expensive and softer than treated pine. They are best used for decorative fences where the wood grain will be visible.
+      </p>
+
+      <h4>Concrete Posts (UK/AU)</h4>
+      <p>
+        In the UK and Australia, it is very common to use <strong>concrete posts</strong> (often called concrete spurs or concrete fence posts). These are slotted to hold wooden fence panels. They never rot, are extremely strong, and require less concrete to set because they are heavier. UK concrete posts are often set in a mix of gravel and concrete for drainage.
+      </p>
+
+      <h4>Metal Posts (Global)</h4>
+      <p>
+        Steel or aluminum posts are increasingly popular in the US for modern privacy fences. They are set in concrete just like wood posts but never rot. They require a specific bracket to attach wood fence panels. They cost more upfront but last 50+ years.
+      </p>
+
+      <h3 class="mt-8">6. Regional Fence Post Standards</h3>
+      
+      <h4>United States (IRC)</h4>
+      <p>
+        The <strong>International Residential Code (IRC)</strong> dictates fence height and post depth. Most municipalities limit residential fence height to 6 feet in the backyard and 4 feet in the front yard. For posts, the IRC requires that the post be embedded at least <strong>1/3 of its total length</strong> below grade. For a 6-foot fence (8-foot post), that means a 2-foot hole minimum. In frost zones, the hole must extend below the frost line.
+      </p>
+
+      <h4>United Kingdom (Building Regulations)</h4>
+      <p>
+        UK fences generally do not need planning permission if they are under <strong>2 meters (6.5 feet)</strong> high. Posts are typically set at <strong>600mm (2 feet)</strong> deep in a 300mm (12 inch) diameter hole. UK contractors often use a mix of gravel and concrete (called "postcrete" in some regions) to allow drainage, which is critical in the UK's wet climate.
+      </p>
+
+      <h4>Australia (AS 1926)</h4>
+      <p>
+        Australian fences must comply with local council rules, often limited to <strong>1.8 meters (5.9 feet)</strong>. Fence posts are set in concrete at <strong>600-900mm</strong> depth, depending on the wind zone. Coastal areas require stainless steel or hot-dipped galvanized fasteners to prevent rust. Pool fences are strictly regulated under AS 1926 (no climbable surfaces, self-closing gates).
+      </p>
+
+      <!-- In-Article Ad Slot -->
+      <div class="my-8 not-prose">
+        <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[250px] flex items-center justify-center text-xs sm:text-sm text-slate-500 font-medium tracking-widest uppercase">
+          Ad Space — In-Article Rectangle
+        </div>
+      </div>
+
+      <h3 class="mt-8">7. Cost Estimation</h3>
+      <p>
+        Fence posts and concrete are a small portion of the total fence cost, but getting them wrong is the most expensive mistake.
+      </p>
+      
+      <h4>Material Costs</h4>
+      <ul>
+        <li><strong>4x4x8 Treated Post (US):</strong> $10 to $20 per post.</li>
+        <li><strong>6x6x8 Treated Post (US):</strong> $25 to $45 per post.</li>
+        <li><strong>50lb Fast-Setting Concrete (US):</strong> $6 to $10 per bag. (You need 2-3 bags per post).</li>
+        <li><strong>UK Concrete Post:</strong> £15 to £30 per post.</li>
+        <li><strong>AU Treated Post:</strong> AUD $20 to $40 per post.</li>
+      </ul>
+
+      <h4>Labor Costs</h4>
+      <p>
+        Setting posts is hard, backbreaking work. If you hire a contractor to dig and set posts, expect to pay:
+      </p>
+      <ul>
+        <li><strong>US:</strong> $25 to $50 per post (installed).</li>
+        <li><strong>UK:</strong> £30 to £60 per post (installed).</li>
+        <li><strong>Australia:</strong> AUD $40 to $80 per post (installed).</li>
+      </ul>
+
+      <h3 class="mt-8">8. Common Fence Post Mistakes</h3>
+      <ol>
+        <li><strong>Not Digging Deep Enough:</strong> A shallow hole will lean or fall over after the first heavy rain or windstorm.</li>
+        <li><strong>Using the Wrong Concrete:</strong> Using standard mortar mix or pure cement will crumble. Use a proper concrete mix.</li>
+        <li><strong>Over-Concreting the Wood:</strong> If the concrete is above the soil line and the post has no barrier, water will sit against the wood and rot it.</li>
+        <li><strong>Forgetting the Gravel Base:</strong> Without a drainage layer, water pools at the bottom of the hole and rots the post from the inside out.</li>
+        <li><strong>Not Calling 811 (US):</strong> Hitting a gas line while digging a fence post hole is a catastrophic and dangerous mistake.</li>
+      </ol>
+      
+      <p>
+        By using our calculator to precisely estimate your concrete and following these best practices, you can build a fence that will stand strong for decades.
+      </p>
+
+      <!-- Conclusion Box -->
+      <div class="mt-8 p-5 sm:p-8 bg-gradient-to-br from-ink-900 to-ink-950 rounded-2xl border border-ink-800 not-prose relative overflow-hidden shadow-lg">
+        <div class="absolute -top-20 -right-20 w-64 h-64 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="relative">
+          <h4 class="font-display font-bold text-white text-lg sm:text-xl mb-2.5">Ready to set your fence posts?</h4>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-5 max-w-2xl">
+            Use our Fence Post Calculator to instantly generate the exact number of concrete bags and required depth for your posts, complete with frost line considerations.
+          </p>
+          <div class="flex flex-wrap gap-2.5">
+            <a href="#main-content" class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-brand-500 text-white text-sm font-semibold hover:bg-brand-400 transition-colors shadow-sm">
+              Back to Calculator <span class="ml-1" aria-hidden="true">↑</span>
+            </a>
+            <a href="/calculators.html" class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 text-white text-sm font-semibold transition-colors">
+              Browse All Tools
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 6/10 will start here: FAQ (Numbered Card Style) & Schema
+     ============================================================ -->
+
+        <!-- ============================================================
+     PHASE 6/10 — FAQ (Numbered Card Style, Wider Layout) & SCHEMA
+     Fence Post specific questions with minimalist UI
+     ============================================================ -->
+<section class="bg-slate-50 py-12 sm:py-20 border-t border-slate-200">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-8 sm:mb-12">
+      <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-ink-900 tracking-tight">Fence Post Questions Answered</h2>
+      <p class="text-sm sm:text-base text-ink-700 mt-2">Common questions about post depth, concrete quantity, and frost lines.</p>
+    </div>
+
+    <!-- FAQ Accordion Cards -->
+    <div class="space-y-3">
+      
+      <!-- FAQ 1 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">01</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How much concrete do I need per fence post?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          For a standard 4x4 post set in a 10-inch diameter hole that is 30 inches deep, you will need approximately <strong>2 to 3 bags of 50lb fast-setting concrete</strong> (or 1-2 bags of 80lb). If your hole is deeper due to a frost line, or if you are using a 6x6 post, you may need 3 to 5 bags per post.
+        </div>
+      </details>
+
+      <!-- FAQ 2 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">02</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How deep should I dig fence post holes?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          The universal rule is that <strong>1/3 of the post</strong> should be underground. For a 6-foot fence (8-foot post), 2 feet goes in the ground. However, in cold climates (Northern US, Canada), you must dig below the <strong>frost line</strong> (often 36 to 48 inches) to prevent the ground from freezing and pushing the post up during winter. In the UK and AU, a minimum depth of 600mm (2 feet) is standard.
+        </div>
+      </details>
+
+      <!-- FAQ 3 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">03</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">Should I put gravel at the bottom of the post hole?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          <strong>Yes, absolutely.</strong> Put 4 to 6 inches of gravel at the bottom of the hole. This serves two purposes: it provides drainage so water does not pool around the bottom of the post (causing rot), and it prevents the post from sitting directly on concrete. If you pour concrete directly under the post, water will travel down the post and sit in the concrete, rotting the wood from the inside out.
+        </div>
+      </details>
+
+      <!-- FAQ 4 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">04</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">What is the best concrete for setting fence posts?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          <strong>Fast-setting concrete</strong> (like Quikrete Fast-Setting or Postcrete in the UK) is the best choice for DIY fence posts. You pour the dry mix into the hole, add water, and it hardens in 20-40 minutes. It is strong, requires no mixing, and eliminates the risk of a watery mix. Avoid using pure cement or mortar mix, as these will crack and crumble when exposed to soil moisture.
+        </div>
+      </details>
+
+      <!-- FAQ 5 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">05</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How long does concrete take to set for a fence post?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          Fast-setting concrete sets hard in <strong>20 to 40 minutes</strong>. Standard mixed concrete sets in <strong>24 hours</strong>. However, you should wait at least 24-48 hours before attaching heavy fence panels to the posts to allow the concrete to fully cure. Avoid disturbing the posts during this time.
+        </div>
+      </details>
+
+      <!-- FAQ 6 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">06</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How do I prevent my fence posts from rotting?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          Use <strong>ground-contact rated pressure-treated wood</strong> (UC4B in the US). Add a gravel base for drainage. Slope the concrete away from the post (crown it). Some contractors also wrap the bottom of the post in a post protector sleeve. Never use untreated wood for fence posts, and never let soil or concrete sit above the top of the concrete line.
+        </div>
+      </details>
+
+      <!-- FAQ 7 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">07</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">Can I use gravel instead of concrete for fence posts?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          <strong>Yes, but with caveats.</strong> Compacted gravel (like 3/4" crushed stone) provides excellent drainage and is used widely in the UK and wet climates to prevent rot. However, gravel offers less lateral support against strong winds and heavier fences. If you use gravel, you must compact it in 6-inch layers with a tamper, and it is best for low fences or decorative fences. For a 6-foot privacy fence, concrete is stronger.
+        </div>
+      </details>
+
+    </div>
+
+    <!-- Still have a question CTA -->
+    <div class="mt-8 text-center">
+      <p class="text-sm text-ink-700">
+        Still have a question? Email <a href="mailto:contact@buildmetric.org" class="text-brand-600 font-semibold hover:underline">contact@buildmetric.org</a> — every message is read by a real person.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQPage JSON-LD SCHEMA (Matches exactly with HTML above)
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much concrete do I need per fence post?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For a standard 4x4 post set in a 10-inch diameter hole that is 30 inches deep, you will need approximately 2 to 3 bags of 50lb fast-setting concrete (or 1-2 bags of 80lb). If your hole is deeper due to a frost line, or if you are using a 6x6 post, you may need 3 to 5 bags per post." }
+    },
+    {
+      "@type": "Question",
+      "name": "How deep should I dig fence post holes?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The universal rule is that 1/3 of the post should be underground. For a 6-foot fence using an 8-foot post, 2 feet goes in the ground. However, in cold climates, you must dig below the frost line (often 36 to 48 inches). In the UK and Australia, a minimum depth of 600mm is standard." }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I put gravel at the bottom of the post hole?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, absolutely. Put 4 to 6 inches of gravel at the bottom of the hole. This provides drainage so water does not pool around the bottom of the post, and it prevents the post from sitting directly on concrete, which can cause the wood to rot." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best concrete for setting fence posts?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Fast-setting concrete (like Quikrete Fast-Setting or Postcrete) is the best choice for DIY fence posts. You pour the dry mix into the hole, add water, and it hardens in 20-40 minutes. Avoid using pure cement or mortar mix, as these will crack and crumble." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does concrete take to set for a fence post?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Fast-setting concrete sets hard in 20 to 40 minutes. Standard mixed concrete sets in 24 hours. However, you should wait at least 24-48 hours before attaching heavy fence panels to the posts to allow the concrete to fully cure." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I prevent my fence posts from rotting?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use ground-contact rated pressure-treated wood. Add a gravel base for drainage. Slope the concrete away from the post. Some contractors also wrap the bottom of the post in a post protector sleeve. Never use untreated wood for fence posts." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use gravel instead of concrete for fence posts?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, but with caveats. Compacted gravel provides excellent drainage and is used widely in wet climates to prevent rot. However, gravel offers less lateral support against strong winds. For a 6-foot privacy fence, concrete is stronger." }
+    }
+  ]
+}
+</script>
+
+<!-- ============================================================
+     Phase 7/10 will start here: E-E-A-T Box + Related Tools
+     ============================================================ -->
+
+  <!-- ============================================================
+     PHASE 7/10 — E-E-A-T EDITORIAL BOX & RELATED CONTENT
+     ============================================================ -->
+
+<!-- E-E-A-T Directory Info Box -->
+<section class="bg-slate-50 border-t border-slate-200 py-12 sm:py-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+      
+      <!-- Card Header (Dark Premium Look) -->
+      <div class="bg-ink-900 px-5 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-6 h-6 rounded bg-white/10 flex items-center justify-center">
+            <svg class="w-3.5 h-3.5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-slate-200">About our calculators</span>
+        </div>
+        <span class="hidden sm:block text-[10px] font-bold uppercase tracking-widest text-slate-500">Engineer-Reviewed</span>
+      </div>
+
+      <!-- Card Body -->
+      <div class="p-5 sm:p-8 md:p-10">
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-10">
+          
+          <!-- Left Column: Description -->
+          <div class="lg:col-span-7">
+            <div class="flex items-center gap-3 mb-2 sm:mb-3">
+              <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-500 flex items-center justify-center shrink-0 shadow-sm">
+                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              </div>
+              <div>
+                <h2 class="font-display font-extrabold text-lg sm:text-2xl text-ink-900 tracking-tight">BuildMetric Engineering</h2>
+                <p class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-brand-600 mt-0.5">
+                  Calculators &amp; Estimating Tools
+                </p>
+              </div>
+            </div>
+            
+            <p class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-4 sm:mb-6 pl-[52px] sm:pl-[60px]">
+              Verified Formulas · Code-Aware
+            </p>
+
+            <div class="text-sm sm:text-[15px] text-ink-700 leading-relaxed space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+              <p>
+                Every calculator in this directory is built from formulas that can be derived from first principles. We do not guess. We test every tool against reference cases in both imperial and metric units before it is published.
+              </p>
+              <p>
+                More importantly, our tools are reviewed by quantity surveyors, structural engineers, and licensed contractors. We know that a calculation error on site costs money and compromises safety, so we treat accuracy as a structural requirement, not a feature.
+              </p>
+            </div>
+
+            <ul class="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-xs sm:text-sm text-ink-700"><strong class="text-ink-900">Human-verified.</strong> Reviewed by practising professionals, not AI.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-xs sm:text-sm text-ink-700"><strong class="text-ink-900">Stateless maths.</strong> Your inputs run in your browser, never on our servers.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-xs sm:text-sm text-ink-700"><strong class="text-ink-900">Always free.</strong> No sign-ups, no paywalls, no trials. Just the tools.</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-3">
+              <a href="mailto:contact@buildmetric.org" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-ink-900 text-white text-xs sm:text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                Report an Error
+              </a>
+              <a href="/about.html" class="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 rounded-xl border border-slate-300 text-ink-900 text-xs sm:text-sm font-semibold hover:border-brand-500 hover:text-brand-600 transition-colors bg-white">
+                Our Methodology
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Directory Info & Disclaimer -->
+          <div class="lg:col-span-5 flex flex-col gap-3 sm:gap-4">
+            
+            <!-- Directory Info Box -->
+            <div class="bg-white rounded-xl border border-slate-200 p-4 sm:p-6 shadow-sm">
+              <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-3 sm:mb-4">Directory Info</h3>
+              <ul class="text-[11px] sm:text-sm space-y-2 sm:space-y-3">
+                <li class="flex justify-between items-center pb-2 sm:pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Total Tools</span>
+                  <span class="font-bold text-ink-900 text-right">Growing Library</span>
+                </li>
+                <li class="flex justify-between items-center pb-2 sm:pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Review Status</span>
+                  <span class="font-bold text-ink-900 text-right">100% Human-Reviewed</span>
+                </li>
+                <li class="flex justify-between items-center pb-2 sm:pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Regions</span>
+                  <span class="font-bold text-ink-900 text-right">US · UK · AU</span>
+                </li>
+                <li class="flex justify-between items-center">
+                  <span class="text-slate-500 font-medium">Cost</span>
+                  <span class="font-bold text-brand-600 text-right">Free Forever</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Disclaimer Box -->
+            <div class="bg-white rounded-xl border border-slate-200 p-4 sm:p-6 flex-1 shadow-sm">
+              <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2 sm:mb-3">Disclaimer</h3>
+              <p class="text-[11px] sm:text-sm text-ink-700 leading-relaxed">
+                Calculators are estimating aids, not a substitute for professional judgment. Always verify against your local code. See our <a href="/disclaimer.html" class="text-brand-600 font-semibold underline decoration-brand-300 underline-offset-2 hover:decoration-brand-500 transition-colors">Disclaimer</a>.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Related Tools & Guides Section -->
+<section class="bg-white py-12 sm:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Related Tools -->
+    <div class="mb-12 sm:mb-16">
+      <div class="flex items-center justify-between mb-4 sm:mb-6">
+        <h2 class="font-display font-extrabold text-xl sm:text-2xl text-ink-900 tracking-tight">Related Calculators</h2>
+        <a href="/calculators.html" class="text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors">View all tools →</a>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+        
+        <!-- Tool 1: Fence (Main) -->
+        <a href="/fence-calculator.html" class="group bg-white rounded-xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-3 sm:gap-4">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors">Fence Calculator</h3>
+            <p class="text-[10px] sm:text-xs text-slate-500 mt-0.5">Pickets, posts, rails</p>
+          </div>
+        </a>
+
+        <!-- Tool 2: Concrete -->
+        <a href="/concrete-calculator.html" class="group bg-white rounded-xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-3 sm:gap-4">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors">Concrete Calculator</h3>
+            <p class="text-[10px] sm:text-xs text-slate-500 mt-0.5">Volume, bags, slabs</p>
+          </div>
+        </a>
+
+        <!-- Tool 3: Deck -->
+        <a href="/deck-calculator.html" class="group bg-white rounded-xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-3 sm:gap-4">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 20h4v-4h4v-4h4V8h4"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors">Deck Calculator</h3>
+            <p class="text-[10px] sm:text-xs text-slate-500 mt-0.5">Boards, joists, footings</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Related Guides -->
+    <div>
+      <div class="flex items-center justify-between mb-4 sm:mb-6">
+        <h2 class="font-display font-extrabold text-xl sm:text-2xl text-ink-900 tracking-tight">Related Guides</h2>
+        <a href="/guides.html" class="text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors">View all guides →</a>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        
+        <!-- Guide 1 (Concrete Waste) -->
+        <a href="/guides/concrete-waste-allowance.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-24 sm:h-32 bg-gradient-to-br from-slate-700 to-slate-900 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-20 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+            </div>
+          </div>
+          <div class="p-3 sm:p-4 flex flex-col flex-1">
+            <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-600 bg-slate-100 px-2 py-0.5 sm:py-1 rounded self-start mb-2">Concrete</span>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">How Much Waste Should You Add to a Concrete Order?</h3>
+            <span class="text-[10px] sm:text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <!-- Guide 2 (Stud Spacing) -->
+        <a href="/guides/stud-spacing-by-code.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-24 sm:h-32 bg-gradient-to-br from-sky-400 to-sky-600 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+            </div>
+          </div>
+          <div class="p-3 sm:p-4 flex flex-col flex-1">
+            <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-sky-600 bg-sky-50 px-2 py-0.5 sm:py-1 rounded self-start mb-2">Framing</span>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Stud Spacing: IRC 2021 vs BS 5268 vs AS 1684 Compared</h3>
+            <span class="text-[10px] sm:text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <!-- Guide 3 (Roof Pitch) -->
+        <a href="/guides/roof-pitch-explained.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-24 sm:h-32 bg-gradient-to-br from-blue-400 to-blue-600 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            </div>
+          </div>
+          <div class="p-3 sm:p-4 flex flex-col flex-1">
+            <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-brand-600 bg-brand-50 px-2 py-0.5 sm:py-1 rounded self-start mb-2">Roofing</span>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Roof Pitch Explained: Why 6:12 and 26.57° Are the Same Roof</h3>
+            <span class="text-[10px] sm:text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 8/10 will start here: Premium Footer
+     ============================================================ -->
+
+  </main>
+
+<!-- ============================================================
+     PHASE 8/10 — COMPACT PREMIUM FOOTER (Short & Clean)
+     ============================================================ -->
+<footer class="bg-ink-950 text-slate-400 border-t border-slate-800 pt-10 pb-6">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Top Footer Grid (4 Columns) -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 mb-8">
+      
+      <!-- Column 1: Brand & Contact -->
+      <div class="col-span-2 md:col-span-1 pr-4">
+        <a href="/" class="inline-flex items-center gap-2 mb-3 group">
+          <img src="logo.png" alt="BuildMetric Logo" class="h-6 w-auto object-contain brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity" />
+          <span class="font-display font-extrabold text-base tracking-tight text-white hidden sm:block">
+            Build<span class="text-brand-500">Metric</span>
+          </span>
+        </a>
+        
+        <p class="text-[11px] sm:text-xs leading-relaxed mb-4 max-w-xs text-slate-400">
+          Independent construction calculators and estimating tools for professionals in the <strong class="text-slate-200">USA, UK</strong> and <strong class="text-slate-200">Australia</strong>.
+        </p>
+
+        <div class="space-y-1.5 mb-4">
+          <a href="mailto:contact@buildmetric.org" class="flex items-center gap-1.5 text-[11px] sm:text-xs hover:text-white transition-colors">
+            <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            contact@buildmetric.org
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2: Popular Tools (Shortened) -->
+      <div>
+        <h3 class="font-display font-bold text-white text-[11px] sm:text-xs uppercase tracking-widest mb-3">Popular Tools</h3>
+        <ul class="space-y-1.5 text-[11px] sm:text-xs">
+          <li><a href="/framing-calculator.html" class="hover:text-brand-400 transition-colors">Framing Calculator</a></li>
+          <li><a href="/roofing-calculator.html" class="hover:text-brand-400 transition-colors">Roofing Calculator</a></li>
+          <li><a href="/concrete-calculator.html" class="hover:text-brand-400 transition-colors">Concrete Calculator</a></li>
+          <li><a href="/deck-calculator.html" class="hover:text-brand-400 transition-colors">Deck Calculator</a></li>
+          <li><a href="/fence-post-calculator.html" class="hover:text-brand-400 transition-colors">Fence Post Calculator</a></li>
+          <li><a href="/calculators.html" class="text-brand-400 font-semibold mt-1 inline-block hover:underline">View All Tools →</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Company -->
+      <div>
+        <h3 class="font-display font-bold text-white text-[11px] sm:text-xs uppercase tracking-widest mb-3">Company</h3>
+        <ul class="space-y-1.5 text-[11px] sm:text-xs">
+          <li><a href="/about.html" class="hover:text-brand-400 transition-colors">About Us</a></li>
+          <li><a href="/guides.html" class="hover:text-brand-400 transition-colors">Guides</a></li>
+          <li><a href="/contact.html" class="hover:text-brand-400 transition-colors">Contact</a></li>
+          <li><a href="/sitemap.xml" class="hover:text-brand-400 transition-colors">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Legal & Compliance -->
+      <div>
+        <h3 class="font-display font-bold text-white text-[11px] sm:text-xs uppercase tracking-widest mb-3">Legal</h3>
+        <ul class="space-y-1.5 text-[11px] sm:text-xs">
+          <li><a href="/privacy.html" class="hover:text-brand-400 transition-colors">Privacy Policy</a></li>
+          <li><a href="/terms.html" class="hover:text-brand-400 transition-colors">Terms of Service</a></li>
+          <li><a href="/disclaimer.html" class="hover:text-brand-400 transition-colors">Disclaimer</a></li>
+          <li><a href="/cookie-policy.html" class="hover:text-brand-400 transition-colors">Cookie Policy</a></li>
+        </ul>
+        
+        <button id="cookieSettingsBtn" type="button" class="mt-3 inline-flex items-center gap-1.5 px-2 py-1 rounded border border-slate-700 bg-slate-800/50 hover:bg-slate-800 text-[10px] font-semibold text-slate-300 transition-colors">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          Cookie Settings
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-3 text-[10px]">
+      <p class="text-center md:text-left text-slate-500">
+        © 2026 BuildMetric. All rights reserved. <br class="sm:hidden">Operated from buildmetric.org.
+      </p>
+      <p class="text-center md:text-right text-slate-500">
+        Built for professionals. General info only — see <a href="/disclaimer.html" class="text-brand-500 hover:underline hover:text-brand-400 transition-colors">Disclaimer</a>.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ============================================================
+     Phase 9/10 will start here: Complete JavaScript Logic
+     ============================================================ -->
+
+    <!-- ============================================================
+       PHASE 9/10 — JAVASCRIPT (Calculator Logic & Menu)
+       ============================================================ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      /* ── 1. MOBILE MENU TOGGLE ── */
+      const menuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const openIcon = menuBtn ? menuBtn.querySelector('.menu-open-icon') : null;
+      const closeIcon = menuBtn ? menuBtn.querySelector('.menu-close-icon') : null;
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function () {
+          const isOpen = !mobileMenu.classList.contains('hidden');
+          mobileMenu.classList.toggle('hidden');
+          if(openIcon) openIcon.classList.toggle('hidden');
+          if(closeIcon) closeIcon.classList.toggle('hidden');
+          menuBtn.setAttribute('aria-expanded', String(!isOpen));
+        });
+      }
+
+      /* ── 2. ELEMENTS & STATE ── */
+      const btnImperial = document.getElementById('btnImperial');
+      const btnMetric = document.getElementById('btnMetric');
+      const unitLabels = document.querySelectorAll('.unit-label');
+      
+      const postSize = document.getElementById('postSize');
+      const holeDiameter = document.getElementById('holeDiameter');
+      const customHole = document.getElementById('customHole');
+      const holeDepth = document.getElementById('holeDepth');
+      const customDepth = document.getElementById('customDepth');
+      const concreteType = document.getElementById('concreteType');
+      const wasteFactor = document.getElementById('wasteFactor');
+      
+      const outBags = document.getElementById('outBags');
+      const outVolume = document.getElementById('outVolume');
+      const outTotal = document.getElementById('outTotal');
+      const outTen = document.getElementById('outTen');
+
+      let isMetric = false;
+
+      /* ── 3. CUSTOM INPUTS SHOW/HIDE ── */
+      holeDiameter.addEventListener('change', function() {
+        if (this.value === 'custom') {
+          customHole.classList.remove('hidden');
+          customHole.focus();
+        } else {
+          customHole.classList.add('hidden');
+          customHole.value = '';
+        }
+        calculate();
+      });
+
+      holeDepth.addEventListener('change', function() {
+        if (this.value === 'custom') {
+          customDepth.classList.remove('hidden');
+          customDepth.focus();
+        } else {
+          customDepth.classList.add('hidden');
+          customDepth.value = '';
+        }
+        calculate();
+      });
+
+      /* ── 4. UNIT TOGGLE (Imperial / Metric) ── */
+      function toggleUnits(metric) {
+        isMetric = metric;
+        
+        if (metric) {
+          btnMetric.classList.add('bg-white', 'shadow-sm', 'text-ink-900');
+          btnMetric.classList.remove('text-slate-500');
+          btnImperial.classList.remove('bg-white', 'shadow-sm', 'text-ink-900');
+          btnImperial.classList.add('text-slate-500');
+          
+          unitLabels.forEach(el => el.textContent = 'mm');
+          
+          holeDiameter.innerHTML = `
+            <option value="200">200 mm</option>
+            <option value="250" selected>250 mm</option>
+            <option value="300">300 mm</option>
+            <option value="custom">Custom...</option>
+          `;
+          holeDepth.innerHTML = `
+            <option value="600">600 mm (2 ft)</option>
+            <option value="750" selected>750 mm (2.5 ft)</option>
+            <option value="900">900 mm (3 ft)</option>
+            <option value="1200">1200 mm (4 ft)</option>
+            <option value="custom">Custom...</option>
+          `;
+          concreteType.innerHTML = `
+            <option value="25" selected>Fast-Setting (25kg)</option>
+            <option value="40">Standard (40kg)</option>
+          `;
+
+        } else {
+          btnImperial.classList.add('bg-white', 'shadow-sm', 'text-ink-900');
+          btnImperial.classList.remove('text-slate-500');
+          btnMetric.classList.remove('bg-white', 'shadow-sm', 'text-ink-900');
+          btnMetric.classList.add('text-slate-500');
+          
+          unitLabels.forEach(el => el.textContent = 'in');
+
+          holeDiameter.innerHTML = `
+            <option value="8">8 inches</option>
+            <option value="10" selected>10 inches</option>
+            <option value="12">12 inches</option>
+            <option value="custom">Custom...</option>
+          `;
+          holeDepth.innerHTML = `
+            <option value="24">24 inches (2 ft)</option>
+            <option value="30" selected>30 inches (2.5 ft)</option>
+            <option value="36">36 inches (3 ft)</option>
+            <option value="48">48 inches (4 ft)</option>
+            <option value="custom">Custom...</option>
+          `;
+          concreteType.innerHTML = `
+            <option value="50" selected>Fast-Setting (50lb)</option>
+            <option value="80">Standard (80lb)</option>
+          `;
+        }
+        calculate();
+      }
+
+      if(btnImperial && btnMetric) {
+        btnImperial.addEventListener('click', () => toggleUnits(false));
+        btnMetric.addEventListener('click', () => toggleUnits(true));
+      }
+
+      /* ── 5. CALCULATOR MATH LOGIC ── */
+      function calculate() {
+        const waste = parseFloat(wasteFactor.value) || 0.10;
+        const bagWeight = parseFloat(concreteType.value) || 50;
+        
+        let dia = parseFloat(holeDiameter.value);
+        if (holeDiameter.value === 'custom') {
+          dia = parseFloat(customHole.value) || 0;
+        }
+
+        let depth = parseFloat(holeDepth.value);
+        if (holeDepth.value === 'custom') {
+          depth = parseFloat(customDepth.value) || 0;
+        }
+
+        if (dia <= 0 || depth <= 0) {
+          outBags.textContent = '0';
+          outVolume.innerHTML = `0 <span class="text-[10px] text-slate-500">${isMetric ? 'L' : 'cu ft'}</span>`;
+          outTotal.innerHTML = `0 <span class="text-[10px] text-slate-500">${isMetric ? 'L' : 'cu ft'}</span>`;
+          outTen.innerHTML = `0 <span class="text-[10px] text-slate-500">bags</span>`;
+          return;
+        }
+
+        // 1. Calculate Volume of Cylinder (Hole)
+        // Imperial: Volume = π * r^2 * h (cubic inches). Divide by 1728 to get cubic feet.
+        // Metric: Volume = π * r^2 * h (cubic mm). Divide by 1,000,000 to get Liters.
+        
+        let volumeInUnits = 0;
+        let radius = dia / 2;
+
+        if (isMetric) {
+          // Diameter and depth in mm
+          let volMm3 = Math.PI * radius * radius * depth;
+          volumeInUnits = volMm3 / 1000000; // Liters
+        } else {
+          // Diameter and depth in inches
+          let volIn3 = Math.PI * radius * radius * depth;
+          volumeInUnits = volIn3 / 1728; // Cubic Feet
+        }
+
+        // 2. Yield per bag
+        let yieldPerBag = 0;
+        if (isMetric) {
+          // 25kg bag yields ~12 Liters
+          yieldPerBag = bagWeight === 25 ? 12 : 20;
+        } else {
+          // 50lb bag yields ~0.37 cu ft; 80lb yields ~0.60 cu ft
+          yieldPerBag = bagWeight === 50 ? 0.37 : 0.60;
+        }
+
+        // 3. Calculate Bags
+        let volumeWithWaste = volumeInUnits * (1 + waste);
+        let totalBags = Math.ceil(volumeWithWaste / yieldPerBag);
+
+        // 4. Calculate Bags for 10 posts
+        let bagsTen = totalBags * 10;
+
+        // --- UPDATE UI ---
+        outBags.textContent = totalBags;
+        outVolume.innerHTML = `${volumeInUnits.toFixed(2)} <span class="text-[10px] text-slate-500">${isMetric ? 'L' : 'cu ft'}</span>`;
+        outTotal.innerHTML = `${volumeWithWaste.toFixed(2)} <span class="text-[10px] text-slate-500">${isMetric ? 'L' : 'cu ft'}</span>`;
+        outTen.innerHTML = `${bagsTen} <span class="text-[10px] text-slate-500">bags</span>`;
+      }
+
+      // Trigger calculation on any input change
+      const inputs = [postSize, holeDiameter, customHole, holeDepth, customDepth, concreteType, wasteFactor];
+      inputs.forEach(input => {
+        if(input) {
+          input.addEventListener('input', calculate);
+          input.addEventListener('change', calculate);
+        }
+      });
+
+      // Initial run
+      calculate();
+
+      /* ── 6. SAVE, SHARE, COPY ACTIONS ── */
+      const btnSave = document.getElementById('btnSave');
+      const btnShare = document.getElementById('btnShare');
+      const btnCopy = document.getElementById('btnCopy');
+
+      const getResultText = () => {
+        return `Fence Post Estimate:\n` +
+               `- Bags Per Post: ${outBags.textContent}\n` +
+               `- Volume Per Post: ${outVolume.textContent}\n` +
+               `- Volume with Waste: ${outTotal.textContent}\n` +
+               `- Bags for 10 Posts: ${outTen.textContent}\n` +
+               `Calculated via BuildMetric.org`;
+      };
+
+      // Save
+      if(btnSave) {
+        btnSave.addEventListener('click', () => {
+          const data = {
+            p: postSize.value, d: holeDiameter.value, cd: customHole.value,
+            h: holeDepth.value, ch: customDepth.value,
+            c: concreteType.value, w: wasteFactor.value, metric: isMetric
+          };
+          localStorage.setItem('buildmetric_fence_post_data', JSON.stringify(data));
+          alert('Estimate saved to your browser!');
+        });
+      }
+
+      // Share
+      if(btnShare && navigator.share) {
+        btnShare.addEventListener('click', () => {
+          navigator.share({
+            title: 'Fence Post Calculator Estimate',
+            text: getResultText(),
+            url: window.location.href
+          }).catch(console.error);
+        });
+      } else if (btnShare) {
+        btnShare.addEventListener('click', () => {
+          alert('Sharing is not supported on this browser. Use Copy instead.');
+        });
+      }
+
+      // Copy
+      if(btnCopy) {
+        btnCopy.addEventListener('click', () => {
+          navigator.clipboard.writeText(getResultText()).then(() => {
+            const originalHTML = btnCopy.innerHTML;
+            btnCopy.innerHTML = '<svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> Copied!';
+            setTimeout(() => { btnCopy.innerHTML = originalHTML; }, 2000);
+          }).catch(() => {
+            alert('Failed to copy. Please select text manually.');
+          });
+        });
+      }
+
+      // Cookie settings placeholder
+      const cookieBtn = document.getElementById('cookieSettingsBtn');
+      if(cookieBtn) {
+        cookieBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          alert('Cookie settings panel will open here.');
+        });
+      }
+
+    });
+  </script>
+
+  <!-- ============================================================
+       PHASE 10/10 — CLOSING TAGS
+       ============================================================ -->
+</body>
+</html>
+  
