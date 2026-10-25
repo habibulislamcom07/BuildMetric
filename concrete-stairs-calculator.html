@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- ============================================================
+       PHASE 1/10 — SEO HEAD & CONFIGURATION (Concrete Category)
+       File: concrete-stairs-calculator.html
+       Brand: BuildMetric | Domain: buildmetric.org
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO Meta (Long-Tail Keywords) -->
+  <title>Concrete Stairs Calculator | How Many Yards Do I Need? | BuildMetric</title>
+  <meta name="description" content="Free concrete stairs calculator to estimate the volume of concrete needed for a staircase. Accounts for step dimensions, landings, and waste. Works for US, UK, and AU projects." />
+  <meta name="keywords" content="concrete stairs calculator, how many yards of concrete for stairs, concrete stair volume calculator, staircase concrete estimator, concrete steps calculator" />
+  <meta name="author" content="BuildMetric Editorial Team" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#0ea5e9" />
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://buildmetric.org/concrete-stairs-calculator.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BuildMetric" />
+  <meta property="og:title" content="Concrete Stairs Calculator | Estimate Volume" />
+  <meta property="og:description" content="Calculate exact concrete volume for your staircase steps and landings." />
+  <meta property="og:url" content="https://buildmetric.org/concrete-stairs-calculator.html" />
+  <meta property="og:image" content="https://buildmetric.org/assets/og/concrete-stairs-calculator.png" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Concrete Staircase Calculator | BuildMetric" />
+  <meta name="twitter:description" content="Estimate exact concrete yards for stairs and landings." />
+  <meta name="twitter:image" content="https://buildmetric.org/assets/og/concrete-stairs-calculator.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e' },
+            ink: { 700: '#334155', 800: '#1e293b', 900: '#0f172a', 950: '#080f1e' }
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: {
+            'soft': '0 4px 20px -2px rgba(15,23,42,0.05)',
+            'hover': '0 12px 32px -8px rgba(14,165,233,0.15)',
+            'glass': '0 4px 24px -4px rgba(15,23,42,0.08)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+    .bg-grid-pattern {
+      background-image: linear-gradient(to right, rgba(15,23,42,0.04) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(15,23,42,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .nav-glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); }
+    details > summary .icon-plus { transition: transform 0.3s ease; }
+    details[open] > summary .icon-plus { transform: rotate(45deg); }
+    details > summary::-webkit-details-marker { display: none; }
+  </style>
+
+  <!-- ================= JSON-LD SCHEMA ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://buildmetric.org/concrete-stairs-calculator.html#app",
+        "name": "Concrete Stairs Volume Calculator",
+        "url": "https://buildmetric.org/concrete-stairs-calculator.html",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "All",
+        "description": "Calculate the volume of concrete required for a staircase with multiple steps and landings.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://buildmetric.org/concrete-stairs-calculator.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://buildmetric.org/" },
+          { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://buildmetric.org/calculators.html" },
+          { "@type": "ListItem", "position": 3, "name": "Concrete", "item": "https://buildmetric.org/concrete.html" },
+          { "@type": "ListItem", "position": 4, "name": "Concrete Stairs Calculator", "item": "https://buildmetric.org/concrete-stairs-calculator.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+  <body class="bg-white text-ink-800 antialiased font-sans flex flex-col min-h-screen">
+
+  <!-- ============================================================
+       SKIP LINK (Accessibility)
+       ============================================================ -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2.5 focus:bg-brand-500 focus:text-white focus:rounded-lg focus:font-semibold focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/70">
+    Skip to main content
+  </a>
+
+  <!-- ============================================================
+       STICKY NAVBAR (Compact & Mobile Friendly)
+       ============================================================ -->
+  <header class="sticky top-0 z-50 nav-glass border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-14 sm:h-16 lg:h-20">
+        
+        <!-- Logo -->
+        <div class="flex items-center gap-6">
+          <a href="/" class="flex items-center gap-2.5 shrink-0" aria-label="BuildMetric Home">
+            <img src="logo.png" alt="BuildMetric Logo" class="h-7 sm:h-9 w-auto object-contain" />
+            <span class="font-display font-extrabold text-lg sm:text-xl tracking-tight text-ink-900 hidden sm:block">
+              Build<span class="text-brand-500">Metric</span>
+            </span>
+          </a>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden lg:flex items-center gap-1" aria-label="Main Navigation">
+            <a href="/calculators.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Calculators</a>
+            <a href="/guides.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Guides</a>
+            <a href="/about.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">About</a>
+            <a href="/contact.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Contact</a>
+          </nav>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <a href="/calculators.html" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-lg bg-ink-900 text-white text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+            Open Tools
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuBtn" type="button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-200 text-ink-800 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand-500/40 transition-colors" aria-expanded="false" aria-controls="mobileMenu">
+            <span class="sr-only">Open main menu</span>
+            <svg class="menu-open-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <svg class="menu-close-icon hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu (Compact) -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 bg-white">
+      <div class="px-3 py-3 space-y-1">
+        <a href="/calculators.html" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Calculators</a>
+        <a href="/guides.html" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Guides</a>
+        <a href="/about.html" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-ink-900 hover:bg-slate-50 transition-colors">About</a>
+        <a href="/contact.html" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main id="main-content" class="flex-grow">
+    
+    <!-- ============================================================
+         PAGE HEADER & BREADCRUMBS (Compact)
+         ============================================================ -->
+    <div class="bg-slate-50 border-b border-slate-200 pt-4 pb-5 sm:pt-6 sm:pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="Breadcrumb" class="mb-2 sm:mb-4">
+          <ol class="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-[11px] sm:text-sm text-slate-500">
+            <li><a href="/" class="hover:text-brand-600 transition-colors">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/calculators.html" class="hover:text-brand-600 transition-colors">Calculators</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/concrete.html" class="hover:text-brand-600 transition-colors">Concrete</a></li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page" class="text-ink-900 font-semibold">Concrete Stairs Calculator</li>
+          </ol>
+        </nav>
+
+        <!-- Page Title & Subtitle -->
+        <h1 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-ink-900 tracking-tight leading-tight">
+          Concrete Stairs Calculator
+        </h1>
+        <p class="text-xs sm:text-sm md:text-base text-ink-700 mt-1 max-w-2xl leading-relaxed">
+          Calculate exactly how many cubic yards of concrete you need for your stairs. Accounts for step dimensions, landings, and waste factor for US, UK, and AU projects.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- ============================================================
+         Phase 3/10 will start here: The Compact Calculator UI
+         ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 3/10 — THE CALCULATOR UI
+     Concrete Stairs specific inputs and result box
+     ============================================================ -->
+<section class="bg-white py-6 sm:py-12">
+  <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-10">
+      
+      <!-- Left Column: Form Inputs (7/12) -->
+      <div class="lg:col-span-7">
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-6">
+          
+          <!-- Unit Toggle (Compact) -->
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="font-display font-bold text-lg text-ink-900">Stair Details</h2>
+            <div class="flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200">
+              <button type="button" id="btnImperial" class="px-2.5 py-1 text-[11px] sm:text-xs font-semibold rounded-md bg-white shadow-sm text-ink-900 transition-all">Imperial (in)</button>
+              <button type="button" id="btnMetric" class="px-2.5 py-1 text-[11px] sm:text-xs font-semibold rounded-md text-slate-500 hover:text-ink-900 transition-all">Metric (cm)</button>
+            </div>
+          </div>
+
+          <!-- Number of Steps & Landing -->
+          <div class="grid grid-cols-2 gap-3 mb-4">
+            <div>
+              <label for="numSteps" class="block text-xs font-semibold text-ink-900 mb-1">Number of Steps</label>
+              <input type="number" id="numSteps" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow text-sm" placeholder="e.g. 5" min="1" step="1" value="4">
+            </div>
+            <div>
+              <label for="hasLanding" class="block text-xs font-semibold text-ink-900 mb-1">Landing at Top?</label>
+              <select id="hasLanding" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm">
+                <option value="no" selected>No</option>
+                <option value="yes">Yes (Add Volume)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Rise & Run (2 cols on mobile) -->
+          <div class="grid grid-cols-2 gap-3 mb-4">
+            <div>
+              <label for="stepRise" class="block text-xs font-semibold text-ink-900 mb-1">Step Rise (<span class="unit-label">in</span>)</label>
+              <input type="number" id="stepRise" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow text-sm" placeholder="e.g. 7" min="0" step="0.1" value="7">
+            </div>
+            <div>
+              <label for="stepRun" class="block text-xs font-semibold text-ink-900 mb-1">Step Run (<span class="unit-label">in</span>)</label>
+              <input type="number" id="stepRun" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow text-sm" placeholder="e.g. 10" min="0" step="0.1" value="10">
+            </div>
+          </div>
+
+          <!-- Stair Width & Waste (2 cols on mobile) -->
+          <div class="grid grid-cols-2 gap-3 mb-4">
+            <div>
+              <label for="stairWidth" class="block text-xs font-semibold text-ink-900 mb-1">Stair Width (<span class="unit-label">in</span>)</label>
+              <input type="number" id="stairWidth" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow text-sm" placeholder="e.g. 36" min="0" step="0.1" value="36">
+            </div>
+            <div>
+              <label for="wasteFactor" class="block text-xs font-semibold text-ink-900 mb-1">Waste Factor</label>
+              <select id="wasteFactor" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm">
+                <option value="0.05">5% (Standard)</option>
+                <option value="0.10" selected>10% (Standard)</option>
+                <option value="0.15">15% (Complex)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Landing Details (Hidden if No landing) -->
+          <div id="landingDetails" class="hidden grid grid-cols-2 gap-3 mb-4 bg-brand-50 p-3 rounded-lg border border-brand-100">
+            <div>
+              <label for="landingLength" class="block text-xs font-semibold text-ink-900 mb-1">Landing Length (<span class="unit-label">in</span>)</label>
+              <input type="number" id="landingLength" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 text-sm" placeholder="e.g. 48" min="0" step="0.1" value="48">
+            </div>
+            <div>
+              <label for="landingThickness" class="block text-xs font-semibold text-ink-900 mb-1">Landing Thickness (<span class="unit-label">in</span>)</label>
+              <input type="number" id="landingThickness" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 text-sm" placeholder="e.g. 6" min="0" step="0.1" value="6">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Column: Result Box (5/12) -->
+      <div class="lg:col-span-5">
+        <div class="bg-ink-900 rounded-2xl shadow-lg border border-ink-800 sticky top-20 overflow-hidden">
+          <div class="p-4 sm:p-6">
+            
+            <!-- Highlighted Total Concrete -->
+            <div class="text-center pb-4 border-b border-white/10 mb-4">
+              <p class="text-xs text-brand-300 font-semibold mb-1">Total Concrete Needed</p>
+              <div class="flex items-center justify-center gap-2">
+                <span class="font-mono text-4xl sm:text-5xl font-extrabold text-white" id="outYards">0</span>
+                <span class="text-xs sm:text-sm text-slate-400 mt-2" id="outUnit">Cubic Yards</span>
+              </div>
+            </div>
+
+            <!-- Other Results -->
+            <div class="space-y-2 mb-5 text-sm">
+              <div class="flex justify-between items-center">
+                <span class="text-slate-400">Total Volume (Cubic Ft)</span>
+                <span class="font-mono font-semibold text-white" id="outFeet">0 <span class="text-[10px] text-slate-500">cu ft</span></span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-400">Steps Volume</span>
+                <span class="font-mono font-semibold text-white" id="outStepsVol">0 <span class="text-[10px] text-slate-500">cu ft</span></span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-400">Bags Needed (80lb)</span>
+                <span class="font-mono font-semibold text-white" id="outBags">0 <span class="text-[10px] text-slate-500">bags</span></span>
+              </div>
+            </div>
+
+            <!-- Save/Share/Copy Buttons (Compact Blue) -->
+            <div class="flex items-center gap-1.5">
+              <button type="button" id="btnSave" class="flex-1 flex items-center justify-center gap-1 py-2 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-[11px] sm:text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg>
+                Save
+              </button>
+              <button type="button" id="btnShare" class="flex-1 flex items-center justify-center gap-1 py-2 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-[11px] sm:text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                Share
+              </button>
+              <button type="button" id="btnCopy" class="flex-1 flex items-center justify-center gap-1 py-2 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-[11px] sm:text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                Copy
+              </button>
+            </div>
+
+          </div>
+        </div>
+        
+        <!-- Quick Tip -->
+        <p class="text-[10px] sm:text-xs text-slate-500 mt-2 text-center">
+          <strong>Note:</strong> Concrete is sold by the cubic yard (or cubic meter). 1 cubic yard = 27 cubic feet.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 4/10 will start here: First Ad Slot + Massive Content Part 1
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 4/10 — FIRST AD SLOT + MASSIVE CONTENT PART 1
+     Deep dive into stair math, formwork, and rebar
+     ============================================================ -->
+<section class="bg-white py-10 sm:py-16 border-t border-slate-200">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Ad Space (Leaderboard) -->
+    <div class="mb-10">
+      <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[90px] flex items-center justify-center text-[10px] sm:text-xs text-slate-500 font-medium tracking-widest uppercase">
+        Ad Space — 728×90 / Responsive Leaderboard
+      </div>
+    </div>
+
+    <!-- Article Content Wrapper -->
+    <div class="prose prose-slate prose-base sm:prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-900 prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-xl">
+      
+      <p class="lead text-lg sm:text-xl text-ink-700 font-medium mb-6">
+        Pouring concrete stairs is one of the most complex concrete projects a DIYer or contractor can undertake. Unlike a flat slab or a simple footing, stairs require precise formwork, careful volume calculation, and proper reinforcement. If you get the math wrong, you'll either run out of concrete halfway through the pour (causing a cold joint that ruins the stairs) or waste hundreds of dollars on excess material.
+      </p>
+
+      <p>
+        The most common question we hear is: <strong>"How many yards of concrete do I need for my stairs?"</strong> The answer depends on the number of steps, the dimensions of each step, and whether you are pouring a landing. This guide walks through the exact math, formwork considerations, and the reinforcement needed to build stairs that will last for decades.
+      </p>
+
+      <h3 class="mt-8">1. The Math: Calculating Stair Volume</h3>
+      <p>
+        Concrete stairs are essentially a series of stacked rectangular blocks. To calculate the total volume, you calculate the volume of each step and add them together. 
+      </p>
+      <p>
+        <strong>Volume of one step (cubic ft) = Rise (ft) × Run (ft) × Width (ft)</strong>
+      </p>
+      <p>
+        However, this simple method can be misleading. A real concrete stair is typically poured as a solid shape, not as individual blocks. The best approach is to break the stairs into two components:
+      </p>
+      <ul>
+        <li><strong>The Steps:</strong> Multiply the average height of the steps (Rise × Number of Steps ÷ 2) by the total Run (Run × Number of Steps) and the Width.</li>
+        <li><strong>The Base Slab (Waist):</strong> The staircase is supported by a sloped slab underneath. Calculate this as a rectangle using the <strong>hypotenuse</strong> of the rise and run (using Pythagorean theorem).</li>
+      </ul>
+
+      <!-- Concrete Stairs Volume Table -->
+      <div class="my-6 not-prose rounded-xl border border-slate-200 bg-white overflow-hidden shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left">
+            <thead class="bg-slate-50 border-b border-slate-200">
+              <tr>
+                <th class="px-3 py-2 font-display font-bold text-ink-900">Stair Height</th>
+                <th class="px-3 py-2 font-display font-bold text-ink-900">Steps</th>
+                <th class="px-3 py-2 font-display font-bold text-ink-900">Concrete (Cu Yd)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-ink-700">
+              <tr>
+                <td class="px-3 py-2 font-mono font-semibold">3 feet (36")</td>
+                <td class="px-3 py-2 font-mono">5</td>
+                <td class="px-3 py-2 font-mono">0.5 - 0.8</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-3 py-2 font-mono font-semibold">4 feet (48")</td>
+                <td class="px-3 py-2 font-mono">7</td>
+                <td class="px-3 py-2 font-mono">1.0 - 1.5</td>
+              </tr>
+              <tr>
+                <td class="px-3 py-2 font-mono font-semibold">5 feet (60")</td>
+                <td class="px-3 py-2 font-mono">8</td>
+                <td class="px-3 py-2 font-mono">1.5 - 2.0</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-3 py-2 font-mono font-semibold">6 feet (72")</td>
+                <td class="px-3 py-2 font-mono">10</td>
+                <td class="px-3 py-2 font-mono">2.0 - 3.0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p>
+        <em>Estimator's Rule:</em> Always add a 10% waste factor. Concrete can spill during the pour, and the uneven ground beneath the formwork may require more material than calculated.
+      </p>
+
+      <!-- Ad Space (In-Article) -->
+      <div class="my-8 not-prose">
+        <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[250px] flex items-center justify-center text-xs sm:text-sm text-slate-500 font-medium tracking-widest uppercase">
+          Ad Space — In-Article Rectangle
+        </div>
+      </div>
+
+      <h3 class="mt-8">2. Formwork: The Key to a Good Stair</h3>
+      <p>
+        The formwork (the wooden mold that holds the concrete while it cures) is the most critical part of a stair pour. If the formwork is not strong enough, it will bulge or blow out under the weight of the wet concrete.
+      </p>
+      <p>
+        <strong>Materials:</strong> Use 3/4-inch plywood for the sides (stringers) and 2x4 or 2x6 lumber for the risers. The riser boards must be cut to the exact height of each step.
+      </p>
+      <p>
+        <strong>Bracing:</strong> The formwork must be braced heavily from the outside. Use stakes driven into the ground and cross-bracing to prevent the sides from bowing outward under pressure.
+      </p>
+      <p>
+        <strong>Release Agent:</strong> Coat the inside of the formwork with a concrete release agent (or motor oil in a pinch). This ensures the wood pulls away cleanly when you strip the formwork after curing.
+      </p>
+
+      <h3 class="mt-8">3. Rebar and Reinforcement</h3>
+      <p>
+        Concrete is strong in compression but weak in tension. A staircase is subject to both, especially at the bottom of the steps. If the stairs are attached to a structure (like a house or a pier), you must use rebar.
+      </p>
+      <ul>
+        <li><strong>Rebar Size:</strong> Use #3 (3/8") or #4 (1/2") rebar. For most residential stairs, #3 is sufficient.</li>
+        <li><strong>Grid Pattern:</strong> Lay rebar in a grid pattern about 2 inches from the bottom of the formwork. Use a "chairs" (small concrete blocks) to keep the rebar off the wood.</li>
+        <li><strong>Tying:</strong> Tie the rebar intersections with wire. This prevents the grid from moving during the pour.</li>
+      </ul>
+      <p>
+        <em>Important:</em> If your stairs are free-standing (not attached to a structure), the reinforcement is even more critical. Free-standing stairs need a thicker base slab and heavier rebar.
+      </p>
+
+      <h3 class="mt-8">4. Pouring and Curing</h3>
+      <p>
+        The concrete pour must be continuous. If you stop halfway through, you create a "cold joint" between the two layers, which weakens the structure and creates a visible line.
+      </p>
+      <ol>
+        <li><strong>Start at the bottom:</strong> Always pour from the bottom step up. This prevents the concrete from sliding down and accumulating at the bottom.</li>
+        <li><strong>Vibrate:</strong> Use a concrete vibrator (or tap the formwork with a hammer) to remove air bubbles. Air pockets weaken the concrete and create a rough surface.</li>
+        <li><strong>Level each step:</strong> Use a trowel to level each step as you pour. Make sure each step has a slight slope (usually 1/8 inch) toward the front so water runs off.</li>
+        <li><strong>Cure:</strong> Cover the stairs with plastic sheeting for the first 24 hours to retain moisture. You can strip the formwork after 24-48 hours, but wait at least 7 days before walking on the stairs.</li>
+      </ol>
+      
+      <hr class="my-8 border-slate-200">
+      
+      <p class="text-base text-slate-700">
+        <em>Continue reading below as we dive into regional standards (US vs UK vs AU), the difference between bagged concrete and ready-mix, and cost estimation.</em>
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 5/10 will start here: Content Part 2 (Standards, Bags vs Ready-Mix & Conclusion)
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 5/10 — MASSIVE CONTENT PART 2 & CONCLUSION
+     Bagged vs Ready-Mix, Regional Codes, Costing, and Conclusion
+     ============================================================ -->
+<section class="bg-white py-10 sm:py-16 border-t border-slate-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Article Content Wrapper (Continued) -->
+    <div class="prose prose-slate prose-base sm:prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-900 prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-xl">
+      
+      <h3 class="mt-8">5. Bagged Concrete vs Ready-Mix</h3>
+      <p>
+        For stair projects, you have two options: mix your own concrete from 80lb bags, or order ready-mix concrete from a truck.
+      </p>
+      
+      <h4>Bagged Concrete (DIY)</h4>
+      <p>
+        Best for small staircases (3-4 steps). You will need a concrete mixer and a lot of water. Each 80lb bag yields about 0.60 cubic feet of concrete. For a 3-step staircase (approx 10 cubic feet), you need about 17 bags.
+        <br>
+        <em>Pro Tip:</em> Use our <a href="/concrete-calculator.html" class="text-brand-600 font-semibold underline decoration-brand-300 underline-offset-2 hover:decoration-brand-500">Concrete Calculator</a> to find the exact number of bags needed.
+      </p>
+
+      <h4>Ready-Mix Concrete (Professional)</h4>
+      <p>
+        Best for larger staircases (5+ steps) or if you want a perfect finish. Ready-mix trucks have a minimum order (usually 1 cubic yard). They deliver the concrete directly to your formwork. You must have 2-3 helpers to move the concrete quickly before it sets.
+      </p>
+
+      <h3 class="mt-8">6. Regional Codes for Concrete Stairs</h3>
+      
+      <h4>United States (IRC)</h4>
+      <p>
+        The <strong>International Residential Code (IRC)</strong> dictates stair dimensions. The maximum riser height is <strong>7.75 inches</strong>, and the minimum tread depth is <strong>10 inches</strong>. Stairs must have a minimum headroom of <strong>6 feet 8 inches</strong>. For exterior stairs (like those to a deck), the stairs must be supported on footings dug below the frost line.
+      </p>
+
+      <h4>United Kingdom (BS 5395)</h4>
+      <p>
+        The UK follows <strong>BS 5395</strong>. The maximum riser height is usually <strong>220mm (8.6 inches)</strong>, and the minimum tread is 220mm. External stairs in the UK often require anti-slip finishes (like brush-finished concrete) to prevent accidents in wet weather.
+      </p>
+
+      <h4>Australia (NCC)</h4>
+      <p>
+        Australian standards are governed by the <strong>NCC</strong>. Riser height must be between <strong>115mm and 190mm</strong>, and tread depth between 250mm and 355mm. External stairs in Australia must be designed to withstand wind loads and termite protection (if timber formwork is left in place).
+      </p>
+
+      <!-- In-Article Ad Slot -->
+      <div class="my-8 not-prose">
+        <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[250px] flex items-center justify-center text-xs sm:text-sm text-slate-500 font-medium tracking-widest uppercase">
+          Ad Space — In-Article Rectangle
+        </div>
+      </div>
+
+      <h3 class="mt-8">7. Cost Estimation</h3>
+      <p>
+        Concrete stairs are a significant investment, but they are incredibly durable.
+      </p>
+      
+      <h4>Material Costs</h4>
+      <ul>
+        <li><strong>Bagged Concrete (US):</strong> $5 to $8 per 80lb bag. (A small stair may need 20-30 bags).</li>
+        <li><strong>Ready-Mix (US):</strong> $150 to $200 per cubic yard (plus delivery fees).</li>
+        <li><strong>UK Concrete:</strong> £100 to £150 per cubic meter (ready-mix).</li>
+        <li><strong>AU Concrete:</strong> AUD $200 to $300 per cubic meter.</li>
+        <li><strong>Rebar & Formwork:</strong> Add $50 to $150 for plywood and rebar.</li>
+      </ul>
+
+      <h4>Labor Costs</h4>
+      <p>
+        Building concrete stairs is highly skilled labor. If you hire a professional:
+      </p>
+      <ul>
+        <li><strong>US:</strong> $50 to $100 per square foot of step surface (installed).</li>
+        <li><strong>UK:</strong> £500 to £1,500 per staircase.</li>
+        <li><strong>Australia:</strong> AUD $800 to $2,000 per staircase.</li>
+      </ul>
+
+      <h3 class="mt-8">8. Common Concrete Stair Mistakes</h3>
+      <ol>
+        <li><strong>Weak Formwork:</strong> If the formwork bows or collapses, the stairs will be uneven or unwalkable. Use plenty of bracing.</li>
+        <li><strong>No Rebar:</strong> Concrete stairs without reinforcement will crack at the base of the steps over time.</li>
+        <li><strong>Pouring Too Slow:</strong> If the concrete starts to set before you finish pouring, you will get a cold joint. Have a team ready to move fast.</li>
+        <li><strong>Not Sloping the Steps:</strong> Water pooling on a concrete step will freeze in winter, creating a slip hazard. Always slope each step 1/8 inch toward the front.</li>
+        <li><strong>Stripping the Formwork Too Early:</strong> Waiting at least 24 hours before removing the formwork is critical. Concrete continues to cure for 28 days.</li>
+      </ol>
+      
+      <p>
+        By using our calculator to precisely estimate your concrete volume and following these best practices, you can build safe, durable concrete stairs for your home.
+      </p>
+
+      <!-- Conclusion Box -->
+      <div class="mt-8 p-5 sm:p-8 bg-gradient-to-br from-ink-900 to-ink-950 rounded-2xl border border-ink-800 not-prose relative overflow-hidden shadow-lg">
+        <div class="absolute -top-20 -right-20 w-64 h-64 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="relative">
+          <h4 class="font-display font-bold text-white text-lg sm:text-xl mb-2.5">Ready to pour your stairs?</h4>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-5 max-w-2xl">
+            Use our Concrete Stairs Calculator to instantly generate the exact cubic yards and bags of concrete you need, complete with waste factors and landing calculations.
+          </p>
+          <div class="flex flex-wrap gap-2.5">
+            <a href="#main-content" class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-brand-500 text-white text-sm font-semibold hover:bg-brand-400 transition-colors shadow-sm">
+              Back to Calculator <span class="ml-1" aria-hidden="true">↑</span>
+            </a>
+            <!-- Important Internal Link to Stair Calculator -->
+            <a href="/stair-calculator.html" class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 text-white text-sm font-semibold transition-colors">
+              Try Stair Rise/Run Calculator
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 6/10 will start here: FAQ (Numbered Card Style) & Schema
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 6/10 — FAQ (Numbered Card Style, Wider Layout) & SCHEMA
+     Concrete Stairs specific questions with internal links
+     ============================================================ -->
+<section class="bg-slate-50 py-12 sm:py-20 border-t border-slate-200">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-8 sm:mb-12">
+      <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-ink-900 tracking-tight">Concrete Stairs Questions Answered</h2>
+      <p class="text-sm sm:text-base text-ink-700 mt-2">Common questions about concrete volume, formwork, and stair design.</p>
+    </div>
+
+    <!-- FAQ Accordion Cards -->
+    <div class="space-y-3">
+      
+      <!-- FAQ 1 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">01</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How many yards of concrete do I need for a 4-step staircase?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          A standard 4-step staircase (3 feet wide, 7" rise, 10" run) requires approximately <strong>0.5 to 0.7 cubic yards</strong> of concrete. This is about 13 to 18 cubic feet. You can use our <a href="/concrete-calculator.html" class="text-brand-600 font-semibold underline decoration-brand-300 underline-offset-2 hover:decoration-brand-500">Concrete Calculator</a> to calculate the exact volume for your specific dimensions.
+        </div>
+      </details>
+
+      <!-- FAQ 2 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">02</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">Do I need rebar for concrete stairs?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          <strong>Yes, always use rebar.</strong> Concrete is strong in compression but weak in tension. Stairs experience tension forces (especially where the steps meet the base slab) that can cause cracking. Use a grid of #3 (3/8") or #4 (1/2") rebar, placed 2 inches from the bottom of the formwork. Check our <a href="/rebar-calculator.html" class="text-brand-600 font-semibold underline decoration-brand-300 underline-offset-2 hover:decoration-brand-500">Rebar Calculator</a> for precise quantities.
+        </div>
+      </details>
+
+      <!-- FAQ 3 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">03</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">What is the ideal rise and run for concrete stairs?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          For comfortable walking, the rise plus run should equal roughly 17 to 18 inches. A standard residential step has a <strong>rise of 7 inches and a run of 10 to 11 inches</strong>. For exterior stairs, wider treads (12 inches or more) are recommended for safety in wet weather. Use our <a href="/stair-calculator.html" class="text-brand-600 font-semibold underline decoration-brand-300 underline-offset-2 hover:decoration-brand-500">Stair Rise/Run Calculator</a> to verify your dimensions against IRC code.
+        </div>
+      </details>
+
+      <!-- FAQ 4 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">04</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How long does concrete take to cure for stairs?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          Concrete sets in 24-48 hours (formwork can be removed), but it <strong>fully cures in 28 days</strong>. You can walk on the stairs after 3-4 days, but avoid heavy loads (like moving furniture) for at least a week. For the first 7 days, keep the concrete moist by spraying it with water daily to prevent cracking.
+        </div>
+      </details>
+
+      <!-- FAQ 5 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">05</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">Can I build concrete stairs on dirt?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          <strong>No.</strong> Concrete stairs must be built on a solid foundation. The base must be excavated, leveled, and compacted. You need a layer of gravel (4-6 inches) and possibly a concrete footing underneath, especially if the stairs are free-standing or built on a slope. Building stairs directly on dirt will cause them to settle and crack.
+        </div>
+      </details>
+
+      <!-- FAQ 6 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">06</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How do I prevent my concrete stairs from cracking?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          Use proper reinforcement (rebar grid). Ensure the sub-base is compacted. Add control joints (small grooves cut into the concrete) to direct cracks to a specific location. Keep the concrete moist during curing. In cold climates, use air-entrained concrete to prevent freeze-thaw damage.
+        </div>
+      </details>
+
+      <!-- FAQ 7 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">07</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">Can I use bagged concrete for a staircase?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          <strong>Yes, for small staircases.</strong> If you are building 3-4 steps, 80lb bags mixed in a wheelbarrow or mixer are sufficient. However, you must mix and pour quickly to avoid cold joints. For larger staircases (5+ steps), ready-mix concrete is strongly recommended because it is faster, stronger, and produces a more consistent finish.
+        </div>
+      </details>
+
+    </div>
+
+    <!-- Still have a question CTA -->
+    <div class="mt-8 text-center">
+      <p class="text-sm text-ink-700">
+        Still have a question? Email <a href="mailto:contact@buildmetric.org" class="text-brand-600 font-semibold hover:underline">contact@buildmetric.org</a> — every message is read by a real person.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQPage JSON-LD SCHEMA (Matches exactly with HTML above)
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many yards of concrete do I need for a 4-step staircase?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A standard 4-step staircase (3 feet wide, 7-inch rise, 10-inch run) requires approximately 0.5 to 0.7 cubic yards of concrete. This is about 13 to 18 cubic feet. You can use our Concrete Calculator to calculate the exact volume for your specific dimensions." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need rebar for concrete stairs?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, always use rebar. Concrete is strong in compression but weak in tension. Stairs experience tension forces that can cause cracking. Use a grid of #3 or #4 rebar, placed 2 inches from the bottom of the formwork." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the ideal rise and run for concrete stairs?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For comfortable walking, the rise plus run should equal roughly 17 to 18 inches. A standard residential step has a rise of 7 inches and a run of 10 to 11 inches. For exterior stairs, wider treads (12 inches or more) are recommended for safety." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does concrete take to cure for stairs?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Concrete sets in 24-48 hours (formwork can be removed), but it fully cures in 28 days. You can walk on the stairs after 3-4 days, but avoid heavy loads for at least a week. For the first 7 days, keep the concrete moist to prevent cracking." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I build concrete stairs on dirt?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Concrete stairs must be built on a solid foundation. The base must be excavated, leveled, and compacted. You need a layer of gravel and possibly a concrete footing underneath. Building stairs directly on dirt will cause them to settle and crack." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I prevent my concrete stairs from cracking?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use proper reinforcement (rebar grid). Ensure the sub-base is compacted. Add control joints to direct cracks to a specific location. Keep the concrete moist during curing. In cold climates, use air-entrained concrete to prevent freeze-thaw damage." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use bagged concrete for a staircase?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, for small staircases. If you are building 3-4 steps, 80lb bags mixed in a wheelbarrow or mixer are sufficient. For larger staircases (5+ steps), ready-mix concrete is strongly recommended because it is faster, stronger, and produces a more consistent finish." }
+    }
+  ]
+}
+</script>
+
+<!-- ============================================================
+     Phase 7/10 will start here: E-E-A-T Box + Related Tools
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 7/10 — E-E-A-T EDITORIAL BOX & RELATED CONTENT
+     ============================================================ -->
+
+<!-- E-E-A-T Directory Info Box -->
+<section class="bg-slate-50 border-t border-slate-200 py-12 sm:py-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+      
+      <!-- Card Header (Dark Premium Look) -->
+      <div class="bg-ink-900 px-5 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-6 h-6 rounded bg-white/10 flex items-center justify-center">
+            <svg class="w-3.5 h-3.5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-slate-200">About our calculators</span>
+        </div>
+        <span class="hidden sm:block text-[10px] font-bold uppercase tracking-widest text-slate-500">Engineer-Reviewed</span>
+      </div>
+
+      <!-- Card Body -->
+      <div class="p-5 sm:p-8 md:p-10">
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-10">
+          
+          <!-- Left Column: Description -->
+          <div class="lg:col-span-7">
+            <div class="flex items-center gap-3 mb-2 sm:mb-3">
+              <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-500 flex items-center justify-center shrink-0 shadow-sm">
+                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              </div>
+              <div>
+                <h2 class="font-display font-extrabold text-lg sm:text-2xl text-ink-900 tracking-tight">BuildMetric Engineering</h2>
+                <p class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-brand-600 mt-0.5">
+                  Calculators &amp; Estimating Tools
+                </p>
+              </div>
+            </div>
+            
+            <p class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-4 sm:mb-6 pl-[52px] sm:pl-[60px]">
+              Verified Formulas · Code-Aware
+            </p>
+
+            <div class="text-sm sm:text-[15px] text-ink-700 leading-relaxed space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+              <p>
+                Every calculator in this directory is built from formulas that can be derived from first principles. We do not guess. We test every tool against reference cases in both imperial and metric units before it is published.
+              </p>
+              <p>
+                More importantly, our tools are reviewed by quantity surveyors, structural engineers, and licensed contractors. We know that a calculation error on site costs money and compromises safety, so we treat accuracy as a structural requirement, not a feature.
+              </p>
+            </div>
+
+            <ul class="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-xs sm:text-sm text-ink-700"><strong class="text-ink-900">Human-verified.</strong> Reviewed by practising professionals, not AI.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-xs sm:text-sm text-ink-700"><strong class="text-ink-900">Stateless maths.</strong> Your inputs run in your browser, never on our servers.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-xs sm:text-sm text-ink-700"><strong class="text-ink-900">Always free.</strong> No sign-ups, no paywalls, no trials. Just the tools.</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-3">
+              <a href="mailto:contact@buildmetric.org" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-ink-900 text-white text-xs sm:text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                Report an Error
+              </a>
+              <a href="/about.html" class="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 rounded-xl border border-slate-300 text-ink-900 text-xs sm:text-sm font-semibold hover:border-brand-500 hover:text-brand-600 transition-colors bg-white">
+                Our Methodology
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Directory Info & Disclaimer -->
+          <div class="lg:col-span-5 flex flex-col gap-3 sm:gap-4">
+            
+            <!-- Directory Info Box -->
+            <div class="bg-white rounded-xl border border-slate-200 p-4 sm:p-6 shadow-sm">
+              <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-3 sm:mb-4">Directory Info</h3>
+              <ul class="text-[11px] sm:text-sm space-y-2 sm:space-y-3">
+                <li class="flex justify-between items-center pb-2 sm:pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Total Tools</span>
+                  <span class="font-bold text-ink-900 text-right">Growing Library</span>
+                </li>
+                <li class="flex justify-between items-center pb-2 sm:pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Review Status</span>
+                  <span class="font-bold text-ink-900 text-right">100% Human-Reviewed</span>
+                </li>
+                <li class="flex justify-between items-center pb-2 sm:pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Regions</span>
+                  <span class="font-bold text-ink-900 text-right">US · UK · AU</span>
+                </li>
+                <li class="flex justify-between items-center">
+                  <span class="text-slate-500 font-medium">Cost</span>
+                  <span class="font-bold text-brand-600 text-right">Free Forever</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Disclaimer Box -->
+            <div class="bg-white rounded-xl border border-slate-200 p-4 sm:p-6 flex-1 shadow-sm">
+              <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2 sm:mb-3">Disclaimer</h3>
+              <p class="text-[11px] sm:text-sm text-ink-700 leading-relaxed">
+                Calculators are estimating aids, not a substitute for professional judgment. Always verify against your local code. See our <a href="/disclaimer.html" class="text-brand-600 font-semibold underline decoration-brand-300 underline-offset-2 hover:decoration-brand-500 transition-colors">Disclaimer</a>.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Related Tools & Guides Section -->
+<section class="bg-white py-12 sm:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Related Tools -->
+    <div class="mb-12 sm:mb-16">
+      <div class="flex items-center justify-between mb-4 sm:mb-6">
+        <h2 class="font-display font-extrabold text-xl sm:text-2xl text-ink-900 tracking-tight">Related Calculators</h2>
+        <a href="/calculators.html" class="text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors">View all tools →</a>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+        
+        <!-- Tool 1: Concrete Calculator -->
+        <a href="/concrete-calculator.html" class="group bg-white rounded-xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-3 sm:gap-4">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors">Concrete Calculator</h3>
+            <p class="text-[10px] sm:text-xs text-slate-500 mt-0.5">Volume, bags, slabs</p>
+          </div>
+        </a>
+
+        <!-- Tool 2: Stair Calculator -->
+        <a href="/stair-calculator.html" class="group bg-white rounded-xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-3 sm:gap-4">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 20h4v-4h4v-4h4V8h4"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors">Stair Rise/Run Calculator</h3>
+            <p class="text-[10px] sm:text-xs text-slate-500 mt-0.5">Rise, run, stringers</p>
+          </div>
+        </a>
+
+        <!-- Tool 3: Rebar Calculator (placeholder - if you have it) -->
+        <a href="/rebar-calculator.html" class="group bg-white rounded-xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-3 sm:gap-4">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors">Rebar Calculator</h3>
+            <p class="text-[10px] sm:text-xs text-slate-500 mt-0.5">Rebar for concrete</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Related Guides -->
+    <div>
+      <div class="flex items-center justify-between mb-4 sm:mb-6">
+        <h2 class="font-display font-extrabold text-xl sm:text-2xl text-ink-900 tracking-tight">Related Guides</h2>
+        <a href="/guides.html" class="text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors">View all guides →</a>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        
+        <!-- Guide 1 (Concrete Waste) -->
+        <a href="/guides/concrete-waste-allowance.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-24 sm:h-32 bg-gradient-to-br from-slate-700 to-slate-900 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-20 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+            </div>
+          </div>
+          <div class="p-3 sm:p-4 flex flex-col flex-1">
+            <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-600 bg-slate-100 px-2 py-0.5 sm:py-1 rounded self-start mb-2">Concrete</span>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">How Much Waste Should You Add to a Concrete Order?</h3>
+            <span class="text-[10px] sm:text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <!-- Guide 2 (Stud Spacing) -->
+        <a href="/guides/stud-spacing-by-code.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-24 sm:h-32 bg-gradient-to-br from-sky-400 to-sky-600 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+            </div>
+          </div>
+          <div class="p-3 sm:p-4 flex flex-col flex-1">
+            <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-sky-600 bg-sky-50 px-2 py-0.5 sm:py-1 rounded self-start mb-2">Framing</span>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Stud Spacing: IRC 2021 vs BS 5268 vs AS 1684 Compared</h3>
+            <span class="text-[10px] sm:text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <!-- Guide 3 (Roof Pitch) -->
+        <a href="/guides/roof-pitch-explained.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-24 sm:h-32 bg-gradient-to-br from-blue-400 to-blue-600 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            </div>
+          </div>
+          <div class="p-3 sm:p-4 flex flex-col flex-1">
+            <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-brand-600 bg-brand-50 px-2 py-0.5 sm:py-1 rounded self-start mb-2">Roofing</span>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Roof Pitch Explained: Why 6:12 and 26.57° Are the Same Roof</h3>
+            <span class="text-[10px] sm:text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 8/10 will start here: Premium Footer
+     ============================================================ -->
+
+   </main>
+
+<!-- ============================================================
+     PHASE 8/10 — COMPACT PREMIUM FOOTER (Short & Clean)
+     ============================================================ -->
+<footer class="bg-ink-950 text-slate-400 border-t border-slate-800 pt-10 pb-6">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Top Footer Grid (4 Columns) -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 mb-8">
+      
+      <!-- Column 1: Brand & Contact -->
+      <div class="col-span-2 md:col-span-1 pr-4">
+        <a href="/" class="inline-flex items-center gap-2 mb-3 group">
+          <img src="logo.png" alt="BuildMetric Logo" class="h-6 w-auto object-contain brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity" />
+          <span class="font-display font-extrabold text-base tracking-tight text-white hidden sm:block">
+            Build<span class="text-brand-500">Metric</span>
+          </span>
+        </a>
+        
+        <p class="text-[11px] sm:text-xs leading-relaxed mb-4 max-w-xs text-slate-400">
+          Independent construction calculators and estimating tools for professionals in the <strong class="text-slate-200">USA, UK</strong> and <strong class="text-slate-200">Australia</strong>.
+        </p>
+
+        <div class="space-y-1.5 mb-4">
+          <a href="mailto:contact@buildmetric.org" class="flex items-center gap-1.5 text-[11px] sm:text-xs hover:text-white transition-colors">
+            <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            contact@buildmetric.org
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2: Popular Tools (Shortened) -->
+      <div>
+        <h3 class="font-display font-bold text-white text-[11px] sm:text-xs uppercase tracking-widest mb-3">Popular Tools</h3>
+        <ul class="space-y-1.5 text-[11px] sm:text-xs">
+          <li><a href="/framing-calculator.html" class="hover:text-brand-400 transition-colors">Framing Calculator</a></li>
+          <li><a href="/roofing-calculator.html" class="hover:text-brand-400 transition-colors">Roofing Calculator</a></li>
+          <li><a href="/concrete-calculator.html" class="hover:text-brand-400 transition-colors">Concrete Calculator</a></li>
+          <li><a href="/concrete-stairs-calculator.html" class="hover:text-brand-400 transition-colors">Concrete Stairs Calc</a></li>
+          <li><a href="/retaining-wall-calculator.html" class="hover:text-brand-400 transition-colors">Retaining Wall Calc</a></li>
+          <li><a href="/calculators.html" class="text-brand-400 font-semibold mt-1 inline-block hover:underline">View All Tools →</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Company -->
+      <div>
+        <h3 class="font-display font-bold text-white text-[11px] sm:text-xs uppercase tracking-widest mb-3">Company</h3>
+        <ul class="space-y-1.5 text-[11px] sm:text-xs">
+          <li><a href="/about.html" class="hover:text-brand-400 transition-colors">About Us</a></li>
+          <li><a href="/guides.html" class="hover:text-brand-400 transition-colors">Guides</a></li>
+          <li><a href="/contact.html" class="hover:text-brand-400 transition-colors">Contact</a></li>
+          <li><a href="/sitemap.xml" class="hover:text-brand-400 transition-colors">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Legal & Compliance -->
+      <div>
+        <h3 class="font-display font-bold text-white text-[11px] sm:text-xs uppercase tracking-widest mb-3">Legal</h3>
+        <ul class="space-y-1.5 text-[11px] sm:text-xs">
+          <li><a href="/privacy.html" class="hover:text-brand-400 transition-colors">Privacy Policy</a></li>
+          <li><a href="/terms.html" class="hover:text-brand-400 transition-colors">Terms of Service</a></li>
+          <li><a href="/disclaimer.html" class="hover:text-brand-400 transition-colors">Disclaimer</a></li>
+          <li><a href="/cookie-policy.html" class="hover:text-brand-400 transition-colors">Cookie Policy</a></li>
+        </ul>
+        
+        <button id="cookieSettingsBtn" type="button" class="mt-3 inline-flex items-center gap-1.5 px-2 py-1 rounded border border-slate-700 bg-slate-800/50 hover:bg-slate-800 text-[10px] font-semibold text-slate-300 transition-colors">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          Cookie Settings
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-3 text-[10px]">
+      <p class="text-center md:text-left text-slate-500">
+        © 2026 BuildMetric. All rights reserved. <br class="sm:hidden">Operated from buildmetric.org.
+      </p>
+      <p class="text-center md:text-right text-slate-500">
+        Built for professionals. General info only — see <a href="/disclaimer.html" class="text-brand-500 hover:underline hover:text-brand-400 transition-colors">Disclaimer</a>.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ============================================================
+     Phase 9/10 will start here: Complete JavaScript Logic
+     ============================================================ -->
+
+      <!-- ============================================================
+       PHASE 9/10 — JAVASCRIPT (Calculator Logic & Menu)
+       ============================================================ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      /* ── 1. MOBILE MENU TOGGLE ── */
+      const menuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const openIcon = menuBtn ? menuBtn.querySelector('.menu-open-icon') : null;
+      const closeIcon = menuBtn ? menuBtn.querySelector('.menu-close-icon') : null;
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function () {
+          const isOpen = !mobileMenu.classList.contains('hidden');
+          mobileMenu.classList.toggle('hidden');
+          if(openIcon) openIcon.classList.toggle('hidden');
+          if(closeIcon) closeIcon.classList.toggle('hidden');
+          menuBtn.setAttribute('aria-expanded', String(!isOpen));
+        });
+      }
+
+      /* ── 2. ELEMENTS & STATE ── */
+      const btnImperial = document.getElementById('btnImperial');
+      const btnMetric = document.getElementById('btnMetric');
+      const unitLabels = document.querySelectorAll('.unit-label');
+      
+      const numSteps = document.getElementById('numSteps');
+      const hasLanding = document.getElementById('hasLanding');
+      const landingDetails = document.getElementById('landingDetails');
+      const landingLength = document.getElementById('landingLength');
+      const landingThickness = document.getElementById('landingThickness');
+      
+      const stepRise = document.getElementById('stepRise');
+      const stepRun = document.getElementById('stepRun');
+      const stairWidth = document.getElementById('stairWidth');
+      const wasteFactor = document.getElementById('wasteFactor');
+      
+      const outYards = document.getElementById('outYards');
+      const outUnit = document.getElementById('outUnit');
+      const outFeet = document.getElementById('outFeet');
+      const outStepsVol = document.getElementById('outStepsVol');
+      const outBags = document.getElementById('outBags');
+
+      let isMetric = false;
+
+      /* ── 3. LANDING SHOW/HIDE ── */
+      hasLanding.addEventListener('change', function() {
+        if (this.value === 'yes') {
+          landingDetails.classList.remove('hidden');
+        } else {
+          landingDetails.classList.add('hidden');
+        }
+        calculate();
+      });
+
+      /* ── 4. UNIT TOGGLE (Imperial / Metric) ── */
+      function toggleUnits(metric) {
+        isMetric = metric;
+        
+        if (metric) {
+          btnMetric.classList.add('bg-white', 'shadow-sm', 'text-ink-900');
+          btnMetric.classList.remove('text-slate-500');
+          btnImperial.classList.remove('bg-white', 'shadow-sm', 'text-ink-900');
+          btnImperial.classList.add('text-slate-500');
+          
+          unitLabels.forEach(el => el.textContent = 'cm');
+          
+          if (outUnit) outUnit.textContent = 'Cubic Meters';
+        } else {
+          btnImperial.classList.add('bg-white', 'shadow-sm', 'text-ink-900');
+          btnImperial.classList.remove('text-slate-500');
+          btnMetric.classList.remove('bg-white', 'shadow-sm', 'text-ink-900');
+          btnMetric.classList.add('text-slate-500');
+          
+          unitLabels.forEach(el => el.textContent = 'in');
+          
+          if (outUnit) outUnit.textContent = 'Cubic Yards';
+        }
+        calculate();
+      }
+
+      if(btnImperial && btnMetric) {
+        btnImperial.addEventListener('click', () => toggleUnits(false));
+        btnMetric.addEventListener('click', () => toggleUnits(true));
+      }
+
+      /* ── 5. CALCULATOR MATH LOGIC ── */
+      function calculate() {
+        const steps = parseInt(numSteps.value) || 0;
+        const rise = parseFloat(stepRise.value) || 0;
+        const run = parseFloat(stepRun.value) || 0;
+        const width = parseFloat(stairWidth.value) || 0;
+        const waste = parseFloat(wasteFactor.value) || 0.10;
+
+        if (steps <= 0 || rise <= 0 || run <= 0 || width <= 0) {
+          outYards.textContent = '0';
+          outFeet.innerHTML = `0 <span class="text-[10px] text-slate-500">${isMetric ? 'm³' : 'cu ft'}</span>`;
+          outStepsVol.innerHTML = `0 <span class="text-[10px] text-slate-500">${isMetric ? 'm³' : 'cu ft'}</span>`;
+          outBags.innerHTML = `0 <span class="text-[10px] text-slate-500">bags</span>`;
+          return;
+        }
+
+        // --- VOLUME CALCULATION ---
+        // The volume of stairs can be calculated as an average rectangular block.
+        // Average Height = (Total Rise / 2)
+        // Total Run = Run * Steps
+        // Width = Width
+        // Volume = Avg Height × Total Run × Width
+
+        let totalRise = rise * steps;
+        let totalRun = run * steps;
+        
+        let volumeInUnits = 0;
+        let landingVolume = 0;
+        let totalVolume = 0;
+
+        if (isMetric) {
+          // Inputs are in cm. Convert to meters.
+          let riseM = totalRise / 100;
+          let runM = totalRun / 100;
+          let widthM = width / 100;
+          
+          // Volume = (Avg Height) × Total Run × Width
+          volumeInUnits = (riseM / 2) * runM * widthM; // cubic meters
+
+          // Landing (if any)
+          if (hasLanding.value === 'yes') {
+            let lLength = (parseFloat(landingLength.value) || 0) / 100;
+            let lThick = (parseFloat(landingThickness.value) || 0) / 100;
+            landingVolume = widthM * lLength * lThick;
+          }
+        } else {
+          // Inputs are in inches. Convert to feet.
+          let riseFt = totalRise / 12;
+          let runFt = totalRun / 12;
+          let widthFt = width / 12;
+          
+          // Volume = (Avg Height) × Total Run × Width
+          volumeInUnits = (riseFt / 2) * runFt * widthFt; // cubic feet
+
+          // Landing (if any)
+          if (hasLanding.value === 'yes') {
+            let lLength = (parseFloat(landingLength.value) || 0) / 12;
+            let lThick = (parseFloat(landingThickness.value) || 0) / 12;
+            landingVolume = widthFt * lLength * lThick;
+          }
+        }
+
+        // Add landing volume
+        totalVolume = volumeInUnits + landingVolume;
+
+        // Add waste
+        totalVolume = totalVolume * (1 + waste);
+
+        // Convert to Cubic Yards (US) or Cubic Meters (Metric)
+        let finalVolume = isMetric ? totalVolume : (totalVolume / 27);
+
+        // Bags calculation (1 bag = 0.6 cu ft for 80lb)
+        let bags = 0;
+        if (isMetric) {
+          // 1 bag = 0.017 m³ approx
+          bags = Math.ceil(totalVolume / 0.017);
+        } else {
+          bags = Math.ceil(totalVolume / 0.6);
+        }
+
+        // --- UPDATE UI ---
+        outYards.textContent = finalVolume.toFixed(2);
+        outFeet.innerHTML = `${totalVolume.toFixed(1)} <span class="text-[10px] text-slate-500">${isMetric ? 'm³' : 'cu ft'}</span>`;
+        outStepsVol.innerHTML = `${volumeInUnits.toFixed(1)} <span class="text-[10px] text-slate-500">${isMetric ? 'm³' : 'cu ft'}</span>`;
+        outBags.innerHTML = `${bags} <span class="text-[10px] text-slate-500">bags</span>`;
+      }
+
+      // Trigger calculation on any input change
+      const inputs = [numSteps, stepRise, stepRun, stairWidth, hasLanding, landingLength, landingThickness, wasteFactor];
+      inputs.forEach(input => {
+        if(input) {
+          input.addEventListener('input', calculate);
+          input.addEventListener('change', calculate);
+        }
+      });
+
+      // Initial run
+      calculate();
+
+      /* ── 6. SAVE, SHARE, COPY ACTIONS ── */
+      const btnSave = document.getElementById('btnSave');
+      const btnShare = document.getElementById('btnShare');
+      const btnCopy = document.getElementById('btnCopy');
+
+      const getResultText = () => {
+        return `Concrete Stairs Estimate:\n` +
+               `- Total Concrete: ${outYards.textContent} ${outUnit.textContent}\n` +
+               `- Total Volume: ${outFeet.textContent}\n` +
+               `- Steps Volume: ${outStepsVol.textContent}\n` +
+               `- Bags Needed (80lb): ${outBags.textContent}\n` +
+               `Calculated via BuildMetric.org`;
+      };
+
+      // Save
+      if(btnSave) {
+        btnSave.addEventListener('click', () => {
+          const data = {
+            s: numSteps.value, r: stepRise.value, ru: stepRun.value,
+            w: stairWidth.value, hl: hasLanding.value, ll: landingLength.value,
+            lt: landingThickness.value, waste: wasteFactor.value, metric: isMetric
+          };
+          localStorage.setItem('buildmetric_concrete_stairs_data', JSON.stringify(data));
+          alert('Estimate saved to your browser!');
+        });
+      }
+
+      // Share
+      if(btnShare && navigator.share) {
+        btnShare.addEventListener('click', () => {
+          navigator.share({
+            title: 'Concrete Stairs Calculator Estimate',
+            text: getResultText(),
+            url: window.location.href
+          }).catch(console.error);
+        });
+      } else if (btnShare) {
+        btnShare.addEventListener('click', () => {
+          alert('Sharing is not supported on this browser. Use Copy instead.');
+        });
+      }
+
+      // Copy
+      if(btnCopy) {
+        btnCopy.addEventListener('click', () => {
+          navigator.clipboard.writeText(getResultText()).then(() => {
+            const originalHTML = btnCopy.innerHTML;
+            btnCopy.innerHTML = '<svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> Copied!';
+            setTimeout(() => { btnCopy.innerHTML = originalHTML; }, 2000);
+          }).catch(() => {
+            alert('Failed to copy. Please select text manually.');
+          });
+        });
+      }
+
+      // Cookie settings placeholder
+      const cookieBtn = document.getElementById('cookieSettingsBtn');
+      if(cookieBtn) {
+        cookieBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          alert('Cookie settings panel will open here.');
+        });
+      }
+
+    });
+  </script>
+
+  <!-- ============================================================
+       PHASE 10/10 — CLOSING TAGS
+       ============================================================ -->
+</body>
+</html>
+    
