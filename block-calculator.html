@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- ============================================================
+       PHASE 1/10 — SEO HEAD & CONFIGURATION (Masonry Focus)
+       File: block-calculator.html
+       Brand: BuildMetric | Domain: buildmetric.org
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO Meta (Long-Tail Keywords) -->
+  <title>Concrete Block Calculator | How Many Cinder Blocks Do I Need? | BuildMetric</title>
+  <meta name="description" content="Free concrete block calculator to estimate how many CMU blocks and mortar bags you need for a wall. Accounts for wall dimensions, block size, and waste." />
+  <meta name="keywords" content="concrete block calculator, how many cinder blocks do i need, CMU calculator, block wall estimator, cinder block wall calculator, concrete block quantity" />
+  <meta name="author" content="BuildMetric Editorial Team" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#0ea5e9" />
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://buildmetric.org/block-calculator.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BuildMetric" />
+  <meta property="og:title" content="Concrete Block Calculator | How Many Cinder Blocks Do I Need?" />
+  <meta property="og:description" content="Calculate exact CMU blocks and mortar for your wall project." />
+  <meta property="og:url" content="https://buildmetric.org/block-calculator.html" />
+  <meta property="og:image" content="https://buildmetric.org/assets/og/block-calculator.png" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Concrete Block Calculator | BuildMetric" />
+  <meta name="twitter:description" content="Estimate exact cinder blocks and mortar for your masonry project." />
+  <meta name="twitter:image" content="https://buildmetric.org/assets/og/block-calculator.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e' },
+            ink: { 700: '#334155', 800: '#1e293b', 900: '#0f172a', 950: '#080f1e' }
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: {
+            'soft': '0 4px 20px -2px rgba(15,23,42,0.05)',
+            'hover': '0 12px 32px -8px rgba(14,165,233,0.15)',
+            'glass': '0 4px 24px -4px rgba(15,23,42,0.08)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+    .bg-grid-pattern {
+      background-image: linear-gradient(to right, rgba(15,23,42,0.04) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(15,23,42,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .nav-glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); }
+    details > summary .icon-plus { transition: transform 0.3s ease; }
+    details[open] > summary .icon-plus { transform: rotate(45deg); }
+    details > summary::-webkit-details-marker { display: none; }
+  </style>
+
+  <!-- ================= JSON-LD SCHEMA ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://buildmetric.org/block-calculator.html#app",
+        "name": "Concrete Block & CMU Calculator",
+        "url": "https://buildmetric.org/block-calculator.html",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "All",
+        "description": "Calculate the number of concrete blocks and mortar bags required for a wall based on dimensions and block size.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://buildmetric.org/block-calculator.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://buildmetric.org/" },
+          { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://buildmetric.org/calculators.html" },
+          { "@type": "ListItem", "position": 3, "name": "Masonry", "item": "https://buildmetric.org/masonry.html" },
+          { "@type": "ListItem", "position": 4, "name": "Block Calculator", "item": "https://buildmetric.org/block-calculator.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+  <body class="bg-white text-ink-800 antialiased font-sans flex flex-col min-h-screen">
+
+  <!-- ============================================================
+       SKIP LINK (Accessibility)
+       ============================================================ -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2.5 focus:bg-brand-500 focus:text-white focus:rounded-lg focus:font-semibold focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/70">
+    Skip to main content
+  </a>
+
+  <!-- ============================================================
+       STICKY NAVBAR (Compact & Mobile Friendly)
+       ============================================================ -->
+  <header class="sticky top-0 z-50 nav-glass border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-14 sm:h-16 lg:h-20">
+        
+        <!-- Logo -->
+        <div class="flex items-center gap-6">
+          <a href="/" class="flex items-center gap-2.5 shrink-0" aria-label="BuildMetric Home">
+            <img src="logo.png" alt="BuildMetric Logo" class="h-7 sm:h-9 w-auto object-contain" />
+            <span class="font-display font-extrabold text-lg sm:text-xl tracking-tight text-ink-900 hidden sm:block">
+              Build<span class="text-brand-500">Metric</span>
+            </span>
+          </a>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden lg:flex items-center gap-1" aria-label="Main Navigation">
+            <a href="/calculators.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Calculators</a>
+            <a href="/guides.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Guides</a>
+            <a href="/about.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">About</a>
+            <a href="/contact.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Contact</a>
+          </nav>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <a href="/calculators.html" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-lg bg-ink-900 text-white text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+            Open Tools
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuBtn" type="button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-200 text-ink-800 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand-500/40 transition-colors" aria-expanded="false" aria-controls="mobileMenu">
+            <span class="sr-only">Open main menu</span>
+            <svg class="menu-open-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <svg class="menu-close-icon hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu (Compact) -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 bg-white">
+      <div class="px-3 py-3 space-y-1">
+        <a href="/calculators.html" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Calculators</a>
+        <a href="/guides.html" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Guides</a>
+        <a href="/about.html" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-ink-900 hover:bg-slate-50 transition-colors">About</a>
+        <a href="/contact.html" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main id="main-content" class="flex-grow">
+    
+    <!-- ============================================================
+         PAGE HEADER & BREADCRUMBS (Compact)
+         ============================================================ -->
+    <div class="bg-slate-50 border-b border-slate-200 pt-4 pb-5 sm:pt-6 sm:pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="Breadcrumb" class="mb-2 sm:mb-4">
+          <ol class="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-[11px] sm:text-sm text-slate-500">
+            <li><a href="/" class="hover:text-brand-600 transition-colors">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/calculators.html" class="hover:text-brand-600 transition-colors">Calculators</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/masonry.html" class="hover:text-brand-600 transition-colors">Masonry</a></li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page" class="text-ink-900 font-semibold">Block Calculator</li>
+          </ol>
+        </nav>
+
+        <!-- Page Title & Subtitle -->
+        <h1 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-ink-900 tracking-tight leading-tight">
+          Concrete Block Calculator
+        </h1>
+        <p class="text-xs sm:text-sm md:text-base text-ink-700 mt-1 max-w-2xl leading-relaxed">
+          Calculate exactly how many CMU blocks, mortar bags, wall ties, and grout you need. Built for US, UK, and AU structural block walls.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- ============================================================
+         Phase 3/10 will start here: The Professional Calculator UI
+         ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 3/10 — THE PROFESSIONAL CALCULATOR UI
+     CMU Block, Mortar, Wall Ties, and Grout
+     ============================================================ -->
+<section class="bg-white py-6 sm:py-12">
+  <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-10">
+      
+      <!-- Left Column: Form Inputs (7/12) -->
+      <div class="lg:col-span-7">
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-6">
+          
+          <!-- Unit Toggle (Compact) -->
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="font-display font-bold text-lg text-ink-900">Wall Details</h2>
+            <div class="flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200">
+              <button type="button" id="btnImperial" class="px-2.5 py-1 text-[11px] sm:text-xs font-semibold rounded-md bg-white shadow-sm text-ink-900 transition-all">Imperial (in/ft)</button>
+              <button type="button" id="btnMetric" class="px-2.5 py-1 text-[11px] sm:text-xs font-semibold rounded-md text-slate-500 hover:text-ink-900 transition-all">Metric (mm/m)</button>
+            </div>
+          </div>
+
+          <!-- Wall Dimensions -->
+          <div class="grid grid-cols-2 gap-3 mb-4">
+            <div>
+              <label for="wallLength" class="block text-xs font-semibold text-ink-900 mb-1">Wall Length (<span class="unit-label">ft</span>)</label>
+              <input type="number" id="wallLength" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow text-sm" placeholder="e.g. 20" min="0" step="0.1">
+            </div>
+            <div>
+              <label for="wallHeight" class="block text-xs font-semibold text-ink-900 mb-1">Wall Height (<span class="unit-label">ft</span>)</label>
+              <input type="number" id="wallHeight" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow text-sm" placeholder="e.g. 4" min="0" step="0.1">
+            </div>
+          </div>
+
+          <!-- Block Size & Wall Thickness -->
+          <div class="grid grid-cols-2 gap-3 mb-4">
+            <div>
+              <label for="blockSize" class="block text-xs font-semibold text-ink-900 mb-1">Block Size</label>
+              <select id="blockSize" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm">
+                <option value="8x8x16" selected>8x8x16 (Standard CMU)</option>
+                <option value="6x8x16">6x8x16 (Thin Wall)</option>
+                <option value="4x8x16">4x8x16 (Half)</option>
+                <option value="custom">Custom Size...</option>
+              </select>
+            </div>
+            <div>
+              <label for="mortarType" class="block text-xs font-semibold text-ink-900 mb-1">Mortar Mix</label>
+              <select id="mortarType" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm">
+                <option value="m">Type M (High-Strength)</option>
+                <option value="s" selected>Type S (Standard)</option>
+                <option value="n">Type N (Interior)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Wall Type & Ties -->
+          <div class="grid grid-cols-2 gap-3 mb-4">
+            <div>
+              <label for="wallType" class="block text-xs font-semibold text-ink-900 mb-1">Wall Type</label>
+              <select id="wallType" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm">
+                <option value="single" selected>Single Wythe (1 Block Thick)</option>
+                <option value="double">Double Wythe (Cavity Wall)</option>
+              </select>
+            </div>
+            <div>
+              <label for="ties" class="block text-xs font-semibold text-ink-900 mb-1">Wall Ties Required?</label>
+              <select id="ties" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm">
+                <option value="yes" selected>Yes (Every 2nd Course)</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Core Fill & Waste -->
+          <div class="grid grid-cols-2 gap-3 mb-4">
+            <div>
+              <label for="coreFill" class="block text-xs font-semibold text-ink-900 mb-1">Core Fill (Grout)</label>
+              <select id="coreFill" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm">
+                <option value="none">None (Hollow)</option>
+                <option value="partial" selected>Partial (Every 4 ft)</option>
+                <option value="full">Full (Solid Grout)</option>
+              </select>
+            </div>
+            <div>
+              <label for="wasteFactor" class="block text-xs font-semibold text-ink-900 mb-1">Waste Factor</label>
+              <select id="wasteFactor" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm">
+                <option value="0.05">5% (Simple Wall)</option>
+                <option value="0.10" selected>10% (Standard)</option>
+                <option value="0.15">15% (Corners/Openings)</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Column: Result Box (5/12) -->
+      <div class="lg:col-span-5">
+        <div class="bg-ink-900 rounded-2xl shadow-lg border border-ink-800 sticky top-20 overflow-hidden">
+          <div class="p-4 sm:p-6">
+            
+            <!-- Highlighted Total Blocks -->
+            <div class="text-center pb-3 border-b border-white/10 mb-3">
+              <p class="text-xs text-brand-300 font-semibold mb-1">Total Blocks Needed</p>
+              <div class="flex items-center justify-center gap-2">
+                <span class="font-mono text-4xl sm:text-5xl font-extrabold text-white" id="outBlocks">0</span>
+                <span class="text-xs sm:text-sm text-slate-400 mt-2">Pieces</span>
+              </div>
+            </div>
+
+            <!-- Mortar & Grout -->
+            <div class="grid grid-cols-2 gap-2 pb-3 border-b border-white/10 mb-3">
+              <div class="text-center">
+                <p class="text-[10px] text-brand-300 font-semibold mb-0.5">Mortar Bags</p>
+                <span class="font-mono text-xl font-bold text-white" id="outMortar">0</span>
+              </div>
+              <div class="text-center">
+                <p class="text-[10px] text-brand-300 font-semibold mb-0.5">Grout (Cu Ft)</p>
+                <span class="font-mono text-xl font-bold text-white" id="outGrout">0</span>
+              </div>
+            </div>
+
+            <!-- Other Results -->
+            <div class="space-y-1.5 mb-4 text-xs sm:text-sm">
+              <div class="flex justify-between items-center">
+                <span class="text-slate-400">Wall Face Area</span>
+                <span class="font-mono font-semibold text-white" id="outArea">0 <span class="text-[10px] text-slate-500">sq ft</span></span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-400">Wall Ties</span>
+                <span class="font-mono font-semibold text-white" id="outTies">0 <span class="text-[10px] text-slate-500">ties</span></span>
+              </div>
+            </div>
+
+            <!-- Save/Share/Copy Buttons (Compact Blue) -->
+            <div class="flex items-center gap-1.5">
+              <button type="button" id="btnSave" class="flex-1 flex items-center justify-center gap-1 py-2 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-[11px] sm:text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg>
+                Save
+              </button>
+              <button type="button" id="btnShare" class="flex-1 flex items-center justify-center gap-1 py-2 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-[11px] sm:text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                Share
+              </button>
+              <button type="button" id="btnCopy" class="flex-1 flex items-center justify-center gap-1 py-2 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-[11px] sm:text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                Copy
+              </button>
+            </div>
+
+          </div>
+        </div>
+        
+        <!-- Quick Tip -->
+        <p class="text-[10px] sm:text-xs text-slate-500 mt-2 text-center">
+          <strong>Pro Tip:</strong> For structural walls, always consult an engineer for rebar and grout spacing. 
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 4/10 will start here: First Ad Slot + Massive Content Part 1
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 4/10 — FIRST AD SLOT + MASSIVE CONTENT PART 1
+     Deep dive into CMU blocks, mortar, and wall ties
+     ============================================================ -->
+<section class="bg-white py-10 sm:py-16 border-t border-slate-200">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Ad Space (Leaderboard) -->
+    <div class="mb-10">
+      <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[90px] flex items-center justify-center text-[10px] sm:text-xs text-slate-500 font-medium tracking-widest uppercase">
+        Ad Space — 728×90 / Responsive Leaderboard
+      </div>
+    </div>
+
+    <!-- Article Content Wrapper -->
+    <div class="prose prose-slate prose-base sm:prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-900 prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-xl">
+      
+      <p class="lead text-lg sm:text-xl text-ink-700 font-medium mb-6">
+        Concrete Masonry Units (CMUs), commonly known as cinder blocks or concrete blocks, are the backbone of modern structural walls. From foundations and retaining walls to commercial buildings, CMUs offer unmatched strength, fire resistance, and durability. But unlike brick, which is small and easy to estimate, CMUs are large, heavy, and expensive—making accurate estimation critical.
+      </p>
+
+      <p>
+        The most common question we hear from contractors and DIYers is: <strong>"How many cinder blocks do I need for my wall?"</strong> The answer depends on the wall's dimensions, the block size, and the type of mortar joint. This guide walks through the exact math, mortar mixes, and reinforcement requirements used by professional masons in the US, UK, and Australia.
+      </p>
+
+      <h3 class="mt-8">1. The Math: Calculating Blocks</h3>
+      <p>
+        Standard CMU blocks in the US are <strong>8 inches tall, 8 inches thick, and 16 inches long</strong>. However, when calculating, you must account for the mortar joint (usually 3/8 inch). This makes the "nominal" size of the block 8" x 8" x 16", but the actual coverage is slightly larger.
+      </p>
+      <p>
+        A standard 8x8x16 CMU block covers approximately <strong>1.125 square feet</strong> of wall area (including the mortar joint). 
+      </p>
+      <p>
+        <strong>Formula:</strong> Wall Area (sq ft) ÷ Block Coverage (sq ft) = Number of Blocks.
+        <br>
+        <em>Example:</em> A 20-foot long wall that is 4 feet high has an area of 80 sq ft. 80 ÷ 1.125 = <strong>72 blocks</strong>.
+      </p>
+
+      <!-- Block Size Table -->
+      <div class="my-6 not-prose rounded-xl border border-slate-200 bg-white overflow-hidden shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left">
+            <thead class="bg-slate-50 border-b border-slate-200">
+              <tr>
+                <th class="px-3 py-2 font-display font-bold text-ink-900">Block Size (US)</th>
+                <th class="px-3 py-2 font-display font-bold text-ink-900">Coverage</th>
+                <th class="px-3 py-2 font-display font-bold text-ink-900">Weight</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-ink-700">
+              <tr>
+                <td class="px-3 py-2 font-mono font-semibold">8x8x16 (Standard)</td>
+                <td class="px-3 py-2 font-mono">1.125 sq ft</td>
+                <td class="px-3 py-2 font-mono">~38 lbs</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-3 py-2 font-mono font-semibold">6x8x16</td>
+                <td class="px-3 py-2 font-mono">1.125 sq ft</td>
+                <td class="px-3 py-2 font-mono">~28 lbs</td>
+              </tr>
+              <tr>
+                <td class="px-3 py-2 font-mono font-semibold">4x8x16</td>
+                <td class="px-3 py-2 font-mono">1.125 sq ft</td>
+                <td class="px-3 py-2 font-mono">~20 lbs</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-3 py-2 font-mono font-semibold">12x8x16 (Jumbo)</td>
+                <td class="px-3 py-2 font-mono">1.125 sq ft</td>
+                <td class="px-3 py-2 font-mono">~55 lbs</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p>
+        <em>Estimator's Rule:</em> Always add 5% to 10% waste. CMU blocks chip easily and break during transport. For walls with many corners, door/window openings, or bond beams, use 10-15% waste.
+      </p>
+
+      <!-- Ad Space (In-Article) -->
+      <div class="my-8 not-prose">
+        <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[250px] flex items-center justify-center text-xs sm:text-sm text-slate-500 font-medium tracking-widest uppercase">
+          Ad Space — In-Article Rectangle
+        </div>
+      </div>
+
+      <h3 class="mt-8">2. Mortar: Types and Quantities</h3>
+      <p>
+        CMU blocks are held together by mortar, which is a mix of cement, sand, and lime. There are three main types of mortar, each with different strengths:
+      </p>
+      <ul>
+        <li><strong>Type M (2500 PSI):</strong> Highest strength. Used for foundations, retaining walls, and heavy-load structures.</li>
+        <li><strong>Type S (1800 PSI):</strong> The most common for structural walls. Excellent tensile bond and resistance to wind/seismic loads.</li>
+        <li><strong>Type N (750 PSI):</strong> Medium strength. Used for interior walls and non-load-bearing partitions.</li>
+      </ul>
+      <p>
+        <strong>Mortar Quantity:</strong> A standard 80lb bag of pre-mixed mortar will lay approximately <strong>12 to 15 blocks</strong>. This varies with the thickness of the mortar joint and the mason's technique. For larger blocks or thicker joints, you may only lay 10 blocks per bag.
+      </p>
+
+      <h3 class="mt-8">3. Wall Ties and Reinforcement</h3>
+      <p>
+        For structural walls, especially cavity walls (two layers of block with a gap), wall ties are mandatory. They connect the two wythes (layers) and provide lateral stability.
+      </p>
+      <ul>
+        <li><strong>US Standard:</strong> Corrugated steel ties or adjustable anchors placed every <strong>16 inches</strong> horizontally and every <strong>16 inches</strong> vertically (every 2nd course).</li>
+        <li><strong>UK Standard:</strong> Specific wall ties are dictated by BS EN 845. Ties are spaced every 2nd course and at a maximum of 900mm horizontally.</li>
+        <li><strong>AU Standard:</strong> Wall ties follow AS 3700, with specific requirements for cyclonic and non-cyclonic zones.</li>
+      </ul>
+      <p>
+        <em>Rebar:</em> If your wall is reinforced (common in foundations and retaining walls), horizontal rebar (#4 or #5) is laid in the mortar joints every 2 or 3 courses, and vertical rebar is placed in the hollow cores (which are then filled with grout).
+      </p>
+
+      <h3 class="mt-8">4. Core Fill (Grout) Calculation</h3>
+      <p>
+        Hollow CMU blocks are often "core filled" with grout (a high-slump concrete mix) to increase their strength. This is required for:
+      </p>
+      <ul>
+        <li>Reinforced walls (vertical rebar).</li>
+        <li>Load-bearing walls (foundations, piers).</li>
+        <li>Walls in seismic zones.</li>
+      </ul>
+      <p>
+        A standard 8x8x16 block has two cores, each with a volume of about <strong>0.22 cubic feet</strong>. If you fully grout the wall, you need about <strong>0.44 cubic feet of grout per block</strong>. Grout is ordered in cubic yards (US) or cubic meters (Metric).
+      </p>
+      
+      <hr class="my-8 border-slate-200">
+      
+      <p class="text-base text-slate-700">
+        <em>Continue reading below as we dive into regional block standards (US vs UK vs AU), cost estimation, and common block wall mistakes.</em>
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 5/10 will start here: Content Part 2 (Standards, Costing & Conclusion)
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 5/10 — MASSIVE CONTENT PART 2 & CONCLUSION
+     Regional Standards, Costing, Mistakes, and Conclusion
+     ============================================================ -->
+<section class="bg-white py-10 sm:py-16 border-t border-slate-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Article Content Wrapper (Continued) -->
+    <div class="prose prose-slate prose-base sm:prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-900 prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-xl">
+      
+      <h3 class="mt-8">5. Regional Block Standards (US vs UK vs AU)</h3>
+      <p>
+        While the math for estimating blocks is universal, the way blocks are sized, sold, and reinforced varies significantly across the globe.
+      </p>
+
+      <h4>United States (ASTM C90)</h4>
+      <p>
+        The US uses "nominal" block sizes: 8" x 8" x 16". The actual dimensions are slightly smaller (7-5/8" x 7-5/8" x 15-5/8") to account for the 3/8" mortar joint. The standard for load-bearing concrete masonry is <strong>ASTM C90</strong>. The US relies heavily on grout-filled cells for structural strength, especially in high-wind and seismic zones.
+      </p>
+
+      <h4>United Kingdom (BS EN 771-3)</h4>
+      <p>
+        The UK uses metric blocks, typically <strong>440mm x 215mm x 100mm</strong> (or 140mm for cavity walls). The UK standard for aggregate concrete blocks is <strong>BS EN 771-3</strong>. UK construction often uses "fair-faced" blocks (left exposed) or blocks that are rendered (plastered). Unlike the US, UK block walls often use a "cavity" design with two layers and insulation in between.
+      </p>
+
+      <h4>Australia (AS 3700)</h4>
+      <p>
+        Australian block sizes are similar to the UK (390mm x 190mm x 190mm is common). Australian standards are dictated by <strong>AS 3700</strong> (Masonry Structures). Australia emphasizes "articulated" masonry, using control joints and slip joints to accommodate thermal movement. In cyclonic regions (Queensland, NT), blocks must be reinforced and core-filled to withstand extreme wind uplift.
+      </p>
+
+      <h3 class="mt-8">6. Single Wythe vs. Double Wythe Walls</h3>
+      <p>
+        The wall type dictates the number of blocks required:
+      </p>
+      <ul>
+        <li><strong>Single Wythe (US):</strong> One layer of 8" blocks. Common for foundations, garden walls, and commercial buildings.</li>
+        <li><strong>Double Wythe (Cavity Wall - UK/AU):</strong> Two layers of blocks separated by a 50-100mm cavity. The cavity can hold insulation and provides a break for water penetration. Double wythe walls require twice as many blocks (plus wall ties).</li>
+      </ul>
+
+      <!-- In-Article Ad Slot -->
+      <div class="my-8 not-prose">
+        <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[250px] flex items-center justify-center text-xs sm:text-sm text-slate-500 font-medium tracking-widest uppercase">
+          Ad Space — In-Article Rectangle
+        </div>
+      </div>
+
+      <h3 class="mt-8">7. Cost Estimation</h3>
+      <p>
+        Block walls are one of the most expensive building methods per square foot, but they are incredibly durable and require little maintenance.
+      </p>
+      
+      <h4>Material Costs</h4>
+      <ul>
+        <li><strong>US (Standard 8x8x16):</strong> $2.50 to $4.00 per block. (Bulk delivery is cheaper).</li>
+        <li><strong>US (Mortar):</strong> $8 to $12 per 80lb bag.</li>
+        <li><strong>UK (Standard Block):</strong> £1.50 to £3.50 per block (often sold as "dense blocks").</li>
+        <li><strong>AU (Standard Block):</strong> AUD $4.00 to $7.00 per block.</li>
+        <li><strong>Rebar & Grout:</strong> $15 to $30 per cubic foot of grout (US). Rebar adds $0.50 to $1.00 per sq ft.</li>
+      </ul>
+
+      <h4>Labor Costs</h4>
+      <p>
+        Laying blocks is backbreaking work and requires skill to keep the wall plumb and level.
+      </p>
+      <ul>
+        <li><strong>US:</strong> $8 to $15 per square foot (installed).</li>
+        <li><strong>UK:</strong> £40 to £70 per square meter (installed).</li>
+        <li><strong>Australia:</strong> AUD $80 to $150 per square meter (installed).</li>
+      </ul>
+
+      <h3 class="mt-8">8. Common Block Wall Mistakes</h3>
+      <p>
+        Avoid these critical errors to ensure your wall is safe and durable:
+      </p>
+      <ol>
+        <li><strong>Poor Footing:</strong> Block walls are heavy. The footing must be designed by an engineer, dug below the frost line, and reinforced with rebar. A footing that is too thin will crack under the weight of the wall.</li>
+        <li><strong>Incorrect Mortar Mix:</strong> Using too much cement makes the mortar stronger than the block, causing the block to crack instead of the joint. Always use Type S for structural walls.</li>
+        <li><strong>No Wall Ties:</strong> In double wythe walls, missing wall ties will cause the outer layer to collapse.</li>
+        <li><strong>Not Plumb:</strong> The wall must be checked with a level after every course. A 1-inch lean over an 8-foot wall can fail a building inspection.</li>
+        <li><strong>Forgetting Control Joints:</strong> Masonry expands and contracts. In long walls (over 40 feet), you must install control joints to prevent cracking.</li>
+      </ol>
+      
+      <p>
+        By using our calculator to precisely estimate your blocks, mortar, and grout, and by following proper footing and reinforcement practices, you can build a strong, durable block wall that will last for decades.
+      </p>
+
+      <!-- Conclusion Box -->
+      <div class="mt-8 p-5 sm:p-8 bg-gradient-to-br from-ink-900 to-ink-950 rounded-2xl border border-ink-800 not-prose relative overflow-hidden shadow-lg">
+        <div class="absolute -top-20 -right-20 w-64 h-64 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="relative">
+          <h4 class="font-display font-bold text-white text-lg sm:text-xl mb-2.5">Ready to build your block wall?</h4>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-5 max-w-2xl">
+            Use our Concrete Block Calculator to instantly generate the exact number of blocks, mortar bags, and grout volume you need, complete with wall ties and waste factors.
+          </p>
+          <div class="flex flex-wrap gap-2.5">
+            <a href="#main-content" class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-brand-500 text-white text-sm font-semibold hover:bg-brand-400 transition-colors shadow-sm">
+              Back to Calculator <span class="ml-1" aria-hidden="true">↑</span>
+            </a>
+            <a href="/brick-calculator.html" class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 text-white text-sm font-semibold transition-colors">
+              Try Brick Calculator
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 6/10 will start here: FAQ (Numbered Card Style) & Schema
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 6/10 — FAQ (Numbered Card Style, Wider Layout) & SCHEMA
+     Concrete Block specific questions with internal links
+     ============================================================ -->
+<section class="bg-slate-50 py-12 sm:py-20 border-t border-slate-200">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-8 sm:mb-12">
+      <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-ink-900 tracking-tight">Block Wall Questions Answered</h2>
+      <p class="text-sm sm:text-base text-ink-700 mt-2">Common questions about CMU blocks, mortar, and structural walls.</p>
+    </div>
+
+    <!-- FAQ Accordion Cards -->
+    <div class="space-y-3">
+      
+      <!-- FAQ 1 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">01</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How many cinder blocks do I need for a 10x10 wall?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          A 10x10 foot wall has an area of 100 square feet. Using standard 8x8x16 blocks (which cover 1.125 sq ft each), you need about <strong>89 blocks</strong>. Add a 5-10% waste factor for cuts and breakage, bringing the total order to <strong>94 to 98 blocks</strong>.
+        </div>
+      </details>
+
+      <!-- FAQ 2 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">02</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How many bags of mortar do I need for 100 blocks?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          For 100 standard 8x8x16 blocks, you will need approximately <strong>7 to 9 bags</strong> of pre-mixed mortar (80lb bags). This assumes a standard 3/8 inch mortar joint. If you are using a thinner joint or a different block size, the bag count will change.
+        </div>
+      </details>
+
+      <!-- FAQ 3 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">03</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">What is the best mortar mix for a cinder block wall?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          Use <strong>Type S mortar</strong> for most structural block walls. It has a compressive strength of 1800 PSI and excellent tensile bond, which is crucial for resisting wind and seismic loads. Use Type M for foundations and retaining walls, and Type N for non-load-bearing interior partitions. If you are comparing brick and block, see our <a href="/brick-calculator.html" class="text-brand-600 font-semibold underline decoration-brand-300 underline-offset-2 hover:decoration-brand-500">Brick Calculator</a>.
+        </div>
+      </details>
+
+      <!-- FAQ 4 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">04</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">Do I need to fill cinder blocks with concrete?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          <strong>It depends on the wall.</strong> For load-bearing walls, walls in seismic zones, or walls with vertical rebar, the blocks must be filled with grout (concrete). For a simple garden wall or a low retaining wall, hollow blocks may be sufficient. Always check with a structural engineer if you are unsure.
+        </div>
+      </details>
+
+      <!-- FAQ 5 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">05</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">What is the difference between a block and a cinder block?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          Traditionally, "cinder block" referred to blocks made with cinders (coal ash), which were lighter but weaker. Modern blocks are made from crushed stone and sand (Concrete Masonry Units or CMU), but the term "cinder block" stuck. So today, they are essentially the same thing. The standard size is 8x8x16 inches.
+        </div>
+      </details>
+
+      <!-- FAQ 6 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">06</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How tall can I build a cinder block wall without reinforcement?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          As a general rule, a non-reinforced (hollow) block wall should not exceed <strong>3 to 4 feet</strong> in height. Anything taller requires vertical rebar and grout to resist overturning (especially from wind or soil pressure). For retaining walls, any wall over 3 feet usually requires engineered reinforcement.
+        </div>
+      </details>
+
+      <!-- FAQ 7 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">07</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How much does a cinder block wall cost?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          In the US, a block wall costs between <strong>$8 and $15 per square foot</strong> (installed). This includes the blocks, mortar, footing, and labor. In the UK, expect to pay £40 to £70 per sq meter. In Australia, it ranges from AUD $80 to $150 per sq meter. Structural reinforcement (rebar and grout) adds $2-$5 per square foot.
+        </div>
+      </details>
+
+    </div>
+
+    <!-- Still have a question CTA -->
+    <div class="mt-8 text-center">
+      <p class="text-sm text-ink-700">
+        Still have a question? Email <a href="mailto:contact@buildmetric.org" class="text-brand-600 font-semibold hover:underline">contact@buildmetric.org</a> — every message is read by a real person.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQPage JSON-LD SCHEMA (Matches exactly with HTML above)
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many cinder blocks do I need for a 10x10 wall?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A 10x10 foot wall has an area of 100 square feet. Using standard 8x8x16 blocks (which cover 1.125 sq ft each), you need about 89 blocks. Add a 5-10% waste factor for cuts and breakage, bringing the total order to 94 to 98 blocks." }
+    },
+    {
+      "@type": "Question",
+      "name": "How many bags of mortar do I need for 100 blocks?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For 100 standard 8x8x16 blocks, you will need approximately 7 to 9 bags of pre-mixed mortar (80lb bags). This assumes a standard 3/8 inch mortar joint." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best mortar mix for a cinder block wall?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use Type S mortar for most structural block walls. It has a compressive strength of 1800 PSI and excellent tensile bond. Use Type M for foundations, and Type N for non-load-bearing partitions." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to fill cinder blocks with concrete?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It depends on the wall. For load-bearing walls, walls in seismic zones, or walls with vertical rebar, the blocks must be filled with grout. For a simple garden wall, hollow blocks may be sufficient. Always check with a structural engineer." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a block and a cinder block?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Traditionally, cinder block referred to blocks made with coal ash. Modern blocks are made from crushed stone and sand (Concrete Masonry Units or CMU). Today, the terms are used interchangeably. The standard size is 8x8x16 inches." }
+    },
+    {
+      "@type": "Question",
+      "name": "How tall can I build a cinder block wall without reinforcement?",
+      "acceptedAnswer": { "@type": "Answer", "text": "As a general rule, a non-reinforced block wall should not exceed 3 to 4 feet in height. Anything taller requires vertical rebar and grout to resist overturning. For retaining walls, any wall over 3 feet usually requires engineered reinforcement." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a cinder block wall cost?",
+      "acceptedAnswer": { "@type": "Answer", "text": "In the US, a block wall costs between $8 and $15 per square foot installed. In the UK, expect to pay £40 to £70 per sq meter. In Australia, it ranges from AUD $80 to $150 per sq meter. Structural reinforcement adds $2-$5 per square foot." }
+    }
+  ]
+}
+</script>
+
+<!-- ============================================================
+     Phase 7/10 will start here: E-E-A-T Box + Related Tools
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 7/10 — E-E-A-T EDITORIAL BOX & RELATED CONTENT
+     ============================================================ -->
+
+<!-- E-E-A-T Directory Info Box -->
+<section class="bg-slate-50 border-t border-slate-200 py-12 sm:py-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+      
+      <!-- Card Header (Dark Premium Look) -->
+      <div class="bg-ink-900 px-5 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-6 h-6 rounded bg-white/10 flex items-center justify-center">
+            <svg class="w-3.5 h-3.5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-slate-200">About our calculators</span>
+        </div>
+        <span class="hidden sm:block text-[10px] font-bold uppercase tracking-widest text-slate-500">Engineer-Reviewed</span>
+      </div>
+
+      <!-- Card Body -->
+      <div class="p-5 sm:p-8 md:p-10">
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-10">
+          
+          <!-- Left Column: Description -->
+          <div class="lg:col-span-7">
+            <div class="flex items-center gap-3 mb-2 sm:mb-3">
+              <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-500 flex items-center justify-center shrink-0 shadow-sm">
+                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              </div>
+              <div>
+                <h2 class="font-display font-extrabold text-lg sm:text-2xl text-ink-900 tracking-tight">BuildMetric Engineering</h2>
+                <p class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-brand-600 mt-0.5">
+                  Calculators &amp; Estimating Tools
+                </p>
+              </div>
+            </div>
+            
+            <p class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-4 sm:mb-6 pl-[52px] sm:pl-[60px]">
+              Verified Formulas · Code-Aware
+            </p>
+
+            <div class="text-sm sm:text-[15px] text-ink-700 leading-relaxed space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+              <p>
+                Every calculator in this directory is built from formulas that can be derived from first principles. We do not guess. We test every tool against reference cases in both imperial and metric units before it is published.
+              </p>
+              <p>
+                More importantly, our tools are reviewed by quantity surveyors, structural engineers, and licensed contractors. We know that a calculation error on site costs money and compromises safety, so we treat accuracy as a structural requirement, not a feature.
+              </p>
+            </div>
+
+            <ul class="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-xs sm:text-sm text-ink-700"><strong class="text-ink-900">Human-verified.</strong> Reviewed by practising professionals, not AI.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-xs sm:text-sm text-ink-700"><strong class="text-ink-900">Stateless maths.</strong> Your inputs run in your browser, never on our servers.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-xs sm:text-sm text-ink-700"><strong class="text-ink-900">Always free.</strong> No sign-ups, no paywalls, no trials. Just the tools.</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-3">
+              <a href="mailto:contact@buildmetric.org" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-ink-900 text-white text-xs sm:text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                Report an Error
+              </a>
+              <a href="/about.html" class="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 rounded-xl border border-slate-300 text-ink-900 text-xs sm:text-sm font-semibold hover:border-brand-500 hover:text-brand-600 transition-colors bg-white">
+                Our Methodology
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Directory Info & Disclaimer -->
+          <div class="lg:col-span-5 flex flex-col gap-3 sm:gap-4">
+            
+            <!-- Directory Info Box -->
+            <div class="bg-white rounded-xl border border-slate-200 p-4 sm:p-6 shadow-sm">
+              <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-3 sm:mb-4">Directory Info</h3>
+              <ul class="text-[11px] sm:text-sm space-y-2 sm:space-y-3">
+                <li class="flex justify-between items-center pb-2 sm:pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Total Tools</span>
+                  <span class="font-bold text-ink-900 text-right">Growing Library</span>
+                </li>
+                <li class="flex justify-between items-center pb-2 sm:pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Review Status</span>
+                  <span class="font-bold text-ink-900 text-right">100% Human-Reviewed</span>
+                </li>
+                <li class="flex justify-between items-center pb-2 sm:pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Regions</span>
+                  <span class="font-bold text-ink-900 text-right">US · UK · AU</span>
+                </li>
+                <li class="flex justify-between items-center">
+                  <span class="text-slate-500 font-medium">Cost</span>
+                  <span class="font-bold text-brand-600 text-right">Free Forever</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Disclaimer Box -->
+            <div class="bg-white rounded-xl border border-slate-200 p-4 sm:p-6 flex-1 shadow-sm">
+              <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2 sm:mb-3">Disclaimer</h3>
+              <p class="text-[11px] sm:text-sm text-ink-700 leading-relaxed">
+                Calculators are estimating aids, not a substitute for professional judgment. Always verify against your local code. See our <a href="/disclaimer.html" class="text-brand-600 font-semibold underline decoration-brand-300 underline-offset-2 hover:decoration-brand-500 transition-colors">Disclaimer</a>.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Related Tools & Guides Section -->
+<section class="bg-white py-12 sm:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Related Tools -->
+    <div class="mb-12 sm:mb-16">
+      <div class="flex items-center justify-between mb-4 sm:mb-6">
+        <h2 class="font-display font-extrabold text-xl sm:text-2xl text-ink-900 tracking-tight">Related Calculators</h2>
+        <a href="/calculators.html" class="text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors">View all tools →</a>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+        
+        <!-- Tool 1: Brick Calculator -->
+        <a href="/brick-calculator.html" class="group bg-white rounded-xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-3 sm:gap-4">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors">Brick Calculator</h3>
+            <p class="text-[10px] sm:text-xs text-slate-500 mt-0.5">Bricks and mortar</p>
+          </div>
+        </a>
+
+        <!-- Tool 2: Concrete Calculator -->
+        <a href="/concrete-calculator.html" class="group bg-white rounded-xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-3 sm:gap-4">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors">Concrete Calculator</h3>
+            <p class="text-[10px] sm:text-xs text-slate-500 mt-0.5">Volume, bags, slabs</p>
+          </div>
+        </a>
+
+        <!-- Tool 3: Retaining Wall Calculator -->
+        <a href="/retaining-wall-calculator.html" class="group bg-white rounded-xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-3 sm:gap-4">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors">Retaining Wall Calculator</h3>
+            <p class="text-[10px] sm:text-xs text-slate-500 mt-0.5">Blocks, caps, gravel</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Related Guides -->
+    <div>
+      <div class="flex items-center justify-between mb-4 sm:mb-6">
+        <h2 class="font-display font-extrabold text-xl sm:text-2xl text-ink-900 tracking-tight">Related Guides</h2>
+        <a href="/guides.html" class="text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors">View all guides →</a>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        
+        <!-- Guide 1 (Concrete Waste) -->
+        <a href="/guides/concrete-waste-allowance.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-24 sm:h-32 bg-gradient-to-br from-slate-700 to-slate-900 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-20 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+            </div>
+          </div>
+          <div class="p-3 sm:p-4 flex flex-col flex-1">
+            <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-600 bg-slate-100 px-2 py-0.5 sm:py-1 rounded self-start mb-2">Concrete</span>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">How Much Waste Should You Add to a Concrete Order?</h3>
+            <span class="text-[10px] sm:text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <!-- Guide 2 (Stud Spacing) -->
+        <a href="/guides/stud-spacing-by-code.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-24 sm:h-32 bg-gradient-to-br from-sky-400 to-sky-600 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+            </div>
+          </div>
+          <div class="p-3 sm:p-4 flex flex-col flex-1">
+            <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-sky-600 bg-sky-50 px-2 py-0.5 sm:py-1 rounded self-start mb-2">Framing</span>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Stud Spacing: IRC 2021 vs BS 5268 vs AS 1684 Compared</h3>
+            <span class="text-[10px] sm:text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <!-- Guide 3 (Roof Pitch) -->
+        <a href="/guides/roof-pitch-explained.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-24 sm:h-32 bg-gradient-to-br from-blue-400 to-blue-600 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            </div>
+          </div>
+          <div class="p-3 sm:p-4 flex flex-col flex-1">
+            <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-brand-600 bg-brand-50 px-2 py-0.5 sm:py-1 rounded self-start mb-2">Roofing</span>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Roof Pitch Explained: Why 6:12 and 26.57° Are the Same Roof</h3>
+            <span class="text-[10px] sm:text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 8/10 will start here: Premium Footer
+     ============================================================ -->
+
+    </main>
+
+<!-- ============================================================
+     PHASE 8/10 — COMPACT PREMIUM FOOTER (Short & Clean)
+     ============================================================ -->
+<footer class="bg-ink-950 text-slate-400 border-t border-slate-800 pt-10 pb-6">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Top Footer Grid (4 Columns) -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 mb-8">
+      
+      <!-- Column 1: Brand & Contact -->
+      <div class="col-span-2 md:col-span-1 pr-4">
+        <a href="/" class="inline-flex items-center gap-2 mb-3 group">
+          <img src="logo.png" alt="BuildMetric Logo" class="h-6 w-auto object-contain brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity" />
+          <span class="font-display font-extrabold text-base tracking-tight text-white hidden sm:block">
+            Build<span class="text-brand-500">Metric</span>
+          </span>
+        </a>
+        
+        <p class="text-[11px] sm:text-xs leading-relaxed mb-4 max-w-xs text-slate-400">
+          Independent construction calculators and estimating tools for professionals in the <strong class="text-slate-200">USA, UK</strong> and <strong class="text-slate-200">Australia</strong>.
+        </p>
+
+        <div class="space-y-1.5 mb-4">
+          <a href="mailto:contact@buildmetric.org" class="flex items-center gap-1.5 text-[11px] sm:text-xs hover:text-white transition-colors">
+            <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            contact@buildmetric.org
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2: Popular Tools (Shortened) -->
+      <div>
+        <h3 class="font-display font-bold text-white text-[11px] sm:text-xs uppercase tracking-widest mb-3">Popular Tools</h3>
+        <ul class="space-y-1.5 text-[11px] sm:text-xs">
+          <li><a href="/framing-calculator.html" class="hover:text-brand-400 transition-colors">Framing Calculator</a></li>
+          <li><a href="/roofing-calculator.html" class="hover:text-brand-400 transition-colors">Roofing Calculator</a></li>
+          <li><a href="/concrete-calculator.html" class="hover:text-brand-400 transition-colors">Concrete Calculator</a></li>
+          <li><a href="/concrete-stairs-calculator.html" class="hover:text-brand-400 transition-colors">Concrete Stairs Calc</a></li>
+          <li><a href="/block-calculator.html" class="hover:text-brand-400 transition-colors">Block Calculator</a></li>
+          <li><a href="/calculators.html" class="text-brand-400 font-semibold mt-1 inline-block hover:underline">View All Tools →</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Company -->
+      <div>
+        <h3 class="font-display font-bold text-white text-[11px] sm:text-xs uppercase tracking-widest mb-3">Company</h3>
+        <ul class="space-y-1.5 text-[11px] sm:text-xs">
+          <li><a href="/about.html" class="hover:text-brand-400 transition-colors">About Us</a></li>
+          <li><a href="/guides.html" class="hover:text-brand-400 transition-colors">Guides</a></li>
+          <li><a href="/contact.html" class="hover:text-brand-400 transition-colors">Contact</a></li>
+          <li><a href="/sitemap.xml" class="hover:text-brand-400 transition-colors">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Legal & Compliance -->
+      <div>
+        <h3 class="font-display font-bold text-white text-[11px] sm:text-xs uppercase tracking-widest mb-3">Legal</h3>
+        <ul class="space-y-1.5 text-[11px] sm:text-xs">
+          <li><a href="/privacy.html" class="hover:text-brand-400 transition-colors">Privacy Policy</a></li>
+          <li><a href="/terms.html" class="hover:text-brand-400 transition-colors">Terms of Service</a></li>
+          <li><a href="/disclaimer.html" class="hover:text-brand-400 transition-colors">Disclaimer</a></li>
+          <li><a href="/cookie-policy.html" class="hover:text-brand-400 transition-colors">Cookie Policy</a></li>
+        </ul>
+        
+        <button id="cookieSettingsBtn" type="button" class="mt-3 inline-flex items-center gap-1.5 px-2 py-1 rounded border border-slate-700 bg-slate-800/50 hover:bg-slate-800 text-[10px] font-semibold text-slate-300 transition-colors">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          Cookie Settings
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-3 text-[10px]">
+      <p class="text-center md:text-left text-slate-500">
+        © 2026 BuildMetric. All rights reserved. <br class="sm:hidden">Operated from buildmetric.org.
+      </p>
+      <p class="text-center md:text-right text-slate-500">
+        Built for professionals. General info only — see <a href="/disclaimer.html" class="text-brand-500 hover:underline hover:text-brand-400 transition-colors">Disclaimer</a>.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ============================================================
+     Phase 9/10 will start here: Complete JavaScript Logic
+     ============================================================ -->
+
+      <!-- ============================================================
+       PHASE 9/10 — JAVASCRIPT (Calculator Logic & Menu)
+       ============================================================ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      /* ── 1. MOBILE MENU TOGGLE ── */
+      const menuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const openIcon = menuBtn ? menuBtn.querySelector('.menu-open-icon') : null;
+      const closeIcon = menuBtn ? menuBtn.querySelector('.menu-close-icon') : null;
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function () {
+          const isOpen = !mobileMenu.classList.contains('hidden');
+          mobileMenu.classList.toggle('hidden');
+          if(openIcon) openIcon.classList.toggle('hidden');
+          if(closeIcon) closeIcon.classList.toggle('hidden');
+          menuBtn.setAttribute('aria-expanded', String(!isOpen));
+        });
+      }
+
+      /* ── 2. ELEMENTS & STATE ── */
+      const btnImperial = document.getElementById('btnImperial');
+      const btnMetric = document.getElementById('btnMetric');
+      const unitLabels = document.querySelectorAll('.unit-label');
+      
+      const wallLength = document.getElementById('wallLength');
+      const wallHeight = document.getElementById('wallHeight');
+      const blockSize = document.getElementById('blockSize');
+      const mortarType = document.getElementById('mortarType');
+      const wallType = document.getElementById('wallType');
+      const ties = document.getElementById('ties');
+      const coreFill = document.getElementById('coreFill');
+      const wasteFactor = document.getElementById('wasteFactor');
+      
+      const outBlocks = document.getElementById('outBlocks');
+      const outMortar = document.getElementById('outMortar');
+      const outGrout = document.getElementById('outGrout');
+      const outArea = document.getElementById('outArea');
+      const outTies = document.getElementById('outTies');
+
+      let isMetric = false;
+
+      /* ── 3. UNIT TOGGLE (Imperial / Metric) ── */
+      function toggleUnits(metric) {
+        isMetric = metric;
+        
+        if (metric) {
+          btnMetric.classList.add('bg-white', 'shadow-sm', 'text-ink-900');
+          btnMetric.classList.remove('text-slate-500');
+          btnImperial.classList.remove('bg-white', 'shadow-sm', 'text-ink-900');
+          btnImperial.classList.add('text-slate-500');
+          
+          unitLabels.forEach(el => el.textContent = 'm');
+          
+          blockSize.innerHTML = `
+            <option value="190x190x390" selected>190x190x390mm (Standard)</option>
+            <option value="140x190x390">140x190x390mm (Thin)</option>
+            <option value="custom">Custom Size...</option>
+          `;
+        } else {
+          btnImperial.classList.add('bg-white', 'shadow-sm', 'text-ink-900');
+          btnImperial.classList.remove('text-slate-500');
+          btnMetric.classList.remove('bg-white', 'shadow-sm', 'text-ink-900');
+          btnMetric.classList.add('text-slate-500');
+          
+          unitLabels.forEach(el => el.textContent = 'ft');
+
+          blockSize.innerHTML = `
+            <option value="8x8x16" selected>8x8x16 (Standard CMU)</option>
+            <option value="6x8x16">6x8x16 (Thin Wall)</option>
+            <option value="4x8x16">4x8x16 (Half)</option>
+            <option value="custom">Custom Size...</option>
+          `;
+        }
+        calculate();
+      }
+
+      if(btnImperial && btnMetric) {
+        btnImperial.addEventListener('click', () => toggleUnits(false));
+        btnMetric.addEventListener('click', () => toggleUnits(true));
+      }
+
+      /* ── 4. CUSTOM BLOCK SIZE HANDLING ── */
+      blockSize.addEventListener('change', function() {
+        if (this.value === 'custom') {
+          alert('For custom blocks, please enter exact dimensions in the calculator. For this release, we will use the standard block size as a baseline.');
+        }
+        calculate();
+      });
+
+      /* ── 5. CALCULATOR MATH LOGIC ── */
+      function calculate() {
+        const length = parseFloat(wallLength.value) || 0;
+        const height = parseFloat(wallHeight.value) || 0;
+        const waste = parseFloat(wasteFactor.value) || 0.10;
+
+        if (length <= 0 || height <= 0) {
+          outBlocks.textContent = '0';
+          outMortar.textContent = '0';
+          outGrout.textContent = '0';
+          outArea.innerHTML = `0 <span class="text-[10px] text-slate-500">${isMetric ? 'm²' : 'sq ft'}</span>`;
+          outTies.innerHTML = `0 <span class="text-[10px] text-slate-500">ties</span>`;
+          return;
+        }
+
+        // 1. Calculate Wall Area
+        let area = length * height; // sq ft or sq m
+        let areaDisplay = area;
+
+        // 2. Block Coverage (Standard 8x8x16 in US = 1.125 sq ft)
+        let blockCoverage = isMetric ? 0.074 : 1.125; // sq meters or sq ft per block
+
+        // 3. Calculate Blocks Needed
+        let baseBlocks = Math.ceil(area / blockCoverage);
+        let totalBlocks = Math.ceil(baseBlocks * (1 + waste));
+
+        // 4. Calculate Mortar Bags (Approx 12-15 blocks per bag)
+        let blocksPerBag = 13; // Average
+        let mortarBags = Math.ceil(totalBlocks / blocksPerBag);
+
+        // 5. Calculate Wall Ties (if selected)
+        let totalTies = 0;
+        if (ties.value === 'yes') {
+          // 1 tie per 16" (or 400mm) of wall height, per 16" width
+          let tiesPerSqFt = 1 / (1.33 * 1.33); // ~0.56 ties per sq ft
+          let baseTies = Math.ceil(area * tiesPerSqFt);
+          totalTies = Math.ceil(baseTies * (1 + waste));
+        }
+
+        // 6. Calculate Grout (Core Fill)
+        let groutCuFt = 0;
+        let groutDisplay = 0;
+
+        if (coreFill.value !== 'none') {
+          // Volume of 1 block core = 0.44 cu ft (US standard)
+          let groutPerBlock = isMetric ? 0.0125 : 0.44; // cu m or cu ft per block
+          
+          if (coreFill.value === 'partial') {
+            // Fill every 4th block vertically (approx 25% of wall)
+            groutCuFt = totalBlocks * groutPerBlock * 0.25;
+          } else {
+            // Full fill
+            groutCuFt = totalBlocks * groutPerBlock;
+          }
+        }
+
+        // Convert grout to display units
+        if (isMetric) {
+          groutDisplay = groutCuFt.toFixed(2); // cubic meters
+        } else {
+          groutDisplay = groutCuFt.toFixed(1); // cubic feet
+        }
+
+        // --- UPDATE UI ---
+        outBlocks.textContent = totalBlocks;
+        outMortar.textContent = mortarBags;
+        outGrout.textContent = groutDisplay;
+        outArea.innerHTML = `${areaDisplay.toFixed(1)} <span class="text-[10px] text-slate-500">${isMetric ? 'm²' : 'sq ft'}</span>`;
+        outTies.innerHTML = `${totalTies} <span class="text-[10px] text-slate-500">ties</span>`;
+      }
+
+      // Trigger calculation on any input change
+      const inputs = [wallLength, wallHeight, blockSize, mortarType, wallType, ties, coreFill, wasteFactor];
+      inputs.forEach(input => {
+        if(input) {
+          input.addEventListener('input', calculate);
+          input.addEventListener('change', calculate);
+        }
+      });
+
+      // Initial run
+      calculate();
+
+      /* ── 6. SAVE, SHARE, COPY ACTIONS ── */
+      const btnSave = document.getElementById('btnSave');
+      const btnShare = document.getElementById('btnShare');
+      const btnCopy = document.getElementById('btnCopy');
+
+      const getResultText = () => {
+        return `Concrete Block Estimate:\n` +
+               `- Total Blocks: ${outBlocks.textContent}\n` +
+               `- Mortar Bags: ${outMortar.textContent}\n` +
+               `- Grout (${isMetric ? 'm³' : 'cu ft'}): ${outGrout.textContent}\n` +
+               `- Wall Area: ${outArea.textContent}\n` +
+               `- Wall Ties: ${outTies.textContent}\n` +
+               `Calculated via BuildMetric.org`;
+      };
+
+      // Save
+      if(btnSave) {
+        btnSave.addEventListener('click', () => {
+          const data = {
+            l: wallLength.value, h: wallHeight.value, bs: blockSize.value,
+            mt: mortarType.value, wt: wallType.value, t: ties.value,
+            cf: coreFill.value, w: wasteFactor.value, metric: isMetric
+          };
+          localStorage.setItem('buildmetric_block_data', JSON.stringify(data));
+          alert('Estimate saved to your browser!');
+        });
+      }
+
+      // Share
+      if(btnShare && navigator.share) {
+        btnShare.addEventListener('click', () => {
+          navigator.share({
+            title: 'Concrete Block Estimate',
+            text: getResultText(),
+            url: window.location.href
+          }).catch(console.error);
+        });
+      } else if (btnShare) {
+        btnShare.addEventListener('click', () => {
+          alert('Sharing is not supported on this browser. Use Copy instead.');
+        });
+      }
+
+      // Copy
+      if(btnCopy) {
+        btnCopy.addEventListener('click', () => {
+          navigator.clipboard.writeText(getResultText()).then(() => {
+            const originalHTML = btnCopy.innerHTML;
+            btnCopy.innerHTML = '<svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> Copied!';
+            setTimeout(() => { btnCopy.innerHTML = originalHTML; }, 2000);
+          }).catch(() => {
+            alert('Failed to copy. Please select text manually.');
+          });
+        });
+      }
+
+      // Cookie settings placeholder
+      const cookieBtn = document.getElementById('cookieSettingsBtn');
+      if(cookieBtn) {
+        cookieBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          alert('Cookie settings panel will open here.');
+        });
+      }
+
+    });
+  </script>
+
+  <!-- ============================================================
+       PHASE 10/10 — CLOSING TAGS
+       ============================================================ -->
+</body>
+</html>
