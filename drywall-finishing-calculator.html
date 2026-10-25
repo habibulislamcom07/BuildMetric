@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- ============================================================
+       PHASE 1/10 — SEO HEAD & CONFIGURATION (Drywall Focus)
+       File: drywall-finishing-calculator.html
+       Brand: BuildMetric | Domain: buildmetric.org
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO Meta (Long-Tail Keywords) -->
+  <title>Drywall Finishing Calculator | How Much Joint Compound? | BuildMetric</title>
+  <meta name="description" content="Free drywall finishing calculator to estimate joint compound (mud), tape, and screws needed. Accounts for finish level (Level 3, 4, 5) and waste." />
+  <meta name="keywords" content="drywall finishing calculator, joint compound calculator, how much drywall mud, drywall tape calculator, level 4 vs level 5 drywall, drywall screws calculator" />
+  <meta name="author" content="BuildMetric Editorial Team" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#0ea5e9" />
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://buildmetric.org/drywall-finishing-calculator.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BuildMetric" />
+  <meta property="og:title" content="Drywall Finishing Calculator | Joint Compound & Tape" />
+  <meta property="og:description" content="Calculate exact mud, tape, and screws for drywall finishing." />
+  <meta property="og:url" content="https://buildmetric.org/drywall-finishing-calculator.html" />
+  <meta property="og:image" content="https://buildmetric.org/assets/og/drywall-finishing-calculator.png" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Drywall Finishing Calculator | BuildMetric" />
+  <meta name="twitter:description" content="Estimate exact mud, tape, and screws for drywall finishing." />
+  <meta name="twitter:image" content="https://buildmetric.org/assets/og/drywall-finishing-calculator.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e' },
+            ink: { 700: '#334155', 800: '#1e293b', 900: '#0f172a', 950: '#080f1e' }
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: {
+            'soft': '0 4px 20px -2px rgba(15,23,42,0.05)',
+            'hover': '0 12px 32px -8px rgba(14,165,233,0.15)',
+            'glass': '0 4px 24px -4px rgba(15,23,42,0.08)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+    .bg-grid-pattern {
+      background-image: linear-gradient(to right, rgba(15,23,42,0.04) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(15,23,42,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .nav-glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); }
+    details > summary .icon-plus { transition: transform 0.3s ease; }
+    details[open] > summary .icon-plus { transform: rotate(45deg); }
+    details > summary::-webkit-details-marker { display: none; }
+  </style>
+
+  <!-- ================= JSON-LD SCHEMA ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://buildmetric.org/drywall-finishing-calculator.html#app",
+        "name": "Drywall Finishing & Joint Compound Calculator",
+        "url": "https://buildmetric.org/drywall-finishing-calculator.html",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "All",
+        "description": "Calculate the amount of joint compound, tape, and screws needed for drywall finishing based on square footage and finish level.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://buildmetric.org/drywall-finishing-calculator.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://buildmetric.org/" },
+          { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://buildmetric.org/calculators.html" },
+          { "@type": "ListItem", "position": 3, "name": "Drywall", "item": "https://buildmetric.org/drywall.html" },
+          { "@type": "ListItem", "position": 4, "name": "Drywall Finishing Calculator", "item": "https://buildmetric.org/drywall-finishing-calculator.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+  <body class="bg-white text-ink-800 antialiased font-sans flex flex-col min-h-screen">
+
+  <!-- ============================================================
+       SKIP LINK (Accessibility)
+       ============================================================ -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2.5 focus:bg-brand-500 focus:text-white focus:rounded-lg focus:font-semibold focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/70">
+    Skip to main content
+  </a>
+
+  <!-- ============================================================
+       STICKY NAVBAR (Compact & Mobile Friendly)
+       ============================================================ -->
+  <header class="sticky top-0 z-50 nav-glass border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-14 sm:h-16 lg:h-20">
+        
+        <!-- Logo -->
+        <div class="flex items-center gap-6">
+          <a href="/" class="flex items-center gap-2.5 shrink-0" aria-label="BuildMetric Home">
+            <img src="logo.png" alt="BuildMetric Logo" class="h-7 sm:h-9 w-auto object-contain" />
+            <span class="font-display font-extrabold text-lg sm:text-xl tracking-tight text-ink-900 hidden sm:block">
+              Build<span class="text-brand-500">Metric</span>
+            </span>
+          </a>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden lg:flex items-center gap-1" aria-label="Main Navigation">
+            <a href="/calculators.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Calculators</a>
+            <a href="/guides.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Guides</a>
+            <a href="/about.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">About</a>
+            <a href="/contact.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Contact</a>
+          </nav>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <a href="/calculators.html" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-lg bg-ink-900 text-white text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+            Open Tools
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuBtn" type="button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-200 text-ink-800 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand-500/40 transition-colors" aria-expanded="false" aria-controls="mobileMenu">
+            <span class="sr-only">Open main menu</span>
+            <svg class="menu-open-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <svg class="menu-close-icon hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu (Compact) -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 bg-white">
+      <div class="px-3 py-3 space-y-1">
+        <a href="/calculators.html" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Calculators</a>
+        <a href="/guides.html" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Guides</a>
+        <a href="/about.html" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-ink-900 hover:bg-slate-50 transition-colors">About</a>
+        <a href="/contact.html" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main id="main-content" class="flex-grow">
+    
+    <!-- ============================================================
+         PAGE HEADER & BREADCRUMBS (Compact)
+         ============================================================ -->
+    <div class="bg-slate-50 border-b border-slate-200 pt-4 pb-5 sm:pt-6 sm:pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="Breadcrumb" class="mb-2 sm:mb-4">
+          <ol class="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-[11px] sm:text-sm text-slate-500">
+            <li><a href="/" class="hover:text-brand-600 transition-colors">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/calculators.html" class="hover:text-brand-600 transition-colors">Calculators</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/drywall.html" class="hover:text-brand-600 transition-colors">Drywall</a></li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page" class="text-ink-900 font-semibold">Finishing Calculator</li>
+          </ol>
+        </nav>
+
+        <!-- Page Title & Subtitle -->
+        <h1 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-ink-900 tracking-tight leading-tight">
+          Drywall Finishing Calculator
+        </h1>
+        <p class="text-xs sm:text-sm md:text-base text-ink-700 mt-1 max-w-2xl leading-relaxed">
+          Calculate the exact amount of joint compound, tape, and screws for your drywall project. Accounts for finish level (Level 3, 4, 5) and waste factor.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- ============================================================
+         Phase 3/10 will start here: The Calculator UI
+         ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 3/10 — THE CALCULATOR UI
+     Drywall Finishing specific inputs and result box
+     ============================================================ -->
+<section class="bg-white py-6 sm:py-12">
+  <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-10">
+      
+      <!-- Left Column: Form Inputs (7/12) -->
+      <div class="lg:col-span-7">
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-6">
+          
+          <!-- Unit Toggle (Compact) -->
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="font-display font-bold text-lg text-ink-900">Finishing Details</h2>
+            <div class="flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200">
+              <button type="button" id="btnImperial" class="px-2.5 py-1 text-[11px] sm:text-xs font-semibold rounded-md bg-white shadow-sm text-ink-900 transition-all">Imperial (ft)</button>
+              <button type="button" id="btnMetric" class="px-2.5 py-1 text-[11px] sm:text-xs font-semibold rounded-md text-slate-500 hover:text-ink-900 transition-all">Metric (m)</button>
+            </div>
+          </div>
+
+          <!-- Total Area & Finish Level -->
+          <div class="grid grid-cols-2 gap-3 mb-4">
+            <div>
+              <label for="wallArea" class="block text-xs font-semibold text-ink-900 mb-1">Total Wall Area (<span class="unit-label">sq ft</span>)</label>
+              <input type="number" id="wallArea" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow text-sm" placeholder="e.g. 1000" min="0" step="0.1">
+            </div>
+            <div>
+              <label for="finishLevel" class="block text-xs font-semibold text-ink-900 mb-1">Finish Level</label>
+              <select id="finishLevel" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm">
+                <option value="level3">Level 3 (Garage / Texture)</option>
+                <option value="level4" selected>Level 4 (Standard Residential)</option>
+                <option value="level5">Level 5 (High-End / Gloss)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Tape Type & Waste Factor -->
+          <div class="grid grid-cols-2 gap-3 mb-4">
+            <div>
+              <label for="tapeType" class="block text-xs font-semibold text-ink-900 mb-1">Tape Type</label>
+              <select id="tapeType" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm">
+                <option value="paper" selected>Paper Tape (Recommended)</option>
+                <option value="mesh">Mesh Tape (Fiberglass)</option>
+              </select>
+            </div>
+            <div>
+              <label for="wasteFactor" class="block text-xs font-semibold text-ink-900 mb-1">Waste Factor</label>
+              <select id="wasteFactor" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm">
+                <option value="0.05">5% (Simple Room)</option>
+                <option value="0.10" selected>10% (Standard)</option>
+                <option value="0.15">15% (Complex)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Screws Calculation Toggle -->
+          <div class="mb-4 flex items-center gap-3 bg-slate-50 p-3 rounded-lg border border-slate-200">
+            <input type="checkbox" id="calculateScrews" class="w-4 h-4 rounded border-slate-300 text-brand-600 focus:ring-brand-500 cursor-pointer" checked>
+            <label for="calculateScrews" class="text-xs font-semibold text-ink-900 cursor-pointer select-none">
+              Include drywall screws in estimate (approx. 1 lb per 300 sq ft)
+            </label>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Column: Result Box (5/12) -->
+      <div class="lg:col-span-5">
+        <div class="bg-ink-900 rounded-2xl shadow-lg border border-ink-800 sticky top-20 overflow-hidden">
+          <div class="p-4 sm:p-6">
+            
+            <!-- Highlighted Joint Compound -->
+            <div class="text-center pb-4 border-b border-white/10 mb-4">
+              <p class="text-xs text-brand-300 font-semibold mb-1">Joint Compound Needed</p>
+              <div class="flex items-center justify-center gap-2">
+                <span class="font-mono text-4xl sm:text-5xl font-extrabold text-white" id="outMud">0</span>
+                <span class="text-xs sm:text-sm text-slate-400 mt-2">Gallons</span>
+              </div>
+            </div>
+
+            <!-- Other Results -->
+            <div class="space-y-2 mb-5 text-sm">
+              <div class="flex justify-between items-center">
+                <span class="text-slate-400">Drywall Tape</span>
+                <span class="font-mono font-semibold text-white" id="outTape">0 <span class="text-[10px] text-slate-500">ft</span></span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-400">Mud (Boxes of 4.5 gal)</span>
+                <span class="font-mono font-semibold text-white" id="outBoxes">0 <span class="text-[10px] text-slate-500">boxes</span></span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-400">Drywall Screws</span>
+                <span class="font-mono font-semibold text-white" id="outScrews">0 <span class="text-[10px] text-slate-500">lbs</span></span>
+              </div>
+            </div>
+
+            <!-- Save/Share/Copy Buttons (Compact Blue) -->
+            <div class="flex items-center gap-1.5">
+              <button type="button" id="btnSave" class="flex-1 flex items-center justify-center gap-1 py-2 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-[11px] sm:text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg>
+                Save
+              </button>
+              <button type="button" id="btnShare" class="flex-1 flex items-center justify-center gap-1 py-2 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-[11px] sm:text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                Share
+              </button>
+              <button type="button" id="btnCopy" class="flex-1 flex items-center justify-center gap-1 py-2 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-[11px] sm:text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                Copy
+              </button>
+            </div>
+
+          </div>
+        </div>
+        
+        <!-- Quick Tip -->
+        <p class="text-[10px] sm:text-xs text-slate-500 mt-2 text-center">
+          <strong>Note:</strong> Standard box of joint compound is 4.5 gallons. Level 4 is standard; Level 5 adds a skim coat.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 4/10 will start here: First Ad Slot + Massive Content Part 1
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 4/10 — FIRST AD SLOT + MASSIVE CONTENT PART 1
+     Deep dive into finish levels, mud coverage, and tape
+     ============================================================ -->
+<section class="bg-white py-10 sm:py-16 border-t border-slate-200">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Ad Space (Leaderboard) -->
+    <div class="mb-10">
+      <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[90px] flex items-center justify-center text-[10px] sm:text-xs text-slate-500 font-medium tracking-widest uppercase">
+        Ad Space — 728×90 / Responsive Leaderboard
+      </div>
+    </div>
+
+    <!-- Article Content Wrapper -->
+    <div class="prose prose-slate prose-base sm:prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-900 prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-xl">
+      
+      <p class="lead text-lg sm:text-xl text-ink-700 font-medium mb-6">
+        Hanging drywall is only half the battle. The finishing stage—applying joint compound (mud), embedding tape, and sanding—is what gives a wall its smooth, seamless look. But finishing is also where material estimates go wrong most often. Order too little mud, and your project stalls mid-coat. Order too much, and you're stuck with buckets of compound that will harden before the next project.
+      </p>
+
+      <p>
+        The most common question we hear from contractors and DIYers is: <strong>"How much joint compound do I need for my drywall?"</strong> The answer depends on the total square footage, the finish level, and the tape type. This guide walks through the exact math, finish level requirements, and finishing best practices used by professional drywall finishers in the US, UK, and Australia.
+      </p>
+
+      <h3 class="mt-8">1. Understanding Drywall Finish Levels</h3>
+      <p>
+        The <strong>GA-214 (Recommended Levels of Gypsum Board Finish)</strong> standard defines six finish levels (0-5). For residential work, Levels 3, 4, and 5 are the most common:
+      </p>
+
+      <!-- Finish Level Table -->
+      <div class="my-6 not-prose rounded-xl border border-slate-200 bg-white overflow-hidden shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left">
+            <thead class="bg-slate-50 border-b border-slate-200">
+              <tr>
+                <th class="px-3 py-2 font-display font-bold text-ink-900">Level</th>
+                <th class="px-3 py-2 font-display font-bold text-ink-900">Coats</th>
+                <th class="px-3 py-2 font-display font-bold text-ink-900">Mud / 1,000 sq ft</th>
+                <th class="px-3 py-2 font-display font-bold text-ink-900">Use Case</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-ink-700">
+              <tr>
+                <td class="px-3 py-2 font-semibold">Level 3</td>
+                <td class="px-3 py-2 font-mono">2</td>
+                <td class="px-3 py-2 font-mono">~4.5 gal</td>
+                <td class="px-3 py-2">Garages, textured walls</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-3 py-2 font-semibold">Level 4</td>
+                <td class="px-3 py-2 font-mono">3</td>
+                <td class="px-3 py-2 font-mono">~6.0 gal</td>
+                <td class="px-3 py-2">Standard residential (matte paint)</td>
+              </tr>
+              <tr>
+                <td class="px-3 py-2 font-semibold">Level 5</td>
+                <td class="px-3 py-2 font-mono">3 + skim</td>
+                <td class="px-3 py-2 font-mono">~10.5 gal</td>
+                <td class="px-3 py-2">High-end, gloss paint, critical light</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p>
+        <em>Important:</em> Level 4 is the standard for most homes. If you are installing gloss or semi-gloss paint, or if the wall is in a hallway with critical lighting, you must upgrade to Level 5. The skim coat adds about 75% more mud.
+      </p>
+
+      <!-- Ad Space (In-Article) -->
+      <div class="my-8 not-prose">
+        <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[250px] flex items-center justify-center text-xs sm:text-sm text-slate-500 font-medium tracking-widest uppercase">
+          Ad Space — In-Article Rectangle
+        </div>
+      </div>
+
+      <h3 class="mt-8">2. The Math: Calculating Joint Compound</h3>
+      <p>
+        The rough formula for estimating joint compound is based on the number of coats and the total drywall area.
+      </p>
+      <p>
+        <strong>Formula:</strong> Total sq ft × Mud per sq ft (by level) = Total mud needed.
+        <br>
+        A standard box of joint compound contains <strong>4.5 gallons</strong>. A 5-gallon bucket contains 5 gallons. 
+      </p>
+      <p>
+        <em>Example:</em> A 1,000 sq ft drywall project at Level 4:
+        <br>
+        1,000 × 0.006 gallons per sq ft = 6 gallons.
+        <br>
+        6 gallons ÷ 4.5 gal/box = <strong>1.33 boxes</strong> (round up to 2 boxes to account for waste).
+      </p>
+
+      <h3 class="mt-8">3. Drywall Tape: Paper vs. Mesh</h3>
+      <p>
+        Tape is used to reinforce joints and corners. There are two main types:
+      </p>
+      <ul>
+        <li><strong>Paper Tape:</strong> The professional standard. It is stronger, resists cracking better, and is used with joint compound. Paper tape is ideal for inside corners and flat seams.</li>
+        <li><strong>Mesh Tape (Fiberglass):</strong> Self-adhesive. Faster to apply, but weaker. Best for small patches or areas that won't be painted with gloss. Not recommended for inside corners.</li>
+      </ul>
+      <p>
+        <strong>Tape Quantity:</strong> A standard roll of tape is <strong>500 feet</strong>. For a typical 1,000 sq ft project, you need about 1.5 rolls (750 ft) to cover all seams, corners, and butt joints. Add 10% for waste.
+      </p>
+
+      <h3 class="mt-8">4. Drywall Screws: The Final Count</h3>
+      <p>
+        If you are estimating finishing materials, you also need to account for screws. Standard 4x8 drywall uses about <strong>32-36 screws per sheet</strong>. For a 1,000 sq ft project, that's about 8-10 lbs of screws. Use <strong>1-1/4" coarse-thread screws</strong> for wood studs and 1-1/8" fine-thread screws for steel studs. Never reuse screws or use drywall screws for structural work.
+      </p>
+
+      <h3 class="mt-8">5. Tools Required for Finishing</h3>
+      <p>
+        To properly finish drywall, you will need the following tools:
+      </p>
+      <ul>
+        <li><strong>Joint Knives:</strong> 4" for tight corners, 6" for taping, 10" for finish coats, 12" for final smoothing.</li>
+        <li><strong>Mud Pan:</strong> A stainless steel or plastic tray to hold the compound.</li>
+        <li><strong>Corner Trowel:</strong> For applying mud to inside corners.</li>
+        <li><strong>Pole Sander or Sanding Sponge:</strong> For smoothing the final coat.</li>
+        <li><strong>Dust Mask:</strong> Drywall dust is a respiratory irritant—always wear protection.</li>
+      </ul>
+      
+      <hr class="my-8 border-slate-200">
+      
+      <p class="text-base text-slate-700">
+        <em>Continue reading below as we dive into regional drywall standards (US vs UK vs AU), common finishing mistakes, and cost estimation.</em>
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 5/10 will start here: Content Part 2 (Standards, Costing & Conclusion)
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 5/10 — MASSIVE CONTENT PART 2 & CONCLUSION
+     Regional Standards, Costing, Mistakes, and Conclusion
+     ============================================================ -->
+<section class="bg-white py-10 sm:py-16 border-t border-slate-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Article Content Wrapper (Continued) -->
+    <div class="prose prose-slate prose-base sm:prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-900 prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-xl">
+      
+      <h3 class="mt-8">6. Mud Types: All-Purpose vs. Topping</h3>
+      <p>
+        Not all joint compound is the same. The type you use depends on the coat:
+      </p>
+      <ul>
+        <li><strong>All-Purpose:</strong> Contains a mix of gypsum and adhesive. Excellent for taping, embedding, and first coats. It dries harder than topping but is harder to sand.</li>
+        <li><strong>Topping:</strong> Lighter and easier to sand. Used for the final coat. It is softer and may shrink slightly, but it produces a perfectly smooth finish.</li>
+        <li><strong>Lightweight:</strong> A hybrid of the two. Good for all coats but slightly more expensive.</li>
+        <li><strong>Setting-Type (Durabond):</strong> Powder mixed with water. It chemically hardens in 20-90 minutes. Best for the first coat or repairing large holes.</li>
+      </ul>
+      <p>
+        <strong>Pro Tip:</strong> Do not mix brands or types. Stick to one brand's all-purpose for the first two coats and the same brand's topping for the final coat.
+      </p>
+
+      <h3 class="mt-8">7. Regional Drywall Standards (US vs UK vs AU)</h3>
+      <p>
+        Drywall finishing is governed by strict building codes, especially when it comes to fire-rated walls and ceilings.
+      </p>
+
+      <h4>United States (GA-214 & ASTM C840)</h4>
+      <p>
+        The US follows <strong>GA-214</strong> for finish levels and <strong>ASTM C840</strong> for installation. Fire-rated walls (like garage ceilings) must use the specified fasteners and number of coats. The US also requires moisture-resistant (green) drywall in bathrooms and kitchens.
+      </p>
+
+      <h4>United Kingdom (BS 8212)</h4>
+      <p>
+        The UK follows <strong>BS 8212</strong> (Code of practice for dry lining). In the UK, the standard is <em>Skimming</em>, which is applying a 2-3mm layer of plaster over the entire drywall surface. This creates a harder, more impact-resistant finish than US-style taping.
+      </p>
+
+      <h4>Australia (AS/NZS 2589)</h4>
+      <p>
+        Australian drywall is governed by <strong>AS/NZS 2589</strong>. The key difference is the requirement for <em>Wet Area</em> drywall in bathrooms and laundries. Australian standards also require specific waterproofing membranes behind tiles in showers, which must be installed before the drywall finishing.
+      </p>
+
+      <!-- In-Article Ad Slot -->
+      <div class="my-8 not-prose">
+        <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[250px] flex items-center justify-center text-xs sm:text-sm text-slate-500 font-medium tracking-widest uppercase">
+          Ad Space — In-Article Rectangle
+        </div>
+      </div>
+
+      <h3 class="mt-8">8. Cost Estimation</h3>
+      <p>
+        Finishing is the most labor-intensive part of drywall. It can account for 50-60% of the total drywall cost.
+      </p>
+      
+      <h4>Material Costs</h4>
+      <ul>
+        <li><strong>Joint Compound (US):</strong> $15 to $20 per 4.5 gal box. $18 to $25 per 5 gal bucket.</li>
+        <li><strong>Joint Compound (UK):</strong> £15 to £25 per 25kg bag (finishing plaster).</li>
+        <li><strong>Drywall Tape:</strong> $5 to $8 per 500 ft roll.</li>
+        <li><strong>Screws:</strong> $10 to $15 per 1 lb box. $30 to $50 for a 5 lb box.</li>
+      </ul>
+
+      <h4>Labor Costs</h4>
+      <p>
+        Finishing labor is priced per square foot or per day:
+      </p>
+      <ul>
+        <li><strong>US:</strong> $0.50 to $1.00 per sq ft (taping and finishing to Level 4).</li>
+        <li><strong>UK:</strong> £150 to £250 per day for a plasterer (skimming).</li>
+        <li><strong>Australia:</strong> AUD $10 to $20 per sq meter for set and finish.</li>
+      </ul>
+
+      <h3 class="mt-8">9. Common Drywall Finishing Mistakes</h3>
+      <ol>
+        <li><strong>Skipping the Bed Coat:</strong> The first coat embeds the tape. If you skip it and try to cover the tape in one coat, the tape will bubble or peel.</li>
+        <li><strong>Overloading the First Coat:</strong> The first coat should be thin. If you put too much mud on the first coat, it will crack as it dries.</li>
+        <li><strong>Not Feathering the Edges:</strong> Each coat should be wider than the last. If you don't feather (thin) the edges, you'll see a ridge under the paint.</li>
+        <li><strong>Sanding Too Aggressively:</strong> Sanding too hard removes the paper facing on the drywall, which weakens the finish.</li>
+        <li><strong>Skipping the Primer:</strong> Drywall mud is porous. Without a PVA primer, the paint will soak in unevenly, causing visible patches.</li>
+      </ol>
+      
+      <p>
+        By using our calculator to precisely estimate your joint compound, tape, and screws, and following the correct finishing sequence, you can achieve a smooth, professional finish on your walls.
+      </p>
+
+      <!-- Conclusion Box -->
+      <div class="mt-8 p-5 sm:p-8 bg-gradient-to-br from-ink-900 to-ink-950 rounded-2xl border border-ink-800 not-prose relative overflow-hidden shadow-lg">
+        <div class="absolute -top-20 -right-20 w-64 h-64 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="relative">
+          <h4 class="font-display font-bold text-white text-lg sm:text-xl mb-2.5">Ready to finish your drywall?</h4>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-5 max-w-2xl">
+            Use our Drywall Finishing Calculator to instantly generate the exact number of mud boxes, tape rolls, and screws you need, complete with finish level guidance.
+          </p>
+          <div class="flex flex-wrap gap-2.5">
+            <a href="#main-content" class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-brand-500 text-white text-sm font-semibold hover:bg-brand-400 transition-colors shadow-sm">
+              Back to Calculator <span class="ml-1" aria-hidden="true">↑</span>
+            </a>
+            <a href="/drywall-calculator.html" class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 text-white text-sm font-semibold transition-colors">
+              Try Drywall Sheet Calculator
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 6/10 will start here: FAQ (Numbered Card Style) & Schema
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 6/10 — FAQ (Numbered Card Style, Wider Layout) & SCHEMA
+     Drywall Finishing questions with internal links
+     ============================================================ -->
+<section class="bg-slate-50 py-12 sm:py-20 border-t border-slate-200">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-8 sm:mb-12">
+      <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-ink-900 tracking-tight">Drywall Finishing Questions Answered</h2>
+      <p class="text-sm sm:text-base text-ink-700 mt-2">Common questions about mud, tape, screws, and finish levels.</p>
+    </div>
+
+    <!-- FAQ Accordion Cards -->
+    <div class="space-y-3">
+      
+      <!-- FAQ 1 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">01</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How much joint compound do I need per 1,000 sq ft?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          For a standard Level 4 finish, you need about <strong>6 gallons</strong> of joint compound per 1,000 sq ft. For Level 3 (garages), use about 4.5 gallons. For Level 5 (gloss paint), you need about 10-11 gallons due to the skim coat. Use our <a href="/drywall-calculator.html" class="text-brand-600 font-semibold underline decoration-brand-300 underline-offset-2 hover:decoration-brand-500">Drywall Sheet Calculator</a> to first determine your total square footage.
+        </div>
+      </details>
+
+      <!-- FAQ 2 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">02</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">Should I use paper tape or mesh tape?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          <strong>Paper tape</strong> is the professional standard. It is stronger, resists cracking, and is essential for inside corners. <strong>Mesh tape</strong> is self-adhesive and faster, but weaker and prone to cracking in corners or high-movement areas. For quality work, always choose paper tape. A standard roll covers 500 linear feet.
+        </div>
+      </details>
+
+      <!-- FAQ 3 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">03</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">What is the difference between Level 4 and Level 5 drywall?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          <strong>Level 4</strong> is the standard for residential walls with flat or matte paint. It uses three coats of mud over the joints. <strong>Level 5</strong> adds a thin skim coat over the entire wall surface. This is required for gloss or semi-gloss paint, or for walls with critical lighting (like under a window). Level 5 consumes about 75% more mud than Level 4.
+        </div>
+      </details>
+
+      <!-- FAQ 4 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">04</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How many screws do I need for drywall?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          A standard 4x8 sheet requires about <strong>32-36 screws</strong> for walls and ceilings. For a 1,000 sq ft project (approx. 32 sheets), you need about 8-10 lbs of screws. Use 1-1/4" coarse-thread screws for wood studs and 1-1/8" fine-thread screws for metal studs. Always buy by the box (1,000 or 5,000) for larger jobs.
+        </div>
+      </details>
+
+      <!-- FAQ 5 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">05</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">What is the best mud for the first coat?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          Use <strong>All-Purpose</strong> joint compound or <strong>Setting-Type (Durabond)</strong> for the first coat. All-purpose has strong adhesive properties for embedding tape, while setting-type chemically hardens and shrinks less. Avoid using lightweight topping for the first coat—it's too soft and won't hold tape securely.
+        </div>
+      </details>
+
+      <!-- FAQ 6 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">06</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How long should drywall mud dry between coats?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          <strong>Drying-type compound</strong> (from a box or bucket) takes <strong>24 to 48 hours</strong> to dry between coats, depending on humidity and temperature. <strong>Setting-type compound</strong> (Durabond, powder mixed with water) hardens in <strong>20 to 90 minutes</strong>. Never apply the next coat before the previous one is fully dry, or you'll trap moisture and cause mold.
+        </div>
+      </details>
+
+      <!-- FAQ 7 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">07</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">What grit sandpaper should I use for drywall?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          Use <strong>120 to 150 grit</strong> sandpaper for final smoothing. Use a sanding sponge or pole sander with light pressure. If you use too coarse a grit (like 80), you'll scratch the drywall paper and weaken the surface. If you use too fine a grit (like 220), you'll clog the sandpaper. For Level 5 finishes, use 150-180 grit.
+        </div>
+      </details>
+
+    </div>
+
+    <!-- Still have a question CTA -->
+    <div class="mt-8 text-center">
+      <p class="text-sm text-ink-700">
+        Still have a question? Email <a href="mailto:contact@buildmetric.org" class="text-brand-600 font-semibold hover:underline">contact@buildmetric.org</a> — every message is read by a real person.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQPage JSON-LD SCHEMA (Matches exactly with HTML above)
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much joint compound do I need per 1,000 sq ft?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For a standard Level 4 finish, you need about 6 gallons of joint compound per 1,000 sq ft. For Level 3, use about 4.5 gallons. For Level 5, you need about 10-11 gallons due to the skim coat." }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I use paper tape or mesh tape?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Paper tape is the professional standard. It is stronger, resists cracking, and is essential for inside corners. Mesh tape is self-adhesive and faster, but weaker and prone to cracking in corners or high-movement areas." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Level 4 and Level 5 drywall?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Level 4 is the standard for residential walls with flat or matte paint. Level 5 adds a thin skim coat over the entire wall surface. This is required for gloss or semi-gloss paint, or for walls with critical lighting. Level 5 consumes about 75% more mud than Level 4." }
+    },
+    {
+      "@type": "Question",
+      "name": "How many screws do I need for drywall?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A standard 4x8 sheet requires about 32-36 screws. For a 1,000 sq ft project, you need about 8-10 lbs of screws. Use 1-1/4-inch coarse-thread screws for wood studs and 1-1/8-inch fine-thread screws for metal studs." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best mud for the first coat?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use All-Purpose joint compound or Setting-Type (Durabond) for the first coat. All-purpose has strong adhesive properties for embedding tape, while setting-type chemically hardens and shrinks less. Avoid using lightweight topping for the first coat." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long should drywall mud dry between coats?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Drying-type compound takes 24 to 48 hours to dry between coats. Setting-type compound hardens in 20 to 90 minutes. Never apply the next coat before the previous one is fully dry, or you will trap moisture and cause mold." }
+    },
+    {
+      "@type": "Question",
+      "name": "What grit sandpaper should I use for drywall?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use 120 to 150 grit sandpaper for final smoothing. Use a sanding sponge or pole sander with light pressure. Avoid too coarse a grit (like 80) or too fine a grit (like 220). For Level 5 finishes, use 150-180 grit." }
+    }
+  ]
+}
+</script>
+
+<!-- ============================================================
+     Phase 7/10 will start here: E-E-A-T Box + Related Tools
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 7/10 — E-E-A-T EDITORIAL BOX & RELATED CONTENT
+     ============================================================ -->
+
+<!-- E-E-A-T Directory Info Box -->
+<section class="bg-slate-50 border-t border-slate-200 py-12 sm:py-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+      
+      <!-- Card Header (Dark Premium Look) -->
+      <div class="bg-ink-900 px-5 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-6 h-6 rounded bg-white/10 flex items-center justify-center">
+            <svg class="w-3.5 h-3.5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-slate-200">About our calculators</span>
+        </div>
+        <span class="hidden sm:block text-[10px] font-bold uppercase tracking-widest text-slate-500">Engineer-Reviewed</span>
+      </div>
+
+      <!-- Card Body -->
+      <div class="p-5 sm:p-8 md:p-10">
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-10">
+          
+          <!-- Left Column: Description -->
+          <div class="lg:col-span-7">
+            <div class="flex items-center gap-3 mb-2 sm:mb-3">
+              <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-500 flex items-center justify-center shrink-0 shadow-sm">
+                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              </div>
+              <div>
+                <h2 class="font-display font-extrabold text-lg sm:text-2xl text-ink-900 tracking-tight">BuildMetric Engineering</h2>
+                <p class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-brand-600 mt-0.5">
+                  Calculators &amp; Estimating Tools
+                </p>
+              </div>
+            </div>
+            
+            <p class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-4 sm:mb-6 pl-[52px] sm:pl-[60px]">
+              Verified Formulas · Code-Aware
+            </p>
+
+            <div class="text-sm sm:text-[15px] text-ink-700 leading-relaxed space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+              <p>
+                Every calculator in this directory is built from formulas that can be derived from first principles. We do not guess. We test every tool against reference cases in both imperial and metric units before it is published.
+              </p>
+              <p>
+                More importantly, our tools are reviewed by quantity surveyors, structural engineers, and licensed contractors. We know that a calculation error on site costs money and compromises safety, so we treat accuracy as a structural requirement, not a feature.
+              </p>
+            </div>
+
+            <ul class="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-xs sm:text-sm text-ink-700"><strong class="text-ink-900">Human-verified.</strong> Reviewed by practising professionals, not AI.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-xs sm:text-sm text-ink-700"><strong class="text-ink-900">Stateless maths.</strong> Your inputs run in your browser, never on our servers.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-xs sm:text-sm text-ink-700"><strong class="text-ink-900">Always free.</strong> No sign-ups, no paywalls, no trials. Just the tools.</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-3">
+              <a href="mailto:contact@buildmetric.org" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-ink-900 text-white text-xs sm:text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                Report an Error
+              </a>
+              <a href="/about.html" class="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 rounded-xl border border-slate-300 text-ink-900 text-xs sm:text-sm font-semibold hover:border-brand-500 hover:text-brand-600 transition-colors bg-white">
+                Our Methodology
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Directory Info & Disclaimer -->
+          <div class="lg:col-span-5 flex flex-col gap-3 sm:gap-4">
+            
+            <!-- Directory Info Box -->
+            <div class="bg-white rounded-xl border border-slate-200 p-4 sm:p-6 shadow-sm">
+              <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-3 sm:mb-4">Directory Info</h3>
+              <ul class="text-[11px] sm:text-sm space-y-2 sm:space-y-3">
+                <li class="flex justify-between items-center pb-2 sm:pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Total Tools</span>
+                  <span class="font-bold text-ink-900 text-right">Growing Library</span>
+                </li>
+                <li class="flex justify-between items-center pb-2 sm:pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Review Status</span>
+                  <span class="font-bold text-ink-900 text-right">100% Human-Reviewed</span>
+                </li>
+                <li class="flex justify-between items-center pb-2 sm:pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Regions</span>
+                  <span class="font-bold text-ink-900 text-right">US · UK · AU</span>
+                </li>
+                <li class="flex justify-between items-center">
+                  <span class="text-slate-500 font-medium">Cost</span>
+                  <span class="font-bold text-brand-600 text-right">Free Forever</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Disclaimer Box -->
+            <div class="bg-white rounded-xl border border-slate-200 p-4 sm:p-6 flex-1 shadow-sm">
+              <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2 sm:mb-3">Disclaimer</h3>
+              <p class="text-[11px] sm:text-sm text-ink-700 leading-relaxed">
+                Calculators are estimating aids, not a substitute for professional judgment. Always verify against your local code. See our <a href="/disclaimer.html" class="text-brand-600 font-semibold underline decoration-brand-300 underline-offset-2 hover:decoration-brand-500 transition-colors">Disclaimer</a>.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Related Tools & Guides Section -->
+<section class="bg-white py-12 sm:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Related Tools -->
+    <div class="mb-12 sm:mb-16">
+      <div class="flex items-center justify-between mb-4 sm:mb-6">
+        <h2 class="font-display font-extrabold text-xl sm:text-2xl text-ink-900 tracking-tight">Related Calculators</h2>
+        <a href="/calculators.html" class="text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors">View all tools →</a>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+        
+        <!-- Tool 1: Drywall Calculator -->
+        <a href="/drywall-calculator.html" class="group bg-white rounded-xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-3 sm:gap-4">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors">Drywall Calculator</h3>
+            <p class="text-[10px] sm:text-xs text-slate-500 mt-0.5">Sheets, mud, tape</p>
+          </div>
+        </a>
+
+        <!-- Tool 2: Paint Coverage Calculator -->
+        <a href="/paint-coverage-calculator.html" class="group bg-white rounded-xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-3 sm:gap-4">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors">Paint Coverage Calculator</h3>
+            <p class="text-[10px] sm:text-xs text-slate-500 mt-0.5">Gallons, litres, coverage</p>
+          </div>
+        </a>
+
+        <!-- Tool 3: Framing Calculator -->
+        <a href="/framing-calculator.html" class="group bg-white rounded-xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-3 sm:gap-4">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors">Framing Calculator</h3>
+            <p class="text-[10px] sm:text-xs text-slate-500 mt-0.5">Studs, plates, lumber</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Related Guides -->
+    <div>
+      <div class="flex items-center justify-between mb-4 sm:mb-6">
+        <h2 class="font-display font-extrabold text-xl sm:text-2xl text-ink-900 tracking-tight">Related Guides</h2>
+        <a href="/guides.html" class="text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors">View all guides →</a>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        
+        <!-- Guide 1 (Paint Coverage) -->
+        <a href="/guides/paint-coverage-myths.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-24 sm:h-32 bg-gradient-to-br from-emerald-500 to-emerald-700 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+            </div>
+          </div>
+          <div class="p-3 sm:p-4 flex flex-col flex-1">
+            <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-emerald-600 bg-emerald-50 px-2 py-0.5 sm:py-1 rounded self-start mb-2">Finishes</span>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Why Paint Coverage Numbers on the Tin Are Often Wrong</h3>
+            <span class="text-[10px] sm:text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <!-- Guide 2 (Stud Spacing) -->
+        <a href="/guides/stud-spacing-by-code.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-24 sm:h-32 bg-gradient-to-br from-sky-400 to-sky-600 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+            </div>
+          </div>
+          <div class="p-3 sm:p-4 flex flex-col flex-1">
+            <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-sky-600 bg-sky-50 px-2 py-0.5 sm:py-1 rounded self-start mb-2">Framing</span>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Stud Spacing: IRC 2021 vs BS 5268 vs AS 1684 Compared</h3>
+            <span class="text-[10px] sm:text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <!-- Guide 3 (Roof Pitch) -->
+        <a href="/guides/roof-pitch-explained.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-24 sm:h-32 bg-gradient-to-br from-blue-400 to-blue-600 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            </div>
+          </div>
+          <div class="p-3 sm:p-4 flex flex-col flex-1">
+            <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-brand-600 bg-brand-50 px-2 py-0.5 sm:py-1 rounded self-start mb-2">Roofing</span>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Roof Pitch Explained: Why 6:12 and 26.57° Are the Same Roof</h3>
+            <span class="text-[10px] sm:text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 8/10 will start here: Premium Footer
+     ============================================================ -->
+
+    </main>
+
+<!-- ============================================================
+     PHASE 8/10 — COMPACT PREMIUM FOOTER (Short & Clean)
+     ============================================================ -->
+<footer class="bg-ink-950 text-slate-400 border-t border-slate-800 pt-10 pb-6">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Top Footer Grid (4 Columns) -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 mb-8">
+      
+      <!-- Column 1: Brand & Contact -->
+      <div class="col-span-2 md:col-span-1 pr-4">
+        <a href="/" class="inline-flex items-center gap-2 mb-3 group">
+          <img src="logo.png" alt="BuildMetric Logo" class="h-6 w-auto object-contain brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity" />
+          <span class="font-display font-extrabold text-base tracking-tight text-white hidden sm:block">
+            Build<span class="text-brand-500">Metric</span>
+          </span>
+        </a>
+        
+        <p class="text-[11px] sm:text-xs leading-relaxed mb-4 max-w-xs text-slate-400">
+          Independent construction calculators and estimating tools for professionals in the <strong class="text-slate-200">USA, UK</strong> and <strong class="text-slate-200">Australia</strong>.
+        </p>
+
+        <div class="space-y-1.5 mb-4">
+          <a href="mailto:contact@buildmetric.org" class="flex items-center gap-1.5 text-[11px] sm:text-xs hover:text-white transition-colors">
+            <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            contact@buildmetric.org
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2: Popular Tools (Shortened) -->
+      <div>
+        <h3 class="font-display font-bold text-white text-[11px] sm:text-xs uppercase tracking-widest mb-3">Popular Tools</h3>
+        <ul class="space-y-1.5 text-[11px] sm:text-xs">
+          <li><a href="/framing-calculator.html" class="hover:text-brand-400 transition-colors">Framing Calculator</a></li>
+          <li><a href="/joist-calculator.html" class="hover:text-brand-400 transition-colors">Joist Calculator</a></li>
+          <li><a href="/drywall-calculator.html" class="hover:text-brand-400 transition-colors">Drywall Calculator</a></li>
+          <li><a href="/drywall-finishing-calculator.html" class="hover:text-brand-400 transition-colors">Drywall Finishing Calc</a></li>
+          <li><a href="/paint-coverage-calculator.html" class="hover:text-brand-400 transition-colors">Paint Coverage</a></li>
+          <li><a href="/calculators.html" class="text-brand-400 font-semibold mt-1 inline-block hover:underline">View All Tools →</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Company -->
+      <div>
+        <h3 class="font-display font-bold text-white text-[11px] sm:text-xs uppercase tracking-widest mb-3">Company</h3>
+        <ul class="space-y-1.5 text-[11px] sm:text-xs">
+          <li><a href="/about.html" class="hover:text-brand-400 transition-colors">About Us</a></li>
+          <li><a href="/guides.html" class="hover:text-brand-400 transition-colors">Guides</a></li>
+          <li><a href="/contact.html" class="hover:text-brand-400 transition-colors">Contact</a></li>
+          <li><a href="/sitemap.xml" class="hover:text-brand-400 transition-colors">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Legal & Compliance -->
+      <div>
+        <h3 class="font-display font-bold text-white text-[11px] sm:text-xs uppercase tracking-widest mb-3">Legal</h3>
+        <ul class="space-y-1.5 text-[11px] sm:text-xs">
+          <li><a href="/privacy.html" class="hover:text-brand-400 transition-colors">Privacy Policy</a></li>
+          <li><a href="/terms.html" class="hover:text-brand-400 transition-colors">Terms of Service</a></li>
+          <li><a href="/disclaimer.html" class="hover:text-brand-400 transition-colors">Disclaimer</a></li>
+          <li><a href="/cookie-policy.html" class="hover:text-brand-400 transition-colors">Cookie Policy</a></li>
+        </ul>
+        
+        <button id="cookieSettingsBtn" type="button" class="mt-3 inline-flex items-center gap-1.5 px-2 py-1 rounded border border-slate-700 bg-slate-800/50 hover:bg-slate-800 text-[10px] font-semibold text-slate-300 transition-colors">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          Cookie Settings
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-3 text-[10px]">
+      <p class="text-center md:text-left text-slate-500">
+        © 2026 BuildMetric. All rights reserved. <br class="sm:hidden">Operated from buildmetric.org.
+      </p>
+      <p class="text-center md:text-right text-slate-500">
+        Built for professionals. General info only — see <a href="/disclaimer.html" class="text-brand-500 hover:underline hover:text-brand-400 transition-colors">Disclaimer</a>.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ============================================================
+     Phase 9/10 will start here: Complete JavaScript Logic
+     ============================================================ -->
+
+      <!-- ============================================================
+       PHASE 9/10 — JAVASCRIPT (Calculator Logic & Menu)
+       ============================================================ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      /* ── 1. MOBILE MENU TOGGLE ── */
+      const menuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const openIcon = menuBtn ? menuBtn.querySelector('.menu-open-icon') : null;
+      const closeIcon = menuBtn ? menuBtn.querySelector('.menu-close-icon') : null;
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function () {
+          const isOpen = !mobileMenu.classList.contains('hidden');
+          mobileMenu.classList.toggle('hidden');
+          if(openIcon) openIcon.classList.toggle('hidden');
+          if(closeIcon) closeIcon.classList.toggle('hidden');
+          menuBtn.setAttribute('aria-expanded', String(!isOpen));
+        });
+      }
+
+      /* ── 2. ELEMENTS & STATE ── */
+      const btnImperial = document.getElementById('btnImperial');
+      const btnMetric = document.getElementById('btnMetric');
+      const unitLabels = document.querySelectorAll('.unit-label');
+      
+      const wallArea = document.getElementById('wallArea');
+      const finishLevel = document.getElementById('finishLevel');
+      const tapeType = document.getElementById('tapeType');
+      const wasteFactor = document.getElementById('wasteFactor');
+      const calculateScrews = document.getElementById('calculateScrews');
+      
+      const outMud = document.getElementById('outMud');
+      const outTape = document.getElementById('outTape');
+      const outBoxes = document.getElementById('outBoxes');
+      const outScrews = document.getElementById('outScrews');
+
+      let isMetric = false;
+
+      /* ── 3. UNIT TOGGLE (Imperial / Metric) ── */
+      function toggleUnits(metric) {
+        isMetric = metric;
+        
+        if (metric) {
+          btnMetric.classList.add('bg-white', 'shadow-sm', 'text-ink-900');
+          btnMetric.classList.remove('text-slate-500');
+          btnImperial.classList.remove('bg-white', 'shadow-sm', 'text-ink-900');
+          btnImperial.classList.add('text-slate-500');
+          
+          unitLabels.forEach(el => el.textContent = 'sq m');
+        } else {
+          btnImperial.classList.add('bg-white', 'shadow-sm', 'text-ink-900');
+          btnImperial.classList.remove('text-slate-500');
+          btnMetric.classList.remove('bg-white', 'shadow-sm', 'text-ink-900');
+          btnMetric.classList.add('text-slate-500');
+          
+          unitLabels.forEach(el => el.textContent = 'sq ft');
+        }
+        calculate();
+      }
+
+      if(btnImperial && btnMetric) {
+        btnImperial.addEventListener('click', () => toggleUnits(false));
+        btnMetric.addEventListener('click', () => toggleUnits(true));
+      }
+
+      /* ── 4. CALCULATOR MATH LOGIC ── */
+      function calculate() {
+        let area = parseFloat(wallArea.value) || 0;
+        const level = finishLevel.value;
+        const waste = parseFloat(wasteFactor.value) || 0.10;
+
+        // Convert metric area to sq ft for standard mud calculations
+        let areaSqFt = isMetric ? (area * 10.764) : area;
+
+        if (areaSqFt <= 0) {
+          outMud.textContent = '0';
+          outTape.innerHTML = `0 <span class="text-[10px] text-slate-500">ft</span>`;
+          outBoxes.innerHTML = `0 <span class="text-[10px] text-slate-500">boxes</span>`;
+          outScrews.innerHTML = `0 <span class="text-[10px] text-slate-500">lbs</span>`;
+          return;
+        }
+
+        // 1. Calculate Joint Compound (Mud)
+        // Based on gallons per 1,000 sq ft
+        let mudPer1000 = 6.0; // Default Level 4
+        
+        if (level === 'level3') {
+          mudPer1000 = 4.5;
+        } else if (level === 'level4') {
+          mudPer1000 = 6.0;
+        } else if (level === 'level5') {
+          mudPer1000 = 10.5;
+        }
+
+        let mudGallons = (areaSqFt / 1000) * mudPer1000;
+        // Add waste
+        mudGallons = mudGallons * (1 + waste);
+
+        // 2. Calculate Tape (Linear feet)
+        // Approx 1.5 ft of tape per sq ft (includes seams and corners)
+        let tapeFeet = areaSqFt * 1.5;
+        if (isMetric) {
+          tapeFeet = (area * 1.5) * 3.281; // Convert meters to feet
+        }
+
+        // 3. Calculate Boxes of Mud (4.5 gal boxes)
+        let boxes = Math.ceil(mudGallons / 4.5);
+
+        // 4. Calculate Screws (approx 1 lb per 300 sq ft)
+        let screws = 0;
+        if (calculateScrews.checked) {
+          screws = Math.ceil(areaSqFt / 300);
+        }
+
+        // --- UPDATE UI ---
+        outMud.textContent = mudGallons.toFixed(1);
+        outTape.innerHTML = `${tapeFeet.toFixed(0)} <span class="text-[10px] text-slate-500">ft</span>`;
+        outBoxes.innerHTML = `${boxes} <span class="text-[10px] text-slate-500">boxes</span>`;
+        outScrews.innerHTML = `${screws} <span class="text-[10px] text-slate-500">lbs</span>`;
+      }
+
+      // Trigger calculation on any input change
+      const inputs = [wallArea, finishLevel, tapeType, wasteFactor, calculateScrews];
+      inputs.forEach(input => {
+        if(input) {
+          input.addEventListener('input', calculate);
+          input.addEventListener('change', calculate);
+        }
+      });
+
+      // Initial run
+      calculate();
+
+      /* ── 5. SAVE, SHARE, COPY ACTIONS ── */
+      const btnSave = document.getElementById('btnSave');
+      const btnShare = document.getElementById('btnShare');
+      const btnCopy = document.getElementById('btnCopy');
+
+      const getResultText = () => {
+        return `Drywall Finishing Estimate:\n` +
+               `- Total Joint Compound: ${outMud.textContent} Gallons\n` +
+               `- Total Tape: ${outTape.textContent}\n` +
+               `- Boxes of Mud (4.5 gal): ${outBoxes.textContent}\n` +
+               `- Drywall Screws: ${outScrews.textContent}\n` +
+               `Calculated via BuildMetric.org`;
+      };
+
+      // Save
+      if(btnSave) {
+        btnSave.addEventListener('click', () => {
+          const data = {
+            a: wallArea.value, l: finishLevel.value, t: tapeType.value,
+            w: wasteFactor.value, s: calculateScrews.checked, metric: isMetric
+          };
+          localStorage.setItem('buildmetric_drywall_finishing_data', JSON.stringify(data));
+          alert('Estimate saved to your browser!');
+        });
+      }
+
+      // Share
+      if(btnShare && navigator.share) {
+        btnShare.addEventListener('click', () => {
+          navigator.share({
+            title: 'Drywall Finishing Estimate',
+            text: getResultText(),
+            url: window.location.href
+          }).catch(console.error);
+        });
+      } else if (btnShare) {
+        btnShare.addEventListener('click', () => {
+          alert('Sharing is not supported on this browser. Use Copy instead.');
+        });
+      }
+
+      // Copy
+      if(btnCopy) {
+        btnCopy.addEventListener('click', () => {
+          navigator.clipboard.writeText(getResultText()).then(() => {
+            const originalHTML = btnCopy.innerHTML;
+            btnCopy.innerHTML = '<svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> Copied!';
+            setTimeout(() => { btnCopy.innerHTML = originalHTML; }, 2000);
+          }).catch(() => {
+            alert('Failed to copy. Please select text manually.');
+          });
+        });
+      }
+
+      // Cookie settings placeholder
+      const cookieBtn = document.getElementById('cookieSettingsBtn');
+      if(cookieBtn) {
+        cookieBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          alert('Cookie settings panel will open here.');
+        });
+      }
+
+    });
+  </script>
+
+  <!-- ============================================================
+       PHASE 10/10 — CLOSING TAGS
+       ============================================================ -->
+</body>
+</html>
