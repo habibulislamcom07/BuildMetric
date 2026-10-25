@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- ============================================================
+       PHASE 1/10 — SEO HEAD & CONFIGURATION (International Focus)
+       File: mulch-calculator.html
+       Brand: BuildMetric | Domain: buildmetric.org
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO Meta (US/UK/AU Long-Tail Keywords) -->
+  <title>Mulch Calculator | How Many Bags of Mulch Do I Need? | BuildMetric</title>
+  <meta name="description" content="Free mulch calculator to estimate how many bags or cubic yards of mulch you need for your garden beds. Enter length, width, and depth for instant results." />
+  <meta name="keywords" content="mulch calculator, how many bags of mulch do i need, mulch coverage calculator, garden mulch estimator, cubic yards of mulch, mulch for landscaping" />
+  <meta name="author" content="BuildMetric Editorial Team" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#0ea5e9" />
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://buildmetric.org/mulch-calculator.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BuildMetric" />
+  <meta property="og:title" content="Mulch Calculator | How Many Bags Do I Need?" />
+  <meta property="og:description" content="Calculate exact mulch quantities in bags or cubic yards for your landscaping project." />
+  <meta property="og:url" content="https://buildmetric.org/mulch-calculator.html" />
+  <meta property="og:image" content="https://buildmetric.org/assets/og/mulch-calculator.png" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mulch Calculator | BuildMetric" />
+  <meta name="twitter:description" content="Estimate exact mulch coverage for your garden beds." />
+  <meta name="twitter:image" content="https://buildmetric.org/assets/og/mulch-calculator.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e' },
+            ink: { 700: '#334155', 800: '#1e293b', 900: '#0f172a', 950: '#080f1e' }
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: {
+            'soft': '0 4px 20px -2px rgba(15,23,42,0.05)',
+            'hover': '0 12px 32px -8px rgba(14,165,233,0.15)',
+            'glass': '0 4px 24px -4px rgba(15,23,42,0.08)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+    .bg-grid-pattern {
+      background-image: linear-gradient(to right, rgba(15,23,42,0.04) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(15,23,42,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .nav-glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); }
+    details > summary .icon-plus { transition: transform 0.3s ease; }
+    details[open] > summary .icon-plus { transform: rotate(45deg); }
+    details > summary::-webkit-details-marker { display: none; }
+  </style>
+
+  <!-- ================= JSON-LD SCHEMA ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://buildmetric.org/mulch-calculator.html#app",
+        "name": "Mulch Volume & Bag Calculator",
+        "url": "https://buildmetric.org/mulch-calculator.html",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "All",
+        "description": "Calculate how much mulch is needed for a garden bed in cubic yards or bags based on area and desired depth.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://buildmetric.org/mulch-calculator.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://buildmetric.org/" },
+          { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://buildmetric.org/calculators.html" },
+          { "@type": "ListItem", "position": 3, "name": "Landscaping", "item": "https://buildmetric.org/landscaping.html" },
+          { "@type": "ListItem", "position": 4, "name": "Mulch Calculator", "item": "https://buildmetric.org/mulch-calculator.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+  <body class="bg-white text-ink-800 antialiased font-sans flex flex-col min-h-screen">
+
+  <!-- ============================================================
+       SKIP LINK (Accessibility)
+       ============================================================ -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2.5 focus:bg-brand-500 focus:text-white focus:rounded-lg focus:font-semibold focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/70">
+    Skip to main content
+  </a>
+
+  <!-- ============================================================
+       STICKY NAVBAR (Compact & Mobile Friendly)
+       ============================================================ -->
+  <header class="sticky top-0 z-50 nav-glass border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-14 sm:h-16 lg:h-20">
+        
+        <!-- Logo -->
+        <div class="flex items-center gap-6">
+          <a href="/" class="flex items-center gap-2.5 shrink-0" aria-label="BuildMetric Home">
+            <img src="logo.png" alt="BuildMetric Logo" class="h-7 sm:h-9 w-auto object-contain" />
+            <span class="font-display font-extrabold text-lg sm:text-xl tracking-tight text-ink-900 hidden sm:block">
+              Build<span class="text-brand-500">Metric</span>
+            </span>
+          </a>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden lg:flex items-center gap-1" aria-label="Main Navigation">
+            <a href="/calculators.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Calculators</a>
+            <a href="/guides.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Guides</a>
+            <a href="/about.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">About</a>
+            <a href="/contact.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Contact</a>
+          </nav>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <a href="/calculators.html" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-lg bg-ink-900 text-white text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+            Open Tools
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuBtn" type="button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-200 text-ink-800 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand-500/40 transition-colors" aria-expanded="false" aria-controls="mobileMenu">
+            <span class="sr-only">Open main menu</span>
+            <svg class="menu-open-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <svg class="menu-close-icon hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu (Compact) -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 bg-white">
+      <div class="px-3 py-3 space-y-1">
+        <a href="/calculators.html" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Calculators</a>
+        <a href="/guides.html" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Guides</a>
+        <a href="/about.html" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-ink-900 hover:bg-slate-50 transition-colors">About</a>
+        <a href="/contact.html" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main id="main-content" class="flex-grow">
+    
+    <!-- ============================================================
+         PAGE HEADER & BREADCRUMBS (Compact)
+         ============================================================ -->
+    <div class="bg-slate-50 border-b border-slate-200 pt-4 pb-5 sm:pt-6 sm:pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="Breadcrumb" class="mb-2 sm:mb-4">
+          <ol class="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-[11px] sm:text-sm text-slate-500">
+            <li><a href="/" class="hover:text-brand-600 transition-colors">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/calculators.html" class="hover:text-brand-600 transition-colors">Calculators</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/landscaping.html" class="hover:text-brand-600 transition-colors">Landscaping</a></li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page" class="text-ink-900 font-semibold">Mulch Calculator</li>
+          </ol>
+        </nav>
+
+        <!-- Page Title & Subtitle -->
+        <h1 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-ink-900 tracking-tight leading-tight">
+          Mulch Calculator
+        </h1>
+        <p class="text-xs sm:text-sm md:text-base text-ink-700 mt-1 max-w-2xl leading-relaxed">
+          Calculate exactly how many bags or cubic yards of mulch you need. Enter standard dimensions, or select "Custom" to enter your exact square footage.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- ============================================================
+         Phase 3/10 will start here: The Compact Calculator UI
+         ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 3/10 — THE CALCULATOR UI (Compact & Custom)
+     ============================================================ -->
+<section class="bg-white py-6 sm:py-12">
+  <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-10">
+      
+      <!-- Left Column: Form Inputs (7/12) -->
+      <div class="lg:col-span-7">
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-6">
+          
+          <!-- Unit Toggle (Compact) -->
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="font-display font-bold text-lg text-ink-900">Garden Bed Details</h2>
+            <div class="flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200">
+              <button type="button" id="btnImperial" class="px-2.5 py-1 text-[11px] sm:text-xs font-semibold rounded-md bg-white shadow-sm text-ink-900 transition-all">Imperial (ft)</button>
+              <button type="button" id="btnMetric" class="px-2.5 py-1 text-[11px] sm:text-xs font-semibold rounded-md text-slate-500 hover:text-ink-900 transition-all">Metric (m)</button>
+            </div>
+          </div>
+
+          <!-- Area Shape Selector -->
+          <div class="mb-4">
+            <label for="areaShape" class="block text-xs font-semibold text-ink-900 mb-1.5">Garden Bed Shape</label>
+            <select id="areaShape" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm">
+              <option value="rectangle" selected>Rectangle / Square</option>
+              <option value="circle">Circle</option>
+              <option value="custom">Custom Square Footage</option>
+            </select>
+          </div>
+
+          <!-- Rectangle Inputs -->
+          <div id="rectInputs" class="grid grid-cols-2 gap-3 mb-4">
+            <div>
+              <label for="areaLength" class="block text-xs font-semibold text-ink-900 mb-1">Length (<span class="unit-label">ft</span>)</label>
+              <input type="number" id="areaLength" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow text-sm" placeholder="e.g. 10" min="0" step="0.1">
+            </div>
+            <div>
+              <label for="areaWidth" class="block text-xs font-semibold text-ink-900 mb-1">Width (<span class="unit-label">ft</span>)</label>
+              <input type="number" id="areaWidth" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow text-sm" placeholder="e.g. 4" min="0" step="0.1">
+            </div>
+          </div>
+
+          <!-- Circle Input -->
+          <div id="circleInputs" class="hidden mb-4">
+            <label for="circleDiameter" class="block text-xs font-semibold text-ink-900 mb-1">Diameter (<span class="unit-label">ft</span>)</label>
+            <input type="number" id="circleDiameter" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow text-sm" placeholder="e.g. 6" min="0" step="0.1">
+          </div>
+
+          <!-- Custom Area Input -->
+          <div id="customInputs" class="hidden mb-4">
+            <label for="customArea" class="block text-xs font-semibold text-ink-900 mb-1">Total Area (<span class="unit-label">sq ft</span>)</label>
+            <input type="number" id="customArea" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow text-sm" placeholder="e.g. 120" min="0" step="1">
+          </div>
+
+          <!-- Depth & Bag Size (2 cols on mobile) -->
+          <div class="grid grid-cols-2 gap-3 mb-4">
+            <div>
+              <label for="mulchDepth" class="block text-xs font-semibold text-ink-900 mb-1">Depth (<span class="unit-label">in</span>)</label>
+              <select id="mulchDepth" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm">
+                <option value="1">1 inch</option>
+                <option value="2" selected>2 inches (Standard)</option>
+                <option value="3">3 inches</option>
+                <option value="4">4 inches (Weed control)</option>
+              </select>
+            </div>
+            <div>
+              <label for="bagSize" class="block text-xs font-semibold text-ink-900 mb-1">Bag Size</label>
+              <select id="bagSize" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm">
+                <option value="2">2 cu ft (Standard Bag)</option>
+                <option value="3">3 cu ft (Large Bag)</option>
+                <option value="1">1 cu ft (Small Bag)</option>
+                <option value="0.75">0.75 cu ft (Compact)</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Column: Result Box (5/12) -->
+      <div class="lg:col-span-5">
+        <div class="bg-ink-900 rounded-2xl shadow-lg border border-ink-800 sticky top-20 overflow-hidden">
+          <div class="p-4 sm:p-6">
+            
+            <!-- Highlighted Total Bags -->
+            <div class="text-center pb-4 border-b border-white/10 mb-4">
+              <p class="text-xs text-brand-300 font-semibold mb-1">Total Bags Needed</p>
+              <div class="flex items-center justify-center gap-2">
+                <span class="font-mono text-4xl sm:text-5xl font-extrabold text-white" id="outBags">0</span>
+                <span class="text-xs sm:text-sm text-slate-400 mt-2">Bags</span>
+              </div>
+            </div>
+
+            <!-- Other Results -->
+            <div class="space-y-2 mb-5 text-sm">
+              <div class="flex justify-between items-center">
+                <span class="text-slate-400">Total Area</span>
+                <span class="font-mono font-semibold text-white" id="outArea">0 <span class="text-[10px] text-slate-500">sq ft</span></span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-400">Volume Needed</span>
+                <span class="font-mono font-semibold text-white" id="outVolume">0 <span class="text-[10px] text-slate-500">cu ft</span></span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-400">Bulk Mulch (Cubic Yards)</span>
+                <span class="font-mono font-semibold text-white" id="outYards">0 <span class="text-[10px] text-slate-500">yd³</span></span>
+              </div>
+            </div>
+
+            <!-- Save/Share/Copy Buttons (Compact Blue) -->
+            <div class="flex items-center gap-1.5">
+              <button type="button" id="btnSave" class="flex-1 flex items-center justify-center gap-1 py-2 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-[11px] sm:text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg>
+                Save
+              </button>
+              <button type="button" id="btnShare" class="flex-1 flex items-center justify-center gap-1 py-2 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-[11px] sm:text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                Share
+              </button>
+              <button type="button" id="btnCopy" class="flex-1 flex items-center justify-center gap-1 py-2 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-[11px] sm:text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                Copy
+              </button>
+            </div>
+
+          </div>
+        </div>
+        
+        <!-- Quick Tip -->
+        <p class="text-[10px] sm:text-xs text-slate-500 mt-2 text-center">
+          <strong>Note:</strong> Standard bag is 2 cubic feet. 13.5 bags equal 1 cubic yard of bulk mulch.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 4/10 will start here: First Ad Slot + Massive Content Part 1
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 4/10 — FIRST AD SLOT + MASSIVE CONTENT PART 1
+     Deep dive into mulch volume, types, and depth
+     ============================================================ -->
+<section class="bg-white py-10 sm:py-16 border-t border-slate-200">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Ad Space (Leaderboard) -->
+    <div class="mb-10">
+      <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[90px] flex items-center justify-center text-[10px] sm:text-xs text-slate-500 font-medium tracking-widest uppercase">
+        Ad Space — 728×90 / Responsive Leaderboard
+      </div>
+    </div>
+
+    <!-- Article Content Wrapper -->
+    <div class="prose prose-slate prose-base sm:prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-900 prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-xl">
+      
+      <p class="lead text-lg sm:text-xl text-ink-700 font-medium mb-6">
+        Mulch is one of the most important investments you can make in your landscaping. It retains moisture, suppresses weeds, regulates soil temperature, and gives your garden beds a finished, polished look. But mulch is also heavy and bulky, and buying too much means you're left with a pile of rotting wood chips in your driveway. Buying too little means another trip to the garden center.
+      </p>
+
+      <p>
+        The most common question we hear is: <strong>"How many bags of mulch do I need?"</strong> The answer depends on the square footage of your garden beds, the depth you want to apply, and whether you're buying bagged mulch or bulk mulch by the cubic yard. This guide walks you through the exact math used by professional landscapers in the US, UK, and Australia.
+      </p>
+
+      <h3 class="mt-8">1. The Math: Calculating Mulch Volume</h3>
+      <p>
+        Mulch is measured in <strong>volume</strong> (cubic feet or cubic yards). To calculate your volume:
+      </p>
+      <p>
+        <strong>Volume (cubic feet) = Length (ft) × Width (ft) × Depth (ft)</strong>
+      </p>
+      <p>
+        Note: Depth is typically measured in inches. Convert inches to feet by dividing by 12. For example, a 2-inch depth is 2/12 = 0.167 feet.
+      </p>
+      <p>
+        Once you have your cubic feet, you can convert to bags or cubic yards:
+      </p>
+      <ul>
+        <li><strong>Bags:</strong> Divide cubic feet by the bag size (usually 2 cubic feet per bag).</li>
+        <li><strong>Cubic Yards:</strong> Divide cubic feet by 27 (since there are 27 cubic feet in a cubic yard).</li>
+      </ul>
+
+      <!-- Mulch Coverage Table -->
+      <div class="my-6 not-prose rounded-xl border border-slate-200 bg-white overflow-hidden shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left">
+            <thead class="bg-slate-50 border-b border-slate-200">
+              <tr>
+                <th class="px-3 py-2 font-display font-bold text-ink-900">Area (sq ft)</th>
+                <th class="px-3 py-2 font-display font-bold text-ink-900">2" Depth (Bags)</th>
+                <th class="px-3 py-2 font-display font-bold text-ink-900">2" Depth (Yds³)</th>
+                <th class="px-3 py-2 font-display font-bold text-ink-900">3" Depth (Bags)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-ink-700">
+              <tr>
+                <td class="px-3 py-2 font-mono font-semibold">50 sq ft</td>
+                <td class="px-3 py-2 font-mono">9 bags</td>
+                <td class="px-3 py-2 font-mono">0.31 yd³</td>
+                <td class="px-3 py-2 font-mono">13 bags</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-3 py-2 font-mono font-semibold">100 sq ft</td>
+                <td class="px-3 py-2 font-mono">17 bags</td>
+                <td class="px-3 py-2 font-mono">0.62 yd³</td>
+                <td class="px-3 py-2 font-mono">25 bags</td>
+              </tr>
+              <tr>
+                <td class="px-3 py-2 font-mono font-semibold">200 sq ft</td>
+                <td class="px-3 py-2 font-mono">34 bags</td>
+                <td class="px-3 py-2 font-mono">1.23 yd³</td>
+                <td class="px-3 py-2 font-mono">50 bags</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-3 py-2 font-mono font-semibold">500 sq ft</td>
+                <td class="px-3 py-2 font-mono">84 bags</td>
+                <td class="px-3 py-2 font-mono">3.09 yd³</td>
+                <td class="px-3 py-2 font-mono">125 bags</td>
+              </tr>
+              <tr>
+                <td class="px-3 py-2 font-mono font-semibold">1,000 sq ft</td>
+                <td class="px-3 py-2 font-mono">168 bags</td>
+                <td class="px-3 py-2 font-mono">6.17 yd³</td>
+                <td class="px-3 py-2 font-mono">250 bags</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p>
+        <em>Estimator's Rule:</em> Always add a 5% to 10% waste factor. Some bags settle or are lighter than expected, and uneven ground may require more mulch than the math suggests.
+      </p>
+
+      <!-- Ad Space (In-Article) -->
+      <div class="my-8 not-prose">
+        <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[250px] flex items-center justify-center text-xs sm:text-sm text-slate-500 font-medium tracking-widest uppercase">
+          Ad Space — In-Article Rectangle
+        </div>
+      </div>
+
+      <h3 class="mt-8">2. Choosing the Right Depth</h3>
+      <p>
+        The depth of your mulch layer depends on what you are trying to achieve:
+      </p>
+      <ul>
+        <li><strong>1 inch (2.5 cm):</strong> Purely decorative. Use this when refreshing an existing mulch bed.</li>
+        <li><strong>2 inches (5 cm):</strong> The standard for garden beds and flower borders. Balances moisture retention with breathability.</li>
+        <li><strong>3 inches (7.5 cm):</strong> For weed suppression and areas that dry out quickly.</li>
+        <li><strong>4 inches (10 cm):</strong> The maximum recommended depth. Any deeper and the mulch will prevent water from penetrating to the soil, suffocating plant roots.</li>
+      </ul>
+      <p>
+        <strong>Important:</strong> Never pile mulch directly against the trunk of trees or the stems of shrubs. This creates a "mulch volcano" that traps moisture against the bark and promotes rot and insect damage. Leave a 2-3 inch gap between the mulch and the base of the plant.
+      </p>
+
+      <h3 class="mt-8">3. Types of Mulch: Pros and Cons</h3>
+      <p>
+        The type of mulch you choose affects the look, the cost, and how long it lasts.
+      </p>
+
+      <h4>Organic Mulch</h4>
+      <p>
+        Decomposes over time, adding nutrients to the soil.
+      </p>
+      <ul>
+        <li><strong>Hardwood Bark:</strong> Long-lasting (1-2 years), good for shrub beds. Moderately priced.</li>
+        <li><strong>Cedar Mulch:</strong> Natural insect repellent, long-lasting, and smells great. More expensive.</li>
+        <li><strong>Pine Bark (Nuggets):</strong> Slow to decompose, very attractive. Ideal for high-end landscaping.</li>
+        <li><strong>Compost:</strong> Fast to decompose, but adds massive nutrients. Not good for long-term decoration.</li>
+      </ul>
+
+      <h4>Inorganic Mulch</h4>
+      <p>
+        Does not decompose, lasts forever.
+      </p>
+      <ul>
+        <li><strong>Rubber Mulch:</strong> Made from recycled tires. Long-lasting, but does not add nutrients. Can get hot in the sun.</li>
+        <li><strong>Gravel/Stone:</strong> Excellent for xeriscaping and modern landscapes. Does not break down, but is difficult to remove.</li>
+      </ul>
+
+      <h3 class="mt-8">4. Bagged vs. Bulk Mulch</h3>
+      <p>
+        Deciding between bagged and bulk mulch is a matter of convenience vs. cost.
+      </p>
+      <ul>
+        <li><strong>Bagged Mulch:</strong> Easy to transport and handle. Available in 1, 2, or 3 cubic foot bags. Best for small projects (under 30 bags). Costs more per cubic yard.</li>
+        <li><strong>Bulk Mulch (Cubic Yards):</strong> Delivered by the truckload (usually minimum 3 cubic yards). Cheapest option per cubic yard, but requires a spot for the truck to dump it and a wheelbarrow to move it.</li>
+      </ul>
+      
+      <hr class="my-8 border-slate-200">
+      
+      <p class="text-base text-slate-700">
+        <em>Continue reading below as we dive into regional mulch standards (US vs UK vs AU), cost estimation, and common landscaping mistakes.</em>
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 5/10 will start here: Content Part 2 (Regional, Costing & Conclusion)
+     ============================================================ -->
+<!-- ============================================================
+     PHASE 5/10 — MASSIVE CONTENT PART 2 & CONCLUSION
+     Regional Standards, Costing, Mistakes, and Conclusion
+     ============================================================ -->
+<section class="bg-white py-10 sm:py-16 border-t border-slate-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Article Content Wrapper (Continued) -->
+    <div class="prose prose-slate prose-base sm:prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-900 prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-xl">
+      
+      <h3 class="mt-8">5. Regional Mulch Standards: US vs UK vs AU</h3>
+      <p>
+        While the math for calculating mulch is universal, the way mulch is sold and used varies significantly across the globe.
+      </p>
+
+      <h4>United States</h4>
+      <p>
+        In the US, mulch is sold either in <strong>2 cubic foot bags</strong> (the most common) or in bulk by the <strong>cubic yard</strong>. A standard pickup truck bed can hold about 2 cubic yards of mulch. Americans typically apply 2-3 inches of mulch around shrubs and trees. The US also uses a wide variety of dyed mulches (red, black, brown) for aesthetic purposes.
+      </p>
+
+      <h4>United Kingdom</h4>
+      <p>
+        The UK sells mulch (often called "bark chippings" or "composted bark") in <strong>bulk bags (usually 1 cubic meter)</strong> or in smaller 50-75 liter bags. UK gardeners often prefer composted bark because it breaks down faster and improves the heavy clay soils common in the UK. The recommended depth is typically <strong>5 cm (2 inches)</strong>.
+      </p>
+
+      <h4>Australia</h4>
+      <p>
+        In Australia, mulch is sold by the <strong>cubic meter</strong>. Australian gardeners use a variety of mulches, including bark chips, sugar cane mulch, and lucerne. Due to the harsh Australian sun, a depth of <strong>7-10 cm (3-4 inches)</strong> is often recommended to protect the soil from drying out. In bushfire-prone areas, specific fire-retardant mulches may be required.
+      </p>
+
+      <h3 class="mt-8">6. Cost Estimation: Bagged vs. Bulk</h3>
+      <p>
+        Mulch is one of the cheapest landscaping materials, but the costs add up quickly for large projects.
+      </p>
+      
+      <h4>Material Costs</h4>
+      <ul>
+        <li><strong>US (Bagged):</strong> $3 to $5 per 2 cu ft bag. ($40 to $65 per cubic yard).</li>
+        <li><strong>US (Bulk):</strong> $25 to $40 per cubic yard (delivered).</li>
+        <li><strong>UK (Bulk Bag):</strong> £80 to £150 per cubic meter.</li>
+        <li><strong>AU (Bulk):</strong> AUD $40 to $80 per cubic meter.</li>
+      </ul>
+
+      <h4>Delivery Fees</h4>
+      <p>
+        Bulk mulch delivery usually costs <strong>$50 to $150</strong> depending on your distance from the supplier. If you only need 1-2 cubic yards, it's often cheaper to buy bagged mulch or transport it yourself in a trailer.
+      </p>
+
+      <h3 class="mt-8">7. Common Mulch Mistakes to Avoid</h3>
+      <p>
+        Mulching is simple, but doing it wrong can harm your plants.
+      </p>
+      <ol>
+        <li><strong>Mulch Volcanoes:</strong> Piling mulch high against the trunk of trees traps moisture and causes rot. Keep mulch 2-3 inches away from the base of any plant.</li>
+        <li><strong>Too Deep:</strong> More than 4 inches of mulch blocks oxygen from reaching the soil and prevents water from penetrating. 2-3 inches is the sweet spot.</li>
+        <li><strong>Not Weeding First:</strong> If you put mulch over existing weeds, those weeds will grow right through it. Always pull weeds and lay down a weed barrier (if desired) before mulching.</li>
+        <li><strong>Using Fresh Wood Chips:</strong> Fresh wood chips draw nitrogen from the soil as they decompose, starving your plants. Use aged or composted mulch instead.</li>
+        <li><strong>Ignoring the Edges:</strong> Mulch looks best when it's contained by a clean edge. Use a spade to create a sharp trench between the lawn and the bed, or install metal/stone edging.</li>
+      </ol>
+
+      <h3 class="mt-8">8. Preparing Your Garden Bed</h3>
+      <p>
+        Before you lay down any mulch, take these steps to ensure a healthy garden:
+      </p>
+      <ul>
+        <li><strong>Clear the Area:</strong> Remove existing weeds, rocks, and debris.</li>
+        <li><strong>Edge the Bed:</strong> Use a flat spade to cut a clean edge between the lawn and the garden bed.</li>
+        <li><strong>Install Weed Barrier (Optional):</strong> If you have persistent weeds, lay down landscape fabric before mulching. Avoid using plastic, which prevents water from penetrating.</li>
+        <li><strong>Water First:</strong> Water the soil thoroughly before mulching. It may be weeks before water can reach the roots through the new mulch layer.</li>
+      </ul>
+      
+      <p>
+        By using our calculator to precisely estimate your material needs and following these preparation steps, you can create a beautiful, low-maintenance garden bed that will look great for years.
+      </p>
+
+      <!-- Conclusion Box -->
+      <div class="mt-8 p-5 sm:p-8 bg-gradient-to-br from-ink-900 to-ink-950 rounded-2xl border border-ink-800 not-prose relative overflow-hidden shadow-lg">
+        <div class="absolute -top-20 -right-20 w-64 h-64 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="relative">
+          <h4 class="font-display font-bold text-white text-lg sm:text-xl mb-2.5">Ready to order your mulch?</h4>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-5 max-w-2xl">
+            Use our Mulch Calculator to instantly generate the exact number of bags and cubic yards you need for your garden, complete with coverage for 2-inch and 3-inch depths.
+          </p>
+          <div class="flex flex-wrap gap-2.5">
+            <a href="#main-content" class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-brand-500 text-white text-sm font-semibold hover:bg-brand-400 transition-colors shadow-sm">
+              Back to Calculator <span class="ml-1" aria-hidden="true">↑</span>
+            </a>
+            <a href="/calculators.html" class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 text-white text-sm font-semibold transition-colors">
+              Browse All Tools
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 6/10 will start here: FAQ (Numbered Card Style) & Schema
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 6/10 — FAQ (Numbered Card Style, Wider Layout) & SCHEMA
+     Mulch-specific questions with minimalist UI
+     ============================================================ -->
+<section class="bg-slate-50 py-12 sm:py-20 border-t border-slate-200">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-8 sm:mb-12">
+      <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-ink-900 tracking-tight">Mulch Questions Answered</h2>
+      <p class="text-sm sm:text-base text-ink-700 mt-2">Common questions about estimating mulch, bag coverage, and application depth.</p>
+    </div>
+
+    <!-- FAQ Accordion Cards -->
+    <div class="space-y-3">
+      
+      <!-- FAQ 1 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">01</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How many bags of mulch do I need for 100 square feet?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          For 100 square feet at a standard 2-inch depth, you will need <strong>17 bags</strong> of mulch (assuming 2 cubic foot bags). This is because 2 inches of mulch over 100 sq ft equals about 16.7 cubic feet, and each bag contains 2 cubic feet. Always round up to the nearest full bag and add 5% for waste.
+        </div>
+      </details>
+
+      <!-- FAQ 2 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">02</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How many cubic feet are in a bag of mulch?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          In the US, a standard bag of mulch contains <strong>2 cubic feet</strong>. Large bags contain 3 cubic feet, and smaller bags (often used for decorative colors) contain 1 or 0.75 cubic feet. In the UK and Australia, bags are typically measured in liters (e.g., 50L or 75L).
+        </div>
+      </details>
+
+      <!-- FAQ 3 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">03</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How many bags of mulch are in a cubic yard?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          There are <strong>13.5 bags</strong> of mulch in a cubic yard (assuming 2 cubic foot bags). Bulk mulch is sold by the cubic yard, while bagged mulch is sold by the cubic foot. For large projects, buying in bulk (cubic yards) is significantly cheaper than buying 13.5 individual bags.
+        </div>
+      </details>
+
+      <!-- FAQ 4 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">04</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How deep should mulch be applied?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          The standard depth is <strong>2 to 3 inches</strong>. Use 2 inches for general garden beds and 3 inches for weed suppression. Never apply more than 4 inches, as it will block oxygen and water from reaching the plant roots.
+        </div>
+      </details>
+
+      <!-- FAQ 5 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">05</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">Do I need to remove old mulch before adding new mulch?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          Not necessarily. If the old mulch is still mostly intact and not moldy, you can simply fluff it up with a rake and add a fresh 1-inch layer on top. However, if the old mulch has formed a hard, water-repellent crust or has heavy weed growth, you should remove it before adding new mulch.
+        </div>
+      </details>
+
+      <!-- FAQ 6 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">06</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">What is the best type of mulch for landscaping?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          It depends on your goal. For <strong>weed control</strong>, use a chunky bark mulch (like pine bark nuggets). For <strong>soil improvement</strong>, use composted mulch. For <strong>longevity and aesthetics</strong>, use cedar or cypress mulch. Avoid fresh wood chips, as they draw nitrogen from the soil.
+        </div>
+      </details>
+
+      <!-- FAQ 7 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-xs sm:text-sm shrink-0">07</span>
+            <span class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">Does mulch attract termites?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-4 h-4 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-4 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-12 sm:ml-14">
+          <strong>It can, but rarely.</strong> Termites are attracted to wood, but they prefer decaying wood that is already in contact with soil. Most mulch is too dry and too processed to attract termites. However, if you live in a high-termite area, keep mulch at least <strong>6 inches away from your home's foundation</strong> and avoid piling it against exterior walls. Cedar mulch is naturally termite-resistant.
+        </div>
+      </details>
+
+    </div>
+
+    <!-- Still have a question CTA -->
+    <div class="mt-8 text-center">
+      <p class="text-sm text-ink-700">
+        Still have a question? Email <a href="mailto:contact@buildmetric.org" class="text-brand-600 font-semibold hover:underline">contact@buildmetric.org</a> — every message is read by a real person.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQPage JSON-LD SCHEMA (Matches exactly with HTML above)
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many bags of mulch do I need for 100 square feet?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For 100 square feet at a standard 2-inch depth, you will need 17 bags of mulch (assuming 2 cubic foot bags). 2 inches of mulch over 100 sq ft equals about 16.7 cubic feet, and each bag contains 2 cubic feet. Always round up to the nearest full bag and add 5% for waste." }
+    },
+    {
+      "@type": "Question",
+      "name": "How many cubic feet are in a bag of mulch?",
+      "acceptedAnswer": { "@type": "Answer", "text": "In the US, a standard bag of mulch contains 2 cubic feet. Large bags contain 3 cubic feet, and smaller bags contain 1 or 0.75 cubic feet. In the UK and Australia, bags are typically measured in liters (e.g., 50L or 75L)." }
+    },
+    {
+      "@type": "Question",
+      "name": "How many bags of mulch are in a cubic yard?",
+      "acceptedAnswer": { "@type": "Answer", "text": "There are 13.5 bags of mulch in a cubic yard (assuming 2 cubic foot bags). Bulk mulch is sold by the cubic yard, while bagged mulch is sold by the cubic foot. For large projects, buying in bulk is significantly cheaper." }
+    },
+    {
+      "@type": "Question",
+      "name": "How deep should mulch be applied?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The standard depth is 2 to 3 inches. Use 2 inches for general garden beds and 3 inches for weed suppression. Never apply more than 4 inches, as it will block oxygen and water from reaching the plant roots." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to remove old mulch before adding new mulch?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Not necessarily. If the old mulch is still mostly intact and not moldy, you can fluff it up with a rake and add a fresh 1-inch layer on top. However, if the old mulch has formed a hard crust or has heavy weed growth, you should remove it before adding new mulch." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best type of mulch for landscaping?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For weed control, use a chunky bark mulch like pine bark nuggets. For soil improvement, use composted mulch. For longevity and aesthetics, use cedar or cypress mulch. Avoid fresh wood chips, as they draw nitrogen from the soil." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does mulch attract termites?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It can, but rarely. Most mulch is too dry and processed to attract termites. If you live in a high-termite area, keep mulch at least 6 inches away from your home's foundation and avoid piling it against exterior walls. Cedar mulch is naturally termite-resistant." }
+    }
+  ]
+}
+</script>
+
+<!-- ============================================================
+     Phase 7/10 will start here: E-E-A-T Box + Related Tools
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 7/10 — E-E-A-T EDITORIAL BOX & RELATED CONTENT
+     ============================================================ -->
+
+<!-- E-E-A-T Directory Info Box -->
+<section class="bg-slate-50 border-t border-slate-200 py-12 sm:py-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+      
+      <!-- Card Header (Dark Premium Look) -->
+      <div class="bg-ink-900 px-5 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-6 h-6 rounded bg-white/10 flex items-center justify-center">
+            <svg class="w-3.5 h-3.5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-slate-200">About our calculators</span>
+        </div>
+        <span class="hidden sm:block text-[10px] font-bold uppercase tracking-widest text-slate-500">Engineer-Reviewed</span>
+      </div>
+
+      <!-- Card Body -->
+      <div class="p-5 sm:p-8 md:p-10">
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-10">
+          
+          <!-- Left Column: Description -->
+          <div class="lg:col-span-7">
+            <div class="flex items-center gap-3 mb-2 sm:mb-3">
+              <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-500 flex items-center justify-center shrink-0 shadow-sm">
+                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              </div>
+              <div>
+                <h2 class="font-display font-extrabold text-lg sm:text-2xl text-ink-900 tracking-tight">BuildMetric Engineering</h2>
+                <p class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-brand-600 mt-0.5">
+                  Calculators &amp; Estimating Tools
+                </p>
+              </div>
+            </div>
+            
+            <p class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-4 sm:mb-6 pl-[52px] sm:pl-[60px]">
+              Verified Formulas · Code-Aware
+            </p>
+
+            <div class="text-sm sm:text-[15px] text-ink-700 leading-relaxed space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+              <p>
+                Every calculator in this directory is built from formulas that can be derived from first principles. We do not guess. We test every tool against reference cases in both imperial and metric units before it is published.
+              </p>
+              <p>
+                More importantly, our tools are reviewed by quantity surveyors, structural engineers, and licensed contractors. We know that a calculation error on site costs money and compromises safety, so we treat accuracy as a structural requirement, not a feature.
+              </p>
+            </div>
+
+            <ul class="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-xs sm:text-sm text-ink-700"><strong class="text-ink-900">Human-verified.</strong> Reviewed by practising professionals, not AI.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-xs sm:text-sm text-ink-700"><strong class="text-ink-900">Stateless maths.</strong> Your inputs run in your browser, never on our servers.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-xs sm:text-sm text-ink-700"><strong class="text-ink-900">Always free.</strong> No sign-ups, no paywalls, no trials. Just the tools.</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-3">
+              <a href="mailto:contact@buildmetric.org" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-ink-900 text-white text-xs sm:text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                Report an Error
+              </a>
+              <a href="/about.html" class="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 rounded-xl border border-slate-300 text-ink-900 text-xs sm:text-sm font-semibold hover:border-brand-500 hover:text-brand-600 transition-colors bg-white">
+                Our Methodology
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Directory Info & Disclaimer -->
+          <div class="lg:col-span-5 flex flex-col gap-3 sm:gap-4">
+            
+            <!-- Directory Info Box -->
+            <div class="bg-white rounded-xl border border-slate-200 p-4 sm:p-6 shadow-sm">
+              <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-3 sm:mb-4">Directory Info</h3>
+              <ul class="text-[11px] sm:text-sm space-y-2 sm:space-y-3">
+                <li class="flex justify-between items-center pb-2 sm:pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Total Tools</span>
+                  <span class="font-bold text-ink-900 text-right">Growing Library</span>
+                </li>
+                <li class="flex justify-between items-center pb-2 sm:pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Review Status</span>
+                  <span class="font-bold text-ink-900 text-right">100% Human-Reviewed</span>
+                </li>
+                <li class="flex justify-between items-center pb-2 sm:pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Regions</span>
+                  <span class="font-bold text-ink-900 text-right">US · UK · AU</span>
+                </li>
+                <li class="flex justify-between items-center">
+                  <span class="text-slate-500 font-medium">Cost</span>
+                  <span class="font-bold text-brand-600 text-right">Free Forever</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Disclaimer Box -->
+            <div class="bg-white rounded-xl border border-slate-200 p-4 sm:p-6 flex-1 shadow-sm">
+              <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2 sm:mb-3">Disclaimer</h3>
+              <p class="text-[11px] sm:text-sm text-ink-700 leading-relaxed">
+                Calculators are estimating aids, not a substitute for professional judgment. Always verify against your local code. See our <a href="/disclaimer.html" class="text-brand-600 font-semibold underline decoration-brand-300 underline-offset-2 hover:decoration-brand-500 transition-colors">Disclaimer</a>.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Related Tools & Guides Section -->
+<section class="bg-white py-12 sm:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Related Tools -->
+    <div class="mb-12 sm:mb-16">
+      <div class="flex items-center justify-between mb-4 sm:mb-6">
+        <h2 class="font-display font-extrabold text-xl sm:text-2xl text-ink-900 tracking-tight">Related Calculators</h2>
+        <a href="/calculators.html" class="text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors">View all tools →</a>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+        
+        <!-- Tool 1: Sod -->
+        <a href="/sod-calculator.html" class="group bg-white rounded-xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-3 sm:gap-4">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors">Sod Calculator</h3>
+            <p class="text-[10px] sm:text-xs text-slate-500 mt-0.5">Rolls, pallets, coverage</p>
+          </div>
+        </a>
+
+        <!-- Tool 2: Gravel -->
+        <a href="/gravel-calculator.html" class="group bg-white rounded-xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-3 sm:gap-4">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors">Gravel Calculator</h3>
+            <p class="text-[10px] sm:text-xs text-slate-500 mt-0.5">Volume, tons, bags</p>
+          </div>
+        </a>
+
+        <!-- Tool 3: Fence -->
+        <a href="/fence-calculator.html" class="group bg-white rounded-xl p-4 sm:p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-3 sm:gap-4">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 group-hover:text-brand-600 transition-colors">Fence Calculator</h3>
+            <p class="text-[10px] sm:text-xs text-slate-500 mt-0.5">Pickets, posts, concrete</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Related Guides -->
+    <div>
+      <div class="flex items-center justify-between mb-4 sm:mb-6">
+        <h2 class="font-display font-extrabold text-xl sm:text-2xl text-ink-900 tracking-tight">Related Guides</h2>
+        <a href="/guides.html" class="text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors">View all guides →</a>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        
+        <!-- Guide 1 (Concrete Waste) -->
+        <a href="/guides/concrete-waste-allowance.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-24 sm:h-32 bg-gradient-to-br from-slate-700 to-slate-900 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-20 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+            </div>
+          </div>
+          <div class="p-3 sm:p-4 flex flex-col flex-1">
+            <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-600 bg-slate-100 px-2 py-0.5 sm:py-1 rounded self-start mb-2">Concrete</span>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">How Much Waste Should You Add to a Concrete Order?</h3>
+            <span class="text-[10px] sm:text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <!-- Guide 2 (Stud Spacing) -->
+        <a href="/guides/stud-spacing-by-code.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-24 sm:h-32 bg-gradient-to-br from-sky-400 to-sky-600 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+            </div>
+          </div>
+          <div class="p-3 sm:p-4 flex flex-col flex-1">
+            <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-sky-600 bg-sky-50 px-2 py-0.5 sm:py-1 rounded self-start mb-2">Framing</span>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Stud Spacing: IRC 2021 vs BS 5268 vs AS 1684 Compared</h3>
+            <span class="text-[10px] sm:text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <!-- Guide 3 (Roof Pitch) -->
+        <a href="/guides/roof-pitch-explained.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-24 sm:h-32 bg-gradient-to-br from-blue-400 to-blue-600 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            </div>
+          </div>
+          <div class="p-3 sm:p-4 flex flex-col flex-1">
+            <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-brand-600 bg-brand-50 px-2 py-0.5 sm:py-1 rounded self-start mb-2">Roofing</span>
+            <h3 class="font-display font-bold text-sm sm:text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Roof Pitch Explained: Why 6:12 and 26.57° Are the Same Roof</h3>
+            <span class="text-[10px] sm:text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 8/10 will start here: Premium Footer
+     ============================================================ -->
+
+    </main>
+
+<!-- ============================================================
+     PHASE 8/10 — COMPACT PREMIUM FOOTER (Short & Clean)
+     ============================================================ -->
+<footer class="bg-ink-950 text-slate-400 border-t border-slate-800 pt-10 pb-6">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Top Footer Grid (4 Columns) -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 mb-8">
+      
+      <!-- Column 1: Brand & Contact -->
+      <div class="col-span-2 md:col-span-1 pr-4">
+        <a href="/" class="inline-flex items-center gap-2 mb-3 group">
+          <img src="logo.png" alt="BuildMetric Logo" class="h-6 w-auto object-contain brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity" />
+          <span class="font-display font-extrabold text-base tracking-tight text-white hidden sm:block">
+            Build<span class="text-brand-500">Metric</span>
+          </span>
+        </a>
+        
+        <p class="text-[11px] sm:text-xs leading-relaxed mb-4 max-w-xs text-slate-400">
+          Independent construction calculators and estimating tools for professionals in the <strong class="text-slate-200">USA, UK</strong> and <strong class="text-slate-200">Australia</strong>.
+        </p>
+
+        <div class="space-y-1.5 mb-4">
+          <a href="mailto:contact@buildmetric.org" class="flex items-center gap-1.5 text-[11px] sm:text-xs hover:text-white transition-colors">
+            <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            contact@buildmetric.org
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2: Popular Tools (Shortened) -->
+      <div>
+        <h3 class="font-display font-bold text-white text-[11px] sm:text-xs uppercase tracking-widest mb-3">Popular Tools</h3>
+        <ul class="space-y-1.5 text-[11px] sm:text-xs">
+          <li><a href="/framing-calculator.html" class="hover:text-brand-400 transition-colors">Framing Calculator</a></li>
+          <li><a href="/roofing-calculator.html" class="hover:text-brand-400 transition-colors">Roofing Calculator</a></li>
+          <li><a href="/concrete-calculator.html" class="hover:text-brand-400 transition-colors">Concrete Calculator</a></li>
+          <li><a href="/deck-calculator.html" class="hover:text-brand-400 transition-colors">Deck Calculator</a></li>
+          <li><a href="/mulch-calculator.html" class="hover:text-brand-400 transition-colors">Mulch Calculator</a></li>
+          <li><a href="/calculators.html" class="text-brand-400 font-semibold mt-1 inline-block hover:underline">View All Tools →</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Company -->
+      <div>
+        <h3 class="font-display font-bold text-white text-[11px] sm:text-xs uppercase tracking-widest mb-3">Company</h3>
+        <ul class="space-y-1.5 text-[11px] sm:text-xs">
+          <li><a href="/about.html" class="hover:text-brand-400 transition-colors">About Us</a></li>
+          <li><a href="/guides.html" class="hover:text-brand-400 transition-colors">Guides</a></li>
+          <li><a href="/contact.html" class="hover:text-brand-400 transition-colors">Contact</a></li>
+          <li><a href="/sitemap.xml" class="hover:text-brand-400 transition-colors">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Legal & Compliance -->
+      <div>
+        <h3 class="font-display font-bold text-white text-[11px] sm:text-xs uppercase tracking-widest mb-3">Legal</h3>
+        <ul class="space-y-1.5 text-[11px] sm:text-xs">
+          <li><a href="/privacy.html" class="hover:text-brand-400 transition-colors">Privacy Policy</a></li>
+          <li><a href="/terms.html" class="hover:text-brand-400 transition-colors">Terms of Service</a></li>
+          <li><a href="/disclaimer.html" class="hover:text-brand-400 transition-colors">Disclaimer</a></li>
+          <li><a href="/cookie-policy.html" class="hover:text-brand-400 transition-colors">Cookie Policy</a></li>
+        </ul>
+        
+        <button id="cookieSettingsBtn" type="button" class="mt-3 inline-flex items-center gap-1.5 px-2 py-1 rounded border border-slate-700 bg-slate-800/50 hover:bg-slate-800 text-[10px] font-semibold text-slate-300 transition-colors">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          Cookie Settings
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-3 text-[10px]">
+      <p class="text-center md:text-left text-slate-500">
+        © 2026 BuildMetric. All rights reserved. <br class="sm:hidden">Operated from buildmetric.org.
+      </p>
+      <p class="text-center md:text-right text-slate-500">
+        Built for professionals. General info only — see <a href="/disclaimer.html" class="text-brand-500 hover:underline hover:text-brand-400 transition-colors">Disclaimer</a>.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ============================================================
+     Phase 9/10 will start here: Complete JavaScript Logic
+     ============================================================ -->
+
+      <!-- ============================================================
+       PHASE 9/10 — JAVASCRIPT (Calculator Logic & Menu)
+       ============================================================ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      /* ── 1. MOBILE MENU TOGGLE ── */
+      const menuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const openIcon = menuBtn ? menuBtn.querySelector('.menu-open-icon') : null;
+      const closeIcon = menuBtn ? menuBtn.querySelector('.menu-close-icon') : null;
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function () {
+          const isOpen = !mobileMenu.classList.contains('hidden');
+          mobileMenu.classList.toggle('hidden');
+          if(openIcon) openIcon.classList.toggle('hidden');
+          if(closeIcon) closeIcon.classList.toggle('hidden');
+          menuBtn.setAttribute('aria-expanded', String(!isOpen));
+        });
+      }
+
+      /* ── 2. ELEMENTS & STATE ── */
+      const btnImperial = document.getElementById('btnImperial');
+      const btnMetric = document.getElementById('btnMetric');
+      const unitLabels = document.querySelectorAll('.unit-label');
+      
+      const areaShape = document.getElementById('areaShape');
+      const rectInputs = document.getElementById('rectInputs');
+      const circleInputs = document.getElementById('circleInputs');
+      const customInputs = document.getElementById('customInputs');
+      
+      const areaLength = document.getElementById('areaLength');
+      const areaWidth = document.getElementById('areaWidth');
+      const circleDiameter = document.getElementById('circleDiameter');
+      const customArea = document.getElementById('customArea');
+      
+      const mulchDepth = document.getElementById('mulchDepth');
+      const bagSize = document.getElementById('bagSize');
+      
+      const outBags = document.getElementById('outBags');
+      const outArea = document.getElementById('outArea');
+      const outVolume = document.getElementById('outVolume');
+      const outYards = document.getElementById('outYards');
+
+      let isMetric = false;
+
+      /* ── 3. SHAPE TOGGLE (Rectangle / Circle / Custom) ── */
+      areaShape.addEventListener('change', function() {
+        rectInputs.classList.add('hidden');
+        circleInputs.classList.add('hidden');
+        customInputs.classList.add('hidden');
+        
+        if (this.value === 'rectangle') {
+          rectInputs.classList.remove('hidden');
+        } else if (this.value === 'circle') {
+          circleInputs.classList.remove('hidden');
+        } else {
+          customInputs.classList.remove('hidden');
+        }
+        calculate();
+      });
+
+      /* ── 4. UNIT TOGGLE (Imperial / Metric) ── */
+      function toggleUnits(metric) {
+        isMetric = metric;
+        
+        if (metric) {
+          btnMetric.classList.add('bg-white', 'shadow-sm', 'text-ink-900');
+          btnMetric.classList.remove('text-slate-500');
+          btnImperial.classList.remove('bg-white', 'shadow-sm', 'text-ink-900');
+          btnImperial.classList.add('text-slate-500');
+          
+          unitLabels.forEach(el => {
+            if (el.textContent === 'ft') el.textContent = 'm';
+            else if (el.textContent === 'in') el.textContent = 'cm';
+            else if (el.textContent === 'sq ft') el.textContent = 'sq m';
+          });
+
+          // Update Bag Sizes to Metric (Liters)
+          bagSize.innerHTML = `
+            <option value="56.6">56L Bag (2 cu ft)</option>
+            <option value="85">85L Bag (3 cu ft)</option>
+            <option value="28.3">28L Bag (1 cu ft)</option>
+          `;
+
+        } else {
+          btnImperial.classList.add('bg-white', 'shadow-sm', 'text-ink-900');
+          btnImperial.classList.remove('text-slate-500');
+          btnMetric.classList.remove('bg-white', 'shadow-sm', 'text-ink-900');
+          btnMetric.classList.add('text-slate-500');
+          
+          unitLabels.forEach(el => {
+            if (el.textContent === 'm') el.textContent = 'ft';
+            else if (el.textContent === 'cm') el.textContent = 'in';
+            else if (el.textContent === 'sq m') el.textContent = 'sq ft';
+          });
+
+          // Update Bag Sizes to Imperial (Cubic Feet)
+          bagSize.innerHTML = `
+            <option value="2">2 cu ft (Standard Bag)</option>
+            <option value="3">3 cu ft (Large Bag)</option>
+            <option value="1">1 cu ft (Small Bag)</option>
+          `;
+        }
+        calculate();
+      }
+
+      if(btnImperial && btnMetric) {
+        btnImperial.addEventListener('click', () => toggleUnits(false));
+        btnMetric.addEventListener('click', () => toggleUnits(true));
+      }
+
+      /* ── 5. CALCULATOR MATH LOGIC ── */
+      function calculate() {
+        let area = 0;
+        const shape = areaShape.value;
+
+        if (shape === 'rectangle') {
+          const l = parseFloat(areaLength.value) || 0;
+          const w = parseFloat(areaWidth.value) || 0;
+          area = l * w;
+        } else if (shape === 'circle') {
+          const d = parseFloat(circleDiameter.value) || 0;
+          const r = d / 2;
+          area = Math.PI * r * r;
+        } else {
+          area = parseFloat(customArea.value) || 0;
+        }
+
+        if (area <= 0) {
+          outBags.textContent = '0';
+          outArea.innerHTML = `0 <span class="text-[10px] text-slate-500">${isMetric ? 'sq m' : 'sq ft'}</span>`;
+          outVolume.innerHTML = `0 <span class="text-[10px] text-slate-500">${isMetric ? 'L' : 'cu ft'}</span>`;
+          outYards.innerHTML = `0 <span class="text-[10px] text-slate-500">${isMetric ? 'm³' : 'yd³'}</span>`;
+          return;
+        }
+
+        // Depth Conversion
+        // If metric, depth is in cm. Convert to meters.
+        // If imperial, depth is in inches. Convert to feet.
+        let depthValue = parseFloat(mulchDepth.value) || 2;
+        let depthInUnits = isMetric ? (depthValue / 100) : (depthValue / 12);
+
+        // Volume Calculation
+        // Imperial: Volume (cubic ft) = Area (sq ft) * Depth (ft)
+        // Metric: Volume (cubic m) = Area (sq m) * Depth (m)
+        let volume = area * depthInUnits;
+
+        // Bag Conversion
+        let totalBags = 0;
+        let displayVolume = 0;
+        let displayYards = 0;
+
+        if (isMetric) {
+          // Bag size is in Liters. 1000 Liters = 1 Cubic Meter
+          let bagSizeLiters = parseFloat(bagSize.value) || 56.6;
+          let volumeLiters = volume * 1000;
+          totalBags = Math.ceil(volumeLiters / bagSizeLiters);
+          
+          displayVolume = volumeLiters.toFixed(0); // Liters
+          displayYards = volume.toFixed(2); // Cubic Meters
+        } else {
+          // Bag size is in Cubic Feet.
+          let bagSizeCuFt = parseFloat(bagSize.value) || 2;
+          totalBags = Math.ceil(volume / bagSizeCuFt);
+          
+          displayVolume = volume.toFixed(1); // Cubic Feet
+          displayYards = (volume / 27).toFixed(2); // Cubic Yards
+        }
+
+        // Add 5% waste buffer
+        totalBags = Math.ceil(totalBags * 1.05);
+
+        // --- UPDATE UI ---
+        outBags.textContent = totalBags;
+        outArea.innerHTML = `${area.toFixed(1)} <span class="text-[10px] text-slate-500">${isMetric ? 'sq m' : 'sq ft'}</span>`;
+        outVolume.innerHTML = `${displayVolume} <span class="text-[10px] text-slate-500">${isMetric ? 'L' : 'cu ft'}</span>`;
+        outYards.innerHTML = `${displayYards} <span class="text-[10px] text-slate-500">${isMetric ? 'm³' : 'yd³'}</span>`;
+      }
+
+      // Trigger calculation on any input change
+      const inputs = [areaLength, areaWidth, circleDiameter, customArea, mulchDepth, bagSize];
+      inputs.forEach(input => {
+        if(input) {
+          input.addEventListener('input', calculate);
+          input.addEventListener('change', calculate);
+        }
+      });
+
+      // Initial run
+      calculate();
+
+      /* ── 6. SAVE, SHARE, COPY ACTIONS ── */
+      const btnSave = document.getElementById('btnSave');
+      const btnShare = document.getElementById('btnShare');
+      const btnCopy = document.getElementById('btnCopy');
+
+      const getResultText = () => {
+        return `Mulch Materials Estimate:\n` +
+               `- Total Area: ${outArea.textContent}\n` +
+               `- Volume Needed: ${outVolume.textContent}\n` +
+               `- Total Bags Needed: ${outBags.textContent}\n` +
+               `Calculated via BuildMetric.org`;
+      };
+
+      // Save
+      if(btnSave) {
+        btnSave.addEventListener('click', () => {
+          const data = {
+            shape: areaShape.value, l: areaLength.value, w: areaWidth.value,
+            d: circleDiameter.value, ca: customArea.value,
+            depth: mulchDepth.value, bag: bagSize.value, metric: isMetric
+          };
+          localStorage.setItem('buildmetric_mulch_data', JSON.stringify(data));
+          alert('Estimate saved to your browser!');
+        });
+      }
+
+      // Share
+      if(btnShare && navigator.share) {
+        btnShare.addEventListener('click', () => {
+          navigator.share({
+            title: 'Mulch Calculator Estimate',
+            text: getResultText(),
+            url: window.location.href
+          }).catch(console.error);
+        });
+      } else if (btnShare) {
+        btnShare.addEventListener('click', () => {
+          alert('Sharing is not supported on this browser. Use Copy instead.');
+        });
+      }
+
+      // Copy
+      if(btnCopy) {
+        btnCopy.addEventListener('click', () => {
+          navigator.clipboard.writeText(getResultText()).then(() => {
+            const originalHTML = btnCopy.innerHTML;
+            btnCopy.innerHTML = '<svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> Copied!';
+            setTimeout(() => { btnCopy.innerHTML = originalHTML; }, 2000);
+          }).catch(() => {
+            alert('Failed to copy. Please select text manually.');
+          });
+        });
+      }
+
+      // Cookie settings placeholder
+      const cookieBtn = document.getElementById('cookieSettingsBtn');
+      if(cookieBtn) {
+        cookieBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          alert('Cookie settings panel will open here.');
+        });
+      }
+
+    });
+  </script>
+
+  <!-- ============================================================
+       PHASE 10/10 — CLOSING TAGS
+       ============================================================ -->
+</body>
+</html>
+    
