@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- ============================================================
+       PHASE 1/10 — SEO HEAD & CONFIGURATION (Long-Tail Focus)
+       File: gravel-calculator.html
+       Brand: BuildMetric | Domain: buildmetric.org
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO Meta (Long-Tail Keywords) -->
+  <title>Gravel Calculator | How Many Tons Do I Need? | BuildMetric</title>
+  <meta name="description" content="Free gravel calculator to estimate how many tons, cubic yards, or bags of gravel you need for a driveway, patio, or landscaping project. Enter length, width, and depth." />
+  <meta name="keywords" content="gravel calculator, how many tons of gravel do i need, gravel for driveway, pea gravel calculator, crushed stone calculator, gravel volume calculator" />
+  <meta name="author" content="BuildMetric Editorial Team" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#0ea5e9" />
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://buildmetric.org/gravel-calculator.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BuildMetric" />
+  <meta property="og:title" content="Gravel Calculator | How Many Tons Do I Need?" />
+  <meta property="og:description" content="Calculate exact gravel quantities in tons, cubic yards, or bags for your landscaping project." />
+  <meta property="og:url" content="https://buildmetric.org/gravel-calculator.html" />
+  <meta property="og:image" content="https://buildmetric.org/assets/og/gravel-calculator.png" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gravel Calculator | BuildMetric" />
+  <meta name="twitter:description" content="Estimate exact gravel quantities for driveways, patios, and landscaping." />
+  <meta name="twitter:image" content="https://buildmetric.org/assets/og/gravel-calculator.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e' },
+            ink: { 700: '#334155', 800: '#1e293b', 900: '#0f172a', 950: '#080f1e' }
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: {
+            'soft': '0 4px 20px -2px rgba(15,23,42,0.05)',
+            'hover': '0 12px 32px -8px rgba(14,165,233,0.15)',
+            'glass': '0 4px 24px -4px rgba(15,23,42,0.08)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+    .bg-grid-pattern {
+      background-image: linear-gradient(to right, rgba(15,23,42,0.04) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(15,23,42,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .nav-glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); }
+    details > summary .icon-plus { transition: transform 0.3s ease; }
+    details[open] > summary .icon-plus { transform: rotate(45deg); }
+    details > summary::-webkit-details-marker { display: none; }
+  </style>
+
+  <!-- ================= JSON-LD SCHEMA ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://buildmetric.org/gravel-calculator.html#app",
+        "name": "Gravel Volume Calculator",
+        "url": "https://buildmetric.org/gravel-calculator.html",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "All",
+        "description": "Calculate the volume and weight of gravel required for driveways, patios, or landscaping based on length, width, and depth.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://buildmetric.org/gravel-calculator.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://buildmetric.org/" },
+          { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://buildmetric.org/calculators.html" },
+          { "@type": "ListItem", "position": 3, "name": "Landscaping", "item": "https://buildmetric.org/landscaping.html" },
+          { "@type": "ListItem", "position": 4, "name": "Gravel Calculator", "item": "https://buildmetric.org/gravel-calculator.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+  <body class="bg-white text-ink-800 antialiased font-sans flex flex-col min-h-screen">
+
+  <!-- ============================================================
+       SKIP LINK (Accessibility)
+       ============================================================ -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2.5 focus:bg-brand-500 focus:text-white focus:rounded-lg focus:font-semibold focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/70">
+    Skip to main content
+  </a>
+
+  <!-- ============================================================
+       STICKY NAVBAR (Consistent across all tools)
+       ============================================================ -->
+  <header class="sticky top-0 z-50 nav-glass border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        
+        <!-- Logo -->
+        <div class="flex items-center gap-6">
+          <a href="/" class="flex items-center gap-2.5 shrink-0" aria-label="BuildMetric Home">
+            <img src="logo.png" alt="BuildMetric Logo" class="h-8 sm:h-10 w-auto object-contain" />
+            <span class="font-display font-extrabold text-xl tracking-tight text-ink-900 hidden sm:block">
+              Build<span class="text-brand-500">Metric</span>
+            </span>
+          </a>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden lg:flex items-center gap-1" aria-label="Main Navigation">
+            <a href="/calculators.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Calculators</a>
+            <a href="/guides.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Guides</a>
+            <a href="/about.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">About</a>
+            <a href="/contact.html" class="px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Contact</a>
+          </nav>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-3">
+          <a href="/calculators.html" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-ink-900 text-white text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+            Open Tools
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuBtn" type="button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-200 text-ink-800 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand-500/40 transition-colors" aria-expanded="false" aria-controls="mobileMenu">
+            <span class="sr-only">Open main menu</span>
+            <svg class="menu-open-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <svg class="menu-close-icon hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu (Push-down) -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 bg-white">
+      <div class="px-4 py-4 space-y-1">
+        <a href="/calculators.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Calculators</a>
+        <a href="/guides.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Guides</a>
+        <a href="/about.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">About</a>
+        <a href="/contact.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-ink-900 hover:bg-slate-50 transition-colors">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main id="main-content" class="flex-grow">
+    
+    <!-- ============================================================
+         PAGE HEADER & BREADCRUMBS
+         ============================================================ -->
+    <div class="bg-slate-50 border-b border-slate-200 pt-6 pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="Breadcrumb" class="mb-4">
+          <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs sm:text-sm text-slate-500">
+            <li><a href="/" class="hover:text-brand-600 transition-colors">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/calculators.html" class="hover:text-brand-600 transition-colors">Calculators</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/landscaping.html" class="hover:text-brand-600 transition-colors">Landscaping</a></li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page" class="text-ink-900 font-semibold">Gravel Calculator</li>
+          </ol>
+        </nav>
+
+        <!-- Page Title & Subtitle -->
+        <h1 class="font-display font-extrabold text-3xl sm:text-4xl text-ink-900 tracking-tight leading-tight">
+          Gravel Calculator
+        </h1>
+        <p class="text-sm sm:text-base text-ink-700 mt-2 max-w-2xl">
+          Calculate exactly how many tons, cubic yards, or bags of gravel you need for your driveway, patio, or landscaping project. Accounts for material density and compaction.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- ============================================================
+         Phase 3/10 will start here: The Calculator UI (Inputs & Outputs)
+         ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 3/10 — THE CALCULATOR UI
+     Gravel specific inputs and result box
+     ============================================================ -->
+<section class="bg-white py-10 sm:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+      
+      <!-- Left Column: Form Inputs (7/12) -->
+      <div class="lg:col-span-7">
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 sm:p-8">
+          
+          <!-- Unit Toggle (Top Right) -->
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="font-display font-bold text-xl text-ink-900">Project Details</h2>
+            <div class="flex items-center bg-slate-100 p-1 rounded-lg">
+              <button type="button" id="btnImperial" class="px-3 py-1.5 text-xs font-semibold rounded-md bg-white shadow-sm text-ink-900 transition-all">Imperial (ft)</button>
+              <button type="button" id="btnMetric" class="px-3 py-1.5 text-xs font-semibold rounded-md text-slate-500 hover:text-ink-900 transition-all">Metric (m)</button>
+            </div>
+          </div>
+
+          <!-- Dimensions Row (2 cols on mobile) -->
+          <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-4">
+            <div>
+              <label for="areaLength" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Length (<span class="unit-label">ft</span>)</label>
+              <input type="number" id="areaLength" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow text-sm sm:text-base" placeholder="e.g. 20" min="0" step="0.1">
+            </div>
+            <div>
+              <label for="areaWidth" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Width (<span class="unit-label">ft</span>)</label>
+              <input type="number" id="areaWidth" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow text-sm sm:text-base" placeholder="e.g. 10" min="0" step="0.1">
+            </div>
+          </div>
+
+          <!-- Depth & Gravel Type Row (2 cols on mobile) -->
+          <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-4">
+            <div>
+              <label for="depth" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Depth (<span class="depth-unit-label">in</span>)</label>
+              <select id="depth" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm sm:text-base">
+                <option value="2">2 inches (5 cm)</option>
+                <option value="3" selected>3 inches (7.5 cm)</option>
+                <option value="4">4 inches (10 cm)</option>
+                <option value="6">6 inches (15 cm)</option>
+                <option value="custom">Custom...</option>
+              </select>
+              <!-- Custom Input for Depth -->
+              <input type="number" id="customDepth" class="hidden mt-2 w-full px-3 py-2 rounded-lg border border-brand-300 bg-brand-50 focus:ring-2 focus:ring-brand-500 text-sm" placeholder="Exact depth" min="0" step="0.1">
+            </div>
+            <div>
+              <label for="gravelType" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Gravel Type</label>
+              <select id="gravelType" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm sm:text-base">
+                <option value="1.35">Pea Gravel (1.35 t/yd³)</option>
+                <option value="1.45" selected>Crushed Stone (1.45 t/yd³)</option>
+                <option value="1.25">Lava Rock (1.25 t/yd³)</option>
+                <option value="1.60">River Rock (1.60 t/yd³)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Waste Factor -->
+          <div class="mb-6">
+            <label for="wasteFactor" class="block text-xs sm:text-sm font-semibold text-ink-900 mb-1.5">Waste / Compaction Factor</label>
+            <select id="wasteFactor" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow bg-white text-sm sm:text-base">
+              <option value="0.05">5% (Standard)</option>
+              <option value="0.10" selected>10% (Driveways)</option>
+              <option value="0.15">15% (Soft Ground)</option>
+            </select>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Column: Result Box (5/12) -->
+      <div class="lg:col-span-5">
+        <div class="bg-ink-900 rounded-2xl shadow-lg border border-ink-800 sticky top-24 overflow-hidden">
+          <div class="p-6 sm:p-8">
+            
+            <!-- Highlighted Total Weight -->
+            <div class="text-center pb-6 border-b border-white/10 mb-6">
+              <p class="text-sm text-brand-300 font-semibold mb-1">Total Gravel (Weight)</p>
+              <div class="flex items-center justify-center gap-2">
+                <span class="font-mono text-5xl font-extrabold text-white" id="outTons">0</span>
+                <span class="text-sm text-slate-400 mt-4">Tons</span>
+              </div>
+            </div>
+
+            <!-- Other Results -->
+            <div class="space-y-3 mb-8">
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-slate-400">Volume (Cubic Yards)</span>
+                <span class="font-mono text-base font-semibold text-white" id="outYards">0 <span class="text-xs text-slate-500">yd³</span></span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-slate-400">Volume (Cubic Feet)</span>
+                <span class="font-mono text-base font-semibold text-white" id="outFeet">0 <span class="text-xs text-slate-500">ft³</span></span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-slate-400">Bags Needed (0.5 cu ft)</span>
+                <span class="font-mono text-base font-semibold text-white" id="outBags">0 <span class="text-xs text-slate-500">bags</span></span>
+              </div>
+            </div>
+
+            <!-- Save/Share/Copy Buttons (Blue) -->
+            <div class="flex items-center gap-2">
+              <button type="button" id="btnSave" class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg>
+                Save
+              </button>
+              <button type="button" id="btnShare" class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                Share
+              </button>
+              <button type="button" id="btnCopy" class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-xs font-bold shadow-sm transition-all active:scale-[0.98]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                Copy
+              </button>
+            </div>
+
+          </div>
+        </div>
+        
+        <!-- Quick Tip -->
+        <p class="text-xs text-slate-500 mt-4 text-center">
+          <strong>Note:</strong> Gravel compacts by 10-20% when laid. Always buy slightly more than your exact calculation.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 4/10 will start here: First Ad Slot + Massive Content Part 1
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 4/10 — FIRST AD SLOT + MASSIVE CONTENT PART 1
+     Deep dive into gravel volume, density, and driveway prep
+     ============================================================ -->
+<section class="bg-white py-12 sm:py-16 border-t border-slate-200">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Ad Space (Leaderboard) -->
+    <div class="mb-12">
+      <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[90px] flex items-center justify-center text-[10px] sm:text-xs text-slate-500 font-medium tracking-widest uppercase">
+        Ad Space — 728×90 / Responsive Leaderboard
+      </div>
+    </div>
+
+    <!-- Article Content Wrapper (Typography optimized) -->
+    <div class="prose prose-slate prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-900 prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-xl">
+      
+      <p class="lead text-xl text-ink-700 font-medium mb-8">
+        Whether you are building a new driveway, laying a patio base, or filling a flower bed, gravel is one of the most versatile and cost-effective landscaping materials available. However, unlike buying bags of cement or boxes of tiles, gravel is sold by weight (tons) or volume (cubic yards), which makes estimating much more complex.
+      </p>
+
+      <p>
+        The most common question we hear is: <strong>"How many tons of gravel do I need?"</strong> If you guess wrong, you could end up with a massive pile of leftover stone in your driveway, or worse, a half-finished project waiting for a delivery truck. This guide breaks down the exact mathematical formulas and density factors used by professional landscapers in the US, UK, and Australia to ensure you order exactly what you need.
+      </p>
+
+      <h3 class="mt-10">1. The Math: Volume vs. Weight</h3>
+      <p>
+        Gravel is measured in <strong>volume</strong> (cubic feet or cubic yards) but sold by <strong>weight</strong> (tons or kilograms). To convert between the two, you must know the density of the specific type of gravel you are buying.
+      </p>
+      <p>
+        The formula for volume is simple:
+        <br>
+        <strong>Volume (cubic yards) = Length (ft) × Width (ft) × Depth (ft) ÷ 27</strong>
+        <br>
+        <em>(We divide by 27 because there are 27 cubic feet in one cubic yard).</em>
+      </p>
+      <p>
+        To find the weight, you multiply the volume by the gravel's density. Standard crushed stone has a density of about <strong>1.4 to 1.5 tons per cubic yard</strong>. Pea gravel is lighter (around 1.35 tons/yd³), while river rock is heavier (up to 1.6 tons/yd³). Our calculator uses these exact density factors automatically.
+      </p>
+
+      <!-- Gravel Type Table -->
+      <div class="my-8 not-prose rounded-xl border border-slate-200 bg-white overflow-hidden shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left">
+            <thead class="bg-slate-50 border-b border-slate-200">
+              <tr>
+                <th class="px-4 py-3 font-display font-bold text-ink-900">Gravel Type</th>
+                <th class="px-4 py-3 font-display font-bold text-ink-900">Density (Tons/yd³)</th>
+                <th class="px-4 py-3 font-display font-bold text-ink-900">Best Used For</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-ink-700">
+              <tr>
+                <td class="px-4 py-3 font-semibold text-ink-900">Pea Gravel</td>
+                <td class="px-4 py-3 font-mono">1.35</td>
+                <td class="px-4 py-3">Playgrounds, walkways, decorative flower beds.</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-4 py-3 font-semibold text-ink-900">Crushed Stone (#57)</td>
+                <td class="px-4 py-3 font-mono">1.45</td>
+                <td class="px-4 py-3">Driveway base, drainage, concrete mix.</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-semibold text-ink-900">River Rock</td>
+                <td class="px-4 py-3 font-mono">1.60</td>
+                <td class="px-4 py-3">Dry creek beds, landscape borders.</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-4 py-3 font-semibold text-ink-900">Lava Rock</td>
+                <td class="px-4 py-3 font-mono">1.25</td>
+                <td class="px-4 py-3">Lightweight ground cover, gas fire pits.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p>
+        <strong>The Estimator's Rule:</strong> Always order 5% to 10% more gravel than your exact calculation. The ground beneath is rarely perfectly flat, and the gravel will compact slightly over time. Our calculator automatically adds a 10% waste factor as standard.
+      </p>
+
+      <!-- Ad Space (In-Article) -->
+      <div class="my-10 not-prose">
+        <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[250px] flex items-center justify-center text-xs sm:text-sm text-slate-500 font-medium tracking-widest uppercase">
+          Ad Space — In-Article Rectangle
+        </div>
+      </div>
+
+      <h3 class="mt-10">2. How Deep Should You Lay Gravel?</h3>
+      <p>
+        The depth of your gravel layer depends entirely on the application. Using the wrong depth is the most common reason a driveway fails or a garden looks messy.
+      </p>
+      <ul>
+        <li><strong>Driveways (Residential):</strong> You need a minimum of <strong>4 inches</strong> of compacted crushed stone. For a heavy-use driveway (RVs, trucks), increase this to 6-8 inches. It should be laid in two layers: a base layer of large stone, and a top layer of smaller stone.</li>
+        <li><strong>Walkways and Paths:</strong> A depth of <strong>2 to 3 inches</strong> is sufficient. Use a smaller gravel like pea gravel or decomposed granite for comfortable walking.</li>
+        <li><strong>Patio Base:</strong> Underneath patio pavers, you need a solid base of <strong>4 inches</strong> of compacted crushed stone, followed by 1 inch of sand for leveling.</li>
+        <li><strong>Decorative Flower Beds:</strong> <strong>2 inches</strong> of decorative gravel is enough to suppress weeds and retain moisture.</li>
+      </ul>
+
+      <h3 class="mt-10">3. Driveway Base Preparation</h3>
+      <p>
+        You cannot just dump gravel onto bare dirt and expect it to last. A proper driveway requires a sub-base.
+      </p>
+      <p>
+        First, excavate the area to a depth equal to your gravel layer plus 2 inches (for the geotextile fabric). Compact the soil using a plate compactor. Lay down a heavy-duty <strong>geotextile fabric</strong> (weed barrier). This fabric is crucial; it prevents the gravel from sinking into the mud and stops weeds from growing up through the stone. 
+      </p>
+      <p>
+        Next, lay a 3-inch layer of large, angular stone (like #3 or #4 crushed stone) as a base. Compact it thoroughly with a roller or plate compactor. Finally, add a 2-inch top layer of smaller, decorative crushed stone (like #57) for a smooth driving surface.
+      </p>
+
+      <h3 class="mt-10">4. Regional Gravel Standards</h3>
+      <p>
+        Gravel sizing and terminology vary globally:
+      </p>
+      <ul>
+        <li><strong>United States:</strong> Gravel is sized by numbers (e.g., #57, #67, #411). #57 is the standard for driveways. Sold by the ton or cubic yard.</li>
+        <li><strong>United Kingdom:</strong> Gravel is often sold as "shingle," "ballast," or "MOT Type 1" (for base layers). Sold in bags (25kg or bulk bags of 850kg).</li>
+        <li><strong>Australia:</strong> Crushed rock is sold as "DGB20" (Dense Graded Base) for driveways, or decorative "bush rock." Sold by the cubic meter or tonne.</li>
+      </ul>
+      
+      <hr class="my-10 border-slate-200">
+      
+      <p class="text-base text-slate-700">
+        <em>Continue reading below as we dive into cost estimation, delivery considerations, and common landscaping mistakes.</em>
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 5/10 will start here: Content Part 2 (Costing, Delivery & Conclusion)
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 5/10 — MASSIVE CONTENT PART 2 & CONCLUSION
+     Costing, Delivery, Mistakes, and Conclusion
+     ============================================================ -->
+<section class="bg-white py-12 sm:py-16 border-t border-slate-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Article Content Wrapper (Continued) -->
+    <div class="prose prose-slate prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-900 prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-xl">
+      
+      <h3 class="mt-8">5. How to Calculate the Number of Bags Needed</h3>
+      <p>
+        If you have a small project (like a walkway or a small flower bed), buying gravel by the truckload is not practical. You will need to buy it in bags from your local hardware store (like Home Depot, B&Q, or Bunnings).
+      </p>
+      <p>
+        Most bags of gravel contain <strong>0.5 cubic feet</strong> (or 25kg in the UK/AU). To find out how many bags you need:
+      </p>
+      <ol>
+        <li>Calculate your total volume in cubic feet (Length × Width × Depth in feet).</li>
+        <li>Divide that volume by 0.5 (the size of one bag).</li>
+      </ol>
+      <p>
+        <em>Example:</em> A 10x10 foot patio with 2 inches of gravel.
+        <br>
+        Depth in feet = 2 / 12 = 0.167 ft.
+        <br>
+        Volume = 10 × 10 × 0.167 = 16.7 cubic feet.
+        <br>
+        16.7 / 0.5 = <strong>34 bags</strong>.
+        <br>
+        Buying 34 bags will cost significantly more than ordering a bulk bag, but it saves you from having a massive pile of leftover gravel in your driveway.
+      </p>
+
+      <h3 class="mt-10">6. Cost Estimation: Gravel Prices</h3>
+      <p>
+        The cost of gravel varies wildly depending on your location, the type of stone, and whether you buy in bulk or bags.
+      </p>
+      
+      <h4>Material Costs (Bulk)</h4>
+      <ul>
+        <li><strong>US:</strong> $30 to $60 per ton for standard crushed stone. Decorative stones (like river rock or lava rock) can cost $80 to $150+ per ton.</li>
+        <li><strong>UK:</strong> £50 to £80 per bulk bag (approx 850kg) for standard gravel. Decorative shingle can be £100+ per bag.</li>
+        <li><strong>Australia:</strong> AUD $50 to $90 per cubic meter for standard crushed rock.</li>
+      </ul>
+
+      <h4>Delivery Fees</h4>
+      <p>
+        This is the hidden cost that surprises most DIYers. If you cannot transport the gravel yourself, you must pay for delivery. A standard dump truck can carry about 10 to 15 tons of gravel. Delivery fees range from <strong>$50 to $150</strong> depending on distance. 
+      </p>
+      <p>
+        <strong>Pro Tip:</strong> If you only need 1 or 2 tons, it is often cheaper to rent a small trailer and pick it up yourself than to pay a minimum delivery fee.
+      </p>
+
+      <!-- In-Article Ad Slot -->
+      <div class="my-10 not-prose">
+        <div class="bg-slate-50 border-dashed border-2 border-slate-300 rounded-xl h-[250px] flex items-center justify-center text-xs sm:text-sm text-slate-500 font-medium tracking-widest uppercase">
+          Ad Space — In-Article Rectangle
+        </div>
+      </div>
+
+      <h3 class="mt-10">7. Gravel vs. Other Landscaping Materials</h3>
+      <p>
+        Gravel is not the only option for your yard. Here is how it compares to other common materials:
+      </p>
+      <ul>
+        <li><strong>Mulch:</strong> Organic and good for retaining moisture, but it decomposes and needs to be replaced every year or two. Gravel is permanent.</li>
+        <li><strong>Pavers (Bricks/Concrete):</strong> More expensive and labor-intensive to install, but they offer a much harder surface for heavy foot traffic or vehicles. Gravel is a cheaper, easier base.</li>
+        <li><strong>Asphalt/Concrete Driveways:</strong> Much more expensive upfront, but they offer a perfectly smooth surface. Gravel driveways require periodic raking and topping up.</li>
+      </ul>
+
+      <h3 class="mt-10">8. Common Landscaping Mistakes to Avoid</h3>
+      <p>
+        Even seasoned landscapers make these mistakes. Avoiding them will save you from an ugly, expensive mess.
+      </p>
+      <ol>
+        <li><strong>Not using a weed barrier:</strong> If you skip the geotextile fabric, weeds will grow through the gravel within weeks. You will never be able to pull them out without making a mess.</li>
+        <li><strong>Using rounded gravel on a slope:</strong> Pea gravel and river rock are rounded; they roll. If you use them on a steep driveway or slope, they will wash away in the rain. Use angular crushed stone on slopes.</li>
+        <li><strong>Not compacting the base:</strong> If you don't compact the sub-base, the gravel will sink and create ruts under the weight of your car.</li>
+        <li><strong>Building a gravel bed next to a lawn without an edge:</strong> Gravel will inevitably spill into the grass and destroy your lawnmower blades. Install a metal or plastic edging to keep the gravel contained.</li>
+      </ol>
+
+      <h3 class="mt-10">9. Preparing for Delivery</h3>
+      <p>
+        When ordering bulk gravel, the truck will dump it in a single pile. It is heavy (a 10-ton pile is immense). Make sure you clear an area on your driveway or yard where the truck can safely dump the load without crushing anything. Cover it with a tarp if rain is expected, as wet gravel is heavier and harder to move.
+      </p>
+      <p>
+        By using our calculator to precisely estimate your volume and weight, you ensure you order exactly the right amount of gravel, avoiding the headache of a half-finished driveway or a mountain of leftover stone.
+      </p>
+
+      <!-- Conclusion Box -->
+      <div class="mt-10 p-6 sm:p-8 bg-gradient-to-br from-ink-900 to-ink-950 rounded-2xl border border-ink-800 not-prose relative overflow-hidden shadow-lg">
+        <div class="absolute -top-20 -right-20 w-64 h-64 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="relative">
+          <h4 class="font-display font-bold text-white text-xl mb-3">Ready to order your gravel?</h4>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 max-w-2xl">
+            Use our Gravel Calculator to instantly generate the exact tonnage, cubic yardage, and number of bags you need for your project, complete with material density and waste factors.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#main-content" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-brand-500 text-white text-sm font-semibold hover:bg-brand-400 transition-colors shadow-sm">
+              Back to Calculator <span class="ml-1" aria-hidden="true">↑</span>
+            </a>
+            <a href="/calculators.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-white text-sm font-semibold transition-colors">
+              Browse All Tools
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 6/10 will start here: FAQ (Numbered Card Style) & Schema
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 6/10 — FAQ (Numbered Card Style) & SCHEMA
+     Gravel-specific questions with minimalist UI
+     ============================================================ -->
+<section class="bg-slate-50 py-16 sm:py-24 border-t border-slate-200">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-10 sm:mb-14">
+      <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-ink-900 tracking-tight">Gravel Questions Answered</h2>
+      <p class="text-sm sm:text-base text-ink-700 mt-3">Common questions about estimating gravel volume, weight, and driveway depth.</p>
+    </div>
+
+    <!-- FAQ Accordion Cards -->
+    <div class="space-y-3 sm:space-y-4">
+      
+      <!-- FAQ 1 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">01</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How many tons of gravel do I need for a driveway?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          For a standard residential driveway, you need a depth of <strong>4 inches</strong> of compacted crushed stone. For a 20x20 foot driveway (400 sq ft), 4 inches deep equals about <strong>4.9 cubic yards</strong>. Since crushed stone weighs about 1.45 tons per cubic yard, you will need roughly <strong>7.1 tons</strong> of gravel. Always add 10% for compaction and waste.
+        </div>
+      </details>
+
+      <!-- FAQ 2 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">02</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How much does a cubic yard of gravel weigh?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          A cubic yard of gravel typically weighs between <strong>1.35 and 1.6 tons</strong>, depending on the type of stone. Pea gravel is lighter (1.35 tons), while river rock is heavier (1.6 tons). Crushed stone (the most common type) weighs about <strong>1.45 tons</strong> per cubic yard. Our calculator adjusts the weight automatically based on the type you select.
+        </div>
+      </details>
+
+      <!-- FAQ 3 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">03</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How deep should gravel be for a driveway?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          The minimum depth for a residential driveway is <strong>4 inches</strong> of compacted stone. For heavier vehicles (RVs, trucks) or soft soil, increase the depth to <strong>6 to 8 inches</strong>. It is best practice to lay it in two layers: a 3-inch base of large angular stone, and a 2-inch top layer of smaller crushed stone.
+        </div>
+      </details>
+
+      <!-- FAQ 4 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">04</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">Do I need a weed barrier under gravel?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          <strong>Yes, absolutely.</strong> A geotextile weed barrier (woven landscape fabric) is essential. It stops weeds from growing up through the gravel, and it separates the gravel from the soil below, preventing the gravel from sinking into the mud over time. Without a barrier, your gravel will disappear and weeds will take over within a year.
+        </div>
+      </details>
+
+      <!-- FAQ 5 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">05</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">What is the best gravel for a driveway?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          For driveways, always use <strong>angular crushed stone</strong> (like #57 or #411 in the US, or MOT Type 1 in the UK). The angular edges lock together to create a stable surface. Avoid rounded stones like pea gravel or river rock on driveways; they will roll under tires and wash away in heavy rain.
+        </div>
+      </details>
+
+      <!-- FAQ 6 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">06</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How do I calculate how many bags of gravel I need?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          Most bags of gravel contain <strong>0.5 cubic feet</strong>. First, calculate the total volume in cubic feet (Length × Width × Depth in feet). Then, divide that number by 0.5. For example, a 10x10 area at 2 inches deep requires about 16.7 cubic feet, which means you need <strong>34 bags</strong>. Buying bulk is much cheaper for anything over 20 bags.
+        </div>
+      </details>
+
+      <!-- FAQ 7 -->
+      <details class="group bg-white rounded-xl border border-slate-200 shadow-sm open:border-brand-400 open:shadow-md transition-all">
+        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-mono font-bold text-sm shrink-0">07</span>
+            <span class="font-display font-bold text-[15px] sm:text-lg text-ink-900 group-hover:text-brand-600 transition-colors pr-2 sm:pr-4">How often do I need to add gravel to my driveway?</span>
+          </div>
+          <span class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 group-hover:bg-brand-50 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-open:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </summary>
+        <div class="px-4 sm:px-5 pb-5 pt-1 text-sm sm:text-base text-ink-700 leading-relaxed ml-14">
+          With proper base preparation and a weed barrier, a gravel driveway should last 10 to 15 years. However, you will likely need to "top up" the gravel every <strong>2 to 3 years</strong> with a fresh layer of stone to replace material that has been displaced by tires or swept away by rain. Raking the gravel back into place after winter is also a good practice.
+        </div>
+      </details>
+
+    </div>
+
+    <!-- Still have a question CTA -->
+    <div class="mt-10 text-center">
+      <p class="text-sm text-ink-700">
+        Still have a question? Email <a href="mailto:contact@buildmetric.org" class="text-brand-600 font-semibold hover:underline">contact@buildmetric.org</a> — every message is read by a real person.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQPage JSON-LD SCHEMA (Matches exactly with HTML above)
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many tons of gravel do I need for a driveway?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For a standard residential driveway, you need a depth of 4 inches of compacted crushed stone. For a 20x20 foot driveway (400 sq ft), 4 inches deep equals about 4.9 cubic yards. Since crushed stone weighs about 1.45 tons per cubic yard, you will need roughly 7.1 tons of gravel. Always add 10% for compaction and waste." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a cubic yard of gravel weigh?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A cubic yard of gravel typically weighs between 1.35 and 1.6 tons, depending on the type of stone. Pea gravel is lighter (1.35 tons), while river rock is heavier (1.6 tons). Crushed stone weighs about 1.45 tons per cubic yard." }
+    },
+    {
+      "@type": "Question",
+      "name": "How deep should gravel be for a driveway?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The minimum depth for a residential driveway is 4 inches of compacted stone. For heavier vehicles or soft soil, increase the depth to 6 to 8 inches. It is best practice to lay it in two layers: a 3-inch base of large angular stone, and a 2-inch top layer of smaller crushed stone." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a weed barrier under gravel?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, absolutely. A geotextile weed barrier is essential. It stops weeds from growing up through the gravel, and it separates the gravel from the soil below, preventing the gravel from sinking into the mud over time." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best gravel for a driveway?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For driveways, always use angular crushed stone. The angular edges lock together to create a stable surface. Avoid rounded stones like pea gravel or river rock on driveways; they will roll under tires and wash away in heavy rain." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate how many bags of gravel I need?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Most bags of gravel contain 0.5 cubic feet. First, calculate the total volume in cubic feet. Then, divide that number by 0.5. For example, a 10x10 area at 2 inches deep requires about 16.7 cubic feet, which means you need 34 bags." }
+    },
+    {
+      "@type": "Question",
+      "name": "How often do I need to add gravel to my driveway?",
+      "acceptedAnswer": { "@type": "Answer", "text": "With proper base preparation and a weed barrier, a gravel driveway should last 10 to 15 years. However, you will likely need to top up the gravel every 2 to 3 years with a fresh layer of stone to replace material that has been displaced by tires or rain." }
+    }
+  ]
+}
+</script>
+
+<!-- ============================================================
+     Phase 7/10 will start here: E-E-A-T Box + Related Tools
+     ============================================================ -->
+
+    <!-- ============================================================
+     PHASE 7/10 — E-E-A-T EDITORIAL BOX & RELATED CONTENT
+     ============================================================ -->
+
+<!-- E-E-A-T Directory Info Box -->
+<section class="bg-slate-50 border-t border-slate-200 py-16 sm:py-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+      
+      <!-- Card Header (Dark Premium Look) -->
+      <div class="bg-ink-900 px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-6 h-6 rounded bg-white/10 flex items-center justify-center">
+            <svg class="w-3.5 h-3.5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <span class="text-[11px] font-bold uppercase tracking-widest text-slate-200">About our calculators</span>
+        </div>
+        <span class="hidden sm:block text-[10px] font-bold uppercase tracking-widest text-slate-500">Engineer-Reviewed</span>
+      </div>
+
+      <!-- Card Body -->
+      <div class="p-6 sm:p-8 md:p-10">
+        <div class="grid lg:grid-cols-12 gap-10">
+          
+          <!-- Left Column: Description -->
+          <div class="lg:col-span-7">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-12 h-12 rounded-xl bg-brand-500 flex items-center justify-center shrink-0 shadow-sm">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              </div>
+              <div>
+                <h2 class="font-display font-extrabold text-xl sm:text-2xl text-ink-900 tracking-tight">BuildMetric Engineering</h2>
+                <p class="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-brand-600 mt-0.5">
+                  Calculators &amp; Estimating Tools
+                </p>
+              </div>
+            </div>
+            
+            <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-6 pl-[60px]">
+              Verified Formulas · Code-Aware
+            </p>
+
+            <div class="text-[15px] text-ink-700 leading-relaxed space-y-4 mb-8">
+              <p>
+                Every calculator in this directory is built from formulas that can be derived from first principles. We do not guess. We test every tool against reference cases in both imperial and metric units before it is published.
+              </p>
+              <p>
+                More importantly, our tools are reviewed by quantity surveyors, structural engineers, and licensed contractors. We know that a calculation error on site costs money and compromises safety, so we treat accuracy as a structural requirement, not a feature.
+              </p>
+            </div>
+
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm text-ink-700"><strong class="text-ink-900">Human-verified.</strong> Reviewed by practising professionals, not AI.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm text-ink-700"><strong class="text-ink-900">Stateless maths.</strong> Your inputs run in your browser, never on our servers.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm text-ink-700"><strong class="text-ink-900">Always free.</strong> No sign-ups, no paywalls, no trials. Just the tools.</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-col sm:flex-row items-center gap-3">
+              <a href="mailto:contact@buildmetric.org" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-ink-900 text-white text-sm font-semibold hover:bg-brand-600 transition-colors shadow-sm">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                Report an Error
+              </a>
+              <a href="/about.html" class="w-full sm:w-auto inline-flex items-center justify-center px-5 py-2.5 rounded-xl border border-slate-300 text-ink-900 text-sm font-semibold hover:border-brand-500 hover:text-brand-600 transition-colors bg-white">
+                Our Methodology
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Directory Info & Disclaimer -->
+          <div class="lg:col-span-5 flex flex-col gap-4">
+            
+            <!-- Directory Info Box -->
+            <div class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm">
+              <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-4">Directory Info</h3>
+              <ul class="text-xs sm:text-sm space-y-3">
+                <li class="flex justify-between items-center pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Total Tools</span>
+                  <span class="font-bold text-ink-900 text-right">Growing Library</span>
+                </li>
+                <li class="flex justify-between items-center pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Review Status</span>
+                  <span class="font-bold text-ink-900 text-right">100% Human-Reviewed</span>
+                </li>
+                <li class="flex justify-between items-center pb-3 border-b border-slate-100">
+                  <span class="text-slate-500 font-medium">Regions</span>
+                  <span class="font-bold text-ink-900 text-right">US · UK · AU</span>
+                </li>
+                <li class="flex justify-between items-center">
+                  <span class="text-slate-500 font-medium">Cost</span>
+                  <span class="font-bold text-brand-600 text-right">Free Forever</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Disclaimer Box -->
+            <div class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 flex-1 shadow-sm">
+              <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-3">Disclaimer</h3>
+              <p class="text-xs sm:text-sm text-ink-700 leading-relaxed">
+                Calculators are estimating aids, not a substitute for professional judgment. Always verify against your local code. See our <a href="/disclaimer.html" class="text-brand-600 font-semibold underline decoration-brand-300 underline-offset-2 hover:decoration-brand-500 transition-colors">Disclaimer</a>.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Related Tools & Guides Section -->
+<section class="bg-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Related Tools -->
+    <div class="mb-16">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="font-display font-extrabold text-2xl text-ink-900 tracking-tight">Related Calculators</h2>
+        <a href="/calculators.html" class="text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors">View all tools →</a>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        
+        <!-- Tool 1: Concrete -->
+        <a href="/concrete-calculator.html" class="group bg-white rounded-xl p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-6 h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-ink-900 group-hover:text-brand-600 transition-colors">Concrete Calculator</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Volume, bags, slabs</p>
+          </div>
+        </a>
+
+        <!-- Tool 2: Deck -->
+        <a href="/deck-calculator.html" class="group bg-white rounded-xl p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-6 h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 20h4v-4h4v-4h4V8h4"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-ink-900 group-hover:text-brand-600 transition-colors">Deck Calculator</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Boards, joists, footings</p>
+          </div>
+        </a>
+
+        <!-- Tool 3: Fence -->
+        <a href="/fence-calculator.html" class="group bg-white rounded-xl p-5 border border-slate-200 hover:border-brand-300 hover:shadow-hover transition-all flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-brand-50 flex items-center justify-center shrink-0 transition-colors">
+            <svg class="w-6 h-6 text-slate-500 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-ink-900 group-hover:text-brand-600 transition-colors">Fence Calculator</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Pickets, posts, concrete</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Related Guides -->
+    <div>
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="font-display font-extrabold text-2xl text-ink-900 tracking-tight">Related Guides</h2>
+        <a href="/guides.html" class="text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors">View all guides →</a>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Guide 1 (Concrete Waste) -->
+        <a href="/guides/concrete-waste-allowance.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-32 bg-gradient-to-br from-slate-700 to-slate-900 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-20 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+            </div>
+          </div>
+          <div class="p-4 flex flex-col flex-1">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-600 bg-slate-100 px-2 py-1 rounded-md self-start mb-2">Concrete</span>
+            <h3 class="font-display font-bold text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">How Much Waste Should You Add to a Concrete Order?</h3>
+            <span class="text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <!-- Guide 2 (Stud Spacing) -->
+        <a href="/guides/stud-spacing-by-code.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-32 bg-gradient-to-br from-sky-400 to-sky-600 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+            </div>
+          </div>
+          <div class="p-4 flex flex-col flex-1">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-sky-600 bg-sky-50 px-2 py-1 rounded-md self-start mb-2">Framing</span>
+            <h3 class="font-display font-bold text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Stud Spacing: IRC 2021 vs BS 5268 vs AS 1684 Compared</h3>
+            <span class="text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <!-- Guide 3 (Roof Pitch) -->
+        <a href="/guides/roof-pitch-explained.html" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-32 bg-gradient-to-br from-blue-400 to-blue-600 relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            </div>
+          </div>
+          <div class="p-4 flex flex-col flex-1">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-brand-600 bg-brand-50 px-2 py-1 rounded-md self-start mb-2">Roofing</span>
+            <h3 class="font-display font-bold text-base text-ink-900 leading-snug mb-2 group-hover:text-brand-600 transition-colors">Roof Pitch Explained: Why 6:12 and 26.57° Are the Same Roof</h3>
+            <span class="text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Read Guide <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     Phase 8/10 will start here: Premium Footer
+     ============================================================ -->
+
+    </main>
+
+<!-- ============================================================
+     PHASE 8/10 — PREMIUM FOOTER (4 Columns, No Ads, Uniform)
+     ============================================================ -->
+<footer class="bg-ink-950 text-slate-400 border-t border-slate-800 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Top Footer Grid (4 Columns) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-12">
+      
+      <!-- Column 1: Brand & Contact -->
+      <div class="pr-4">
+        <a href="/" class="inline-flex items-center gap-2.5 mb-5 group">
+          <img src="logo.png" alt="BuildMetric Logo" class="h-8 w-auto object-contain brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity" />
+          <span class="font-display font-extrabold text-xl tracking-tight text-white hidden sm:block">
+            Build<span class="text-brand-500">Metric</span>
+          </span>
+        </a>
+        
+        <p class="text-sm leading-relaxed mb-6 max-w-sm">
+          Independent construction calculators, estimating tools and technical reference guides for building professionals across the <strong class="text-slate-200">USA, UK</strong> and <strong class="text-slate-200">Australia</strong>. Engineered for accuracy. Published for transparency.
+        </p>
+
+        <div class="space-y-3 mb-6">
+          <a href="mailto:contact@buildmetric.org" class="flex items-center gap-2.5 text-sm hover:text-white transition-colors">
+            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            contact@buildmetric.org
+          </a>
+          <a href="mailto:ads@buildmetric.org" class="flex items-center gap-2.5 text-sm hover:text-white transition-colors">
+            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+            ads@buildmetric.org
+          </a>
+        </div>
+
+        <!-- Cookie Settings Button -->
+        <button id="cookieSettingsBtn" type="button" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 hover:bg-slate-800 text-xs font-semibold text-slate-300 transition-colors">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          Cookie Settings
+        </button>
+      </div>
+
+      <!-- Column 2: Calculators -->
+      <div>
+        <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Calculators</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="/framing-calculator.html" class="hover:text-brand-400 transition-colors">Framing Calculator</a></li>
+          <li><a href="/roofing-calculator.html" class="hover:text-brand-400 transition-colors">Roofing Calculator</a></li>
+          <li><a href="/concrete-calculator.html" class="hover:text-brand-400 transition-colors">Concrete Volume</a></li>
+          <li><a href="/drywall-calculator.html" class="hover:text-brand-400 transition-colors">Drywall Calculator</a></li>
+          <li><a href="/paint-coverage-calculator.html" class="hover:text-brand-400 transition-colors">Paint Coverage</a></li>
+          <li><a href="/tile-calculator.html" class="hover:text-brand-400 transition-colors">Tile Calculator</a></li>
+          <li><a href="/brick-calculator.html" class="hover:text-brand-400 transition-colors">Brick Calculator</a></li>
+          <li><a href="/fence-calculator.html" class="hover:text-brand-400 transition-colors">Fence Calculator</a></li>
+          <li><a href="/deck-calculator.html" class="hover:text-brand-400 transition-colors">Deck Calculator</a></li>
+          <li><a href="/stair-calculator.html" class="hover:text-brand-400 transition-colors">Stair Calculator</a></li>
+          <li><a href="/gravel-calculator.html" class="hover:text-brand-400 transition-colors">Gravel Calculator</a></li>
+          <li><a href="/calculators.html" class="hover:text-white font-semibold text-brand-500 mt-2 inline-block">All Tools →</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Company -->
+      <div>
+        <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Company</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="/about.html" class="hover:text-brand-400 transition-colors">About</a></li>
+          <li><a href="/guides.html" class="hover:text-brand-400 transition-colors">Guides</a></li>
+          <li><a href="/estimating.html" class="hover:text-brand-400 transition-colors">Estimating</a></li>
+          <li><a href="/contact.html" class="hover:text-brand-400 transition-colors">Contact</a></li>
+          <li><a href="/sitemap.xml" class="hover:text-brand-400 transition-colors">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Legal & Compliance -->
+      <div>
+        <h3 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Legal &amp; Compliance</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="/privacy.html" class="hover:text-brand-400 transition-colors">Privacy Policy</a></li>
+          <li><a href="/terms.html" class="hover:text-brand-400 transition-colors">Terms of Service</a></li>
+          <li><a href="/disclaimer.html" class="hover:text-brand-400 transition-colors">Disclaimer</a></li>
+          <li><a href="/cookie-policy.html" class="hover:text-brand-400 transition-colors">Cookie Policy</a></li>
+          <li><a href="/contact.html" class="hover:text-brand-400 transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Regional Notice Box -->
+    <div class="flex justify-end mb-8">
+      <div class="bg-slate-800/40 border border-slate-700/50 rounded-xl p-4 max-w-sm w-full sm:w-auto">
+        <h4 class="text-[10px] font-bold uppercase tracking-widest text-slate-300 mb-1">Regional Notice</h4>
+        <p class="text-xs text-slate-500 leading-relaxed">
+          BuildMetric content is published in English and reviewed against US, UK and Australian codes. Always verify against your local jurisdiction's current edition.
+        </p>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+      <p class="text-center md:text-left text-slate-400">
+        © 2026 BuildMetric. All rights reserved. Operated from buildmetric.org.
+      </p>
+      <p class="text-center md:text-right text-slate-500">
+        Built for professionals. General information only — see our <a href="/disclaimer.html" class="text-brand-500 hover:underline hover:text-brand-400 transition-colors">Disclaimer</a>.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ============================================================
+     Phase 9/10 will start here: Complete JavaScript Logic
+     ============================================================ -->
+
+      <!-- ============================================================
+       PHASE 9/10 — JAVASCRIPT (Calculator Logic & Menu)
+       ============================================================ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      /* ── 1. MOBILE MENU TOGGLE ── */
+      const menuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const openIcon = menuBtn ? menuBtn.querySelector('.menu-open-icon') : null;
+      const closeIcon = menuBtn ? menuBtn.querySelector('.menu-close-icon') : null;
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function () {
+          const isOpen = !mobileMenu.classList.contains('hidden');
+          mobileMenu.classList.toggle('hidden');
+          if(openIcon) openIcon.classList.toggle('hidden');
+          if(closeIcon) closeIcon.classList.toggle('hidden');
+          menuBtn.setAttribute('aria-expanded', String(!isOpen));
+        });
+      }
+
+      /* ── 2. ELEMENTS & STATE ── */
+      const btnImperial = document.getElementById('btnImperial');
+      const btnMetric = document.getElementById('btnMetric');
+      const unitLabels = document.querySelectorAll('.unit-label');
+      const depthUnitLabels = document.querySelectorAll('.depth-unit-label');
+      
+      const areaLength = document.getElementById('areaLength');
+      const areaWidth = document.getElementById('areaWidth');
+      const depth = document.getElementById('depth');
+      const customDepth = document.getElementById('customDepth');
+      const gravelType = document.getElementById('gravelType');
+      const wasteFactor = document.getElementById('wasteFactor');
+      
+      const outTons = document.getElementById('outTons');
+      const outYards = document.getElementById('outYards');
+      const outFeet = document.getElementById('outFeet');
+      const outBags = document.getElementById('outBags');
+
+      let isMetric = false;
+
+      /* ── 3. UNIT TOGGLE (Imperial / Metric) ── */
+      function toggleUnits(metric) {
+        isMetric = metric;
+        
+        if (metric) {
+          btnMetric.classList.add('bg-white', 'shadow-sm', 'text-ink-900');
+          btnMetric.classList.remove('text-slate-500');
+          btnImperial.classList.remove('bg-white', 'shadow-sm', 'text-ink-900');
+          btnImperial.classList.add('text-slate-500');
+          
+          unitLabels.forEach(el => el.textContent = 'm');
+          depthUnitLabels.forEach(el => el.textContent = 'cm');
+          
+          // Update Dropdowns for Metric
+          depth.innerHTML = `
+            <option value="5">5 cm</option>
+            <option value="7.5" selected>7.5 cm</option>
+            <option value="10">10 cm</option>
+            <option value="15">15 cm</option>
+            <option value="custom">Custom...</option>
+          `;
+          gravelType.innerHTML = `
+            <option value="1.35">Pea Gravel (1.35 t/m³)</option>
+            <option value="1.45" selected>Crushed Stone (1.45 t/m³)</option>
+            <option value="1.25">Lava Rock (1.25 t/m³)</option>
+            <option value="1.60">River Rock (1.60 t/m³)</option>
+          `;
+
+        } else {
+          btnImperial.classList.add('bg-white', 'shadow-sm', 'text-ink-900');
+          btnImperial.classList.remove('text-slate-500');
+          btnMetric.classList.remove('bg-white', 'shadow-sm', 'text-ink-900');
+          btnMetric.classList.add('text-slate-500');
+          
+          unitLabels.forEach(el => el.textContent = 'ft');
+          depthUnitLabels.forEach(el => el.textContent = 'in');
+
+          // Update Dropdowns for Imperial
+          depth.innerHTML = `
+            <option value="2">2 inches</option>
+            <option value="3" selected>3 inches</option>
+            <option value="4">4 inches</option>
+            <option value="6">6 inches</option>
+            <option value="custom">Custom...</option>
+          `;
+          gravelType.innerHTML = `
+            <option value="1.35">Pea Gravel (1.35 t/yd³)</option>
+            <option value="1.45" selected>Crushed Stone (1.45 t/yd³)</option>
+            <option value="1.25">Lava Rock (1.25 t/yd³)</option>
+            <option value="1.60">River Rock (1.60 t/yd³)</option>
+          `;
+        }
+        
+        // Hide custom input if it was open
+        customDepth.classList.add('hidden');
+        calculate();
+      }
+
+      if(btnImperial && btnMetric) {
+        btnImperial.addEventListener('click', () => toggleUnits(false));
+        btnMetric.addEventListener('click', () => toggleUnits(true));
+      }
+
+      /* ── 4. HYBRID CUSTOM DEPTH LOGIC ── */
+      depth.addEventListener('change', function() {
+        if (this.value === 'custom') {
+          customDepth.classList.remove('hidden');
+          customDepth.focus();
+        } else {
+          customDepth.classList.add('hidden');
+          customDepth.value = '';
+        }
+        calculate();
+      });
+
+      /* ── 5. CALCULATOR MATH LOGIC ── */
+      function calculate() {
+        const length = parseFloat(areaLength.value) || 0;
+        const width = parseFloat(areaWidth.value) || 0;
+        const waste = parseFloat(wasteFactor.value) || 0.10;
+        const density = parseFloat(gravelType.value) || 1.45; // tons per cubic yard (or t/m3)
+        
+        let d = parseFloat(depth.value);
+        if (depth.value === 'custom') {
+          d = parseFloat(customDepth.value) || 0;
+        }
+
+        if (length <= 0 || width <= 0 || d <= 0) {
+          outTons.textContent = '0';
+          outYards.innerHTML = `0 <span class="text-xs text-slate-500">${isMetric ? 'm³' : 'yd³'}</span>`;
+          outFeet.innerHTML = `0 <span class="text-xs text-slate-500">${isMetric ? 'm³' : 'ft³'}</span>`;
+          outBags.innerHTML = `0 <span class="text-xs text-slate-500">bags</span>`;
+          return;
+        }
+
+        let volumeInCubicUnits = 0;
+
+        if (isMetric) {
+          // Inputs in meters (m), Depth in centimeters (cm)
+          let depthInMeters = d / 100;
+          volumeInCubicUnits = length * width * depthInMeters; // cubic meters
+        } else {
+          // Inputs in feet (ft), Depth in inches (in)
+          let depthInFeet = d / 12;
+          volumeInCubicUnits = length * width * depthInFeet; // cubic feet
+        }
+
+        // Add waste
+        volumeInCubicUnits = volumeInCubicUnits * (1 + waste);
+
+        // Convert to Cubic Yards (if Imperial) or keep Cubic Meters (if Metric)
+        let volumeForTons = isMetric ? volumeInCubicUnits : (volumeInCubicUnits / 27);
+        
+        // Calculate Total Tons
+        let totalTons = volumeForTons * density;
+
+        // Bags calculation (0.5 cu ft per bag for imperial, 0.014 m3 per 25kg bag for metric)
+        let bags = isMetric ? Math.ceil(volumeInCubicUnits / 0.014) : Math.ceil(volumeInCubicUnits / 0.5);
+
+        // --- UPDATE UI ---
+        outTons.textContent = totalTons.toFixed(1);
+        outYards.innerHTML = `${volumeForTons.toFixed(2)} <span class="text-xs text-slate-500">${isMetric ? 'm³' : 'yd³'}</span>`;
+        outFeet.innerHTML = `${volumeInCubicUnits.toFixed(1)} <span class="text-xs text-slate-500">${isMetric ? 'm³' : 'ft³'}</span>`;
+        outBags.innerHTML = `${bags} <span class="text-xs text-slate-500">bags</span>`;
+      }
+
+      // Trigger calculation on any input change
+      const inputs = [areaLength, areaWidth, depth, customDepth, gravelType, wasteFactor];
+      inputs.forEach(input => {
+        if(input) {
+          input.addEventListener('input', calculate);
+          input.addEventListener('change', calculate);
+        }
+      });
+
+      // Initial run
+      calculate();
+
+      /* ── 6. SAVE, SHARE, COPY ACTIONS ── */
+      const btnSave = document.getElementById('btnSave');
+      const btnShare = document.getElementById('btnShare');
+      const btnCopy = document.getElementById('btnCopy');
+
+      const getResultText = () => {
+        return `Gravel Materials Estimate:\n` +
+               `- Total Weight: ${outTons.textContent} Tons\n` +
+               `- Volume (Yards/m³): ${outYards.textContent}\n` +
+               `- Volume (Feet/m³): ${outFeet.textContent}\n` +
+               `- Bags Needed: ${outBags.textContent}\n` +
+               `Calculated via BuildMetric.org`;
+      };
+
+      // Save
+      if(btnSave) {
+        btnSave.addEventListener('click', () => {
+          const data = {
+            l: areaLength.value, w: areaWidth.value, d: depth.value,
+            cd: customDepth.value, t: gravelType.value, waste: wasteFactor.value, metric: isMetric
+          };
+          localStorage.setItem('buildmetric_gravel_data', JSON.stringify(data));
+          alert('Estimate saved to your browser!');
+        });
+      }
+
+      // Share
+      if(btnShare && navigator.share) {
+        btnShare.addEventListener('click', () => {
+          navigator.share({
+            title: 'Gravel Calculator Estimate',
+            text: getResultText(),
+            url: window.location.href
+          }).catch(console.error);
+        });
+      } else if (btnShare) {
+        btnShare.addEventListener('click', () => {
+          alert('Sharing is not supported on this browser. Use Copy instead.');
+        });
+      }
+
+      // Copy
+      if(btnCopy) {
+        btnCopy.addEventListener('click', () => {
+          navigator.clipboard.writeText(getResultText()).then(() => {
+            const originalHTML = btnCopy.innerHTML;
+            btnCopy.innerHTML = '<svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> Copied!';
+            setTimeout(() => { btnCopy.innerHTML = originalHTML; }, 2000);
+          }).catch(() => {
+            alert('Failed to copy. Please select text manually.');
+          });
+        });
+      }
+
+      // Cookie settings placeholder
+      const cookieBtn = document.getElementById('cookieSettingsBtn');
+      if(cookieBtn) {
+        cookieBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          alert('Cookie settings panel will open here.');
+        });
+      }
+
+    });
+  </script>
+
+  <!-- ============================================================
+       PHASE 10/10 — CLOSING TAGS
+       ============================================================ -->
+</body>
+</html>
