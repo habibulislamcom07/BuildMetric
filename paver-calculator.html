@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Paver Calculator | How Many Pavers Do I Need? (US, UK, AU)</title>
+    <meta name="title" content="Paver Calculator | How Many Pavers Do I Need? (US, UK, AU)">
+    <meta name="description" content="Calculate the exact number of pavers, base gravel, and bedding sand needed for your patio or driveway. Free, engineer-reviewed tool with US, UK, and AU standard sizes.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://buildmetric.org/paver-calculator.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://buildmetric.org/paver-calculator.html">
+    <meta property="og:title" content="Paver Calculator | How Many Pavers Do I Need?">
+    <meta property="og:description" content="Calculate exact paver quantity, base gravel, and sand for your patio or driveway. Multi-region support for US, UK, and AU.">
+    <meta property="og:image" content="https://buildmetric.org/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://buildmetric.org/paver-calculator.html">
+    <meta property="twitter:title" content="Paver Calculator | How Many Pavers Do I Need?">
+    <meta property="twitter:description" content="Calculate exact paver quantity, base gravel, and sand for your patio or driveway.">
+    <meta property="twitter:image" content="https://buildmetric.org/logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9', // Sky Blue
+                        slate: {
+                            900: '#0f172a', // Dark Slate
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- JSON-LD Schema: WebApplication & Breadcrumbs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://buildmetric.org/paver-calculator.html#webapp",
+          "name": "Paver and Hardscape Calculator",
+          "url": "https://buildmetric.org/paver-calculator.html",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "All",
+          "description": "Professional calculator for estimating pavers, gravel base, and sand quantities for patios and driveways.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://buildmetric.org/paver-calculator.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://buildmetric.org/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Landscaping Calculators",
+              "item": "https://buildmetric.org/landscaping.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Paver Calculator",
+              "item": "https://buildmetric.org/paver-calculator.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-primary selection:text-white flex flex-col min-h-screen">
+
+    <!-- Sticky Glassmorphism Navbar -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+                    <img src="logo.png" alt="BuildMetric Logo" class="h-8 w-auto sm:h-10" onerror="this.style.display='none'">
+                    <div class="flex flex-col">
+                        <span class="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-slate-900 leading-none">
+                            Build<span class="text-primary">Metric</span>
+                        </span>
+                        <span class="text-[10px] text-slate-500 font-semibold tracking-widest uppercase mt-1 hidden sm:block">Engineering Calculators</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="calculators.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">All Tools</a>
+                    <a href="guides.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Guides</a>
+                    <a href="about.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">About</a>
+                    <a href="contact.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Contact</a>
+                </div>
+
+                <!-- Desktop CTA Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="calculators.html" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold text-white transition-all bg-slate-900 rounded-xl hover:bg-slate-800 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900">
+                        Open Tools
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1 sm:px-6">
+                <a href="calculators.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">All Tools</a>
+                <a href="guides.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">Guides</a>
+                <a href="about.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">About</a>
+                <a href="contact.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">Contact</a>
+                <div class="pt-4">
+                    <a href="calculators.html" class="w-full flex justify-center items-center px-4 py-3 text-base font-bold text-white bg-slate-900 rounded-xl hover:bg-slate-800 transition-all shadow-sm">
+                        Open Tools
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <main class="flex-grow">
+        
+        <!-- Breadcrumbs -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2">
+            <nav class="flex text-sm text-slate-500 font-medium" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="index.html" class="inline-flex items-center hover:text-primary transition-colors">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            <a href="landscaping.html" class="ml-1 md:ml-2 hover:text-primary transition-colors">Landscaping</a>
+                        </div>
+                    </li>
+                    <li aria-current="page">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            <span class="ml-1 md:ml-2 text-slate-800 font-bold">Paver Calculator</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+
+       <!-- Phase 3: Calculator UI -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    
+    <!-- Page Heading -->
+    <div class="mb-8 max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-primary text-xs font-bold uppercase tracking-wider mb-4 border border-sky-100">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            Landscaping & Hardscape Approved
+        </div>
+        
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-slate-900 tracking-tight mb-4">
+            Paver Calculator <span class="text-primary text-lg md:text-xl font-semibold block mt-2">How Many Pavers Do I Need?</span>
+        </h1>
+        <p class="text-base md:text-lg text-slate-600 leading-relaxed">
+            Calculate the exact number of pavers, base gravel, and bedding sand required for your patio or driveway. Supports standard and custom paver sizes.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Input Form Column -->
+        <div class="lg:col-span-7 xl:col-span-8 bg-white rounded-3xl shadow-sm border border-slate-200 p-5 sm:p-8">
+            
+            <!-- Unit Toggle -->
+            <div class="flex flex-col sm:flex-row sm:items-center gap-3 mb-6 pb-6 border-b border-slate-100">
+                <span class="text-sm font-bold text-slate-900">Measurement System:</span>
+                <div class="flex bg-slate-100 p-1 rounded-xl w-full sm:w-auto">
+                    <button type="button" class="flex-1 sm:flex-none px-4 py-2 text-sm font-bold bg-white text-primary rounded-lg shadow-sm transition-all" id="btn-imperial">Imperial (US)</button>
+                    <button type="button" class="flex-1 sm:flex-none px-4 py-2 text-sm font-bold text-slate-500 hover:text-slate-700 rounded-lg transition-all" id="btn-metric">Metric (UK/AU)</button>
+                </div>
+            </div>
+
+            <!-- Dimensions Inputs (2-col mobile) -->
+            <div class="grid grid-cols-2 gap-4 sm:gap-6 mb-6">
+                
+                <!-- Length -->
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Length</label>
+                    <div class="relative">
+                        <input type="number" id="input-length" class="w-full bg-slate-50 border border-slate-300 text-slate-900 text-lg font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" placeholder="e.g. 20" value="20">
+                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                            <span class="text-slate-500 font-bold length-unit">ft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Width -->
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Width</label>
+                    <div class="relative">
+                        <input type="number" id="input-width" class="w-full bg-slate-50 border border-slate-300 text-slate-900 text-lg font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" placeholder="e.g. 10" value="10">
+                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                            <span class="text-slate-500 font-bold length-unit">ft</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paver & Base Specs -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 mb-8">
+                
+                <!-- Paver Size Dropdown -->
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Paver Size</label>
+                    <select id="select-paver-size" onchange="toggleCustomInput(this, 'custom-paver-container')" class="bg-slate-50 border border-slate-300 text-slate-900 text-base font-medium rounded-xl focus:ring-primary focus:border-primary block w-full p-3 cursor-pointer">
+                        <option value="4x8">4" x 8" (Standard Brick)</option>
+                        <option value="6x9">6" x 9" (Common Patio)</option>
+                        <option value="12x12" selected>12" x 12" (Square)</option>
+                        <option value="16x16">16" x 16" (Large Square)</option>
+                        <option value="24x24">24" x 24" (XL Slab)</option>
+                        <option value="custom">Custom Size...</option>
+                    </select>
+                    <!-- Custom Paver Inputs -->
+                    <div id="custom-paver-container" class="hidden mt-3 flex gap-2">
+                        <input type="number" id="input-custom-paver-length" class="w-1/2 bg-sky-50 border border-primary text-slate-900 text-sm font-mono rounded-lg p-2" placeholder="Len">
+                        <span class="self-center text-slate-400 font-bold">x</span>
+                        <input type="number" id="input-custom-paver-width" class="w-1/2 bg-sky-50 border border-primary text-slate-900 text-sm font-mono rounded-lg p-2" placeholder="Wid">
+                    </div>
+                </div>
+
+                <!-- Base Gravel Depth -->
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Base Gravel Depth</label>
+                    <select id="select-base-depth" onchange="toggleCustomInput(this, 'custom-base-container')" class="bg-slate-50 border border-slate-300 text-slate-900 text-base font-medium rounded-xl focus:ring-primary focus:border-primary block w-full p-3 cursor-pointer">
+                        <option value="4">4 inches (Standard Patio)</option>
+                        <option value="6">6 inches (Driveway)</option>
+                        <option value="8">8 inches (Heavy Load)</option>
+                        <option value="custom">Custom Depth...</option>
+                    </select>
+                    <!-- Custom Base Input -->
+                    <div id="custom-base-container" class="hidden mt-3">
+                        <div class="relative">
+                            <input type="number" id="input-custom-base" class="w-full bg-sky-50 border border-primary text-slate-900 text-base font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary block w-full p-2" placeholder="Enter depth">
+                            <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                <span class="text-primary font-bold custom-unit-small">in</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Waste Factor Slider -->
+            <div class="mb-8">
+                <label class="block text-sm font-bold text-slate-700 mb-2">Waste Allowance (For cuts & breakage)</label>
+                <input type="range" id="input-waste" min="5" max="20" value="10" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                <div class="flex justify-between text-xs text-slate-500 mt-1 font-medium">
+                    <span>5%</span>
+                    <span class="font-bold text-primary" id="waste-value">10% (Recommended)</span>
+                    <span>20%</span>
+                </div>
+            </div>
+
+            <!-- Calculate Button -->
+            <button onclick="calculatePavers()" class="w-full flex items-center justify-center gap-2 bg-primary hover:bg-sky-500 text-white text-lg font-bold py-4 px-4 rounded-xl transition-all shadow-lg shadow-primary/20">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                Calculate Materials
+            </button>
+
+        </div>
+
+        <!-- Result Box Column -->
+        <div class="lg:col-span-5 xl:col-span-4">
+            <div class="bg-slate-900 rounded-3xl shadow-xl p-5 sm:p-8 lg:sticky lg:top-24 border border-slate-800">
+                
+                <h2 class="text-lg sm:text-xl font-heading font-bold text-white mb-5 flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                    Material List
+                </h2>
+
+                <!-- Main Results Display -->
+                <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-6">
+                    
+                    <!-- Total Pavers -->
+                    <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50 col-span-2">
+                        <p class="text-xs sm:text-sm text-slate-400 font-medium mb-1">Total Pavers Needed</p>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-4xl font-mono font-bold text-white" id="result-pavers">0</span>
+                            <span class="text-sm text-slate-400 font-medium">pieces</span>
+                        </div>
+                    </div>
+
+                    <!-- Gravel Base Volume -->
+                    <div class="bg-slate-800/50 p-3 sm:p-4 rounded-xl border border-slate-700/50">
+                        <p class="text-xs sm:text-sm text-slate-400 font-medium mb-1">Base Gravel</p>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-xl sm:text-2xl font-mono font-bold text-white" id="result-gravel">0</span>
+                            <span class="text-xs text-primary font-bold result-unit-vol">cu yd</span>
+                        </div>
+                    </div>
+
+                    <!-- Sand Bedding Volume -->
+                    <div class="bg-slate-800/50 p-3 sm:p-4 rounded-xl border border-slate-700/50">
+                        <p class="text-xs sm:text-sm text-slate-400 font-medium mb-1">Bedding Sand</p>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-xl sm:text-2xl font-mono font-bold text-white" id="result-sand">0</span>
+                            <span class="text-xs text-primary font-bold result-unit-vol">cu yd</span>
+                        </div>
+                    </div>
+
+                    <!-- Total Area -->
+                    <div class="bg-slate-800/50 p-3 sm:p-4 rounded-xl border border-slate-700/50 col-span-2">
+                        <p class="text-xs sm:text-sm text-slate-400 font-medium mb-1">Total Area</p>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-xl sm:text-2xl font-mono font-bold text-white" id="result-area">0</span>
+                            <span class="text-xs text-primary font-bold result-unit-area">sq ft</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Action Buttons (Blue Theme) -->
+                <div class="grid grid-cols-3 gap-2 sm:gap-3 pt-2">
+                    <button onclick="saveResult()" class="flex flex-col items-center justify-center gap-1 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white py-2.5 sm:py-3 rounded-xl transition-colors border border-slate-700">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg>
+                        <span class="text-[10px] sm:text-xs font-bold">Save</span>
+                    </button>
+                    <button onclick="shareResult()" class="flex flex-col items-center justify-center gap-1 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white py-2.5 sm:py-3 rounded-xl transition-colors border border-slate-700">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                        <span class="text-[10px] sm:text-xs font-bold">Share</span>
+                    </button>
+                    <button onclick="copyResult()" class="flex flex-col items-center justify-center gap-1 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white py-2.5 sm:py-3 rounded-xl transition-colors border border-slate-700">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                        <span class="text-[10px] sm:text-xs font-bold">Copy</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Phase 4: Content Part 1 (Engineering & SEO) -->
+<section class="bg-white border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        
+        <!-- AI Overview / Quick Answer Box -->
+        <div class="bg-sky-50 border-l-4 border-primary p-6 sm:p-8 rounded-r-2xl mb-12 shadow-sm">
+            <h2 class="text-xl font-heading font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Quick Answer: How Do You Calculate Pavers?
+            </h2>
+            <p class="text-slate-700 leading-relaxed font-medium text-lg">
+                To calculate the number of pavers needed, multiply the length by the width of your patio to get the total square footage. Divide that area by the square footage of a single paver. Finally, add a <strong>10% waste factor</strong> for cuts and breakage. Remember, pavers are only as strong as their base; you typically need a 4-inch to 6-inch compacted gravel sub-base and a 1-inch layer of coarse bedding sand.
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6">The Engineering Behind Hardscaping</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                A paver patio or driveway is not just a cosmetic surface; it is a structural system. When designed and installed correctly, interlocking pavers can support the weight of heavy vehicles and withstand decades of freeze-thaw cycles. However, if the sub-base is inadequate, the pavers will shift, sink, and crack within a single season.
+            </p>
+            <p>
+                The most common mistake DIYers make is underestimating the base. Pavers themselves are incredibly strong (often exceeding 8,000 PSI compressive strength), but the soil beneath them is not. You must excavate deep enough to accommodate the paver thickness, the bedding sand, and the compacted aggregate base.
+            </p>
+            <p>
+                Furthermore, water management is critical. The base must be sloped away from your house at a minimum gradient of 1 inch per 4 feet (approx 2%) to ensure proper drainage. If water pools beneath the pavers, it will erode the sand and cause the surface to become uneven. Using a geotextile fabric between the sub-grade soil and the gravel base prevents mud from pumping up into the clean gravel, which is essential for long-term stability.
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">Global Paver Standards: US vs. UK vs. Australia</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6 mb-8">
+            <p>
+                The terminology, sizing, and base requirements for hardscaping vary significantly across the globe. If you are using an American design in Australia, or a UK specification in the US, you must convert the units and material sizes accurately.
+            </p>
+            <p>
+                Here is a comparison of the standard paver sizes and base practices across our three target regions:
+            </p>
+        </div>
+
+        <!-- Global Standards Table -->
+        <div class="overflow-x-auto shadow-sm rounded-xl border border-slate-200 mb-12">
+            <table class="w-full text-sm text-left text-slate-600">
+                <thead class="text-xs text-slate-700 uppercase bg-slate-100 border-b border-slate-200">
+                    <tr>
+                        <th scope="col" class="px-6 py-4 font-bold">Aspect</th>
+                        <th scope="col" class="px-6 py-4 font-bold">USA (ICPI Standards)</th>
+                        <th scope="col" class="px-6 py-4 font-bold">UK (BS 7533)</th>
+                        <th scope="col" class="px-6 py-4 font-bold">Australia (AS 4459)</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200">
+                    <tr class="bg-white hover:bg-slate-50 transition-colors">
+                        <th scope="row" class="px-6 py-4 font-semibold text-slate-900 whitespace-nowrap">Standard Paver Size</th>
+                        <td class="px-6 py-4">4" x 8" (Brick), 12" x 12" (Square)</td>
+                        <td class="px-6 py-4">200mm x 100mm (Block), 600x600mm (Slab)</td>
+                        <td class="px-6 py-4">400mm x 400mm, 500mm x 500mm</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-slate-50 transition-colors">
+                        <th scope="row" class="px-6 py-4 font-semibold text-slate-900 whitespace-nowrap">Pedestrian Base Depth</th>
+                        <td class="px-6 py-4">4 inches (100mm) compacted</td>
+                        <td class="px-6 py-4">100mm - 150mm Type 1 sub-base</td>
+                        <td class="px-6 py-4">100mm compacted road base</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-slate-50 transition-colors">
+                        <th scope="row" class="px-6 py-4 font-semibold text-slate-900 whitespace-nowrap">Vehicular Base Depth</th>
+                        <td class="px-6 py-4">6 to 8 inches (150-200mm)</td>
+                        <td class="px-6 py-4">150mm - 200mm Type 1 sub-base</td>
+                        <td class="px-6 py-4">150mm - 200mm heavy-duty base</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-slate-50 transition-colors">
+                        <th scope="row" class="px-6 py-4 font-semibold text-slate-900 whitespace-nowrap">Bedding Sand Layer</th>
+                        <td class="px-6 py-4">1 inch (25mm) Concrete Sand</td>
+                        <td class="px-6 py-4">30mm Bedding Grit/Sand</td>
+                        <td class="px-6 py-4">30mm Bedding Sand</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">The Math: Calculating Materials Step-by-Step</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                To ensure you purchase the right amount of materials, you need to calculate three separate components: the pavers, the gravel base, and the sand. 
+            </p>
+            
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">1. Calculating Pavers</h3>
+            <p>
+                First, find your total area in square feet (Length × Width). Then, calculate the square footage of your chosen paver (e.g., a 12x12 paver is 1 sq ft; a 4x8 paver is 0.22 sq ft). Divide the total area by the paver area to get the base quantity. Add 10% to account for cuts around the perimeter and waste.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">2. Calculating Base Gravel</h3>
+            <p>
+                Multiply your total area by the depth of the base (usually 4 to 8 inches). This gives you the volume in cubic feet. Since gravel is sold by the cubic yard (27 cubic feet) or by the ton, you will need to convert this volume. Our calculator handles this conversion automatically, providing you with the exact cubic yards of base material needed.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">3. Calculating Bedding Sand</h3>
+            <p>
+                The bedding sand layer is typically 1 inch thick. Multiply your total area by 1 inch (or 0.083 feet) to find the cubic footage, then convert to cubic yards. Be careful not to use too much sand; an overly thick sand layer is unstable and causes pavers to rut. For more landscaping math, check out our <a href="gravel-calculator.html" class="text-primary font-semibold hover:underline">gravel calculator</a> and <a href="mulch-calculator.html" class="text-primary font-semibold hover:underline">mulch calculator</a>.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+  <!-- Phase 5: Content Part 2 (Installation, Edge Restraints & Conclusion) -->
+<section class="bg-slate-50 border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6">The 5-Step Paver Installation Process</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                Installing a paver system is a physical process, but it requires strict adherence to engineering principles. Here is the standard professional workflow:
+            </p>
+            
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">1. Excavation and Grading</h3>
+            <p>
+                You must excavate the area to a depth equal to the paver thickness + bedding sand (1 inch) + base depth (4-8 inches) + 1 inch for compaction loss. The excavated area must be graded to the final desired slope. If the sub-grade soil is soft or highly organic, you may need to remove it and replace it with structural fill.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">2. Base Installation and Compaction</h3>
+            <p>
+                Lay down a non-woven geotextile fabric to separate the soil from the gravel. Add your crushed aggregate (like 3/4" crushed stone or road base) in 2-inch to 3-inch lifts (layers). Compact each lift thoroughly using a plate compactor. <strong>Do not dump all the gravel at once;</strong> deep layers will not compact properly, leaving voids that cause pavers to sink later.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">3. Screeding the Bedding Sand</h3>
+            <p>
+                Lay 1-inch metal pipes (screed rails) across the compacted base. Dump your coarse concrete sand between the rails, and use a straight 2x4 board to screed (level) the sand perfectly. Remove the rails, fill the small trenches they leave, and lightly smooth them over. Never walk on the screeded sand; start laying pavers from the edge and work your way backward onto the installed pavers.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">4. Laying Pavers and Cutting</h3>
+            <p>
+                Lay the pavers in your chosen pattern, keeping consistent joint spaces (usually 2mm to 3mm). For the perimeter cuts, use a wet saw with a diamond blade. A circular saw with a masonry blade will leave rough edges and dust, compromising the finished look.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">5. Edge Restraints and Joint Sand</h3>
+            <p>
+                This is the most skipped step in DIY projects. Once the pavers are laid, you must install edge restraints (plastic, aluminum, or concrete curbing) along the entire perimeter, pinned into the base. Without these, the pavers at the edge will eventually shift outwards (a phenomenon known as "lateral creep"), causing the entire patio to unravel. Once the restraints are secure, sweep polymeric sand into the joints.
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">Why Polymeric Sand is Essential</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                Years ago, builders used regular masonry sand to fill the joints between pavers. While it worked initially, rain and wind quickly washed it away, leaving open joints where weeds grew and ants nested.
+            </p>
+            <p>
+                Today, professional hardscapers use <strong>Polymeric Sand</strong>. This is a mixture of fine sand and special additives (polymers). After the sand is swept into the joints, you mist it with water. The polymers activate and harden, binding the sand grains together like flexible cement. 
+            </p>
+            <p>
+                This creates a water-resistant barrier that prevents weeds, resists erosion, and locks the pavers together to distribute loads more evenly. When calculating your material list, remember to buy a few extra bags of polymeric sand; you will need roughly 1 bag (usually 50 lbs in the US or 20kg in the UK/AU) for every 40 to 50 square feet of pavers.
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">Costing: Buying Base Materials in Bulk</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                If you are building a patio larger than 100 square feet, buying sand and gravel in bags from a hardware store is extremely expensive and labor-intensive. Instead, order bulk materials from a local quarry or landscape supply yard.
+            </p>
+            <p>
+                They will deliver the crushed stone and sand by the dump truck load (measured in cubic yards or tons). Our calculator above provides the exact volume in cubic yards (or cubic meters) so you can call the supplier and order precisely what you need. For heavy driveway pavers, you may want to consult our <a href="concrete-calculator.html" class="text-primary font-semibold hover:underline">concrete calculator</a> if you are pouring a solid concrete base instead of a flexible aggregate base.
+            </p>
+        </div>
+
+        <!-- Conclusion Box -->
+        <div class="mt-16 bg-slate-900 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden shadow-2xl">
+            <!-- Decorative gradient -->
+            <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-primary rounded-full blur-3xl opacity-20"></div>
+            
+            <div class="relative z-10">
+                <h2 class="text-2xl md:text-3xl font-heading font-bold mb-4">Build a Patio That Lasts Decades</h2>
+                <p class="text-slate-300 leading-relaxed mb-6 text-lg">
+                    A beautiful paver patio is an investment in your home's outdoor living space. By getting the material calculations right—from the depth of the gravel base to the number of pavers and edge restraints—you ensure the project stands up to the elements without settling or cracking.
+                </p>
+                <p class="text-slate-300 leading-relaxed mb-8 text-lg">
+                    Use BuildMetric to generate your exact Bill of Materials (BOM) before you start digging. 
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="gravel-calculator.html" class="inline-flex justify-center items-center px-6 py-3.5 text-base font-bold text-slate-900 bg-white rounded-xl hover:bg-slate-100 transition-colors shadow-sm">
+                        Calculate Gravel Base
+                    </a>
+                    <a href="sod-calculator.html" class="inline-flex justify-center items-center px-6 py-3.5 text-base font-bold text-white border border-slate-700 rounded-xl hover:bg-slate-800 transition-colors">
+                        Estimate Sod for Landscaping
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+  <!-- Phase 6: 7 FAQs & JSON-LD Schema -->
+<section class="bg-white border-t border-slate-200 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- FAQ Heading -->
+        <div class="text-center mb-12">
+            <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">Frequently Asked Questions</h2>
+            <h3 class="text-3xl md:text-4xl font-heading font-extrabold text-slate-900">Paver Installation FAQs</h3>
+            <p class="text-slate-600 mt-4 text-lg font-medium">Direct answers to common questions about paver quantities, base prep, and sand.</p>
+        </div>
+
+        <!-- FAQs List -->
+        <div class="space-y-4">
+            
+            <!-- FAQ 1 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">01</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How many pavers do I need per square foot?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    It depends entirely on the size of the paver. A standard 12"x12" paver covers exactly 1 square foot, so you need 1 paver per sq ft. A smaller 4"x8" brick paver covers about 0.22 sq ft, meaning you would need roughly 4.5 pavers per square foot. Use our <a href="#top" class="text-primary font-semibold hover:underline">calculator above</a> to instantly get the exact count for your specific paver size and patio dimensions.
+                </div>
+            </details>
+
+            <!-- FAQ 2 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">02</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How much base gravel do I need under pavers?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    For standard pedestrian patios, you need a minimum of <strong>4 inches (100mm)</strong> of compacted crushed gravel (like 3/4" minus or road base). For driveways or areas supporting heavy vehicles, the base must be increased to <strong>6 to 8 inches (150-200mm)</strong>. This base must be compacted in 2-inch layers using a plate compactor. Calculate the exact volume with our <a href="gravel-calculator.html" class="text-primary font-semibold hover:underline">gravel calculator</a>.
+                </div>
+            </details>
+
+            <!-- FAQ 3 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">03</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How much sand goes under pavers?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    You should use exactly <strong>1 inch (25mm)</strong> of coarse bedding sand (concrete sand) over the compacted gravel base. Do not use more than 1.5 inches. If the sand layer is too thick, it becomes unstable, and the pavers will rut or shift under foot traffic. Use our <a href="mulch-calculator.html" class="text-primary font-semibold hover:underline">mulch & soil calculator</a> for other landscaping volume conversions.
+                </div>
+            </details>
+
+            <!-- FAQ 4 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">04</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">What is polymeric sand and do I need it?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    Yes, highly recommended. Polymeric sand is a mixture of sand and polymers that hardens when activated with water. It locks the pavers together, prevents weeds from growing in the joints, and stops ants from tunneling underneath. Unlike regular sand, it will not wash away in the rain.
+                </div>
+            </details>
+
+            <!-- FAQ 5 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">05</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">Can I lay pavers directly on dirt or concrete?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    <strong>Never on dirt.</strong> Laying pavers on dirt will lead to immediate sinking, shifting, and weed growth. You must excavate and install a compacted gravel base. Laying pavers over existing concrete is possible, but you need to use a thin layer of sand (or a specialized setting bed) and ensure the concrete has proper drainage, otherwise water will pool and freeze, cracking both the concrete and the pavers. For concrete projects, check our <a href="concrete-calculator.html" class="text-primary font-semibold hover:underline">concrete calculator</a>.
+                </div>
+            </details>
+
+            <!-- FAQ 6 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">06</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">Why do I need edge restraints?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    Edge restraints (plastic or aluminum edging pinned into the ground) are mandatory. They hold the entire paver system tightly together. Without them, the pavers on the outer edge will slowly creep outwards over time, creating wide gaps and causing the whole pattern to fall apart.
+                </div>
+            </details>
+
+            <!-- FAQ 7 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">07</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How much waste factor should I add for pavers?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    A standard <strong>10% waste factor</strong> is recommended for most rectangular patios. This accounts for cuts around the edges, mistakes, and breakage. However, if you are laying a complex pattern (like herringbone) or have a highly irregular shape with many curves, you should increase the waste factor to 15%. If you spot an error in our guide, please <a href="contact.html" class="text-primary font-semibold hover:underline">report it to our team</a>.
+                </div>
+            </details>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- JSON-LD Schema for FAQ Page (Matches HTML Text Exactly) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many pavers do I need per square foot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends entirely on the size of the paver. A standard 12\"x12\" paver covers exactly 1 square foot, so you need 1 paver per sq ft. A smaller 4\"x8\" brick paver covers about 0.22 sq ft, meaning you would need roughly 4.5 pavers per square foot. Use our calculator above to instantly get the exact count for your specific paver size and patio dimensions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much base gravel do I need under pavers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For standard pedestrian patios, you need a minimum of 4 inches (100mm) of compacted crushed gravel (like 3/4\" minus or road base). For driveways or areas supporting heavy vehicles, the base must be increased to 6 to 8 inches (150-200mm). This base must be compacted in 2-inch layers using a plate compactor. Calculate the exact volume with our gravel calculator."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much sand goes under pavers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You should use exactly 1 inch (25mm) of coarse bedding sand (concrete sand) over the compacted gravel base. Do not use more than 1.5 inches. If the sand layer is too thick, it becomes unstable, and the pavers will rut or shift under foot traffic. Use our mulch & soil calculator for other landscaping volume conversions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is polymeric sand and do I need it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, highly recommended. Polymeric sand is a mixture of sand and polymers that hardens when activated with water. It locks the pavers together, prevents weeds from growing in the joints, and stops ants from tunneling underneath. Unlike regular sand, it will not wash away in the rain."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I lay pavers directly on dirt or concrete?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Never on dirt. Laying pavers on dirt will lead to immediate sinking, shifting, and weed growth. You must excavate and install a compacted gravel base. Laying pavers over existing concrete is possible, but you need to use a thin layer of sand (or a specialized setting bed) and ensure the concrete has proper drainage, otherwise water will pool and freeze, cracking both the concrete and the pavers. For concrete projects, check our concrete calculator."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do I need edge restraints?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Edge restraints (plastic or aluminum edging pinned into the ground) are mandatory. They hold the entire paver system tightly together. Without them, the pavers on the outer edge will slowly creep outwards over time, creating wide gaps and causing the whole pattern to fall apart."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much waste factor should I add for pavers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A standard 10% waste factor is recommended for most rectangular patios. This accounts for cuts around the edges, mistakes, and breakage. However, if you are laying a complex pattern (like herringbone) or have a highly irregular shape with many curves, you should increase the waste factor to 15%. If you spot an error in our guide, please report it to our team."
+      }
+    }
+  ]
+}
+</script>
+
+  <!-- Phase 7: E-E-A-T Trust Box & Internal Linking -->
+<section class="bg-slate-100/60 py-12 border-t border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div class="flex items-start gap-5">
+                <div class="p-3 bg-primary/10 text-primary rounded-2xl flex-shrink-0">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-heading font-bold text-slate-900 mb-2">About This Calculator</h2>
+                    <p class="text-slate-600 text-sm md:text-base leading-relaxed max-w-2xl font-medium mb-4">
+                        This Paver Calculator is built on standard hardscaping engineering principles. It is aligned with ICPI (US), BS 7533 (UK), and AS 4459 (Australia) guidelines for sub-base depth, bedding sand, and compaction. We prioritize structural longevity so your patio or driveway does not settle or shift. If you spot an error in our math, please report it immediately.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <a href="methodology.html" class="text-sm font-bold text-primary hover:text-sky-700 hover:underline flex items-center gap-1.5 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Our Methodology
+                        </a>
+                        <a href="contact.html" class="text-sm font-bold text-slate-500 hover:text-slate-900 hover:underline flex items-center gap-1.5 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                            Report an Error
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Related Tools & Guides -->
+<section class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Related Tools (3) -->
+        <div class="mb-16">
+            <h2 class="text-2xl font-heading font-extrabold text-slate-900 mb-6 flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                Related Calculators
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Tool 1 -->
+                <a href="gravel-calculator.html" class="group block p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:bg-white hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="p-2 bg-sky-100 text-primary rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-lg">Gravel Calculator</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 font-medium leading-relaxed">Calculate exact tons or cubic yards of crushed stone and base gravel needed for your project.</p>
+                    <span class="inline-flex items-center gap-1 text-sm font-bold text-primary mt-4">Open Tool <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+                </a>
+                
+                <!-- Tool 2 -->
+                <a href="deck-calculator.html" class="group block p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:bg-white hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="p-2 bg-amber-100 text-amber-600 rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-lg">Deck Calculator</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 font-medium leading-relaxed">Estimate decking boards, joists, and all framing materials for your outdoor living space.</p>
+                    <span class="inline-flex items-center gap-1 text-sm font-bold text-primary mt-4">Open Tool <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+                </a>
+                
+                <!-- Tool 3 -->
+                <a href="sod-calculator.html" class="group block p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:bg-white hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="p-2 bg-emerald-100 text-emerald-600 rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-lg">Sod Calculator</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 font-medium leading-relaxed">Calculate rolls or pallets of sod needed for your lawn, plus the topsoil required underneath.</p>
+                    <span class="inline-flex items-center gap-1 text-sm font-bold text-primary mt-4">Open Tool <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Related Guides (3) - Colorful Bento Style -->
+        <div>
+            <h2 class="text-2xl font-heading font-extrabold text-slate-900 mb-6 flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                Recommended Reading
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                
+                <!-- Guide 1 -->
+                <a href="guides/concrete-waste-allowance.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-slate-600 to-slate-800 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">How Much Waste to Add to a Concrete Order?</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Concrete • 8 min read</p>
+                    </div>
+                </a>
+                
+                <!-- Guide 2 -->
+                <a href="guides/reading-architectural-drawings.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-600 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">Reading Architectural Drawings for Estimators</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Estimating • 20 min read</p>
+                    </div>
+                </a>
+                
+                <!-- Guide 3 -->
+                <a href="guides/roof-pitch-explained.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">Roof Pitch Explained: Ratios vs Degrees</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Roofing • 12 min read</p>
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+
+    </div>
+</section>
+
+  </main> <!-- Closing the main tag -->
+
+<!-- Phase 8: Compact & Clean 4-Column Footer -->
+<footer class="bg-slate-900 border-t border-slate-800 pt-12 pb-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+            
+            <!-- Brand Col -->
+            <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                <a href="index.html" class="flex items-center gap-2 mb-3">
+                    <span class="font-heading font-extrabold text-xl text-white">Build<span class="text-primary">Metric</span></span>
+                </a>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4 pr-4">
+                    Engineer-reviewed construction calculators for the US, UK, and Australia.
+                </p>
+                <a href="mailto:contact@buildmetric.org" class="text-sm font-medium text-primary hover:text-sky-400 transition-colors flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    contact@buildmetric.org
+                </a>
+            </div>
+
+            <!-- Calculators -->
+            <div>
+                <h3 class="font-heading font-bold text-white mb-4 text-sm">Calculators</h3>
+                <ul class="space-y-2">
+                    <li><a href="roof-pitch-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Roof Pitch</a></li>
+                    <li><a href="concrete-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Concrete Volume</a></li>
+                    <li><a href="framing-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Stud Count</a></li>
+                    <li><a href="paint-coverage-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Paint Coverage</a></li>
+                    <li><a href="calculators.html" class="text-sm font-bold text-primary hover:text-sky-400 transition-colors">All Tools &rarr;</a></li>
+                </ul>
+            </div>
+
+            <!-- Company -->
+            <div>
+                <h3 class="font-heading font-bold text-white mb-4 text-sm">Company</h3>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="text-sm text-slate-400 hover:text-primary transition-colors">About Us</a></li>
+                    <li><a href="guides.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Guides</a></li>
+                    <li><a href="contact.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Contact</a></li>
+                    <li><a href="sitemap.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Sitemap</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal -->
+            <div>
+                <h3 class="font-heading font-bold text-white mb-4 text-sm">Legal</h3>
+                <ul class="space-y-2">
+                    <li><a href="privacy-policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Terms of Use</a></li>
+                    <li><a href="disclaimer.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Disclaimer</a></li>
+                    <li><a href="cookie-policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-3">
+            <p class="text-xs text-slate-500">
+                &copy; <span class="current-year">2026</span> BuildMetric.org. All rights reserved.
+            </p>
+            <p class="text-xs text-slate-500 font-medium">
+                Engineered for US, UK & AU Standards.
+            </p>
+        </div>
+    </div>
+</footer>
+
+      <!-- ========================================== -->
+    <!-- PHASE 9: JAVASCRIPT & CLOSING TAGS         -->
+    <!-- ========================================== -->
+
+    <script>
+        // ==========================================
+        // 1. GLOBAL CORE FUNCTIONS (Save/Share/Copy)
+        // ==========================================
+        
+        function showToast(message) {
+            const existingToast = document.getElementById('bm-toast');
+            if (existingToast) existingToast.remove();
+
+            const toast = document.createElement('div');
+            toast.id = 'bm-toast';
+            toast.className = 'fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-slate-900 text-white px-6 py-3 rounded-xl shadow-2xl z-[100] text-sm font-semibold transition-all duration-300 opacity-0 translate-y-4 flex items-center gap-2';
+            toast.innerHTML = `<svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> ${message}`;
+            
+            document.body.appendChild(toast);
+            setTimeout(() => toast.classList.remove('opacity-0', 'translate-y-4'), 10);
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-4');
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        function copyResult() {
+            const text = `BuildMetric Paver Results:\nTotal Pavers: ${document.getElementById('result-pavers').innerText}\nBase Gravel: ${document.getElementById('result-gravel').innerText} ${document.querySelector('.result-unit-vol').innerText}\nBedding Sand: ${document.getElementById('result-sand').innerText} ${document.querySelector('.result-unit-vol').innerText}\nTotal Area: ${document.getElementById('result-area').innerText} ${document.querySelector('.result-unit-area').innerText}`;
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('Results copied to clipboard!');
+            }).catch(() => showToast('Failed to copy.'));
+        }
+
+        function saveResult() {
+            const data = {
+                pavers: document.getElementById('result-pavers').innerText,
+                gravel: document.getElementById('result-gravel').innerText,
+                sand: document.getElementById('result-sand').innerText,
+                area: document.getElementById('result-area').innerText,
+                timestamp: new Date().toISOString()
+            };
+            localStorage.setItem('buildmetric_paver_saved', JSON.stringify(data));
+            showToast('Calculation saved locally!');
+        }
+
+        function shareResult() {
+            const text = `I just calculated my paver project using BuildMetric!\nPavers Needed: ${document.getElementById('result-pavers').innerText}\nGravel: ${document.getElementById('result-gravel').innerText} ${document.querySelector('.result-unit-vol').innerText}\nSand: ${document.getElementById('result-sand').innerText} ${document.querySelector('.result-unit-vol').innerText}`;
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Paver Calculator Results',
+                    text: text,
+                    url: window.location.href
+                }).catch(console.error);
+            } else {
+                navigator.clipboard.writeText(text);
+                showToast('Sharing not supported. Copied instead!');
+            }
+        }
+
+        // ==========================================
+        // 2. PAVER CALCULATOR LOGIC
+        // ==========================================
+
+        let currentUnit = 'imperial'; // 'imperial' or 'metric'
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            }
+            
+            // Dynamic Year
+            document.querySelectorAll('.current-year').forEach(el => el.textContent = new Date().getFullYear());
+
+            // Initial Calculation
+            calculatePavers();
+        });
+
+        // Toggle Custom Inputs
+        function toggleCustomInput(selectElement, customInputId) {
+            const customInputContainer = document.getElementById(customInputId);
+            if (selectElement.value === 'custom') {
+                customInputContainer.classList.remove('hidden');
+            } else {
+                customInputContainer.classList.add('hidden');
+            }
+            calculatePavers();
+        }
+
+        // Unit Toggle Logic
+        document.getElementById('btn-imperial').addEventListener('click', () => {
+            if (currentUnit === 'imperial') return;
+            currentUnit = 'imperial';
+            
+            // UI Styles
+            document.getElementById('btn-imperial').className = 'flex-1 sm:flex-none px-4 py-2 text-sm font-bold bg-white text-primary rounded-lg shadow-sm transition-all';
+            document.getElementById('btn-metric').className = 'flex-1 sm:flex-none px-4 py-2 text-sm font-bold text-slate-500 hover:text-slate-700 rounded-lg transition-all';
+
+            // Labels & Units
+            document.querySelectorAll('.length-unit').forEach(el => el.innerText = 'ft');
+            document.querySelector('.result-unit-vol').innerText = 'cu yd';
+            document.querySelector('.result-unit-area').innerText = 'sq ft';
+            document.querySelector('.custom-unit-small').innerText = 'in';
+
+            // Dropdowns
+            document.getElementById('select-paver-size').innerHTML = `
+                <option value="4x8">4" x 8" (Standard Brick)</option>
+                <option value="6x9">6" x 9" (Common Patio)</option>
+                <option value="12x12" selected>12" x 12" (Square)</option>
+                <option value="16x16">16" x 16" (Large Square)</option>
+                <option value="24x24">24" x 24" (XL Slab)</option>
+                <option value="custom">Custom Size...</option>
+            `;
+            document.getElementById('select-base-depth').innerHTML = `
+                <option value="4">4 inches (Standard Patio)</option>
+                <option value="6">6 inches (Driveway)</option>
+                <option value="8">8 inches (Heavy Load)</option>
+                <option value="custom">Custom Depth...</option>
+            `;
+
+            // Reset Defaults
+            document.getElementById('input-length').value = 20;
+            document.getElementById('input-width').value = 10;
+            
+            calculatePavers();
+        });
+
+        document.getElementById('btn-metric').addEventListener('click', () => {
+            if (currentUnit === 'metric') return;
+            currentUnit = 'metric';
+            
+            // UI Styles
+            document.getElementById('btn-metric').className = 'flex-1 sm:flex-none px-4 py-2 text-sm font-bold bg-white text-primary rounded-lg shadow-sm transition-all';
+            document.getElementById('btn-imperial').className = 'flex-1 sm:flex-none px-4 py-2 text-sm font-bold text-slate-500 hover:text-slate-700 rounded-lg transition-all';
+
+            // Labels & Units
+            document.querySelectorAll('.length-unit').forEach(el => el.innerText = 'm');
+            document.querySelector('.result-unit-vol').innerText = 'cu m';
+            document.querySelector('.result-unit-area').innerText = 'sq m';
+            document.querySelector('.custom-unit-small').innerText = 'mm';
+
+            // Dropdowns
+            document.getElementById('select-paver-size').innerHTML = `
+                <option value="100x200">100mm x 200mm (Brick)</option>
+                <option value="150x225">150mm x 225mm (Patio)</option>
+                <option value="300x300" selected>300mm x 300mm (Square)</option>
+                <option value="400x400">400mm x 400mm (Large)</option>
+                <option value="600x600">600mm x 600mm (XL Slab)</option>
+                <option value="custom">Custom Size...</option>
+            `;
+            document.getElementById('select-base-depth').innerHTML = `
+                <option value="100">100 mm (Standard Patio)</option>
+                <option value="150">150 mm (Driveway)</option>
+                <option value="200">200 mm (Heavy Load)</option>
+                <option value="custom">Custom Depth...</option>
+            `;
+
+            // Reset Defaults
+            document.getElementById('input-length').value = 6;
+            document.getElementById('input-width').value = 3;
+            
+            calculatePavers();
+        });
+
+        // Waste Slider
+        document.getElementById('input-waste').addEventListener('input', (e) => {
+            document.getElementById('waste-value').innerText = e.target.value + '%';
+            calculatePavers();
+        });
+
+        // Main Calculate Function
+        function calculatePavers() {
+            const length = parseFloat(document.getElementById('input-length').value) || 0;
+            const width = parseFloat(document.getElementById('input-width').value) || 0;
+            const wastePercent = parseFloat(document.getElementById('input-waste').value) || 0;
+            
+            if (length <= 0 || width <= 0) return;
+
+            let totalArea = length * width;
+            let paverArea = 0;
+            let baseDepth = 0;
+            let sandDepth = 0;
+
+            // Get Paver Size
+            const paverSelect = document.getElementById('select-paver-size').value;
+            if (paverSelect === 'custom') {
+                let pLen = parseFloat(document.getElementById('input-custom-paver-length').value) || 0;
+                let pWid = parseFloat(document.getElementById('input-custom-paver-width').value) || 0;
+                
+                if (currentUnit === 'imperial') {
+                    paverArea = (pLen * pWid) / 144; // sq ft
+                } else {
+                    paverArea = (pLen * pWid) / 1000000; // sq m
+                }
+            } else {
+                if (currentUnit === 'imperial') {
+                    const [pLen, pWid] = paverSelect.split('x').map(Number);
+                    paverArea = (pLen * pWid) / 144; // sq ft
+                } else {
+                    const [pLen, pWid] = paverSelect.split('x').map(Number);
+                    paverArea = (pLen * pWid) / 1000000; // sq m
+                }
+            }
+
+            // Get Base Depth
+            const baseSelect = document.getElementById('select-base-depth').value;
+            if (baseSelect === 'custom') {
+                baseDepth = parseFloat(document.getElementById('input-custom-base').value) || 0;
+            } else {
+                baseDepth = parseFloat(baseSelect);
+            }
+
+            // Default Sand Depth
+            sandDepth = (currentUnit === 'imperial') ? 1 : 25; // 1 inch or 25mm
+
+            // Calculate Quantities
+            let totalPavers = Math.ceil((totalArea / paverArea) * (1 + (wastePercent / 100)));
+
+            let gravelVolume = 0;
+            let sandVolume = 0;
+
+            if (currentUnit === 'imperial') {
+                // Convert inches to feet, then to cubic yards
+                gravelVolume = (totalArea * (baseDepth / 12)) / 27;
+                sandVolume = (totalArea * (sandDepth / 12)) / 27;
+            } else {
+                // Convert mm to meters
+                gravelVolume = totalArea * (baseDepth / 1000);
+                sandVolume = totalArea * (sandDepth / 1000);
+            }
+
+            // Update DOM
+            document.getElementById('result-pavers').innerText = new Intl.NumberFormat('en-US').format(totalPavers);
+            document.getElementById('result-gravel').innerText = gravelVolume.toFixed(2);
+            document.getElementById('result-sand').innerText = sandVolume.toFixed(2);
+            document.getElementById('result-area').innerText = new Intl.NumberFormat('en-US', { maximumFractionDigits: 1 }).format(totalArea);
+        }
+
+        // Attach Event Listeners to Inputs
+        ['input-length', 'input-width', 'input-custom-paver-length', 'input-custom-paver-width', 'input-custom-base'].forEach(id => {
+            document.getElementById(id).addEventListener('input', calculatePavers);
+        });
+    </script>
+
+</body>
+</html>
