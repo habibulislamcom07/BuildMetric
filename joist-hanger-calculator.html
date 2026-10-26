@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Joist Hanger Calculator | How Many Hangers Per Square Foot? (US, UK, AU)</title>
+    <meta name="title" content="Joist Hanger Calculator | How Many Hangers Per Square Foot? (US, UK, AU)">
+    <meta name="description" content="Calculate the exact number of joist hangers, nails, and structural screws needed for your deck or floor framing. Free, engineer-reviewed tool for safe structural connections.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://buildmetric.org/joist-hanger-calculator.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://buildmetric.org/joist-hanger-calculator.html">
+    <meta property="og:title" content="Joist Hanger Calculator | How Many Do You Need?">
+    <meta property="og:description" content="Calculate the exact number of joist hangers, nails, and structural screws needed for your deck or floor framing.">
+    <meta property="og:image" content="https://buildmetric.org/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://buildmetric.org/joist-hanger-calculator.html">
+    <meta property="twitter:title" content="Joist Hanger Calculator | How Many Do You Need?">
+    <meta property="twitter:description" content="Calculate the exact number of joist hangers, nails, and structural screws needed for your deck or floor framing.">
+    <meta property="twitter:image" content="https://buildmetric.org/logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9', // Sky Blue
+                        slate: {
+                            900: '#0f172a', // Dark Slate
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- JSON-LD Schema: WebApplication & Breadcrumbs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://buildmetric.org/joist-hanger-calculator.html#webapp",
+          "name": "Joist Hanger Calculator",
+          "url": "https://buildmetric.org/joist-hanger-calculator.html",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "All",
+          "description": "Professional calculator for estimating joist hanger quantities, nails, and structural screws for decks and floor framing.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://buildmetric.org/joist-hanger-calculator.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://buildmetric.org/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Framing Calculators",
+              "item": "https://buildmetric.org/framing.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Joist Hanger Calculator",
+              "item": "https://buildmetric.org/joist-hanger-calculator.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+
+  <body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-primary selection:text-white flex flex-col min-h-screen">
+
+    <!-- Sticky Glassmorphism Navbar -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+                    <img src="logo.png" alt="BuildMetric Logo" class="h-8 w-auto sm:h-10" onerror="this.style.display='none'">
+                    <div class="flex flex-col">
+                        <span class="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-slate-900 leading-none">
+                            Build<span class="text-primary">Metric</span>
+                        </span>
+                        <span class="text-[10px] text-slate-500 font-semibold tracking-widest uppercase mt-1 hidden sm:block">Engineering Calculators</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="calculators.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">All Tools</a>
+                    <a href="guides.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Guides</a>
+                    <a href="about.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">About</a>
+                    <a href="contact.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Contact</a>
+                </div>
+
+                <!-- Desktop CTA Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="calculators.html" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold text-white transition-all bg-slate-900 rounded-xl hover:bg-slate-800 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900">
+                        Open Tools
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1 sm:px-6">
+                <a href="calculators.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">All Tools</a>
+                <a href="guides.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">Guides</a>
+                <a href="about.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">About</a>
+                <a href="contact.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">Contact</a>
+                <div class="pt-4">
+                    <a href="calculators.html" class="w-full flex justify-center items-center px-4 py-3 text-base font-bold text-white bg-slate-900 rounded-xl hover:bg-slate-800 transition-all shadow-sm">
+                        Open Tools
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <main class="flex-grow">
+        
+        <!-- Breadcrumbs -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2">
+            <nav class="flex text-sm text-slate-500 font-medium" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="index.html" class="inline-flex items-center hover:text-primary transition-colors">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            <a href="framing.html" class="ml-1 md:ml-2 hover:text-primary transition-colors">Framing</a>
+                        </div>
+                    </li>
+                    <li aria-current="page">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            <span class="ml-1 md:ml-2 text-slate-800 font-bold">Joist Hanger Calculator</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+
+      <!-- Phase 3: Calculator UI -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    
+    <!-- Page Heading -->
+    <div class="mb-8 max-w-3xl">
+        <!-- Trust Badge -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-primary text-xs font-bold uppercase tracking-wider mb-4 border border-sky-100">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            Engineer-Reviewed & Code-Compliant
+        </div>
+        
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-slate-900 tracking-tight mb-4">
+            Joist Hanger Calculator <span class="text-primary text-lg md:text-xl font-semibold block mt-2">Exact Hangers, Nails & Screws for Your Deck</span>
+        </h1>
+        <p class="text-base md:text-lg text-slate-600 leading-relaxed">
+            Never guess your hardware again. Calculate the exact number of structural joist hangers, nails, and screws needed to safely secure your deck or floor framing.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Input Form Column -->
+        <div class="lg:col-span-7 xl:col-span-8 bg-white rounded-3xl shadow-sm border border-slate-200 p-5 sm:p-8">
+            
+            <!-- Inputs Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 mb-8">
+                
+                <!-- Joist Size Dropdown -->
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Joist Size (Nominal)</label>
+                    <select id="select-joist-size" class="bg-slate-50 border border-slate-300 text-slate-900 text-base font-medium rounded-xl focus:ring-primary focus:border-primary block w-full p-3 cursor-pointer">
+                        <option value="2x6">2x6 Lumber</option>
+                        <option value="2x8" selected>2x8 Lumber</option>
+                        <option value="2x10">2x10 Lumber</option>
+                        <option value="2x12">2x12 Lumber</option>
+                    </select>
+                    <p class="text-xs text-slate-500 mt-1 font-medium">Determines the hanger model.</p>
+                </div>
+
+                <!-- Joist Spacing Dropdown -->
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Joist Spacing (O.C.)</label>
+                    <select id="select-spacing" class="bg-slate-50 border border-slate-300 text-slate-900 text-base font-medium rounded-xl focus:ring-primary focus:border-primary block w-full p-3 cursor-pointer">
+                        <option value="12">12 inches (O.C.)</option>
+                        <option value="16" selected>16 inches (O.C.)</option>
+                        <option value="24">24 inches (O.C.)</option>
+                    </select>
+                </div>
+
+                <!-- Total Length -->
+                <div class="col-span-1 sm:col-span-2">
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Total Length of Ledger / Beam</label>
+                    <div class="relative">
+                        <input type="number" id="input-length" class="w-full bg-slate-50 border border-slate-300 text-slate-900 text-lg font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" placeholder="e.g. 16" value="16">
+                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                            <span class="text-slate-500 font-bold">feet</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hanger Type Option -->
+                <div class="col-span-1 sm:col-span-2">
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Application Type</label>
+                    <div class="flex gap-4">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="hanger-type" value="standard" class="w-4 h-4 text-primary focus:ring-primary" checked>
+                            <span class="text-sm font-medium text-slate-700">Standard Joists (Face Mount)</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="hanger-type" value="double" class="w-4 h-4 text-primary focus:ring-primary">
+                            <span class="text-sm font-medium text-slate-700">Double Joists / Girders</span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Calculate Button -->
+            <button onclick="calculateHangers()" class="w-full flex items-center justify-center gap-2 bg-primary hover:bg-sky-500 text-white text-lg font-bold py-4 px-4 rounded-xl transition-all shadow-lg shadow-primary/20 mb-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                Calculate Hangers
+            </button>
+            <p class="text-center text-xs text-slate-400 font-medium">Calculates based on standard IRC framing rules.</p>
+
+        </div>
+
+        <!-- Result Box Column -->
+        <div class="lg:col-span-5 xl:col-span-4">
+            <!-- Mobile pe sticky nahi, Desktop pe sticky -->
+            <div class="bg-slate-900 rounded-3xl shadow-xl p-5 sm:p-8 lg:sticky lg:top-24 border border-slate-800">
+                
+                <h2 class="text-lg sm:text-xl font-heading font-bold text-white mb-5 flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    Material List
+                </h2>
+
+                <!-- Main Results Display -->
+                <div class="space-y-3 mb-6">
+                    
+                    <!-- Total Hangers -->
+                    <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                        <p class="text-xs sm:text-sm text-slate-400 font-medium mb-1">Total Joist Hangers</p>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-4xl font-mono font-bold text-white" id="result-hangers">0</span>
+                            <span class="text-sm text-slate-400 font-medium">pieces</span>
+                        </div>
+                    </div>
+
+                    <!-- Suggested Model -->
+                    <div class="bg-sky-900/30 p-4 rounded-xl border border-sky-800/50">
+                        <p class="text-xs sm:text-sm text-sky-200 font-medium mb-1">Recommended Hardware</p>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-xl font-mono font-bold text-white" id="result-model">LUS28</span>
+                            <span class="text-xs text-sky-300 font-medium" id="result-model-desc">(Simpson Strong-Tie or equivalent)</span>
+                        </div>
+                    </div>
+
+                    <!-- Nails/Screws -->
+                    <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                        <p class="text-xs sm:text-sm text-slate-400 font-medium mb-1">Total Nails/Screws Required</p>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-2xl font-mono font-bold text-white" id="result-nails">0</span>
+                            <span class="text-sm text-slate-400 font-medium">fasteners</span>
+                        </div>
+                        <p class="text-[10px] text-slate-500 mt-1 font-medium">Based on 8-10 nails per hanger + 2 per hole.</p>
+                    </div>
+
+                </div>
+
+                <!-- Action Buttons (Blue Theme) -->
+                <div class="grid grid-cols-3 gap-2 sm:gap-3 pt-2">
+                    <button onclick="saveResult()" class="flex flex-col items-center justify-center gap-1 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white py-2.5 sm:py-3 rounded-xl transition-colors border border-slate-700">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg>
+                        <span class="text-[10px] sm:text-xs font-bold">Save</span>
+                    </button>
+                    <button onclick="shareResult()" class="flex flex-col items-center justify-center gap-1 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white py-2.5 sm:py-3 rounded-xl transition-colors border border-slate-700">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                        <span class="text-[10px] sm:text-xs font-bold">Share</span>
+                    </button>
+                    <button onclick="copyResult()" class="flex flex-col items-center justify-center gap-1 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white py-2.5 sm:py-3 rounded-xl transition-colors border border-slate-700">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                        <span class="text-[10px] sm:text-xs font-bold">Copy</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Phase 4: Content Part 1 (Engineering & SEO) -->
+<section class="bg-white border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        
+        <!-- AI Overview / Quick Answer Box -->
+        <div class="bg-sky-50 border-l-4 border-primary p-6 sm:p-8 rounded-r-2xl mb-12 shadow-sm">
+            <h2 class="text-xl font-heading font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Quick Answer: How Many Joist Hangers Do I Need?
+            </h2>
+            <p class="text-slate-700 leading-relaxed font-medium text-lg">
+                You need exactly one joist hanger for every standard joist where it connects to a ledger board, rim joist, or beam. For a typical deck with joists spaced 16 inches on center (O.C.), you will need roughly <strong>1 hanger per 16 inches of ledger length</strong>, plus a few extra for double joists or stair stringers. Our calculator above factors in the length of your ledger, spacing, and application type to give you the exact Bill of Materials (BOM).
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6">The Structural Role of Joist Hangers</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                In deck and floor construction, joist hangers are non-negotiable. A joist hanger is a metal bracket (typically galvanized steel) designed to support the end of a wooden joist, transferring its load to a ledger board or beam. Without proper hangers, joists rely entirely on toe-nailing (driving nails at an angle through the joist into the ledger), which is structurally insufficient and a leading cause of deck collapses.
+            </p>
+            <p>
+                Engineers categorize forces into two main types: <strong>gravity (downward load)</strong> and <strong>shear (lateral force)</strong>. While the decking and joists handle the gravity, the joist hangers are critical for resisting the shear forces—the tendency of the joist to pull away from the house or beam. 
+            </p>
+            <p>
+                Building codes across the globe recognize this. In the US, the <strong>International Residential Code (IRC) R502.6</strong> explicitly requires that joists framing into the side of a wood girder or ledger must be supported by approved metal hangers. In the UK, the <strong>Eurocode 5 (BS EN 1995)</strong> and <strong>BS 5268</strong> outline strict requirements for joist connections to prevent differential movement. Similarly, in Australia, <strong>AS 1684</strong> (Residential timber-framed construction) mandates the use of proprietary metal hangers for framing into ledgers.
+            </p>
+            <p>
+                Using our calculator ensures you order the precise number of hangers, eliminating the risk of running out mid-project (which forces a dangerous work stoppage) or over-ordering expensive hardware. 
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">Face-Mount vs. Top-Flange Hangers</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6 mb-8">
+            <p>
+                When selecting hangers, you must choose between two primary styles. The choice depends on how your ledger or beam is structured:
+            </p>
+            <ul class="list-disc pl-6 space-y-4 my-6">
+                <li>
+                    <strong>Face-Mount Hangers:</strong> These are the most common type for retrofits and standard decks. They attach to the face of the ledger or rim board. They require a specific depth of wood (e.g., a 2x8 joist needs a hanger designed for a 2x8). Our calculator defaults to this type.
+                </li>
+                <li>
+                    <strong>Top-Flange Hangers:</strong> These are used when joists sit flush with the top of a beam (flush beam framing). The hanger wraps over the top of the beam, providing superior load capacity and making the installation of the joist much easier. 
+                </li>
+            </ul>
+            <p>
+                For double joists (often used at the edge of a deck or where a stair stringer attaches), you must use a <strong>double joist hanger</strong> or two standard hangers side-by-side. Our tool automatically adjusts the quantity and suggests the correct hardware based on your selection.
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">Global Fastener Standards: Nails vs. Screws</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6 mb-8">
+            <p>
+                The strongest joist hanger in the world is useless if it's installed with the wrong fasteners. Manufacturer specifications (like Simpson Strong-Tie) and building codes dictate the exact type, length, and quantity of fasteners required.
+            </p>
+            <p>
+                Contrary to popular belief among DIYers, standard deck screws or drywall screws should <strong>never</strong> be used in structural joist hangers. They have low shear strength and will snap under load. You must use either hot-dip galvanized joist hanger nails or structural screws (like Simpson Strong-Tie SD screws) that are specifically rated for hangers.
+            </p>
+        </div>
+
+        <!-- Fastener Table -->
+        <div class="overflow-x-auto shadow-sm rounded-xl border border-slate-200 mb-12">
+            <table class="w-full text-sm text-left text-slate-600">
+                <thead class="text-xs text-slate-700 uppercase bg-slate-100 border-b border-slate-200">
+                    <tr>
+                        <th scope="col" class="px-6 py-4 font-bold">Fastener Type</th>
+                        <th scope="col" class="px-6 py-4 font-bold">USA (IRC)</th>
+                        <th scope="col" class="px-6 py-4 font-bold">UK (BS 5268 / Eurocode 5)</th>
+                        <th scope="col" class="px-6 py-4 font-bold">Australia (AS 1684)</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200">
+                    <tr class="bg-white hover:bg-slate-50 transition-colors">
+                        <th scope="row" class="px-6 py-4 font-semibold text-slate-900 whitespace-nowrap">Standard Nails</th>
+                        <td class="px-6 py-4">10d x 1-1/2" (Joist Hanger Nails)</td>
+                        <td class="px-6 py-4">3.1mm x 75mm Round Wire Nails</td>
+                        <td class="px-6 py-4">30mm x 2.8mm Galvanised Nails</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-slate-50 transition-colors">
+                        <th scope="row" class="px-6 py-4 font-semibold text-slate-900 whitespace-nowrap">Structural Screws</th>
+                        <td class="px-6 py-4">SD #9 x 1-1/2" (or equivalent)</td>
+                        <td class="px-6 py-4">Approved structural wood screws</td>
+                        <td class="px-6 py-4">Type 17 structural screws</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-slate-50 transition-colors">
+                        <th scope="row" class="px-6 py-4 font-semibold text-slate-900 whitespace-nowrap">Hanger Capacity</th>
+                        <td class="px-6 py-4">Must match I-joist or solid sawn size</td>
+                        <td class="px-6 py-4">Must be CE marked for structural use</td>
+                        <td class="px-6 py-4">Must have AS/NZS 2699 compliance</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">How to Calculate Hanger Spacing and Quantity</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                The math to find the total number of joist hangers is relatively straightforward, provided you know your joist spacing. 
+            </p>
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">The Formula</h3>
+            <p>
+                <strong>Number of Hangers = (Ledger Length in inches ÷ Joist Spacing in inches) + 1</strong>
+            </p>
+            <p>
+                <em>Example:</em> If your deck ledger is 16 feet long (192 inches) and your joists are spaced 16 inches on center:
+                <br>
+                192 ÷ 16 = 12 spaces. 
+                <br>
+                You need 12 hangers for the spaces, plus 1 for the end joist. So, you need <strong>13 standard joist hangers</strong>.
+            </p>
+            <p>
+                Our tool automatically converts your feet measurement to inches, performs this calculation, and adds a small waste/breakage margin to ensure you never come up short. If you are installing double joists, simply toggle the "Double Joists" option, and the calculator will automatically double the count for those specific locations.
+            </p>
+            <p>
+                For more framing calculations, check out our <a href="framing-calculator.html" class="text-primary font-semibold hover:underline">framing calculator</a> and <a href="deck-calculator.html" class="text-primary font-semibold hover:underline">deck calculator</a>.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+ <!-- Phase 5: Content Part 2 (Installation, Costing & Conclusion) -->
+<section class="bg-slate-50 border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6">Installation Best Practices: How to Nail a Joist Hanger</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                Installing a joist hanger seems simple—you just hammer in some nails, right? Wrong. A staggering number of deck failures are traced back to improperly installed joist hangers. To ensure your framing meets code and can handle the structural loads, follow these strict engineering guidelines:
+            </p>
+            
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">1. Fill Every Single Hole</h3>
+            <p>
+                Manufactured hangers (like those from Simpson Strong-Tie) are tested with specific fastener patterns. If a hanger has 10 holes, you must fill all 10. Some hangers have "positive placement" holes for a special metal-connector nail gun, and standard round holes for hand-nailing. <strong>Do not skip holes</strong> just because they are hard to reach. Each nail contributes to the hanger's published load capacity.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">2. Do Not Overdrive the Nails</h3>
+            <p>
+                When using a nail gun (pneumatic or gas-powered), it is easy to drive the nail too deep. If the nail head sinks into the steel of the hanger or the wood, the connection loses a significant portion of its shear strength. The nail head must sit flush against the metal. If you overdrive a nail, you must pull it out and replace it with a new one in a different hole (or a slightly larger nail if the hole is stripped).
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">3. The "10d x 1.5-inch" Rule</h3>
+            <p>
+                For standard 2x lumber (which is actually 1.5 inches thick), you must use nails that are long enough to penetrate the ledger board by at least 1.5 inches, but not so long that they poke out the other side. In the US, standard <strong>10d x 1-1/2" joist hanger nails</strong> are specifically designed for this. Never substitute these with 16d framing nails, as the thicker shank can split the wood, and the shorter length provides inadequate grip.
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">Galvanic Corrosion: Why Metal Matters</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                When two dissimilar metals come into contact in the presence of an electrolyte (like moisture), a chemical reaction called <strong>galvanic corrosion</strong> occurs. The weaker metal corrodes rapidly, turning to dust and destroying the structural connection.
+            </p>
+            <p>
+                This is a massive issue in modern deck building because today's pressure-treated lumber (especially in the US and Australia) is treated with <strong>ACQ (Alkaline Copper Quaternary)</strong> or Copper Azole, which are highly corrosive to standard galvanized steel. 
+            </p>
+            <p>
+                <strong>The Solution:</strong> You must match your hardware to your lumber.
+                <ul class="list-disc pl-6 space-y-2 mt-2 mb-4">
+                    <li>If using ACQ-treated lumber, you must use <strong>Hot-Dip Galvanized (HDG)</strong> hangers and fasteners, or stainless steel.</li>
+                    <li>Standard electro-galvanized (G90) hangers will rust away in a few years if used with ACQ wood.</li>
+                    <li>If you are building near saltwater (coastal areas), <strong>Stainless Steel 316</strong> is mandatory for both the hanger and the nails, regardless of the wood treatment.</li>
+                </ul>
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">Common Mistakes to Avoid</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                <strong>1. Hanging off a Cantilevered Ledger:</strong> Joist hangers transfer load downward. If your ledger board is not properly flashed or bolted to the house's rim joist with lag screws or structural through-bolts, the hangers will just pull the ledger off the house. Always ensure the ledger is structurally sound.
+            </p>
+            <p>
+                <strong>2. Using Deck Screws:</strong> Deck screws are brittle and have very low shear strength. They will snap under the weight of a loaded deck. Always use the manufacturer-specified structural nails or structural screws (like Simpson SD screws).
+            </p>
+            <p>
+                <strong>3. Reusing Old Hangers:</strong> If you are renovating a deck and pull off an old hanger, do not reuse it. The nail holes will be stripped, the metal may be fatigued, and the galvanization may be compromised. Always buy new hardware.
+            </p>
+        </div>
+
+        <!-- Conclusion Box -->
+        <div class="mt-16 bg-slate-900 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden shadow-2xl">
+            <!-- Decorative gradient -->
+            <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-primary rounded-full blur-3xl opacity-20"></div>
+            
+            <div class="relative z-10">
+                <h2 class="text-2xl md:text-3xl font-heading font-bold mb-4">Build a Deck You Can Trust</h2>
+                <p class="text-slate-300 leading-relaxed mb-6 text-lg">
+                    Joist hangers are the invisible heroes of your deck's structure. Getting the quantity right, buying the correct galvanized models, and nailing them correctly is the difference between a deck that lasts 30 years and one that becomes a safety hazard.
+                </p>
+                <p class="text-slate-300 leading-relaxed mb-8 text-lg">
+                    By using BuildMetric, you get the exact BOM (Bill of Materials) for your hangers. For a complete material estimate, don't forget to use our Deck Calculator and Framing Calculator.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="deck-calculator.html" class="inline-flex justify-center items-center px-6 py-3.5 text-base font-bold text-slate-900 bg-white rounded-xl hover:bg-slate-100 transition-colors shadow-sm">
+                        Calculate Deck Materials
+                    </a>
+                    <a href="framing-calculator.html" class="inline-flex justify-center items-center px-6 py-3.5 text-base font-bold text-white border border-slate-700 rounded-xl hover:bg-slate-800 transition-colors">
+                        Calculate Joist Spans
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+  <!-- Phase 6: 7 FAQs & JSON-LD Schema -->
+<section class="bg-white border-t border-slate-200 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- FAQ Heading -->
+        <div class="text-center mb-12">
+            <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">Frequently Asked Questions</h2>
+            <h3 class="text-3xl md:text-4xl font-heading font-extrabold text-slate-900">Joist Hanger FAQs</h3>
+            <p class="text-slate-600 mt-4 text-lg font-medium">Direct answers to common questions about hardware, nails, and installation.</p>
+        </div>
+
+        <!-- FAQs List -->
+        <div class="space-y-4">
+            
+            <!-- FAQ 1 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">01</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How many joist hangers do I need per square foot?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    You generally need one hanger for every joist connecting to the ledger. For a deck with joists spaced 16 inches on center (O.C.), this equates to about <strong>0.75 to 1 hanger per linear foot</strong> of the ledger board. To get the exact count for your specific deck length and spacing, use the <a href="#top" class="text-primary font-semibold hover:underline">calculator above</a>.
+                </div>
+            </details>
+
+            <!-- FAQ 2 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">02</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">What kind of nails should I use for joist hangers?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    You must use the manufacturer's specified fasteners. In the US, this is typically <strong>10d x 1-1/2 inch galvanized joist hanger nails</strong>. Alternatively, you can use structural screws (like Simpson Strong-Tie SD screws) rated for hangers. Never use standard deck screws or drywall screws, as they lack the shear strength required for structural connections.
+                </div>
+            </details>
+
+            <!-- FAQ 3 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">03</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">Can I use deck screws instead of nails for joist hangers?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    <strong>No.</strong> Standard deck screws are too brittle and have low shear strength. Under the load of a deck, they can snap, causing the joist to pull away from the ledger. If you prefer screws over nails, you must use specifically engineered structural screws (like Simpson SD screws) that have been tested and approved for use in joist hangers.
+                </div>
+            </details>
+
+            <!-- FAQ 4 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">04</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">What is the difference between face-mount and top-flange hangers?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    <strong>Face-mount hangers</strong> attach to the vertical face of a ledger board or rim joist. They are the most common type for standard deck framing. <strong>Top-flange hangers</strong> wrap over the top of a beam and are used when the joists need to be flush with the top of the beam. Our calculator defaults to standard face-mount sizing, but you can check our <a href="framing-calculator.html" class="text-primary font-semibold hover:underline">framing calculator</a> for more complex layouts.
+                </div>
+            </details>
+
+            <!-- FAQ 5 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">05</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">What size hanger do I need for a 2x10 joist?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    For a nominal 2x10 joist, you need a hanger designed specifically for a 2x10. In the US, this is typically a model like the Simpson Strong-Tie <strong>LUS210</strong>. A hanger for a 2x8 (like the LUS28) will not fit, and a 2x12 hanger will be too loose. Always match the hanger model exactly to your joist size.
+                </div>
+            </details>
+
+            <!-- FAQ 6 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">06</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">Why are my joist hangers rusting so fast?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    You are likely experiencing <strong>galvanic corrosion</strong>. Modern pressure-treated lumber (like ACQ) contains high levels of copper, which is highly corrosive to standard galvanized steel. If you use standard G90 hangers with ACQ wood, they will rust rapidly. You must use <strong>Hot-Dip Galvanized (HDG)</strong> or stainless steel hangers and nails when working with modern treated lumber.
+                </div>
+            </details>
+
+            <!-- FAQ 7 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">07</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">Do I need joist hangers on both sides of a ledger?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    Usually, hangers are only required where the joist connects to the ledger. The other end of the joist typically rests in a beam or on a support post. However, if the joist spans between two ledgers, or if a double joist is required for structural support, you will need hangers on both ends. If you spot a bug in our guide, please <a href="contact.html" class="text-primary font-semibold hover:underline">report it to our team</a>.
+                </div>
+            </details>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- JSON-LD Schema for FAQ Page (Matches HTML Text Exactly) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many joist hangers do I need per square foot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You generally need one hanger for every joist connecting to the ledger. For a deck with joists spaced 16 inches on center (O.C.), this equates to about 0.75 to 1 hanger per linear foot of the ledger board. To get the exact count for your specific deck length and spacing, use the calculator above."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What kind of nails should I use for joist hangers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You must use the manufacturer's specified fasteners. In the US, this is typically 10d x 1-1/2 inch galvanized joist hanger nails. Alternatively, you can use structural screws (like Simpson Strong-Tie SD screws) rated for hangers. Never use standard deck screws or drywall screws, as they lack the shear strength required for structural connections."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use deck screws instead of nails for joist hangers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Standard deck screws are too brittle and have low shear strength. Under the load of a deck, they can snap, causing the joist to pull away from the ledger. If you prefer screws over nails, you must use specifically engineered structural screws (like Simpson SD screws) that have been tested and approved for use in joist hangers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between face-mount and top-flange hangers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Face-mount hangers attach to the vertical face of a ledger board or rim joist. They are the most common type for standard deck framing. Top-flange hangers wrap over the top of a beam and are used when the joists need to be flush with the top of the beam. Our calculator defaults to standard face-mount sizing, but you can check our framing calculator for more complex layouts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What size hanger do I need for a 2x10 joist?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a nominal 2x10 joist, you need a hanger designed specifically for a 2x10. In the US, this is typically a model like the Simpson Strong-Tie LUS210. A hanger for a 2x8 (like the LUS28) will not fit, and a 2x12 hanger will be too loose. Always match the hanger model exactly to your joist size."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are my joist hangers rusting so fast?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You are likely experiencing galvanic corrosion. Modern pressure-treated lumber (like ACQ) contains high levels of copper, which is highly corrosive to standard galvanized steel. If you use standard G90 hangers with ACQ wood, they will rust rapidly. You must use Hot-Dip Galvanized (HDG) or stainless steel hangers and nails when working with modern treated lumber."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need joist hangers on both sides of a ledger?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually, hangers are only required where the joist connects to the ledger. The other end of the joist typically rests in a beam or on a support post. However, if the joist spans between two ledgers, or if a double joist is required for structural support, you will need hangers on both ends. If you spot a bug in our guide, please report it to our team."
+      }
+    }
+  ]
+}
+</script>
+
+  <!-- Phase 7: E-E-A-T Trust Box & Internal Linking -->
+<section class="bg-slate-100/60 py-12 border-t border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div class="flex items-start gap-5">
+                <div class="p-3 bg-primary/10 text-primary rounded-2xl flex-shrink-0">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-heading font-bold text-slate-900 mb-2">About This Calculator</h2>
+                    <p class="text-slate-600 text-sm md:text-base leading-relaxed max-w-2xl font-medium mb-4">
+                        This Joist Hanger Calculator is built on standard structural framing math. It is aligned with IRC R502.6 (US), BS 5268 / Eurocode 5 (UK), and AS 1684 (Australia) guidelines for metal connectors and fastener schedules. We prioritize safety and code compliance to prevent deck failures. If you spot an error in our math, please report it immediately.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <a href="methodology.html" class="text-sm font-bold text-primary hover:text-sky-700 hover:underline flex items-center gap-1.5 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Our Methodology
+                        </a>
+                        <a href="contact.html" class="text-sm font-bold text-slate-500 hover:text-slate-900 hover:underline flex items-center gap-1.5 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                            Report an Error
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Related Tools & Guides -->
+<section class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Related Tools (3) -->
+        <div class="mb-16">
+            <h2 class="text-2xl font-heading font-extrabold text-slate-900 mb-6 flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                Related Calculators
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Tool 1 -->
+                <a href="deck-calculator.html" class="group block p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:bg-white hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="p-2 bg-sky-100 text-primary rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-lg">Deck Calculator</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 font-medium leading-relaxed">Estimate decking boards, joists, beams, and all framing materials for your outdoor project.</p>
+                    <span class="inline-flex items-center gap-1 text-sm font-bold text-primary mt-4">Open Tool <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+                </a>
+                
+                <!-- Tool 2 -->
+                <a href="framing-calculator.html" class="group block p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:bg-white hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="p-2 bg-amber-100 text-amber-600 rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-lg">Framing Calculator</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 font-medium leading-relaxed">Calculate studs, plates, and joists required for walls and structural floor framing.</p>
+                    <span class="inline-flex items-center gap-1 text-sm font-bold text-primary mt-4">Open Tool <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+                </a>
+                
+                <!-- Tool 3 -->
+                <a href="joist-calculator.html" class="group block p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:bg-white hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="p-2 bg-emerald-100 text-emerald-600 rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-lg">Joist Calculator</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 font-medium leading-relaxed">Determine exact joist spans, quantities, and layout spacing for floors and ceilings.</p>
+                    <span class="inline-flex items-center gap-1 text-sm font-bold text-primary mt-4">Open Tool <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Related Guides (3) - Colorful Bento Style -->
+        <div>
+            <h2 class="text-2xl font-heading font-extrabold text-slate-900 mb-6 flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                Recommended Reading
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                
+                <!-- Guide 1 -->
+                <a href="guides/stud-spacing-by-code.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">Stud Spacing by Code: 16" vs 24" O.C.</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Framing • 10 min read</p>
+                    </div>
+                </a>
+                
+                <!-- Guide 2 -->
+                <a href="guides/reading-architectural-drawings.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-600 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">Reading Architectural Drawings for Estimators</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Estimating • 20 min read</p>
+                    </div>
+                </a>
+                
+                <!-- Guide 3 -->
+                <a href="guides/how-to-calculate-rafters.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-emerald-400 to-teal-600 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">How to Calculate Rafter Lengths (Step-by-Step)</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Framing • 15 min read</p>
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+
+    </div>
+</section>
+
+ </main> <!-- Closing the main tag -->
+
+<!-- Phase 8: Compact & Clean 4-Column Footer -->
+<footer class="bg-slate-900 border-t border-slate-800 pt-12 pb-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+            
+            <!-- Brand Col -->
+            <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                <a href="index.html" class="flex items-center gap-2 mb-3">
+                    <span class="font-heading font-extrabold text-xl text-white">Build<span class="text-primary">Metric</span></span>
+                </a>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4 pr-4">
+                    Engineer-reviewed construction calculators for the US, UK, and Australia.
+                </p>
+                <a href="mailto:contact@buildmetric.org" class="text-sm font-medium text-primary hover:text-sky-400 transition-colors flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    contact@buildmetric.org
+                </a>
+            </div>
+
+            <!-- Calculators -->
+            <div>
+                <h3 class="font-heading font-bold text-white mb-4 text-sm">Calculators</h3>
+                <ul class="space-y-2">
+                    <li><a href="roof-pitch-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Roof Pitch</a></li>
+                    <li><a href="concrete-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Concrete Volume</a></li>
+                    <li><a href="framing-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Stud Count</a></li>
+                    <li><a href="paint-coverage-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Paint Coverage</a></li>
+                    <li><a href="calculators.html" class="text-sm font-bold text-primary hover:text-sky-400 transition-colors">All Tools &rarr;</a></li>
+                </ul>
+            </div>
+
+            <!-- Company -->
+            <div>
+                <h3 class="font-heading font-bold text-white mb-4 text-sm">Company</h3>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="text-sm text-slate-400 hover:text-primary transition-colors">About Us</a></li>
+                    <li><a href="guides.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Guides</a></li>
+                    <li><a href="contact.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Contact</a></li>
+                    <li><a href="sitemap.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Sitemap</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal -->
+            <div>
+                <h3 class="font-heading font-bold text-white mb-4 text-sm">Legal</h3>
+                <ul class="space-y-2">
+                    <li><a href="privacy-policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Terms of Use</a></li>
+                    <li><a href="disclaimer.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Disclaimer</a></li>
+                    <li><a href="cookie-policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-3">
+            <p class="text-xs text-slate-500">
+                &copy; <span class="current-year">2026</span> BuildMetric.org. All rights reserved.
+            </p>
+            <p class="text-xs text-slate-500 font-medium">
+                Engineered for US, UK & AU Standards.
+            </p>
+        </div>
+    </div>
+</footer>
+
+      <!-- ========================================== -->
+    <!-- PHASE 9: JAVASCRIPT & CLOSING TAGS         -->
+    <!-- ========================================== -->
+
+    <script>
+        // ==========================================
+        // 1. GLOBAL CORE FUNCTIONS (Save/Share/Copy)
+        // ==========================================
+        
+        function showToast(message) {
+            const existingToast = document.getElementById('bm-toast');
+            if (existingToast) existingToast.remove();
+
+            const toast = document.createElement('div');
+            toast.id = 'bm-toast';
+            toast.className = 'fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-slate-900 text-white px-6 py-3 rounded-xl shadow-2xl z-[100] text-sm font-semibold transition-all duration-300 opacity-0 translate-y-4 flex items-center gap-2';
+            toast.innerHTML = `<svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> ${message}`;
+            
+            document.body.appendChild(toast);
+            setTimeout(() => toast.classList.remove('opacity-0', 'translate-y-4'), 10);
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-4');
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        function copyResult() {
+            const text = `BuildMetric Joist Hanger Results:\nTotal Hangers: ${document.getElementById('result-hangers').innerText}\nRecommended Model: ${document.getElementById('result-model').innerText}\nTotal Fasteners: ${document.getElementById('result-nails').innerText}`;
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('Results copied to clipboard!');
+            }).catch(() => showToast('Failed to copy.'));
+        }
+
+        function saveResult() {
+            const data = {
+                hangers: document.getElementById('result-hangers').innerText,
+                model: document.getElementById('result-model').innerText,
+                nails: document.getElementById('result-nails').innerText,
+                timestamp: new Date().toISOString()
+            };
+            localStorage.setItem('buildmetric_hanger_saved', JSON.stringify(data));
+            showToast('Calculation saved locally!');
+        }
+
+        function shareResult() {
+            const text = `I just calculated my deck hardware using BuildMetric!\nHangers Needed: ${document.getElementById('result-hangers').innerText}\nModel: ${document.getElementById('result-model').innerText}\nNails: ${document.getElementById('result-nails').innerText}`;
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Joist Hanger Results',
+                    text: text,
+                    url: window.location.href
+                }).catch(console.error);
+            } else {
+                navigator.clipboard.writeText(text);
+                showToast('Sharing not supported. Copied instead!');
+            }
+        }
+
+        // ==========================================
+        // 2. JOIST HANGER CALCULATOR LOGIC
+        // ==========================================
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            }
+            
+            // Dynamic Year
+            document.querySelectorAll('.current-year').forEach(el => el.textContent = new Date().getFullYear());
+
+            // Initial Calculation
+            calculateHangers();
+        });
+
+        // Main Calculate Function
+        function calculateHangers() {
+            const lengthFt = parseFloat(document.getElementById('input-length').value) || 0;
+            const spacingIn = parseFloat(document.getElementById('select-spacing').value) || 16;
+            const joistSize = document.getElementById('select-joist-size').value;
+            
+            // Application Type (standard or double)
+            const appType = document.querySelector('input[name="hanger-type"]:checked').value;
+
+            if (lengthFt <= 0) return;
+
+            // Convert length to inches
+            const lengthIn = lengthFt * 12;
+
+            // Math: Number of spaces + 1 for the end joist
+            let totalHangers = Math.floor(lengthIn / spacingIn) + 1;
+
+            // If double joists are selected, multiply by 2 (assuming entire ledger is double)
+            if (appType === 'double') {
+                totalHangers = totalHangers * 2;
+            }
+
+            // Determine Hardware Model
+            let model = '';
+            if (joistSize === '2x6') model = 'LUS26';
+            if (joistSize === '2x8') model = 'LUS28';
+            if (joistSize === '2x10') model = 'LUS210';
+            if (joistSize === '2x12') model = 'LUS212';
+
+            // Calculate Fasteners (Assume 8 nails/screws per standard hanger face)
+            // Double hangers typically require 16 fasteners (8 per side)
+            let fasteners = totalHangers * 8;
+
+            // Update DOM
+            document.getElementById('result-hangers').innerText = totalHangers;
+            document.getElementById('result-model').innerText = model;
+            document.getElementById('result-nails').innerText = fasteners;
+        }
+
+        // Attach Event Listeners to Inputs
+        document.getElementById('input-length').addEventListener('input', calculateHangers);
+        document.getElementById('select-joist-size').addEventListener('change', calculateHangers);
+        document.getElementById('select-spacing').addEventListener('change', calculateHangers);
+        
+        document.querySelectorAll('input[name="hanger-type"]').forEach(radio => {
+            radio.addEventListener('change', calculateHangers);
+        });
+    </script>
+
+</body>
+</html>
