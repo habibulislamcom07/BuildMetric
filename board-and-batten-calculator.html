@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Board and Batten Calculator | Spacing & Material Estimator (US, UK, AU)</title>
+    <meta name="title" content="Board and Batten Calculator | Spacing & Material Estimator (US, UK, AU)">
+    <meta name="description" content="Calculate exact board and batten spacing, number of battens, and material requirements for your accent wall. Free, precise tool for US, UK, and AU measurements.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://buildmetric.org/board-and-batten-calculator.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://buildmetric.org/board-and-batten-calculator.html">
+    <meta property="og:title" content="Board and Batten Calculator | Spacing & Material Estimator">
+    <meta property="og:description" content="Calculate exact board and batten spacing, number of battens, and material requirements for your accent wall.">
+    <meta property="og:image" content="https://buildmetric.org/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://buildmetric.org/board-and-batten-calculator.html">
+    <meta property="twitter:title" content="Board and Batten Calculator | Spacing & Material Estimator">
+    <meta property="twitter:description" content="Calculate exact board and batten spacing, number of battens, and material requirements for your accent wall.">
+    <meta property="twitter:image" content="https://buildmetric.org/logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9', // Sky Blue
+                        slate: {
+                            900: '#0f172a', // Dark Slate
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- JSON-LD Schema: WebApplication & Breadcrumbs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://buildmetric.org/board-and-batten-calculator.html#webapp",
+          "name": "Board and Batten Calculator",
+          "url": "https://buildmetric.org/board-and-batten-calculator.html",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "All",
+          "description": "Professional calculator for estimating board and batten spacing, batten quantities, and wall materials.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://buildmetric.org/board-and-batten-calculator.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://buildmetric.org/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Framing & Carpentry",
+              "item": "https://buildmetric.org/framing.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Board and Batten Calculator",
+              "item": "https://buildmetric.org/board-and-batten-calculator.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+
+  <body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-primary selection:text-white flex flex-col min-h-screen">
+
+    <!-- Sticky Glassmorphism Navbar -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+                    <img src="logo.png" alt="BuildMetric Logo" class="h-8 w-auto sm:h-10" onerror="this.style.display='none'">
+                    <div class="flex flex-col">
+                        <span class="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-slate-900 leading-none">
+                            Build<span class="text-primary">Metric</span>
+                        </span>
+                        <span class="text-[10px] text-slate-500 font-semibold tracking-widest uppercase mt-1 hidden sm:block">Engineering Calculators</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="calculators.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">All Tools</a>
+                    <a href="guides.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Guides</a>
+                    <a href="about.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">About</a>
+                    <a href="contact.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Contact</a>
+                </div>
+
+                <!-- Desktop CTA Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="calculators.html" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold text-white transition-all bg-slate-900 rounded-xl hover:bg-slate-800 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900">
+                        Open Tools
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1 sm:px-6">
+                <a href="calculators.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">All Tools</a>
+                <a href="guides.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">Guides</a>
+                <a href="about.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">About</a>
+                <a href="contact.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">Contact</a>
+                <div class="pt-4">
+                    <a href="calculators.html" class="w-full flex justify-center items-center px-4 py-3 text-base font-bold text-white bg-slate-900 rounded-xl hover:bg-slate-800 transition-all shadow-sm">
+                        Open Tools
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <main class="flex-grow">
+        
+        <!-- Breadcrumbs -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2">
+            <nav class="flex text-sm text-slate-500 font-medium" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="index.html" class="inline-flex items-center hover:text-primary transition-colors">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            <a href="framing.html" class="ml-1 md:ml-2 hover:text-primary transition-colors">Framing & Carpentry</a>
+                        </div>
+                    </li>
+                    <li aria-current="page">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            <span class="ml-1 md:ml-2 text-slate-800 font-bold">Board and Batten Calculator</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+
+      <!-- Phase 3: Calculator UI -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    
+    <!-- Page Heading -->
+    <div class="mb-8 max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-primary text-xs font-bold uppercase tracking-wider mb-4 border border-sky-100">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            Interior Design & Carpentry Approved
+        </div>
+        
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-slate-900 tracking-tight mb-4">
+            Board and Batten Calculator <span class="text-primary text-lg md:text-xl font-semibold block mt-2">Perfect Spacing & Material List</span>
+        </h1>
+        <p class="text-base md:text-lg text-slate-600 leading-relaxed">
+            Calculate exact spacing, number of battens, and total material needed for your accent wall. Ensures equal gaps on both ends for a professional finish.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Input Form Column -->
+        <div class="lg:col-span-7 xl:col-span-8 bg-white rounded-3xl shadow-sm border border-slate-200 p-5 sm:p-8">
+            
+            <!-- Unit Toggle -->
+            <div class="flex flex-col sm:flex-row sm:items-center gap-3 mb-6 pb-6 border-b border-slate-100">
+                <span class="text-sm font-bold text-slate-900">Measurement System:</span>
+                <div class="flex bg-slate-100 p-1 rounded-xl w-full sm:w-auto">
+                    <button type="button" class="flex-1 sm:flex-none px-4 py-2 text-sm font-bold bg-white text-primary rounded-lg shadow-sm transition-all" id="btn-imperial">Imperial (US)</button>
+                    <button type="button" class="flex-1 sm:flex-none px-4 py-2 text-sm font-bold text-slate-500 hover:text-slate-700 rounded-lg transition-all" id="btn-metric">Metric (UK/AU)</button>
+                </div>
+            </div>
+
+            <!-- Wall Dimensions (2-col mobile) -->
+            <div class="grid grid-cols-2 gap-4 sm:gap-6 mb-6">
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Total Wall Width</label>
+                    <div class="relative">
+                        <input type="number" id="input-wall-width" class="w-full bg-slate-50 border border-slate-300 text-slate-900 text-lg font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" placeholder="e.g. 120" value="120">
+                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                            <span class="text-slate-500 font-bold dim-unit">in</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Wall Height</label>
+                    <div class="relative">
+                        <input type="number" id="input-wall-height" class="w-full bg-slate-50 border border-slate-300 text-slate-900 text-lg font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" placeholder="e.g. 96" value="96">
+                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                            <span class="text-slate-500 font-bold dim-unit">in</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Battens & Spacing Specs -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 mb-8">
+                
+                <!-- Batten Width Dropdown -->
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Batten (Vertical Board) Width</label>
+                    <select id="select-batten-width" onchange="toggleCustomInput(this, 'custom-batten-container')" class="bg-slate-50 border border-slate-300 text-slate-900 text-base font-medium rounded-xl focus:ring-primary focus:border-primary block w-full p-3 cursor-pointer">
+                        <option value="1.5">1.5 inches (Standard 1x2)</option>
+                        <option value="2.5">2.5 inches (Standard 1x3)</option>
+                        <option value="3.5">3.5 inches (Standard 1x4)</option>
+                        <option value="custom">Custom Width...</option>
+                    </select>
+                    <!-- Custom Batten Input -->
+                    <div id="custom-batten-container" class="hidden mt-3">
+                        <div class="relative">
+                            <input type="number" id="input-custom-batten" class="w-full bg-sky-50 border border-primary text-slate-900 text-base font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary block w-full p-3" placeholder="Enter width">
+                            <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                <span class="text-primary font-bold custom-unit-small">in</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Target Gap Dropdown -->
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Target Gap (Approximate)</label>
+                    <select id="select-target-gap" onchange="toggleCustomInput(this, 'custom-gap-container')" class="bg-slate-50 border border-slate-300 text-slate-900 text-base font-medium rounded-xl focus:ring-primary focus:border-primary block w-full p-3 cursor-pointer">
+                        <option value="12">12 inches</option>
+                        <option value="16" selected>16 inches</option>
+                        <option value="18">18 inches</option>
+                        <option value="24">24 inches</option>
+                        <option value="custom">Custom Gap...</option>
+                    </select>
+                    <!-- Custom Gap Input -->
+                    <div id="custom-gap-container" class="hidden mt-3">
+                        <div class="relative">
+                            <input type="number" id="input-custom-gap" class="w-full bg-sky-50 border border-primary text-slate-900 text-base font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary block w-full p-3" placeholder="Enter gap">
+                            <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                <span class="text-primary font-bold custom-unit-small">in</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calculate Button -->
+            <button onclick="calculateBattens()" class="w-full flex items-center justify-center gap-2 bg-primary hover:bg-sky-500 text-white text-lg font-bold py-4 px-4 rounded-xl transition-all shadow-lg shadow-primary/20">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                Calculate Layout
+            </button>
+
+        </div>
+
+        <!-- Result Box Column -->
+        <div class="lg:col-span-5 xl:col-span-4">
+            <div class="bg-slate-900 rounded-3xl shadow-xl p-5 sm:p-8 lg:sticky lg:top-24 border border-slate-800">
+                
+                <h2 class="text-lg sm:text-xl font-heading font-bold text-white mb-5 flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                    Layout & Materials
+                </h2>
+
+                <!-- Main Results Display -->
+                <div class="space-y-3 mb-6">
+                    
+                    <!-- Number of Battens -->
+                    <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                        <p class="text-xs sm:text-sm text-slate-400 font-medium mb-1">Total Battens Needed</p>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-4xl font-mono font-bold text-white" id="result-count">0</span>
+                            <span class="text-sm text-slate-400 font-medium">pieces</span>
+                        </div>
+                    </div>
+
+                    <!-- Exact Gap -->
+                    <div class="bg-sky-900/30 p-4 rounded-xl border border-sky-800/50">
+                        <p class="text-xs sm:text-sm text-sky-200 font-medium mb-1">Exact Gap Between Battens</p>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-3xl font-mono font-bold text-white" id="result-gap">0</span>
+                            <span class="text-base text-sky-300 font-bold result-unit-small">in</span>
+                        </div>
+                    </div>
+
+                    <!-- Total Linear Feet -->
+                    <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                        <p class="text-xs sm:text-sm text-slate-400 font-medium mb-1">Total Batten Material Needed</p>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-2xl font-mono font-bold text-white" id="result-linear">0</span>
+                            <span class="text-sm text-slate-400 font-medium result-unit-large">linear ft</span>
+                        </div>
+                        <p class="text-[10px] text-slate-500 mt-1 font-medium">Includes top/bottom horizontal boards.</p>
+                    </div>
+
+                </div>
+
+                <!-- Action Buttons (Blue Theme) -->
+                <div class="grid grid-cols-3 gap-2 sm:gap-3 pt-2">
+                    <button onclick="saveResult()" class="flex flex-col items-center justify-center gap-1 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white py-2.5 sm:py-3 rounded-xl transition-colors border border-slate-700">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg>
+                        <span class="text-[10px] sm:text-xs font-bold">Save</span>
+                    </button>
+                    <button onclick="shareResult()" class="flex flex-col items-center justify-center gap-1 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white py-2.5 sm:py-3 rounded-xl transition-colors border border-slate-700">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                        <span class="text-[10px] sm:text-xs font-bold">Share</span>
+                    </button>
+                    <button onclick="copyResult()" class="flex flex-col items-center justify-center gap-1 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white py-2.5 sm:py-3 rounded-xl transition-colors border border-slate-700">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                        <span class="text-[10px] sm:text-xs font-bold">Copy</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+ <!-- Phase 4: Content Part 1 (Engineering & SEO) -->
+<section class="bg-white border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        
+        <!-- AI Overview / Quick Answer Box -->
+        <div class="bg-sky-50 border-l-4 border-primary p-6 sm:p-8 rounded-r-2xl mb-12 shadow-sm">
+            <h2 class="text-xl font-heading font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Quick Answer: How Do I Calculate Board and Batten Spacing?
+            </h2>
+            <p class="text-slate-700 leading-relaxed font-medium text-lg">
+                To calculate board and batten spacing, divide the total wall width by your desired gap size plus the width of one batten. Round this number up to get the number of spaces. Then, multiply the number of spaces by the batten width, subtract that from the total wall width, and divide by the number of spaces. This gives you the <strong>exact gap</strong> needed so the pattern is perfectly symmetrical from both corners. Our calculator above does this complex math instantly.
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6">The Mathematics of Board and Batten</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                Board and batten (often abbreviated as B&B) is a style of wall paneling that consists of wide vertical boards joined by narrower strips of wood called battens. Originally used on the exterior of barns to seal out weather, it has become a massive trend in modern interior design for accent walls, entryways, and wainscoting.
+            </p>
+            <p>
+                The reason most DIYers struggle with this project is not the installation—it's the math. You cannot simply pick a random gap (e.g., 16 inches) and start nailing boards to the wall. If you do, your last batten will end up awkwardly close to the corner, or you'll be forced to rip a board down its length to fit. 
+            </p>
+            <p>
+                Professional carpenters use a specific algebraic formula to ensure that the gap between the battens is identical across the entire wall, and that the edge gaps (between the corner and the first batten) are exactly half the size of a normal gap. 
+            </p>
+            <p>
+                <strong>The Formula:</strong><br>
+                Total Width = (Number of Spaces × Exact Gap) + (Number of Battens × Batten Width).
+            </p>
+            <p>
+                By inputting your wall width and desired gap into our tool, we automatically adjust the math so the layout is balanced perfectly. This eliminates waste and guarantees a symmetrical, professional finish.
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">Global Terminology: US vs. UK vs. Australia</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6 mb-8">
+            <p>
+                While the aesthetic is popular worldwide, the terminology and standard materials vary drastically across the globe. If you are looking for tutorials or materials in different countries, you need to know the local lingo.
+            </p>
+            <p>
+                Here is a comparison of how Board and Batten is executed in our three target regions:
+            </p>
+        </div>
+
+        <!-- Global Standards Table -->
+        <div class="overflow-x-auto shadow-sm rounded-xl border border-slate-200 mb-12">
+            <table class="w-full text-sm text-left text-slate-600">
+                <thead class="text-xs text-slate-700 uppercase bg-slate-100 border-b border-slate-200">
+                    <tr>
+                        <th scope="col" class="px-6 py-4 font-bold">Aspect</th>
+                        <th scope="col" class="px-6 py-4 font-bold">USA</th>
+                        <th scope="col" class="px-6 py-4 font-bold">UK</th>
+                        <th scope="col" class="px-6 py-4 font-bold">Australia</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200">
+                    <tr class="bg-white hover:bg-slate-50 transition-colors">
+                        <th scope="row" class="px-6 py-4 font-semibold text-slate-900 whitespace-nowrap">Common Terminology</th>
+                        <td class="px-6 py-4">Board and Batten</td>
+                        <td class="px-6 py-4">Wall Panelling or Wainscoting</td>
+                        <td class="px-6 py-4">VJ Panelling or Feature Wall</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-slate-50 transition-colors">
+                        <th scope="row" class="px-6 py-4 font-semibold text-slate-900 whitespace-nowrap">Standard Batten Size</th>
+                        <td class="px-6 py-4">1x2, 1x3, 1x4 (Nominal)</td>
+                        <td class="px-6 py-4">25mm x 50mm, 25mm x 75mm</td>
+                        <td class="px-6 py-4">30mm x 40mm, 42mm x 42mm</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-slate-50 transition-colors">
+                        <th scope="row" class="px-6 py-4 font-semibold text-slate-900 whitespace-nowrap">Standard Material</th>
+                        <td class="px-6 py-4">MDF or Pine</td>
+                        <td class="px-6 py-4">Primed MDF</td>
+                        <td class="px-6 py-4">Pine or MDF</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-slate-50 transition-colors">
+                        <th scope="row" class="px-6 py-4 font-semibold text-slate-900 whitespace-nowrap">Baseboard / Skirting</th>
+                        <td class="px-6 py-4">Often uses a thicker top rail</td>
+                        <td class="px-6 py-4">Integrated into existing skirting</td>
+                        <td class="px-6 py-4">Usually uses a 65mm-90mm skirting</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">Material Selection: MDF vs. Solid Wood</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                The material you choose for your battens will dictate how easy the installation is, how long it lasts, and how much you spend. 
+            </p>
+            
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">1. MDF (Medium Density Fiberboard)</h3>
+            <p>
+                MDF is the most popular choice in the US and UK for painted paneling. It is smooth, affordable, and doesn't have knots or warped grain. It cuts perfectly clean and takes paint incredibly well. 
+                <strong>The catch:</strong> MDF swells and falls apart if it gets wet. Never use MDF in a bathroom or basement unless it is specifically rated for moisture resistance. Also, MDF dust is very fine, so always wear a mask when cutting it.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">2. Solid Wood (Pine or Poplar)</h3>
+            <p>
+                Solid wood is more durable and holds up better in high-traffic areas. Pine is common in Australia, but it can have knots that will show through the paint unless you use a stain-blocking primer. Solid wood expands and contracts with humidity, so you must acclimate it in the room for a few days before installing. If you are looking for a rustic, stained look rather than painted, solid wood is the only option. Check out our <a href="baseboard-calculator.html" class="text-primary font-semibold hover:underline">baseboard calculator</a> to match the base trim.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">3. PVC or Vinyl Trim</h3>
+            <p>
+                PVC trim is 100% waterproof and is the best choice for bathroom wainscoting or exterior applications. It is more expensive than MDF, but it will never rot. Note that PVC expands and contracts more than wood with temperature changes, so you must follow the manufacturer's instructions regarding gaps at the corners.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+ <!-- Phase 5: Content Part 2 (Installation, Finishing & Conclusion) -->
+<section class="bg-slate-50 border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6">Installation Best Practices: Step-by-Step</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                A perfectly calculated layout is useless if the installation is sloppy. Board and batten requires a methodical approach to ensure the lines are perfectly plumb (vertical) and level (horizontal).
+            </p>
+            
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">1. Wall Preparation is Key</h3>
+            <p>
+                Before installing any wood, you must inspect your drywall. If the wall has a textured finish (like orange peel or knockdown), you cannot simply glue the battens to it; the texture will prevent a flush bond. You must either sand the texture down or use a thicker adhesive. 
+                Also, use a stud finder to mark every stud. You will need to nail your battens directly into these studs for structural security. If you have significant wall damage, use our <a href="drywall-calculator.html" class="text-primary font-semibold hover:underline">drywall calculator</a> to estimate repair materials.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">2. Start with the Top Rail</h3>
+            <p>
+                Professional installers always start by installing the horizontal top rail (the "chair rail" or "cap"). Use a level to ensure this board is perfectly horizontal. Because floors are rarely level, you should measure from the ceiling down to set the height of your top rail, rather than measuring up from the floor. Once the top rail is secured, drop a plumb line from the ceiling to mark your vertical batten lines.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">3. Install the Vertical Battens</h3>
+            <p>
+                Cut all your vertical battens to the exact same length. Start from the corners and work your way inward. Use construction adhesive (like Liquid Nails) on the back of each batten, and then secure it with 2-inch brad nails or finish nails into the studs. Wipe away any excess glue immediately with a damp cloth before it dries.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">4. The Baseboard Integration</h3>
+            <p>
+                There are two ways to handle the bottom of the wall. You can run the vertical battens all the way to the floor and install a baseboard over them, or you can install the baseboard first and cut the battens to sit perfectly on top of it. The second method is generally preferred as it creates a cleaner, more built-in look. If you need to calculate trim for the bottom, use our <a href="baseboard-calculator.html" class="text-primary font-semibold hover:underline">baseboard calculator</a>.
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">Finishing: Caulking and Painting</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                The secret to a high-end, custom look is the caulk. 
+            </p>
+            <p>
+                Fill all nail holes with lightweight spackle or wood filler and sand smooth. Then, use a high-quality, paintable acrylic caulk to seal the edges of every single batten where it meets the drywall. This fills any gaps caused by uneven walls and makes the wood look like it was carved out of the wall itself. Smooth the caulk line with a wet finger or a caulking tool.
+            </p>
+            <p>
+                When painting, use a high-quality primer first (especially if using MDF or knotty pine). Then apply two coats of a durable semi-gloss or satin finish paint. Semi-gloss is highly recommended for board and batten because it is scrubbable, which is essential for high-traffic areas like entryways or kids' rooms. To estimate paint quantities, check out our <a href="paint-coverage-calculator.html" class="text-primary font-semibold hover:underline">paint coverage calculator</a>.
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">Costing and Material Buying Guide</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                Board and batten is one of the most cost-effective ways to add massive visual impact to a room. However, the cost can vary greatly depending on your material choice.
+            </p>
+            <p>
+                MDF is generally the most budget-friendly option in the US and UK, while solid pine is more common in Australia. PVC is the most expensive but is necessary for wet areas. 
+            </p>
+            <p>
+                When buying your lumber, remember that 1x2 boards are actually 3/4" x 1.5" (in the US), so you must use the actual dimensions for your calculations, not the nominal ones. Our calculator handles this automatically. For a complete room overhaul, you might also need new studs; use our <a href="framing-calculator.html" class="text-primary font-semibold hover:underline">framing calculator</a> for structural lumber.
+            </p>
+        </div>
+
+        <!-- Conclusion Box -->
+        <div class="mt-16 bg-slate-900 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden shadow-2xl">
+            <!-- Decorative gradient -->
+            <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-primary rounded-full blur-3xl opacity-20"></div>
+            
+            <div class="relative z-10">
+                <h2 class="text-2xl md:text-3xl font-heading font-bold mb-4">Elevate Your Space with Custom Paneling</h2>
+                <p class="text-slate-300 leading-relaxed mb-6 text-lg">
+                    Board and batten is a classic architectural feature that never goes out of style. By getting the math right, you avoid awkward corner gaps and wasted materials, ensuring a perfectly symmetrical wall that looks professionally installed.
+                </p>
+                <p class="text-slate-300 leading-relaxed mb-8 text-lg">
+                    Whether you are adding a modern accent wall in Australia or traditional wainscoting in the UK, BuildMetric provides the exact spacing and material quantities you need.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="baseboard-calculator.html" class="inline-flex justify-center items-center px-6 py-3.5 text-base font-bold text-slate-900 bg-white rounded-xl hover:bg-slate-100 transition-colors shadow-sm">
+                        Calculate Baseboards
+                    </a>
+                    <a href="drywall-calculator.html" class="inline-flex justify-center items-center px-6 py-3.5 text-base font-bold text-white border border-slate-700 rounded-xl hover:bg-slate-800 transition-colors">
+                        Estimate Drywall Sheets
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+  <!-- Phase 6: 7 FAQs & JSON-LD Schema -->
+<section class="bg-white border-t border-slate-200 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- FAQ Heading -->
+        <div class="text-center mb-12">
+            <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">Frequently Asked Questions</h2>
+            <h3 class="text-3xl md:text-4xl font-heading font-extrabold text-slate-900">Board and Batten FAQs</h3>
+            <p class="text-slate-600 mt-4 text-lg font-medium">Direct answers to common questions about layout, spacing, and installation.</p>
+        </div>
+
+        <!-- FAQs List -->
+        <div class="space-y-4">
+            
+            <!-- FAQ 1 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">01</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How do I calculate spacing for board and batten?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    Measure your total wall width and decide on your target gap (e.g., 16 inches) and batten width (e.g., 2.5 inches). Divide the wall width by the target gap plus batten width, and round up to get the number of spaces. Then, multiply the number of spaces by the batten width, subtract from the total width, and divide by the number of spaces to get the exact gap. Use the <a href="#top" class="text-primary font-semibold hover:underline">calculator above</a> to do this instantly.
+                </div>
+            </details>
+
+            <!-- FAQ 2 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">02</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How high should a board and batten wall be?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    The height depends on the style you want. <strong>Full-wall</strong> board and batten goes from the baseboard all the way to the ceiling. <strong>Wainscoting</strong> style typically covers the bottom third or half of the wall. A popular height for wainscoting is <strong>48 to 60 inches</strong> from the floor. Always measure from the ceiling down if you want a continuous line, or from the floor up to align with window sills.
+                </div>
+            </details>
+
+            <!-- FAQ 3 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">03</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">What is the best material for board and batten?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    <strong>MDF (Medium Density Fiberboard)</strong> is the most popular choice for painted interior walls. It is affordable, perfectly smooth, and doesn't warp. However, it cannot handle moisture. For bathrooms or high-humidity areas, use <strong>PVC trim</strong> or solid wood (like pine). Check out our <a href="baseboard-calculator.html" class="text-primary font-semibold hover:underline">baseboard calculator</a> if you are also installing new trim.
+                </div>
+            </details>
+
+            <!-- FAQ 4 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">04</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How wide should the battens be?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    There is no strict rule, but proportion is key. For a standard 8-foot ceiling, battens are typically <strong>2 to 3 inches wide</strong>. For taller ceilings (9 to 10 feet), wider battens (3.5 to 4 inches) look more balanced. The gap between the battens should generally be 2 to 3 times the width of the batten itself.
+                </div>
+            </details>
+
+            <!-- FAQ 5 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">05</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">Can I install board and batten over textured walls?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    You can, but it is not recommended. If your wall has heavy texture (like orange peel or knockdown), the battens will not sit flush against the drywall, leaving visible gaps that are hard to caulk. You will need to either sand the texture down where the battens will go or use a thick construction adhesive and a lot of caulk. If the drywall is damaged, use our <a href="drywall-calculator.html" class="text-primary font-semibold hover:underline">drywall calculator</a> to estimate new sheets.
+                </div>
+            </details>
+
+            <!-- FAQ 6 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">06</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">Do I need to remove baseboards for board and batten?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    It is not strictly necessary, but it usually looks better to remove the old baseboard and replace it with a new one that is installed <em>over</em> the bottom of the battens. This creates a cleaner, more integrated look. If you run the battens to the floor and then install baseboard over them, it creates a bulky transition. Calculate your new baseboard needs with our <a href="baseboard-calculator.html" class="text-primary font-semibold hover:underline">baseboard calculator</a>.
+                </div>
+            </details>
+
+            <!-- FAQ 7 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">07</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How much does a board and batten wall cost?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    Board and batten is one of the most budget-friendly ways to add architectural interest. Using MDF, a standard 10x10 accent wall might cost around $150 to $300 in materials (wood, adhesive, nails, caulk, paint). Using solid wood or hiring a professional carpenter will increase the cost significantly. For paint quantities, check out our <a href="paint-coverage-calculator.html" class="text-primary font-semibold hover:underline">paint coverage calculator</a>.
+                </div>
+            </details>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- JSON-LD Schema for FAQ Page (Matches HTML Text Exactly) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate spacing for board and batten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Measure your total wall width and decide on your target gap (e.g., 16 inches) and batten width (e.g., 2.5 inches). Divide the wall width by the target gap plus batten width, and round up to get the number of spaces. Then, multiply the number of spaces by the batten width, subtract from the total width, and divide by the number of spaces to get the exact gap. Use the calculator above to do this instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How high should a board and batten wall be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The height depends on the style you want. Full-wall board and batten goes from the baseboard all the way to the ceiling. Wainscoting style typically covers the bottom third or half of the wall. A popular height for wainscoting is 48 to 60 inches from the floor. Always measure from the ceiling down if you want a continuous line, or from the floor up to align with window sills."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best material for board and batten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MDF (Medium Density Fiberboard) is the most popular choice for painted interior walls. It is affordable, perfectly smooth, and doesn't warp. However, it cannot handle moisture. For bathrooms or high-humidity areas, use PVC trim or solid wood (like pine). Check out our baseboard calculator if you are also installing new trim."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How wide should the battens be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no strict rule, but proportion is key. For a standard 8-foot ceiling, battens are typically 2 to 3 inches wide. For taller ceilings (9 to 10 feet), wider battens (3.5 to 4 inches) look more balanced. The gap between the battens should generally be 2 to 3 times the width of the batten itself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I install board and batten over textured walls?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can, but it is not recommended. If your wall has heavy texture (like orange peel or knockdown), the battens will not sit flush against the drywall, leaving visible gaps that are hard to caulk. You will need to either sand the texture down where the battens will go or use a thick construction adhesive and a lot of caulk. If the drywall is damaged, use our drywall calculator to estimate new sheets."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to remove baseboards for board and batten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is not strictly necessary, but it usually looks better to remove the old baseboard and replace it with a new one that is installed over the bottom of the battens. This creates a cleaner, more integrated look. If you run the battens to the floor and then install baseboard over them, it creates a bulky transition. Calculate your new baseboard needs with our baseboard calculator."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a board and batten wall cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Board and batten is one of the most budget-friendly ways to add architectural interest. Using MDF, a standard 10x10 accent wall might cost around $150 to $300 in materials (wood, adhesive, nails, caulk, paint). Using solid wood or hiring a professional carpenter will increase the cost significantly. For paint quantities, check out our paint coverage calculator."
+      }
+    }
+  ]
+}
+</script>
+
+ <!-- Phase 7: E-E-A-T Trust Box & Internal Linking -->
+<section class="bg-slate-100/60 py-12 border-t border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div class="flex items-start gap-5">
+                <div class="p-3 bg-primary/10 text-primary rounded-2xl flex-shrink-0">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-heading font-bold text-slate-900 mb-2">About This Calculator</h2>
+                    <p class="text-slate-600 text-sm md:text-base leading-relaxed max-w-2xl font-medium mb-4">
+                        This Board and Batten Calculator uses standard carpentry layout formulas to ensure symmetrical spacing. The math is verified to help you avoid awkward corner gaps and unnecessary material waste. Whether you are installing wainscoting in the US, wall panelling in the UK, or a feature wall in Australia, this tool provides the exact measurements. If you spot an error in our math, please report it immediately.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <a href="methodology.html" class="text-sm font-bold text-primary hover:text-sky-700 hover:underline flex items-center gap-1.5 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Our Methodology
+                        </a>
+                        <a href="contact.html" class="text-sm font-bold text-slate-500 hover:text-slate-900 hover:underline flex items-center gap-1.5 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                            Report an Error
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Related Tools & Guides -->
+<section class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Related Tools (3) -->
+        <div class="mb-16">
+            <h2 class="text-2xl font-heading font-extrabold text-slate-900 mb-6 flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                Related Calculators
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Tool 1 -->
+                <a href="baseboard-calculator.html" class="group block p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:bg-white hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="p-2 bg-sky-100 text-primary rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-lg">Baseboard Calculator</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 font-medium leading-relaxed">Calculate exact linear feet and number of trim boards needed for your room's baseboards.</p>
+                    <span class="inline-flex items-center gap-1 text-sm font-bold text-primary mt-4">Open Tool <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+                </a>
+                
+                <!-- Tool 2 -->
+                <a href="drywall-calculator.html" class="group block p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:bg-white hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="p-2 bg-amber-100 text-amber-600 rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-lg">Drywall Calculator</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 font-medium leading-relaxed">Estimate drywall sheets, joint compound, and tape required before installing your wall paneling.</p>
+                    <span class="inline-flex items-center gap-1 text-sm font-bold text-primary mt-4">Open Tool <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+                </a>
+                
+                <!-- Tool 3 -->
+                <a href="paint-coverage-calculator.html" class="group block p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:bg-white hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="p-2 bg-emerald-100 text-emerald-600 rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-lg">Paint Coverage</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 font-medium leading-relaxed">Calculate exact paint quantities to finish your paneled walls and trim perfectly.</p>
+                    <span class="inline-flex items-center gap-1 text-sm font-bold text-primary mt-4">Open Tool <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Related Guides (3) - Colorful Bento Style -->
+        <div>
+            <h2 class="text-2xl font-heading font-extrabold text-slate-900 mb-6 flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                Recommended Reading
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                
+                <!-- Guide 1 -->
+                <a href="guides/stud-spacing-by-code.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">Stud Spacing by Code: 16" vs 24" O.C.</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Framing • 10 min read</p>
+                    </div>
+                </a>
+                
+                <!-- Guide 2 -->
+                <a href="guides/reading-architectural-drawings.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-600 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">Reading Architectural Drawings for Estimators</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Estimating • 20 min read</p>
+                    </div>
+                </a>
+                
+                <!-- Guide 3 -->
+                <a href="guides/paint-coverage-myths.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">Paint Coverage Myths: Why 1 Gallon Doesn't Cover 350 Sq Ft</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Paint • 6 min read</p>
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+
+    </div>
+</section>
+
+ </main> <!-- Closing the main tag -->
+
+<!-- Phase 8: Compact & Clean 4-Column Footer -->
+<footer class="bg-slate-900 border-t border-slate-800 pt-12 pb-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+            
+            <!-- Brand Col -->
+            <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                <a href="index.html" class="flex items-center gap-2 mb-3">
+                    <span class="font-heading font-extrabold text-xl text-white">Build<span class="text-primary">Metric</span></span>
+                </a>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4 pr-4">
+                    Engineer-reviewed construction calculators for the US, UK, and Australia.
+                </p>
+                <a href="mailto:contact@buildmetric.org" class="text-sm font-medium text-primary hover:text-sky-400 transition-colors flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    contact@buildmetric.org
+                </a>
+            </div>
+
+            <!-- Calculators -->
+            <div>
+                <h3 class="font-heading font-bold text-white mb-4 text-sm">Calculators</h3>
+                <ul class="space-y-2">
+                    <li><a href="roof-pitch-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Roof Pitch</a></li>
+                    <li><a href="concrete-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Concrete Volume</a></li>
+                    <li><a href="framing-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Stud Count</a></li>
+                    <li><a href="paint-coverage-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Paint Coverage</a></li>
+                    <li><a href="calculators.html" class="text-sm font-bold text-primary hover:text-sky-400 transition-colors">All Tools &rarr;</a></li>
+                </ul>
+            </div>
+
+            <!-- Company -->
+            <div>
+                <h3 class="font-heading font-bold text-white mb-4 text-sm">Company</h3>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="text-sm text-slate-400 hover:text-primary transition-colors">About Us</a></li>
+                    <li><a href="guides.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Guides</a></li>
+                    <li><a href="contact.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Contact</a></li>
+                    <li><a href="sitemap.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Sitemap</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal -->
+            <div>
+                <h3 class="font-heading font-bold text-white mb-4 text-sm">Legal</h3>
+                <ul class="space-y-2">
+                    <li><a href="privacy-policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Terms of Use</a></li>
+                    <li><a href="disclaimer.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Disclaimer</a></li>
+                    <li><a href="cookie-policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-3">
+            <p class="text-xs text-slate-500">
+                &copy; <span class="current-year">2026</span> BuildMetric.org. All rights reserved.
+            </p>
+            <p class="text-xs text-slate-500 font-medium">
+                Engineered for US, UK & AU Standards.
+            </p>
+        </div>
+    </div>
+</footer>
+
+     <!-- ========================================== -->
+    <!-- PHASE 9: JAVASCRIPT & CLOSING TAGS         -->
+    <!-- ========================================== -->
+
+    <script>
+        // ==========================================
+        // 1. GLOBAL CORE FUNCTIONS (Save/Share/Copy)
+        // ==========================================
+        
+        function showToast(message) {
+            const existingToast = document.getElementById('bm-toast');
+            if (existingToast) existingToast.remove();
+
+            const toast = document.createElement('div');
+            toast.id = 'bm-toast';
+            toast.className = 'fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-slate-900 text-white px-6 py-3 rounded-xl shadow-2xl z-[100] text-sm font-semibold transition-all duration-300 opacity-0 translate-y-4 flex items-center gap-2';
+            toast.innerHTML = `<svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> ${message}`;
+            
+            document.body.appendChild(toast);
+            setTimeout(() => toast.classList.remove('opacity-0', 'translate-y-4'), 10);
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-4');
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        function copyResult() {
+            const text = `BuildMetric Board & Batten Results:\nTotal Battens: ${document.getElementById('result-count').innerText}\nExact Gap: ${document.getElementById('result-gap').innerText} ${document.querySelector('.result-unit-small').innerText}\nTotal Material Needed: ${document.getElementById('result-linear').innerText} ${document.querySelector('.result-unit-large').innerText}`;
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('Results copied to clipboard!');
+            }).catch(() => showToast('Failed to copy.'));
+        }
+
+        function saveResult() {
+            const data = {
+                count: document.getElementById('result-count').innerText,
+                gap: document.getElementById('result-gap').innerText,
+                linear: document.getElementById('result-linear').innerText,
+                unitSmall: document.querySelector('.result-unit-small').innerText,
+                unitLarge: document.querySelector('.result-unit-large').innerText,
+                timestamp: new Date().toISOString()
+            };
+            localStorage.setItem('buildmetric_batten_saved', JSON.stringify(data));
+            showToast('Calculation saved locally!');
+        }
+
+        function shareResult() {
+            const text = `I just calculated my board and batten layout using BuildMetric!\nTotal Battens: ${document.getElementById('result-count').innerText}\nExact Gap: ${document.getElementById('result-gap').innerText} ${document.querySelector('.result-unit-small').innerText}\nTotal Material: ${document.getElementById('result-linear').innerText} ${document.querySelector('.result-unit-large').innerText}`;
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Board and Batten Results',
+                    text: text,
+                    url: window.location.href
+                }).catch(console.error);
+            } else {
+                navigator.clipboard.writeText(text);
+                showToast('Sharing not supported. Copied instead!');
+            }
+        }
+
+        // ==========================================
+        // 2. BOARD AND BATTEN CALCULATOR LOGIC
+        // ==========================================
+
+        let currentUnit = 'imperial'; // 'imperial' or 'metric'
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            }
+            
+            // Dynamic Year
+            document.querySelectorAll('.current-year').forEach(el => el.textContent = new Date().getFullYear());
+
+            // Initial Calculation
+            calculateBattens();
+        });
+
+        // Toggle Custom Inputs
+        function toggleCustomInput(selectElement, customInputId) {
+            const customInputContainer = document.getElementById(customInputId);
+            if (selectElement.value === 'custom') {
+                customInputContainer.classList.remove('hidden');
+                customInputContainer.querySelector('input').focus();
+            } else {
+                customInputContainer.classList.add('hidden');
+            }
+            calculateBattens();
+        }
+
+        // Unit Toggle Logic
+        document.getElementById('btn-imperial').addEventListener('click', () => {
+            if (currentUnit === 'imperial') return;
+            currentUnit = 'imperial';
+            
+            // UI Styles
+            document.getElementById('btn-imperial').className = 'flex-1 sm:flex-none px-4 py-2 text-sm font-bold bg-white text-primary rounded-lg shadow-sm transition-all';
+            document.getElementById('btn-metric').className = 'flex-1 sm:flex-none px-4 py-2 text-sm font-bold text-slate-500 hover:text-slate-700 rounded-lg transition-all';
+
+            // Labels & Units
+            document.querySelectorAll('.dim-unit').forEach(el => el.innerText = 'in');
+            document.querySelectorAll('.custom-unit-small').forEach(el => el.innerText = 'in');
+            document.querySelector('.result-unit-small').innerText = 'in';
+            document.querySelector('.result-unit-large').innerText = 'linear ft';
+
+            // Dropdowns
+            document.getElementById('select-batten-width').innerHTML = `
+                <option value="1.5">1.5 inches (Standard 1x2)</option>
+                <option value="2.5" selected>2.5 inches (Standard 1x3)</option>
+                <option value="3.5">3.5 inches (Standard 1x4)</option>
+                <option value="custom">Custom Width...</option>
+            `;
+            document.getElementById('select-target-gap').innerHTML = `
+                <option value="12">12 inches</option>
+                <option value="16" selected>16 inches</option>
+                <option value="18">18 inches</option>
+                <option value="24">24 inches</option>
+                <option value="custom">Custom Gap...</option>
+            `;
+
+            // Reset Defaults
+            document.getElementById('input-wall-width').value = 120;
+            document.getElementById('input-wall-height').value = 96;
+            
+            calculateBattens();
+        });
+
+        document.getElementById('btn-metric').addEventListener('click', () => {
+            if (currentUnit === 'metric') return;
+            currentUnit = 'metric';
+            
+            // UI Styles
+            document.getElementById('btn-metric').className = 'flex-1 sm:flex-none px-4 py-2 text-sm font-bold bg-white text-primary rounded-lg shadow-sm transition-all';
+            document.getElementById('btn-imperial').className = 'flex-1 sm:flex-none px-4 py-2 text-sm font-bold text-slate-500 hover:text-slate-700 rounded-lg transition-all';
+
+            // Labels & Units (Dimensions in meters, Battens/Gaps in cm)
+            document.querySelectorAll('.dim-unit').forEach(el => el.innerText = 'm');
+            document.querySelectorAll('.custom-unit-small').forEach(el => el.innerText = 'cm');
+            document.querySelector('.result-unit-small').innerText = 'cm';
+            document.querySelector('.result-unit-large').innerText = 'm';
+
+            // Dropdowns
+            document.getElementById('select-batten-width').innerHTML = `
+                <option value="3.8">3.8 cm (Standard)</option>
+                <option value="6.4" selected>6.4 cm (Medium)</option>
+                <option value="8.9">8.9 cm (Wide)</option>
+                <option value="custom">Custom Width...</option>
+            `;
+            document.getElementById('select-target-gap').innerHTML = `
+                <option value="30">30 cm</option>
+                <option value="40" selected>40 cm</option>
+                <option value="45">45 cm</option>
+                <option value="60">60 cm</option>
+                <option value="custom">Custom Gap...</option>
+            `;
+
+            // Reset Defaults
+            document.getElementById('input-wall-width').value = 3;
+            document.getElementById('input-wall-height').value = 2.4;
+            
+            calculateBattens();
+        });
+
+        // Main Calculate Function
+        function calculateBattens() {
+            const wallWidth = parseFloat(document.getElementById('input-wall-width').value) || 0;
+            const wallHeight = parseFloat(document.getElementById('input-wall-height').value) || 0;
+
+            if (wallWidth <= 0 || wallHeight <= 0) return;
+
+            // Get Batten Width
+            const battenSelect = document.getElementById('select-batten-width').value;
+            let battenWidth = 0;
+            if (battenSelect === 'custom') {
+                battenWidth = parseFloat(document.getElementById('input-custom-batten').value) || 0;
+            } else {
+                battenWidth = parseFloat(battenSelect);
+            }
+
+            // Get Target Gap
+            const gapSelect = document.getElementById('select-target-gap').value;
+            let targetGap = 0;
+            if (gapSelect === 'custom') {
+                targetGap = parseFloat(document.getElementById('input-custom-gap').value) || 0;
+            } else {
+                targetGap = parseFloat(gapSelect);
+            }
+
+            if (battenWidth <= 0 || targetGap <= 0) return;
+
+            let numSpaces = 0;
+            let numBattens = 0;
+            let exactGap = 0;
+            let totalLinear = 0;
+
+            if (currentUnit === 'imperial') {
+                // Math in inches
+                numSpaces = Math.ceil((wallWidth - battenWidth) / (targetGap + battenWidth));
+                if (numSpaces === 0) numSpaces = 1; // Prevent division by zero
+                
+                numBattens = numSpaces + 1;
+                exactGap = (wallWidth - (numBattens * battenWidth)) / numSpaces;
+                totalLinear = (numBattens * wallHeight) + (2 * wallWidth); // verticals + top/bottom rails
+                
+                document.getElementById('result-gap').innerText = exactGap.toFixed(2);
+                document.getElementById('result-linear').innerText = (totalLinear / 12).toFixed(1);
+            } else {
+                // Math in meters (inputs are in m and cm)
+                let battenM = battenWidth / 100;
+                let targetGapM = targetGap / 100;
+
+                numSpaces = Math.ceil((wallWidth - battenM) / (targetGapM + battenM));
+                if (numSpaces === 0) numSpaces = 1;
+
+                numBattens = numSpaces + 1;
+                exactGap = (wallWidth - (numBattens * battenM)) / numSpaces;
+                totalLinear = (numBattens * wallHeight) + (2 * wallWidth);
+
+                document.getElementById('result-gap').innerText = (exactGap * 100).toFixed(1); // output in cm
+                document.getElementById('result-linear').innerText = totalLinear.toFixed(1);
+            }
+
+            // Update DOM
+            document.getElementById('result-count').innerText = numBattens;
+        }
+
+        // Attach Event Listeners to Inputs
+        ['input-wall-width', 'input-wall-height', 'input-custom-batten', 'input-custom-gap'].forEach(id => {
+            document.getElementById(id).addEventListener('input', calculateBattens);
+        });
+        
+        document.getElementById('select-batten-width').addEventListener('change', calculateBattens);
+        document.getElementById('select-target-gap').addEventListener('change', calculateBattens);
+    </script>
+
+</body>
+</html>
