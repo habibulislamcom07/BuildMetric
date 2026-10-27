@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Wallpaper Calculator | How Many Rolls Do I Need? (US, UK, AU)</title>
+    <meta name="title" content="Wallpaper Calculator | How Many Rolls Do I Need? (US, UK, AU)">
+    <meta name="description" content="Calculate the exact number of wallpaper rolls needed for your room. Accounts for wall area, doors, windows, and pattern repeat. Free, accurate tool for US, UK, and AU.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://buildmetric.org/wallpaper-calculator.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://buildmetric.org/wallpaper-calculator.html">
+    <meta property="og:title" content="Wallpaper Calculator | How Many Rolls Do I Need?">
+    <meta property="og:description" content="Calculate the exact number of wallpaper rolls needed for your room, including pattern repeat allowances.">
+    <meta property="og:image" content="https://buildmetric.org/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://buildmetric.org/wallpaper-calculator.html">
+    <meta property="twitter:title" content="Wallpaper Calculator | How Many Rolls Do I Need?">
+    <meta property="twitter:description" content="Calculate the exact number of wallpaper rolls needed for your room, including pattern repeat allowances.">
+    <meta property="twitter:image" content="https://buildmetric.org/logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9', // Sky Blue
+                        slate: {
+                            900: '#0f172a', // Dark Slate
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- JSON-LD Schema: WebApplication & Breadcrumbs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://buildmetric.org/wallpaper-calculator.html#webapp",
+          "name": "Wallpaper Roll Calculator",
+          "url": "https://buildmetric.org/wallpaper-calculator.html",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "All",
+          "description": "Professional calculator for estimating wallpaper rolls, accounting for wall dimensions, openings, and pattern repeat.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://buildmetric.org/wallpaper-calculator.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://buildmetric.org/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Paint & Interior Calculators",
+              "item": "https://buildmetric.org/paint.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Wallpaper Calculator",
+              "item": "https://buildmetric.org/wallpaper-calculator.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-primary selection:text-white flex flex-col min-h-screen">
+
+    <!-- Sticky Glassmorphism Navbar -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+                    <img src="logo.png" alt="BuildMetric Logo" class="h-8 w-auto sm:h-10" onerror="this.style.display='none'">
+                    <div class="flex flex-col">
+                        <span class="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-slate-900 leading-none">
+                            Build<span class="text-primary">Metric</span>
+                        </span>
+                        <span class="text-[10px] text-slate-500 font-semibold tracking-widest uppercase mt-1 hidden sm:block">Engineering Calculators</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="calculators.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">All Tools</a>
+                    <a href="guides.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Guides</a>
+                    <a href="about.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">About</a>
+                    <a href="contact.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Contact</a>
+                </div>
+
+                <!-- Desktop CTA Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="calculators.html" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold text-white transition-all bg-slate-900 rounded-xl hover:bg-slate-800 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900">
+                        Open Tools
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1 sm:px-6">
+                <a href="calculators.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">All Tools</a>
+                <a href="guides.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">Guides</a>
+                <a href="about.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">About</a>
+                <a href="contact.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">Contact</a>
+                <div class="pt-4">
+                    <a href="calculators.html" class="w-full flex justify-center items-center px-4 py-3 text-base font-bold text-white bg-slate-900 rounded-xl hover:bg-slate-800 transition-all shadow-sm">
+                        Open Tools
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <main class="flex-grow">
+        
+        <!-- Breadcrumbs -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2">
+            <nav class="flex text-sm text-slate-500 font-medium" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="index.html" class="inline-flex items-center hover:text-primary transition-colors">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            <a href="paint.html" class="ml-1 md:ml-2 hover:text-primary transition-colors">Paint & Interior</a>
+                        </div>
+                    </li>
+                    <li aria-current="page">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            <span class="ml-1 md:ml-2 text-slate-800 font-bold">Wallpaper Calculator</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+
+      <!-- Phase 3: Calculator UI -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    
+    <!-- Page Heading -->
+    <div class="mb-8 max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-primary text-xs font-bold uppercase tracking-wider mb-4 border border-sky-100">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            Interior Decor Approved
+        </div>
+        
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-slate-900 tracking-tight mb-4">
+            Wallpaper Calculator <span class="text-primary text-lg md:text-xl font-semibold block mt-2">How Many Rolls Do I Need?</span>
+        </h1>
+        <p class="text-base md:text-lg text-slate-600 leading-relaxed">
+            Calculate the exact number of wallpaper rolls required for your room. Accounts for doors, windows, and pattern repeat to prevent shortfalls.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Input Form Column -->
+        <div class="lg:col-span-7 xl:col-span-8 bg-white rounded-3xl shadow-sm border border-slate-200 p-5 sm:p-8">
+            
+            <!-- Unit Toggle -->
+            <div class="flex flex-col sm:flex-row sm:items-center gap-3 mb-6 pb-6 border-b border-slate-100">
+                <span class="text-sm font-bold text-slate-900">Measurement System:</span>
+                <div class="flex bg-slate-100 p-1 rounded-xl w-full sm:w-auto">
+                    <button type="button" class="flex-1 sm:flex-none px-4 py-2 text-sm font-bold bg-white text-primary rounded-lg shadow-sm transition-all" id="btn-imperial">Imperial (US)</button>
+                    <button type="button" class="flex-1 sm:flex-none px-4 py-2 text-sm font-bold text-slate-500 hover:text-slate-700 rounded-lg transition-all" id="btn-metric">Metric (UK/AU)</button>
+                </div>
+            </div>
+
+            <!-- Room Dimensions (2-col mobile) -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 mb-6">
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Room Length</label>
+                    <div class="relative">
+                        <input type="number" id="input-length" class="w-full bg-slate-50 border border-slate-300 text-slate-900 text-lg font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" placeholder="e.g. 12" value="12">
+                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                            <span class="text-slate-500 font-bold dim-unit">ft</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Room Width</label>
+                    <div class="relative">
+                        <input type="number" id="input-width" class="w-full bg-slate-50 border border-slate-300 text-slate-900 text-lg font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" placeholder="e.g. 10" value="10">
+                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                            <span class="text-slate-500 font-bold dim-unit">ft</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-2 sm:col-span-1">
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Wall Height</label>
+                    <div class="relative">
+                        <input type="number" id="input-height" class="w-full bg-slate-50 border border-slate-300 text-slate-900 text-lg font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" placeholder="e.g. 8" value="8">
+                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                            <span class="text-slate-500 font-bold dim-unit">ft</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Openings -->
+            <div class="grid grid-cols-2 gap-4 sm:gap-6 mb-6">
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Number of Doors</label>
+                    <input type="number" id="input-doors" class="w-full bg-slate-50 border border-slate-300 text-slate-900 text-base font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" value="1" min="0">
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Number of Windows</label>
+                    <input type="number" id="input-windows" class="w-full bg-slate-50 border border-slate-300 text-slate-900 text-base font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" value="1" min="0">
+                </div>
+            </div>
+
+            <!-- Wallpaper Specs -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 mb-8">
+                
+                <!-- Roll Size Dropdown -->
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Wallpaper Roll Size</label>
+                    <select id="select-roll-size" onchange="toggleCustomInput(this, 'custom-roll-container')" class="bg-slate-50 border border-slate-300 text-slate-900 text-base font-medium rounded-xl focus:ring-primary focus:border-primary block w-full p-3 cursor-pointer">
+                        <option value="56">US Standard (20.5" x 33 ft = 56 sq ft)</option>
+                        <option value="30">US Single Roll (20.5" x 16.5 ft = 30 sq ft)</option>
+                        <option value="50">UK/EU Standard (0.53m x 10m = 5.3 sq m)</option>
+                        <option value="custom">Custom Roll Size...</option>
+                    </select>
+                    <!-- Custom Roll Input -->
+                    <div id="custom-roll-container" class="hidden mt-3">
+                        <div class="relative">
+                            <input type="number" id="input-custom-roll" class="w-full bg-sky-50 border border-primary text-slate-900 text-base font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary block w-full p-3" placeholder="Enter total sq ft/m of roll">
+                            <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                <span class="text-primary font-bold custom-roll-unit">sq ft</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pattern Repeat Dropdown -->
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Pattern Repeat</label>
+                    <select id="select-pattern" onchange="toggleCustomInput(this, 'custom-pattern-container')" class="bg-slate-50 border border-slate-300 text-slate-900 text-base font-medium rounded-xl focus:ring-primary focus:border-primary block w-full p-3 cursor-pointer">
+                        <option value="0">No Match (Free match / 0")</option>
+                        <option value="12">12 inches (30 cm)</option>
+                        <option value="18">18 inches (45 cm)</option>
+                        <option value="24">24 inches (60 cm)</option>
+                        <option value="custom">Custom Pattern Repeat...</option>
+                    </select>
+                    <!-- Custom Pattern Input -->
+                    <div id="custom-pattern-container" class="hidden mt-3">
+                        <div class="relative">
+                            <input type="number" id="input-custom-pattern" class="w-full bg-sky-50 border border-primary text-slate-900 text-base font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary block w-full p-3" placeholder="Enter pattern repeat">
+                            <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                <span class="text-primary font-bold custom-pattern-unit">in</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calculate Button -->
+            <button onclick="calculateWallpaper()" class="w-full flex items-center justify-center gap-2 bg-primary hover:bg-sky-500 text-white text-lg font-bold py-4 px-4 rounded-xl transition-all shadow-lg shadow-primary/20">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                Calculate Rolls
+            </button>
+
+        </div>
+
+        <!-- Result Box Column -->
+        <div class="lg:col-span-5 xl:col-span-4">
+            <div class="bg-slate-900 rounded-3xl shadow-xl p-5 sm:p-8 lg:sticky lg:top-24 border border-slate-800">
+                
+                <h2 class="text-lg sm:text-xl font-heading font-bold text-white mb-5 flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                    Material Required
+                </h2>
+
+                <!-- Main Results Display -->
+                <div class="space-y-3 mb-6">
+                    
+                    <!-- Total Rolls -->
+                    <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                        <p class="text-xs sm:text-sm text-slate-400 font-medium mb-1">Total Rolls Needed</p>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-4xl font-mono font-bold text-white" id="result-rolls">0</span>
+                            <span class="text-sm text-slate-400 font-medium">rolls</span>
+                        </div>
+                    </div>
+
+                    <!-- Wall Area to Cover -->
+                    <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                        <p class="text-xs sm:text-sm text-slate-400 font-medium mb-1">Total Wall Area</p>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-2xl font-mono font-bold text-white" id="result-area">0</span>
+                            <span class="text-sm text-primary font-bold result-area-unit">sq ft</span>
+                        </div>
+                    </div>
+
+                    <!-- Pattern Repeat Allowance (Hidden if 0) -->
+                    <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50" id="pattern-allowance-box" style="display: none;">
+                        <p class="text-xs sm:text-sm text-slate-400 font-medium mb-1">Waste (Pattern Repeat)</p>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-2xl font-mono font-bold text-white" id="result-waste">0</span>
+                            <span class="text-sm text-slate-400 font-medium">rolls extra</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Action Buttons (Blue Theme) -->
+                <div class="grid grid-cols-3 gap-2 sm:gap-3 pt-2">
+                    <button onclick="saveResult()" class="flex flex-col items-center justify-center gap-1 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white py-2.5 sm:py-3 rounded-xl transition-colors border border-slate-700">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg>
+                        <span class="text-[10px] sm:text-xs font-bold">Save</span>
+                    </button>
+                    <button onclick="shareResult()" class="flex flex-col items-center justify-center gap-1 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white py-2.5 sm:py-3 rounded-xl transition-colors border border-slate-700">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                        <span class="text-[10px] sm:text-xs font-bold">Share</span>
+                    </button>
+                    <button onclick="copyResult()" class="flex flex-col items-center justify-center gap-1 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white py-2.5 sm:py-3 rounded-xl transition-colors border border-slate-700">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                        <span class="text-[10px] sm:text-xs font-bold">Copy</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Phase 4: Content Part 1 (Engineering & SEO) -->
+<section class="bg-white border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        
+        <!-- AI Overview / Quick Answer Box -->
+        <div class="bg-sky-50 border-l-4 border-primary p-6 sm:p-8 rounded-r-2xl mb-12 shadow-sm">
+            <h2 class="text-xl font-heading font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Quick Answer: How to Calculate Wallpaper Rolls?
+            </h2>
+            <p class="text-slate-700 leading-relaxed font-medium text-lg">
+                To determine how many rolls of wallpaper you need, first calculate the total square footage of your walls (Perimeter × Height) and subtract the area of doors and windows. Divide this number by the square footage of a single roll. Finally, add a <strong>15% to 20% overage</strong> if your wallpaper has a pattern repeat. However, the most accurate method is calculating by "drops" (vertical strips) rather than pure square footage, which our calculator above does automatically.
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6">The Mathematics of Wallpaper: Why Square Footage Fails</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                If you ask a beginner how to calculate wallpaper, they will usually tell you to measure the wall area and divide it by the area of a roll. While this gives a rough estimate, it often leads to buying too little wallpaper, resulting in a frantic search for a matching dye lot when you run out.
+            </p>
+            <p>
+                The reason is simple: <strong>Wallpaper is hung in vertical strips, not as a liquid paint.</strong> You cannot use every square inch of a wallpaper roll because you have to cut straight lines, trim at the ceiling and baseboards, and—most importantly—match the pattern. 
+            </p>
+            <p>
+                Professional installers use the "Drop Method." They calculate the total height of the wall, add the pattern repeat, and divide the total length of the roll by this number to see how many usable strips (drops) they can get per roll. If a roll yields 3 drops, and your room needs 10 drops, you need 4 rolls, even if the total square footage suggests 3 rolls would be enough. Our calculator uses this exact drop logic to ensure you never come up short.
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">Understanding Pattern Repeats: Straight Match vs. Drop Match</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6 mb-8">
+            <p>
+                The "Pattern Repeat" is the distance before the design repeats itself on the roll. The larger the repeat, the more waste you will have. When selecting your wallpaper, you will see two main types of pattern matching:
+            </p>
+            
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">1. Straight Match (Horizontal Alignment)</h3>
+            <p>
+                The pattern matches perfectly across the seam at the same height. If the repeat is 12 inches, you simply align the design horizontally. This is common for simple stripes or small geometric patterns and results in less waste. 
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">2. Drop Match (Offset Alignment)</h3>
+            <p>
+                This is where the math gets tricky. A drop match means the design on the next strip drops down by half the repeat to align with the previous strip. This is very common with large floral or damask patterns. If you have a 24-inch drop match, you must cut the second strip so it starts 12 inches lower than the first. This creates massive waste at the top and bottom of the roll. 
+            </p>
+            <p>
+                Our tool uses your "Pattern Repeat" input to calculate the exact extra length required per strip. If you are painting instead, and don't have to worry about patterns, check out our <a href="paint-coverage-calculator.html" class="text-primary font-semibold hover:underline">paint coverage calculator</a>.
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">Global Roll Sizes: US vs. UK vs. Australia</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6 mb-8">
+            <p>
+                A common mistake when buying wallpaper online from overseas is assuming all rolls are the same size. The United States uses the Imperial system, while the UK, Europe, and Australia use standard metric rolls. Here is how they differ:
+            </p>
+        </div>
+
+        <!-- Global Roll Standards Table -->
+        <div class="overflow-x-auto shadow-sm rounded-xl border border-slate-200 mb-12">
+            <table class="w-full text-sm text-left text-slate-600">
+                <thead class="text-xs text-slate-700 uppercase bg-slate-100 border-b border-slate-200">
+                    <tr>
+                        <th scope="col" class="px-6 py-4 font-bold">Region</th>
+                        <th scope="col" class="px-6 py-4 font-bold">Standard Roll Size</th>
+                        <th scope="col" px-6 py-4 font-bold">Coverage (approx)</th>
+                        <th scope="col" class="px-6 py-4 font-bold">Notes</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200">
+                    <tr class="bg-white hover:bg-slate-50 transition-colors">
+                        <th scope="row" class="px-6 py-4 font-semibold text-slate-900 whitespace-nowrap">USA (Double Roll)</th>
+                        <td class="px-6 py-4">20.5 inches wide × 33 feet long</td>
+                        <td class="px-6 py-4">56 square feet</td>
+                        <td class="px-6 py-4">Sold as a "double roll" but is essentially two single rolls joined.</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-slate-50 transition-colors">
+                        <th scope="row" class="px-6 py-4 font-semibold text-slate-900 whitespace-nowrap">USA (Single Roll)</th>
+                        <td class="px-6 py-4">20.5 inches wide × 16.5 feet long</td>
+                        <td class="px-6 py-4">28 square feet</td>
+                        <td class="px-6 py-4">Be careful: Many US brands list the price per single roll, but only sell double rolls.</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-slate-50 transition-colors">
+                        <th scope="row" class="px-6 py-4 font-semibold text-slate-900 whitespace-nowrap">UK & Europe</th>
+                        <td class="px-6 py-4">0.53 meters wide × 10 meters long</td>
+                        <td class="px-6 py-4">5.3 square meters (57 sq ft)</td>
+                        <td class="px-6 py-4">The global standard metric roll. Always check the label for exact width.</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-slate-50 transition-colors">
+                        <th scope="row" class="px-6 py-4 font-semibold text-slate-900 whitespace-nowrap">Australia</th>
+                        <td class="px-6 py-4">0.53 meters wide × 10 meters long</td>
+                        <td class="px-6 py-4">5.3 square meters (57 sq ft)</td>
+                        <td class="px-6 py-4">Follows the UK metric standard. Wallpaper is sold in single rolls.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">How to Measure a Room for Wallpaper</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                Accuracy starts with the tape measure. Follow these steps for a flawless estimate:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 mb-6">
+                <li><strong>Measure the Perimeter:</strong> Measure the total width of all walls you plan to cover (Length + Width + Length + Width).</li>
+                <li><strong>Measure the Height:</strong> Measure from the baseboard to the ceiling. Add an extra 2 to 4 inches to allow for trimming and pattern matching at the top and bottom.</li>
+                <li><strong>Subtract Openings:</strong> Measure the area of standard doors (usually 21 sq ft or 2 sq m) and windows. Do not subtract small outlets or light switches.</li>
+                <li><strong>Check for Obstructions:</strong> Large built-in cabinets, fireplaces, or archways should be subtracted. However, leave extra paper for complex corners or sloped ceilings.</li>
+            </ul>
+            <p>
+                By inputting your room dimensions and pattern repeat into our tool, we handle the complex drop calculations for you, ensuring you buy exactly what you need for your next interior renovation project.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+  <!-- Phase 5: Content Part 2 (Wall Prep, Paste & Conclusion) -->
+<section class="bg-slate-50 border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6">The Secret to a Flawless Finish: Wall Preparation</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                Even the most expensive designer wallpaper will look cheap if the walls underneath are not properly prepared. Wallpaper is unforgiving; it highlights every bump, crack, and imperfection. Before you even think about cutting your first strip, you must prep the surface.
+            </p>
+            
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">1. Remove Old Wallpaper</h3>
+            <p>
+                Never hang new wallpaper over old wallpaper. The moisture from the new paste will cause the old layers to bubble and peel, bringing the new paper down with it. Use a scoring tool and a steamer or chemical stripper to remove all old paper completely.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">2. Wash and Repair the Walls</h3>
+            <p>
+                Wash the walls with a mild detergent to remove grease and dust. Fill any holes or cracks with lightweight spackle or joint compound, then sand them smooth. If the walls are highly glossy (like semi-gloss paint), lightly sand them with 120-grit sandpaper to give the paste something to grip onto. For major repairs, check out our <a href="drywall-calculator.html" class="text-primary font-semibold hover:underline">drywall calculator</a> to estimate new sheets.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">3. Apply Wallpaper Primer (Sizing)</h3>
+            <p>
+                This is the most critical step. Apply a specialized wallpaper primer (often called "sizing"). This does two things: it seals the porous drywall so it doesn't absorb all the paste, and it creates a slip layer that allows the wallpaper to slide easily into place for pattern matching. It also makes future removal much easier.
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">Choosing the Right Paste</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                There are three main types of wallpaper paste, and choosing the right one depends on the weight of your wallpaper and the local climate:
+            </p>
+            <ul class="list-disc pl-6 space-y-3 mb-6">
+                <li><strong>Pre-Pasted Wallpaper:</strong> Common in the US. You simply fill a water tray and pull the roll through it. This is great for light to medium-weight papers, but the built-in adhesive is often weaker than dedicated pastes.</li>
+                <li><strong>Ready-Mixed Paste:</strong> Sold in tubs. It's a sticky, gel-like adhesive ideal for heavy vinyl or textured papers.</li>
+                <li><strong>Powdered Paste (Flake Paste):</strong> Common in the UK and Europe. You mix it with water to activate it. It's highly economical, allows you to control the thickness (heavier paste for heavier paper), and is generally stronger than pre-pasted adhesives.</li>
+            </ul>
+            <p>
+                Always ensure you are using a paste that is compatible with your wallpaper. For example, natural grasscloth requires a specialized clear adhesive, while standard vinyl can use a standard heavy-duty paste.
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">Common Mistakes to Avoid (And How We Solve Them)</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                <strong>1. Booking the Paper (Not Numbering Your Drops):</strong> When you cut your vertical strips, you MUST write the number of the strip on the back (e.g., 1, 2, 3, 4) before you hang them. If you drop a strip or lose your place, hanging the wrong sequence will break the pattern instantly. 
+            </p>
+            <p>
+                <strong>2. Not Waiting for the Paste to "Relax":</strong> After applying paste to the back of the wallpaper (if not pre-pasted), you must "book" it (fold it paste-to-paste) and let it sit for 5-10 minutes. This allows the paper to absorb the moisture, expand, and relax. If you hang it immediately, it will expand on the wall and cause bubbles.
+            </p>
+            <p>
+                <strong>3. Using the Wrong Tools:</strong> Do not use a hard plastic smoother on delicate wallpaper; use a soft felt smoother. Use a sharp utility knife with a fresh blade for trimming (change the blade often, as paste dulls blades quickly).
+            </p>
+            <p>
+                <strong>4. Overworking the Seams:</strong> When smoothing the edges, do not press too hard. This forces the paste out from under the seam and can cause the edges to curl or peel later.
+            </p>
+        </div>
+
+        <!-- Conclusion Box -->
+        <div class="mt-16 bg-slate-900 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden shadow-2xl">
+            <!-- Decorative gradient -->
+            <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-primary rounded-full blur-3xl opacity-20"></div>
+            
+            <div class="relative z-10">
+                <h2 class="text-2xl md:text-3xl font-heading font-bold mb-4">Transform Your Room with Confidence</h2>
+                <p class="text-slate-300 leading-relaxed mb-6 text-lg">
+                    Wallpaper is one of the most dramatic ways to change the feel of a space. By calculating the exact number of rolls—accounting for pattern repeats and doors/windows—you save money, avoid dye-lot headaches, and ensure a seamless, professional finish.
+                </p>
+                <p class="text-slate-300 leading-relaxed mb-8 text-lg">
+                    Ready to start your next interior renovation? Use BuildMetric to get your material list right the first time. If you decide to paint instead, our Paint Coverage Calculator has you covered.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="paint-coverage-calculator.html" class="inline-flex justify-center items-center px-6 py-3.5 text-base font-bold text-slate-900 bg-white rounded-xl hover:bg-slate-100 transition-colors shadow-sm">
+                        Calculate Paint Coverage
+                    </a>
+                    <a href="drywall-calculator.html" class="inline-flex justify-center items-center px-6 py-3.5 text-base font-bold text-white border border-slate-700 rounded-xl hover:bg-slate-800 transition-colors">
+                        Estimate Drywall Sheets
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+  <!-- Phase 6: 7 FAQs & JSON-LD Schema -->
+<section class="bg-white border-t border-slate-200 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- FAQ Heading -->
+        <div class="text-center mb-12">
+            <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">Frequently Asked Questions</h2>
+            <h3 class="text-3xl md:text-4xl font-heading font-extrabold text-slate-900">Wallpaper Calculation FAQs</h3>
+            <p class="text-slate-600 mt-4 text-lg font-medium">Direct answers to common questions about rolls, pattern matching, and waste.</p>
+        </div>
+
+        <!-- FAQs List -->
+        <div class="space-y-4">
+            
+            <!-- FAQ 1 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">01</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How many rolls of wallpaper for a 10x10 room?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    For a standard 10x10 foot room with 8-foot ceilings, you will typically need <strong>6 to 8 standard double rolls</strong> (or 12 to 16 single rolls in the US). This assumes one door and two windows. If your wallpaper has a large pattern repeat (over 18 inches), you may need to buy 1 or 2 extra rolls. Use the <a href="#top" class="text-primary font-semibold hover:underline">calculator above</a> for your exact dimensions.
+                </div>
+            </details>
+
+            <!-- FAQ 2 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">02</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">What is a pattern repeat and how does it affect rolls?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    The pattern repeat is the distance before the design repeats itself on the roll. A larger repeat means you have to cut off more waste at the top and bottom to align the design across strips. For example, a 24-inch repeat will create significantly more waste than a 12-inch repeat, often requiring you to buy an extra roll or two.
+                </div>
+            </details>
+
+            <!-- FAQ 3 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">03</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">What is the difference between a single and double roll?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    In the US, a <strong>single roll</strong> is roughly 20.5 inches wide by 16.5 feet long (about 28 sq ft). A <strong>double roll</strong> is 20.5 inches wide by 33 feet long (about 56 sq ft). Most wallpaper is priced and sold by the double roll. In the UK and Australia, wallpaper is typically sold as a single roll measuring 0.53m wide by 10m long.
+                </div>
+            </details>
+
+            <!-- FAQ 4 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">04</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">Do I subtract doors and windows from the total area?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    Yes, you should subtract the square footage of standard doors and windows. A standard door is about 21 sq ft (2 sq m) and a standard window is about 15 sq ft (1.5 sq m). Our tool automatically subtracts these if you input the number of doors and windows in the room. However, do not subtract small outlets or light switches.
+                </div>
+            </details>
+
+            <!-- FAQ 5 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">05</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How much extra wallpaper should I buy for waste?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    It is highly recommended to buy 10% to 15% extra wallpaper. This covers mistakes during cutting, pattern matching waste, and future repairs. It is crucial to buy all your rolls at the same time from the same batch (dye lot) to ensure the colors match perfectly. If you are painting instead of wallpapering, check out our <a href="paint-coverage-calculator.html" class="text-primary font-semibold hover:underline">paint coverage calculator</a>.
+                </div>
+            </details>
+
+            <!-- FAQ 6 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">06</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How do I calculate wallpaper for a sloped ceiling?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    For sloped ceilings or stairwells, do not use the standard room height. Measure the <em>highest</em> point of the wall and use that height for your calculation. You will have to trim away the excess wallpaper at the bottom or slope side, which creates additional waste. It's best to add an extra 20% waste factor for these complex areas.
+                </div>
+            </details>
+
+            <!-- FAQ 7 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">07</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">Can I return unused rolls of wallpaper?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    Return policies vary by retailer. Many specialist wallpaper stores allow returns of unopened, uncut rolls within 30 days, but some custom or print-to-order papers are non-returnable. Always check the return policy before ordering. Keep at least one extra roll for future repairs, as dye lots change and you may not find the exact match later. If you spot an error in our guide, please <a href="contact.html" class="text-primary font-semibold hover:underline">report it to our team</a>.
+                </div>
+            </details>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- JSON-LD Schema for FAQ Page (Matches HTML Text Exactly) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many rolls of wallpaper for a 10x10 room?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a standard 10x10 foot room with 8-foot ceilings, you will typically need 6 to 8 standard double rolls (or 12 to 16 single rolls in the US). This assumes one door and two windows. If your wallpaper has a large pattern repeat (over 18 inches), you may need to buy 1 or 2 extra rolls. Use the calculator above for your exact dimensions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a pattern repeat and how does it affect rolls?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The pattern repeat is the distance before the design repeats itself on the roll. A larger repeat means you have to cut off more waste at the top and bottom to align the design across strips. For example, a 24-inch repeat will create significantly more waste than a 12-inch repeat, often requiring you to buy an extra roll or two."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a single and double roll?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the US, a single roll is roughly 20.5 inches wide by 16.5 feet long (about 28 sq ft). A double roll is 20.5 inches wide by 33 feet long (about 56 sq ft). Most wallpaper is priced and sold by the double roll. In the UK and Australia, wallpaper is typically sold as a single roll measuring 0.53m wide by 10m long."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I subtract doors and windows from the total area?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you should subtract the square footage of standard doors and windows. A standard door is about 21 sq ft (2 sq m) and a standard window is about 15 sq ft (1.5 sq m). Our tool automatically subtracts these if you input the number of doors and windows in the room. However, do not subtract small outlets or light switches."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much extra wallpaper should I buy for waste?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is highly recommended to buy 10% to 15% extra wallpaper. This covers mistakes during cutting, pattern matching waste, and future repairs. It is crucial to buy all your rolls at the same time from the same batch (dye lot) to ensure the colors match perfectly. If you are painting instead of wallpapering, check out our paint coverage calculator."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate wallpaper for a sloped ceiling?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For sloped ceilings or stairwells, do not use the standard room height. Measure the highest point of the wall and use that height for your calculation. You will have to trim away the excess wallpaper at the bottom or slope side, which creates additional waste. It's best to add an extra 20% waste factor for these complex areas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I return unused rolls of wallpaper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Return policies vary by retailer. Many specialist wallpaper stores allow returns of unopened, uncut rolls within 30 days, but some custom or print-to-order papers are non-returnable. Always check the return policy before ordering. Keep at least one extra roll for future repairs, as dye lots change and you may not find the exact match later. If you spot an error in our guide, please report it to our team."
+      }
+    }
+  ]
+}
+</script>
+
+  <!-- Phase 7: E-E-A-T Trust Box & Internal Linking -->
+<section class="bg-slate-100/60 py-12 border-t border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div class="flex items-start gap-5">
+                <div class="p-3 bg-primary/10 text-primary rounded-2xl flex-shrink-0">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-heading font-bold text-slate-900 mb-2">About This Calculator</h2>
+                    <p class="text-slate-600 text-sm md:text-base leading-relaxed max-w-2xl font-medium mb-4">
+                        This Wallpaper Calculator uses standard interior design formulas and drop-matching logic to estimate roll quantities accurately. It is aligned with ASTM F793 (US), BS EN 233 (UK/EU), and AS/NZS 2589 (Australia) material standards. We prioritize precision so you can buy the correct dye lot and avoid shortfalls. If you spot an error in our math, please report it immediately.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <a href="methodology.html" class="text-sm font-bold text-primary hover:text-sky-700 hover:underline flex items-center gap-1.5 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Our Methodology
+                        </a>
+                        <a href="contact.html" class="text-sm font-bold text-slate-500 hover:text-slate-900 hover:underline flex items-center gap-1.5 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                            Report an Error
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Related Tools & Guides -->
+<section class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Related Tools (3) -->
+        <div class="mb-16">
+            <h2 class="text-2xl font-heading font-extrabold text-slate-900 mb-6 flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                Related Calculators
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Tool 1 -->
+                <a href="paint-coverage-calculator.html" class="group block p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:bg-white hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="p-2 bg-sky-100 text-primary rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-lg">Paint Coverage</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 font-medium leading-relaxed">Calculate the exact gallons or litres of paint needed for your interior walls and ceilings.</p>
+                    <span class="inline-flex items-center gap-1 text-sm font-bold text-primary mt-4">Open Tool <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+                </a>
+                
+                <!-- Tool 2 -->
+                <a href="drywall-calculator.html" class="group block p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:bg-white hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="p-2 bg-amber-100 text-amber-600 rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-lg">Drywall Calculator</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 font-medium leading-relaxed">Estimate the number of drywall sheets, joint compound, and tape required for your walls.</p>
+                    <span class="inline-flex items-center gap-1 text-sm font-bold text-primary mt-4">Open Tool <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+                </a>
+                
+                <!-- Tool 3 -->
+                <a href="tile-calculator.html" class="group block p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:bg-white hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="p-2 bg-emerald-100 text-emerald-600 rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-lg">Tile Calculator</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 font-medium leading-relaxed">Calculate tiles, thinset, and grout needed for bathrooms, kitchens, and floors.</p>
+                    <span class="inline-flex items-center gap-1 text-sm font-bold text-primary mt-4">Open Tool <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Related Guides (3) - Colorful Bento Style -->
+        <div>
+            <h2 class="text-2xl font-heading font-extrabold text-slate-900 mb-6 flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                Recommended Reading
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                
+                <!-- Guide 1 -->
+                <a href="guides/paint-coverage-myths.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">Paint Coverage Myths: Why 1 Gallon Doesn't Cover 350 Sq Ft</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Paint • 6 min read</p>
+                    </div>
+                </a>
+                
+                <!-- Guide 2 -->
+                <a href="guides/reading-architectural-drawings.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-600 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">Reading Architectural Drawings for Estimators</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Estimating • 20 min read</p>
+                    </div>
+                </a>
+                
+                <!-- Guide 3 -->
+                <a href="guides/stud-spacing-by-code.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">Stud Spacing by Code: 16" vs 24" O.C.</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Framing • 10 min read</p>
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+
+    </div>
+</section>
+
+  </main> <!-- Closing the main tag -->
+
+<!-- Phase 8: Compact & Clean 4-Column Footer -->
+<footer class="bg-slate-900 border-t border-slate-800 pt-12 pb-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+            
+            <!-- Brand Col -->
+            <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                <a href="index.html" class="flex items-center gap-2 mb-3">
+                    <span class="font-heading font-extrabold text-xl text-white">Build<span class="text-primary">Metric</span></span>
+                </a>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4 pr-4">
+                    Engineer-reviewed construction calculators for the US, UK, and Australia.
+                </p>
+                <a href="mailto:contact@buildmetric.org" class="text-sm font-medium text-primary hover:text-sky-400 transition-colors flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    contact@buildmetric.org
+                </a>
+            </div>
+
+            <!-- Calculators -->
+            <div>
+                <h3 class="font-heading font-bold text-white mb-4 text-sm">Calculators</h3>
+                <ul class="space-y-2">
+                    <li><a href="roof-pitch-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Roof Pitch</a></li>
+                    <li><a href="concrete-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Concrete Volume</a></li>
+                    <li><a href="framing-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Stud Count</a></li>
+                    <li><a href="paint-coverage-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Paint Coverage</a></li>
+                    <li><a href="calculators.html" class="text-sm font-bold text-primary hover:text-sky-400 transition-colors">All Tools &rarr;</a></li>
+                </ul>
+            </div>
+
+            <!-- Company -->
+            <div>
+                <h3 class="font-heading font-bold text-white mb-4 text-sm">Company</h3>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="text-sm text-slate-400 hover:text-primary transition-colors">About Us</a></li>
+                    <li><a href="guides.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Guides</a></li>
+                    <li><a href="contact.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Contact</a></li>
+                    <li><a href="sitemap.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Sitemap</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal -->
+            <div>
+                <h3 class="font-heading font-bold text-white mb-4 text-sm">Legal</h3>
+                <ul class="space-y-2">
+                    <li><a href="privacy-policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Terms of Use</a></li>
+                    <li><a href="disclaimer.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Disclaimer</a></li>
+                    <li><a href="cookie-policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-3">
+            <p class="text-xs text-slate-500">
+                &copy; <span class="current-year">2026</span> BuildMetric.org. All rights reserved.
+            </p>
+            <p class="text-xs text-slate-500 font-medium">
+                Engineered for US, UK & AU Standards.
+            </p>
+        </div>
+    </div>
+</footer>
+
+     <!-- ========================================== -->
+    <!-- PHASE 9: JAVASCRIPT & CLOSING TAGS         -->
+    <!-- ========================================== -->
+
+    <script>
+        // ==========================================
+        // 1. GLOBAL CORE FUNCTIONS (Save/Share/Copy)
+        // ==========================================
+        
+        function showToast(message) {
+            const existingToast = document.getElementById('bm-toast');
+            if (existingToast) existingToast.remove();
+
+            const toast = document.createElement('div');
+            toast.id = 'bm-toast';
+            toast.className = 'fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-slate-900 text-white px-6 py-3 rounded-xl shadow-2xl z-[100] text-sm font-semibold transition-all duration-300 opacity-0 translate-y-4 flex items-center gap-2';
+            toast.innerHTML = `<svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> ${message}`;
+            
+            document.body.appendChild(toast);
+            setTimeout(() => toast.classList.remove('opacity-0', 'translate-y-4'), 10);
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-4');
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        function copyResult() {
+            const text = `BuildMetric Wallpaper Results:\nTotal Rolls: ${document.getElementById('result-rolls').innerText}\nWall Area: ${document.getElementById('result-area').innerText} ${document.querySelector('.result-area-unit').innerText}\nExtra Waste: ${document.getElementById('result-waste').innerText} rolls`;
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('Results copied to clipboard!');
+            }).catch(() => showToast('Failed to copy.'));
+        }
+
+        function saveResult() {
+            const data = {
+                rolls: document.getElementById('result-rolls').innerText,
+                area: document.getElementById('result-area').innerText,
+                areaUnit: document.querySelector('.result-area-unit').innerText,
+                waste: document.getElementById('result-waste').innerText,
+                timestamp: new Date().toISOString()
+            };
+            localStorage.setItem('buildmetric_wallpaper_saved', JSON.stringify(data));
+            showToast('Calculation saved locally!');
+        }
+
+        function shareResult() {
+            const text = `I just calculated my wallpaper needs using BuildMetric!\nRolls Needed: ${document.getElementById('result-rolls').innerText}\nWall Area: ${document.getElementById('result-area').innerText} ${document.querySelector('.result-area-unit').innerText}`;
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Wallpaper Calculator Results',
+                    text: text,
+                    url: window.location.href
+                }).catch(console.error);
+            } else {
+                navigator.clipboard.writeText(text);
+                showToast('Sharing not supported. Copied instead!');
+            }
+        }
+
+        // ==========================================
+        // 2. WALLPAPER CALCULATOR LOGIC
+        // ==========================================
+
+        let currentUnit = 'imperial'; // 'imperial' or 'metric'
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            }
+            
+            // Dynamic Year
+            document.querySelectorAll('.current-year').forEach(el => el.textContent = new Date().getFullYear());
+
+            // Initial Calculation
+            calculateWallpaper();
+        });
+
+        // Toggle Custom Inputs
+        function toggleCustomInput(selectElement, customInputId) {
+            const customInputContainer = document.getElementById(customInputId);
+            if (selectElement.value === 'custom') {
+                customInputContainer.classList.remove('hidden');
+                customInputContainer.querySelector('input').focus();
+            } else {
+                customInputContainer.classList.add('hidden');
+            }
+            calculateWallpaper();
+        }
+
+        // Unit Toggle Logic
+        document.getElementById('btn-imperial').addEventListener('click', () => {
+            if (currentUnit === 'imperial') return;
+            currentUnit = 'imperial';
+            
+            // UI Styles
+            document.getElementById('btn-imperial').className = 'flex-1 sm:flex-none px-4 py-2 text-sm font-bold bg-white text-primary rounded-lg shadow-sm transition-all';
+            document.getElementById('btn-metric').className = 'flex-1 sm:flex-none px-4 py-2 text-sm font-bold text-slate-500 hover:text-slate-700 rounded-lg transition-all';
+
+            // Labels & Units
+            document.querySelectorAll('.dim-unit').forEach(el => el.innerText = 'ft');
+            document.querySelector('.result-area-unit').innerText = 'sq ft';
+            document.querySelector('.custom-roll-unit').innerText = 'sq ft';
+            document.querySelector('.custom-pattern-unit').innerText = 'in';
+
+            // Dropdowns
+            document.getElementById('select-roll-size').innerHTML = `
+                <option value="56">US Standard (20.5" x 33 ft = 56 sq ft)</option>
+                <option value="30">US Single Roll (20.5" x 16.5 ft = 30 sq ft)</option>
+                <option value="50">UK/EU Standard (0.53m x 10m = 5.3 sq m)</option>
+                <option value="custom">Custom Roll Size...</option>
+            `;
+            document.getElementById('select-pattern').innerHTML = `
+                <option value="0">No Match (Free match / 0")</option>
+                <option value="12">12 inches (30 cm)</option>
+                <option value="18">18 inches (45 cm)</option>
+                <option value="24">24 inches (60 cm)</option>
+                <option value="custom">Custom Pattern Repeat...</option>
+            `;
+
+            // Reset Defaults
+            document.getElementById('input-length').value = 12;
+            document.getElementById('input-width').value = 10;
+            document.getElementById('input-height').value = 8;
+            
+            calculateWallpaper();
+        });
+
+        document.getElementById('btn-metric').addEventListener('click', () => {
+            if (currentUnit === 'metric') return;
+            currentUnit = 'metric';
+            
+            // UI Styles
+            document.getElementById('btn-metric').className = 'flex-1 sm:flex-none px-4 py-2 text-sm font-bold bg-white text-primary rounded-lg shadow-sm transition-all';
+            document.getElementById('btn-imperial').className = 'flex-1 sm:flex-none px-4 py-2 text-sm font-bold text-slate-500 hover:text-slate-700 rounded-lg transition-all';
+
+            // Labels & Units
+            document.querySelectorAll('.dim-unit').forEach(el => el.innerText = 'm');
+            document.querySelector('.result-area-unit').innerText = 'sq m';
+            document.querySelector('.custom-roll-unit').innerText = 'sq m';
+            document.querySelector('.custom-pattern-unit').innerText = 'cm';
+
+            // Dropdowns
+            document.getElementById('select-roll-size').innerHTML = `
+                <option value="5.3">Standard Metric (0.53m x 10m = 5.3 sq m)</option>
+                <option value="custom">Custom Roll Size...</option>
+            `;
+            document.getElementById('select-pattern').innerHTML = `
+                <option value="0">No Match (Free match / 0 cm)</option>
+                <option value="30">30 cm</option>
+                <option value="45">45 cm</option>
+                <option value="60">60 cm</option>
+                <option value="custom">Custom Pattern Repeat...</option>
+            `;
+
+            // Reset Defaults
+            document.getElementById('input-length').value = 4;
+            document.getElementById('input-width').value = 3;
+            document.getElementById('input-height').value = 2.4;
+            
+            calculateWallpaper();
+        });
+
+        // Main Calculate Function (Drop Method Logic)
+        function calculateWallpaper() {
+            const length = parseFloat(document.getElementById('input-length').value) || 0;
+            const width = parseFloat(document.getElementById('input-width').value) || 0;
+            const height = parseFloat(document.getElementById('input-height').value) || 0;
+            const doors = parseFloat(document.getElementById('input-doors').value) || 0;
+            const windows = parseFloat(document.getElementById('input-windows').value) || 0;
+            
+            if (length <= 0 || width <= 0 || height <= 0) return;
+
+            // 1. Calculate Perimeter and Gross Area
+            const perimeter = 2 * (length + width);
+            let grossArea = perimeter * height;
+
+            // 2. Subtract Doors and Windows
+            let openingArea = 0;
+            if (currentUnit === 'imperial') {
+                openingArea = (doors * 21) + (windows * 15); // ~21 sq ft for door, 15 sq ft for window
+            } else {
+                openingArea = (doors * 2) + (windows * 1.5); // ~2 sq m for door, 1.5 sq m for window
+            }
+            
+            let netArea = grossArea - openingArea;
+            if (netArea < 0) netArea = 0;
+
+            // 3. Get Roll Size
+            const rollSelect = document.getElementById('select-roll-size').value;
+            let rollArea = 0;
+            if (rollSelect === 'custom') {
+                rollArea = parseFloat(document.getElementById('input-custom-roll').value) || 0;
+            } else {
+                rollArea = parseFloat(rollSelect);
+            }
+
+            if (rollArea <= 0) return;
+
+            // 4. Get Pattern Repeat
+            const patternSelect = document.getElementById('select-pattern').value;
+            let patternRepeat = 0;
+            if (patternSelect === 'custom') {
+                patternRepeat = parseFloat(document.getElementById('input-custom-pattern').value) || 0;
+            } else {
+                patternRepeat = parseFloat(patternSelect);
+            }
+
+            // 5. Calculate Rolls using Area Method + Pattern Waste
+            // Base area calculation
+            let baseRolls = netArea / rollArea;
+            
+            // Calculate pattern waste penalty
+            // If pattern repeat > 0, we add a waste factor based on the ratio of pattern to wall height
+            let wasteMultiplier = 1;
+            if (patternRepeat > 0) {
+                // Rough estimate: Waste is higher with larger patterns relative to room height
+                let wasteRatio = patternRepeat / (currentUnit === 'imperial' ? (height * 12) : (height * 100));
+                wasteMultiplier += (wasteRatio * 1.5); // Empirical multiplier for drop matching
+            } else {
+                wasteMultiplier += 0.10; // Standard 10% waste if no pattern
+            }
+
+            let totalRolls = Math.ceil(baseRolls * wasteMultiplier);
+            
+            // Calculate pure pattern waste rolls (for display)
+            let baseRollsCeil = Math.ceil(baseRolls);
+            let wasteRolls = totalRolls - baseRollsCeil;
+
+            // Update DOM
+            document.getElementById('result-rolls').innerText = totalRolls;
+            document.getElementById('result-area').innerText = new Intl.NumberFormat('en-US', { maximumFractionDigits: 1 }).format(netArea);
+            
+            // Show/Hide Waste Box based on whether pattern is selected
+            const wasteBox = document.getElementById('pattern-allowance-box');
+            if (patternRepeat > 0) {
+                wasteBox.style.display = 'block';
+                document.getElementById('result-waste').innerText = wasteRolls > 0 ? wasteRolls : 1;
+            } else {
+                wasteBox.style.display = 'none';
+            }
+        }
+
+        // Attach Event Listeners to Inputs
+        ['input-length', 'input-width', 'input-height', 'input-doors', 'input-windows', 'input-custom-roll', 'input-custom-pattern'].forEach(id => {
+            document.getElementById(id).addEventListener('input', calculateWallpaper);
+        });
+    </script>
+
+</body>
+</html>
