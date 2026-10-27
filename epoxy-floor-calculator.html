@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Epoxy Floor Calculator | How Much Epoxy Do I Need? (US, UK, AU)</title>
+    <meta name="title" content="Epoxy Floor Calculator | How Much Epoxy Do I Need? (US, UK, AU)">
+    <meta name="description" content="Calculate exact epoxy resin volume, number of kits, and primer needed for your garage floor or countertop. Supports mils/mm thickness and US/UK/AU measurements.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://buildmetric.org/epoxy-floor-calculator.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://buildmetric.org/epoxy-floor-calculator.html">
+    <meta property="og:title" content="Epoxy Floor Calculator | How Much Epoxy Do I Need?">
+    <meta property="og:description" content="Calculate exact epoxy resin volume and number of kits needed for your garage floor or countertop.">
+    <meta property="og:image" content="https://buildmetric.org/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://buildmetric.org/epoxy-floor-calculator.html">
+    <meta property="twitter:title" content="Epoxy Floor Calculator | How Much Epoxy Do I Need?">
+    <meta property="twitter:description" content="Calculate exact epoxy resin volume and number of kits needed for your garage floor or countertop.">
+    <meta property="twitter:image" content="https://buildmetric.org/logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9', // Sky Blue
+                        slate: {
+                            900: '#0f172a', // Dark Slate
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- JSON-LD Schema: WebApplication & Breadcrumbs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://buildmetric.org/epoxy-floor-calculator.html#webapp",
+          "name": "Epoxy Floor Calculator",
+          "url": "https://buildmetric.org/epoxy-floor-calculator.html",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "All",
+          "description": "Professional calculator for estimating epoxy resin volume and kit quantities for floors and countertops.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://buildmetric.org/epoxy-floor-calculator.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://buildmetric.org/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Concrete Calculators",
+              "item": "https://buildmetric.org/concrete.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Epoxy Floor Calculator",
+              "item": "https://buildmetric.org/epoxy-floor-calculator.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+
+  <body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-primary selection:text-white flex flex-col min-h-screen">
+
+    <!-- Sticky Glassmorphism Navbar -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+                    <img src="logo.png" alt="BuildMetric Logo" class="h-8 w-auto sm:h-10" onerror="this.style.display='none'">
+                    <div class="flex flex-col">
+                        <span class="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-slate-900 leading-none">
+                            Build<span class="text-primary">Metric</span>
+                        </span>
+                        <span class="text-[10px] text-slate-500 font-semibold tracking-widest uppercase mt-1 hidden sm:block">Engineering Calculators</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="calculators.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">All Tools</a>
+                    <a href="guides.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Guides</a>
+                    <a href="about.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">About</a>
+                    <a href="contact.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Contact</a>
+                </div>
+
+                <!-- Desktop CTA Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="calculators.html" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold text-white transition-all bg-slate-900 rounded-xl hover:bg-slate-800 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900">
+                        Open Tools
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1 sm:px-6">
+                <a href="calculators.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">All Tools</a>
+                <a href="guides.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">Guides</a>
+                <a href="about.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">About</a>
+                <a href="contact.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">Contact</a>
+                <div class="pt-4">
+                    <a href="calculators.html" class="w-full flex justify-center items-center px-4 py-3 text-base font-bold text-white bg-slate-900 rounded-xl hover:bg-slate-800 transition-all shadow-sm">
+                        Open Tools
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <main class="flex-grow">
+        
+        <!-- Breadcrumbs -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2">
+            <nav class="flex text-sm text-slate-500 font-medium" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="index.html" class="inline-flex items-center hover:text-primary transition-colors">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            <a href="concrete.html" class="ml-1 md:ml-2 hover:text-primary transition-colors">Concrete</a>
+                        </div>
+                    </li>
+                    <li aria-current="page">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            <span class="ml-1 md:ml-2 text-slate-800 font-bold">Epoxy Floor Calculator</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+
+      <!-- Phase 3: Calculator UI -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    
+    <!-- Page Heading -->
+    <div class="mb-8 max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-primary text-xs font-bold uppercase tracking-wider mb-4 border border-sky-100">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            Epoxy & Resin Approved
+        </div>
+        
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-slate-900 tracking-tight mb-4">
+            Epoxy Floor Calculator <span class="text-primary text-lg md:text-xl font-semibold block mt-2">How Much Epoxy Do I Need?</span>
+        </h1>
+        <p class="text-base md:text-lg text-slate-600 leading-relaxed">
+            Calculate the exact volume of epoxy resin (in gallons or liters) and the number of kits needed for your garage floor or countertop.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Input Form Column -->
+        <div class="lg:col-span-7 xl:col-span-8 bg-white rounded-3xl shadow-sm border border-slate-200 p-5 sm:p-8">
+            
+            <!-- Unit Toggle -->
+            <div class="flex flex-col sm:flex-row sm:items-center gap-3 mb-6 pb-6 border-b border-slate-100">
+                <span class="text-sm font-bold text-slate-900">Measurement System:</span>
+                <div class="flex bg-slate-100 p-1 rounded-xl w-full sm:w-auto">
+                    <button type="button" class="flex-1 sm:flex-none px-4 py-2 text-sm font-bold bg-white text-primary rounded-lg shadow-sm transition-all" id="btn-imperial">Imperial (US)</button>
+                    <button type="button" class="flex-1 sm:flex-none px-4 py-2 text-sm font-bold text-slate-500 hover:text-slate-700 rounded-lg transition-all" id="btn-metric">Metric (UK/AU)</button>
+                </div>
+            </div>
+
+            <!-- Floor Dimensions (2-col mobile) -->
+            <div class="grid grid-cols-2 gap-4 sm:gap-6 mb-6">
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Room Length</label>
+                    <div class="relative">
+                        <input type="number" id="input-length" class="w-full bg-slate-50 border border-slate-300 text-slate-900 text-lg font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" placeholder="e.g. 20" value="20">
+                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                            <span class="text-slate-500 font-bold dim-unit">ft</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Room Width</label>
+                    <div class="relative">
+                        <input type="number" id="input-width" class="w-full bg-slate-50 border border-slate-300 text-slate-900 text-lg font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" placeholder="e.g. 20" value="20">
+                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                            <span class="text-slate-500 font-bold dim-unit">ft</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Epoxy Specs -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 mb-8">
+                
+                <!-- Coating Thickness Dropdown -->
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Coating Thickness</label>
+                    <select id="select-thickness" onchange="toggleCustomInput(this, 'custom-thickness-container')" class="bg-slate-50 border border-slate-300 text-slate-900 text-base font-medium rounded-xl focus:ring-primary focus:border-primary block w-full p-3 cursor-pointer">
+                        <option value="10">10 mils (Primer / Sealer)</option>
+                        <option value="16" selected>16 mils (Standard 1-Coat)</option>
+                        <option value="20">20 mils (Heavy Duty)</option>
+                        <option value="100">100 mils (Full Flake System)</option>
+                        <option value="custom">Custom Thickness...</option>
+                    </select>
+                    <!-- Custom Thickness Input -->
+                    <div id="custom-thickness-container" class="hidden mt-3">
+                        <div class="relative">
+                            <input type="number" id="input-custom-thickness" class="w-full bg-sky-50 border border-primary text-slate-900 text-base font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary block w-full p-3" placeholder="Enter thickness">
+                            <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                <span class="text-primary font-bold custom-unit-small">mils</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kit Size Dropdown -->
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Epoxy Kit Size (Volume)</label>
+                    <select id="select-kit-size" onchange="toggleCustomInput(this, 'custom-kit-container')" class="bg-slate-50 border border-slate-300 text-slate-900 text-base font-medium rounded-xl focus:ring-primary focus:border-primary block w-full p-3 cursor-pointer">
+                        <option value="1">1 Gallon Kit</option>
+                        <option value="1.5">1.5 Gallon Kit</option>
+                        <option value="2">2 Gallon Kit</option>
+                        <option value="3">3 Gallon Kit</option>
+                        <option value="custom">Custom Kit Size...</option>
+                    </select>
+                    <!-- Custom Kit Input -->
+                    <div id="custom-kit-container" class="hidden mt-3">
+                        <div class="relative">
+                            <input type="number" id="input-custom-kit" class="w-full bg-sky-50 border border-primary text-slate-900 text-base font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary block w-full p-3" placeholder="Enter volume">
+                            <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                <span class="text-primary font-bold custom-unit-large">gal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Waste Factor Slider -->
+            <div class="mb-8">
+                <label class="block text-sm font-bold text-slate-700 mb-2">Waste Allowance (%)</label>
+                <input type="range" id="input-waste" min="5" max="20" value="10" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                <div class="flex justify-between text-xs text-slate-500 mt-1 font-medium">
+                    <span>5%</span>
+                    <span class="font-bold text-primary" id="waste-value">10% (Standard for mixing loss)</span>
+                    <span>20%</span>
+                </div>
+            </div>
+
+            <!-- Calculate Button -->
+            <button onclick="calculateEpoxy()" class="w-full flex items-center justify-center gap-2 bg-primary hover:bg-sky-500 text-white text-lg font-bold py-4 px-4 rounded-xl transition-all shadow-lg shadow-primary/20">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                Calculate Epoxy
+            </button>
+
+        </div>
+
+        <!-- Result Box Column -->
+        <div class="lg:col-span-5 xl:col-span-4">
+            <div class="bg-slate-900 rounded-3xl shadow-xl p-5 sm:p-8 lg:sticky lg:top-24 border border-slate-800">
+                
+                <h2 class="text-lg sm:text-xl font-heading font-bold text-white mb-5 flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    Material Required
+                </h2>
+
+                <!-- Main Results Display -->
+                <div class="space-y-3 mb-6">
+                    
+                    <!-- Total Kits -->
+                    <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                        <p class="text-xs sm:text-sm text-slate-400 font-medium mb-1">Total Epoxy Kits to Buy</p>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-4xl font-mono font-bold text-white" id="result-kits">0</span>
+                            <span class="text-sm text-slate-400 font-medium">kits</span>
+                        </div>
+                    </div>
+
+                    <!-- Exact Volume -->
+                    <div class="bg-sky-900/30 p-4 rounded-xl border border-sky-800/50">
+                        <p class="text-xs sm:text-sm text-sky-200 font-medium mb-1">Exact Volume Needed (with waste)</p>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-2xl font-mono font-bold text-white" id="result-volume">0</span>
+                            <span class="text-sm text-sky-300 font-bold result-unit-large">gal</span>
+                        </div>
+                    </div>
+
+                    <!-- Total Floor Area -->
+                    <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                        <p class="text-xs sm:text-sm text-slate-400 font-medium mb-1">Total Floor Area</p>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-xl font-mono font-bold text-white" id="result-area">0</span>
+                            <span class="text-xs text-primary font-bold result-area-unit">sq ft</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Action Buttons (Blue Theme) -->
+                <div class="grid grid-cols-3 gap-2 sm:gap-3 pt-2">
+                    <button onclick="saveResult()" class="flex flex-col items-center justify-center gap-1 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white py-2.5 sm:py-3 rounded-xl transition-colors border border-slate-700">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg>
+                        <span class="text-[10px] sm:text-xs font-bold">Save</span>
+                    </button>
+                    <button onclick="shareResult()" class="flex flex-col items-center justify-center gap-1 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white py-2.5 sm:py-3 rounded-xl transition-colors border border-slate-700">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                        <span class="text-[10px] sm:text-xs font-bold">Share</span>
+                    </button>
+                    <button onclick="copyResult()" class="flex flex-col items-center justify-center gap-1 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white py-2.5 sm:py-3 rounded-xl transition-colors border border-slate-700">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                        <span class="text-[10px] sm:text-xs font-bold">Copy</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Phase 4: Content Part 1 (Engineering & SEO) -->
+<section class="bg-white border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        
+        <!-- AI Overview / Quick Answer Box -->
+        <div class="bg-sky-50 border-l-4 border-primary p-6 sm:p-8 rounded-r-2xl mb-12 shadow-sm">
+            <h2 class="text-xl font-heading font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Quick Answer: How Do I Calculate Epoxy Volume?
+            </h2>
+            <p class="text-slate-700 leading-relaxed font-medium text-lg">
+                To calculate epoxy, you need to know that <strong>1 gallon of standard epoxy covers approximately 160 square feet at a thickness of 10 mils</strong>. First, measure your floor area (Length × Width). Multiply the area by your desired thickness in mils, then divide by 160. This gives you the exact number of gallons needed. Our calculator above handles this math automatically, including standard waste factors and kit sizes.
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6">The Science of Epoxy Flooring</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                Epoxy is not paint. It is a two-part thermosetting polymer made from a resin and a hardener. When mixed together in the correct ratio, a chemical reaction occurs (exothermic curing) that transforms the liquid into a rigid, durable plastic. This is why epoxy provides superior adhesion, chemical resistance, and compressive strength compared to standard concrete sealers.
+            </p>
+            <p>
+                However, epoxy is highly sensitive to thickness. If applied too thin (under 8 mils), it will peel or wear away quickly. If applied too thick (over 20 mils for a single coat), it can trap air, cure unevenly, and cause bubbling or "fish eyes." 
+            </p>
+            <p>
+                Professional installers typically use a multi-layer system:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 mb-6">
+                <li><strong>Primer Coat:</strong> 5-10 mils (penetrates the concrete).</li>
+                <li><strong>Base Coat:</strong> 10-20 mils (the main protective layer, often mixed with color flakes).</li>
+                <li><strong>Topcoat (Clear):</strong> 8-12 mils (provides UV resistance and a glossy finish).</li>
+            </ul>
+            <p>
+                Our calculator allows you to input your exact thickness to ensure you order the correct amount of resin for your specific system.
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">Global Epoxy Standards: US vs. UK vs. Australia</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6 mb-8">
+            <p>
+                One of the biggest challenges in sourcing epoxy internationally is that the United States uses the Imperial system (mils), while the UK and Australia use the Metric system (microns or millimeters). If you buy an American kit but use a British tutorial, your math will be completely off.
+            </p>
+            <p>
+                Here is a comparison of how coating thickness and terminology differ across the three regions:
+            </p>
+        </div>
+
+        <!-- Global Standards Table -->
+        <div class="overflow-x-auto shadow-sm rounded-xl border border-slate-200 mb-12">
+            <table class="w-full text-sm text-left text-slate-600">
+                <thead class="text-xs text-slate-700 uppercase bg-slate-100 border-b border-slate-200">
+                    <tr>
+                        <th scope="col" class="px-6 py-4 font-bold">Aspect</th>
+                        <th scope="col" class="px-6 py-4 font-bold">USA</th>
+                        <th scope="col" class="px-6 py-4 font-bold">UK</th>
+                        <th scope="col" class="px-6 py-4 font-bold">Australia</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200">
+                    <tr class="bg-white hover:bg-slate-50 transition-colors">
+                        <th scope="row" class="px-6 py-4 font-semibold text-slate-900 whitespace-nowrap">Standard Unit</th>
+                        <td class="px-6 py-4">Mils (1 mil = 0.001 inch)</td>
+                        <td class="px-6 py-4">Microns (μm) or mm</td>
+                        <td class="px-6 py-4">Microns (μm) or mm</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-slate-50 transition-colors">
+                        <th scope="row" class="px-6 py-4 font-semibold text-slate-900 whitespace-nowrap">Conversion (10 Mils)</th>
+                        <td class="px-6 py-4">10 Mils</td>
+                        <td class="px-6 py-4">254 Microns (0.25 mm)</td>
+                        <td class="px-6 py-4">254 Microns (0.25 mm)</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-slate-50 transition-colors">
+                        <th scope="row" class="px-6 py-4 font-semibold text-slate-900 whitespace-nowrap">Kit Volume Unit</th>
+                        <td class="px-6 py-4">Gallons (Gal)</td>
+                        <td class="px-6 py-4">Litres (L) or Kilograms (kg)</td>
+                        <td class="px-6 py-4">Litres (L) or Kilograms (kg)</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-slate-50 transition-colors">
+                        <th scope="row" class="px-6 py-4 font-semibold text-slate-900 whitespace-nowrap">Concrete Standard</th>
+                        <td class="px-6 py-4">ASTM C881</td>
+                        <td class="px-6 py-4">BS EN 13813</td>
+                        <td class="px-6 py-4">AS 4020 / AS 3600</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">The Math: Density, Volume, and Coverage</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                Unlike paint where you just divide by square footage, epoxy calculation involves volumetric math. 
+            </p>
+            <p>
+                A standard 100% solids epoxy has a density of roughly <strong>9.5 to 10 lbs per gallon</strong> (or 1.1 to 1.2 kg per liter). Because it is 100% solids, it does not evaporate; what you pour is what cures on the floor.
+            </p>
+            <p>
+                <strong>The Coverage Formula:</strong><br>
+                1 Gallon = 1604 square feet at 1 mil thickness.<br>
+                Therefore, 1 Gallon = 160 square feet at 10 mils thickness.
+            </p>
+            <p>
+                If you have a 500 sq ft garage and want a 16-mil base coat (which is standard for a 1-coat system):<br>
+                (500 sq ft × 16 mils) ÷ 160 = <strong>50 Gallons</strong>. 
+                (This is why you must always buy the correct kit sizes. Our tool rounds up to the nearest full kit to ensure you don't run short mid-pour.) If you need to calculate the concrete slab itself first, use our <a href="concrete-calculator.html" class="text-primary font-semibold hover:underline">concrete calculator</a>.
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">Substrate Preparation: The Invisible 80%</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                Epoxy will only bond to concrete that is clean, dry, and mechanically profiled. If you apply epoxy to a smooth, sealed, or damp floor, it will peel off like a sheet of plastic within a few months. 
+            </p>
+            <p>
+                Professional installers use a process called <strong>CSP (Concrete Surface Profile)</strong>. For epoxy, you need a CSP 3 to 4, which is achieved by diamond grinding or shot blasting. Acid etching is the old-school method, but it is highly unreliable and often voids manufacturer warranties.
+            </p>
+            <p>
+                Furthermore, you must test for moisture vapor emission. If your concrete slab emits more than 3-5 lbs of moisture per 1000 sq ft per 24 hours, you must use a specialized moisture-mitigating primer. Understanding your concrete slab's integrity is step one; if you are pouring a new slab, calculate your needs with our <a href="sonotube-calculator.html" class="text-primary font-semibold hover:underline">sonotube calculator</a> or concrete tools first.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+  <!-- Phase 5: Content Part 2 (Installation, Mixing & Conclusion) -->
+<section class="bg-slate-50 border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6">The Perfect Mix: Resin and Hardener Ratios</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                Epoxy is a two-component system. It is supplied as Part A (Resin) and Part B (Hardener). When you buy a "1 Gallon Kit," you are not buying 1 gallon of resin and 1 gallon of hardener; you are buying a total combined volume of 1 gallon. 
+            </p>
+            <p>
+                The mixing ratio varies by manufacturer. The most common ratios are:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 mb-6">
+                <li><strong>2:1 Ratio:</strong> 2 parts Resin to 1 part Hardener (by volume). This is standard for most 100% solids epoxy kits.</li>
+                <li><strong>1:1 Ratio:</strong> Equal parts Resin and Hardener. Common for fast-setting or specialized formulations.</li>
+                <li><strong>3:1 or 4:1 Ratio:</strong> Used for some high-performance industrial epoxies or polyaspartic topcoats.</li>
+            </ul>
+            <p>
+                <strong>Never guess the ratio.</strong> If you add too much hardener, the epoxy will cure too fast, overheat (exotherm), and crack. If you add too little hardener, the floor will remain permanently sticky and never cure. Our calculator uses the total volume required, but you must follow the specific mixing instructions on your kit's label.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">Mixing Best Practices</h3>
+            <p>
+                You cannot simply stir the two parts together for 30 seconds. You must mix aggressively for a full <strong>3 to 5 minutes</strong> using a drill-mounted mixing paddle (Jiffy mixer) at a low RPM (under 500 RPM) to avoid whipping air into the mixture. 
+                <br><strong>The Two-Bucket Method:</strong> Professionals pour the mixed epoxy into a second clean bucket and mix for another minute. This scrapes the unmixed resin from the sides of the first bucket, ensuring a perfect chemical bond.
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">Application: Spreading and Back-Rolling</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                Epoxy is heavy and thick. You don't "paint" it on like latex wall paint. You "spread" it. 
+            </p>
+            <p>
+                The standard application technique is:
+            </p>
+            <ul class="list-disc pl-6 space-y-3 mb-6">
+                <li><strong>Pour and Spread:</strong> Pour ribbons of epoxy across the floor and use a squeegee or a flat trowel to spread it out at the correct thickness.</li>
+                <li><strong>Back-Roll:</strong> Immediately after spreading, use a high-quality 3/8" or 1/2" nap roller (or a spiked roller for degassing) to roll back over the epoxy. This ensures an even coat, releases trapped air, and gives the floor a uniform texture for better adhesion. Never skip back-rolling.</li>
+                <li><strong>Spiked Shoes:</strong> Once the epoxy is on the floor, you cannot walk on it. Use plastic spiked shoes (golf shoes with spikes) to walk across the wet floor while applying flakes or checking for puddles.</li>
+            </ul>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">Safety and Pot Life: The Clock is Ticking</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                Once the resin and hardener are mixed, the chemical reaction begins. This is called the <strong>Pot Life</strong>—the amount of time you have to apply the epoxy before it becomes too thick to spread.
+            </p>
+            <p>
+                Pot life is highly dependent on temperature. A standard kit might have a pot life of 30 minutes at 75°F (24°C). However, at 85°F (29°C), that pot life might drop to 15 minutes. 
+            </p>
+            <p>
+                <strong>Safety Warning:</strong> Mixed epoxy in a bucket generates intense heat (exotherm). Never leave a large batch of mixed epoxy sitting in a bucket; it can melt the plastic bucket and cause burns or release toxic fumes. Always mix small batches and pour it onto the floor immediately.
+            </p>
+            <p>
+                Wear nitrile gloves (not latex), safety glasses, and a respirator (if applying in a closed space). Epoxy fumes are irritating to the respiratory system. Ensure good ventilation. If you are working on a larger renovation, ensure your drywall and framing are done first; use our <a href="drywall-calculator.html" class="text-primary font-semibold hover:underline">drywall calculator</a> if needed.
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">Costing: DIY Kits vs. Professional Installation</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                Epoxy flooring is incredibly durable and is often more cost-effective than tile or hardwood. A standard DIY epoxy kit (covering 250 sq ft) typically costs between $100 and $200 in the US, £100-£200 in the UK, or $200-$400 AUD in Australia, depending on the brand and whether it includes flakes.
+            </p>
+            <p>
+                However, if you hire a professional to diamond-grind, prime, base coat, broadcast flakes, and apply a polyaspartic topcoat, the cost can be 4 to 6 times higher. 
+            </p>
+            <p>
+                By calculating the exact volume yourself using our tool, you can confidently order your kits online or from a local supplier, avoiding the "markup" of buying through a contractor. For the concrete slab beneath your epoxy, use our <a href="concrete-calculator.html" class="text-primary font-semibold hover:underline">concrete calculator</a>.
+            </p>
+        </div>
+
+        <!-- Conclusion Box -->
+        <div class="mt-16 bg-slate-900 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden shadow-2xl">
+            <!-- Decorative gradient -->
+            <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-primary rounded-full blur-3xl opacity-20"></div>
+            
+            <div class="relative z-10">
+                <h2 class="text-2xl md:text-3xl font-heading font-bold mb-4">Transform Your Garage or Patio</h2>
+                <p class="text-slate-300 leading-relaxed mb-6 text-lg">
+                    A well-executed epoxy floor is not just beautiful; it's a high-performance surface that resists chemicals, impacts, and stains. By calculating your exact kit requirements and understanding the mixing and application process, you save money and achieve a professional-grade finish.
+                </p>
+                <p class="text-slate-300 leading-relaxed mb-8 text-lg">
+                    Whether you are coating a residential garage in the US, a utility room in the UK, or an outdoor patio in Australia, BuildMetric provides the precise volume calculations you need to get started.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="concrete-calculator.html" class="inline-flex justify-center items-center px-6 py-3.5 text-base font-bold text-slate-900 bg-white rounded-xl hover:bg-slate-100 transition-colors shadow-sm">
+                        Calculate Concrete Volume
+                    </a>
+                    <a href="paint-coverage-calculator.html" class="inline-flex justify-center items-center px-6 py-3.5 text-base font-bold text-white border border-slate-700 rounded-xl hover:bg-slate-800 transition-colors">
+                        Estimate Paint Coverage
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+  <!-- Phase 6: 7 FAQs & JSON-LD Schema -->
+<section class="bg-white border-t border-slate-200 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- FAQ Heading -->
+        <div class="text-center mb-12">
+            <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">Frequently Asked Questions</h2>
+            <h3 class="text-3xl md:text-4xl font-heading font-extrabold text-slate-900">Epoxy Flooring FAQs</h3>
+            <p class="text-slate-600 mt-4 text-lg font-medium">Direct answers to common questions about epoxy volume, mixing, and application.</p>
+        </div>
+
+        <!-- FAQs List -->
+        <div class="space-y-4">
+            
+            <!-- FAQ 1 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">01</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How much epoxy do I need for a 2-car garage?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    A standard 2-car garage is roughly <strong>400 to 500 square feet</strong>. For a standard 1-coat system at 16 mils thickness, you will need about <strong>3 to 4 gallons</strong> of epoxy (including a 10% waste factor). However, if you are doing a full flake system (which requires a thick base coat), you may need 5 to 6 gallons. Use the <a href="#top" class="text-primary font-semibold hover:underline">calculator above</a> to get the exact kit count for your specific garage size.
+                </div>
+            </details>
+
+            <!-- FAQ 2 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">02</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">What is the correct mixing ratio for epoxy resin?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    The most common ratio for 100% solids epoxy is <strong>2 parts Resin (Part A) to 1 part Hardener (Part B) by volume</strong>. However, some fast-setting kits use a 1:1 ratio. Always read the label of your specific kit. Mixing more hardener than required will cause the floor to cure too fast, overheat, and crack.
+                </div>
+            </details>
+
+            <!-- FAQ 3 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">03</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">Can I apply epoxy over old concrete?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    Yes, but preparation is everything. The concrete must be fully cured (at least 28 days old), clean, and free of oil or sealers. You must mechanically profile the surface using a diamond grinder or shot blaster (achieving a CSP 3-4). Acid etching is highly discouraged as it voids most manufacturer warranties. Check out our <a href="concrete-calculator.html" class="text-primary font-semibold hover:underline">concrete calculator</a> if you are pouring a new slab.
+                </div>
+            </details>
+
+            <!-- FAQ 4 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">04</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">Why does my epoxy floor have bubbles?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    Bubbles are caused by air escaping from the porous concrete (outgassing) or by whipping too much air into the epoxy during mixing. To prevent this, mix at a low RPM (under 500), pour immediately, and use a <strong>spiked roller</strong> during the back-roll process. Also, avoid applying epoxy in direct, hot sunlight, which accelerates outgassing.
+                </div>
+            </details>
+
+            <!-- FAQ 5 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">05</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How long does epoxy take to cure?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    Standard epoxy is <strong>walkable in 12 to 24 hours</strong> and can handle light traffic in 24 to 48 hours. However, it takes <strong>7 full days</strong> for it to reach its maximum chemical and impact resistance. Avoid washing the floor or parking heavy vehicles on it for at least a week. For paint alternatives, check our <a href="paint-coverage-calculator.html" class="text-primary font-semibold hover:underline">paint coverage calculator</a>.
+                </div>
+            </details>
+
+            <!-- FAQ 6 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">06</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">Do I need a moisture barrier under epoxy?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    If your concrete slab is on-grade and lacks a vapor barrier beneath it, moisture can wick up through the concrete and peel the epoxy. You must perform a calcium chloride moisture test. If the emission rate is greater than 3-5 lbs/1000 sq ft/24 hrs, you must apply a specialized moisture-mitigating epoxy primer before your base coat.
+                </div>
+            </details>
+
+            <!-- FAQ 7 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">07</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">What is the difference between mils and microns?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    A "mil" is an Imperial unit of measurement equal to one-thousandth of an inch (0.001"). It is primarily used in the USA. A "micron" (μm) is a Metric unit equal to one-thousandth of a millimeter. It is used in the UK and Australia. To convert mils to microns, multiply by 25.4 (e.g., 10 mils = 254 microns). If you spot an error in our guide, please <a href="contact.html" class="text-primary font-semibold hover:underline">report it to our team</a>.
+                </div>
+            </details>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- JSON-LD Schema for FAQ Page (Matches HTML Text Exactly) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much epoxy do I need for a 2-car garage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A standard 2-car garage is roughly 400 to 500 square feet. For a standard 1-coat system at 16 mils thickness, you will need about 3 to 4 gallons of epoxy (including a 10% waste factor). However, if you are doing a full flake system (which requires a thick base coat), you may need 5 to 6 gallons. Use the calculator above to get the exact kit count for your specific garage size."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the correct mixing ratio for epoxy resin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most common ratio for 100% solids epoxy is 2 parts Resin (Part A) to 1 part Hardener (Part B) by volume. However, some fast-setting kits use a 1:1 ratio. Always read the label of your specific kit. Mixing more hardener than required will cause the floor to cure too fast, overheat, and crack."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I apply epoxy over old concrete?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, but preparation is everything. The concrete must be fully cured (at least 28 days old), clean, and free of oil or sealers. You must mechanically profile the surface using a diamond grinder or shot blaster (achieving a CSP 3-4). Acid etching is highly discouraged as it voids most manufacturer warranties. Check out our concrete calculator if you are pouring a new slab."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my epoxy floor have bubbles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bubbles are caused by air escaping from the porous concrete (outgassing) or by whipping too much air into the epoxy during mixing. To prevent this, mix at a low RPM (under 500), pour immediately, and use a spiked roller during the back-roll process. Also, avoid applying epoxy in direct, hot sunlight, which accelerates outgassing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does epoxy take to cure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard epoxy is walkable in 12 to 24 hours and can handle light traffic in 24 to 48 hours. However, it takes 7 full days for it to reach its maximum chemical and impact resistance. Avoid washing the floor or parking heavy vehicles on it for at least a week. For paint alternatives, check our paint coverage calculator."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a moisture barrier under epoxy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If your concrete slab is on-grade and lacks a vapor barrier beneath it, moisture can wick up through the concrete and peel the epoxy. You must perform a calcium chloride moisture test. If the emission rate is greater than 3-5 lbs/1000 sq ft/24 hrs, you must apply a specialized moisture-mitigating epoxy primer before your base coat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between mils and microns?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A \"mil\" is an Imperial unit of measurement equal to one-thousandth of an inch (0.001\"). It is primarily used in the USA. A \"micron\" (μm) is a Metric unit equal to one-thousandth of a millimeter. It is used in the UK and Australia. To convert mils to microns, multiply by 25.4 (e.g., 10 mils = 254 microns). If you spot an error in our guide, please report it to our team."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Phase 7: E-E-A-T Trust Box & Internal Linking -->
+<section class="bg-slate-100/60 py-12 border-t border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div class="flex items-start gap-5">
+                <div class="p-3 bg-primary/10 text-primary rounded-2xl flex-shrink-0">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-heading font-bold text-slate-900 mb-2">About This Calculator</h2>
+                    <p class="text-slate-600 text-sm md:text-base leading-relaxed max-w-2xl font-medium mb-4">
+                        This Epoxy Floor Calculator uses standard volumetric math verified by resin manufacturers. It is aligned with ASTM C881 (US), BS EN 13813 (UK), and AS 4020 (Australia) standards for coating thickness and yield. We prioritize accurate kit estimation to prevent mid-pour shortfalls. If you spot an error in our math, please report it immediately.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <a href="methodology.html" class="text-sm font-bold text-primary hover:text-sky-700 hover:underline flex items-center gap-1.5 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Our Methodology
+                        </a>
+                        <a href="contact.html" class="text-sm font-bold text-slate-500 hover:text-slate-900 hover:underline flex items-center gap-1.5 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                            Report an Error
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Related Tools & Guides -->
+<section class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Related Tools (3) -->
+        <div class="mb-16">
+            <h2 class="text-2xl font-heading font-extrabold text-slate-900 mb-6 flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                Related Calculators
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Tool 1 -->
+                <a href="concrete-calculator.html" class="group block p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:bg-white hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="p-2 bg-sky-100 text-primary rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-lg">Concrete Calculator</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 font-medium leading-relaxed">Calculate exact cubic yards or bags of concrete needed for the slab underneath your epoxy.</p>
+                    <span class="inline-flex items-center gap-1 text-sm font-bold text-primary mt-4">Open Tool <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+                </a>
+                
+                <!-- Tool 2 -->
+                <a href="paint-coverage-calculator.html" class="group block p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:bg-white hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="p-2 bg-amber-100 text-amber-600 rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-lg">Paint Coverage</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 font-medium leading-relaxed">Calculate paint quantities for walls or other surface coatings with our reliable tool.</p>
+                    <span class="inline-flex items-center gap-1 text-sm font-bold text-primary mt-4">Open Tool <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+                </a>
+                
+                <!-- Tool 3 -->
+                <a href="tile-calculator.html" class="group block p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:bg-white hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="p-2 bg-emerald-100 text-emerald-600 rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-lg">Tile Calculator</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 font-medium leading-relaxed">Calculate tiles, thinset, and grout needed if you opt for a tiled floor instead of epoxy.</p>
+                    <span class="inline-flex items-center gap-1 text-sm font-bold text-primary mt-4">Open Tool <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Related Guides (3) - Colorful Bento Style -->
+        <div>
+            <h2 class="text-2xl font-heading font-extrabold text-slate-900 mb-6 flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                Recommended Reading
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                
+                <!-- Guide 1 -->
+                <a href="guides/concrete-waste-allowance.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-slate-600 to-slate-800 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">How Much Waste to Add to a Concrete Order?</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Concrete • 8 min read</p>
+                    </div>
+                </a>
+                
+                <!-- Guide 2 -->
+                <a href="guides/paint-coverage-myths.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">Paint Coverage Myths: Why 1 Gallon Doesn't Cover 350 Sq Ft</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Paint • 6 min read</p>
+                    </div>
+                </a>
+                
+                <!-- Guide 3 -->
+                <a href="guides/reading-architectural-drawings.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-600 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">Reading Architectural Drawings for Estimators</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Estimating • 20 min read</p>
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+
+    </div>
+</section>
+
+ </main> <!-- Closing the main tag -->
+
+<!-- Phase 8: Compact & Clean 4-Column Footer -->
+<footer class="bg-slate-900 border-t border-slate-800 pt-12 pb-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+            
+            <!-- Brand Col -->
+            <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                <a href="index.html" class="flex items-center gap-2 mb-3">
+                    <span class="font-heading font-extrabold text-xl text-white">Build<span class="text-primary">Metric</span></span>
+                </a>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4 pr-4">
+                    Engineer-reviewed construction calculators for the US, UK, and Australia.
+                </p>
+                <a href="mailto:contact@buildmetric.org" class="text-sm font-medium text-primary hover:text-sky-400 transition-colors flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    contact@buildmetric.org
+                </a>
+            </div>
+
+            <!-- Calculators -->
+            <div>
+                <h3 class="font-heading font-bold text-white mb-4 text-sm">Calculators</h3>
+                <ul class="space-y-2">
+                    <li><a href="roof-pitch-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Roof Pitch</a></li>
+                    <li><a href="concrete-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Concrete Volume</a></li>
+                    <li><a href="framing-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Stud Count</a></li>
+                    <li><a href="paint-coverage-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Paint Coverage</a></li>
+                    <li><a href="calculators.html" class="text-sm font-bold text-primary hover:text-sky-400 transition-colors">All Tools &rarr;</a></li>
+                </ul>
+            </div>
+
+            <!-- Company -->
+            <div>
+                <h3 class="font-heading font-bold text-white mb-4 text-sm">Company</h3>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="text-sm text-slate-400 hover:text-primary transition-colors">About Us</a></li>
+                    <li><a href="guides.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Guides</a></li>
+                    <li><a href="contact.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Contact</a></li>
+                    <li><a href="sitemap.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Sitemap</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal -->
+            <div>
+                <h3 class="font-heading font-bold text-white mb-4 text-sm">Legal</h3>
+                <ul class="space-y-2">
+                    <li><a href="privacy-policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Terms of Use</a></li>
+                    <li><a href="disclaimer.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Disclaimer</a></li>
+                    <li><a href="cookie-policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-3">
+            <p class="text-xs text-slate-500">
+                &copy; <span class="current-year">2026</span> BuildMetric.org. All rights reserved.
+            </p>
+            <p class="text-xs text-slate-500 font-medium">
+                Engineered for US, UK & AU Standards.
+            </p>
+        </div>
+    </div>
+</footer>
+
+      <!-- ========================================== -->
+    <!-- PHASE 9: JAVASCRIPT & CLOSING TAGS         -->
+    <!-- ========================================== -->
+
+    <script>
+        // ==========================================
+        // 1. GLOBAL CORE FUNCTIONS (Save/Share/Copy)
+        // ==========================================
+        
+        function showToast(message) {
+            const existingToast = document.getElementById('bm-toast');
+            if (existingToast) existingToast.remove();
+
+            const toast = document.createElement('div');
+            toast.id = 'bm-toast';
+            toast.className = 'fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-slate-900 text-white px-6 py-3 rounded-xl shadow-2xl z-[100] text-sm font-semibold transition-all duration-300 opacity-0 translate-y-4 flex items-center gap-2';
+            toast.innerHTML = `<svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> ${message}`;
+            
+            document.body.appendChild(toast);
+            setTimeout(() => toast.classList.remove('opacity-0', 'translate-y-4'), 10);
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-4');
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        function copyResult() {
+            const text = `BuildMetric Epoxy Results:\nTotal Kits: ${document.getElementById('result-kits').innerText}\nExact Volume: ${document.getElementById('result-volume').innerText} ${document.querySelector('.result-unit-large').innerText}\nTotal Area: ${document.getElementById('result-area').innerText} ${document.querySelector('.result-area-unit').innerText}`;
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('Results copied to clipboard!');
+            }).catch(() => showToast('Failed to copy.'));
+        }
+
+        function saveResult() {
+            const data = {
+                kits: document.getElementById('result-kits').innerText,
+                volume: document.getElementById('result-volume').innerText,
+                area: document.getElementById('result-area').innerText,
+                unit: document.querySelector('.result-unit-large').innerText,
+                timestamp: new Date().toISOString()
+            };
+            localStorage.setItem('buildmetric_epoxy_saved', JSON.stringify(data));
+            showToast('Calculation saved locally!');
+        }
+
+        function shareResult() {
+            const text = `I just calculated my epoxy flooring needs using BuildMetric!\nKits Needed: ${document.getElementById('result-kits').innerText}\nVolume: ${document.getElementById('result-volume').innerText} ${document.querySelector('.result-unit-large').innerText}`;
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Epoxy Calculator Results',
+                    text: text,
+                    url: window.location.href
+                }).catch(console.error);
+            } else {
+                navigator.clipboard.writeText(text);
+                showToast('Sharing not supported. Copied instead!');
+            }
+        }
+
+        // ==========================================
+        // 2. EPOXY CALCULATOR LOGIC
+        // ==========================================
+
+        let currentUnit = 'imperial'; // 'imperial' or 'metric'
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            }
+            
+            // Dynamic Year
+            document.querySelectorAll('.current-year').forEach(el => el.textContent = new Date().getFullYear());
+
+            // Initial Calculation
+            calculateEpoxy();
+        });
+
+        // Toggle Custom Inputs
+        function toggleCustomInput(selectElement, customInputId) {
+            const customInputContainer = document.getElementById(customInputId);
+            if (selectElement.value === 'custom') {
+                customInputContainer.classList.remove('hidden');
+                customInputContainer.querySelector('input').focus();
+            } else {
+                customInputContainer.classList.add('hidden');
+            }
+            calculateEpoxy();
+        }
+
+        // Unit Toggle Logic
+        document.getElementById('btn-imperial').addEventListener('click', () => {
+            if (currentUnit === 'imperial') return;
+            currentUnit = 'imperial';
+            
+            // UI Styles
+            document.getElementById('btn-imperial').className = 'flex-1 sm:flex-none px-4 py-2 text-sm font-bold bg-white text-primary rounded-lg shadow-sm transition-all';
+            document.getElementById('btn-metric').className = 'flex-1 sm:flex-none px-4 py-2 text-sm font-bold text-slate-500 hover:text-slate-700 rounded-lg transition-all';
+
+            // Labels & Units
+            document.querySelectorAll('.dim-unit').forEach(el => el.innerText = 'ft');
+            document.querySelector('.result-unit-large').innerText = 'gal';
+            document.querySelector('.result-area-unit').innerText = 'sq ft';
+            document.querySelectorAll('.custom-unit-small').forEach(el => el.innerText = 'mils');
+            document.querySelectorAll('.custom-unit-large').forEach(el => el.innerText = 'gal');
+
+            // Dropdowns
+            document.getElementById('select-thickness').innerHTML = `
+                <option value="10">10 mils (Primer / Sealer)</option>
+                <option value="16" selected>16 mils (Standard 1-Coat)</option>
+                <option value="20">20 mils (Heavy Duty)</option>
+                <option value="100">100 mils (Full Flake System)</option>
+                <option value="custom">Custom Thickness...</option>
+            `;
+            document.getElementById('select-kit-size').innerHTML = `
+                <option value="1">1 Gallon Kit</option>
+                <option value="1.5">1.5 Gallon Kit</option>
+                <option value="2" selected>2 Gallon Kit</option>
+                <option value="3">3 Gallon Kit</option>
+                <option value="custom">Custom Kit Size...</option>
+            `;
+
+            // Reset Defaults
+            document.getElementById('input-length').value = 20;
+            document.getElementById('input-width').value = 20;
+            
+            calculateEpoxy();
+        });
+
+        document.getElementById('btn-metric').addEventListener('click', () => {
+            if (currentUnit === 'metric') return;
+            currentUnit = 'metric';
+            
+            // UI Styles
+            document.getElementById('btn-metric').className = 'flex-1 sm:flex-none px-4 py-2 text-sm font-bold bg-white text-primary rounded-lg shadow-sm transition-all';
+            document.getElementById('btn-imperial').className = 'flex-1 sm:flex-none px-4 py-2 text-sm font-bold text-slate-500 hover:text-slate-700 rounded-lg transition-all';
+
+            // Labels & Units
+            document.querySelectorAll('.dim-unit').forEach(el => el.innerText = 'm');
+            document.querySelector('.result-unit-large').innerText = 'Liters';
+            document.querySelector('.result-area-unit').innerText = 'sq m';
+            document.querySelectorAll('.custom-unit-small').forEach(el => el.innerText = 'mm');
+            document.querySelectorAll('.custom-unit-large').forEach(el => el.innerText = 'Liters');
+
+            // Dropdowns
+            document.getElementById('select-thickness').innerHTML = `
+                <option value="0.25">0.25 mm (Primer / Sealer)</option>
+                <option value="0.4" selected>0.4 mm (Standard 1-Coat)</option>
+                <option value="0.5">0.5 mm (Heavy Duty)</option>
+                <option value="2.5">2.5 mm (Full Flake System)</option>
+                <option value="custom">Custom Thickness...</option>
+            `;
+            document.getElementById('select-kit-size').innerHTML = `
+                <option value="4">4 Liter Kit</option>
+                <option value="5" selected>5 Liter Kit</option>
+                <option value="7.5">7.5 Liter Kit</option>
+                <option value="10">10 Liter Kit</option>
+                <option value="custom">Custom Kit Size...</option>
+            `;
+
+            // Reset Defaults
+            document.getElementById('input-length').value = 6;
+            document.getElementById('input-width').value = 6;
+            
+            calculateEpoxy();
+        });
+
+        // Waste Slider
+        document.getElementById('input-waste').addEventListener('input', (e) => {
+            document.getElementById('waste-value').innerText = e.target.value + '%';
+            calculateEpoxy();
+        });
+
+        // Main Calculate Function
+        function calculateEpoxy() {
+            const length = parseFloat(document.getElementById('input-length').value) || 0;
+            const width = parseFloat(document.getElementById('input-width').value) || 0;
+            const wastePercent = parseFloat(document.getElementById('input-waste').value) || 0;
+
+            if (length <= 0 || width <= 0) return;
+
+            const area = length * width;
+
+            // Get Thickness
+            const thicknessSelect = document.getElementById('select-thickness').value;
+            let thickness = 0;
+            if (thicknessSelect === 'custom') {
+                thickness = parseFloat(document.getElementById('input-custom-thickness').value) || 0;
+            } else {
+                thickness = parseFloat(thicknessSelect);
+            }
+            if (thickness <= 0) return;
+
+            // Get Kit Size
+            const kitSelect = document.getElementById('select-kit-size').value;
+            let kitSize = 0;
+            if (kitSelect === 'custom') {
+                kitSize = parseFloat(document.getElementById('input-custom-kit').value) || 0;
+            } else {
+                kitSize = parseFloat(kitSelect);
+            }
+            if (kitSize <= 0) return;
+
+            let totalVolume = 0;
+            let kits = 0;
+
+            if (currentUnit === 'imperial') {
+                // Math in Imperial (Gallons)
+                // 1 Gallon covers 160 sq ft at 10 mils.
+                // Formula: (Area * Thickness) / 160
+                let rawVolume = (area * thickness) / 160;
+                totalVolume = rawVolume * (1 + (wastePercent / 100));
+                
+                kits = Math.ceil(totalVolume / kitSize);
+
+                document.getElementById('result-volume').innerText = totalVolume.toFixed(2);
+                document.getElementById('result-area').innerText = new Intl.NumberFormat('en-US').format(area);
+
+            } else {
+                // Math in Metric (Liters)
+                // 1 Liter covers 1 sq m at 1 mm thickness.
+                // Formula: Area * Thickness (in mm)
+                let rawVolume = area * thickness;
+                totalVolume = rawVolume * (1 + (wastePercent / 100));
+                
+                kits = Math.ceil(totalVolume / kitSize);
+
+                document.getElementById('result-volume').innerText = totalVolume.toFixed(2);
+                document.getElementById('result-area').innerText = new Intl.NumberFormat('en-US', { maximumFractionDigits: 1 }).format(area);
+            }
+
+            // Update DOM
+            document.getElementById('result-kits').innerText = kits;
+        }
+
+        // Attach Event Listeners to Inputs
+        ['input-length', 'input-width', 'input-custom-thickness', 'input-custom-kit'].forEach(id => {
+            document.getElementById(id).addEventListener('input', calculateEpoxy);
+        });
+        
+        document.getElementById('select-thickness').addEventListener('change', calculateEpoxy);
+        document.getElementById('select-kit-size').addEventListener('change', calculateEpoxy);
+    </script>
+
+</body>
+</html>
