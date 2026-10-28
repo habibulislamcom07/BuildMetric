@@ -191,205 +191,122 @@
                 </ol>
             </nav>
         </div>
-
-      <!-- Phase 3: Calculator UI -->
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+      <!-- Input Form Column -->
+<div class="lg:col-span-7 xl:col-span-8 bg-white rounded-3xl shadow-sm border border-slate-200 p-5 sm:p-8">
     
-    <!-- Page Heading -->
-    <div class="mb-8 max-w-3xl">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-primary text-xs font-bold uppercase tracking-wider mb-4 border border-sky-100">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            Exterior Contracting Approved
+    <!-- Unit Toggle -->
+    <div class="flex flex-col sm:flex-row sm:items-center gap-3 mb-6 pb-6 border-b border-slate-100">
+        <span class="text-sm font-bold text-slate-900">Measurement System:</span>
+        <div class="flex bg-slate-100 p-1 rounded-xl w-full sm:w-auto">
+            <button type="button" class="flex-1 sm:flex-none px-4 py-2 text-sm font-bold bg-white text-primary rounded-lg shadow-sm transition-all" id="btn-imperial">Imperial (US)</button>
+            <button type="button" class="flex-1 sm:flex-none px-4 py-2 text-sm font-bold text-slate-500 hover:text-slate-700 rounded-lg transition-all" id="btn-metric">Metric (UK/AU)</button>
         </div>
-        
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-slate-900 tracking-tight mb-4">
-            Siding Calculator <span class="text-primary text-lg md:text-xl font-semibold block mt-2">How Many Boxes Do I Need?</span>
-        </h1>
-        <p class="text-base md:text-lg text-slate-600 leading-relaxed">
-            Calculate exact squares, boxes, and trim needed for your house exterior. Accounts for gables, doors, windows, and specific siding coverage.
-        </p>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        
-        <!-- Input Form Column -->
-        <div class="lg:col-span-7 xl:col-span-8 bg-white rounded-3xl shadow-sm border border-slate-200 p-5 sm:p-8">
-            
-            <!-- Unit Toggle -->
-            <div class="flex flex-col sm:flex-row sm:items-center gap-3 mb-6 pb-6 border-b border-slate-100">
-                <span class="text-sm font-bold text-slate-900">Measurement System:</span>
-                <div class="flex bg-slate-100 p-1 rounded-xl w-full sm:w-auto">
-                    <button type="button" class="flex-1 sm:flex-none px-4 py-2 text-sm font-bold bg-white text-primary rounded-lg shadow-sm transition-all" id="btn-imperial">Imperial (US)</button>
-                    <button type="button" class="flex-1 sm:flex-none px-4 py-2 text-sm font-bold text-slate-500 hover:text-slate-700 rounded-lg transition-all" id="btn-metric">Metric (UK/AU)</button>
+    <!-- Main Wall Dimensions -->
+    <div class="grid grid-cols-2 gap-4 sm:gap-6 mb-6">
+        <div>
+            <label class="block text-sm font-bold text-slate-700 mb-2">Wall Length</label>
+            <div class="relative">
+                <input type="number" id="input-length" class="w-full bg-slate-50 border border-slate-300 text-slate-900 text-lg font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" placeholder="e.g. 150" value="150">
+                <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                    <span class="text-slate-500 font-bold dim-unit">ft</span>
                 </div>
             </div>
-
-            <!-- Main Wall Dimensions -->
-            <div class="grid grid-cols-2 gap-4 sm:gap-6 mb-6">
-                <div>
-                    <label class="block text-sm font-bold text-slate-700 mb-2">Total Wall Length</label>
-                    <div class="relative">
-                        <input type="number" id="input-length" class="w-full bg-slate-50 border border-slate-300 text-slate-900 text-lg font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" placeholder="e.g. 150" value="150">
-                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                            <span class="text-slate-500 font-bold dim-unit">ft</span>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <label class="block text-sm font-bold text-slate-700 mb-2">Wall Height (Eaves)</label>
-                    <div class="relative">
-                        <input type="number" id="input-height" class="w-full bg-slate-50 border border-slate-300 text-slate-900 text-lg font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" placeholder="e.g. 10" value="10">
-                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                            <span class="text-slate-500 font-bold dim-unit">ft</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Gable Dimensions (Optional) -->
-            <div class="grid grid-cols-2 gap-4 sm:gap-6 mb-6 bg-slate-50 p-4 rounded-xl border border-slate-200">
-                <div class="col-span-2">
-                    <p class="text-xs font-bold text-slate-600 uppercase tracking-wider mb-2">Gable Area (Triangular Roof Ends)</p>
-                </div>
-                <div>
-                    <label class="block text-sm font-bold text-slate-700 mb-2">Total Gable Width</label>
-                    <div class="relative">
-                        <input type="number" id="input-gable-width" class="w-full bg-white border border-slate-300 text-slate-900 text-base font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" placeholder="e.g. 24" value="0">
-                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                            <span class="text-slate-500 font-bold dim-unit">ft</span>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <label class="block text-sm font-bold text-slate-700 mb-2">Gable Height</label>
-                    <div class="relative">
-                        <input type="number" id="input-gable-height" class="w-full bg-white border border-slate-300 text-slate-900 text-base font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" placeholder="e.g. 6" value="0">
-                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                            <span class="text-slate-500 font-bold dim-unit">ft</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Openings -->
-            <div class="grid grid-cols-2 gap-4 sm:gap-6 mb-6">
-                <div>
-                    <label class="block text-sm font-bold text-slate-700 mb-2">Number of Doors</label>
-                    <input type="number" id="input-doors" class="w-full bg-slate-50 border border-slate-300 text-slate-900 text-base font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" value="1" min="0">
-                    <p class="text-xs text-slate-500 mt-1 font-medium">Subtracts ~20 sq ft each.</p>
-                </div>
-                <div>
-                    <label class="block text-sm font-bold text-slate-700 mb-2">Number of Windows</label>
-                    <input type="number" id="input-windows" class="w-full bg-slate-50 border border-slate-300 text-slate-900 text-base font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" value="5" min="0">
-                    <p class="text-xs text-slate-500 mt-1 font-medium">Subtracts ~15 sq ft each.</p>
-                </div>
-            </div>
-
-            <!-- Siding Type & Waste -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 mb-8">
-                
-                <!-- Siding Coverage Dropdown -->
-                <div>
-                    <label class="block text-sm font-bold text-slate-700 mb-2">Siding Box Coverage</label>
-                    <select id="select-coverage" onchange="toggleCustomInput(this, 'custom-coverage-container')" class="bg-slate-50 border border-slate-300 text-slate-900 text-base font-medium rounded-xl focus:ring-primary focus:border-primary block w-full p-3 cursor-pointer">
-                        <option value="200">Vinyl (200 sq ft / box)</option>
-                        <option value="100">Vinyl (100 sq ft / box)</option>
-                        <option value="100">Hardie Board / Fiber Cement (100 sq ft)</option>
-                        <option value="custom">Custom Coverage...</option>
-                    </select>
-                    <!-- Custom Coverage Input -->
-                    <div id="custom-coverage-container" class="hidden mt-3">
-                        <div class="relative">
-                            <input type="number" id="input-custom-coverage" class="w-full bg-sky-50 border border-primary text-slate-900 text-base font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary block w-full p-3" placeholder="Enter sq ft per box">
-                            <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                                <span class="text-primary font-bold custom-unit-small">sq ft</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Waste Factor Slider -->
-                <div>
-                    <label class="block text-sm font-bold text-slate-700 mb-2">Waste Allowance (%)</label>
-                    <input type="range" id="input-waste" min="5" max="20" value="10" class="w-full h-2 mt-4 bg-slate-200 rounded-lg appearance-none cursor-pointer">
-                    <div class="flex justify-between text-xs text-slate-500 mt-2 font-medium">
-                        <span>5%</span>
-                        <span class="font-bold text-primary" id="waste-value">10% (Standard for cuts)</span>
-                        <span>20%</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Calculate Button (with JS scroll hook) -->
-            <button onclick="handleCalculateClick()" class="w-full flex items-center justify-center gap-2 bg-primary hover:bg-sky-500 text-white text-lg font-bold py-4 px-4 rounded-xl transition-all shadow-lg shadow-primary/20">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                Calculate Materials
-            </button>
-
         </div>
-
-        <!-- Result Box Column -->
-        <div class="lg:col-span-5 xl:col-span-4">
-            <div class="bg-slate-900 rounded-3xl shadow-xl p-5 sm:p-8 lg:sticky lg:top-24 border border-slate-800">
-                
-                <h2 class="text-lg sm:text-xl font-heading font-bold text-white mb-5 flex items-center gap-2">
-                    <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-                    Material List
-                </h2>
-
-                <!-- Main Results Display -->
-                <div class="space-y-3 mb-6">
-                    
-                    <!-- Total Boxes -->
-                    <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
-                        <p class="text-xs sm:text-sm text-slate-400 font-medium mb-1">Total Boxes to Buy</p>
-                        <div class="flex items-baseline gap-2">
-                            <span class="text-4xl font-mono font-bold text-white" id="result-boxes">0</span>
-                            <span class="text-sm text-slate-400 font-medium">boxes</span>
-                        </div>
-                    </div>
-
-                    <!-- Total Squares -->
-                    <div class="bg-sky-900/30 p-4 rounded-xl border border-sky-800/50">
-                        <p class="text-xs sm:text-sm text-sky-200 font-medium mb-1">Total Squares (With Waste)</p>
-                        <div class="flex items-baseline gap-2">
-                            <span class="text-2xl font-mono font-bold text-white" id="result-squares">0</span>
-                            <span class="text-base text-sky-300 font-bold result-unit-large">squares</span>
-                        </div>
-                        <p class="text-[10px] text-sky-400 mt-1 font-medium">1 Square = 100 sq ft.</p>
-                    </div>
-
-                    <!-- Net Area -->
-                    <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
-                        <p class="text-xs sm:text-sm text-slate-400 font-medium mb-1">Net Wall Area</p>
-                        <div class="flex items-baseline gap-2">
-                            <span class="text-xl font-mono font-bold text-white" id="result-area">0</span>
-                            <span class="text-xs text-primary font-bold result-area-unit">sq ft</span>
-                        </div>
-                    </div>
-
+        <div>
+            <label class="block text-sm font-bold text-slate-700 mb-2">Wall Height</label>
+            <div class="relative">
+                <input type="number" id="input-height" class="w-full bg-slate-50 border border-slate-300 text-slate-900 text-lg font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" placeholder="e.g. 10" value="10">
+                <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                    <span class="text-slate-500 font-bold dim-unit">ft</span>
                 </div>
-
-                <!-- Action Buttons (Blue Theme) -->
-                <div class="grid grid-cols-3 gap-2 sm:gap-3 pt-2">
-                    <button onclick="saveResult()" class="flex flex-col items-center justify-center gap-1 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white py-2.5 sm:py-3 rounded-xl transition-colors border border-slate-700">
-                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg>
-                        <span class="text-[10px] sm:text-xs font-bold">Save</span>
-                    </button>
-                    <button onclick="shareResult()" class="flex flex-col items-center justify-center gap-1 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white py-2.5 sm:py-3 rounded-xl transition-colors border border-slate-700">
-                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
-                        <span class="text-[10px] sm:text-xs font-bold">Share</span>
-                    </button>
-                    <button onclick="copyResult()" class="flex flex-col items-center justify-center gap-1 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white py-2.5 sm:py-3 rounded-xl transition-colors border border-slate-700">
-                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                        <span class="text-[10px] sm:text-xs font-bold">Copy</span>
-                    </button>
-                </div>
-
             </div>
         </div>
     </div>
-  </section>
+
+    <!-- Gable Dimensions (Optional) -->
+    <div class="grid grid-cols-2 gap-4 sm:gap-6 mb-6 bg-slate-50 p-4 rounded-xl border border-slate-200">
+        <div class="col-span-2">
+            <p class="text-xs font-bold text-slate-600 uppercase tracking-wider mb-1">Gable Area (Optional)</p>
+            <p class="text-[11px] text-slate-500 mb-3">For triangular roof ends.</p>
+        </div>
+        <div>
+            <label class="block text-sm font-bold text-slate-700 mb-2">Gable Width</label>
+            <div class="relative">
+                <input type="number" id="input-gable-width" class="w-full bg-white border border-slate-300 text-slate-900 text-base font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" placeholder="e.g. 24" value="0">
+                <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                    <span class="text-slate-500 font-bold dim-unit">ft</span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <label class="block text-sm font-bold text-slate-700 mb-2">Gable Height</label>
+            <div class="relative">
+                <input type="number" id="input-gable-height" class="w-full bg-white border border-slate-300 text-slate-900 text-base font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" placeholder="e.g. 6" value="0">
+                <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                    <span class="text-slate-500 font-bold dim-unit">ft</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Openings -->
+    <div class="grid grid-cols-2 gap-4 sm:gap-6 mb-6">
+        <div>
+            <label class="block text-sm font-bold text-slate-700 mb-2">Doors (Qty)</label>
+            <input type="number" id="input-doors" class="w-full bg-slate-50 border border-slate-300 text-slate-900 text-base font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" value="1" min="0">
+            <p class="text-[11px] text-slate-500 mt-1 font-medium">~20 sq ft each</p>
+        </div>
+        <div>
+            <label class="block text-sm font-bold text-slate-700 mb-2">Windows (Qty)</label>
+            <input type="number" id="input-windows" class="w-full bg-slate-50 border border-slate-300 text-slate-900 text-base font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" value="5" min="0">
+            <p class="text-[11px] text-slate-500 mt-1 font-medium">~15 sq ft each</p>
+        </div>
+    </div>
+
+    <!-- Siding Type & Waste -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 mb-8">
+        
+        <!-- Siding Coverage Dropdown -->
+        <div>
+            <label class="block text-sm font-bold text-slate-700 mb-2">Siding Box Coverage</label>
+            <select id="select-coverage" onchange="toggleCustomInput(this, 'custom-coverage-container')" class="bg-slate-50 border border-slate-300 text-slate-900 text-base font-medium rounded-xl focus:ring-primary focus:border-primary block w-full p-3 cursor-pointer">
+                <option value="200">Vinyl (200 sq ft / box)</option>
+                <option value="100">Vinyl (100 sq ft / box)</option>
+                <option value="100">Hardie Board (100 sq ft)</option>
+                <option value="custom">Custom Coverage...</option>
+            </select>
+            <!-- Custom Coverage Input -->
+            <div id="custom-coverage-container" class="hidden mt-3">
+                <div class="relative">
+                    <input type="number" id="input-custom-coverage" class="w-full bg-sky-50 border border-primary text-slate-900 text-base font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary block w-full p-3" placeholder="Enter sq ft per box">
+                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                        <span class="text-primary font-bold custom-unit-small">sq ft</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Waste Factor Slider -->
+        <div>
+            <label class="block text-sm font-bold text-slate-700 mb-2">Waste Allowance (%)</label>
+            <input type="range" id="input-waste" min="5" max="20" value="10" class="w-full h-2 mt-4 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+            <div class="flex justify-between text-xs text-slate-500 mt-2 font-medium">
+                <span>5%</span>
+                <span class="font-bold text-primary" id="waste-value">10%</span>
+                <span>20%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Calculate Button -->
+    <button onclick="handleCalculateClick()" class="w-full flex items-center justify-center gap-2 bg-primary hover:bg-sky-500 text-white text-lg font-bold py-4 px-4 rounded-xl transition-all shadow-lg shadow-primary/20">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+        Calculate Materials
+    </button>
+
+</div>
 
     <!-- Phase 4: Content Part 1 (Engineering & SEO) -->
 <section class="bg-white border-t border-slate-200">
