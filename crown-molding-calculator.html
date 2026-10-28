@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Crown Molding Calculator | Miter & Bevel Angles (US, UK, AU)</title>
+    <meta name="title" content="Crown Molding Calculator | Miter & Bevel Angles (US, UK, AU)">
+    <meta name="description" content="Calculate exact linear feet, number of pieces, and miter saw angles for crown molding. Accounts for spring angles (38/52, 45/45) and waste.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://buildmetric.org/crown-molding-calculator.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://buildmetric.org/crown-molding-calculator.html">
+    <meta property="og:title" content="Crown Molding Calculator | Miter & Bevel Angles">
+    <meta property="og:description" content="Calculate exact linear feet, number of pieces, and miter saw angles for crown molding.">
+    <meta property="og:image" content="https://buildmetric.org/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://buildmetric.org/crown-molding-calculator.html">
+    <meta property="twitter:title" content="Crown Molding Calculator | Miter & Bevel Angles">
+    <meta property="twitter:description" content="Calculate exact linear feet, number of pieces, and miter saw angles for crown molding.">
+    <meta property="twitter:image" content="https://buildmetric.org/logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9', // Sky Blue
+                        slate: {
+                            900: '#0f172a', // Dark Slate
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- JSON-LD Schema: WebApplication & Breadcrumbs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://buildmetric.org/crown-molding-calculator.html#webapp",
+          "name": "Crown Molding Calculator",
+          "url": "https://buildmetric.org/crown-molding-calculator.html",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "All",
+          "description": "Professional calculator for estimating crown molding material and miter saw cutting angles.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://buildmetric.org/crown-molding-calculator.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://buildmetric.org/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Interior & Trim Calculators",
+              "item": "https://buildmetric.org/framing.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Crown Molding Calculator",
+              "item": "https://buildmetric.org/crown-molding-calculator.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+
+ <body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-primary selection:text-white flex flex-col min-h-screen">
+
+    <!-- Sticky Glassmorphism Navbar -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+                    <img src="logo.png" alt="BuildMetric Logo" class="h-8 w-auto sm:h-10" onerror="this.style.display='none'">
+                    <div class="flex flex-col">
+                        <span class="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-slate-900 leading-none">
+                            Build<span class="text-primary">Metric</span>
+                        </span>
+                        <span class="text-[10px] text-slate-500 font-semibold tracking-widest uppercase mt-1 hidden sm:block">Engineering Calculators</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="calculators.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">All Tools</a>
+                    <a href="guides.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Guides</a>
+                    <a href="about.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">About</a>
+                    <a href="contact.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Contact</a>
+                </div>
+
+                <!-- Desktop CTA Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="calculators.html" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold text-white transition-all bg-slate-900 rounded-xl hover:bg-slate-800 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900">
+                        Open Tools
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1 sm:px-6">
+                <a href="calculators.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">All Tools</a>
+                <a href="guides.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">Guides</a>
+                <a href="about.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">About</a>
+                <a href="contact.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">Contact</a>
+                <div class="pt-4">
+                    <a href="calculators.html" class="w-full flex justify-center items-center px-4 py-3 text-base font-bold text-white bg-slate-900 rounded-xl hover:bg-slate-800 transition-all shadow-sm">
+                        Open Tools
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <main class="flex-grow">
+        
+        <!-- Breadcrumbs -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2">
+            <nav class="flex text-sm text-slate-500 font-medium" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="index.html" class="inline-flex items-center hover:text-primary transition-colors">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            <a href="framing.html" class="ml-1 md:ml-2 hover:text-primary transition-colors">Interior & Trim</a>
+                        </div>
+                    </li>
+                    <li aria-current="page">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            <span class="ml-1 md:ml-2 text-slate-800 font-bold">Crown Molding Calculator</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+
+      <!-- Phase 3: Calculator UI -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    
+    <!-- Page Heading -->
+    <div class="mb-8 max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-primary text-xs font-bold uppercase tracking-wider mb-4 border border-sky-100">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            Carpentry & Trim Approved
+        </div>
+        
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-slate-900 tracking-tight mb-4">
+            Crown Molding Calculator <span class="text-primary text-lg md:text-xl font-semibold block mt-2">Material List & Saw Angles</span>
+        </h1>
+        <p class="text-base md:text-lg text-slate-600 leading-relaxed">
+            Calculate exact linear feet, number of pieces, and miter saw angles for your crown molding. Accounts for spring angles and complex cuts.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Input Form Column -->
+        <div class="lg:col-span-7 xl:col-span-8 bg-white rounded-3xl shadow-sm border border-slate-200 p-5 sm:p-8">
+            
+            <!-- Unit Toggle -->
+            <div class="flex flex-col sm:flex-row sm:items-center gap-3 mb-6 pb-6 border-b border-slate-100">
+                <span class="text-sm font-bold text-slate-900">Measurement System:</span>
+                <div class="flex bg-slate-100 p-1 rounded-xl w-full sm:w-auto">
+                    <button type="button" class="flex-1 sm:flex-none px-4 py-2 text-sm font-bold bg-white text-primary rounded-lg shadow-sm transition-all" id="btn-imperial">Imperial (US)</button>
+                    <button type="button" class="flex-1 sm:flex-none px-4 py-2 text-sm font-bold text-slate-500 hover:text-slate-700 rounded-lg transition-all" id="btn-metric">Metric (UK/AU)</button>
+                </div>
+            </div>
+
+            <!-- Room Dimensions (2-col mobile) -->
+            <div class="grid grid-cols-2 gap-4 sm:gap-6 mb-6">
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Room Length</label>
+                    <div class="relative">
+                        <input type="number" id="input-length" class="w-full bg-slate-50 border border-slate-300 text-slate-900 text-lg font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" placeholder="e.g. 15" value="15">
+                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                            <span class="text-slate-500 font-bold dim-unit">ft</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Room Width</label>
+                    <div class="relative">
+                        <input type="number" id="input-width" class="w-full bg-slate-50 border border-slate-300 text-slate-900 text-lg font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary focus:border-primary block p-3 transition-colors" placeholder="e.g. 12" value="12">
+                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                            <span class="text-slate-500 font-bold dim-unit">ft</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specs Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 mb-8">
+                
+                <!-- Spring Angle Dropdown -->
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Molding Spring Angle</label>
+                    <select id="select-spring" onchange="toggleCustomInput(this, 'custom-spring-container')" class="bg-slate-50 border border-slate-300 text-slate-900 text-base font-medium rounded-xl focus:ring-primary focus:border-primary block w-full p-3 cursor-pointer">
+                        <option value="38">38/52 Degree (Standard US)</option>
+                        <option value="45">45/45 Degree (Common)</option>
+                        <option value="custom">Custom Angle...</option>
+                    </select>
+                    <!-- Custom Spring Input -->
+                    <div id="custom-spring-container" class="hidden mt-3">
+                        <input type="number" id="input-custom-spring" class="w-full bg-sky-50 border border-primary text-slate-900 text-base font-mono font-medium rounded-xl focus:ring-2 focus:ring-primary block w-full p-3" placeholder="Enter angle (e.g. 40)">
+                    </div>
+                </div>
+
+                <!-- Molding Piece Length -->
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Molding Piece Length</label>
+                    <select id="select-piece-length" class="bg-slate-50 border border-slate-300 text-slate-900 text-base font-medium rounded-xl focus:ring-primary focus:border-primary block w-full p-3 cursor-pointer">
+                        <option value="8">8 feet</option>
+                        <option value="12" selected>12 feet</option>
+                        <option value="16">16 feet</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Waste Factor Slider -->
+            <div class="mb-8">
+                <label class="block text-sm font-bold text-slate-700 mb-2">Waste Allowance (%)</label>
+                <input type="range" id="input-waste" min="10" max="25" value="15" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                <div class="flex justify-between text-xs text-slate-500 mt-1 font-medium">
+                    <span>10%</span>
+                    <span class="font-bold text-primary" id="waste-value">15% (Standard for cuts)</span>
+                    <span>25%</span>
+                </div>
+            </div>
+
+            <!-- Calculate Button (with JS scroll hook) -->
+            <button onclick="handleCalculateClick()" class="w-full flex items-center justify-center gap-2 bg-primary hover:bg-sky-500 text-white text-lg font-bold py-4 px-4 rounded-xl transition-all shadow-lg shadow-primary/20">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                Calculate Materials
+            </button>
+
+        </div>
+
+        <!-- Result Box Column -->
+        <div class="lg:col-span-5 xl:col-span-4">
+            <div class="bg-slate-900 rounded-3xl shadow-xl p-5 sm:p-8 lg:sticky lg:top-24 border border-slate-800">
+                
+                <h2 class="text-lg sm:text-xl font-heading font-bold text-white mb-5 flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    Material & Angles
+                </h2>
+
+                <!-- Main Results Display -->
+                <div class="space-y-3 mb-6">
+                    
+                    <!-- Total Linear Feet -->
+                    <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                        <p class="text-xs sm:text-sm text-slate-400 font-medium mb-1">Total Linear Length Needed</p>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-3xl font-mono font-bold text-white" id="result-linear">0</span>
+                            <span class="text-sm text-slate-400 font-medium result-unit-large">ft</span>
+                        </div>
+                    </div>
+
+                    <!-- Number of Pieces -->
+                    <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                        <p class="text-xs sm:text-sm text-slate-400 font-medium mb-1">Total Pieces to Buy</p>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-4xl font-mono font-bold text-white" id="result-pieces">0</span>
+                            <span class="text-sm text-slate-400 font-medium">pieces</span>
+                        </div>
+                    </div>
+
+                    <!-- Saw Angles (Miter & Bevel) -->
+                    <div class="bg-sky-900/30 p-4 rounded-xl border border-sky-800/50 grid grid-cols-2 gap-2">
+                        <div>
+                            <p class="text-xs text-sky-200 font-medium mb-1">Miter Angle</p>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-xl font-mono font-bold text-white" id="result-miter">0</span>
+                                <span class="text-sm text-sky-300 font-bold">°</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-xs text-sky-200 font-medium mb-1">Bevel Angle</p>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-xl font-mono font-bold text-white" id="result-bevel">0</span>
+                                <span class="text-sm text-sky-300 font-bold">°</span>
+                            </div>
+                        </div>
+                        <div class="col-span-2 mt-2">
+                            <p class="text-[10px] text-sky-400 font-medium">Settings for outside corners (nested).</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Action Buttons (Blue Theme) -->
+                <div class="grid grid-cols-3 gap-2 sm:gap-3 pt-2">
+                    <button onclick="saveResult()" class="flex flex-col items-center justify-center gap-1 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white py-2.5 sm:py-3 rounded-xl transition-colors border border-slate-700">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg>
+                        <span class="text-[10px] sm:text-xs font-bold">Save</span>
+                    </button>
+                    <button onclick="shareResult()" class="flex flex-col items-center justify-center gap-1 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white py-2.5 sm:py-3 rounded-xl transition-colors border border-slate-700">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                        <span class="text-[10px] sm:text-xs font-bold">Share</span>
+                    </button>
+                    <button onclick="copyResult()" class="flex flex-col items-center justify-center gap-1 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white py-2.5 sm:py-3 rounded-xl transition-colors border border-slate-700">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                        <span class="text-[10px] sm:text-xs font-bold">Copy</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+  </section>
+
+   <!-- Phase 4: Content Part 1 (Engineering & SEO) -->
+<section class="bg-white border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        
+        <!-- AI Overview / Quick Answer Box -->
+        <div class="bg-sky-50 border-l-4 border-primary p-6 sm:p-8 rounded-r-2xl mb-12 shadow-sm">
+            <h2 class="text-xl font-heading font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Quick Answer: How Do I Calculate Crown Molding Angles?
+            </h2>
+            <p class="text-slate-700 leading-relaxed font-medium text-lg">
+                To cut crown molding for a standard 90-degree corner, you must know your molding's <strong>Spring Angle</strong>. For a standard 38/52 molding, the "nested" miter saw setting is usually <strong>31.6° Miter</strong> and <strong>33.9° Bevel</strong>. For 45/45 molding, it is <strong>35.3° Miter</strong> and <strong>30° Bevel</strong>. Our calculator above automatically calculates these exact saw settings based on your specific molding, so you don't have to do complex trigonometry.
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6">The Geometry of Crown Molding</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                Crown molding is arguably the most difficult trim to install because it involves <strong>compound angles</strong>. Unlike baseboard, which sits flat against the wall, crown molding bridges the corner between the wall (vertical) and the ceiling (horizontal). 
+            </p>
+            <p>
+                When two pieces of molding meet at a corner, the saw must cut through the material at an angle that accommodates both the horizontal turn of the corner (usually 90 degrees) and the vertical tilt of the molding. If you simply cut a 45-degree angle on a chop saw, the joint will fail.
+            </p>
+            <p>
+                To make it easier, carpenters use a technique called <strong>"Nested Cutting."</strong> The molding is placed in the miter saw upside down (as if the saw bed is the ceiling and the fence is the wall). This allows the saw to cut the compound angle using a single rotation. Our tool provides the exact Miter and Bevel angles required for this nested approach.
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">Understanding Spring Angles</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6 mb-8">
+            <p>
+                The <strong>Spring Angle</strong> is the angle at which the back of the crown molding rests against the wall and ceiling. It is written as a ratio (e.g., 38/52). This means the molding sits 38 degrees off the wall and 52 degrees off the ceiling.
+            </p>
+            <p>
+                If you use the wrong saw settings for your spring angle, the joint will either open up at the front, or the pieces will crash into each other at the back. 
+            </p>
+            <ul class="list-disc pl-6 space-y-2 mb-6">
+                <li><strong>38/52 Degree:</strong> The most common spring angle in the US. It is a slightly flatter profile.</li>
+                <li><strong>45/45 Degree:</strong> Common in modern, symmetrical profiles and very common in the UK and Europe.</li>
+            </ul>
+            <p>
+                To check your spring angle, hold the molding exactly how it will sit on the wall and use a digital angle finder or a bevel gauge against the wall. Our tool allows you to input standard or custom spring angles.
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">Global Crown Molding Standards: US vs. UK vs. Australia</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6 mb-8">
+            <p>
+                While the geometry is universal, the terminology and materials vary significantly across regions. If you are renovating a period home in the UK or a modern build in Australia, here is what you need to know:
+            </p>
+        </div>
+
+        <!-- Global Standards Table -->
+        <div class="overflow-x-auto shadow-sm rounded-xl border border-slate-200 mb-12">
+            <table class="w-full text-sm text-left text-slate-600">
+                <thead class="text-xs text-slate-700 uppercase bg-slate-100 border-b border-slate-200">
+                    <tr>
+                        <th scope="col" class="px-6 py-4 font-bold">Aspect</th>
+                        <th scope="col" class="px-6 py-4 font-bold">USA</th>
+                        <th scope="col" class="px-6 py-4 font-bold">UK</th>
+                        <th scope="col" class="px-6 py-4 font-bold">Australia</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200">
+                    <tr class="bg-white hover:bg-slate-50 transition-colors">
+                        <th scope="row" class="px-6 py-4 font-semibold text-slate-900 whitespace-nowrap">Common Terminology</th>
+                        <td class="px-6 py-4">Crown Molding</td>
+                        <td class="px-6 py-4">Cornice or Coving</td>
+                        <td class="px-6 py-4">Cornice</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-slate-50 transition-colors">
+                        <th scope="row" class="px-6 py-4 font-semibold text-slate-900 whitespace-nowrap">Standard Lengths</th>
+                        <td class="px-6 py-4">8ft, 12ft, 16ft</td>
+                        <td class="px-6 py-4">2.4m, 3.0m, 4.2m</td>
+                        <td class="px-6 py-4">2.4m, 3.6m, 5.4m</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-slate-50 transition-colors">
+                        <th scope="row" class="px-6 py-4 font-semibold text-slate-900 whitespace-nowrap">Common Materials</th>
+                        <td class="px-6 py-4">MDF, Pine, Polyurethane</td>
+                        <td class="px-6 py-4">Plaster, MDF, Polyurethane</td>
+                        <td class="px-6 py-4">MDF, Timber, Polystyrene</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-slate-50 transition-colors">
+                        <th scope="row" class="px-6 py-4 font-semibold text-slate-900 whitespace-nowrap">Typical Spring Angle</th>
+                        <td class="px-6 py-4">38/52 Degrees</td>
+                        <td class="px-6 py-4">45/45 Degrees</td>
+                        <td class="px-6 py-4">Varies (often 45/45)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">The Math: Material Estimation & Waste</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                Calculating the linear footage of crown molding is simple: it is the perimeter of the room (Length + Width + Length + Width). However, ordering material requires more thought.
+            </p>
+            
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">1. Inside vs. Outside Corners</h3>
+            <p>
+                An inside corner (where two walls meet inward) requires a <strong>coped joint</strong> (one piece cut square, the other scribed with a coping saw). An outside corner (where walls jut out) requires a <strong>mitered joint</strong>. Outside corners are significantly harder to cut and often require more waste. If your room has many outside corners, you should increase your waste factor to 20%.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">2. Splicing Long Walls</h3>
+            <p>
+                If your wall is 20 feet long and you are buying 12-foot pieces, you must splice two pieces together. A <strong>scarf joint</strong> (a 45-degree bevel cut that overlaps the two pieces) is used. This adds to the total linear footage and waste. Our calculator allows you to select your piece length, ensuring you buy enough pieces to cover the perimeter without splicing too often. 
+            </p>
+            <p>
+                For more interior trim calculations, check out our <a href="baseboard-calculator.html" class="text-primary font-semibold hover:underline">baseboard calculator</a>.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+ <!-- Phase 5: Content Part 2 (Installation, Corners & Conclusion) -->
+<section class="bg-slate-50 border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6">Installation Best Practices: Coping vs. Mitering</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                The true test of a finish carpenter is how they handle the inside corners of crown molding. Because walls are rarely perfectly square, cutting two pieces at 45 degrees and butting them together usually results in a visible, ugly gap that opens up over time.
+            </p>
+            
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">1. Coping Inside Corners (The Professional Method)</h3>
+            <p>
+                Professional carpenters <strong>cope</strong> the inside corners. This involves cutting the end of the molding at a 45-degree angle, and then using a coping saw to meticulously cut away the back profile along the line created by the 45-degree cut. 
+            </p>
+            <p>
+                You must cut slightly past the line (about 1/16 inch) to create a "back bevel," which ensures the front edge of the molding fits tight against the wall piece. The coped piece then overlaps the square-cut piece in the corner. Coping allows the wood to expand and contract with humidity without opening up a gap.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">2. Mitering Outside Corners</h3>
+            <p>
+                Outside corners must be mitered. Using the angles calculated by our tool above, cut both pieces and test-fit them before applying adhesive. Outside corners are highly susceptible to impact damage, so it is crucial to use a strong construction adhesive (like PL Premium) along with your finish nails to lock the joint together.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">3. Splicing (Scarf Joints)</h3>
+            <p>
+                When you have a wall longer than your molding pieces, you must create a splice. Do not simply butt the two square ends together. Cut a 45-degree <strong>scarf joint</strong> so the pieces overlap diagonally. Apply wood glue to the joint, press them together, and nail through the joint. Once sanded and painted, the splice becomes almost invisible. For more trim work, check out our <a href="baseboard-calculator.html" class="text-primary font-semibold hover:underline">baseboard calculator</a>.
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">Nailing and Fastening: Securing the Molding</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                Because crown molding sits at an angle, you cannot nail straight through the face of the molding into the studs. You have to nail at an angle. 
+            </p>
+            <ul class="list-disc pl-6 space-y-3 mb-6">
+                <li><strong>Into the Top Plate:</strong> The bottom edge of the crown sits on the wall, but the top edge is pushed into the ceiling. You can nail upward into the ceiling joists (top plate).</li>
+                <li><strong>Into the Studs:</strong> You can angle the nail downward through the bottom edge of the molding into the wall studs.</li>
+                <li><strong>Nail Placement:</strong> Always nail into the thickest parts of the molding profile. Use 2-inch or 2.5-inch finish nails (15-gauge or 16-gauge). Pre-drilling is recommended for hardwoods (like oak) to prevent splitting.</li>
+            </ul>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">Finishing: Caulking and Painting</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                A perfect installation can still look amateur if the finishing is poor. 
+            </p>
+            <p>
+                Fill all nail holes with a lightweight spackle or wood filler. If you are using MDF, use a water-based filler. For solid wood, a stainable wood filler is best if you plan to stain rather than paint.
+            </p>
+            <p>
+                The magic happens with <strong>caulk</strong>. Even the best coping job will have tiny shadows and gaps where the molding meets the wall and ceiling. Run a bead of high-quality, paintable acrylic caulk along the top and bottom edges of the entire molding run. Smooth it with a wet finger or a caulking tool. This creates a seamless transition and hides imperfections in the drywall or plaster. For paint quantities, check out our <a href="paint-coverage-calculator.html" class="text-primary font-semibold hover:underline">paint coverage calculator</a>.
+            </p>
+        </div>
+
+        <h2 class="text-3xl font-heading font-bold text-slate-900 mt-16 mb-6">Material Selection: MDF vs. Solid Wood vs. Polyurethane</h2>
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            <p>
+                The material you choose affects not only the look but also the installation process:
+            </p>
+            <ul class="list-disc pl-6 space-y-3 mb-6">
+                <li><strong>MDF (Medium Density Fiberboard):</strong> The most popular choice for painted molding. It is smooth, affordable, and doesn't warp. However, it is brittle and can break easily during coping.</li>
+                <li><strong>Solid Wood (Pine, Poplar):</strong> More durable than MDF, but can have knots and grain patterns that show through paint. It expands and contracts with humidity, which can cause joint separation.</li>
+                <li><strong>Polyurethane (PU):</strong> Very common in exterior applications or for large decorative profiles. It mimics plaster and wood but is lightweight and easy to cut. It is highly resistant to moisture.</li>
+            </ul>
+            <p>
+                For calculating the wall framing behind the molding, use our <a href="framing-calculator.html" class="text-primary font-semibold hover:underline">framing calculator</a>.
+            </p>
+        </div>
+
+        <!-- Conclusion Box -->
+        <div class="mt-16 bg-slate-900 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden shadow-2xl">
+            <!-- Decorative gradient -->
+            <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-primary rounded-full blur-3xl opacity-20"></div>
+            
+            <div class="relative z-10">
+                <h2 class="text-2xl md:text-3xl font-heading font-bold mb-4">Elevate Your Interior with Crown Molding</h2>
+                <p class="text-slate-300 leading-relaxed mb-6 text-lg">
+                    Crown molding adds architectural elegance and perceived value to any room. While the compound angles and coping cuts might seem intimidating, having the exact material quantities and precise saw settings eliminates the guesswork and frustration.
+                </p>
+                <p class="text-slate-300 leading-relaxed mb-8 text-lg">
+                    Whether you are installing traditional plaster coving in the UK or modern MDF crown molding in the US, BuildMetric provides the exact measurements you need for a flawless installation.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="baseboard-calculator.html" class="inline-flex justify-center items-center px-6 py-3.5 text-base font-bold text-slate-900 bg-white rounded-xl hover:bg-slate-100 transition-colors shadow-sm">
+                        Calculate Baseboards
+                    </a>
+                    <a href="paint-coverage-calculator.html" class="inline-flex justify-center items-center px-6 py-3.5 text-base font-bold text-white border border-slate-700 rounded-xl hover:bg-slate-800 transition-colors">
+                        Estimate Paint Coverage
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+ <!-- Phase 6: 7 FAQs & JSON-LD Schema -->
+<section class="bg-white border-t border-slate-200 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- FAQ Heading -->
+        <div class="text-center mb-12">
+            <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">Frequently Asked Questions</h2>
+            <h3 class="text-3xl md:text-4xl font-heading font-extrabold text-slate-900">Crown Molding FAQs</h3>
+            <p class="text-slate-600 mt-4 text-lg font-medium">Direct answers to common questions about saw angles, coping, and installation.</p>
+        </div>
+
+        <!-- FAQs List -->
+        <div class="space-y-4">
+            
+            <!-- FAQ 1 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">01</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How do I calculate the miter angle for crown molding?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    The miter angle depends on your molding's <strong>Spring Angle</strong>. For a standard 38/52 degree spring angle, the miter angle is typically 31.6 degrees and the bevel is 33.9 degrees. For 45/45 degree molding, the miter is 35.3 degrees and the bevel is 30 degrees. Use the <a href="#top" class="text-primary font-semibold hover:underline">calculator above</a> to get the exact settings for your specific molding.
+                </div>
+            </details>
+
+            <!-- FAQ 2 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">02</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">What is a spring angle?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    The spring angle is the angle at which the crown molding sits against the wall and ceiling. It is usually written as a ratio like 38/52 (meaning it sits 38 degrees off the wall and 52 degrees off the ceiling). The most common is 38/52 in the US, but 45/45 is also very common, especially in the UK and Australia.
+                </div>
+            </details>
+
+            <!-- FAQ 3 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">03</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">Should I cope or miter inside corners?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    Always <strong>cope</strong> inside corners. Because walls are rarely perfectly square, mitering an inside corner usually leaves a visible gap. Coping involves cutting the end of the molding at 45 degrees and using a coping saw to cut away the back profile. This allows the two pieces to overlap perfectly. You only miter outside corners. Check out our <a href="baseboard-calculator.html" class="text-primary font-semibold hover:underline">baseboard calculator</a> for more trim tips.
+                </div>
+            </details>
+
+            <!-- FAQ 4 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">04</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How do I measure for crown molding?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    To calculate the material needed, measure the perimeter of the room (Length + Width + Length + Width). Add a 15% waste factor for cuts, coping, and splicing. If you have walls longer than your molding pieces, you must account for splices (scarf joints). Our tool gives you the exact number of pieces based on the length you choose.
+                </div>
+            </details>
+
+            <!-- FAQ 5 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">05</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">What is the best material for crown molding?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    <strong>MDF (Medium Density Fiberboard)</strong> is the most popular for painted interiors because it is affordable, smooth, and doesn't warp. However, it is brittle and can break during coping. Solid wood (like pine or poplar) is more durable but can expand and contract. Polyurethane is a great alternative for large profiles or moisture-prone areas. For wall prep, use our <a href="drywall-calculator.html" class="text-primary font-semibold hover:underline">drywall calculator</a>.
+                </div>
+            </details>
+
+            <!-- FAQ 6 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">06</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How much waste should I add for crown molding?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    A standard waste factor for crown molding is <strong>15%</strong>. This is higher than baseboard because of the complex compound cuts, coped corners, and the high likelihood of cutting a piece too short. If you have a room with many outside corners or complex angles, increase your waste factor to 20% or 25%.
+                </div>
+            </details>
+
+            <!-- FAQ 7 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">07</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">Can I install crown molding on a vaulted ceiling?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    Yes, but it is very difficult. Crown molding is designed to sit at a 90-degree angle between the wall and ceiling. If your ceiling is vaulted, you must use a "transition block" or a piece of corner trim to hide the awkward angle where the molding meets the sloped ceiling. If you spot an error in our guide, please <a href="contact.html" class="text-primary font-semibold hover:underline">report it to our team</a>.
+                </div>
+            </details>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- JSON-LD Schema for FAQ Page (Matches HTML Text Exactly) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate the miter angle for crown molding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The miter angle depends on your molding's Spring Angle. For a standard 38/52 degree spring angle, the miter angle is typically 31.6 degrees and the bevel is 33.9 degrees. For 45/45 degree molding, the miter is 35.3 degrees and the bevel is 30 degrees. Use the calculator above to get the exact settings for your specific molding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a spring angle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The spring angle is the angle at which the crown molding sits against the wall and ceiling. It is usually written as a ratio like 38/52 (meaning it sits 38 degrees off the wall and 52 degrees off the ceiling). The most common is 38/52 in the US, but 45/45 is also very common, especially in the UK and Australia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I cope or miter inside corners?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Always cope inside corners. Because walls are rarely perfectly square, mitering an inside corner usually leaves a visible gap. Coping involves cutting the end of the molding at 45 degrees and using a coping saw to cut away the back profile. This allows the two pieces to overlap perfectly. You only miter outside corners. Check out our baseboard calculator for more trim tips."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I measure for crown molding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To calculate the material needed, measure the perimeter of the room (Length + Width + Length + Width). Add a 15% waste factor for cuts, coping, and splicing. If you have walls longer than your molding pieces, you must account for splices (scarf joints). Our tool gives you the exact number of pieces based on the length you choose."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best material for crown molding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MDF (Medium Density Fiberboard) is the most popular for painted interiors because it is affordable, smooth, and doesn't warp. However, it is brittle and can break during coping. Solid wood (like pine or poplar) is more durable but can expand and contract. Polyurethane is a great alternative for large profiles or moisture-prone areas. For wall prep, use our drywall calculator."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much waste should I add for crown molding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A standard waste factor for crown molding is 15%. This is higher than baseboard because of the complex compound cuts, coped corners, and the high likelihood of cutting a piece too short. If you have a room with many outside corners or complex angles, increase your waste factor to 20% or 25%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I install crown molding on a vaulted ceiling?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, but it is very difficult. Crown molding is designed to sit at a 90-degree angle between the wall and ceiling. If your ceiling is vaulted, you must use a \"transition block\" or a piece of corner trim to hide the awkward angle where the molding meets the sloped ceiling. If you spot an error in our guide, please report it to our team."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Phase 7: E-E-A-T Trust Box & Internal Linking -->
+<section class="bg-slate-100/60 py-12 border-t border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div class="flex items-start gap-5">
+                <div class="p-3 bg-primary/10 text-primary rounded-2xl flex-shrink-0">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-heading font-bold text-slate-900 mb-2">About This Calculator</h2>
+                    <p class="text-slate-600 text-sm md:text-base leading-relaxed max-w-2xl font-medium mb-4">
+                        This Crown Molding Calculator uses standard trigonometric formulas to calculate compound miter and bevel angles. It is designed to help carpenters and DIYers achieve tight-fitting joints for both 38/52 and 45/45 spring angles. We prioritize precision to save you from costly cutting mistakes and material waste. If you spot an error in our math, please report it immediately.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <a href="methodology.html" class="text-sm font-bold text-primary hover:text-sky-700 hover:underline flex items-center gap-1.5 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Our Methodology
+                        </a>
+                        <a href="contact.html" class="text-sm font-bold text-slate-500 hover:text-slate-900 hover:underline flex items-center gap-1.5 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                            Report an Error
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Related Tools & Guides -->
+<section class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Related Tools (3) -->
+        <div class="mb-16">
+            <h2 class="text-2xl font-heading font-extrabold text-slate-900 mb-6 flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                Related Calculators
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Tool 1 -->
+                <a href="baseboard-calculator.html" class="group block p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:bg-white hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="p-2 bg-sky-100 text-primary rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-lg">Baseboard Calculator</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 font-medium leading-relaxed">Calculate exact linear feet and number of trim boards needed for your room's baseboards.</p>
+                    <span class="inline-flex items-center gap-1 text-sm font-bold text-primary mt-4">Open Tool <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+                </a>
+                
+                <!-- Tool 2 -->
+                <a href="framing-calculator.html" class="group block p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:bg-white hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="p-2 bg-amber-100 text-amber-600 rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-lg">Framing Calculator</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 font-medium leading-relaxed">Calculate studs, plates, and joists required for walls. Knowing stud locations is critical for nailing crown molding.</p>
+                    <span class="inline-flex items-center gap-1 text-sm font-bold text-primary mt-4">Open Tool <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+                </a>
+                
+                <!-- Tool 3 -->
+                <a href="paint-coverage-calculator.html" class="group block p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:bg-white hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="p-2 bg-emerald-100 text-emerald-600 rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-lg">Paint Coverage</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 font-medium leading-relaxed">Calculate exact paint quantities to finish your crown molding and walls perfectly.</p>
+                    <span class="inline-flex items-center gap-1 text-sm font-bold text-primary mt-4">Open Tool <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Related Guides (3) - Colorful Bento Style -->
+        <div>
+            <h2 class="text-2xl font-heading font-extrabold text-slate-900 mb-6 flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                Recommended Reading
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                
+                <!-- Guide 1 -->
+                <a href="guides/reading-architectural-drawings.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-600 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">Reading Architectural Drawings for Estimators</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Estimating • 20 min read</p>
+                    </div>
+                </a>
+                
+                <!-- Guide 2 -->
+                <a href="guides/stud-spacing-by-code.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">Stud Spacing by Code: 16" vs 24" O.C.</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Framing • 10 min read</p>
+                    </div>
+                </a>
+                
+                <!-- Guide 3 -->
+                <a href="guides/paint-coverage-myths.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">Paint Coverage Myths: Why 1 Gallon Doesn't Cover 350 Sq Ft</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Paint • 6 min read</p>
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+
+    </div>
+</section>
+
+ </main> <!-- Closing the main tag -->
+
+<!-- Phase 8: Compact & Clean 4-Column Footer -->
+<footer class="bg-slate-900 border-t border-slate-800 pt-12 pb-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+            
+            <!-- Brand Col -->
+            <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                <a href="index.html" class="flex items-center gap-2 mb-3">
+                    <span class="font-heading font-extrabold text-xl text-white">Build<span class="text-primary">Metric</span></span>
+                </a>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4 pr-4">
+                    Engineer-reviewed construction calculators for the US, UK, and Australia.
+                </p>
+                <a href="mailto:contact@buildmetric.org" class="text-sm font-medium text-primary hover:text-sky-400 transition-colors flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    contact@buildmetric.org
+                </a>
+            </div>
+
+            <!-- Calculators -->
+            <div>
+                <h3 class="font-heading font-bold text-white mb-4 text-sm">Calculators</h3>
+                <ul class="space-y-2">
+                    <li><a href="roof-pitch-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Roof Pitch</a></li>
+                    <li><a href="concrete-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Concrete Volume</a></li>
+                    <li><a href="framing-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Stud Count</a></li>
+                    <li><a href="paint-coverage-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Paint Coverage</a></li>
+                    <li><a href="calculators.html" class="text-sm font-bold text-primary hover:text-sky-400 transition-colors">All Tools &rarr;</a></li>
+                </ul>
+            </div>
+
+            <!-- Company -->
+            <div>
+                <h3 class="font-heading font-bold text-white mb-4 text-sm">Company</h3>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="text-sm text-slate-400 hover:text-primary transition-colors">About Us</a></li>
+                    <li><a href="guides.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Guides</a></li>
+                    <li><a href="contact.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Contact</a></li>
+                    <li><a href="sitemap.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Sitemap</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal -->
+            <div>
+                <h3 class="font-heading font-bold text-white mb-4 text-sm">Legal</h3>
+                <ul class="space-y-2">
+                    <li><a href="privacy-policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Terms of Use</a></li>
+                    <li><a href="disclaimer.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Disclaimer</a></li>
+                    <li><a href="cookie-policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-3">
+            <p class="text-xs text-slate-500">
+                &copy; <span class="current-year">2026</span> BuildMetric.org. All rights reserved.
+            </p>
+            <p class="text-xs text-slate-500 font-medium">
+                Engineered for US, UK & AU Standards.
+            </p>
+        </div>
+    </div>
+</footer>
+
+     <!-- ========================================== -->
+    <!-- PHASE 9: JAVASCRIPT & CLOSING TAGS         -->
+    <!-- ========================================== -->
+
+    <script>
+        // ==========================================
+        // 1. GLOBAL CORE FUNCTIONS (Save/Share/Copy)
+        // ==========================================
+        
+        function showToast(message) {
+            const existingToast = document.getElementById('bm-toast');
+            if (existingToast) existingToast.remove();
+
+            const toast = document.createElement('div');
+            toast.id = 'bm-toast';
+            toast.className = 'fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-slate-900 text-white px-6 py-3 rounded-xl shadow-2xl z-[100] text-sm font-semibold transition-all duration-300 opacity-0 translate-y-4 flex items-center gap-2';
+            toast.innerHTML = `<svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> ${message}`;
+            
+            document.body.appendChild(toast);
+            setTimeout(() => toast.classList.remove('opacity-0', 'translate-y-4'), 10);
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-4');
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        function copyResult() {
+            const text = `BuildMetric Crown Molding Results:\nTotal Length: ${document.getElementById('result-linear').innerText} ${document.querySelector('.result-unit-large').innerText}\nPieces Needed: ${document.getElementById('result-pieces').innerText}\nMiter Angle: ${document.getElementById('result-miter').innerText}°\nBevel Angle: ${document.getElementById('result-bevel').innerText}°`;
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('Results copied to clipboard!');
+            }).catch(() => showToast('Failed to copy.'));
+        }
+
+        function saveResult() {
+            const data = {
+                linear: document.getElementById('result-linear').innerText,
+                pieces: document.getElementById('result-pieces').innerText,
+                miter: document.getElementById('result-miter').innerText,
+                bevel: document.getElementById('result-bevel').innerText,
+                unit: document.querySelector('.result-unit-large').innerText,
+                timestamp: new Date().toISOString()
+            };
+            localStorage.setItem('buildmetric_crown_saved', JSON.stringify(data));
+            showToast('Calculation saved locally!');
+        }
+
+        function shareResult() {
+            const text = `I just calculated my crown molding needs using BuildMetric!\nTotal Length: ${document.getElementById('result-linear').innerText} ${document.querySelector('.result-unit-large').innerText}\nMiter Angle: ${document.getElementById('result-miter').innerText}°\nBevel Angle: ${document.getElementById('result-bevel').innerText}°`;
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Crown Molding Results',
+                    text: text,
+                    url: window.location.href
+                }).catch(console.error);
+            } else {
+                navigator.clipboard.writeText(text);
+                showToast('Sharing not supported. Copied instead!');
+            }
+        }
+
+        // ==========================================
+        // 2. CROWN MOLDING CALCULATOR LOGIC
+        // ==========================================
+
+        let currentUnit = 'imperial'; // 'imperial' or 'metric'
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            }
+            
+            // Dynamic Year
+            document.querySelectorAll('.current-year').forEach(el => el.textContent = new Date().getFullYear());
+
+            // Initial Calculation
+            calculateCrownMolding();
+        });
+
+        // Toggle Custom Inputs
+        function toggleCustomInput(selectElement, customInputId) {
+            const customInputContainer = document.getElementById(customInputId);
+            if (selectElement.value === 'custom') {
+                customInputContainer.classList.remove('hidden');
+                customInputContainer.querySelector('input').focus();
+            } else {
+                customInputContainer.classList.add('hidden');
+            }
+            calculateCrownMolding();
+        }
+
+        // Unit Toggle Logic
+        document.getElementById('btn-imperial').addEventListener('click', () => {
+            if (currentUnit === 'imperial') return;
+            currentUnit = 'imperial';
+            
+            // UI Styles
+            document.getElementById('btn-imperial').className = 'flex-1 sm:flex-none px-4 py-2 text-sm font-bold bg-white text-primary rounded-lg shadow-sm transition-all';
+            document.getElementById('btn-metric').className = 'flex-1 sm:flex-none px-4 py-2 text-sm font-bold text-slate-500 hover:text-slate-700 rounded-lg transition-all';
+
+            // Labels & Units
+            document.querySelectorAll('.dim-unit').forEach(el => el.innerText = 'ft');
+            document.querySelector('.result-unit-large').innerText = 'ft';
+
+            // Dropdowns
+            document.getElementById('select-piece-length').innerHTML = `
+                <option value="8">8 feet</option>
+                <option value="12" selected>12 feet</option>
+                <option value="16">16 feet</option>
+            `;
+
+            // Reset Defaults
+            document.getElementById('input-length').value = 15;
+            document.getElementById('input-width').value = 12;
+            
+            calculateCrownMolding();
+        });
+
+        document.getElementById('btn-metric').addEventListener('click', () => {
+            if (currentUnit === 'metric') return;
+            currentUnit = 'metric';
+            
+            // UI Styles
+            document.getElementById('btn-metric').className = 'flex-1 sm:flex-none px-4 py-2 text-sm font-bold bg-white text-primary rounded-lg shadow-sm transition-all';
+            document.getElementById('btn-imperial').className = 'flex-1 sm:flex-none px-4 py-2 text-sm font-bold text-slate-500 hover:text-slate-700 rounded-lg transition-all';
+
+            // Labels & Units
+            document.querySelectorAll('.dim-unit').forEach(el => el.innerText = 'm');
+            document.querySelector('.result-unit-large').innerText = 'm';
+
+            // Dropdowns
+            document.getElementById('select-piece-length').innerHTML = `
+                <option value="2.4">2.4 meters</option>
+                <option value="3.6" selected>3.6 meters</option>
+                <option value="4.8">4.8 meters</option>
+            `;
+
+            // Reset Defaults
+            document.getElementById('input-length').value = 4.5;
+            document.getElementById('input-width').value = 3.6;
+            
+            calculateCrownMolding();
+        });
+
+        // Waste Slider
+        document.getElementById('input-waste').addEventListener('input', (e) => {
+            document.getElementById('waste-value').innerText = e.target.value + '%';
+            calculateCrownMolding();
+        });
+
+        // Main Calculate Function
+        function calculateCrownMolding() {
+            const length = parseFloat(document.getElementById('input-length').value) || 0;
+            const width = parseFloat(document.getElementById('input-width').value) || 0;
+            const wastePercent = parseFloat(document.getElementById('input-waste').value) || 0;
+
+            if (length <= 0 || width <= 0) return;
+
+            // Get Spring Angle
+            const springSelect = document.getElementById('select-spring').value;
+            let springAngle = 0;
+            if (springSelect === 'custom') {
+                springAngle = parseFloat(document.getElementById('input-custom-spring').value) || 38;
+            } else {
+                springAngle = parseFloat(springSelect);
+            }
+
+            // Get Piece Length
+            const pieceLength = parseFloat(document.getElementById('select-piece-length').value) || 12;
+
+            // 1. Calculate Perimeter and Total Length
+            const perimeter = 2 * (length + width);
+            const totalLinear = perimeter * (1 + wastePercent / 100);
+
+            // 2. Calculate Number of Pieces
+            const numPieces = Math.ceil(totalLinear / pieceLength);
+
+            // 3. Calculate Miter and Bevel Angles (Nested Cutting Formula)
+            // Assuming standard 90-degree corner (45 degree saw setting base)
+            const cornerAngleRad = 45 * (Math.PI / 180);
+            const springAngleRad = springAngle * (Math.PI / 180);
+
+            // Miter Angle Formula: atan(sin(corner) * tan(spring))
+            const miterRad = Math.atan(Math.sin(cornerAngleRad) * Math.tan(springAngleRad));
+            const miterDeg = miterRad * (180 / Math.PI);
+
+            // Bevel Angle Formula: asin(cos(corner) * cos(spring))
+            const bevelRad = Math.asin(Math.cos(cornerAngleRad) * Math.cos(springAngleRad));
+            const bevelDeg = bevelRad * (180 / Math.PI);
+
+            // Update DOM
+            document.getElementById('result-linear').innerText = new Intl.NumberFormat('en-US', { maximumFractionDigits: 1 }).format(totalLinear);
+            document.getElementById('result-pieces').innerText = numPieces;
+            
+            // If the molding is 45/45, standard angles are 35.3 and 30. 
+            // The formula above works for nested cutting on a miter saw.
+            document.getElementById('result-miter').innerText = miterDeg.toFixed(1);
+            document.getElementById('result-bevel').innerText = bevelDeg.toFixed(1);
+        }
+
+        // Calculate Button Auto-Scroll Action
+        function handleCalculateClick() {
+            calculateCrownMolding();
+            if (window.innerWidth < 1024) {
+                const resultBox = document.getElementById('result-linear');
+                if (resultBox) {
+                    resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+            showToast('Calculation complete!');
+        }
+
+        // Attach Event Listeners to Inputs
+        ['input-length', 'input-width', 'input-custom-spring'].forEach(id => {
+            document.getElementById(id).addEventListener('input', calculateCrownMolding);
+        });
+        
+        document.getElementById('select-spring').addEventListener('change', calculateCrownMolding);
+        document.getElementById('select-piece-length').addEventListener('change', calculateCrownMolding);
+    </script>
+
+</body>
+</html>
