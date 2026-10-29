@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Insulation Calculators | R-Value & Blown-In Estimators (US, UK, AU)</title>
+    <meta name="title" content="Insulation Calculators | R-Value & Blown-In Estimators (US, UK, AU)">
+    <meta name="description" content="Free, engineer-reviewed insulation calculators. Calculate blown-in insulation bags, R-values, and attic insulation for US, UK, and AU homes.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://buildmetric.org/insulation.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://buildmetric.org/insulation.html">
+    <meta property="og:title" content="Insulation Calculators | R-Value & Blown-In Estimators">
+    <meta property="og:description" content="Free, engineer-reviewed insulation calculators for US, UK, and AU homes.">
+    <meta property="og:image" content="https://buildmetric.org/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://buildmetric.org/insulation.html">
+    <meta property="twitter:title" content="Insulation Calculators | R-Value & Blown-In Estimators">
+    <meta property="twitter:description" content="Free, engineer-reviewed insulation calculators for US, UK, and AU homes.">
+    <meta property="twitter:image" content="https://buildmetric.org/logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9', // Sky Blue
+                        slate: {
+                            900: '#0f172a', // Dark Slate
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- JSON-LD Schema: CollectionPage & Breadcrumbs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://buildmetric.org/insulation.html#webpage",
+          "url": "https://buildmetric.org/insulation.html",
+          "name": "Insulation Calculators",
+          "description": "Free, engineer-reviewed insulation calculators for R-values and blown-in insulation."
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://buildmetric.org/insulation.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://buildmetric.org/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Insulation",
+              "item": "https://buildmetric.org/insulation.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What R-value do I need for my attic?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "R-value requirements depend on your climate zone. In the US, the DOE recommends R-30 to R-49 for warm climates, R-38 to R-60 for moderate climates, and R-49 to R-60 for cold climates. In the UK, a U-value of 0.11 to 0.16 is standard. Use our Blown-In Insulation Calculator for exact bags."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many bags of blown-in insulation do I need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The number of bags depends on your target R-value and the coverage per bag. A standard 25lb bag covers about 40 sq ft at R-38. For a 1,000 sq ft attic, you would need roughly 25 bags. Use our Blown-In Insulation Calculator for an exact count."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between R-value and U-value?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "R-value measures thermal resistance (higher is better), used in the US and Australia. U-value measures thermal transmittance (lower is better), used in the UK. To convert, U-value = 1 / R-value (in metric units)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I add blown-in insulation over existing insulation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, as long as the existing insulation is dry, mold-free, and not compressed. Adding blown-in insulation over old batts is a common way to boost R-value. Use our Blown-In Insulation Calculator to find the additional bags needed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the best type of insulation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no single best insulation. Fiberglass batts are cheap and easy for walls. Blown-in fiberglass or cellulose is ideal for attics. Rigid foam boards are best for exterior sheathing and basements. Spray foam is the most airtight but also the most expensive."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a vapor barrier with insulation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In cold climates, a vapor barrier is installed on the warm side of the insulation to prevent moisture from condensing inside the wall. In warm climates, vapor barriers are often omitted. Always check local building codes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does insulation last?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fiberglass and mineral wool insulation can last 50+ years if not disturbed. Cellulose can settle over time, losing some R-value. Spray foam can last the life of the building. Insulation loses effectiveness if it gets wet or is compressed."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-primary selection:text-white flex flex-col min-h-screen">
+
+    <!-- Sticky Glassmorphism Navbar -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+                    <img src="logo.png" alt="BuildMetric Logo" class="h-8 w-auto sm:h-10" onerror="this.style.display='none'">
+                    <div class="flex flex-col">
+                        <span class="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-slate-900 leading-none">
+                            Build<span class="text-primary">Metric</span>
+                        </span>
+                        <span class="text-[10px] text-slate-500 font-semibold tracking-widest uppercase mt-1 hidden sm:block">Engineering Calculators</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="calculators.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">All Tools</a>
+                    <a href="guides.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Guides</a>
+                    <a href="about.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">About</a>
+                    <a href="contact.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Contact</a>
+                </div>
+
+                <!-- Desktop CTA Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="calculators.html" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold text-white transition-all bg-slate-900 rounded-xl hover:bg-slate-800 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900">
+                        Open Tools
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1 sm:px-6">
+                <a href="calculators.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">All Tools</a>
+                <a href="guides.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">Guides</a>
+                <a href="about.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">About</a>
+                <a href="contact.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">Contact</a>
+                <div class="pt-4">
+                    <a href="calculators.html" class="w-full flex justify-center items-center px-4 py-3 text-base font-bold text-white bg-slate-900 rounded-xl hover:bg-slate-800 transition-all shadow-sm">
+                        Open Tools
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <main class="flex-grow">
+        
+        <!-- Breadcrumbs -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2">
+            <nav class="flex text-sm text-slate-500 font-medium" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="index.html" class="inline-flex items-center hover:text-primary transition-colors">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                            Home
+                        </a>
+                    </li>
+                    <li aria-current="page">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            <span class="ml-1 md:ml-2 text-slate-800 font-bold">Insulation</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-primary text-xs font-bold uppercase tracking-wider mb-6 border border-sky-100">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                Insulation Calculators
+            </div>
+            
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-slate-900 tracking-tight mb-4">
+                Optimize Your Home's <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-sky-400">Energy Efficiency</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                Calculate exact blown-in insulation bags, R-values, and attic requirements. Engineer-reviewed for US, UK, and AU standards.
+            </p>
+        </section>
+
+      <!-- Tools Grid (Insulation Tools) -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Tool 1: Blown-In Insulation -->
+        <a href="blown-in-insulation-calculator.html" class="group flex flex-col bg-white rounded-2xl border border-slate-200 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="p-3 bg-sky-100 text-primary rounded-xl group-hover:bg-primary group-hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                </div>
+                <h3 class="text-lg font-heading font-bold text-slate-900 group-hover:text-primary transition-colors">Blown-In Insulation Calculator</h3>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">Calculate exact bags of blown-in insulation for your attic. Accounts for R-value, existing insulation, and area.</p>
+        </a>
+
+        <!-- Placeholder for future tools - you can add more here -->
+        <!-- Tool 2: Drywall Calculator (Related) -->
+        <a href="drywall-calculator.html" class="group flex flex-col bg-white rounded-2xl border border-slate-200 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="p-3 bg-amber-100 text-amber-600 rounded-xl group-hover:bg-primary group-hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path></svg>
+                </div>
+                <h3 class="text-lg font-heading font-bold text-slate-900 group-hover:text-primary transition-colors">Drywall Calculator</h3>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">Calculate drywall sheets and joint compound before installing insulation and finishing your walls.</p>
+        </a>
+
+        <!-- Placeholder for future tools -->
+        <!-- Tool 3: Construction Cost Calculator (Related) -->
+        <a href="construction-cost-calculator.html" class="group flex flex-col bg-white rounded-2xl border border-slate-200 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="p-3 bg-emerald-100 text-emerald-600 rounded-xl group-hover:bg-primary group-hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3 class="text-lg font-heading font-bold text-slate-900 group-hover:text-primary transition-colors">Construction Cost Calculator</h3>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">Estimate total project costs including insulation, materials, and labor.</p>
+        </a>
+
+    </div>
+</section>
+
+ <!-- Phase 4: SEO Content Part 1 -->
+<section class="bg-slate-50 border-t border-slate-200 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- AI Overview / Quick Answer Box -->
+        <div class="bg-white border-l-4 border-primary p-6 sm:p-8 rounded-r-2xl mb-12 shadow-sm">
+            <h2 class="text-xl font-heading font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                The Ultimate Guide to Insulation Estimation
+            </h2>
+            <p class="text-slate-700 leading-relaxed font-medium text-lg">
+                Insulation is the most cost-effective way to reduce energy bills and improve home comfort. Whether you are blowing fiberglass into an attic or installing batts in a wall, the key metric is the <strong>R-Value</strong> (thermal resistance). Our calculators help you determine the exact number of bags, rolls, or sheets needed. <strong>Key Rule:</strong> Never compress insulation, as it reduces its R-Value.
+            </p>
+        </div>
+
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            
+            <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6">Understanding R-Value and U-Value</h2>
+            <p>
+                Insulation performance is measured by its resistance to heat flow. This is expressed as an <strong>R-Value</strong> in the US and Australia. The higher the R-Value, the better the insulation.
+            </p>
+            <p>
+                In the UK and parts of Europe, insulation is measured by its <strong>U-Value</strong> (thermal transmittance). The lower the U-Value, the better the insulation. 
+            </p>
+            <p>
+                To convert between the two: <strong>U-Value = 1 / R-Value</strong> (using metric units). Our <a href="blown-in-insulation-calculator.html" class="text-primary font-semibold hover:underline">Blown-In Insulation Calculator</a> allows you to input your target R-Value and calculates the exact bags needed.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">Global Insulation Standards</h3>
+            <p>
+                Recommended R-Values vary drastically by climate zone. 
+            </p>
+            <ul class="list-disc pl-6 space-y-3 mb-6">
+                <li><strong>USA:</strong> The Department of Energy (DOE) recommends R-30 to R-49 for warm climates (Zone 1-2) and R-49 to R-60 for cold climates (Zone 5-8).</li>
+                <li><strong>UK:</strong> Building regulations (Approved Document L) require a U-Value of 0.11 to 0.16 W/m²K for roofs and 0.18 to 0.26 for walls.</li>
+                <li><strong>Australia:</strong> The National Construction Code (NCC) sets minimum R-Values based on climate zone, typically R-3.5 to R-6.0 for roofs.</li>
+            </ul>
+
+            <h2 class="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">The Math Behind Blown-In Insulation</h2>
+            <p>
+                Blown-in insulation (fiberglass or cellulose) is sold by weight, but applied by volume. The manufacturer provides a coverage chart that tells you how many square feet one bag will cover at a given depth (which corresponds to an R-Value).
+            </p>
+            <p>
+                For example, a standard 25lb bag of fiberglass might cover 40 sq ft at R-38, or 30 sq ft at R-49. The deeper you want the insulation, the fewer square feet one bag will cover. 
+            </p>
+            <p>
+                Our <a href="blown-in-insulation-calculator.html" class="text-primary font-semibold hover:underline">Blown-In Insulation Calculator</a> uses these standard industry yields to calculate the exact number of bags required. It also factors in existing insulation depth, so you don't over-order.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">The Role of Air Sealing</h3>
+            <p>
+                Insulation slows down heat transfer, but it does not stop air movement. Before blowing insulation, you must seal all gaps around plumbing, wiring, and recessed lights. Warm air leaking into the attic bypasses the insulation entirely, reducing its effectiveness. 
+            </p>
+            <p>
+                In cold climates, a vapor barrier is also essential to prevent moisture from condensing inside the wall or attic. For details on drywall and wall prep, use our <a href="drywall-calculator.html" class="text-primary font-semibold hover:underline">Drywall Calculator</a>.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+  <!-- Phase 5: SEO Content Part 2 & Related Guides -->
+<section class="bg-white border-t border-slate-200 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6 mb-16">
+            
+            <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6">Types of Insulation: Which is Right for You?</h2>
+            <p>
+                There is no single "best" insulation. The right choice depends on where you are installing it and your budget.
+            </p>
+            
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">1. Fiberglass Batts (Blankets)</h3>
+            <p>
+                The most common and affordable insulation. Batts come in pre-cut rolls or panels that fit between studs and joists. They are easy to install in walls and ceilings. However, they must be installed perfectly without gaps or compression, or they lose R-value.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">2. Blown-In Insulation</h3>
+            <p>
+                Blown-in insulation (fiberglass or cellulose) is the best choice for attics and retrofitting existing walls. It can be blown into tight spaces and around obstructions, creating a seamless blanket. Cellulose (recycled paper) is denser and better at blocking airflow than fiberglass. Use our <a href="blown-in-insulation-calculator.html" class="text-primary font-semibold hover:underline">Blown-In Insulation Calculator</a> for exact bag counts.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">3. Spray Foam</h3>
+            <p>
+                Spray foam is the most expensive option, but it provides the highest R-value per inch and acts as an air barrier. It is applied as a liquid that expands into a solid foam. It is ideal for rim joists, cathedral ceilings, and sealing difficult cavities.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">4. Rigid Foam Boards</h3>
+            <p>
+                Rigid foam boards (EPS, XPS, Polyiso) are used for exterior sheathing, basements, and concrete slabs. They provide excellent R-value and are moisture-resistant. They are often used in combination with batt or blown-in insulation.
+            </p>
+
+            <h2 class="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">The Critical Role of Attic Ventilation</h2>
+            <p>
+                Insulation works hand-in-hand with ventilation. If your attic is not properly ventilated, heat and moisture will build up, reducing the insulation's effectiveness and causing roof damage.
+            </p>
+            <p>
+                The International Residential Code (IRC) requires a minimum of <strong>1 square foot of net free ventilation for every 150 square feet of attic floor area</strong>. This is achieved with a combination of intake vents (soffit vents under the eaves) and exhaust vents (ridge vents at the peak or gable vents).
+            </p>
+            <p>
+                When blowing insulation into the attic, you must install <strong>baffles</strong> at the eaves. Baffles are foam or plastic channels that keep the insulation from blocking the airflow from the soffit. Our <a href="blown-in-insulation-calculator.html" class="text-primary font-semibold hover:underline">Blown-In Insulation Calculator</a> assumes you are installing baffles to maintain a 1-inch air gap.
+            </p>
+
+        </div>
+
+        <!-- Related Guides Section -->
+        <div class="border-t border-slate-200 pt-12">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-heading font-extrabold text-slate-900 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        Insulation Guides & Tutorials
+                    </h2>
+                    <p class="text-slate-600 mt-2 text-base font-medium">In-depth articles on insulation types, R-values, and energy efficiency.</p>
+                </div>
+                <a href="guides.html" class="text-sm font-bold text-primary hover:text-sky-600 flex items-center gap-1 transition-colors">
+                    View all guides
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                
+                <!-- Guide 1 -->
+                <a href="guides/stud-spacing-by-code.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">Stud Spacing by Code: 16" vs 24" O.C.</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Framing • 10 min read</p>
+                    </div>
+                </a>
+                
+                <!-- Guide 2 -->
+                <a href="guides/reading-architectural-drawings.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-600 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">Reading Architectural Drawings for Estimators</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Estimating • 20 min read</p>
+                    </div>
+                </a>
+                
+                <!-- Guide 3 -->
+                <a href="guides/how-to-calculate-rafters.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-emerald-400 to-teal-600 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">How to Calculate Rafter Lengths (Step-by-Step)</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Framing • 15 min read</p>
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+
+    </div>
+</section>
+
+ <!-- Phase 6: FAQs & E-E-A-T Trust Box -->
+<section class="bg-slate-50 border-t border-slate-200 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- FAQ Section -->
+        <div class="text-center mb-12">
+            <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">Frequently Asked Questions</h2>
+            <h3 class="text-3xl md:text-4xl font-heading font-extrabold text-slate-900">Insulation Calculator FAQs</h3>
+            <p class="text-slate-600 mt-4 text-lg font-medium">Direct answers to common questions about R-values, blown-in bags, and installation.</p>
+        </div>
+
+        <div class="space-y-4">
+            
+            <!-- FAQ 1 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">01</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">What R-value do I need for my attic?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    R-value requirements depend on your climate zone. In the US, the DOE recommends <strong>R-30 to R-49 for warm climates</strong> and R-49 to R-60 for cold climates. In the UK, a U-value of 0.11 to 0.16 is standard. Use our <a href="blown-in-insulation-calculator.html" class="text-primary font-semibold hover:underline">Blown-In Insulation Calculator</a> for exact bags.
+                </div>
+            </details>
+
+            <!-- FAQ 2 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">02</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How many bags of blown-in insulation do I need?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    The number of bags depends on your target R-value and the coverage per bag. A standard 25lb bag covers about <strong>40 sq ft at R-38</strong>. For a 1,000 sq ft attic, you would need roughly 25 bags. Use our <a href="blown-in-insulation-calculator.html" class="text-primary font-semibold hover:underline">Blown-In Insulation Calculator</a> for an exact count.
+                </div>
+            </details>
+
+            <!-- FAQ 3 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">03</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">What is the difference between R-value and U-value?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    <strong>R-value</strong> measures thermal resistance (higher is better), used in the US and Australia. <strong>U-value</strong> measures thermal transmittance (lower is better), used in the UK. To convert, U-value = 1 / R-value (in metric units).
+                </div>
+            </details>
+
+            <!-- FAQ 4 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">04</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">Can I add blown-in insulation over existing insulation?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    Yes, as long as the existing insulation is dry, mold-free, and not compressed. Adding blown-in insulation over old batts is a common way to boost R-value. Use our <a href="blown-in-insulation-calculator.html" class="text-primary font-semibold hover:underline">Blown-In Insulation Calculator</a> to find the additional bags needed.
+                </div>
+            </details>
+
+            <!-- FAQ 5 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">05</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">What is the best type of insulation?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    There is no single best insulation. Fiberglass batts are cheap and easy for walls. Blown-in fiberglass or cellulose is ideal for attics. Rigid foam boards are best for exterior sheathing and basements. Spray foam is the most airtight but also the most expensive.
+                </div>
+            </details>
+
+            <!-- FAQ 6 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">06</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">Do I need a vapor barrier with insulation?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    In cold climates, a vapor barrier is installed on the warm side of the insulation to prevent moisture from condensing inside the wall. In warm climates, vapor barriers are often omitted. Always check local building codes.
+                </div>
+            </details>
+
+            <!-- FAQ 7 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">07</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How long does insulation last?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    Fiberglass and mineral wool insulation can last <strong>50+ years</strong> if not disturbed. Cellulose can settle over time, losing some R-value. Spray foam can last the life of the building. Insulation loses effectiveness if it gets wet or is compressed.
+                </div>
+            </details>
+
+        </div>
+
+        <!-- E-E-A-T Trust Box -->
+        <div class="mt-12 bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div class="flex items-start gap-5">
+                <div class="p-3 bg-primary/10 text-primary rounded-2xl flex-shrink-0">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </div>
+                <div>
+                    <h2 class="text-xl font-heading font-bold text-slate-900 mb-2">Engineer-Reviewed Accuracy</h2>
+                    <p class="text-slate-600 text-sm leading-relaxed max-w-2xl font-medium mb-4">
+                        Our insulation tools are built on verified engineering formulas and aligned with IRC (US), Approved Document L (UK), and NCC (Australia) standards for R-values, U-values, and attic ventilation. We prioritize accurate material estimation to maximize your home's energy savings.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <a href="methodology.html" class="text-sm font-bold text-primary hover:text-sky-700 hover:underline flex items-center gap-1.5 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Our Methodology
+                        </a>
+                        <a href="contact.html" class="text-sm font-bold text-slate-500 hover:text-slate-900 hover:underline flex items-center gap-1.5 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                            Report an Error
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    </main> <!-- Closing the main tag -->
+
+    <!-- Compact & Clean 4-Column Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 pt-12 pb-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+                
+                <!-- Brand Col -->
+                <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                    <a href="index.html" class="flex items-center gap-2 mb-3">
+                        <span class="font-heading font-extrabold text-xl text-white">Build<span class="text-primary">Metric</span></span>
+                    </a>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4 pr-4">
+                        Engineer-reviewed construction calculators for the US, UK, and Australia.
+                    </p>
+                    <a href="mailto:contact@buildmetric.org" class="text-sm font-medium text-primary hover:text-sky-400 transition-colors flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        contact@buildmetric.org
+                    </a>
+                </div>
+
+                <!-- Calculators -->
+                <div>
+                    <h3 class="font-heading font-bold text-white mb-4 text-sm">Calculators</h3>
+                    <ul class="space-y-2">
+                        <li><a href="roof-pitch-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Roof Pitch</a></li>
+                        <li><a href="concrete-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Concrete Volume</a></li>
+                        <li><a href="framing-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Stud Count</a></li>
+                        <li><a href="paint-coverage-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Paint Coverage</a></li>
+                        <li><a href="calculators.html" class="text-sm font-bold text-primary hover:text-sky-400 transition-colors">All Tools &rarr;</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h3 class="font-heading font-bold text-white mb-4 text-sm">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-sm text-slate-400 hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="guides.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Guides</a></li>
+                        <li><a href="contact.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Contact</a></li>
+                        <li><a href="sitemap.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h3 class="font-heading font-bold text-white mb-4 text-sm">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="privacy-policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Terms of Use</a></li>
+                        <li><a href="disclaimer.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Disclaimer</a></li>
+                        <li><a href="cookie-policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-3">
+                <p class="text-xs text-slate-500">
+                    &copy; <span class="current-year">2026</span> BuildMetric.org. All rights reserved.
+                </p>
+                <p class="text-xs text-slate-500 font-medium">
+                    Engineered for US, UK & AU Standards.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            }
+            
+            // Dynamic Year
+            document.querySelectorAll('.current-year').forEach(el => el.textContent = new Date().getFullYear());
+        });
+    </script>
+
+</body>
+</html>
+                                                                                                                                                                                                                                             </section>
