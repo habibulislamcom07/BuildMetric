@@ -1,0 +1,52 @@
+# BuildMetric
+
+> Free, engineer-reviewed construction calculators for the US, UK, and Australia. Built for precision, aligned with IRC, BS, and NCC building codes.
+
+BuildMetric provides professional-grade estimation tools for contractors, engineers, and DIYers. Every calculator is built on verified engineering formulas and supports both Imperial (US) and Metric (UK/AU) units. Our content is reviewed for accuracy and aligned with regional building standards to ensure safe, code-compliant material estimates.
+
+## Core Calculators
+
+- [Concrete Calculator](https://buildmetric.org/concrete-calculator.html): Calculate exact cubic yards or bags of concrete for slabs, footings, and columns.
+- [Roof Pitch Calculator](https://buildmetric.org/roof-pitch-calculator.html): Convert roof pitch to degrees, slope percentage, and find the exact pitch multiplier.
+- [Framing Calculator](https://buildmetric.org/framing-calculator.html): Calculate studs, plates, and headers for wall and structural framing.
+- [Rafter Calculator](https://buildmetric.org/rafter-calculator.html): Calculate exact rafter lengths, angles, and birdsmouth cuts for roof framing.
+- [Rebar Calculator](https://buildmetric.org/rebar-calculator.html): Estimate rebar quantity, lap splices, and total weight for reinforced concrete.
+
+## Roofing & Exterior
+
+- [Shingle Calculator](https://buildmetric.org/shingle-calculator.html): Calculate exact shingle bundles, underlayment, and ridge caps.
+- [Gable Roof Calculator](https://buildmetric.org/gable-roof-calculator.html): Calculate roof area, slope factor, and material quantities for gable roofs.
+- [Gutter Calculator](https://buildmetric.org/gutter-calculator.html): Calculate linear feet of gutters, downspouts, and hangers.
+- [Siding Calculator](https://buildmetric.org/siding-calculator.html): Estimate siding squares, boxes, and trim for exterior cladding.
+
+## Interior & Finishing
+
+- [Drywall Calculator](https://buildmetric.org/drywall-calculator.html): Calculate drywall sheets, joint compound, and tape.
+- [Paint Coverage Calculator](https://buildmetric.org/paint-coverage-calculator.html): Calculate exact gallons or litres of paint for walls and ceilings.
+- [Wallpaper Calculator](https://buildmetric.org/wallpaper-calculator.html): Calculate wallpaper rolls, accounting for pattern repeat and doors.
+- [Crown Molding Calculator](https://buildmetric.org/crown-molding-calculator.html): Calculate miter and bevel angles for crown molding installation.
+
+## Landscaping & Hardscaping
+
+- [Paver Calculator](https://buildmetric.org/paver-calculator.html): Calculate pavers, base gravel, and bedding sand for patios and driveways.
+- [Mulch Calculator](https://buildmetric.org/mulch-calculator.html): Calculate bags or cubic yards of mulch for garden beds.
+- [Gravel Calculator](https://buildmetric.org/gravel-calculator.html): Calculate tons or cubic yards of crushed stone for driveways.
+- [Sod Calculator](https://buildmetric.org/sod-calculator.html): Calculate rolls or pallets of sod for lawn installation.
+
+## Estimating & Budgeting
+
+- [Construction Cost Calculator](https://buildmetric.org/construction-cost-calculator.html): Estimate total project cost including materials and labor.
+- [Material Estimator](https://buildmetric.org/material-estimator.html): Generate a precise Bill of Materials (BOM) for concrete, lumber, drywall, and paint.
+
+## Guides & Methodology
+
+- [Roof Pitch Explained](https://buildmetric.org/guides/roof-pitch-explained.html): Why 6:12 and 26.57° are the same roof, and how to convert ratios to degrees.
+- [Concrete Waste Allowance](https://buildmetric.org/guides/concrete-waste-allowance.html): Standard waste factors for slabs, footings, and columns.
+- [Stud Spacing by Code](https://buildmetric.org/guides/stud-spacing-by-code.html): 16" vs 24" O.C. spacing for US and UK building codes.
+- [How to Calculate Rafters](https://buildmetric.org/guides/how-to-calculate-rafters.html): Step-by-step math for rafter lengths and birdsmouth cuts.
+- [Our Methodology](https://buildmetric.org/methodology.html): How we build and verify our calculators.
+
+## Optional
+
+- [All Calculators](https://buildmetric.org/calculators.html): Complete directory of all tools.
+- [About BuildMetric](https://buildmetric.org/about.html): Who we are and why we built this platform.
