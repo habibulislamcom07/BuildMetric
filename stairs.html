@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Stair Calculators | Stringer, Rise, Run & Balusters (US, UK, AU)</title>
+    <meta name="title" content="Stair Calculators | Stringer, Rise, Run & Balusters (US, UK, AU)">
+    <meta name="description" content="Free, engineer-reviewed stair calculators. Calculate stringer length, rise, run, and baluster spacing. Aligned with IRC, BS 5395, and NCC standards.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://buildmetric.org/stairs.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://buildmetric.org/stairs.html">
+    <meta property="og:title" content="Stair Calculators | Stringer, Rise, Run & Balusters">
+    <meta property="og:description" content="Free, engineer-reviewed stair calculators for US, UK, and AU standards.">
+    <meta property="og:image" content="https://buildmetric.org/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://buildmetric.org/stairs.html">
+    <meta property="twitter:title" content="Stair Calculators | Stringer, Rise, Run & Balusters">
+    <meta property="twitter:description" content="Free, engineer-reviewed stair calculators for US, UK, and AU standards.">
+    <meta property="twitter:image" content="https://buildmetric.org/logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9', // Sky Blue
+                        slate: {
+                            900: '#0f172a', // Dark Slate
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- JSON-LD Schema: CollectionPage & Breadcrumbs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://buildmetric.org/stairs.html#webpage",
+          "url": "https://buildmetric.org/stairs.html",
+          "name": "Stair Calculators",
+          "description": "Free, engineer-reviewed stair calculators for stringers, rise, run, and baluster spacing."
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://buildmetric.org/stairs.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://buildmetric.org/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Stairs",
+              "item": "https://buildmetric.org/stairs.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the standard rise and run for stairs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In the US, standard riser height is 7 to 7.75 inches with a tread run of 10 to 11 inches. In the UK, the max rise is 220mm and the going is 220mm. In Australia, the max rise is 190mm and the going is 240mm. Use our Stair Stringer Calculator for exact measurements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate stair stringer length?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the Pythagorean theorem: Stringer Length = √(Total Rise² + Total Run²). You must also account for the thickness of the tread and the ridge board. Our Stair Stringer Calculator does this math instantly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many balusters do I need for my railing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Divide the railing length by the maximum gap allowed (4 inches in the US, 100mm in the UK, 125mm in AU), plus the baluster width. Our Baluster Calculator provides exact counts and spacing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the 2R + T rule?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 2R + T rule ensures comfortable stairs: (2 × Riser Height) + (1 × Tread Depth) should equal 24 to 25 inches (or 600-640mm). Our Stair Stringer Calculator checks this automatically."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the minimum headroom for stairs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The US IRC requires a minimum of 6 feet 8 inches (80 inches) of headroom. The UK requires 2000mm. Australia requires 2030mm. Always check this before framing, as insufficient headroom fails inspection."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use a 2x10 for a stair stringer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Generally, no. A 2x10 is only 9.25 inches wide, leaving a thin throat when cut. A 2x12 (11.25 inches) is the standard material for stairs. Use our Stair Stringer Calculator for stringer length."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I cut stair stringers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use a framing square with stair gauges set at the riser and tread dimensions. Mark the sawtooth pattern along a 2x12 board and cut with a circular saw, finishing the inside corners with a hand saw. Our calculator provides the exact dimensions for the cuts."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+
+ <body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-primary selection:text-white flex flex-col min-h-screen">
+
+    <!-- Sticky Glassmorphism Navbar -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+                    <img src="logo.png" alt="BuildMetric Logo" class="h-8 w-auto sm:h-10" onerror="this.style.display='none'">
+                    <div class="flex flex-col">
+                        <span class="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-slate-900 leading-none">
+                            Build<span class="text-primary">Metric</span>
+                        </span>
+                        <span class="text-[10px] text-slate-500 font-semibold tracking-widest uppercase mt-1 hidden sm:block">Engineering Calculators</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="calculators.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">All Tools</a>
+                    <a href="guides.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Guides</a>
+                    <a href="about.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">About</a>
+                    <a href="contact.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Contact</a>
+                </div>
+
+                <!-- Desktop CTA Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="calculators.html" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold text-white transition-all bg-slate-900 rounded-xl hover:bg-slate-800 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900">
+                        Open Tools
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1 sm:px-6">
+                <a href="calculators.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">All Tools</a>
+                <a href="guides.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">Guides</a>
+                <a href="about.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">About</a>
+                <a href="contact.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">Contact</a>
+                <div class="pt-4">
+                    <a href="calculators.html" class="w-full flex justify-center items-center px-4 py-3 text-base font-bold text-white bg-slate-900 rounded-xl hover:bg-slate-800 transition-all shadow-sm">
+                        Open Tools
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <main class="flex-grow">
+        
+        <!-- Breadcrumbs -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2">
+            <nav class="flex text-sm text-slate-500 font-medium" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="index.html" class="inline-flex items-center hover:text-primary transition-colors">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                            Home
+                        </a>
+                    </li>
+                    <li aria-current="page">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            <span class="ml-1 md:ml-2 text-slate-800 font-bold">Stairs</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-primary text-xs font-bold uppercase tracking-wider mb-6 border border-sky-100">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                Stair Calculators
+            </div>
+            
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-slate-900 tracking-tight mb-4">
+                Build Safe Stairs with <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-sky-400">Precision</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                Calculate exact stair stringer length, rise, run, and baluster spacing. Engineer-reviewed for US, UK, and AU building codes.
+            </p>
+        </section>
+
+      <!-- Tools Grid (Stairs Tools) -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Tool 1: Stair Stringer Calculator -->
+        <a href="stair-stringer-calculator.html" class="group flex flex-col bg-white rounded-2xl border border-slate-200 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="p-3 bg-sky-100 text-primary rounded-xl group-hover:bg-primary group-hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                </div>
+                <h3 class="text-lg font-heading font-bold text-slate-900 group-hover:text-primary transition-colors">Stair Stringer Calculator</h3>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">Calculate exact stringer length, rise, run, and birdsmouth cuts for safe stair framing.</p>
+        </a>
+
+        <!-- Tool 2: Baluster Calculator -->
+        <a href="baluster-calculator.html" class="group flex flex-col bg-white rounded-2xl border border-slate-200 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="p-3 bg-amber-100 text-amber-600 rounded-xl group-hover:bg-primary group-hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                </div>
+                <h3 class="text-lg font-heading font-bold text-slate-900 group-hover:text-primary transition-colors">Baluster Calculator</h3>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">Calculate the exact number of balusters needed and their precise spacing for code compliance.</p>
+        </a>
+
+        <!-- Tool 3: Basic Stair Calculator -->
+        <a href="stair-calculator.html" class="group flex flex-col bg-white rounded-2xl border border-slate-200 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="p-3 bg-emerald-100 text-emerald-600 rounded-xl group-hover:bg-primary group-hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                </div>
+                <h3 class="text-lg font-heading font-bold text-slate-900 group-hover:text-primary transition-colors">Basic Stair Calculator</h3>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">Calculate total rise, run, and step count for standard interior and exterior stairs.</p>
+        </a>
+
+    </div>
+</section>
+
+  <!-- Phase 4: SEO Content Part 1 -->
+<section class="bg-slate-50 border-t border-slate-200 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- AI Overview / Quick Answer Box -->
+        <div class="bg-white border-l-4 border-primary p-6 sm:p-8 rounded-r-2xl mb-12 shadow-sm">
+            <h2 class="text-xl font-heading font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                The Ultimate Guide to Stair Estimation
+            </h2>
+            <p class="text-slate-700 leading-relaxed font-medium text-lg">
+                Stairs are the most math-intensive part of residential construction. A mistake in the rise or run can make the staircase dangerous or fail inspection. Our calculators help you determine the exact stringer length, rise, run, and baluster spacing. <strong>Key Rule:</strong> Always verify your calculations against local building codes (IRC, BS, or NCC) before cutting any wood.
+            </p>
+        </div>
+
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            
+            <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6">The Anatomy of a Safe Staircase</h2>
+            <p>
+                A staircase is a complex system of interacting parts. Understanding these components is critical for any builder.
+            </p>
+            
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">1. Rise and Run</h3>
+            <p>
+                The <strong>rise</strong> is the vertical distance between the top of one tread and the top of the next. The <strong>run</strong> (or going) is the horizontal depth of the tread. The relationship between rise and run determines the steepness and comfort of the stairs.
+            </p>
+            <p>
+                In the US, the IRC allows a maximum rise of 7.75 inches and a minimum run of 10 inches. In the UK, the maximum rise is 220mm and the run is 220mm. In Australia, the max rise is 190mm and the min run is 240mm. Use our <a href="stair-stringer-calculator.html" class="text-primary font-semibold hover:underline">Stair Stringer Calculator</a> for exact dimensions.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">2. The 2R + T Rule</h3>
+            <p>
+                Master carpenters use the 2R + T rule to ensure comfortable stairs: <strong>(2 × Riser Height) + (1 × Tread Depth) = 24 to 25 inches</strong> (or 600-640mm). 
+            </p>
+            <p>
+                This rule matches the average human stride. If your riser is 7 inches and your tread is 11 inches: (2 × 7) + 11 = 25 inches. This is the "sweet spot" for a natural, safe climb.
+            </p>
+
+            <h2 class="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Understanding Stair Stringers</h2>
+            <p>
+                The stringer is the inclined structural member that supports the entire load of the stairs. It is notched to fit the treads and risers.
+            </p>
+            <p>
+                <strong>Stringer Length:</strong> Calculated using the Pythagorean theorem: √(Total Rise² + Total Run²). 
+            </p>
+            <p>
+                <strong>Stringer Size:</strong> Standard residential stairs use a 2x12 board (1.5" x 11.25"). This allows for the notches while leaving a solid "throat" of at least 3.5 inches at the inside corner. Never use a 2x10, as the cuts will weaken the board and cause it to snap. Our <a href="stair-stringer-calculator.html" class="text-primary font-semibold hover:underline">Stair Stringer Calculator</a> accounts for tread thickness and birdsmouth cuts.
+            </p>
+
+            <h2 class="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Global Stair Codes: US vs. UK vs. Australia</h2>
+            <p>
+                Stair codes vary significantly around the world. If you are building internationally, you must comply with local regulations.
+            </p>
+            <ul class="list-disc pl-6 space-y-3 mb-6">
+                <li><strong>USA (IRC):</strong> Max riser 7.75", min tread 10", min headroom 6'8". Handrail height 34-38".</li>
+                <li><strong>UK (BS 5395 / Part K):</strong> Max rise 220mm, min going 220mm, min headroom 2000mm. Handrail height 900-1000mm.</li>
+                <li><strong>Australia (NCC):</strong> Max rise 190mm, min going 240mm, min headroom 2030mm. Handrail height 865-1015mm.</li>
+            </ul>
+            <p>
+                Our tools allow you to toggle between Imperial and Metric units, so you can calculate in the standard you are most comfortable with.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+  <!-- Phase 5: SEO Content Part 2 & Related Guides -->
+<section class="bg-white border-t border-slate-200 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6 mb-16">
+            
+            <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6">Baluster Spacing: The 4-Inch Sphere Rule</h2>
+            <p>
+                The gap between balusters is one of the most critical safety features of a staircase. In the US, the IRC mandates the <strong>4-inch sphere rule</strong>: a 4-inch sphere must not be able to pass through any gap. This prevents small children from slipping through or getting their heads stuck.
+            </p>
+            <p>
+                In the UK, the maximum gap is 100mm. In Australia, it is 125mm. 
+            </p>
+            <p>
+                To calculate the exact number of balusters and their spacing, you must account for the baluster width and the total railing length. Our <a href="baluster-calculator.html" class="text-primary font-semibold hover:underline">Baluster Calculator</a> does this instantly, ensuring you never fail inspection.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">Stair Rails vs. Deck Rails</h3>
+            <p>
+                Balusters on a staircase must be installed perfectly vertical (plumb), even though the handrail is angled (raking). This means the bottom of each baluster must be cut at an angle to sit flush on the stair tread, and the top must be cut to match the slope of the handrail.
+            </p>
+            <p>
+                This is more complex than horizontal deck rails. Use our <a href="baluster-calculator.html" class="text-primary font-semibold hover:underline">Baluster Calculator</a> for exact spacing and lengths on stairs.
+            </p>
+
+            <h2 class="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Handrails and Landings</h2>
+            <p>
+                Every staircase with more than 3 risers requires a continuous handrail on at least one side. The handrail must be easy to grip (not too bulky) and must be firmly anchored to the wall or to sturdy posts.
+            </p>
+            <p>
+                Handrails should be installed at a height of <strong>34 to 38 inches</strong> (86-96 cm) above the stair nosings. They must also return to the wall at the top and bottom to prevent clothing from snagging.
+            </p>
+            <p>
+                A <strong>landing</strong> is a flat platform between flights of stairs. Landings are required when the total rise of a stair exceeds a certain height (12 feet in the US, 4 meters in the UK). They provide a rest area and a safe turn if the stairs change direction.
+            </p>
+
+            <h2 class="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Stair Safety Checklist</h2>
+            <p>
+                Before finishing your stairs, verify the following:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 mb-6">
+                <li>All risers are equal in height (variance < 3/8 inch).</li>
+                <li>All treads are equal in depth.</li>
+                <li>Handrail is continuous and securely anchored.</li>
+                <li>Baluster gaps comply with the 4-inch sphere rule.</li>
+                <li>Headroom is at least 6'8" (80 inches) throughout.</li>
+                <li>Landing height and depth meet code.</li>
+            </ul>
+            <p>
+                If you need to calculate stair stringer lengths for your design, use our <a href="stair-stringer-calculator.html" class="text-primary font-semibold hover:underline">Stair Stringer Calculator</a>.
+            </p>
+
+        </div>
+
+        <!-- Related Guides Section -->
+        <div class="border-t border-slate-200 pt-12">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-heading font-extrabold text-slate-900 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        Stair Guides & Tutorials
+                    </h2>
+                    <p class="text-slate-600 mt-2 text-base font-medium">In-depth articles on stair framing, stringer calculations, and railing codes.</p>
+                </div>
+                <a href="guides.html" class="text-sm font-bold text-primary hover:text-sky-600 flex items-center gap-1 transition-colors">
+                    View all guides
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                
+                <!-- Guide 1 -->
+                <a href="guides/how-to-calculate-rafters.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-emerald-400 to-teal-600 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">How to Calculate Rafter Lengths (Step-by-Step)</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Framing • 15 min read</p>
+                    </div>
+                </a>
+                
+                <!-- Guide 2 -->
+                <a href="guides/stud-spacing-by-code.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">Stud Spacing by Code: 16" vs 24" O.C.</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Framing • 10 min read</p>
+                    </div>
+                </a>
+                
+                <!-- Guide 3 -->
+                <a href="guides/reading-architectural-drawings.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-600 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">Reading Architectural Drawings for Estimators</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Estimating • 20 min read</p>
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+
+    </div>
+</section>
+
+  <!-- Phase 6: FAQs & E-E-A-T Trust Box -->
+<section class="bg-slate-50 border-t border-slate-200 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- FAQ Section -->
+        <div class="text-center mb-12">
+            <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">Frequently Asked Questions</h2>
+            <h3 class="text-3xl md:text-4xl font-heading font-extrabold text-slate-900">Stair Calculator FAQs</h3>
+            <p class="text-slate-600 mt-4 text-lg font-medium">Direct answers to common questions about stair stringers, rise, run, and balusters.</p>
+        </div>
+
+        <div class="space-y-4">
+            
+            <!-- FAQ 1 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">01</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">What is the standard rise and run for stairs?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    In the US, standard riser height is <strong>7 to 7.75 inches</strong> with a tread run of 10 to 11 inches. In the UK, the max rise is 220mm and the going is 220mm. In Australia, the max rise is 190mm and the going is 240mm. Use our <a href="stair-stringer-calculator.html" class="text-primary font-semibold hover:underline">Stair Stringer Calculator</a> for exact measurements.
+                </div>
+            </details>
+
+            <!-- FAQ 2 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">02</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How do I calculate stair stringer length?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    Use the Pythagorean theorem: <strong>Stringer Length = √(Total Rise² + Total Run²)</strong>. You must also account for the thickness of the tread and the ridge board. Our <a href="stair-stringer-calculator.html" class="text-primary font-semibold hover:underline">Stair Stringer Calculator</a> does this math instantly.
+                </div>
+            </details>
+
+            <!-- FAQ 3 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">03</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How many balusters do I need for my railing?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    Divide the railing length by the maximum gap allowed (4 inches in the US, 100mm in the UK, 125mm in AU), plus the baluster width. Our <a href="baluster-calculator.html" class="text-primary font-semibold hover:underline">Baluster Calculator</a> provides exact counts and spacing.
+                </div>
+            </details>
+
+            <!-- FAQ 4 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">04</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">What is the 2R + T rule?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    The 2R + T rule ensures comfortable stairs: <strong>(2 × Riser Height) + (1 × Tread Depth)</strong> should equal 24 to 25 inches (or 600-640mm). Our <a href="stair-stringer-calculator.html" class="text-primary font-semibold hover:underline">Stair Stringer Calculator</a> checks this automatically.
+                </div>
+            </details>
+
+            <!-- FAQ 5 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">05</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">What is the minimum headroom for stairs?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    The US IRC requires a minimum of <strong>6 feet 8 inches (80 inches)</strong> of headroom. The UK requires 2000mm. Australia requires 2030mm. Always check this before framing, as insufficient headroom fails inspection.
+                </div>
+            </details>
+
+            <!-- FAQ 6 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">06</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">Can I use a 2x10 for a stair stringer?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    Generally, <strong>no</strong>. A 2x10 is only 9.25 inches wide, leaving a thin throat when cut. A 2x12 (11.25 inches) is the standard material for stairs. Use our <a href="stair-stringer-calculator.html" class="text-primary font-semibold hover:underline">Stair Stringer Calculator</a> for stringer length.
+                </div>
+            </details>
+
+            <!-- FAQ 7 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">07</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How do I cut stair stringers?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    Use a framing square with stair gauges set at the riser and tread dimensions. Mark the sawtooth pattern along a 2x12 board and cut with a circular saw, finishing the inside corners with a hand saw. Our calculator provides the exact dimensions for the cuts.
+                </div>
+            </details>
+
+        </div>
+
+        <!-- E-E-A-T Trust Box -->
+        <div class="mt-12 bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div class="flex items-start gap-5">
+                <div class="p-3 bg-primary/10 text-primary rounded-2xl flex-shrink-0">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </div>
+                <div>
+                    <h2 class="text-xl font-heading font-bold text-slate-900 mb-2">Engineer-Reviewed Accuracy</h2>
+                    <p class="text-slate-600 text-sm leading-relaxed max-w-2xl font-medium mb-4">
+                        Our stair tools are built on verified engineering formulas and aligned with IRC R311.7 (US), BS 5395 (UK), and NCC (Australia) standards for rise, run, headroom, and safety. We prioritize accuracy to ensure your stairs are safe and code-compliant.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <a href="methodology.html" class="text-sm font-bold text-primary hover:text-sky-700 hover:underline flex items-center gap-1.5 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Our Methodology
+                        </a>
+                        <a href="contact.html" class="text-sm font-bold text-slate-500 hover:text-slate-900 hover:underline flex items-center gap-1.5 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                            Report an Error
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+     </main> <!-- Closing the main tag -->
+
+    <!-- Compact & Clean 4-Column Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 pt-12 pb-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+                
+                <!-- Brand Col -->
+                <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                    <a href="index.html" class="flex items-center gap-2 mb-3">
+                        <span class="font-heading font-extrabold text-xl text-white">Build<span class="text-primary">Metric</span></span>
+                    </a>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4 pr-4">
+                        Engineer-reviewed construction calculators for the US, UK, and Australia.
+                    </p>
+                    <a href="mailto:contact@buildmetric.org" class="text-sm font-medium text-primary hover:text-sky-400 transition-colors flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        contact@buildmetric.org
+                    </a>
+                </div>
+
+                <!-- Calculators -->
+                <div>
+                    <h3 class="font-heading font-bold text-white mb-4 text-sm">Calculators</h3>
+                    <ul class="space-y-2">
+                        <li><a href="roof-pitch-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Roof Pitch</a></li>
+                        <li><a href="concrete-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Concrete Volume</a></li>
+                        <li><a href="framing-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Stud Count</a></li>
+                        <li><a href="paint-coverage-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Paint Coverage</a></li>
+                        <li><a href="calculators.html" class="text-sm font-bold text-primary hover:text-sky-400 transition-colors">All Tools &rarr;</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h3 class="font-heading font-bold text-white mb-4 text-sm">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-sm text-slate-400 hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="guides.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Guides</a></li>
+                        <li><a href="contact.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Contact</a></li>
+                        <li><a href="sitemap.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h3 class="font-heading font-bold text-white mb-4 text-sm">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="privacy-policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Terms of Use</a></li>
+                        <li><a href="disclaimer.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Disclaimer</a></li>
+                        <li><a href="cookie-policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-3">
+                <p class="text-xs text-slate-500">
+                    &copy; <span class="current-year">2026</span> BuildMetric.org. All rights reserved.
+                </p>
+                <p class="text-xs text-slate-500 font-medium">
+                    Engineered for US, UK & AU Standards.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            }
+            
+            // Dynamic Year
+            document.querySelectorAll('.current-year').forEach(el => el.textContent = new Date().getFullYear());
+        });
+    </script>
+
+</body>
+</html>
