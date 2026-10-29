@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Estimating Calculators | Construction Cost & Material BOM (US, UK, AU)</title>
+    <meta name="title" content="Estimating Calculators | Construction Cost & Material BOM (US, UK, AU)">
+    <meta name="description" content="Free, engineer-reviewed estimating calculators. Calculate total construction costs, material BOMs, and labor rates for US, UK, and AU projects.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://buildmetric.org/estimating.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://buildmetric.org/estimating.html">
+    <meta property="og:title" content="Estimating Calculators | Construction Cost & Material BOM">
+    <meta property="og:description" content="Free, engineer-reviewed estimating calculators for US, UK, and AU projects.">
+    <meta property="og:image" content="https://buildmetric.org/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://buildmetric.org/estimating.html">
+    <meta property="twitter:title" content="Estimating Calculators | Construction Cost & Material BOM">
+    <meta property="twitter:description" content="Free, engineer-reviewed estimating calculators for US, UK, and AU projects.">
+    <meta property="twitter:image" content="https://buildmetric.org/logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9', // Sky Blue
+                        slate: {
+                            900: '#0f172a', // Dark Slate
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- JSON-LD Schema: CollectionPage & Breadcrumbs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://buildmetric.org/estimating.html#webpage",
+          "url": "https://buildmetric.org/estimating.html",
+          "name": "Estimating Calculators",
+          "description": "Free, engineer-reviewed estimating calculators for construction costs, material BOMs, and labor."
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://buildmetric.org/estimating.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://buildmetric.org/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Estimating",
+              "item": "https://buildmetric.org/estimating.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I estimate construction costs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Multiply the square footage of your project by the regional cost per square foot for that project type. Add 15-20% contingency for unexpected issues. Use our Construction Cost Calculator for a baseline estimate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a Bill of Materials (BOM)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A BOM is a comprehensive list of all materials, parts, and quantities needed to build a project. It is critical for accurate estimating and procurement. Our Material Estimator generates a BOM."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What percentage of construction cost is labor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As a general rule, labor accounts for 60% of the total project cost, while materials account for 40%. This ratio shifts for high-end finishes (more materials) or structural work (more labor)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much contingency should I add to my budget?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Always add a 15% to 20% contingency fund to your baseline estimate. This covers unexpected issues like hidden water damage, permit delays, or material price increases."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I act as my own general contractor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Acting as your own GC saves the contractor's overhead and profit margin (15-25%), but requires managing all subcontractors, permits, and schedules. It is not recommended for complex projects unless you have significant experience."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between a hard cost and a soft cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hard costs are physical materials and labor (lumber, concrete, wages). Soft costs are non-physical expenses like permits, architectural fees, insurance, and financing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I save money on construction materials?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Buy in bulk from local suppliers, use standard sizes to avoid custom fabrication fees, and order everything in one batch to avoid dye lot mismatches. Use our Material Estimator for exact BOMs."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+
+  <body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-primary selection:text-white flex flex-col min-h-screen">
+
+    <!-- Sticky Glassmorphism Navbar -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+                    <img src="logo.png" alt="BuildMetric Logo" class="h-8 w-auto sm:h-10" onerror="this.style.display='none'">
+                    <div class="flex flex-col">
+                        <span class="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-slate-900 leading-none">
+                            Build<span class="text-primary">Metric</span>
+                        </span>
+                        <span class="text-[10px] text-slate-500 font-semibold tracking-widest uppercase mt-1 hidden sm:block">Engineering Calculators</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="calculators.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">All Tools</a>
+                    <a href="guides.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Guides</a>
+                    <a href="about.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">About</a>
+                    <a href="contact.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Contact</a>
+                </div>
+
+                <!-- Desktop CTA Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="calculators.html" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold text-white transition-all bg-slate-900 rounded-xl hover:bg-slate-800 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900">
+                        Open Tools
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1 sm:px-6">
+                <a href="calculators.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">All Tools</a>
+                <a href="guides.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">Guides</a>
+                <a href="about.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">About</a>
+                <a href="contact.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">Contact</a>
+                <div class="pt-4">
+                    <a href="calculators.html" class="w-full flex justify-center items-center px-4 py-3 text-base font-bold text-white bg-slate-900 rounded-xl hover:bg-slate-800 transition-all shadow-sm">
+                        Open Tools
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <main class="flex-grow">
+        
+        <!-- Breadcrumbs -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2">
+            <nav class="flex text-sm text-slate-500 font-medium" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="index.html" class="inline-flex items-center hover:text-primary transition-colors">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                            Home
+                        </a>
+                    </li>
+                    <li aria-current="page">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            <span class="ml-1 md:ml-2 text-slate-800 font-bold">Estimating</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-primary text-xs font-bold uppercase tracking-wider mb-6 border border-sky-100">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                Estimating Calculators
+            </div>
+            
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-slate-900 tracking-tight mb-4">
+                Master Your Project Budget with <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-sky-400">Precision</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                Calculate total construction costs, generate material BOMs, and estimate labor rates. Engineer-reviewed for US, UK, and AU markets.
+            </p>
+        </section>
+
+      <!-- Tools Grid (Estimating Tools) -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Tool 1: Construction Cost Calculator -->
+        <a href="construction-cost-calculator.html" class="group flex flex-col bg-white rounded-2xl border border-slate-200 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="p-3 bg-sky-100 text-primary rounded-xl group-hover:bg-primary group-hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3 class="text-lg font-heading font-bold text-slate-900 group-hover:text-primary transition-colors">Construction Cost Calculator</h3>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">Estimate total project cost including materials and labor. Adjust labor-to-material ratio based on project type.</p>
+        </a>
+
+        <!-- Tool 2: Material Estimator -->
+        <a href="material-estimator.html" class="group flex flex-col bg-white rounded-2xl border border-slate-200 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="p-3 bg-amber-100 text-amber-600 rounded-xl group-hover:bg-primary group-hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                </div>
+                <h3 class="text-lg font-heading font-bold text-slate-900 group-hover:text-primary transition-colors">Material Estimator</h3>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">Generate a precise Bill of Materials (BOM) for concrete, lumber, drywall, and paint in one tool.</p>
+        </a>
+
+        <!-- Placeholder for future tools -->
+        <!-- Tool 3: Roofing Calculator (Related) -->
+        <a href="roofing-calculator.html" class="group flex flex-col bg-white rounded-2xl border border-slate-200 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="p-3 bg-emerald-100 text-emerald-600 rounded-xl group-hover:bg-primary group-hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                </div>
+                <h3 class="text-lg font-heading font-bold text-slate-900 group-hover:text-primary transition-colors">Roofing Calculator</h3>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">Calculate total roof area and material quantities to feed into your cost estimate.</p>
+        </a>
+
+    </div>
+</section>
+
+<!-- Phase 4: SEO Content Part 1 -->
+<section class="bg-slate-50 border-t border-slate-200 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- AI Overview / Quick Answer Box -->
+        <div class="bg-white border-l-4 border-primary p-6 sm:p-8 rounded-r-2xl mb-12 shadow-sm">
+            <h2 class="text-xl font-heading font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                The Ultimate Guide to Construction Estimating
+            </h2>
+            <p class="text-slate-700 leading-relaxed font-medium text-lg">
+                Accurate estimating is the foundation of any successful construction project. Whether you are a general contractor bidding on a commercial build or a homeowner planning a renovation, you need to know the true cost. Our tools help you calculate <strong>Hard Costs</strong> (materials and labor) and generate detailed Bill of Materials (BOMs). <strong>Key Rule:</strong> Always add a 15-20% contingency fund for unexpected issues.
+            </p>
+        </div>
+
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            
+            <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6">Understanding Hard Costs vs. Soft Costs</h2>
+            <p>
+                Construction costs are broadly divided into two categories: hard costs and soft costs. Understanding the difference is critical for budgeting.
+            </p>
+            
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">1. Hard Costs</h3>
+            <p>
+                Hard costs are the physical, tangible components of the project. This includes:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 mb-6">
+                <li><strong>Materials:</strong> Lumber, concrete, steel, drywall, paint, fixtures.</li>
+                <li><strong>Labor:</strong> Wages for carpenters, electricians, plumbers, masons.</li>
+                <li><strong>Equipment:</strong> Rental of excavators, cranes, scaffolding, and mixers.</li>
+            </ul>
+            <p>
+                Hard costs are typically 70-80% of the total project cost. Our <a href="construction-cost-calculator.html" class="text-primary font-semibold hover:underline">Construction Cost Calculator</a> focuses on hard costs.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">2. Soft Costs</h3>
+            <p>
+                Soft costs are the non-physical expenses required to bring the project to completion:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 mb-6">
+                <li><strong>Design Fees:</strong> Architects, structural engineers, interior designers.</li>
+                <li><strong>Permits and Fees:</strong> Building permits, zoning fees, inspections.</li>
+                <li><strong>Insurance:</strong> Builder's risk, liability insurance.</li>
+                <li><strong>Financing:</strong> Interest on construction loans.</li>
+            </ul>
+            <p>
+                Soft costs can add 20-30% to your hard costs. Always account for them before starting a project.
+            </p>
+
+            <h2 class="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">The Bill of Materials (BOM)</h2>
+            <p>
+                A Bill of Materials (BOM) is a comprehensive list of all materials, parts, and quantities needed for a project. It is the foundation of accurate procurement and cost control.
+            </p>
+            <p>
+                A good BOM includes:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 mb-6">
+                <li>Material description (e.g., 2x4x8 SPF lumber)</li>
+                <li>Quantity (e.g., 150 pieces)</li>
+                <li>Unit cost (e.g., $4.50 per piece)</li>
+                <li>Total cost per line item</li>
+            </ul>
+            <p>
+                Our <a href="material-estimator.html" class="text-primary font-semibold hover:underline">Material Estimator</a> automatically generates a BOM for concrete, lumber, drywall, and paint in seconds.
+            </p>
+
+            <h2 class="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Global Bidding and Estimating Standards</h2>
+            <p>
+                Construction practices and cost structures vary around the world.
+            </p>
+            <p>
+                <strong>USA:</strong> Bids are typically structured using CSI MasterFormat divisions. Labor is quoted hourly (with union rates in many cities). Most contractors add 10-20% overhead and profit (O&P) to their bids.
+            </p>
+            <p>
+                <strong>UK:</strong> Pricing is often done using SMM (Standard Method of Measurement) or NRM (New Rules of Measurement). Day rates for trades are common for small projects.
+            </p>
+            <p>
+                <strong>Australia:</strong> Builders use a "Cost Plus" or "Fixed Price" contract structure. The Master Builders Association provides regional cost guides.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+  <!-- Phase 5: SEO Content Part 2 & Related Guides -->
+<section class="bg-white border-t border-slate-200 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6 mb-16">
+            
+            <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6">The 15% Contingency Rule: Why You Need It</h2>
+            <p>
+                The single biggest mistake in construction estimating is budgeting to the penny. Construction is unpredictable. You will encounter hidden water damage, termite rot, unexpected rock during excavation, or sudden price spikes in lumber or steel.
+            </p>
+            <p>
+                Professional estimators always include a <strong>contingency fund</strong> in their budget. For most residential projects, this should be <strong>15% of the total project cost</strong>. For complex or older homes, it can be 20% or more.
+            </p>
+            <p>
+                If you don't use the contingency, great! It becomes a savings buffer. If you do, your project doesn't grind to a halt waiting for more financing.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">Cost-Saving Strategies</h3>
+            <p>
+                There are legitimate ways to reduce costs without sacrificing quality:
+            </p>
+            <ul class="list-disc pl-6 space-y-3 mb-6">
+                <li><strong>Use Standard Sizes:</strong> Custom windows, doors, and cabinets cost significantly more than standard sizes. Design your project around standard dimensions.</li>
+                <li><strong>Act as Your Own GC:</strong> Managing the project yourself saves the General Contractor's overhead and profit margin (15-25%). But it requires significant time and coordination.</li>
+                <li><strong>Buy in Bulk:</strong> Order materials like concrete, gravel, and lumber by the truckload rather than in small bags or bundles. Our <a href="material-estimator.html" class="text-primary font-semibold hover:underline">Material Estimator</a> provides exact quantities for bulk ordering.</li>
+                <li><strong>Do the Demolition Yourself:</strong> Demolition is labor-intensive but requires no special skills. Doing it yourself can save hundreds or thousands of dollars.</li>
+            </ul>
+
+            <h2 class="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">How to Read a Contractor's Bid</h2>
+            <p>
+                When comparing contractor bids, do not just look at the bottom line. Look at the "scope of work."
+            </p>
+            <p>
+                A bid should clearly state:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 mb-6">
+                <li>What is included (and what is NOT included).</li>
+                <li>Brand and quality of materials.</li>
+                <li>Timeline and payment schedule.</li>
+                <li>Warranty and insurance details.</li>
+            </ul>
+            <p>
+                If one bid is significantly lower than the others, be suspicious. The contractor may have omitted critical items or plan to use inferior materials. Our <a href="construction-cost-calculator.html" class="text-primary font-semibold hover:underline">Construction Cost Calculator</a> gives you a baseline to evaluate bids.
+            </p>
+
+            <h2 class="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Financing Your Project</h2>
+            <p>
+                Large projects are rarely paid in cash. Common financing options include:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 mb-6">
+                <li><strong>Home Equity Loans:</strong> Borrow against the equity in your home. Lower interest rates than personal loans.</li>
+                <li><strong>Cash-Out Refinancing:</strong> Refinance your mortgage for a higher amount and take the difference in cash.</li>
+                <li><strong>Personal Lines of Credit:</strong> Flexible but higher interest rates.</li>
+            </ul>
+            <p>
+                Always calculate the total interest paid over the life of the loan and add it to the project cost. A $100k project financed at 6% over 10 years will cost significantly more than $100k.
+            </p>
+
+        </div>
+
+        <!-- Related Guides Section -->
+        <div class="border-t border-slate-200 pt-12">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-heading font-extrabold text-slate-900 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        Estimating Guides & Tutorials
+                    </h2>
+                    <p class="text-slate-600 mt-2 text-base font-medium">In-depth articles on cost estimation, BOMs, and project budgeting.</p>
+                </div>
+                <a href="guides.html" class="text-sm font-bold text-primary hover:text-sky-600 flex items-center gap-1 transition-colors">
+                    View all guides
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                
+                <!-- Guide 1 -->
+                <a href="guides/reading-architectural-drawings.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-600 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">Reading Architectural Drawings for Estimators</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Estimating • 20 min read</p>
+                    </div>
+                </a>
+                
+                <!-- Guide 2 -->
+                <a href="guides/concrete-waste-allowance.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-slate-600 to-slate-800 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">How Much Waste to Add to a Concrete Order?</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Concrete • 8 min read</p>
+                    </div>
+                </a>
+                
+                <!-- Guide 3 -->
+                <a href="guides/paint-coverage-myths.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">Paint Coverage Myths: Why 1 Gallon Doesn't Cover 350 Sq Ft</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Paint • 6 min read</p>
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+
+    </div>
+</section>
+
+  <!-- Phase 6: FAQs & E-E-A-T Trust Box -->
+<section class="bg-slate-50 border-t border-slate-200 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- FAQ Section -->
+        <div class="text-center mb-12">
+            <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">Frequently Asked Questions</h2>
+            <h3 class="text-3xl md:text-4xl font-heading font-extrabold text-slate-900">Construction Estimating FAQs</h3>
+            <p class="text-slate-600 mt-4 text-lg font-medium">Direct answers to common questions about budgeting, BOMs, and construction costs.</p>
+        </div>
+
+        <div class="space-y-4">
+            
+            <!-- FAQ 1 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">01</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How do I estimate construction costs?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    Multiply the square footage of your project by the regional cost per square foot for that project type. Add a <strong>15-20% contingency</strong> for unexpected issues. Use our <a href="construction-cost-calculator.html" class="text-primary font-semibold hover:underline">Construction Cost Calculator</a> for a baseline estimate.
+                </div>
+            </details>
+
+            <!-- FAQ 2 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">02</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">What is a Bill of Materials (BOM)?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    A BOM is a comprehensive list of all materials, parts, and quantities needed to build a project. It is critical for accurate estimating and procurement. Our <a href="material-estimator.html" class="text-primary font-semibold hover:underline">Material Estimator</a> generates a BOM.
+                </div>
+            </details>
+
+            <!-- FAQ 3 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">03</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">What percentage of construction cost is labor?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    As a general rule, labor accounts for <strong>60% of the total project cost</strong>, while materials account for 40%. This ratio shifts for high-end finishes (more materials) or structural work (more labor).
+                </div>
+            </details>
+
+            <!-- FAQ 4 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">04</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How much contingency should I add to my budget?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    Always add a <strong>15% to 20% contingency fund</strong> to your baseline estimate. This covers unexpected issues like hidden water damage, permit delays, or material price increases.
+                </div>
+            </details>
+
+            <!-- FAQ 5 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">05</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">Should I act as my own general contractor?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    Acting as your own GC saves the contractor's overhead and profit margin (15-25%), but requires managing all subcontractors, permits, and schedules. It is not recommended for complex projects unless you have significant experience.
+                </div>
+            </details>
+
+            <!-- FAQ 6 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">06</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">What is the difference between a hard cost and a soft cost?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    <strong>Hard costs</strong> are physical materials and labor (lumber, concrete, wages). <strong>Soft costs</strong> are non-physical expenses like permits, architectural fees, insurance, and financing.
+                </div>
+            </details>
+
+            <!-- FAQ 7 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">07</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How can I save money on construction materials?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    Buy in bulk from local suppliers, use standard sizes to avoid custom fabrication fees, and order everything in one batch to avoid dye lot mismatches. Use our <a href="material-estimator.html" class="text-primary font-semibold hover:underline">Material Estimator</a> for exact BOMs.
+                </div>
+            </details>
+
+        </div>
+
+        <!-- E-E-A-T Trust Box -->
+        <div class="mt-12 bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div class="flex items-start gap-5">
+                <div class="p-3 bg-primary/10 text-primary rounded-2xl flex-shrink-0">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </div>
+                <div>
+                    <h2 class="text-xl font-heading font-bold text-slate-900 mb-2">Engineer-Reviewed Accuracy</h2>
+                    <p class="text-slate-600 text-sm leading-relaxed max-w-2xl font-medium mb-4">
+                        Our estimating tools are built on regional average pricing data and standard construction costing formulas. We align with CSI MasterFormat (US), NRM (UK), and AIQS (Australia) practices to give you accurate, market-relevant estimates.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <a href="methodology.html" class="text-sm font-bold text-primary hover:text-sky-700 hover:underline flex items-center gap-1.5 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Our Methodology
+                        </a>
+                        <a href="contact.html" class="text-sm font-bold text-slate-500 hover:text-slate-900 hover:underline flex items-center gap-1.5 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                            Report an Error
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+     </main> <!-- Closing the main tag -->
+
+    <!-- Compact & Clean 4-Column Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 pt-12 pb-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+                
+                <!-- Brand Col -->
+                <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                    <a href="index.html" class="flex items-center gap-2 mb-3">
+                        <span class="font-heading font-extrabold text-xl text-white">Build<span class="text-primary">Metric</span></span>
+                    </a>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4 pr-4">
+                        Engineer-reviewed construction calculators for the US, UK, and Australia.
+                    </p>
+                    <a href="mailto:contact@buildmetric.org" class="text-sm font-medium text-primary hover:text-sky-400 transition-colors flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        contact@buildmetric.org
+                    </a>
+                </div>
+
+                <!-- Calculators -->
+                <div>
+                    <h3 class="font-heading font-bold text-white mb-4 text-sm">Calculators</h3>
+                    <ul class="space-y-2">
+                        <li><a href="roof-pitch-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Roof Pitch</a></li>
+                        <li><a href="concrete-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Concrete Volume</a></li>
+                        <li><a href="framing-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Stud Count</a></li>
+                        <li><a href="paint-coverage-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Paint Coverage</a></li>
+                        <li><a href="calculators.html" class="text-sm font-bold text-primary hover:text-sky-400 transition-colors">All Tools &rarr;</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h3 class="font-heading font-bold text-white mb-4 text-sm">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-sm text-slate-400 hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="guides.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Guides</a></li>
+                        <li><a href="contact.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Contact</a></li>
+                        <li><a href="sitemap.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h3 class="font-heading font-bold text-white mb-4 text-sm">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="privacy-policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Terms of Use</a></li>
+                        <li><a href="disclaimer.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Disclaimer</a></li>
+                        <li><a href="cookie-policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-3">
+                <p class="text-xs text-slate-500">
+                    &copy; <span class="current-year">2026</span> BuildMetric.org. All rights reserved.
+                </p>
+                <p class="text-xs text-slate-500 font-medium">
+                    Engineered for US, UK & AU Standards.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            }
+            
+            // Dynamic Year
+            document.querySelectorAll('.current-year').forEach(el => el.textContent = new Date().getFullYear());
+        });
+    </script>
+
+</body>
+</html>
