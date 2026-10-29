@@ -404,6 +404,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+  <loc>https://buildmetric.org/concrete-bag-calculator.html</loc>
+  <lastmod>2026-10-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
 
   <!-- === GUIDES (6) === -->
   <url>
@@ -442,11 +448,5 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-  <loc>https://buildmetric.org/concrete-bag-calculator.html</loc>
-  <lastmod>2026-10-29</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
   
 </urlset>
