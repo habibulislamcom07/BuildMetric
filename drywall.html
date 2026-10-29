@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Drywall Calculators | Sheets, Mud & Tape Estimators (US, UK, AU)</title>
+    <meta name="title" content="Drywall Calculators | Sheets, Mud & Tape Estimators (US, UK, AU)">
+    <meta name="description" content="Free, engineer-reviewed drywall calculators. Calculate drywall sheets, joint compound (mud), tape, and screws for US, UK, and AU projects.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://buildmetric.org/drywall.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://buildmetric.org/drywall.html">
+    <meta property="og:title" content="Drywall Calculators | Sheets, Mud & Tape Estimators">
+    <meta property="og:description" content="Free, engineer-reviewed drywall calculators for US, UK, and AU standards.">
+    <meta property="og:image" content="https://buildmetric.org/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://buildmetric.org/drywall.html">
+    <meta property="twitter:title" content="Drywall Calculators | Sheets, Mud & Tape Estimators">
+    <meta property="twitter:description" content="Free, engineer-reviewed drywall calculators for US, UK, and AU standards.">
+    <meta property="twitter:image" content="https://buildmetric.org/logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9', // Sky Blue
+                        slate: {
+                            900: '#0f172a', // Dark Slate
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- JSON-LD Schema: CollectionPage & Breadcrumbs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://buildmetric.org/drywall.html#webpage",
+          "url": "https://buildmetric.org/drywall.html",
+          "name": "Drywall Calculators",
+          "description": "Free, engineer-reviewed drywall calculators for sheets, joint compound, tape, and screws."
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://buildmetric.org/drywall.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://buildmetric.org/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Drywall",
+              "item": "https://buildmetric.org/drywall.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many drywall sheets do I need for a room?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Calculate the total square footage of your walls and ceiling, subtract the area of doors and windows, and divide by the square footage of one sheet (a standard 4x8 sheet is 32 sq ft). Add 10% for waste. Use our Drywall Calculator for an exact count."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much joint compound (mud) do I need per sheet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As a general rule, you will use about 1 gallon of joint compound for every 100 square feet of drywall. This includes taping, filling, and the final skim coat. Use our Drywall Finishing Calculator for precise estimates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the standard thickness of drywall?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The most common residential thickness is 1/2 inch. Use 5/8 inch for ceilings (for extra sag resistance) and fire-rated walls, and 1/4 inch for curved surfaces. In the UK and Australia, plasterboard is typically 12.5mm thick."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many screws do I need per sheet of drywall?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A standard 4x8 sheet requires about 32 screws if studs are 16 inches on center, or 24 screws if studs are 24 inches on center. Always use coarse-thread screws for wood studs and fine-thread screws for metal studs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to tape drywall joints?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Taping reinforces the joints and prevents them from cracking as the house settles. Apply joint compound, embed the tape, and then apply two or three thin coats of mud over it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to install drywall?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A professional crew can hang and finish an average room in 2-3 days. The process includes hanging the sheets, taping, applying three coats of mud, sanding, and priming."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between plasterboard and drywall?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They are essentially the same thing. Drywall is the North American term, while plasterboard is used in the UK and Australia. Both consist of a gypsum core sandwiched between layers of paper."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+
+  <body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-primary selection:text-white flex flex-col min-h-screen">
+
+    <!-- Sticky Glassmorphism Navbar -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+                    <img src="logo.png" alt="BuildMetric Logo" class="h-8 w-auto sm:h-10" onerror="this.style.display='none'">
+                    <div class="flex flex-col">
+                        <span class="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-slate-900 leading-none">
+                            Build<span class="text-primary">Metric</span>
+                        </span>
+                        <span class="text-[10px] text-slate-500 font-semibold tracking-widest uppercase mt-1 hidden sm:block">Engineering Calculators</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="calculators.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">All Tools</a>
+                    <a href="guides.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Guides</a>
+                    <a href="about.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">About</a>
+                    <a href="contact.html" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Contact</a>
+                </div>
+
+                <!-- Desktop CTA Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="calculators.html" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold text-white transition-all bg-slate-900 rounded-xl hover:bg-slate-800 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900">
+                        Open Tools
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1 sm:px-6">
+                <a href="calculators.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">All Tools</a>
+                <a href="guides.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">Guides</a>
+                <a href="about.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">About</a>
+                <a href="contact.html" class="block px-3 py-3 rounded-lg text-base font-semibold text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors">Contact</a>
+                <div class="pt-4">
+                    <a href="calculators.html" class="w-full flex justify-center items-center px-4 py-3 text-base font-bold text-white bg-slate-900 rounded-xl hover:bg-slate-800 transition-all shadow-sm">
+                        Open Tools
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <main class="flex-grow">
+        
+        <!-- Breadcrumbs -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2">
+            <nav class="flex text-sm text-slate-500 font-medium" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="index.html" class="inline-flex items-center hover:text-primary transition-colors">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                            Home
+                        </a>
+                    </li>
+                    <li aria-current="page">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            <span class="ml-1 md:ml-2 text-slate-800 font-bold">Drywall</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-primary text-xs font-bold uppercase tracking-wider mb-6 border border-sky-100">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path></svg>
+                Drywall Calculators
+            </div>
+            
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-slate-900 tracking-tight mb-4">
+                Finish Your Walls with <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-sky-400">Precision</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                Calculate exact drywall sheets, joint compound, tape, and screws. Engineer-reviewed for US, UK, and AU standards.
+            </p>
+        </section>
+
+      <!-- Tools Grid (Drywall Tools) -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Tool 1: Drywall Calculator -->
+        <a href="drywall-calculator.html" class="group flex flex-col bg-white rounded-2xl border border-slate-200 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="p-3 bg-sky-100 text-primary rounded-xl group-hover:bg-primary group-hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path></svg>
+                </div>
+                <h3 class="text-lg font-heading font-bold text-slate-900 group-hover:text-primary transition-colors">Drywall Calculator</h3>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">Calculate exact drywall sheets, joint compound (mud), and tape required for your walls and ceilings.</p>
+        </a>
+
+        <!-- Tool 2: Drywall Finishing -->
+        <a href="drywall-finishing-calculator.html" class="group flex flex-col bg-white rounded-2xl border border-slate-200 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="p-3 bg-amber-100 text-amber-600 rounded-xl group-hover:bg-primary group-hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                </div>
+                <h3 class="text-lg font-heading font-bold text-slate-900 group-hover:text-primary transition-colors">Drywall Finishing Calculator</h3>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">Calculate the exact amount of joint compound, tape, and screws needed to finish your drywall.</p>
+        </a>
+
+        <!-- Tool 3: Drop Ceiling -->
+        <a href="drop-ceiling-calculator.html" class="group flex flex-col bg-white rounded-2xl border border-slate-200 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="p-3 bg-emerald-100 text-emerald-600 rounded-xl group-hover:bg-primary group-hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                </div>
+                <h3 class="text-lg font-heading font-bold text-slate-900 group-hover:text-primary transition-colors">Drop Ceiling Calculator</h3>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">Calculate suspended ceiling tiles, main tees, cross tees, and wall angles for basements.</p>
+        </a>
+
+    </div>
+</section>
+
+  <!-- Phase 4: SEO Content Part 1 -->
+<section class="bg-slate-50 border-t border-slate-200 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- AI Overview / Quick Answer Box -->
+        <div class="bg-white border-l-4 border-primary p-6 sm:p-8 rounded-r-2xl mb-12 shadow-sm">
+            <h2 class="text-xl font-heading font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                The Ultimate Guide to Drywall Estimation
+            </h2>
+            <p class="text-slate-700 leading-relaxed font-medium text-lg">
+                Drywall (plasterboard) installation is one of the most visible parts of any renovation. A poorly estimated job leads to visible seams, cracked joints, and wasted material. Our calculators help you determine the exact number of 4x8 or 4x12 sheets, the gallons of joint compound, and the linear feet of tape. <strong>Pro Tip:</strong> Always add 10% waste for cuts, and use 5/8" thick drywall on ceilings for sag resistance.
+            </p>
+        </div>
+
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+            
+            <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6">The Anatomy of Drywall Installation</h2>
+            <p>
+                Drywall is a simple material—a gypsum core sandwiched between layers of heavy paper—but its installation is a multi-step process that requires precision at every stage.
+            </p>
+            
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">1. Hanging the Sheets</h3>
+            <p>
+                The goal is to minimize the number of joints (seams). Long sheets (like 12-foot) reduce butt joints, creating a smoother finish, but they are heavier and harder to maneuver. Always hang the ceiling first, then the walls, to provide a "lift" for the top edge of the wall boards.
+            </p>
+            <p>
+                Always use the correct screws: coarse-thread for wood studs, fine-thread for metal studs. Screws should be driven just below the surface of the paper, without breaking it. Use our <a href="drywall-calculator.html" class="text-primary font-semibold hover:underline">Drywall Calculator</a> to find exact sheet and screw counts.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">2. Taping and Mudding (The 3-Coat System)</h3>
+            <p>
+                This is where the art comes in. Joint compound (mud) and paper tape are used to hide the seams. The professional standard is a 3-coat system:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 mb-6">
+                <li><strong>First Coat (Tape Coat):</strong> Embed the paper tape into a bed of mud. This is the structural bond.</li>
+                <li><strong>Second Coat (Fill Coat):</strong> A wider layer of mud is applied over the tape to fill in the recess (the tapered edge of the sheet).</li>
+                <li><strong>Third Coat (Finish Coat):</strong> A very thin, wide layer of mud is applied to feather the edges. This requires a 10-inch or 12-inch taping knife.</li>
+            </ul>
+            <p>
+                Our <a href="drywall-finishing-calculator.html" class="text-primary font-semibold hover:underline">Drywall Finishing Calculator</a> gives you the exact gallons of mud and rolls of tape required for this 3-coat process.
+            </p>
+
+            <h2 class="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Understanding Drywall Thickness</h2>
+            <p>
+                Drywall is sold in different thicknesses, each with specific uses:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 mb-6">
+                <li><strong>1/4 inch (6mm):</strong> Used for curved surfaces (like arches) or to cover old walls (skim coating). Very fragile.</li>
+                <li><strong>1/2 inch (12.5mm):</strong> The standard for residential walls. It is easy to cut and hang but can sag if used on ceilings with 24" O.C. joist spacing.</li>
+                <li><strong>5/8 inch (15mm):</strong> Used for ceilings (for sag resistance) and fire-rated walls (like between a garage and a house). It is heavier and requires more effort to install.</li>
+            </ul>
+
+            <h2 class="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Global Standards: US vs. UK vs. Australia</h2>
+            <p>
+                If you are building internationally, you must know the standard sheet sizes.
+            </p>
+            <p>
+                <strong>USA:</strong> Sheets are typically 4 feet wide and 8, 10, or 12 feet long. Thicknesses are in inches (1/2", 5/8").
+            </p>
+            <p>
+                <strong>UK & Australia:</strong> Plasterboard is sold in metric sizes, most commonly <strong>1200mm wide x 2400mm long</strong> (which is 2.88 square meters). Thickness is 12.5mm for standard walls and 15mm for fire-rated.
+            </p>
+            <p>
+                Our calculators allow you to toggle between Imperial (sq ft) and Metric (sq m) so you can work with whichever standard is local.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+ <!-- Phase 5: SEO Content Part 2 & Related Guides -->
+<section class="bg-white border-t border-slate-200 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6 mb-16">
+            
+            <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6">Specialty Drywall: Moisture & Fire Resistance</h2>
+            <p>
+                Not all drywall is created equal. In certain areas of the home, standard white drywall will fail. You must use specialized boards.
+            </p>
+            
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">1. Moisture-Resistant Drywall (Greenboard)</h3>
+            <p>
+                In bathrooms and kitchens, standard drywall will absorb moisture and grow mold. Moisture-resistant drywall (often called "greenboard" due to its green paper face) has a wax-like additive in the gypsum core and a water-resistant paper. 
+            </p>
+            <p>
+                <strong>Note:</strong> Even greenboard is not waterproof. In high-moisture areas like inside a shower, you must use cement board (backer board) or a waterproof membrane over the drywall. For calculating tile over cement board, use our <a href="tile-calculator.html" class="text-primary font-semibold hover:underline">Tile Calculator</a>.
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-slate-900 mt-8 mb-4">2. Fire-Rated Drywall (Type X)</h3>
+            <p>
+                Type X drywall has a special gypsum core with glass fibers that makes it highly fire-resistant. It is required by code in certain areas:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 mb-6">
+                <li>Between an attached garage and the living space.</li>
+                <li>On the ceiling of a basement (if there's living space above).</li>
+                <li>In multi-family dwellings (apartments) to separate units.</li>
+            </ul>
+            <p>
+                Type X is typically 5/8 inch thick and comes with a fire rating (e.g., 1-hour or 2-hour). Our <a href="drywall-calculator.html" class="text-primary font-semibold hover:underline">Drywall Calculator</a> supports both standard and 5/8" sheets.
+            </p>
+
+            <h2 class="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">The Art of Sanding and Priming</h2>
+            <p>
+                After the final coat of mud is dry, you must sand the walls. The goal is not to sand off the mud, but to feather the edges so they blend into the paper.
+            </p>
+            <p>
+                Use a pole sander with 120-grit or 150-grit paper. For the final pass, use a bright light angled against the wall to highlight any ridges or scratches. Once sanded, you must apply a <strong>PVA primer</strong>. Drywall paper is highly porous and will soak up paint unevenly if not primed. Priming ensures a smooth, even finish.
+            </p>
+            <p>
+                For paint quantity estimates, use our <a href="paint-coverage-calculator.html" class="text-primary font-semibold hover:underline">Paint Coverage Calculator</a>.
+            </p>
+
+        </div>
+
+        <!-- Related Guides Section -->
+        <div class="border-t border-slate-200 pt-12">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-heading font-extrabold text-slate-900 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        Drywall Guides & Tutorials
+                    </h2>
+                    <p class="text-slate-600 mt-2 text-base font-medium">In-depth articles on drywall installation, finishing, and material selection.</p>
+                </div>
+                <a href="guides.html" class="text-sm font-bold text-primary hover:text-sky-600 flex items-center gap-1 transition-colors">
+                    View all guides
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                
+                <!-- Guide 1 -->
+                <a href="guides/reading-architectural-drawings.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-600 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">Reading Architectural Drawings for Estimators</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Estimating • 20 min read</p>
+                    </div>
+                </a>
+                
+                <!-- Guide 2 -->
+                <a href="guides/stud-spacing-by-code.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">Stud Spacing by Code: 16" vs 24" O.C.</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Framing • 10 min read</p>
+                    </div>
+                </a>
+                
+                <!-- Guide 3 -->
+                <a href="guides/paint-coverage-myths.html" class="group flex items-center gap-4 p-3 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 group-hover:text-primary transition-colors text-sm leading-snug">Paint Coverage Myths: Why 1 Gallon Doesn't Cover 350 Sq Ft</h3>
+                        <p class="text-xs text-slate-500 mt-1 font-medium">Paint • 6 min read</p>
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+
+    </div>
+</section>
+
+ <!-- Phase 6: FAQs & E-E-A-T Trust Box -->
+<section class="bg-slate-50 border-t border-slate-200 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- FAQ Section -->
+        <div class="text-center mb-12">
+            <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">Frequently Asked Questions</h2>
+            <h3 class="text-3xl md:text-4xl font-heading font-extrabold text-slate-900">Drywall Calculator FAQs</h3>
+            <p class="text-slate-600 mt-4 text-lg font-medium">Direct answers to common questions about drywall sheets, mud, and installation.</p>
+        </div>
+
+        <div class="space-y-4">
+            
+            <!-- FAQ 1 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">01</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How many drywall sheets do I need for a room?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    Calculate the total square footage of your walls and ceiling, subtract the area of doors and windows, and divide by the square footage of one sheet (a standard 4x8 sheet is 32 sq ft). Add 10% for waste. Use our <a href="drywall-calculator.html" class="text-primary font-semibold hover:underline">Drywall Calculator</a> for an exact count.
+                </div>
+            </details>
+
+            <!-- FAQ 2 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">02</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How much joint compound (mud) do I need per sheet?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    As a general rule, you will use about <strong>1 gallon of joint compound for every 100 square feet of drywall</strong>. This includes taping, filling, and the final skim coat. Use our <a href="drywall-finishing-calculator.html" class="text-primary font-semibold hover:underline">Drywall Finishing Calculator</a> for precise estimates.
+                </div>
+            </details>
+
+            <!-- FAQ 3 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">03</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">What is the standard thickness of drywall?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    The most common residential thickness is <strong>1/2 inch</strong>. Use 5/8 inch for ceilings (for extra sag resistance) and fire-rated walls, and 1/4 inch for curved surfaces. In the UK and Australia, plasterboard is typically 12.5mm thick.
+                </div>
+            </details>
+
+            <!-- FAQ 4 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">04</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How many screws do I need per sheet of drywall?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    A standard 4x8 sheet requires about <strong>32 screws</strong> if studs are 16 inches on center, or 24 screws if studs are 24 inches on center. Always use coarse-thread screws for wood studs and fine-thread screws for metal studs.
+                </div>
+            </details>
+
+            <!-- FAQ 5 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">05</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">Do I need to tape drywall joints?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    Yes. Taping reinforces the joints and prevents them from cracking as the house settles. Apply joint compound, embed the tape, and then apply two or three thin coats of mud over it. Our <a href="drywall-finishing-calculator.html" class="text-primary font-semibold hover:underline">Drywall Finishing Calculator</a> estimates tape and mud.
+                </div>
+            </details>
+
+            <!-- FAQ 6 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">06</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">How long does it take to install drywall?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    A professional crew can hang and finish an average room in <strong>2-3 days</strong>. The process includes hanging the sheets, taping, applying three coats of mud, sanding, and priming. DIY installations often take longer due to the learning curve.
+                </div>
+            </details>
+
+            <!-- FAQ 7 -->
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:border-primary open:ring-1 open:ring-primary">
+                <summary class="flex items-center gap-4 p-5 md:p-6 cursor-pointer hover:bg-slate-50/50 transition-colors">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-50 text-primary font-mono text-xs font-bold group-open:bg-primary group-open:text-white transition-colors">07</span>
+                    <h4 class="flex-1 font-heading font-bold text-slate-900 text-base md:text-lg">What is the difference between plasterboard and drywall?</h4>
+                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-slate-400 group-open:text-primary group-open:rotate-45 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-5 md:px-6 pb-6 pt-2 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 ml-12 md:ml-14">
+                    They are essentially the same thing. <strong>Drywall</strong> is the North American term, while <strong>plasterboard</strong> is used in the UK and Australia. Both consist of a gypsum core sandwiched between layers of paper. Our tools support both US and metric sizing.
+                </div>
+            </details>
+
+        </div>
+
+        <!-- E-E-A-T Trust Box -->
+        <div class="mt-12 bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div class="flex items-start gap-5">
+                <div class="p-3 bg-primary/10 text-primary rounded-2xl flex-shrink-0">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </div>
+                <div>
+                    <h2 class="text-xl font-heading font-bold text-slate-900 mb-2">Engineer-Reviewed Accuracy</h2>
+                    <p class="text-slate-600 text-sm leading-relaxed max-w-2xl font-medium mb-4">
+                        Our drywall tools are built on verified engineering formulas and aligned with ASTM C840 (US), BS EN 520 (UK), and AS/NZS 2589 (Australia) standards. We prioritize accuracy so your walls are smooth, safe, and code-compliant.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <a href="methodology.html" class="text-sm font-bold text-primary hover:text-sky-700 hover:underline flex items-center gap-1.5 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Our Methodology
+                        </a>
+                        <a href="contact.html" class="text-sm font-bold text-slate-500 hover:text-slate-900 hover:underline flex items-center gap-1.5 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                            Report an Error
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+      </main> <!-- Closing the main tag -->
+
+    <!-- Compact & Clean 4-Column Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 pt-12 pb-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+                
+                <!-- Brand Col -->
+                <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                    <a href="index.html" class="flex items-center gap-2 mb-3">
+                        <span class="font-heading font-extrabold text-xl text-white">Build<span class="text-primary">Metric</span></span>
+                    </a>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4 pr-4">
+                        Engineer-reviewed construction calculators for the US, UK, and Australia.
+                    </p>
+                    <a href="mailto:contact@buildmetric.org" class="text-sm font-medium text-primary hover:text-sky-400 transition-colors flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        contact@buildmetric.org
+                    </a>
+                </div>
+
+                <!-- Calculators -->
+                <div>
+                    <h3 class="font-heading font-bold text-white mb-4 text-sm">Calculators</h3>
+                    <ul class="space-y-2">
+                        <li><a href="roof-pitch-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Roof Pitch</a></li>
+                        <li><a href="concrete-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Concrete Volume</a></li>
+                        <li><a href="framing-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Stud Count</a></li>
+                        <li><a href="paint-coverage-calculator.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Paint Coverage</a></li>
+                        <li><a href="calculators.html" class="text-sm font-bold text-primary hover:text-sky-400 transition-colors">All Tools &rarr;</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h3 class="font-heading font-bold text-white mb-4 text-sm">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-sm text-slate-400 hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="guides.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Guides</a></li>
+                        <li><a href="contact.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Contact</a></li>
+                        <li><a href="sitemap.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h3 class="font-heading font-bold text-white mb-4 text-sm">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="privacy-policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Terms of Use</a></li>
+                        <li><a href="disclaimer.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Disclaimer</a></li>
+                        <li><a href="cookie-policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-3">
+                <p class="text-xs text-slate-500">
+                    &copy; <span class="current-year">2026</span> BuildMetric.org. All rights reserved.
+                </p>
+                <p class="text-xs text-slate-500 font-medium">
+                    Engineered for US, UK & AU Standards.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            }
+            
+            // Dynamic Year
+            document.querySelectorAll('.current-year').forEach(el => el.textContent = new Date().getFullYear());
+        });
+    </script>
+
+</body>
+</html>
