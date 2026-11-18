@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Flooring Calculator - Estimate Laminate, Hardwood & Vinyl (US/UK/AU)</title>
+    <meta name="description" content="Free flooring calculator to estimate exactly how much laminate, hardwood, or vinyl flooring you need. Includes 5% to 15% waste factor, box calculator, and cost estimate for US, UK, and AU markets.">
+    <meta name="keywords" content="flooring calculator, how much flooring do i need, laminate flooring calculator, hardwood flooring estimator, box calculator, flooring cost per square foot">
+    <link rel="canonical" href="https://buildmetric.org/flooring-calculator.html">
+
+    <!-- Tailwind CSS (Aapke existing setup ke mutabik) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- SEO: WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Flooring Calculator",
+      "url": "https://buildmetric.org/flooring-calculator.html",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "All",
+      "description": "Calculate the exact amount of laminate, hardwood, or vinyl flooring needed for your room.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
+
+    <!-- HEADER (Aap apna existing Header yahan daal sakte hain) -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-blue-600 tracking-tight">BuildMetric</a>
+            <nav class="hidden md:flex space-x-4 text-sm font-medium text-gray-600">
+                <a href="calculators.html" class="hover:text-blue-600">All Calculators</a>
+                <a href="guides.html" class="hover:text-blue-600">Guides</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT START -->
+    <main class="max-w-4xl mx-auto px-4 py-8 flex-grow">
+
+      <!-- 1. PAGE HEADING & INTRO -->
+<div class="text-center mb-8">
+    <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">Flooring Calculator (US, UK, AU)</h1>
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Estimate exactly how much laminate, hardwood, vinyl, or tile flooring you need for your room. This professional calculator automatically includes a waste factor and calculates the total number of boxes required based on standard US, UK, and AU packaging sizes.
+    </p>
+</div>
+
+<!-- 2. MAIN CALCULATOR UI -->
+<div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden mb-12">
+    <div class="p-6 md:p-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Input 1: Length -->
+            <div>
+                <label for="roomLength" class="block text-sm font-semibold text-gray-700 mb-2">Room Length</label>
+                <div class="relative">
+                    <input type="number" id="roomLength" class="w-full border border-gray-300 rounded-lg p-3 text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition" placeholder="e.g., 12" min="1" step="any">
+                </div>
+            </div>
+
+            <!-- Input 2: Width -->
+            <div>
+                <label for="roomWidth" class="block text-sm font-semibold text-gray-700 mb-2">Room Width</label>
+                <div class="relative">
+                    <input type="number" id="roomWidth" class="w-full border border-gray-300 rounded-lg p-3 text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition" placeholder="e.g., 10" min="1" step="any">
+                </div>
+            </div>
+
+            <!-- Input 3: Measurement Unit -->
+            <div>
+                <label for="unitSystem" class="block text-sm font-semibold text-gray-700 mb-2">Measurement Unit</label>
+                <select id="unitSystem" class="w-full border border-gray-300 rounded-lg p-3 text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition appearance-none bg-white">
+                    <option value="ft">Feet (US / UK Imperial)</option>
+                    <option value="m">Meters (UK / AU Metric)</option>
+                </select>
+            </div>
+
+            <!-- Input 4: Waste Factor -->
+            <div>
+                <label for="wasteFactor" class="block text-sm font-semibold text-gray-700 mb-2">Waste Factor (Recommended)</label>
+                <select id="wasteFactor" class="w-full border border-gray-300 rounded-lg p-3 text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition appearance-none bg-white">
+                    <option value="5">5% - Standard straight installation</option>
+                    <option value="10">10% - Diagonal or complex room shape</option>
+                    <option value="15">15% - Herringbone or chevron pattern</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Calculate Button -->
+        <div class="mt-8">
+            <button onclick="calculateFlooring()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg py-4 rounded-lg shadow-md transition duration-200 flex justify-center items-center">
+                Calculate Flooring Needs
+            </button>
+        </div>
+
+        <!-- Error Message Box (Hidden by default) -->
+        <div id="errorBox" class="hidden mt-4 bg-red-50 text-red-700 p-4 rounded-lg border border-red-200 text-sm font-medium"></div>
+
+        <!-- RESULT BOX (Hidden by default) -->
+        <div id="resultBox" class="hidden mt-8 bg-gray-50 border border-gray-200 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-gray-900 border-b border-gray-300 pb-3 mb-4">Your Flooring Estimate</h3>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+                    <p class="text-sm text-gray-500 font-medium mb-1">Total Area (with waste)</p>
+                    <p class="text-2xl font-black text-blue-700" id="outArea">0</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+                    <p class="text-sm text-gray-500 font-medium mb-1">Total Boxes Required</p>
+                    <p class="text-2xl font-black text-blue-700" id="outBoxes">0</p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 text-blue-800 p-4 rounded-lg text-sm mb-6">
+                <p><strong>Note:</strong> Box coverage varies by manufacturer. This calculation assumes 1 box covers <span id="boxCoverage">20 sq ft</span>. Always check the label on your flooring box before buying.</p>
+            </div>
+
+            <!-- ACTION BUTTONS (Copy, Share, Save) -->
+            <div class="flex flex-wrap gap-3 pt-4 border-t border-gray-300">
+                <button onclick="copyResult()" class="flex-1 bg-white text-gray-700 border border-gray-300 hover:bg-gray-100 font-semibold py-2.5 px-4 rounded-lg transition flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    Copy
+                </button>
+                <button onclick="shareResult()" class="flex-1 bg-white text-gray-700 border border-gray-300 hover:bg-gray-100 font-semibold py-2.5 px-4 rounded-lg transition flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                    Share
+                </button>
+                <button onclick="saveResult()" class="flex-1 bg-gray-800 text-white hover:bg-gray-900 font-semibold py-2.5 px-4 rounded-lg transition flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                    Save
+                </button>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+ <!-- 3. SEO CONTENT SECTION (PART 1) -->
+<section class="prose prose-lg max-w-none text-gray-700 mt-12 mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">How to Use This Flooring Calculator</h2>
+    <p class="mb-4">
+        Our free flooring calculator is designed to make material estimation quick, accurate, and stress-free for both DIY enthusiasts and professional contractors across the US, UK, and Australia. To get started, simply measure the length and width of the room you are renovating. Input those numbers into our calculator, select your measurement unit (feet or meters), and choose your waste factor. The calculator will instantly tell you the total square footage required and the exact number of flooring boxes you need to purchase.
+    </p>
+    <p class="mb-4">
+        Whether you are installing standard laminate from a major retailer like Home Depot or B&Q, or you are installing premium hardwood, precision is key. Under-ordering will halt your project and force you to make extra trips to the store (and risk the exact dye lot being out of stock). Over-ordering wastes your hard-earned money. This tool finds the perfect middle ground.
+    </p>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">How to Calculate Flooring Manually (Step-by-Step)</h2>
+    <p class="mb-4">
+        While our calculator does the heavy lifting, it is always helpful to understand the math behind it. Here is the step-by-step formula used by professional estimators:
+    </p>
+
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Step 1: Measure the Room Dimensions</h3>
+    <p class="mb-4">
+        Using a tape measure, measure the longest length of the room and the widest width of the room. Do not guess. If you measure in inches or centimeters, you will need to convert those measurements into feet or meters before proceeding. Note down these numbers on a piece of paper or on your phone.
+    </p>
+
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Step 2: Calculate the Total Area</h3>
+    <p class="mb-4">
+        Multiply the room length by the room width. The result is your base area.
+    </p>
+    <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Imperial System (US/UK):</strong> Length (in feet) × Width (in feet) = Square Footage (sq ft).</li>
+        <li><strong>Metric System (UK/AU):</strong> Length (in meters) × Width (in meters) = Square Meters (sq m).</li>
+    </ul>
+    <p class="mb-4">
+        <em>Note: If your room is L-shaped or has alcoves, divide the room into separate rectangular sections, calculate the area for each, and add them together.</em>
+    </p>
+
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Step 3: Add a Waste Factor</h3>
+    <p class="mb-4">
+        Once you have your base area, you must add a waste factor. This accounts for cuts made around doorways, corners, radiators, and any potential installation mistakes. Multiply your total area by the waste percentage (e.g., for 5%, multiply by 0.05) and add that number to your base area.
+    </p>
+
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Step 4: Determine the Number of Boxes</h3>
+    <p class="mb-4">
+        Look at the packaging of the flooring you intend to buy. It will state the coverage area of one box (e.g., 20 sq ft or 1.85 sq m). Divide your total area (including the waste factor) by the box coverage. Always round up to the nearest whole number, as you cannot buy a fraction of a box.
+    </p>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Understanding the Waste Factor</h2>
+    <p class="mb-4">
+        The waste factor is the most commonly misunderstood aspect of flooring estimation. If you buy exactly the square footage of your room without any extra, you will <strong>100% run out of material</strong>. Every room requires cuts. 
+    </p>
+    
+    <div class="bg-white border border-gray-200 rounded-lg p-6 mb-6 shadow-sm">
+        <h3 class="text-lg font-bold text-gray-800 mb-3">Which Waste Factor Should You Choose?</h3>
+        <ul class="space-y-3">
+            <li class="flex items-start">
+                <span class="text-blue-600 font-bold mr-2">1.</span>
+                <div><strong>5% Waste (Standard Layout):</strong> Choose this if you are installing the flooring in a simple, straight pattern parallel to the longest wall in a standard rectangular room. It accounts for basic edge cuts.</div>
+            </li>
+            <li class="flex items-start">
+                <span class="text-blue-600 font-bold mr-2">2.</span>
+                <div><strong>10% Waste (Diagonal or Complex Layout):</strong> If you are laying the flooring diagonally (at a 45-degree angle), or if the room has many corners, pillars, or complex shapes, use 10%. Diagonal cuts create much more off-cut waste.</div>
+            </li>
+            <li class="flex items-start">
+                <span class="text-blue-600 font-bold mr-2">3.</span>
+                <div><strong>15% Waste (Herringbone or Chevron):</strong> These are high-end, intricate patterns that require cutting boards at specific angles. They look stunning but generate a massive amount of waste. Always buy 15% extra for these layouts.</div>
+            </li>
+        </ul>
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Types of Flooring and Their Requirements</h2>
+    <p class="mb-4">
+        Different materials require slightly different estimation approaches and installation methods.
+    </p>
+    <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Laminate Flooring:</strong> Usually sold in boxes covering around 20 sq ft (1.85 sq m). It is a floating floor that requires an underlayment.</li>
+        <li><strong>Engineered Hardwood:</strong> Similar box coverage to laminate. Because it is a real wood product, acclimating the boxes in the room for 48-72 hours before installation is critical.</li>
+        <li><strong>Luxury Vinyl Plank (LVP):</strong> Highly water-resistant. Often comes in boxes covering 24-30 sq ft. Very popular in US and Australian homes.</li>
+        <li><strong>Solid Hardwood:</strong> Usually sold in bundles or boxes. Requires nailing or gluing down, and is highly susceptible to humidity changes.</li>
+    </ul>
+</section>
+
+<!-- 4. SEO CONTENT SECTION (PART 2: REGIONAL & ADVANCED) -->
+<section class="prose prose-lg max-w-none text-gray-700 mt-12 mb-12">
+    
+    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Flooring Standards: USA vs UK vs Australia</h2>
+    <p class="mb-4">
+        If you are a contractor working internationally or a DIYer researching global best practices, you must understand that flooring terminology and packaging differ significantly by region. Our calculator accounts for these differences.
+    </p>
+
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">🇺🇸 United States (Imperial System)</h3>
+    <p class="mb-4">
+        In the US, flooring is predominantly measured in <strong>Square Feet (sq ft)</strong>. Retailers like Home Depot and Lowe's typically sell laminate and vinyl in boxes covering between 18 to 24 sq ft. Subfloor flatness is heavily regulated by the <strong>IRC (International Residential Code)</strong>, which usually dictates a maximum variance of 3/16 inch over a 10-foot span. Always use our calculator with the "Feet" option and add 5% to 10% waste.
+    </p>
+
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">🇬🇧 United Kingdom (Metric System)</h3>
+    <p class="mb-4">
+        The UK uses the <strong>Metric System (Square Meters - sq m)</strong> for professional estimating, though some older tradesmen still quote in square feet. Retailers like B&Q and Screwfix sell flooring in packs covering roughly 1.8 to 2.2 sq m. British Standard <strong>BS 8201</strong> provides the code of practice for timber flooring. In the UK, "underlay" is used rather than "underlayment," and moisture barriers are crucial due to the damp climate.
+    </p>
+
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">🇦🇺 Australia (Metric System)</h3>
+    <p class="mb-4">
+        Australia also relies strictly on the <strong>Metric System (sq m)</strong>. Hardware giant Bunnings dominates the market, selling flooring in packs usually covering around 2.0 to 2.5 sq m. The <strong>AS 1684 (Residential timber-framed construction)</strong> sets the standards for subfloor preparation. Australian homes often feature open-plan living, meaning L-shaped and complex area calculations are highly common.
+    </p>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">How to Measure Complex & Irregular Rooms (L-Shaped)</h2>
+    <p class="mb-4">
+        Most online calculators assume your room is a perfect rectangle. But real-world construction is rarely that simple. If your room has an L-shape, an alcove, or a bay window, here is how to calculate the area manually or break it down for our calculator:
+    </p>
+    
+    <ol class="list-decimal pl-6 mb-4 space-y-3">
+        <li><strong>Draw a Floor Plan:</strong> Sketch the room on a piece of paper. It doesn't have to be perfect, but it must show the layout.</li>
+        <li><strong>Divide into Rectangles:</strong> Draw lines on your sketch to split the complex room into multiple smaller, simple rectangles (Zone A, Zone B, Zone C).</li>
+        <li><strong>Measure Each Zone:</strong> Measure the length and width of each individual rectangle.</li>
+        <li><strong>Calculate and Add:</strong> Calculate the area of each rectangle (Length × Width) and add them all together to get the total room area.</li>
+        <li><strong>Input into BuildMetric:</strong> You can either input the total area directly (if our tool allows manual area input) or treat the largest section as the main room and adjust the waste factor to 10% or 15% to cover the additional alcoves.</li>
+    </ol>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">The Importance of Underlayment (Underlay)</h2>
+    <p class="mb-4">
+        While our flooring calculator focuses on the visible floorboards, do not forget the underlay. Underlayment is the foam, cork, or rubber layer placed between the subfloor and the laminate or engineered wood.
+    </p>
+    <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Sound Insulation:</strong> Required in many apartment buildings (especially in UK and AU) to reduce impact noise.</li>
+        <li><strong>Moisture Protection:</strong> Protects the wood from moisture rising from concrete subfloors.</li>
+        <li><strong>Leveling:</strong> Minor imperfections in the subfloor can be smoothed out by a good underlay.</li>
+    </ul>
+    <p class="mb-4">
+        <strong>Pro Tip:</strong> You need the exact same square footage of underlay as your flooring (excluding the waste factor). Do not add a waste factor to underlay; it usually comes in large rolls and you can piece it together easily.
+    </p>
+</section>
+
+   <!-- 5. 7 FAQs SECTION (SEO & Clickable Keywords) -->
+<section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6 border-b pb-2">Frequently Asked Questions (FAQs)</h2>
+    
+    <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <details class="group bg-white border border-gray-200 rounded-lg shadow-sm cursor-pointer">
+            <summary class="flex justify-between items-center font-bold text-lg text-gray-800 p-5 list-none">
+                <span>1. How do I calculate how much flooring I need?</span>
+                <span class="transition group-open:rotate-180">
+                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                </span>
+            </summary>
+            <div class="text-gray-600 p-5 pt-0 border-t border-gray-100">
+                To calculate how much flooring you need, measure the length and width of your room and multiply them to get the square footage (or square meters). Then, add a waste factor (usually 5% to 10%). Finally, divide that total number by the coverage area listed on the flooring box to find out how many boxes to buy.
+            </div>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="group bg-white border border-gray-200 rounded-lg shadow-sm cursor-pointer">
+            <summary class="flex justify-between items-center font-bold text-lg text-gray-800 p-5 list-none">
+                <span>2. How many square feet is a box of laminate flooring?</span>
+                <span class="transition group-open:rotate-180">
+                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                </span>
+            </summary>
+            <div class="text-gray-600 p-5 pt-0 border-t border-gray-100">
+                In the US, a standard box of laminate or vinyl plank flooring usually covers between <strong>18 to 24 square feet</strong>. In the UK and Australia, standard packs typically cover between <strong>1.8 to 2.5 square meters</strong>. Always check the exact coverage printed on the box you are buying.
+            </div>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="group bg-white border border-gray-200 rounded-lg shadow-sm cursor-pointer">
+            <summary class="flex justify-between items-center font-bold text-lg text-gray-800 p-5 list-none">
+                <span>3. How much waste should I add for laminate flooring?</span>
+                <span class="transition group-open:rotate-180">
+                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                </span>
+            </summary>
+            <div class="text-gray-600 p-5 pt-0 border-t border-gray-100">
+                For a standard, straight installation in a rectangular room, add <strong>5% to 10%</strong> waste. If you are installing the floor diagonally, or if the room has many corners and alcoves, add 10% to 15%. For complex patterns like herringbone, always add 15%.
+            </div>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="group bg-white border border-gray-200 rounded-lg shadow-sm cursor-pointer">
+            <summary class="flex justify-between items-center font-bold text-lg text-gray-800 p-5 list-none">
+                <span>4. Do I need an underlayment for my new floor?</span>
+                <span class="transition group-open:rotate-180">
+                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                </span>
+            </summary>
+            <div class="text-gray-600 p-5 pt-0 border-t border-gray-100">
+                Yes, for most laminate, engineered wood, and vinyl floors, an underlayment (called "underlay" in the UK/AU) is highly recommended. It provides sound insulation, protects against moisture, and smooths out minor subfloor imperfections. You need to buy the exact same square footage of underlay as your room area (no waste factor needed).
+            </div>
+        </details>
+
+        <!-- FAQ 5 -->
+        <details class="group bg-white border border-gray-200 rounded-lg shadow-sm cursor-pointer">
+            <summary class="flex justify-between items-center font-bold text-lg text-gray-800 p-5 list-none">
+                <span>5. How much does flooring installation cost per square foot?</span>
+                <span class="transition group-open:rotate-180">
+                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                </span>
+            </summary>
+            <div class="text-gray-600 p-5 pt-0 border-t border-gray-100">
+                Installation costs vary widely by region and material. In the US, professional installation typically costs $2 to $5 per square foot. In the UK, expect to pay £15 to £25 per square meter. In Australia, labor costs usually range from $25 to $45 per square meter. This does not include the cost of the materials themselves.
+            </div>
+        </details>
+
+        <!-- FAQ 6 -->
+        <details class="group bg-white border border-gray-200 rounded-lg shadow-sm cursor-pointer">
+            <summary class="flex justify-between items-center font-bold text-lg text-gray-800 p-5 list-none">
+                <span>6. How do I measure an L-shaped room for flooring?</span>
+                <span class="transition group-open:rotate-180">
+                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                </span>
+            </summary>
+            <div class="text-gray-600 p-5 pt-0 border-t border-gray-100">
+                Divide the L-shape into two separate rectangles. Measure the length and width of Rectangle A, and do the same for Rectangle B. Calculate the square footage of both and add them together. Always use a 10% waste factor for L-shaped rooms due to the extra cuts required.
+            </div>
+        </details>
+
+        <!-- FAQ 7 -->
+        <details class="group bg-white border border-gray-200 rounded-lg shadow-sm cursor-pointer">
+            <summary class="flex justify-between items-center font-bold text-lg text-gray-800 p-5 list-none">
+                <span>7. Can I install new flooring over existing tile or vinyl?</span>
+                <span class="transition group-open:rotate-180">
+                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                </span>
+            </summary>
+            <div class="text-gray-600 p-5 pt-0 border-t border-gray-100">
+                In many cases, yes—provided the existing floor is flat, secure, and clean. However, installing over thick tile can cause height issues with doors and baseboards. It is generally not recommended to install solid hardwood over existing floating floors. Always consult the manufacturer's guidelines for your specific flooring product.
+            </div>
+        </details>
+    </div>
+</section>
+
+<!-- FAQ Schema Markup (JSON-LD) - Google Rich Results ke liye -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate how much flooring I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To calculate how much flooring you need, measure the length and width of your room and multiply them to get the square footage. Add a waste factor of 5% to 10%. Divide that total by the coverage area on the flooring box."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many square feet is a box of laminate flooring?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the US, a standard box covers 18 to 24 square feet. In the UK and Australia, packs cover 1.8 to 2.5 square meters."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much waste should I add for laminate flooring?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Add 5% to 10% for straight layouts. Add 10% to 15% for diagonal layouts or rooms with many corners. Add 15% for herringbone patterns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need an underlayment for my new floor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, underlayment provides sound insulation and moisture protection. Buy the exact square footage of the room without adding a waste factor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does flooring installation cost per square foot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the US, professional installation costs $2 to $5 per sq ft. In the UK, it is £15 to £25 per sq meter. In Australia, labor is $25 to $45 per sq meter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I measure an L-shaped room for flooring?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the L-shape into two rectangles. Calculate the area of both and add them together. Use a 10% waste factor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I install new flooring over existing tile or vinyl?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if the existing floor is flat and secure. However, avoid installing solid hardwood over floating floors. Check manufacturer guidelines."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- 6. RELATED TOOLS & GUIDES (Internal Linking) -->
+<section class="mb-16">
+    <!-- RELATED TOOLS -->
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Construction Calculators</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-12">
+        <!-- Tool 1 -->
+        <a href="tile-calculator.html" class="block p-5 bg-white border border-gray-200 rounded-lg hover:shadow-md hover:border-blue-400 transition group">
+            <h3 class="font-bold text-lg text-gray-800 group-hover:text-blue-600 mb-2">Tile Calculator</h3>
+            <p class="text-sm text-gray-500">Estimate the number of tiles and adhesive needed for floors and walls.</p>
+        </a>
+        
+        <!-- Tool 2 -->
+        <a href="paint-coverage-calculator.html" class="block p-5 bg-white border border-gray-200 rounded-lg hover:shadow-md hover:border-blue-400 transition group">
+            <h3 class="font-bold text-lg text-gray-800 group-hover:text-blue-600 mb-2">Paint Coverage Calculator</h3>
+            <p class="text-sm text-gray-500">Calculate how many gallons or liters of paint you need per room.</p>
+        </a>
+
+        <!-- Tool 3 -->
+        <a href="drywall-calculator.html" class="block p-5 bg-white border border-gray-200 rounded-lg hover:shadow-md hover:border-blue-400 transition group">
+            <h3 class="font-bold text-lg text-gray-800 group-hover:text-blue-600 mb-2">Drywall Calculator</h3>
+            <p class="text-sm text-gray-500">Estimate drywall sheets, joint compound, and screws for any room.</p>
+        </a>
+
+        <!-- Tool 4 -->
+        <a href="stair-calculator.html" class="block p-5 bg-white border border-gray-200 rounded-lg hover:shadow-md hover:border-blue-400 transition group">
+            <h3 class="font-bold text-lg text-gray-800 group-hover:text-blue-600 mb-2">Stair Calculator</h3>
+            <p class="text-sm text-gray-500">Calculate stair rise, run, and the exact number of steps required.</p>
+        </a>
+
+        <!-- Tool 5 -->
+        <a href="wallpaper-calculator.html" class="block p-5 bg-white border border-gray-200 rounded-lg hover:shadow-md hover:border-blue-400 transition group">
+            <h3 class="font-bold text-lg text-gray-800 group-hover:text-blue-600 mb-2">Wallpaper Calculator</h3>
+            <p class="text-sm text-gray-500">Find out how many rolls of wallpaper you need for your project.</p>
+        </a>
+
+        <!-- Tool 6 -->
+        <a href="material-estimator.html" class="block p-5 bg-white border border-gray-200 rounded-lg hover:shadow-md hover:border-blue-400 transition group">
+            <h3 class="font-bold text-lg text-gray-800 group-hover:text-blue-600 mb-2">Material Estimator</h3>
+            <p class="text-sm text-gray-500">A complete overview of all building materials for your project.</p>
+        </a>
+    </div>
+
+    <!-- RELATED GUIDES -->
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Guides & Tutorials</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <!-- Guide 1 -->
+        <a href="guides/how-to-calculate-flooring-waste.html" class="flex items-center p-4 bg-gray-50 border border-gray-200 rounded-lg hover:bg-white hover:shadow-md transition group">
+            <div class="bg-blue-100 text-blue-600 p-3 rounded-full mr-4 group-hover:bg-blue-600 group-hover:text-white transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+            </div>
+            <div>
+                <h3 class="font-bold text-gray-800 group-hover:text-blue-600 transition">How to Calculate Flooring Waste Accurately</h3>
+                <p class="text-xs text-gray-500 mt-1">Read Guide</p>
+            </div>
+        </a>
+
+        <!-- Guide 2 -->
+        <a href="guides/reading-architectural-drawings.html" class="flex items-center p-4 bg-gray-50 border border-gray-200 rounded-lg hover:bg-white hover:shadow-md transition group">
+            <div class="bg-blue-100 text-blue-600 p-3 rounded-full mr-4 group-hover:bg-blue-600 group-hover:text-white transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            </div>
+            <div>
+                <h3 class="font-bold text-gray-800 group-hover:text-blue-600 transition">How to Read Architectural Drawings</h3>
+                <p class="text-xs text-gray-500 mt-1">Read Guide</p>
+            </div>
+        </a>
+
+        <!-- Guide 3 -->
+        <a href="guides/paint-coverage-myths.html" class="flex items-center p-4 bg-gray-50 border border-gray-200 rounded-lg hover:bg-white hover:shadow-md transition group">
+            <div class="bg-blue-100 text-blue-600 p-3 rounded-full mr-4 group-hover:bg-blue-600 group-hover:text-white transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+            </div>
+            <div>
+                <h3 class="font-bold text-gray-800 group-hover:text-blue-600 transition">Paint Coverage Myths: 1 Gallon = 400 sq ft?</h3>
+                <p class="text-xs text-gray-500 mt-1">Read Guide</p>
+            </div>
+        </a>
+
+        <!-- Guide 4 -->
+        <a href="guides/subfloor-preparation.html" class="flex items-center p-4 bg-gray-50 border border-gray-200 rounded-lg hover:bg-white hover:shadow-md transition group">
+            <div class="bg-blue-100 text-blue-600 p-3 rounded-full mr-4 group-hover:bg-blue-600 group-hover:text-white transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+            </div>
+            <div>
+                <h3 class="font-bold text-gray-800 group-hover:text-blue-600 transition">Subfloor Preparation for Laminate & Vinyl</h3>
+                <p class="text-xs text-gray-500 mt-1">Read Guide</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+  </main> <!-- Main tag closes here -->
+
+<!-- 7. JAVASCRIPT LOGIC & FUNCTIONALITY -->
+<script>
+    function calculateFlooring() {
+        // Get Inputs
+        const length = parseFloat(document.getElementById('roomLength').value);
+        const width = parseFloat(document.getElementById('roomWidth').value);
+        const units = document.getElementById('unitSystem').value;
+        const wastePercent = parseFloat(document.getElementById('wasteFactor').value);
+        
+        // Get UI Elements
+        const errorBox = document.getElementById('errorBox');
+        const resultBox = document.getElementById('resultBox');
+        const outArea = document.getElementById('outArea');
+        const outBoxes = document.getElementById('outBoxes');
+        const boxCoverageText = document.getElementById('boxCoverage');
+
+        // Validation: Check if inputs are empty or negative
+        if (isNaN(length) || isNaN(width) || length <= 0 || width <= 0) {
+            errorBox.innerText = "Please enter valid positive numbers for both Length and Width.";
+            errorBox.classList.remove('hidden');
+            resultBox.classList.add('hidden');
+            return;
+        }
+
+        // Hide error if validation passes
+        errorBox.classList.add('hidden');
+
+        // 1. Calculate Base Area
+        let baseArea = length * width;
+
+        // 2. Add Waste Factor
+        let wasteAmount = baseArea * (wastePercent / 100);
+        let totalArea = baseArea + wasteAmount;
+
+        // 3. Calculate Boxes based on Region standard coverage
+        let boxCoverage = 0;
+        let areaUnit = "";
+        let boxUnitText = "";
+
+        if (units === 'ft') {
+            // US / UK Imperial Standard: Assume 1 box = 20 sq ft
+            boxCoverage = 20;
+            areaUnit = "sq ft";
+            boxUnitText = "20 sq ft/box";
+        } else {
+            // UK / AU Metric Standard: Assume 1 box = 2.0 sq meters
+            boxCoverage = 2.0;
+            areaUnit = "sq m";
+            boxUnitText = "2.0 sq m/box";
+        }
+
+        // Calculate total boxes (Always round UP)
+        let totalBoxes = Math.ceil(totalArea / boxCoverage);
+
+        // 4. Update UI with Results
+        outArea.innerText = totalArea.toFixed(2) + " " + areaUnit;
+        outBoxes.innerText = totalBoxes + " Boxes";
+        boxCoverageText.innerText = boxUnitText;
+
+        // Show Result Box
+        resultBox.classList.remove('hidden');
+    }
+
+    // --- ACTION BUTTON FUNCTIONS ---
+
+    // 1. COPY BUTTON
+    function copyResult() {
+        const area = document.getElementById('outArea').innerText;
+        const boxes = document.getElementById('outBoxes').innerText;
+        
+        const textToCopy = `BuildMetric Flooring Estimate:\nTotal Area Needed: ${area}\nBoxes Required: ${boxes}\n\nCalculate yours at: ${window.location.href}`;
+        
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            const copyBtn = document.querySelector('button[onclick="copyResult()"]');
+            const originalText = copyBtn.innerHTML;
+            
+            // Show success state temporarily
+            copyBtn.innerHTML = '<span class="text-green-600 font-bold">✔ Copied!</span>';
+            setTimeout(() => { copyBtn.innerHTML = originalText; }, 2000);
+        }).catch(err => {
+            alert("Failed to copy. Please try again.");
+        });
+    }
+
+    // 2. SHARE BUTTON (Web Share API - Works on Mobile)
+    function shareResult() {
+        const area = document.getElementById('outArea').innerText;
+        const boxes = document.getElementById('outBoxes').innerText;
+        
+        if (navigator.share) {
+            navigator.share({
+                title: 'Flooring Calculator',
+                text: `I just calculated my flooring needs! Total Area: ${area}, Boxes Required: ${boxes}.`,
+                url: window.location.href
+            }).catch((error) => console.log('Error sharing', error));
+        } else {
+            // Fallback for Desktop browsers that don't support Share API
+            alert("Sharing is not supported on this browser. Please use the Copy button instead.");
+        }
+    }
+
+    // 3. SAVE BUTTON (Triggers Print Dialog to Save as PDF)
+    function saveResult() {
+        window.print();
+    }
+</script>
+
+      <!-- 8. PROFESSIONAL FOOTER -->
+    <footer class="bg-gray-900 text-gray-300 mt-auto pt-12 pb-8 border-t border-gray-800">
+        <div class="max-w-4xl mx-auto px-4">
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <!-- Brand & About -->
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">BuildMetric</h3>
+                    <p class="text-sm text-gray-400 mb-4">
+                        Free, Engineer-Reviewed Construction Calculators & Technical Guides for the USA, UK & Australia. Built for professionals and DIYers.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-blue-400 transition">Home</a></li>
+                        <li><a href="calculators.html" class="hover:text-blue-400 transition">All Calculators</a></li>
+                        <li><a href="guides.html" class="hover:text-blue-400 transition">Guides & Tutorials</a></li>
+                        <li><a href="about.html" class="hover:text-blue-400 transition">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-400 transition">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal & Policies -->
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Legal</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="privacy.html" class="hover:text-blue-400 transition">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-blue-400 transition">Terms of Service</a></li>
+                        <li><a href="disclaimer.html" class="hover:text-blue-400 transition">Disclaimer</a></li>
+                        <li><a href="cookie-policy.html" class="hover:text-blue-400 transition">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Disclaimer Box (Important for E-E-A-T) -->
+            <div class="bg-gray-800 border border-gray-700 rounded-lg p-4 mb-8 text-xs text-gray-400">
+                <p><strong>Disclaimer:</strong> BuildMetric calculators are provided for estimation purposes only. While our formulas are engineer-reviewed and aligned with US (IRC), UK (BS), and AU (AS) standards, all results should be verified against local building codes and manufacturer guidelines before purchasing materials or beginning construction. We are not liable for material shortages, waste, or project delays.</p>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center text-sm text-gray-500 border-t border-gray-800 pt-6">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> BuildMetric.org. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
