@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Rebar Spacing Calculator - Concrete Grid & Lap Splice (US/UK/AU)</title>
+    <meta name="description" content="Calculate exact rebar spacing, grid layout, and lap splice requirements for concrete slabs. Uses #4, #5 (US) and metric bars (UK/AU) with standard codes. Free tool.">
+    <meta name="keywords" content="rebar spacing calculator, how far apart should rebar be, rebar grid calculator, lap splice length, concrete slab rebar spacing, #4 rebar spacing">
+    <link rel="canonical" href="https://buildmetric.org/rebar-spacing-calculator.html">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- SEO: WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Rebar Spacing Calculator",
+      "url": "https://buildmetric.org/rebar-spacing-calculator.html",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "All",
+      "description": "Calculate how far apart rebar should be in a concrete slab. Includes rebar grid layout and lap splice calculator for US, UK, and AU standards.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
+
+    <!-- HEADER (Matches your existing design) -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-blue-600 tracking-tight flex items-center gap-2">
+                <!-- Aap yahan apna logo icon laga sakte hain -->
+                BuildMetric
+            </a>
+            <nav class="hidden md:flex space-x-4 text-sm font-medium text-gray-600">
+                <a href="calculators.html" class="hover:text-blue-600">All Tools</a>
+                <a href="guides.html" class="hover:text-blue-600">Guides</a>
+                <a href="about.html" class="hover:text-blue-600">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT START -->
+    <main class="max-w-4xl mx-auto px-4 py-8 flex-grow">
+
+      <!-- 1. PAGE HEADING & INTRO -->
+<div class="mb-8">
+    <nav class="text-sm text-gray-500 mb-3">
+        <a href="index.html" class="hover:text-blue-600 transition">Home</a> &gt; 
+        <a href="concrete.html" class="hover:text-blue-600 transition">Concrete</a> &gt; 
+        <span class="text-gray-800 font-medium">Rebar Spacing</span>
+    </nav>
+    <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">Rebar Spacing Calculator (US, UK, AU)</h1>
+    <p class="text-lg text-gray-600 max-w-3xl">
+        Calculate the exact rebar grid layout, total linear length, and number of reinforcing bars required for your concrete slab. This tool automatically adjusts spacing standards and bar sizes for US (Imperial), UK, and Australian (Metric) construction codes.
+    </p>
+</div>
+
+<!-- 2. MAIN CALCULATOR UI -->
+<div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden mb-12">
+    <div class="p-6 md:p-8">
+        
+        <!-- Unit Toggle (Imperial / Metric) -->
+        <div class="flex justify-center mb-8">
+            <div class="bg-gray-100 p-1 rounded-lg inline-flex w-full max-w-md">
+                <button id="btnImperial" onclick="setUnit('imperial')" class="w-1/2 py-2.5 rounded-md text-sm font-bold bg-white shadow-sm text-gray-900 transition-all">Imperial (US)</button>
+                <button id="btnMetric" onclick="setUnit('metric')" class="w-1/2 py-2.5 rounded-md text-sm font-bold text-gray-500 hover:text-gray-900 transition-all">Metric (UK/AU)</button>
+            </div>
+        </div>
+
+        <!-- Inputs Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Input 1: Slab Length -->
+            <div>
+                <label for="slabLength" class="block text-sm font-semibold text-gray-700 mb-2">Slab Length</label>
+                <div class="relative">
+                    <input type="number" id="slabLength" class="w-full border border-gray-300 rounded-lg p-3 text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition" placeholder="e.g., 10" min="1" step="any">
+                    <span class="absolute right-4 top-3 text-gray-500 font-medium unit-label">ft</span>
+                </div>
+            </div>
+
+            <!-- Input 2: Slab Width -->
+            <div>
+                <label for="slabWidth" class="block text-sm font-semibold text-gray-700 mb-2">Slab Width</label>
+                <div class="relative">
+                    <input type="number" id="slabWidth" class="w-full border border-gray-300 rounded-lg p-3 text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition" placeholder="e.g., 10" min="1" step="any">
+                    <span class="absolute right-4 top-3 text-gray-500 font-medium unit-label">ft</span>
+                </div>
+            </div>
+
+            <!-- Input 3: Rebar Spacing -->
+            <div>
+                <label for="rebarSpacing" class="block text-sm font-semibold text-gray-700 mb-2">Rebar Spacing (Center to Center)</label>
+                <select id="rebarSpacing" class="w-full border border-gray-300 rounded-lg p-3 text-gray-900 focus:ring-2 focus:ring-blue-500 outline-none transition appearance-none bg-white">
+                    <!-- JavaScript will populate this based on unit -->
+                    <option value="">Select Spacing</option>
+                </select>
+            </div>
+
+            <!-- Input 4: Rebar Size -->
+            <div>
+                <label for="rebarSize" class="block text-sm font-semibold text-gray-700 mb-2">Rebar Size</label>
+                <select id="rebarSize" class="w-full border border-gray-300 rounded-lg p-3 text-gray-900 focus:ring-2 focus:ring-blue-500 outline-none transition appearance-none bg-white">
+                    <!-- JavaScript will populate this based on unit -->
+                    <option value="">Select Size</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Calculate Button -->
+        <div class="mt-8">
+            <button onclick="calculateRebar()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg py-4 rounded-lg shadow-md transition duration-200">
+                Calculate Rebar Grid
+            </button>
+        </div>
+
+        <!-- Error Box (Hidden by default) -->
+        <div id="errorBox" class="hidden mt-4 bg-red-50 text-red-700 p-4 rounded-lg border border-red-200 text-sm font-medium"></div>
+
+        <!-- RESULT BOX (Dark Theme) -->
+        <div id="resultBox" class="hidden mt-8 bg-[#0f172a] rounded-xl p-6 text-white shadow-xl border border-gray-800">
+            <h3 class="text-xl font-bold border-b border-gray-700 pb-3 mb-6 flex items-center gap-2">
+                <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                Calculation Results
+            </h3>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                <!-- Result 1 -->
+                <div class="bg-gray-800 p-5 rounded-lg border border-gray-700">
+                    <p class="text-sm text-gray-400 font-medium mb-1">Total Linear Length</p>
+                    <p class="text-3xl font-black text-blue-400" id="outLinearLength">0</p>
+                </div>
+                <!-- Result 2 -->
+                <div class="bg-gray-800 p-5 rounded-lg border border-gray-700">
+                    <p class="text-sm text-gray-400 font-medium mb-1">Total Bars Needed</p>
+                    <p class="text-3xl font-black text-blue-400" id="outBarsNeeded">0</p>
+                </div>
+            </div>
+            
+            <!-- Grid Layout Explanation -->
+            <div class="bg-gray-800/50 p-5 rounded-lg text-sm text-gray-300 mb-6 border border-gray-700/50">
+                <p><strong>Grid Layout Breakdown:</strong> You will need <span id="outLinesOneWay" class="font-bold text-white text-base"></span> lines running one way, and <span id="outLinesOtherWay" class="font-bold text-white text-base"></span> lines running the perpendicular way.</p>
+                <p class="mt-2 text-xs text-gray-400">Note: Standard rebar sticks come in 20ft (US) or 6m (UK/AU) lengths. The number of bars above accounts for this standard length.</p>
+            </div>
+
+            <!-- ACTION BUTTONS (Copy, Share, Save) -->
+            <div class="flex flex-wrap gap-3 pt-4 border-t border-gray-700">
+                <button onclick="copyResult()" class="flex-1 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2.5 px-4 rounded-lg transition flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    Copy
+                </button>
+                <button onclick="shareResult()" class="flex-1 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2.5 px-4 rounded-lg transition flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                    Share
+                </button>
+                <button onclick="saveResult()" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-4 rounded-lg transition flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                    Save
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    <!-- 3. SEO CONTENT SECTION (PART 1: EDUCATION & MATH) -->
+<section class="prose prose-lg max-w-none text-gray-700 mt-12 mb-12">
+    
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">How to Calculate Rebar Spacing and Grid Layout</h2>
+    <p class="mb-4">
+        When pouring a concrete slab, getting the rebar spacing right is just as important as getting the concrete mix right. Rebar (reinforcing bar) provides the tensile strength that concrete lacks. If you place the bars too far apart, the slab will crack under heavy loads. If you place them too close together, you waste money on materials and create a risk of "congestion," which prevents the concrete aggregate from flowing properly around the steel.
+    </p>
+    <p class="mb-4">
+        Our <strong>Rebar Spacing Calculator</strong> uses standard engineering formulas to determine the exact grid layout for your project. Here is the step-by-step math used behind the scenes:
+    </p>
+
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Step 1: Calculate the Slab Area</h3>
+    <p class="mb-4">
+        First, determine the total area of your concrete pour. Measure the length and width of your slab in feet (US) or meters (UK/AU). 
+        <br><em>Formula: Length × Width = Area</em>
+    </p>
+
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Step 2: Determine the Spacing (Center-to-Center)</h3>
+    <p class="mb-4">
+        The term "O.C." stands for <strong>On Center</strong>. If you choose 12-inch O.C., it means the center of one rebar is exactly 12 inches away from the center of the next rebar. The spacing depends entirely on the thickness of your slab and the load it will bear.
+    </p>
+    <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>4-inch Slab:</strong> Usually requires #3 or #4 rebar at 12" to 18" O.C. (Ideal for patios and walkways).</li>
+        <li><strong>5-inch to 6-inch Slab:</strong> Requires #4 rebar at 12" to 16" O.C. (Ideal for driveways and heavy foot traffic).</li>
+        <li><strong>Structural Slabs:</strong> May require #5 rebar or thicker, with engineering specifications.</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Step 3: Calculate the Number of Bars</h3>
+    <p class="mb-4">
+        To find out how many bars run in one direction, divide the total width of the slab by the spacing, then add 1. 
+        <br><em>Example (US): A 10-foot (120-inch) wide slab with 12-inch spacing. (120 ÷ 12) + 1 = 11 bars.</em>
+        <br><em>Example (Metric): A 3-meter wide slab with 300mm spacing. (3000 ÷ 300) + 1 = 11 bars.</em>
+    </p>
+    <p class="mb-4">
+        You must repeat this calculation for the perpendicular direction. Our calculator above does this automatically for you and calculates the total linear footage required.
+    </p>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">What is Lap Splice? (The 40x Rule)</h2>
+    <p class="mb-4">
+        Standard rebar sticks are manufactured in specific lengths: typically <strong>20 feet (US)</strong> or <strong>6 meters (UK/AU)</strong>. If your slab is longer than these standard lengths, you cannot simply butt two bars end-to-end and tie them. You must overlap them. This overlap is called a <strong>Lap Splice</strong>.
+    </p>
+    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 text-gray-800">
+        <p class="font-bold mb-1">The Golden Rule of Lap Splice:</p>
+        <p>The overlap must be a minimum of <strong>40 times the diameter of the rebar</strong>. For example, a #4 bar (which is 1/2 inch thick) requires an overlap of 20 inches (40 × 0.5).</p>
+    </div>
+    <p class="mb-4">
+        Failing to account for lap splices is one of the most common mistakes DIYers make when ordering materials. They calculate the linear footage but forget that the overlaps require an extra 10% to 15% of material. Our calculator prompts you to account for this waste factor.
+    </p>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Rebar Standards: USA vs UK vs Australia</h2>
+    <p class="mb-4">
+        Construction codes vary globally. If you are reading plans from a different country or working internationally, you must understand the terminology and standard bar sizes. Here is how the three major markets compare:
+    </p>
+
+    <div class="overflow-x-auto mb-6">
+        <table class="min-w-full bg-white border border-gray-200 text-sm">
+            <thead class="bg-gray-100 text-gray-700">
+                <tr>
+                    <th class="py-3 px-4 border-b text-left">Region</th>
+                    <th class="py-3 px-4 border-b text-left">Standard Code</th>
+                    <th class="py-3 px-4 border-b text-left">Common Bar Sizes</th>
+                    <th class="py-3 px-4 border-b text-left">Standard Lengths</th>
+                </tr>
+            </thead>
+            <tbody class="text-gray-600">
+                <tr>
+                    <td class="py-3 px-4 border-b font-semibold">🇺🇸 USA</td>
+                    <td class="py-3 px-4 border-b">ACI 318 / IRC</td>
+                    <td class="py-3 px-4 border-b">#3 (3/8"), #4 (1/2"), #5 (5/8")</td>
+                    <td class="py-3 px-4 border-b">20 ft (Standard)</td>
+                </tr>
+                <tr class="bg-gray-50">
+                    <td class="py-3 px-4 border-b font-semibold">🇬🇧 UK</td>
+                    <td class="py-3 px-4 border-b">BS 8666</td>
+                    <td class="py-3 px-4 border-b">10mm (H10), 12mm (H12), 16mm (H16)</td>
+                    <td class="py-3 px-4 border-b">6m (Standard)</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b font-semibold">🇦🇺 Australia</td>
+                    <td class="py-3 px-4 border-b">AS 3600</td>
+                    <td class="py-3 px-4 border-b">12mm (N12), 16mm (N16)</td>
+                    <td class="py-3 px-4 border-b">6m (Standard)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">🇺🇸 US Method (Imperial System)</h3>
+    <p class="mb-4">
+        In the United States, rebar is sized by "eighths of an inch." A #4 bar is 4/8 of an inch, which equals 1/2 inch. The most common residential slab uses #4 bar placed at 12 inches On Center (O.C.) in both directions. For driveways, 12" to 16" O.C. is standard. The US relies heavily on the International Residential Code (IRC) for residential pours.
+    </p>
+
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">🇬🇧 UK Method (Metric System)</h3>
+    <p class="mb-4">
+        The UK uses the metric system and refers to rebar as "reinforcement." It is graded by its yield strength (e.g., 500 MPa steel is denoted with an 'H' or 'B', so H12 is 12mm high-yield steel). It is rare to use individual loose bars for a residential driveway in the UK; instead, builders use <strong>Steel Reinforcing Mesh</strong> (such as A142 or A193). However, for structural footings, 12mm or 16mm bars are standard.
+    </p>
+
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">🇦🇺 Australian Method</h3>
+    <p class="mb-4">
+        Australia follows the AS 3600 standard. Like the UK, Australian residential slabs often use square reinforcing mesh (such as SL72 or SL82) rather than individual bars. However, when individual bars are used (e.g., in strip footings or piering), they are graded by diameter in millimeters (N12, N16). Because of the harsh Australian climate and expansive clay soils, slab reinforcement is critical to prevent cracking during droughts.
+    </p>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Common Mistakes to Avoid with Rebar</h2>
+    <ul class="list-disc pl-6 mb-4 space-y-3">
+        <li><strong>Letting Rebar Touch the Ground:</strong> Rebar must be suspended in the middle of the concrete slab. If it touches the soil, it will rust and fail. Always use rebar chairs (bar supports) to keep it elevated.</li>
+        <li><strong>Insufficient Concrete Cover:</strong> The concrete covering the rebar protects it from the elements. Generally, you need at least 1.5 to 2 inches (40-50mm) of concrete cover on all sides.</li>
+        <li><strong>Not Tying the Grid:</strong> Use rebar tie wire to secure the intersections of your grid. This prevents the bars from shifting when the concrete is poured.</li>
+    </ul>
+
+</section>
+
+  <!-- 4. 7 FAQs SECTION (SEO & Clickable Keywords) -->
+<section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6 border-b pb-2">Frequently Asked Questions (Rebar Spacing)</h2>
+    
+    <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <details class="group bg-white border border-gray-200 rounded-lg shadow-sm cursor-pointer">
+            <summary class="flex justify-between items-center font-bold text-lg text-gray-800 p-5 list-none">
+                <span>1. How far apart should rebar be in a concrete slab?</span>
+                <span class="transition group-open:rotate-180">
+                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                </span>
+            </summary>
+            <div class="text-gray-600 p-5 pt-0 border-t border-gray-100">
+                For a standard residential concrete slab, rebar should typically be placed <strong>12 inches to 18 inches On Center (O.C.)</strong> in both directions for US projects. For UK and Australian projects, this translates to <strong>300mm to 450mm spacing</strong>. The exact spacing depends on the slab thickness and the load it will bear (e.g., a driveway requires closer spacing than a patio).
+            </div>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="group bg-white border border-gray-200 rounded-lg shadow-sm cursor-pointer">
+            <summary class="flex justify-between items-center font-bold text-lg text-gray-800 p-5 list-none">
+                <span>2. What size rebar do I need for a 4-inch or 6-inch slab?</span>
+                <span class="transition group-open:rotate-180">
+                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                </span>
+            </summary>
+            <div class="text-gray-600 p-5 pt-0 border-t border-gray-100">
+                For a <strong>4-inch slab</strong> (patios, walkways), use #3 (3/8") or #4 (1/2") rebar. For a <strong>5-inch to 6-inch slab</strong> (driveways, heavy loads), #4 (1/2" or 12mm) rebar is the standard choice. In Australia, SL72 or SL82 mesh is often used in place of individual bars for these thicknesses.
+            </div>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="group bg-white border border-gray-200 rounded-lg shadow-sm cursor-pointer">
+            <summary class="flex justify-between items-center font-bold text-lg text-gray-800 p-5 list-none">
+                <span>3. How much overlap (lap splice) is required for rebar?</span>
+                <span class="transition group-open:rotate-180">
+                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                </span>
+            </summary>
+            <div class="text-gray-600 p-5 pt-0 border-t border-gray-100">
+                The general rule of thumb (40x rule) is that the overlap must be <strong>40 times the diameter of the bar</strong>. For example, a #4 bar (1/2 inch thick) requires a 20-inch overlap. A 12mm bar requires a 480mm overlap. Always check local building codes, as requirements can vary for tension zones.
+            </div>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="group bg-white border border-gray-200 rounded-lg shadow-sm cursor-pointer">
+            <summary class="flex justify-between items-center font-bold text-lg text-gray-800 p-5 list-none">
+                <span>4. Can I use wire mesh instead of rebar?</span>
+                <span class="transition group-open:rotate-180">
+                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                </span>
+            </summary>
+            <div class="text-gray-600 p-5 pt-0 border-t border-gray-100">
+                Wire mesh (like A142 mesh in the UK) is excellent for controlling shrinkage cracks in thin slabs. However, it does not provide the same structural tensile strength as rebar. If your slab is structural, thicker than 5 inches, or will bear heavy vehicle loads, rebar is highly recommended over mesh.
+            </div>
+        </details>
+
+        <!-- FAQ 5 -->
+        <details class="group bg-white border border-gray-200 rounded-lg shadow-sm cursor-pointer">
+            <summary class="flex justify-between items-center font-bold text-lg text-gray-800 p-5 list-none">
+                <span>5. How do I keep rebar in the middle of the concrete?</span>
+                <span class="transition group-open:rotate-180">
+                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                </span>
+            </summary>
+            <div class="text-gray-600 p-5 pt-0 border-t border-gray-100">
+                You must use <strong>rebar chairs</strong> (also called bar supports or spacers). These are plastic or wire stands that elevate the rebar grid off the ground. Rebar must never touch the soil, as moisture will cause it to rust and expand, eventually cracking the concrete from the inside.
+            </div>
+        </details>
+
+        <!-- FAQ 6 -->
+        <details class="group bg-white border border-gray-200 rounded-lg shadow-sm cursor-pointer">
+            <summary class="flex justify-between items-center font-bold text-lg text-gray-800 p-5 list-none">
+                <span>6. What is the minimum concrete cover for rebar?</span>
+                <span class="transition group-open:rotate-180">
+                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                </span>
+            </summary>
+            <div class="text-gray-600 p-5 pt-0 border-t border-gray-100">
+                Concrete cover protects the steel from moisture and fire. For slabs cast against the ground, the minimum cover is usually <strong>3 inches (75mm)</strong> at the bottom. For exposed surfaces, it is typically 1.5 to 2 inches (40-50mm). Always refer to your local IRC (US), BS (UK), or AS (AU) codes.
+            </div>
+        </details>
+
+        <!-- FAQ 7 -->
+        <details class="group bg-white border border-gray-200 rounded-lg shadow-sm cursor-pointer">
+            <summary class="flex justify-between items-center font-bold text-lg text-gray-800 p-5 list-none">
+                <span>7. How much does rebar cost per foot or meter?</span>
+                <span class="transition group-open:rotate-180">
+                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                </span>
+            </summary>
+            <div class="text-gray-600 p-5 pt-0 border-t border-gray-100">
+                Prices fluctuate with steel markets. In the US, #4 rebar typically costs $0.80 to $1.50 per linear foot. In the UK, 12mm rebar costs around £1.50 to £2.50 per meter. In Australia, N12 rebar costs roughly $3 to $5 per meter. Buying in bulk or using mesh sheets often reduces the cost.
+            </div>
+        </details>
+    </div>
+</section>
+
+<!-- FAQ Schema Markup (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How far apart should rebar be in a concrete slab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a standard residential concrete slab, rebar should typically be placed 12 to 18 inches On Center (O.C.) in the US, or 300mm to 450mm in the UK and Australia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What size rebar do I need for a 4-inch or 6-inch slab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a 4-inch slab, use #3 or #4 rebar. For a 5-inch to 6-inch slab like a driveway, #4 (1/2 inch or 12mm) rebar is the standard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much overlap (lap splice) is required for rebar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The overlap must be a minimum of 40 times the diameter of the rebar. A #4 bar requires a 20-inch overlap."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use wire mesh instead of rebar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wire mesh is good for controlling shrinkage cracks, but rebar provides structural tensile strength. For heavy loads or structural slabs, use rebar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I keep rebar in the middle of the concrete?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use rebar chairs (bar supports) to elevate the grid. Rebar must never touch the soil to prevent rusting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum concrete cover for rebar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For slabs cast on the ground, the minimum bottom cover is usually 3 inches (75mm). Exposed surfaces need 1.5 to 2 inches."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does rebar cost per foot or meter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the US, #4 rebar costs $0.80 to $1.50 per foot. In the UK, 12mm rebar is £1.50 to £2.50 per meter. In Australia, N12 is roughly $3 to $5 per meter."
+      }
+    }
+  ]
+}
+</script>
+
+  <!-- 5. RELATED TOOLS & GUIDES (Internal Linking) -->
+<section class="mb-16">
+    <!-- RELATED TOOLS -->
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Construction Calculators</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-12">
+        <!-- Tool 1 -->
+        <a href="rebar-calculator.html" class="block p-5 bg-white border border-gray-200 rounded-lg hover:shadow-md hover:border-blue-400 transition group">
+            <h3 class="font-bold text-lg text-gray-800 group-hover:text-blue-600 mb-2">Rebar Calculator</h3>
+            <p class="text-sm text-gray-500">Calculate total rebar weight, quantity, and cost for your project.</p>
+        </a>
+        
+        <!-- Tool 2 -->
+        <a href="sonotube-calculator.html" class="block p-5 bg-white border border-gray-200 rounded-lg hover:shadow-md hover:border-blue-400 transition group">
+            <h3 class="font-bold text-lg text-gray-800 group-hover:text-blue-600 mb-2">Sonotube Calculator</h3>
+            <p class="text-sm text-gray-500">Calculate concrete volume for cylindrical piers and footings.</p>
+        </a>
+
+        <!-- Tool 3 -->
+        <a href="concrete-calculator.html" class="block p-5 bg-white border border-gray-200 rounded-lg hover:shadow-md hover:border-blue-400 transition group">
+            <h3 class="font-bold text-lg text-gray-800 group-hover:text-blue-600 mb-2">Concrete Calculator</h3>
+            <p class="text-sm text-gray-500">Estimate concrete volume, bags, and weight for slabs and footings.</p>
+        </a>
+
+        <!-- Tool 4 -->
+        <a href="concrete-stairs-calculator.html" class="block p-5 bg-white border border-gray-200 rounded-lg hover:shadow-md hover:border-blue-400 transition group">
+            <h3 class="font-bold text-lg text-gray-800 group-hover:text-blue-600 mb-2">Concrete Stairs Calculator</h3>
+            <p class="text-sm text-gray-500">Calculate the volume of concrete needed for your stair steps.</p>
+        </a>
+
+        <!-- Tool 5 -->
+        <a href="foundations.html" class="block p-5 bg-white border border-gray-200 rounded-lg hover:shadow-md hover:border-blue-400 transition group">
+            <h3 class="font-bold text-lg text-gray-800 group-hover:text-blue-600 mb-2">Foundation Calculator</h3>
+            <p class="text-sm text-gray-500">Estimate materials for strip footings, pads, and raft foundations.</p>
+        </a>
+
+        <!-- Tool 6 -->
+        <a href="material-estimator.html" class="block p-5 bg-white border border-gray-200 rounded-lg hover:shadow-md hover:border-blue-400 transition group">
+            <h3 class="font-bold text-lg text-gray-800 group-hover:text-blue-600 mb-2">Material Estimator</h3>
+            <p class="text-sm text-gray-500">A complete overview of all building materials for your project.</p>
+        </a>
+    </div>
+
+    <!-- RELATED GUIDES (Links point to /guides/ folder) -->
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Guides & Tutorials</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <!-- Guide 1 -->
+        <a href="guides/concrete-waste-allowance.html" class="flex items-center p-4 bg-gray-50 border border-gray-200 rounded-lg hover:bg-white hover:shadow-md transition group">
+            <div class="bg-blue-100 text-blue-600 p-3 rounded-full mr-4 group-hover:bg-blue-600 group-hover:text-white transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+            </div>
+            <div>
+                <h3 class="font-bold text-gray-800 group-hover:text-blue-600 transition">How to Calculate Concrete Waste Allowance</h3>
+                <p class="text-xs text-gray-500 mt-1">Read Guide</p>
+            </div>
+        </a>
+
+        <!-- Guide 2 -->
+        <a href="guides/reading-architectural-drawings.html" class="flex items-center p-4 bg-gray-50 border border-gray-200 rounded-lg hover:bg-white hover:shadow-md transition group">
+            <div class="bg-blue-100 text-blue-600 p-3 rounded-full mr-4 group-hover:bg-blue-600 group-hover:text-white transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            </div>
+            <div>
+                <h3 class="font-bold text-gray-800 group-hover:text-blue-600 transition">How to Read Architectural Drawings</h3>
+                <p class="text-xs text-gray-500 mt-1">Read Guide</p>
+            </div>
+        </a>
+
+        <!-- Guide 3 -->
+        <a href="guides/rebar-lap-splice-explained.html" class="flex items-center p-4 bg-gray-50 border border-gray-200 rounded-lg hover:bg-white hover:shadow-md transition group">
+            <div class="bg-blue-100 text-blue-600 p-3 rounded-full mr-4 group-hover:bg-blue-600 group-hover:text-white transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+            </div>
+            <div>
+                <h3 class="font-bold text-gray-800 group-hover:text-blue-600 transition">Rebar Lap Splice Rules Explained (40x Rule)</h3>
+                <p class="text-xs text-gray-500 mt-1">Read Guide</p>
+            </div>
+        </a>
+
+        <!-- Guide 4 -->
+        <a href="guides/understanding-concrete-psi.html" class="flex items-center p-4 bg-gray-50 border border-gray-200 rounded-lg hover:bg-white hover:shadow-md transition group">
+            <div class="bg-blue-100 text-blue-600 p-3 rounded-full mr-4 group-hover:bg-blue-600 group-hover:text-white transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+            </div>
+            <div>
+                <h3 class="font-bold text-gray-800 group-hover:text-blue-600 transition">Understanding Concrete PSI (Grades Explained)</h3>
+                <p class="text-xs text-gray-500 mt-1">Read Guide</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+  </main> <!-- Main tag closes here -->
+
+<!-- 6. JAVASCRIPT LOGIC -->
+<script>
+    // Global variable to track current unit
+    let currentUnit = 'imperial';
+
+    // Initialize dropdowns on page load
+    document.addEventListener("DOMContentLoaded", () => {
+        setUnit('imperial');
+    });
+
+    // Function to switch between Imperial and Metric
+    function setUnit(unit) {
+        currentUnit = unit;
+        
+        const btnImperial = document.getElementById('btnImperial');
+        const btnMetric = document.getElementById('btnMetric');
+        const unitLabels = document.querySelectorAll('.unit-label');
+        const spacingSelect = document.getElementById('rebarSpacing');
+        const sizeSelect = document.getElementById('rebarSize');
+
+        // Update Button Styles
+        if (unit === 'imperial') {
+            btnImperial.classList.add('bg-white', 'shadow-sm', 'text-gray-900');
+            btnImperial.classList.remove('text-gray-500', 'hover:text-gray-900');
+            btnMetric.classList.remove('bg-white', 'shadow-sm', 'text-gray-900');
+            btnMetric.classList.add('text-gray-500', 'hover:text-gray-900');
+            unitLabels.forEach(label => label.innerText = 'ft');
+            
+            // Populate Imperial Options
+            spacingSelect.innerHTML = `
+                <option value="12">12 inches O.C. (Standard)</option>
+                <option value="16">16 inches O.C.</option>
+                <option value="18">18 inches O.C.</option>
+                <option value="24">24 inches O.C.</option>
+            `;
+            sizeSelect.innerHTML = `
+                <option value="0.375">#3 (3/8 inch)</option>
+                <option value="0.5" selected>#4 (1/2 inch)</option>
+                <option value="0.625">#5 (5/8 inch)</option>
+            `;
+        } else {
+            btnMetric.classList.add('bg-white', 'shadow-sm', 'text-gray-900');
+            btnMetric.classList.remove('text-gray-500', 'hover:text-gray-900');
+            btnImperial.classList.remove('bg-white', 'shadow-sm', 'text-gray-900');
+            btnImperial.classList.add('text-gray-500', 'hover:text-gray-900');
+            unitLabels.forEach(label => label.innerText = 'm');
+
+            // Populate Metric Options
+            spacingSelect.innerHTML = `
+                <option value="300">300 mm O.C. (Standard)</option>
+                <option value="400">400 mm O.C.</option>
+                <option value="450">450 mm O.C.</option>
+                <option value="600">600 mm O.C.</option>
+            `;
+            sizeSelect.innerHTML = `
+                <option value="10">10 mm</option>
+                <option value="12" selected>12 mm</option>
+                <option value="16">16 mm</option>
+            `;
+        }
+    }
+
+    // Main Calculation Function
+    function calculateRebar() {
+        // Get Inputs
+        const slabLength = parseFloat(document.getElementById('slabLength').value);
+        const slabWidth = parseFloat(document.getElementById('slabWidth').value);
+        const spacing = parseFloat(document.getElementById('rebarSpacing').value);
+        
+        // UI Elements
+        const errorBox = document.getElementById('errorBox');
+        const resultBox = document.getElementById('resultBox');
+
+        // Validation
+        if (isNaN(slabLength) || isNaN(slabWidth) || slabLength <= 0 || slabWidth <= 0) {
+            errorBox.innerText = "Please enter valid positive numbers for Slab Length and Width.";
+            errorBox.classList.remove('hidden');
+            resultBox.classList.add('hidden');
+            return;
+        }
+        errorBox.classList.add('hidden');
+
+        let totalLinearLength = 0;
+        let totalBars = 0;
+        let linesOneWay = 0;
+        let linesOtherWay = 0;
+
+        if (currentUnit === 'imperial') {
+            // Convert feet to inches for accurate math
+            const lengthInches = slabLength * 12;
+            const widthInches = slabWidth * 12;
+
+            // Calculate number of lines (bars) in each direction
+            linesOneWay = Math.floor(lengthInches / spacing) + 1;
+            linesOtherWay = Math.floor(widthInches / spacing) + 1;
+
+            // Calculate Total Linear Feet
+            // Bars running parallel to length = (Length) * (number of bars across width)
+            // Bars running parallel to width = (Width) * (number of bars across length)
+            totalLinearLength = (slabLength * linesOtherWay) + (slabWidth * linesOneWay);
+            
+            // Add 10% for lap splices and overlaps
+            totalLinearLength = totalLinearLength * 1.10;
+
+            // Calculate Total 20ft Sticks Needed
+            totalBars = Math.ceil(totalLinearLength / 20);
+
+            // Display Output
+            document.getElementById('outLinearLength').innerText = totalLinearLength.toFixed(1) + " ft";
+            document.getElementById('outBarsNeeded').innerText = totalBars + " (20ft bars)";
+            
+        } else {
+            // Metric Math (Meters to mm)
+            const lengthMm = slabLength * 1000;
+            const widthMm = slabWidth * 1000;
+
+            linesOneWay = Math.floor(lengthMm / spacing) + 1;
+            linesOtherWay = Math.floor(widthMm / spacing) + 1;
+
+            totalLinearLength = (slabLength * linesOtherWay) + (slabWidth * linesOneWay);
+            
+            // Add 10% for lap splices
+            totalLinearLength = totalLinearLength * 1.10;
+
+            // Calculate Total 6m Bars Needed
+            totalBars = Math.ceil(totalLinearLength / 6);
+
+            // Display Output
+            document.getElementById('outLinearLength').innerText = totalLinearLength.toFixed(1) + " m";
+            document.getElementById('outBarsNeeded').innerText = totalBars + " (6m bars)";
+        }
+
+        // Display Grid Layout
+        document.getElementById('outLinesOneWay').innerText = linesOneWay;
+        document.getElementById('outLinesOtherWay').innerText = linesOtherWay;
+
+        // Show Result Box
+        resultBox.classList.remove('hidden');
+    }
+
+    // --- ACTION BUTTON FUNCTIONS ---
+
+    // 1. COPY BUTTON
+    function copyResult() {
+        const length = document.getElementById('outLinearLength').innerText;
+        const bars = document.getElementById('outBarsNeeded').innerText;
+        const l1 = document.getElementById('outLinesOneWay').innerText;
+        const l2 = document.getElementById('outLinesOtherWay').innerText;
+        
+        const textToCopy = `BuildMetric Rebar Estimate:\nTotal Linear Length: ${length}\nBars Needed: ${bars}\nGrid: ${l1} lines by ${l2} lines\n\nCalculate yours at: ${window.location.href}`;
+        
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            const copyBtn = document.querySelector('button[onclick="copyResult()"]');
+            const originalText = copyBtn.innerHTML;
+            copyBtn.innerHTML = '<span class="text-green-400 font-bold">✔ Copied!</span>';
+            setTimeout(() => { copyBtn.innerHTML = originalText; }, 2000);
+        }).catch(err => {
+            alert("Failed to copy. Please try again.");
+        });
+    }
+
+    // 2. SHARE BUTTON
+    function shareResult() {
+        const length = document.getElementById('outLinearLength').innerText;
+        const bars = document.getElementById('outBarsNeeded').innerText;
+        
+        if (navigator.share) {
+            navigator.share({
+                title: 'Rebar Spacing Calculator',
+                text: `I just calculated my rebar needs! Total Length: ${length}, Bars Required: ${bars}.`,
+                url: window.location.href
+            }).catch((error) => console.log('Error sharing', error));
+        } else {
+            alert("Sharing is not supported on this browser. Please use the Copy button instead.");
+        }
+    }
+
+    // 3. SAVE BUTTON
+    function saveResult() {
+        window.print();
+    }
+</script>
+
+      <!-- 7. PROFESSIONAL FOOTER (NO ADS) -->
+    <footer class="bg-[#1e293b] text-gray-300 mt-auto pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <!-- Brand & About -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="text-2xl font-bold text-white tracking-tight">Build<span class="text-blue-500">Metric</span></span>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-6 max-w-sm">
+                        Independent construction calculators, estimating tools and technical reference guides for building professionals across the USA, UK and Australia. Engineered for accuracy. Published for transparency.
+                    </p>
+                    <div class="space-y-2 text-sm text-gray-400">
+                        <p class="flex items-center gap-2">📧 contact@buildmetric.org</p>
+                        <p class="flex items-center gap-2">✉️ ads@buildmetric.org</p>
+                    </div>
+                </div>
+
+                <!-- Calculators -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4 text-sm tracking-wider uppercase">Calculators</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="roof-pitch-calculator.html" class="hover:text-blue-400 transition">Roof Pitch</a></li>
+                        <li><a href="concrete-calculator.html" class="hover:text-blue-400 transition">Concrete Volume</a></li>
+                        <li><a href="stud-calculator.html" class="hover:text-blue-400 transition">Stud Count</a></li>
+                        <li><a href="paint-calculator.html" class="hover:text-blue-400 transition">Paint Coverage</a></li>
+                        <li><a href="calculators.html" class="hover:text-blue-400 transition text-blue-500 font-medium">All Tools &rarr;</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4 text-sm tracking-wider uppercase">Company</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="about.html" class="hover:text-blue-400 transition">About</a></li>
+                        <li><a href="guides.html" class="hover:text-blue-400 transition">Guides</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-400 transition">Contact</a></li>
+                        <li><a href="sitemap.xml" class="hover:text-blue-400 transition">Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal & Compliance -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4 text-sm tracking-wider uppercase">Legal & Compliance</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="privacy.html" class="hover:text-blue-400 transition flex items-center justify-between">Privacy Policy <span>&rarr;</span></a></li>
+                        <li><a href="terms.html" class="hover:text-blue-400 transition flex items-center justify-between">Terms of Use <span>&rarr;</span></a></li>
+                        <li><a href="disclaimer.html" class="hover:text-blue-400 transition flex items-center justify-between">Disclaimer <span>&rarr;</span></a></li>
+                        <li><a href="cookie-policy.html" class="hover:text-blue-400 transition flex items-center justify-between">Cookie Policy <span>&rarr;</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Regional Notice Box (Full Width) -->
+            <div class="bg-gray-800 border border-gray-700 rounded-lg p-5 mb-8 text-sm text-gray-400">
+                <h4 class="text-white font-semibold mb-2 text-xs tracking-wider uppercase">Regional Notice</h4>
+                <p>BuildMetric content is published in English and reviewed against US, UK and Australian codes. Always verify against your local jurisdiction's current edition.</p>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center text-sm text-gray-500 border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> BuildMetric. All rights reserved. Operated from buildmetric.org.</p>
+                <p>Built for professionals. General information only — see our <a href="disclaimer.html" class="underline hover:text-white">Disclaimer</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
